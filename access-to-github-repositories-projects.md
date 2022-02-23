@@ -1,20 +1,47 @@
 ---
-title: Request GitHub access or allow repository creation for a new user.
+title: Access to GitHub repositories and projects
 
-description: Request or revoke access for a new user of the BC Government GitHub repositories.
+description: Request or revoke access for users of the BC Government GitHub repositories.
 
-keywords:
+keywords: access, access request, new user, developer, repository management, GitHub management
 
-page purpose:
+page purpose: Describes how users can get access to BC Gov GitHub repositories and projects, different types of access, and how to revoke a user's access.
 
-audience:
+audience: developer, project administrator
 ---
+
 # Request GitHub access or allow repository creation for a new user
 
 BC Government project teams keep open-source projects in the GitHub organization `bcgov`.
 
 If you want to invite a new user to contribute to the [BC Gov](https://github.com/orgs/bcgov/dashboard) GitHub repositories, they must have a GitHub account (ideally with a complete profile) with two-factor authentication enabled.
 
+## Add users
+
+You can add users in one of the following primary roles:
+
+* ``admin`` A project manager who can view any resource in the project and modify any resource in the project except for quota.  An ``admin`` user can delete the project.
+* ``edit`` A user that can modify most objects in a project, but can't view or modify roles or bindings. An ``edit`` user can create and delete applications in the project.
+* ``view`` A user who can't make any modifications, but can see most objects in a project.
+
+To add another user with edit role to the project who can create and delete applications, use the ``oc adm policy`` command. You must be in the project when you run this command.
+
+```
+oc adm policy add-role-to-user edit <collaborator>
+```
+
+Replace ``<collaborator>`` with the name of the user as displayed by the ``oc whoami`` command when run by that user.
+
+To remove a user from a project, run:
+
+```
+oc adm policy remove-role-from-user edit <collaborator>
+```
+To get a list of the users who have access to a project, and in what role, a project manager can run:
+```
+oc get rolebindings
+```
+For more information on adding users, you can [watch this](https://www.youtube.com/watch?v=IvdPyx2-qm0) or [use this](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/). <!-- is this somewhat the correct place to include these links? -->
 ## Existing repository
 
 If the project already has a GitHub repository, the administrator or owner of the repository can invite new users as `collaborators`, rather than joining the organization. The administrator or owner of the repository can [add collaborators](https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/adding-outside-collaborators-to-repositories-in-your-organization) from the **Settings** area. Click **Add Collaborator**. No further requests are needed.
@@ -38,7 +65,7 @@ The Platform Services team reviews GitHub access and removes users that haven't 
 
 ## Request access
 
-If a new user meets the prerequisites for access, the product owner can create an issue in the [DevOps Request Repo](https://github.com/BCDevOps/devops-requests) to make a request. **New users can't request access for themselves**.
+If a user meets the prerequisites for access, the product owner can create an issue in the [DevOps Request Repo](https://github.com/BCDevOps/devops-requests) to make a request. **New users can't request access for themselves**.
 
 Include the following in the request:
 
