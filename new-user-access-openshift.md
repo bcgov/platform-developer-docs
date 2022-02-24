@@ -53,3 +53,7 @@ OpenShift User Access Removal Request:
 - Project role: Full-stack Developer
 - OpenShift projects: xyz123-tools, xyz123-test, xyz123-test, xyz123-prod  
 ```
+---
+Rewrite sources:
+* https://developer.gov.bc.ca/Getting-Started-on-the-DevOps-Platform/How-to-Request-New-User-Access-to-OpenShift
+---

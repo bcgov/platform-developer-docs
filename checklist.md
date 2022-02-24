@@ -85,3 +85,7 @@ Deputy Minister (or delegate)                                        Date
 ----------
 
 [Go back to the Contents List](README.md) or continue reading [Approaches to Collaborating/Contributing](Collaborating-Contributing.md)
+---
+Rewrite sources:
+* https://developer.gov.bc.ca/Getting-Started-on-the-DevOps-Platform/How-to-Request-a-New-OpenShift-Project
+---

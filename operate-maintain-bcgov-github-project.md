@@ -75,3 +75,8 @@ Employees can also contribute to non-BC government owned intellectual property r
 ----------
 
 [Go back to the Contents List](README.md) or continue reading [Appropriate Use](appropriate-use.md)
+
+---
+Rewrite sources:
+* https://developer.gov.bc.ca/Code-Management/Approaches-to-CollaboratingContributing
+---

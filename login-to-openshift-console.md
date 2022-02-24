@@ -39,3 +39,8 @@ We don't intend to leverage SSO integration for IDIR onto GitHub at this time. Y
 If you have any questions or concerns about this change, post your question in [#devops-security channel](https://chat.developer.gov.bc.ca/channel/devops-security) in RocketChat and tag Nick Corcoran, our Platform Security Architect.
 
 For more information, see [BC Government OpenShift DevOps Security Considerations](https://developer.gov.bc.ca/BC-Government-OpenShift-DevOps-Security-Considerations).
+
+---
+Rewrite sources:
+* https://developer.gov.bc.ca/IDIR-Login-(via-Azure-AD)-for-OpenShift-Console
+---

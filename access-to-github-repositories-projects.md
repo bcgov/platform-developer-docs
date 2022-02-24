@@ -136,3 +136,12 @@ GitHub User Access Removal Request:
 - GitHub ID: govviemcgovster
 - GitHub Repo: https://github.com/bcgov/govvie-gov, https://github.com/bcgov/govviest-gov
 ```
+
+---
+Rewrite sources:
+* https://developer.gov.bc.ca/Getting-Started-on-the-DevOps-Platform/How-to-request-new-GitHub-user-access-or-repository-creation
+* https://developer.gov.bc.ca/Getting-Started-on-the-DevOps-Platform/Granting-a-user-access-to-a-project
+* https://developer.gov.bc.ca/Getting-Started-on-the-DevOps-Platform/How-to-request-new-GitHub-user-access-or-repository-creation
+* https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/
+* https://www.youtube.com/watch?v=IvdPyx2-qm0
+---

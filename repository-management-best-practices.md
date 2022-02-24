@@ -29,3 +29,8 @@ Using GitHub may require you to use other related services. Before signing up, w
 Before publishing content to GitHub, choose a suitable licence from the list of approved licences and confirm your authority to license (see [Licenses](Licenses.md)).
 
 Complete the [Open Content publishing checklist](Content-Approval-Checklist.md) before making any contributions. The checklist addresses privacy, intellectual property rights, and information security. This helps ensure the content posted to GitHub can be published under the appropriate licence.
+
+---
+Rewrite sources:
+* https://developer.gov.bc.ca/Code-Management/Github-Practices-in-Gov
+---
