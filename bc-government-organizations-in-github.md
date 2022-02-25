@@ -1,15 +1,13 @@
 ---
 title: BC Government Organizations in Github
 
-description:
+description: Describes the different BC Government organizations in GitHub
 
-keywords:
+keywords: github, github org, repo, open source, devops, private cloud, openshift, github enterprise
 
-tags: github, github org, repo, open source, devops, private cloud, openshift, github enterprise
+page purpose: Describes the different BC Government organizations in GitHub, what they're used for, and who can use them.
 
-page purpose:
-
-audience:
+audience: developers
 ---
 
 # BC Government Organizations in Github
@@ -64,16 +62,14 @@ The `bcgov-platform-services` organization is for the Platform Services team onl
 Ministry-specific **private** organizations must be linked to the BC Government's Enterprise account (user licenses are required for the members of these organizations)
 
 These organizations permanently store teams' private repositories with closed-sourced code that can't be transitioned to a public repository within 12 months. For more information on creating a private organization linked to the GitHub enterprise account, see [this page](https://developer.gov.bc.ca/Use-of-GitHub-Enterprise-User-Licenses-in-BC-Gov).
+* Product teams that need a permanent location for their closed-source code should use this repository. Each Ministry team must purchase their own [user licenses]((https://developer.gov.bc.ca/Use-of-GitHub-Enterprise-User-Licenses-in-BC-Gov)) to use the organization.
+* Only Ministry GitHub administrators can create repositories in this organization. Consult with your Ministry's IMB <!-- what is this? --> to get in touch with the GitHub administrators.
 
-Security Insight feature is available for all orgs linked to the corporate GitHub Enterprise account as well branch protection and code owners for private repos.  Branch protection only allows specific people to push to the protected branch. Code owners feature allows enabling automated reviews, e.g. if a specific user is a code owner of the certain files they are automatically added as PR reviewers and their approval is required before the code can be merged.
+### Security Insight
 
-*Who should use this org*: product teams that need a permanent location for their closed sourced code. Each Ministry team must purchase their own [user licenses]((https://developer.gov.bc.ca/Use-of-GitHub-Enterprise-User-Licenses-in-BC-Gov)) in order to use the org.
-
-*Who can create repos in this org*: Ministry GitHub admins. Consult with your Ministry's IMB to get in touch with the GitHub admins.
+The Security Insight feature is available for all organizations linked to the corporate GitHub Enterprise account, as well branch protection and code owners for private repositories. Branch protection only allows specific people to push to the protected branch. The code owners feature allows automated reviews. For example, if a specific user is a code owner of certain files they are automatically added as PR reviewers and their approval is required before the code can be merged.
 
 ---
 Rewrite sources:
 * https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/github/README.md
-* https://github.com/BCDevOps/openshift-wiki/blob/master/docs/HowTo/RequestGitHubEnterpriseUserLicense.md
-* https://developer.gov.bc.ca/repositories
 ---
