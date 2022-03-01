@@ -16,26 +16,13 @@ All code by BC government teams should be open source by default. If you have cl
 
 For more information on our GitHub organizations and their uses, see [BC Government Organizations in Github](/bc-government-organizations-in-github.md)
 
+## Benefits of a GitHub Enterprise user licence
 
-## What benefits do you get with the GitHub Enterprise User License?
+The enterprise user licence offers the following features:
 
+* **Support**: The enterprise license offers a standard and a premium support option, including phone support, through the GitHub Support Portal.
 
-
-There a substantial collection of features that come with GitHub Enterprise, specifically over the free and Teams licenses.   
-
-
-
-Here are major focus points when dealing with your code base if it can never see public consumption or become OpenSource.   
-
-
-
-**Support** -> Enterprise license offers standard (via the GitHub Support Portal) + a premium support option, including phone support as well.
-
-
-
-**Security** ->  If you are looking to leverage GitHub.com’s features such code scanning, secrets scanning (like passwords, keys etc), and code dependency review including the ability to remove certain commits from the history (e.g. you accidentally included passwords or other sensitive info in your committed code), your private repositories can only use these features under the Enterprise account.  Free and Teams license only allows scanning public repositories, not private repositories. Enterprise license also comes with the advanced security portal/interface to gain additional insights into repo security that is not available in Free and Teams license.  To reduce your private code repos risk portfolio, Enterprise is the only option for IP white/black listing, and potential LDAP and SAML SSO should you eventually want to remove GitHub IDs and only integrate with IDIR ( this is still to be implemented).
-
-
+* **Security**: If you are looking to leverage GitHub.com’s features such code scanning, secrets scanning (like passwords, keys etc), and code dependency review including the ability to remove certain commits from the history (e.g. you accidentally included passwords or other sensitive info in your committed code), your private repositories can only use these features under the Enterprise account.  Free and Teams license only allows scanning public repositories, not private repositories. Enterprise license also comes with the advanced security portal/interface to gain additional insights into repo security that is not available in Free and Teams license.  To reduce your private code repos risk portfolio, Enterprise is the only option for IP white/black listing, and potential LDAP and SAML SSO should you eventually want to remove GitHub IDs and only integrate with IDIR ( this is still to be implemented).
 
 The full listing of differences between Free vs Teams vs Enterprise licenses is available here:
 
