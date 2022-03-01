@@ -1,11 +1,11 @@
 ---
 title: License your project
 
-description:
+description: Describes licence guidelines and the different types of licences used for GitHub projects
 
-keywords: licence, license, apache 2.0, mit, BC OGL
+keywords: licence, license, apache 2.0, BC OGL, Creative Commons, Affero, repository management, repository best practices
 
-page purpose:
+page purpose: Outlines how to choose and use a licence for your project and describes the requirements around licensing
 
 audience: developer, project administrator
 ---
@@ -27,7 +27,7 @@ If want to initiate a project or release previously created materials, be aware 
 
 The Province’s intellectual property rights must be, at a minimum, equal to the rights under which the content will be licensed to third parties. Four open licences are approved for use that likely cover the majority of projects coming forward:
 
-## Authority to License
+## Authority to license
 
 The IPP must approve licences of B.C. government owned intellectual property unless a ministry has either specific legislative authority or Treasury Board approval that lets them license the intellectual property rights of the Province to third parties. When IPP is the authority for the licensing, you work with IPP to find the best fit to meet the licensing needs of the project.
 
@@ -37,7 +37,7 @@ IPP examines the development history of the content, which can take the form of 
 - Does the content contain only content owned by the B.C. government? Have you made sure that it doesn't contain any third-party content?
 - Can you confirm that there are no terms of use or exclusive licensing arrangements that prohibit the Province from posting and licensing the content on GitHub?
 
-### Preferred Licenses
+### Preferred licenses
 
 - [Apache 2](https://www.apache.org/licenses/LICENSE-2.0) for publishing code
 - [Creative Commons International 4.0 (CC BY)](https://creativecommons.org/licenses/by/4.0/) for other documentation, artistic resources and educational material
@@ -48,24 +48,22 @@ Use these licences, as they are widely accepted, and follow a consistent approac
 
 If your project is better suited to a different licence, discuss your requirements with the Intellectual Property Program (IPP). They can help answer your questions and advise on your need for any other legal or risk management advice.
 
-## Choosing a License
+## Choose a license
 
-The overview provided is intended to inform, not replace, the licensing review for each project.  
+The following overview provided is intended to inform, not replace, the licensing review for each project.  
 
-![Tree](../images/License-Tree.png)
+![A flowchart that helps you choose a licence](/images/licence-chart.png)
 
 If your project is related to a community that typically uses a different licence than one of the preferred licences described above, or if you have any questions about which licence best applies to your project, contact IPP.
 
 
-![Path](../images/GitHub-Ready.png)
+![A flowchart to outline code preparation for GitHub](/images/github-code-preparation-chart.png)
 
-## Applying the License to your Code/Project
+## Apply the licence to your project
 
-There are specific steps required to ensure you clearly communicate your licensing decision within a GitHub repository. Attach the appropriate LICENSE file directly into your repository before you do anything else.
+Place the licence file for your project in the repository before you do anything else. The default license for code repositories is Apache 2.0.
 
-The default license For code repositories is: Apache 2.0
-
-Here is the boiler-plate you must put into the comments header of every source code file as well as the bottom of your README.md:
+Use the following boiler-plate text you must put into the comments header of every source code file, as well as the bottom of your README.md:
 
     Copyright 2019 Province of British Columbia
 
@@ -81,11 +79,11 @@ Here is the boiler-plate you must put into the comments header of every source c
     See the License for the specific language governing permissions and
     limitations under the License.
 
-For repos that are made up of docs, wikis and non-code stuff the default to use is Creative Commons Attribution 4.0 International, and should look like this at the bottom of your README.md:
+For repositories that are made up of docs, wikis or other non-code files, the default licence is Creative Commons Attribution 4.0 International. It should look like this at the bottom of your README.md:
 
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">YOUR REPO NAME HERE</span> by <span xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">the Province of British Columbia</span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
-and the code for the cc 4.0 footer looks like this:
+The code for the Creative Commons 4.0 footer looks like this:
 
     <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons Licence"
     style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/80x15.png" /></a><br /><span
@@ -93,8 +91,7 @@ and the code for the cc 4.0 footer looks like this:
     xmlns:cc="http://creativecommons.org/ns#" property="cc:attributionName">the Province of British Columbia
     </span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
     Creative Commons Attribution 4.0 International License</a>.
-
-
-----------
-
-[Go back to the Contents List](README.md) or continue reading [Security](Security.md)
+---
+Rewrite sources:
+* https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/Licenses.md
+---
