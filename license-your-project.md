@@ -37,7 +37,7 @@ IPP examines the development history of the content, which can take the form of 
 - Does the content contain only content owned by the B.C. government? Have you made sure that it doesn't contain any third-party content?
 - Can you confirm that there are no terms of use or exclusive licensing arrangements that prohibit the Province from posting and licensing the content on GitHub?
 
-## Preferred Licenses
+### Preferred Licenses
 
 - [Apache 2](https://www.apache.org/licenses/LICENSE-2.0) for publishing code
 - [Creative Commons International 4.0 (CC BY)](https://creativecommons.org/licenses/by/4.0/) for other documentation, artistic resources and educational material
