@@ -3,15 +3,14 @@ title: Operate and maintain a BCGov GitHub project
 
 description: Learn more about operating, and possibly maintaining, a GitHub Repository in Gov.
 
-keywords:
+keywords: open source, GitHub, GitHub management, repository, repository management
 
-page purpose:
+page purpose: Describes the different ways a user might want to use or maintain and GitHub project and the requirements
 
-audience:
+audience: developer
 ---
 # Operate and maintain a BCGov GitHub project
 
-## Approval Requirements
 If you plan sharing code developed by or for the BC government, you must complete the [Open Content Assessment Checklist](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/Content-Approval-Checklist.md) and get approval from your Deputy Minister. Deputy Ministers may choose to delegate this authority to Ministry (CIOs). <!-- what does this stand for? -->
 
 The BC government follows the Open Development Standard, which outlines the following:
