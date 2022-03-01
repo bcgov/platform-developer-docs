@@ -12,24 +12,9 @@ audience:
 
 # GitHub Enterprise user licences in the BC government
 
-Great news for everyone in the BC Government who has closed-source code and still wants to leverage the power of GitHub, an online repository hosting service!
+All code by BC government teams should be open source by default. If you have closed-source code and still want to use GitHub, you can work temporarily in a private repository under the GitHub Enterprise licence. <!-- I'm not clear on why exactly one would consider using an enterprise licence. They have private code and....? It will never be opensource? -->
 
-On this page you will find the informatiton that will help your team decide whether GitHub Enterprise service is right for your project: note, all code produced by BC Gov's teams should be open-source by default and closed-source e.g. private, by exception. You will also learn how to purchase user licenses for your team to work with the private repos linked to the Province's GitHub Enterprise account.
-
-
-## When does your team need a GitHub Enterprise User License?
-
-
-As per the Province’s Digital Principles – 5. Work in The Open, OpenSource code base should first and foremost be considered whenever possible for your digital products.  All of the Province’s public code repositories on GitHub.com must live in public bcgov organization, to be consolidated within a central organization.  Github.com/bcgov has been properly procured with legal support, STRA and PIA for all of the Province’s OpenSource code.   
-
-
-The Province also owns a private organization bcgov-c that serves as **temporary holding ground** for closed-sourced code and to be for staging the code that’s on its journey to OpenSource.  It is not to be used as a permanent code respository.  This staging environment was procured through a direct award, leveraging the same STRA and PIA for github.com/bcgov, as part of the evolution of the Province’s DevOps Platform, now known as Private Cloud and upcoming Public Cloud Pathfinder.  bcgov-c has a GitHub Teams license and requires a monthly user fee for every user that needs access to the private repos it contains. The GitHub Teams license includes community support (via GitHub Community Forum) + standard support model (via the GitHub Support Portal)
-
-
-
-If your code can never be OpenSource, and you are looking to leverage GitHub, you are recommended to use GitHub Enterprise.  It was procured as part of the Master Agreement with Microsoft.
-
-**If you are unsure what Github org is right for your code, please consult with your Ministry's Information Security Officer (MISO).**
+For more information on our GitHub organizations and their uses, see [BC Government Organizations in Github](/bc-government-organizations-in-github.md)
 
 
 ## What benefits do you get with the GitHub Enterprise User License?
