@@ -7,12 +7,12 @@ keywords: GitHub, Github Enterprise, closed source, private repository, private 
 
 page purpose: Discusses why you might want to use a GitHub Enterprise user licence and how to request, access, and pay for the users.
 
-audience: developers, administrators, devops
+audience: technical lead, product owner
 ---
 
 # GitHub Enterprise user licences in the BC government
 
-All code by BC government teams should be open source by default. If you have closed-source code and still want to use GitHub, you can work temporarily in a private repository under the GitHub Enterprise licence. <!-- I'm not clear on why exactly one would consider using an enterprise licence. They have private code and....? It will never be opensource? -->
+All code by BC government teams should be open source by default. If you have closed-source code and still want to use GitHub, you can work temporarily in a private repository under the GitHub Enterprise licence. <!-- I'm not clear on why exactly one would consider using an enterprise licence. They have private code and....? It will never be opensource? check diagram -->
 
 For more information on our GitHub organizations and their uses, see [BC Government Organizations in Github](/bc-government-organizations-in-github.md)
 

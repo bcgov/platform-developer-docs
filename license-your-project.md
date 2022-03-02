@@ -7,7 +7,7 @@ keywords: licence, license, apache 2.0, BC OGL, Creative Commons, Affero, reposi
 
 page purpose: Outlines how to choose and use a licence for your project and describes the requirements around licensing
 
-audience: developer, project administrator
+audience: developer, technical lead
 ---
 # License your project
 
@@ -55,7 +55,6 @@ The following overview provided is intended to inform, not replace, the licensin
 ![A flowchart that helps you choose a licence](/images/licence-chart.png)
 
 If your project is related to a community that typically uses a different licence than one of the preferred licences described above, or if you have any questions about which licence best applies to your project, contact IPP.
-
 
 ![A flowchart to outline code preparation for GitHub](/images/github-code-preparation-chart.png)
 

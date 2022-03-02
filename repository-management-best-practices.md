@@ -7,7 +7,7 @@ keywords: content, privacy, licence, GitHub, repository, best practices
 
 page purpose: Describes requirements and recommendations for working in a professional capacity in BC Government GitHub repositories.
 
-audience: developers
+audience: developer, technical lead
 ---
 
 # Repository management best practices

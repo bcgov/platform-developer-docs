@@ -12,7 +12,7 @@ audience:
 
 # KeyCloak SSO service integration
 
-The BC Government **Pathfinder SSO** service is based on the Open Source Keycloak product. The service provides an industry standard and enterprise-policy compliant way to implement authentication within applications.
+The BC Government **Pathfinder SSO** service is based on the [Open Source Keycloak product](https://github.com/bcgov/sso-keycloak/wiki/What-is-Keycloak-and-how-it's-used-@-BC-Gov%3F). The service provides an industry standard and enterprise-policy compliant way to implement authentication within applications.
 
 Development teams are provisioned a set of clients within a multi-tenant instance of Keycloak running in the [OpenShift Container Platform (OCP)](../OCP/ServiceDefinition.md) platform that provide a simple authentication mechanism suitable for web and mobile applications.
 
@@ -107,11 +107,6 @@ Copyright 2019 Province of British Columbia
 This work is licensed under the Creative Commons Attribution 4.0 International License.
 To view a copy of this license, visit http://creativecommons.org/licenses/by/4.0/.
 
-
-# Pathfinder SSO Service Overview
-
-The Pathfinder SSO Services makes use of RedHat Keycloak.
-[What is Keycloak in the context of Pathfinder SSO](https://github.com/bcgov/ocp-sso/wiki/What-is-Keycloak-and-how-it's-used-@-BC-Gov%3F)
 ---
 Rewrite sources:
 * https://developer.gov.bc.ca/Authentication-and-Authorization/Pathfinder-SSO-Service-Definition

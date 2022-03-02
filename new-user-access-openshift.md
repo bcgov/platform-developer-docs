@@ -7,7 +7,7 @@ keywords: OpenShift, access, access request, new user
 
 page purpose: Describes how users get access or revoke access to OpenShift and the prerequisites.
 
-audience: developer, project administrator
+audience: developer, technical lead
 ---
 
 # Request New User Access to OpenShift

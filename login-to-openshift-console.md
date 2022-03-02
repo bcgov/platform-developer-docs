@@ -7,7 +7,7 @@
 
   page purpose: Gives background and information on logging into the OpenShift console with your IDIR and the background on how it was set up.
 
-  audience: developer, project administrator
+  audience: developer, technical lead
 ---
 
 # Login to the OpenShift Console with your IDIR
