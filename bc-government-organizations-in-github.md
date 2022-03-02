@@ -7,12 +7,12 @@ keywords: github, github org, repo, open source, devops, private cloud, openshif
 
 page purpose: Describes the different BC Government organizations in GitHub, what they're used for, and who can use them.
 
-audience: developers
+audience: developer
 ---
 
 # BC Government Organizations in Github
 
-The BC Devops team uses [GitHub](https://github.com) to host open code and repositories. GitHub's platform hosts many well-known projects. Using GitHub we're able to do the following:
+The BC Devops team uses [GitHub](https://github.com) to host open code and repositories. Using GitHub we're able to do the following:
 * Share and control code versions
 * Use tools for team and project management
 * Track issues
@@ -23,7 +23,7 @@ The two main organizations the BC government hosts on Github are [bcgov](https:/
 
 If you're unsure which repository you should use, see the following image:
 
-![Diagram of the BC Goverment GitHub organizations](../images/GitHub_Org-Guide.png) <!-- need to import image -->
+![Diagram of the BC Goverment GitHub organizations](/images/github-organization-chart.png)
 
 ## Working in the open
 

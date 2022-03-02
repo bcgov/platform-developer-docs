@@ -33,7 +33,7 @@ When your private org is linked to the GitHub Enterprise account certain setting
 
 ## Request GitHub Enterprise user licences
 
-Contact [Software Central Management](mailto:SoftwareCentral.Management@gov.bc.ca) and cc [Dean Picton](Dean.Picton@gov.bc.ca) <!-- what is Dean's role? this email shouldn't be direct to him, we should advise on the role they need to contact -->. Use the subject line "GitHub Enterprise Request" and send the following information:  
+Contact [Software Central Management](mailto:SoftwareCentral.Management@gov.bc.ca) and cc [Dean Picton](Dean.Picton@gov.bc.ca) <!-- what is Dean's role? this email shouldn't be direct to him, we should advise on the role of the person they need to contact. It's best practice to do that for maintenance, in case Dean is unavailable for any number of reasons -->. Use the subject line "GitHub Enterprise Request" and send the following information:  
 
 * Private GitHub organization name and whether you need a new organization created or are linking an existing private organization  
 
