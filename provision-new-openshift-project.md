@@ -7,7 +7,7 @@
 
   page purpose: Describes the acceptance criteria to provision a new project on the OpenShift platform and the process to get the project setup.
 
-  audience:
+  audience: technical lead
 ---
 
 # Provision a new OpenShift project
@@ -15,17 +15,6 @@
 On the OpenShift platform, different teams organize their work in isolated projects. Before you can work on the platform, you need to submit a project provisioning request to have a set of projects provisioned by the OCIO Enterprise DevOps branch.
 
 Each new request must be reviewed and approved, including requests for additional projects from teams that already have one or more projects on the platform.
-
-## Acceptance criteria
-
-The OCIO Platform Services team needs to be confident you meet the following criteria before they agree to host your project on the OpenShift platform:
-
-* Your executive sponsors and endorses the project and the continuous service improvement <!-- Does this refer to the ITIL concept: Continual Service Improvement? If so, proper noun, capitalize, etc.--> delivery model
-* Your project is based on open-source code, with custom code hosted in the [BC Government GitHub repositories](https://github.com/bcgov)
-* Your project is supported by a team with explicit roles such as devops specialist, scrum master and product owner. Ideally, one or more of these roles should be filled by dedicated staff
-* Your team follows an Agile methodology
-* Your team is committed to participating in and contributing to the BC Government open-development community  
-* You have a devops specialist looking after your application after you complete the period of active development
 
 ## Submit a project provisioning request
 
