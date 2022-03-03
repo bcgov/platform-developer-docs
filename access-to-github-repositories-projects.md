@@ -128,7 +128,7 @@ Include the following in the request:
 * User's GitHub ID
 * The GitHub repository you are removing the user from
 
-Use the following example as a reference when you submit a request:
+Use the following example as a reference when you submit a request: <!-- is this actually a good example? Can we update it? -->
 
 ```markdown
 GitHub User Access Removal Request:
