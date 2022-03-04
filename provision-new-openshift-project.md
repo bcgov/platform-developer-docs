@@ -19,6 +19,7 @@ Each new request must be reviewed and approved, including requests for additiona
 ## Submit a project provisioning request
 
 If you meet the criteria, book an onboarding meeting with the Platform Product Director to confirm your project's suitability by contacting the Platform Services Team at PlatformServicesTeam@gov.bc.ca. After the alignment meeting, your product owner or your Ministry's DevOps Chapter Lead can submit a project provisioning request through the [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing). Once your request is  approved, the project is created and the requestor is notified when provisioning is complete. 
+
 **Note: The onboarding meeting with the Platform Product Director is a prerequisite to having a project provisioning request approved.**
 
 **For AG teams only**: Contact Ryan Loiselle at Ryan.Loiselle@gov.bc.ca to submit the request for you. <!-- same as above? Is there a generic alt for this? -->
