@@ -22,7 +22,7 @@ If you meet the criteria, book an onboarding meeting with the Platform Product D
 
 **Note: The onboarding meeting with the Platform Product Director is a prerequisite to having a project provisioning request approved.**
 
-**For AG teams only**: Contact Ryan Loiselle at Ryan.Loiselle@gov.bc.ca to submit the request for you. <!-- same as above? Is there a generic alt for this? -->
+**For Attorney General (AG) teams only**: Contact Ryan Loiselle at Ryan.Loiselle@gov.bc.ca to submit the request for you.
 
 OpenShift namespaces are auto-generated at provisioning in the form of `<generated alphanumeric string>-<environment>`. We call them `project license plates`.
 

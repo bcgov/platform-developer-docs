@@ -16,7 +16,7 @@ When you work on BC Government projects, make sure to use your _public.servant@g
 
 ## Content requirements
 
-Adhere to the minimum content requirements to establish a [readme.md](../BC-Gov-Org-HowTo/SAMPLE-README.md), [contributing.md](../BC-Gov-Org-HowTo/SAMPLE-CONTRIBUTING.md), and [license](../BC-Gov-Org-HowTo/using-licenses.md) file. We also encourage you to include a [Contributor Code of Conduct](http://contributor-covenant.org/) in your repository by adding a [CODE_OF_CONDUCT.md](../BC-Gov-Org-HowTo/SAMPLE-CODE_OF_CONDUCT.md). This document lets people know that all are welcome to contribute, and that all who contribute pledge to make participation in the project a harassment-free experience for everyone.
+For more information on the content requirements for your repository, see [Operate and maintain a BCGov GitHub project](operate-maintain-bcgov-github-project.md).
 
 Follow the proper conventions laid out in the contributing.md file for the repository when you create, fork, modify, and submit pull requests.
 

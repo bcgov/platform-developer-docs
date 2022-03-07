@@ -29,7 +29,7 @@ The Province’s intellectual property rights must be, at a minimum, equal to th
 
 ## Authority to license
 
-The IPP must approve licences of B.C. government owned intellectual property unless a ministry has either specific legislative authority or Treasury Board approval that lets them license the intellectual property rights of the Province to third parties. When IPP is the authority for the licensing, you work with IPP to find the best fit to meet the licensing needs of the project.
+The Intellectual Property Program (IPP) must approve licences of B.C. government owned intellectual property unless a ministry has either specific legislative authority or Treasury Board approval that lets them license the intellectual property rights of the Province to third parties. When IPP is the authority for the licensing, you work with IPP to find the best fit to meet the licensing needs of the project.
 
 IPP examines the development history of the content, which can take the form of a conversation. Initial questions include the following:
 
@@ -46,7 +46,7 @@ IPP examines the development history of the content, which can take the form of 
 
 Use these licences, as they are widely accepted, and follow a consistent approach to licensing. This increases efficiency for both developers and consumers.
 
-If your project is better suited to a different licence, discuss your requirements with the Intellectual Property Program (IPP). They can help answer your questions and advise on your need for any other legal or risk management advice.
+If your project is better suited to a different licence, discuss your requirements with the IPP. They can help answer your questions and advise on your need for any other legal or risk management advice.
 
 ## Choose a license
 

@@ -9,6 +9,16 @@ page purpose: Describes the different ways a user might want to use or maintain 
 
 audience: developer
 ---
+
+<!--
+new app team needs to start working on the app, create a new GH repo
+what type of info needed in the repo
+guidelines for teams when they're starting a new project
+
+Organization > repo > project > documents/code and other stuff
+
+-->
+
 # Operate and maintain a BCGov GitHub project
 
 If you plan sharing code developed by or for the BC government, you must complete the [Open Content Assessment Checklist](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/Content-Approval-Checklist.md) and get approval from your Deputy Minister. Deputy Ministers may choose to delegate this authority to Ministry (CIOs). <!-- what does this stand for? -->
@@ -30,7 +40,7 @@ Projects like this follow two basic approaches, but can vary.
 
 In both cases, the basic steps to release the code are similar, while the implications for project management and resourcing are not. Key requirements in these scenarios include the following:
 
-- Confirm your authority to [license](Licenses.md)
+- Confirm your authority to [license](license-your-project.md)
 
 	Choose an open-source license and consult with the Intellectual Property Program (IPP) to make sure government has the right to release the code.
 
@@ -55,7 +65,6 @@ These are projects that you want to manage as an open-source, collaborative proj
 - Create the minimum required content: [readme.md](../BC-Gov-Org-HowTo/SAMPLE-README.md), [contributing.md](../BC-Gov-Org-HowTo/SAMPLE-CONTRIBUTING.md), and [license](../BC-Gov-Org-HowTo/using-licenses.md) files
 - Add a [Contributor Code of Conduct](http://contributor-covenant.org/) to your repository. This document lets people know that all are welcome to contribute, and that all who contribute pledge to make participation in the project a harassment-free experience for everyone. Include a [CODE_OF_CONDUCT.md](../BC-Gov-Org-HowTo/SAMPLE-CODE_OF_CONDUCT.md), and provide a contact method (in the placeholder) so that people know how to report violations. Introduce the code of conduct in your `readme.md`.
 
-
 ## Contribute to an outside project
 
 There may be circumstances where it's useful and appropriate for employees to contribute to non-BC government repositories as a part of their work. In these cases, consider the following:
@@ -70,11 +79,6 @@ There may be circumstances where it's useful and appropriate for employees to co
 - Confirm your authority to [license](Licenses.md)
 
 Employees can also contribute to non-BC government owned intellectual property rights outside their professional roles by using their personal email linked to their GitHub account.
-
-----------
-
-[Go back to the Contents List](README.md) or continue reading [Appropriate Use](appropriate-use.md)
-
 ---
 Rewrite sources:
 * https://developer.gov.bc.ca/Code-Management/Approaches-to-CollaboratingContributing
