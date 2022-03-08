@@ -28,7 +28,7 @@ We have access to the following storage services for the OpenShift platform.
 
 The primary storage solution for the OpenShift platform is backed by a NetApp storage appliance that provides both file and block storage types to the cluster.
 
-All NetApp storage classes support resizing (bigger only). You can start with a small volume and edit your Persisent Volume Claim (PVC) to have a larger `.spec.resources.requests.storage` later if you need more. You may need to restart the pods attached to let the resize trigger on re-mount.
+All NetApp storage classes support resizing (bigger only). You can start with a small volume and edit your Persisent Volume Claim (PVC) to have a larger `.spec.resources.requests.storage` later if you need more. You may need to restart the pods attached to let the resize trigger on re-mount. **Note: the storage increase is capped by the storage quota assigned to the namespace. Check the current resource quota sizes [here](https://developer.gov.bc.ca/Project-Resource-Quotas-in-BC-Gov's-PaaS-(Openshift-4-Platform)).
 
 * **NetApp File**: `netapp-file-standard` is the default storage class for the platform and the type of storage you get if you don't specify a specific `storageClass`.
 
@@ -46,7 +46,7 @@ See the [Red Hat docs](https://access.redhat.com/documentation/en-us/red_hat_ope
 
 ### S3-Compatible Object Storage (Dell EMC Elastic Cloud Storage)
 
-For applications that need to store large amounts of data (beyond the storage allocation included in the medium size quota as defined [here](https://app.zenhub.com/workspaces/openshift-4-build-out-5db73142897668000144f22b/issues/bcdevops/openshift4-rollout/254)) we recommend the S3-compliant on-prem Object Storage Service offered by OCIO's Hosting Branch to store unstructured data such as images, pdfs, and other types of files. NetApp storage offered on the OCP4 Platform isn't suitable large amounts of unstructured data. NetApp storage should only be used for structured data such as databases that require high-I/O workloads.
+For applications that need to store large amounts of unstructured data we recommend using the S3-compliant on-prem [Object Store Service](https://ssbc-client.gov.bc.ca/services/ObjectStorage/overview.htm) offered by OCIO's Enterprise Hosting Branch. The Object Store Services provides storage for unstructured data such as images, pdfs, and other types of files. NetApp storage offered on the OCP4 Platform isn't suitable large amounts of unstructured data. NetApp storage should only be used for structured data such as databases that require high-I/O workloads.
 
 The OCIO has an [object store](https://ssbc-client.gov.bc.ca/services/ObjectStorage/overview.htm) service that supports the AWS S3 protocol. The service is aimed at objects typically over 100 KB, updated infrequently, retained longer term, with performance response targets of 100ms or more.
 
@@ -69,7 +69,7 @@ You can use tools to manage your persistent storage beyond the features built in
 ## Storage details
 
 ### Quotas
-All storage sizes are in GiB and backup quotas default to half the storage size. These quotas can be requested in the Project Registry. You need to provide proof of increased storage needs to the Platform Product Director before the request can be approved and more storage is allocated to a namespace. All storage quotas include 60 PVCs and 5 VolumeSnapshots.
+All storage sizes are in GiB and backup quotas default to half the storage size. These quotas can be requested in the [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing) by a project's Product Owner or the Technical Lead. **Note: You need to provide proof of increased storage needs to the Platform Product Director before the request can be approved and more storage is allocated to a namespace.** All storage quotas include 60 PVCs and 5 VolumeSnapshots.
 
 - storage-1
 - storage-2
