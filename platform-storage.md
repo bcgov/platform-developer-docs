@@ -1,13 +1,13 @@
 ---
 title: Platform storage
 
-description:
+description: Describes the different storage technologies used on the OpenShift platform.
 
 keywords: netapp, net app, nfs, storage, pvc, persistent, storage options
 
-page purpose:
+page purpose: Describes different platform technologies, types, and services and their details.
 
-audience:
+audience: technical lead, developer
 ---
 
 # Platform storage
@@ -64,12 +64,16 @@ You can use tools to manage your persistent storage beyond the features built in
 
 * **Database backups**: We have a community project to help teams implement regular backups of their databases hosted within the platform. You can find the repo here: [BCDevOps/Backup-Container](https://github.com/bcdevops/backup-container)
 
-* **Migrating storage**: another community supported repository is available to help with migrating data from one PVC to another (moving from one storageClass to another, moving to a larger PVC, etc). Please check out the repo here: [BCDevOps/StorageMigration](https://github.com/BCDevOps/StorageMigration)
+* **Migrating storage**: Another community supported repository is available to help with migrating data from one PVC to another (moving from one storageClass to another, moving to a larger PVC, etc). You can find the repo here: [BCDevOps/StorageMigration](https://github.com/BCDevOps/StorageMigration)
 
 ## Storage details
 
 ### Quotas
-All storage sizes are in GiB and backup quotas default to half the storage size. These quotas can be requested in the [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing) by a project's Product Owner or the Technical Lead. **Note: You need to provide proof of increased storage needs to the Platform Product Director before the request can be approved and more storage is allocated to a namespace.** All storage quotas include 60 PVCs and 5 VolumeSnapshots.
+All storage sizes are in GiB and backup quotas default to half the storage size. These quotas can be requested in the [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing) by a project's Product Owner or the Technical Lead.
+
+**Note**: You must to provide proof of increased storage needs to the Platform Product Director before the request can be approved and more storage is allocated to a namespace.
+
+All storage quotas include 60 PVCs and 5 VolumeSnapshots.
 
 - storage-1
 - storage-2
@@ -115,5 +119,5 @@ The speed of each storage solution depends on your workload. ElasticSearch speci
 Rewrite sources:
 * https://github.com/BCDevOps/openshift-wiki/blob/master/docs/OCP/OCPStorageServices.md
 * https://github.com/BCDevOps/OpenShift4-Migration/issues/59
-* https://ssbc-client.gov.bc.ca/services/ObjectStorage/overview.htm <!-- provided as a link -->
+* https://ssbc-client.gov.bc.ca/services/ObjectStorage/overview.htm
 ---

@@ -16,32 +16,6 @@ BC Government project teams keep open-source projects in the GitHub organization
 
 If you want to invite a new user to contribute to the [BC Gov](https://github.com/orgs/bcgov/dashboard) GitHub repositories, they must have a GitHub account (ideally with a complete profile) with two-factor authentication enabled.
 
-## Add users
-
-You can add users in one of the following primary roles:
-
-* ``admin`` A project manager who can view any resource in the project and modify any resource in the project except for quota.  An ``admin`` user can delete the project.
-* ``edit`` A user that can modify most objects in a project, but can't view or modify roles or bindings. An ``edit`` user can create and delete applications in the project.
-* ``view`` A user who can't make any modifications, but can see most objects in a project.
-
-To add another user with edit role to the project who can create and delete applications, use the ``oc adm policy`` command. You must be in the project when you run this command.
-
-```
-oc adm policy add-role-to-user edit <collaborator>
-```
-
-Replace ``<collaborator>`` with the name of the user as displayed by the ``oc whoami`` command when run by that user.
-
-To remove a user from a project, run:
-
-```
-oc adm policy remove-role-from-user edit <collaborator>
-```
-To get a list of the users who have access to a project, and in what role, a project manager can run:
-```
-oc get rolebindings
-```
-For more information on adding users, you can [watch this](https://www.youtube.com/watch?v=IvdPyx2-qm0) or [use this](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/). <!-- is this somewhat the correct place to include these links? -->
 ## Existing repository
 
 If the project already has a GitHub repository, the administrator or owner of the repository can invite new users as `collaborators`, rather than joining the organization. The administrator or owner of the repository can [add collaborators](https://docs.github.com/en/organizations/managing-access-to-your-organizations-repositories/adding-outside-collaborators-to-repositories-in-your-organization) from the **Settings** area. Click **Add Collaborator**. No further requests are needed.

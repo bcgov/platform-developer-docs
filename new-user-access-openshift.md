@@ -25,6 +25,33 @@ If you want to grant a new user access to OpenShift they must have the following
 
 Additionally, the project where you are adding the new user must have already have been provisioned through [this process](StartingANewProject.md) and must have one or more administrative users.
 
+## Add users
+
+You can add users in one of the following primary roles:
+
+* ``admin`` A project manager who can view any resource in the project and modify any resource in the project except for quota.  An ``admin`` user can delete the project.
+* ``edit`` A user that can modify most objects in a project, but can't view or modify roles or bindings. An ``edit`` user can create and delete applications in the project.
+* ``view`` A user who can't make any modifications, but can see most objects in a project.
+
+To add another user with edit role to the project who can create and delete applications, use the ``oc adm policy`` command. You must be in the project when you run this command.
+
+```
+oc adm policy add-role-to-user edit <collaborator>
+```
+
+Replace ``<collaborator>`` with the name of the user as displayed by the ``oc whoami`` command when run by that user.
+
+To remove a user from a project, run:
+
+```
+oc adm policy remove-role-from-user edit <collaborator>
+```
+To get a list of the users who have access to a project, and in what role, a project manager can run:
+```
+oc get rolebindings
+```
+For more information on adding users, you can [watch this](https://www.youtube.com/watch?v=IvdPyx2-qm0) or [use this](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/). <!-- is this somewhat the correct place to include these links? -->
+
 ## Request access
 
 The product owner or a project administrator associated with the project provisioning makes a request through the [Platform Services Github Access Managment Tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/). You can learn more about the process [here](https://www.youtube.com/watch?v=IvdPyx2-qm0).
