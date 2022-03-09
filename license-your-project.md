@@ -8,6 +8,10 @@ keywords: licence, license, apache 2.0, BC OGL, Creative Commons, Affero, reposi
 page purpose: Outlines how to choose and use a licence for your project and describes the requirements around licensing
 
 audience: developer, technical lead
+
+author: Jonathan Bond
+
+content owner: Olena Mitovska, Nick Corcoran
 ---
 # License your project
 

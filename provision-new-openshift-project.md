@@ -8,6 +8,10 @@
   page purpose: Describes the acceptance criteria to provision a new project on the OpenShift platform and the process to get the project setup.
 
   audience: technical lead
+
+  author: Jonathan Bond
+
+  content owner: Olena Mitovska
 ---
 
 # Provision a new OpenShift project

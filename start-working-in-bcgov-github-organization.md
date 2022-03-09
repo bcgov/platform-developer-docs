@@ -8,6 +8,10 @@ keywords: open source, GitHub, GitHub management, repository, repository managem
 page purpose: Describes the different ways a user might want to use or maintain and GitHub project and the requirements
 
 audience: developer
+
+author: Jonathan Bond
+
+content owner: Shelly Han
 ---
 
 # Start working in the BCGov GitHub organization

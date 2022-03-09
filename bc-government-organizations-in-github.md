@@ -8,6 +8,10 @@ keywords: github, github org, repo, open source, devops, private cloud, openshif
 page purpose: Describes the different BC Government organizations in GitHub, what they're used for, and who can use them.
 
 audience: developer
+
+author: Jonathan Bond
+
+content owner: Olena Mitovska
 ---
 
 # BC Government Organizations in Github

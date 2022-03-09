@@ -8,6 +8,10 @@ keywords: netapp, net app, nfs, storage, pvc, persistent, storage options
 page purpose: Describes different platform technologies, types, and services and their details.
 
 audience: technical lead, developer
+
+author: Jonathan Bond
+
+content owner: Olena Mitovska
 ---
 
 # Platform storage

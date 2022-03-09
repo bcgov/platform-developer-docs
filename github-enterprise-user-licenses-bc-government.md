@@ -8,6 +8,10 @@ keywords: GitHub, Github Enterprise, closed source, private repository, private 
 page purpose: Discusses why you might want to use a GitHub Enterprise user licence and how to request, access, and pay for the users.
 
 audience: technical lead, product owner
+
+author: Jonathan Bond
+
+content owner: Olena Mitovska
 ---
 
 # GitHub Enterprise user licences in the BC government

@@ -8,6 +8,10 @@ keywords: access, access request, new user, developer, repository management, Gi
 page purpose: Describes how users can get access to BC Gov GitHub repositories and projects, different types of access, and how to revoke a user's access.
 
 audience: developer, technical lead
+
+author: Jonathan Bond
+
+content owner: Olena Mitovska
 ---
 
 # Request GitHub access or allow repository creation for a new user

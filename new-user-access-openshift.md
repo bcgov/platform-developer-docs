@@ -8,6 +8,10 @@ keywords: OpenShift, access, access request, new user
 page purpose: Describes how users get access or revoke access to OpenShift and the prerequisites.
 
 audience: developer, technical lead
+
+author: Jonathan Bond
+
+content owner: Cailey Jones
 ---
 
 # Request New User Access to OpenShift

@@ -13,8 +13,8 @@
 - Avoid the passive voice. Use verb-forward language. Who does what? What performs what action?
 - [Don't write FAQs](https://gds.blog.gov.uk/2013/07/25/faqs-why-we-dont-have-them/).
 
-## Documents types and goals
-
 ## Tone and voice
 
 ## Audience and perspective
+
+## Document types and goals

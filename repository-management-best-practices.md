@@ -8,6 +8,10 @@ keywords: content, privacy, licence, GitHub, repository, best practices
 page purpose: Describes requirements and recommendations for working in a professional capacity in BC Government GitHub repositories.
 
 audience: developer, technical lead
+
+author: Jonathan Bond
+
+content owner: Shelly Han
 ---
 
 # Repository management best practices
