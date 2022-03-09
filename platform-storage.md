@@ -75,6 +75,7 @@ All storage sizes are in GiB and backup quotas default to half the storage size.
 
 All storage quotas include 60 PVCs and 5 VolumeSnapshots.
 
+
 - storage-1
 - storage-2
 - storage-4
