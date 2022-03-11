@@ -1,13 +1,13 @@
 ---
 title: BC Government Organizations in Github
 
-description: Describes the different BC Government organizations in GitHub
+description: Describes the different BC Government organizations in GitHub and how to access them.
 
 keywords: github, github org, repo, open source, devops, private cloud, openshift, github enterprise
 
-page purpose: Describes the different BC Government organizations in GitHub, what they're used for, and who can use them.
+page purpose: Describes the different BC Government organizations in GitHub, what they're used for, who can use them, and how to access them.
 
-audience: developer
+audience: developer, technical lead
 
 author: Jonathan Bond
 
