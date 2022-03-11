@@ -23,9 +23,9 @@ The BC Devops team uses [GitHub](https://github.com) to host open code and repos
 * Collaborate with the open-source community
 * Integrate automation tools
 
-The main organization the BC government owns in Github is [bcgov](https://github.com/bcgov) when all open source code developed by BC Gov teams is stored. The `bcgov` org includes close to 1000 repositories maintained by the BC Government Developer Community.
+The main organization the BC government owns in Github is [bcgov](https://github.com/bcgov) where we store all open-source code developed by BC Government teams. The `bcgov` org includes close to 1000 repositories maintained by the BC Government Developer Community.
 
-There are several other organizations owned by the Province in GitHub as described below.
+The Province owns several other organizations, which are described below.
 
 
 ## Working in the open
