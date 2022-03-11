@@ -1,5 +1,5 @@
 ---
-title: Operate and maintain a BCGov GitHub project
+title: Start working in the BCGov GitHub organization
 
 description: Learn more about operating, and possibly maintaining, a GitHub Repository in Gov.
 
@@ -8,10 +8,15 @@ keywords: open source, GitHub, GitHub management, repository, repository managem
 page purpose: Describes the different ways a user might want to use or maintain and GitHub project and the requirements
 
 audience: developer
----
-# Operate and maintain a BCGov GitHub project
 
-If you plan sharing code developed by or for the BC government, you must complete the [Open Content Assessment Checklist](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/Content-Approval-Checklist.md) and get approval from your Deputy Minister. Deputy Ministers may choose to delegate this authority to Ministry (CIOs). <!-- what does this stand for? -->
+author: Jonathan Bond
+
+content owner: Shelly Han
+---
+
+# Start working in the BCGov GitHub organization
+
+If you plan sharing code developed by or for the BC government, you must complete the [Open Content Assessment Checklist](checklist.md) and get approval from your Deputy Minister. Deputy Ministers may choose to delegate this authority to Ministry Chief Information Officers (CIOs).
 
 The BC government follows the Open Development Standard, which outlines the following:
 * Minimum content requirements ([readme.md](../BC-Gov-Org-HowTo/SAMPLE-README.md), [contributing.md](../BC-Gov-Org-HowTo/SAMPLE-CONTRIBUTING.md), and [license](../BC-Gov-Org-HowTo/using-licenses.md) files)
@@ -30,7 +35,7 @@ Projects like this follow two basic approaches, but can vary.
 
 In both cases, the basic steps to release the code are similar, while the implications for project management and resourcing are not. Key requirements in these scenarios include the following:
 
-- Confirm your authority to [license](Licenses.md)
+- Confirm your authority to [license](license-your-project.md)
 
 	Choose an open-source license and consult with the Intellectual Property Program (IPP) to make sure government has the right to release the code.
 
@@ -46,17 +51,16 @@ In both cases, the basic steps to release the code are similar, while the implic
 
 If you are intending to maintain an active project, make sure to establish the appropriate processes and terms to manage contributions.
 
-## Initiate a new project
+## Initiate new code or projects
 
 These are projects that you want to manage as an open-source, collaborative project.
 
-- Choose an open-source licence and confirm your authority to [license](Licenses.md)
+- Choose an open-source licence and confirm your authority to [license](license-your-project.md)
 - Determine how contributions are made and managed and include this information in the [contributing.md](../BC-Gov-Org-HowTo/SAMPLE-CONTRIBUTING.md) file in the repository.
 - Create the minimum required content: [readme.md](../BC-Gov-Org-HowTo/SAMPLE-README.md), [contributing.md](../BC-Gov-Org-HowTo/SAMPLE-CONTRIBUTING.md), and [license](../BC-Gov-Org-HowTo/using-licenses.md) files
 - Add a [Contributor Code of Conduct](http://contributor-covenant.org/) to your repository. This document lets people know that all are welcome to contribute, and that all who contribute pledge to make participation in the project a harassment-free experience for everyone. Include a [CODE_OF_CONDUCT.md](../BC-Gov-Org-HowTo/SAMPLE-CODE_OF_CONDUCT.md), and provide a contact method (in the placeholder) so that people know how to report violations. Introduce the code of conduct in your `readme.md`.
 
-
-## Contribute to an outside project
+## Contribute to outside code or projects
 
 There may be circumstances where it's useful and appropriate for employees to contribute to non-BC government repositories as a part of their work. In these cases, consider the following:
 
@@ -67,15 +71,11 @@ There may be circumstances where it's useful and appropriate for employees to co
 
 	If the project uses a reciprocal or "copyleft" license, such as GPL or Mozilla, make sure you understand the requirements for publishing any modifications you make to the code.
 
-- Confirm your authority to [license](Licenses.md)
+- Confirm your authority to [license](license-your-project.md)
 
 Employees can also contribute to non-BC government owned intellectual property rights outside their professional roles by using their personal email linked to their GitHub account.
-
-----------
-
-[Go back to the Contents List](README.md) or continue reading [Appropriate Use](appropriate-use.md)
-
 ---
 Rewrite sources:
 * https://developer.gov.bc.ca/Code-Management/Approaches-to-CollaboratingContributing
+* https://developer.gov.bc.ca/Code-Management/Github-Practices-in-Gov
 ---

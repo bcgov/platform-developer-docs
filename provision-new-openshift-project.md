@@ -7,7 +7,11 @@
 
   page purpose: Describes the acceptance criteria to provision a new project on the OpenShift platform and the process to get the project setup.
 
-  audience:
+  audience: technical lead
+
+  author: Jonathan Bond
+
+  content owner: Olena Mitovska
 ---
 
 # Provision a new OpenShift project
@@ -16,23 +20,13 @@ On the OpenShift platform, different teams organize their work in isolated proje
 
 Each new request must be reviewed and approved, including requests for additional projects from teams that already have one or more projects on the platform.
 
-## Acceptance criteria
-
-The OCIO Platform Services team needs to be confident you meet the following criteria before they agree to host your project on the OpenShift platform:
-
-* Your executive sponsors and endorses the project and the continuous service improvement <!-- Does this refer to the ITIL concept: Continual Service Improvement? If so, proper noun, capitalize, etc.--> delivery model
-* Your project is based on open-source code, with custom code hosted in the [BC Government GitHub repositories](https://github.com/bcgov)
-* Your project is supported by a team with explicit roles such as devops specialist, scrum master and product owner. Ideally, one or more of these roles should be filled by dedicated staff
-* Your team follows an Agile methodology
-* Your team is committed to participating in and contributing to the BC Government open-development community  
-* You have a devops specialist looking after your application after you complete the period of active development
-
 ## Submit a project provisioning request
 
-If you meet the criteria, book an alignment meeting with the product director on the Platform Services team to confirm your project's suitability<!-- this originally had Olena's contact, but we should replace it with something more generic. Is there contact info for this request? -->. After the alignment meeting, your product owner or your Ministry's devops champion can submit a project provisioning request through the [OpenShift 4 Project Registry](https://registry.developer.gov.bc.ca/public-landing). Once your request(s) are approved, the project is created and the requestor is notified when provisioning is complete.
+If you meet the criteria, book an onboarding meeting with the Platform Product Director to confirm your project's suitability by contacting the Platform Services Team at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca). After the alignment meeting, your product owner or your Ministry's DevOps Chapter Lead can submit a project provisioning request through the [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing). Once your request is approved, the project is created and the requestor is notified when provisioning is complete.
 
-**For AG teams only**: Contact Ryan Loiselle at Ryan.Loiselle@gov.bc.ca to submit the request for you. <!-- same as above? Is there a generic alt for this? -->
+**Note: The onboarding meeting with the [Platform Product Director](mailto:Olena.Mitovska@gov.bc.ca) is a prerequisite to having a project provisioning request approved.**
 
+**For Attorney General (AG) teams only**: Contact Ryan Loiselle at Ryan.Loiselle@gov.bc.ca to submit the request for you.
 
 OpenShift namespaces are auto-generated at provisioning in the form of `<generated alphanumeric string>-<environment>`. We call them `project license plates`.
 

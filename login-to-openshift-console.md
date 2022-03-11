@@ -8,6 +8,10 @@
   page purpose: Gives background and information on logging into the OpenShift console with your IDIR and the background on how it was set up.
 
   audience: developer, technical lead
+
+  author: Jonathan Bond
+
+  content owner: Cailey Jones
 ---
 
 # Login to the OpenShift Console with your IDIR

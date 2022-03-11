@@ -8,6 +8,10 @@ keywords:
 page purpose:
 
 audience:
+
+author: Jonathan Bond
+
+content owner: Nick Corcoran
 ---
 # Open Content Assessment Checklist <!-- How is this list used/delivered? Is it even delivered? does it need to be filled out by someone ?-->
 The *Open Content Assessment Checlist* is designed help developers make sure there are no barriers to posting existing material on GitHub.
