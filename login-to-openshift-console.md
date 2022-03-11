@@ -14,6 +14,25 @@
   content owner: Cailey Jones
 ---
 
+<!--
+So as Shelly mentioned, I think the titles/filenames are a bit too broad given the actual content. We talked this through a bit and decided that this one should be re-written as a much more generalized "how to login to openshift" thing to better match the name. Since it's becoming more generalized, this doc should probably be renamed to login-to-openshift.md (since it's no longer exclusively about the console).
+
+We also talked about including a page that gets a little more into the details of IDIR vs Github IDs across the whole cluster and all our services, so I'll add some notes at the bottom of this comment detailing what I'd like to see in such a document!
+
+    * Since this is the more generalized document, let's just have one section for logging in instead of specifying one section for logging in with Github and one for logging in with IDIR.
+
+    * Near the top of this section, we should have a "do I log in with IDIR or Github?" FAQ call out that points the user to the new "IDIR vs Github ID" document (which should be where users can find all that information about project leads needing IDIRs in the future and stuff).
+
+    * Let's keep the mention that MFA is required (because MFA is required whether you have Github or IDIR) but maybe generalize it. Again, we might want to provide some links to "How to set up MFA" docs for each IDIR and Github IDs.
+
+    * Most of the stuff under the "Information for Developers" section should probably be moved to the "IDIR vs Github" doc instead, since it isn't directly relevant to how to login to Openshift.
+
+    * Add a section that explains how to see which namespaces you have access to in the Openshift Console. This should include an explanation of what you would expect to see if you haven't been added to any namespaces yet, and what to do about it (aka ask your project lead to add you to the namespace).
+
+    * Add a section that explains how to login to the Openshift CLI.
+
+-->
+
 # Login to the OpenShift Console with your IDIR
 
 IDIR authentication is enabled in the Silver cluster of the Openshift Platform. This gives teams a choice to log into the Silver Cluster Openshift Console with either a GitHub ID or IDIR.

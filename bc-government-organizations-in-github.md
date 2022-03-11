@@ -1,5 +1,5 @@
 ---
-title: BC Government Organizations in Github
+title: BC Government organizations in Github
 
 description: Describes the different BC Government organizations in GitHub and how to access them.
 
@@ -14,7 +14,7 @@ author: Jonathan Bond
 content owner: Olena Mitovska
 ---
 
-# BC Government Organizations in Github
+# BC Government organizations in Github
 
 The BC Devops team uses [GitHub](https://github.com) to host open code and repositories. Using GitHub you can do the following:
 * Share and control code versions
@@ -25,14 +25,13 @@ The BC Devops team uses [GitHub](https://github.com) to host open code and repos
 
 The main organization the BC government owns in Github is [bcgov](https://github.com/bcgov) where we store all open-source code developed by BC Government teams. The `bcgov` org includes close to 1000 repositories maintained by the BC Government Developer Community.
 
-The Province owns several other organizations, which are described below.
-
-
 ## Working in the open
 
 The [Digital Principles for BC Goverment](https://digital.gov.bc.ca/resources/digital-principles) urge product teams to _work in the open_ as outlined in principle five. GitHub is the leading platform for open-source projects and allows the Province to collaborate with the open-source community to build software, support innovation, and save time and money.
 
 ## BC Government organizations in GitHub
+
+The Province owns several GitHub organizations, which are described below.
 
 ### `bcgov`
 
@@ -40,13 +39,12 @@ The `bcgov` organization contains all public code repositories that hold open-so
 * All product teams working in the Private Cloud OpenShift Platform should use this organization
 * Any member of the `bcgov` organization can create repositories and any existing member can [invite other users](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/) to join the organizations.
 
-
 ### `bcgov-c`
 
 The `bcgov-c` organization stores **temporary** (up to 12 months), private repositories with closed-source code and private documents. Closed-source projects must be moved to the `bcgov` organization at the end of the 12 months. All repositories in this organization are **private**.
 
 * Use this repository if you need a temporary location for code while you collect approvals to make the code public. You must commit to making the code public in the future in order to use this repository.
-* Only the Platform Services team can create repositories in this organization. You can ask them to create a repository by submitting a [DevOps-Request](https://github.com/BCDevOps/devops-requests/issues/new?assignees=caggles%2C+ShellyXueHan%2C+mitovskaol%2C+patricksimonian&labels=github-repo%2C+pending&template=github_repo_request.md&title=). The users listed on the private repo creation form will be provisioned admin access to the repo and can invite other team members. 
+* Only the Platform Services team can create repositories in this organization. You can ask them to create a repository by submitting a [DevOps-Request](https://github.com/BCDevOps/devops-requests/issues/new?assignees=caggles%2C+ShellyXueHan%2C+mitovskaol%2C+patricksimonian&labels=github-repo%2C+pending&template=github_repo_request.md&title=). The users listed on the private repository creation form are provisioned administrator access to the repository and can invite other team members.
 * There is a cost per user for this organization, the cost is covered by the OCIO.
 * The Platform Services Team periodically reviews GitHub access and removes users that haven't been active for six months.
 
