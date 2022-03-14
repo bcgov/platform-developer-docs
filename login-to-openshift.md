@@ -1,5 +1,5 @@
 ---
-  title: Login to the OpenShift Console with your IDIR
+  title: Login to OpenShift
 
   description: Describes how to login to the OpenShift console with your IDIR
 
@@ -15,7 +15,6 @@
 ---
 
 <!--
-So as Shelly mentioned, I think the titles/filenames are a bit too broad given the actual content. We talked this through a bit and decided that this one should be re-written as a much more generalized "how to login to openshift" thing to better match the name. Since it's becoming more generalized, this doc should probably be renamed to login-to-openshift.md (since it's no longer exclusively about the console).
 
 We also talked about including a page that gets a little more into the details of IDIR vs Github IDs across the whole cluster and all our services, so I'll add some notes at the bottom of this comment detailing what I'd like to see in such a document!
 
@@ -33,11 +32,9 @@ We also talked about including a page that gets a little more into the details o
 
 -->
 
-# Login to the OpenShift Console with your IDIR
+# Login to OpenShift
 
-IDIR authentication is enabled in the Silver cluster of the Openshift Platform. This gives teams a choice to log into the Silver Cluster Openshift Console with either a GitHub ID or IDIR.
-
-Multi-factor authentication (MFA) must be enabled on an IDIR account to use this access mechanism as it links to Azure Active Directory (AD). You can find instructions on how to enable MFA for your IDIR account here <!-- where? -->
+Teams can login to the Openshift with either a GitHub ID or IDIR. IDIR authentication is enabled in the Silver cluster of the Openshift Platform. You must have multi-factor authentication (MFA) enabled to log in with either GitHub or your IDIR. This access mechanism links to Azure Active Directory (AD). You can find instructions on how to enable MFA for your IDIR account [here](<!-- where? -->)
 
 You have to login with IDIR into the Openshift Console before you can associate any role bindings with the IDIR account.
 
