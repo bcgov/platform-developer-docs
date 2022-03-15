@@ -19,5 +19,7 @@
 ## Tone and voice
 
 ## Audience and perspective
+- Don't duplicate content across pages if it can be helped.
+- Linking strategy
 
 ## Document types and goals
