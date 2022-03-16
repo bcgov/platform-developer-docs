@@ -1,20 +1,20 @@
 ---
 title: Push and pull artifacts in Artifactory
 
-description:
+description: Describes how to push and pull artifacts in Artifactory for Docker-type repositories
 
-keywords:
+keywords: push, pull, Artifactory, docker, artifact, repositories, projects
 
-page purpose:
+page purpose: Describes how to test your account and pull locally and push and pull artifacts.
 
-audience:
+audience: technical lead, developer
 
 author: Jonathan Bond
 
-content owner:
+content owner: Cailey Jones
 ---
 # Push and pull artifacts in Artifactory
-After you've [set up your Artifactory service account](request-artifactory-repository-or-service-account.md) and possibly have a project and private repository you can start to push and pull artifacts in Artifactory.
+After you've [set up your Artifactory service account](setup-artifactory-service-account-repository-project.md) and possibly have a project and private repository you can start to push and pull artifacts in Artifactory.
 
 ## Docker images
 
@@ -171,6 +171,11 @@ To deploy build artifacts through Artifactory you need to add a deployment eleme
 </distributionManagement>
 ```
 ---
+Related links:
+* [Setup an Artifactory service account, repository, and project](setup-artifactory-service-account-repository-project.md)
+* [NPM repository](https://registry.npmjs.org)
+* [repo-mountie assemble file](https://github.com/bcgov/repomountie/blob/master/.s2i/bin/assemble)
+
 Rewrite sources:
 * https://github.com/BCDevOps/developer-experience/blob/master/apps/artifactory/DEVHUB-README.md
 ---

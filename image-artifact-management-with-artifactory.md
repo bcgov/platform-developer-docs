@@ -1,17 +1,17 @@
 ---
 title: Image and artifact management with Artifactory
 
-description:
+description: Discusses available Artifactory features and management
 
-keywords:
+keywords: Artifactory, images, artifact, best practices, Artifactory management, repositories, projects, service account
 
-page purpose:
+page purpose: Describes features at a high level and links to other useful pages with information on Artifactory
 
-audience:
+audience: technical lead, developer
 
 author: Jonathan Bond
 
-content owner:
+content owner: Cailey Jones
 ---
 
 # Image and artifact management with Artifactory
@@ -114,9 +114,18 @@ Other operations require turning Artifactory to read-only mode. In read-only mod
 
 ## Get started
 
-To get started using Artifactory, see [Request an Artifactory repository or service account](request-artifactory-repository-or-service-account.md).
+To get started using Artifactory, see [Setup an Artifactory service account, repository, and project](setup-artifactory-service-account-repository-project.md).
 
 ---
+Related links:
+* [JFROG documentation](https://www.jfrog.com/confluence/site/documentation)
+* [Privacy Impact Assessment (PIA)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/privacy/privacy-impact-assessments)
+* [Security Threat Risk Assessment (STRA)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/security-threat-and-risk-assessment)
+* [#devops-artifactory](https://chat.pathfinder.gov.bc.ca/channel/devops-artifactory)
+* [#devops-sos](https://chat.pathfinder.gov.bc.ca/channel/devops-sos)
+* [#devops-alerts](https://chat.pathfinder.gov.bc.ca/channel/devops-alerts)
+* [Setup an Artifactory service account, repository, and project](setup-artifactory-service-account-repository-project.md)
+
 Rewrite sources:
 * https://github.com/BCDevOps/openshift-wiki/blob/master/docs/Artifactory/ServiceDefinition.md
 * https://github.com/BCDevOps/developer-experience/blob/master/apps/artifactory/DEVHUB-README.md

@@ -1,17 +1,17 @@
 ---
-title:
+title: Artifactory project and quota increase requests
 
-description:
+description: Describes statuses when a user makes a project or quota increase request
 
-keywords:
+keywords: Archeobot, Artifactory, images, artifact, best practices, Artifactory management, repositories, projects, service account
 
-page purpose:
+page purpose: Discusses the different statuses a user might see if they've requested a quota increase or new project
 
-audience:
+audience: technical lead, developer
 
 author: Jonathan Bond
 
-content owner:
+content owner: Cailey Jones
 ---
 # Artifactory project and quota increase requests
 
