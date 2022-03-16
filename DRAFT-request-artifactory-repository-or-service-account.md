@@ -66,23 +66,10 @@ Archeobot detects that the object has been deleted and removes the service accou
 
 Then, the project provisioner detects the missing ArtifactoryServiceAccount object and creates a new one in your `tools` namespace, also called `default`. This happens within about 5 minutes. Archeobot detects the `new` object and creates a new service account for you in Artifactory. The username will be different. The random string at the end changes to reflect that the account is new with a new password and new privileges.
 
-If you've accidentally deleted secrets for a different Artifactory service account (one you created yourself, but not the `default` on in your `tools` namespace), follow the same process. The project provisioner doesn't recreate the object for you, you need to do that yourself. Delete the object, wait for Archeobot to clean everything up, and then create a new ArtifactoryServiceAccount object. You can use the same ASA namebut remember the actual username for the account is be different, because it has a different random string at the end.
+If you've accidentally deleted secrets for a different Artifactory service account (one you created yourself, but not the `default` on in your `tools` namespace), follow the same process. The project provisioner doesn't recreate the object for you, you need to do that yourself. Delete the object, wait for Archeobot to clean everything up, and then create a new ArtifactoryServiceAccount object. You can use the same ASA name but remember the username for the account is different, because it has a different random string at the end.
 
 <!--
 
-
-### I Deleted my Artifactory Service Account Secret(s)! What Do I Do Now?!
-
-If you have deleted the secret for the default service account that is automatically created alongside your project set,
-you just delete the ArtifactoryServiceAccount object called `default`, which you will find in your `tools` namespace, like so:
-
-`oc delete ArtifactoryServiceAccount default`
-
-Archeobot will detect that this object has been deleted and will remove the service account from Artifactory itself.
-
-Then, the project provisioner will detect the missing ArtifactoryServiceAccount object and will create a new one in your tools namespace, also called `default`. This will likely happen within about 5 minutes. Once that happens, Archeobot will detect this 'new' object and create a new service account for you in Artifactory. The username will be different from before - the random string at the end will change to reflect that this is, technically, a new account with a new password and new privileges.
-
-If you've accidentally deleted the secret(s) for a different Artifactory Service Account (one you created yourself, not the default on in your tools namespace), you follow the same process. The only difference is that the project provisioner will not recreate the object for you. You'll need to do that yourself. Delete the object, wait a few minutes for Archeobot to clean everything up, and then create a new ArtifactoryServiceAccount object. You can use the same ASA name if you'd like - but remember the actual username for the account will be different, because it will have a different random string at the end.
 
 
 ## How Do I Use An Artifactory Service Account?
