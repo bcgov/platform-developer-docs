@@ -1,5 +1,5 @@
 ---
-title: Request new user access to OpenShift
+title: Grant user access in OpenShift
 
 description: Describes how to get users access to OpenShift.
 
@@ -14,7 +14,7 @@ author: Jonathan Bond
 content owner: Cailey Jones
 ---
 
-# Request new user access to OpenShift
+# Grant user access in OpenShift
 
 The OCIO Enterprise DevOps branch manages access to the the OpenShift platform. The platform provides platform and namespace-level access control. Access to the platform requires certain prerequisites and mechanisms to grant access. Information on namespace-level access is described [here](./bc-government-organizations-in-github.md).
 
