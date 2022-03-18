@@ -15,9 +15,15 @@ content owner: Olena Mitovska
 ---
 # Required pages for a GitHub repository
 When you create a repository in the `bcgov` organization, add the following markdown files:
+- License
 - README
 - Code of conduct
 - Contribution guidelines
+
+## Licence
+Choose a licence and place a licence file in your repository before you do anything else. For important information on licences, see [License your project](license-your-project.md).
+
+Depending on the licence you choose, add boilerplate text for the applicable licence to your README file.
 
 ## ReadMe
 GitHub has extensive documentation on how to create a good README file for your repository. Follow these guidelines when you create your readme.
@@ -54,4 +60,5 @@ Rewrite sources:
 * https://developer.gov.bc.ca/Code-Management/Sample-Code-of-Conduct
 * https://developer.gov.bc.ca/Code-Management/Sample-Contributing-File
 * https://developer.gov.bc.ca/Code-Management/Sample-Readme-File
+* https://developer.gov.bc.ca/Github-Practices-in-Gov
 ---
