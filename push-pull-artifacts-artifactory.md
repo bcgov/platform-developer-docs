@@ -12,6 +12,7 @@ audience: technical lead, developer
 author: Jonathan Bond
 
 content owner: Cailey Jones
+
 ---
 # Push and pull artifacts in Artifactory
 After you've [set up your Artifactory service account](setup-artifactory-service-account-repository-project.md) and possibly have a project and private repository you can start to push and pull artifacts in Artifactory.
@@ -109,7 +110,7 @@ Don't forget that you need to update the image URL to point explicitly at Artifa
 
 You can now use this image in your build or deployment.
 
-## NPM
+## Node Package Manager (NPM)
 Use `npm-remote` repository in Artifactory, which points to the [remote NPM repository](https://registry.npmjs.org).
 
 1. Set the NPM registry:
@@ -170,6 +171,14 @@ To deploy build artifacts through Artifactory you need to add a deployment eleme
     </snapshotRepository>
 </distributionManagement>
 ```
+
+#### Other repository types
+There are many different repository types on Artifcatory. Sign in to artifacts.developer.gov.bc.ca with your GitHub ID or IDIR to see what's available.
+
+Common repository types should be available, but if your team uses something else (for example, NuGet), see [JFrog's documentation on various repository types](https://www.jfrog.com/confluence/display/JFROG/Package+Management).
+
+If your team uses a specific package type not shown here, consider creating a pull request for this document to share your knowledge.
+
 ---
 Related links:
 * [Setup an Artifactory service account, repository, and project](setup-artifactory-service-account-repository-project.md)

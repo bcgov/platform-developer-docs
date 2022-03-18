@@ -1,7 +1,7 @@
 ---
 title: Setup an Artifactory service account, repository, and project
 
-description: Describes how a user can prepare their Artifactory project, service accounts, and repositories 
+description: Describes how a user can prepare their Artifactory project, service accounts, and repositories
 
 keywords: Archeobot, Artifactory, images, artifact, best practices, Artifactory management, repositories, projects, service account
 
@@ -80,6 +80,8 @@ After you've entered the project in the Artifactory UI, some tabs with boxes and
 
 ### Add users and service accounts to a project
 
+Once you've gotten your project, make sure to add your own service account to the project, as it's not added automatically when the project is created.
+
 To add a new user account to your project, do the following:
 1. Click the gear at the top of the menu on the left, then choose **Identity and Access Members**. Click **Add Member**.
 2. On the **Users** tab, search for a username.
@@ -114,6 +116,15 @@ When the project is approved, the `approval_status` box should show **approved**
 You may also see **nothing-to-approve**. This status is meant to say that there are no outstanding changes to be made. If you see this, it means that your project is created in Artifactory, and you can [sign in](https://artifacts.developer.gov.bc.ca).
 
 **Note**: While you are able to patch the `approval_status` box, it doesn't mean you can approve your own project. The box is there for informational purposes. If you change it, Archeobot changes it back.
+
+### Rejected requests for projects or quota increases
+If you've made a request for a new Artifactory project or quota increase and it was rejected, reach out to the Platform Services team to ask why. If you think your request was rejected in error, let the team know. If the request should have been approved, they'll switch the status to `approved` and you'll see the changes applied.
+
+If the team maintains the rejection, make sure you acknowledge the rejection. If you don't, further change requests are ignored. Acknowledge the rejection by changing your Artifactory projectProject object back to the state it was in before you made the request.
+* If you requested a new project, delete the ArtifactoryProject object from your namespace.
+* If you requested an increased quota, change the quota in the spec of your ArtifactoryProject back to the currentquota of your project. If you're not sure what the quota is, check the Overview page for your project in the Artifactory web GUI.
+
+After you've made the change, Archeobot reconciles once more and you'll see that your `approval_status` changes back to `nothing-to-approve` (or you will have deleted the ArtifactoryProject object, in which case you won't see anything at all). This means your rejection has been acknowledged and you can make further change requests.
 
 ## Request and setup a repository
 

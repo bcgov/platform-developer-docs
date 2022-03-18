@@ -69,12 +69,6 @@ Use your service account and username to run the following curl command to get a
 jq -r '(["ARTIFACTORYKEY","SOURCEURL"] | (., map(length*"-"))), (.[] | [.key, .url]) | @tsv' | column -t`
 
 If there is a specific public repository you want to see cached through Artifactory, reach out to the Platform Services team to ask about adding it.
-#### Other repository types
-There are many different repository types on Artifcatory. Sign in to artifacts.developer.gov.bc.ca with your GitHub ID or IDIR to see what's available.
-
-Common repository types should be available, but if your team uses something else (for example, NuGet), see [JFrog's documentation on various repository types](https://www.jfrog.com/confluence/display/JFROG/Package+Management).
-
-If your team uses a specific package type not shown here, consider creating a pull request for this document to share your knowledge.
 
 ### Local private repositories
 You can use a local private repository to push your own artifacts and images, with control over access. The benefits include the following:
