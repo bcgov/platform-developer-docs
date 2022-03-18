@@ -64,10 +64,7 @@ The product owner or a project administrator associated with namespace provision
 
 ## Grant namespace access
 
-Technical leads grant namespace access. For more information, see <!--
-this: https://access.redhat.com/documentation/en-us/openshift_container_platform/3.7/html/administrator_solutions/user-and-role-management
-
-or this: https://docs.openshift.com/container-platform/3.11/architecture/core_concepts/projects_and_users.html-->
+Technical leads grant namespace access. For more information, see [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.9/authentication/using-rbac.html)
 
 Follow these best practices when you grant namespace access to a user:
 - Include the `@github` or `@idir` suffixes on the usernames when you grant access.
