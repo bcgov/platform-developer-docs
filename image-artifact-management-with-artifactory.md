@@ -33,33 +33,6 @@ Artifactory provides cached access to publicly available and secure repositories
 
 ### Repository access
 
-Artifactory currently gives access to the following repositories:
-
-```
-ARTIFACTORYKEY              SOURCEURL
---------------              ---------
-atlassian-maven-remote      https://maven.atlassian.com/repository/public/
-boundlessgeo-maven-remote   http://repo.boundlessgeo.com/main/
-docker-remote               https://registry-1.docker.io/
-geosolutions-maven-remote   http://maven.geo-solutions.it/
-jasperreports-maven-remote  http://jasperreports.sourceforge.net/maven2
-jcenter-maven-remote        http://jcenter.bintray.com
-jenkins-remote              https://updates.jenkins.io/download/
-jenkinspub-maven-remote     http://repo.jenkins-ci.org/public
-jenkinsrel-maven-remote     http://repo.jenkins-ci.org/releases
-jfrog-maven-remote          https://jfrog.bintray.com/artifactory/
-maven-remote                https://repo1.maven.org/maven2
-npm-remote                  https://registry.npmjs.org
-nuget-remote                https://nuget.org/
-oracle-maven-remote         https://maven.oracle.com
-osgeo-maven-remote          http://download.osgeo.org/webdav/geotools/
-primefaces-maven-remote     http://repository.primefaces.org
-pypi-remote                 https://files.pythonhosted.org/
-python-remote               https://www.python.org
-redhat-docker-remote        https://registry.redhat.io/
-vivid-maven-remote          http://mvn.vividsolutions.com/artifactory/repo
-windward-maven-remote       http://maven-repository.windward.net/artifactory/libs-release
-```
 Access to remote (caching) repositories is available by default to anyone on the Silver or Gold Clusters. When a project set is provisioned, an Artifactory service account is created at the same time, with a secret in the tools namespace available to use.
 
 #### Find available repositories
