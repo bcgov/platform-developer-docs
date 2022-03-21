@@ -22,7 +22,7 @@ We also talked about including a page that gets a little more into the details o
 
     * Near the top of this section, we should have a "do I log in with IDIR or Github?" FAQ call out that points the user to the new "IDIR vs Github ID" document (which should be where users can find all that information about project leads needing IDIRs in the future and stuff).
 
-    * Let's keep the mention that MFA is required (because MFA is required whether you have Github or IDIR) but maybe generalize it. Again, we might want to provide some links to "How to set up MFA" docs for each IDIR and Github IDs.
+    * Let's keep the mention that MFA is required (because MFA is required whether you have Github or IDIR) but maybe generalize it. Again, we might want to provide some links to "How to set up MFA" docs for each IDIR and Github IDs. https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security-mfa
 
     * Most of the stuff under the "Information for Developers" section should probably be moved to the "IDIR vs Github" doc instead, since it isn't directly relevant to how to login to Openshift.
 
@@ -54,7 +54,7 @@ We're investigating IDIR security groups integration, but it's not in place yet.
 
 We don't intend to leverage SSO integration for IDIR onto GitHub at this time. You'll still use GitHub accounts to access GitHub content.
 
-**Note**: There won't be automated migration for the namespace access role bingins <!-- is this a typo? --> created for the GitHub ID to the IDIR accounts performed by the Platform Services Team. Any such migrations would have to be done by product teams themselves. <!-- I'm not totally clear on what this sentence means. Can we reword to make it more verb-focused? -->
+**Note**: There won't be automated migration for the namespace access role bindings created for the GitHub ID to the IDIR accounts performed by the Platform Services Team. Any such migrations would have to be done by product teams themselves.
 
 If you have any questions or concerns about this change, post your question in [#devops-security channel](https://chat.developer.gov.bc.ca/channel/devops-security) in RocketChat and tag Nick Corcoran, our Platform Security Architect.
 

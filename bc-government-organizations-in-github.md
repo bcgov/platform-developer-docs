@@ -75,6 +75,13 @@ If you're unsure which repository you should use, see the following image:
 The Security Insight feature is available for all organizations linked to the corporate GitHub Enterprise account, as well branch protection and code owners for private repositories. Branch protection only allows specific people to push to the protected branch. The code owners feature allows automated reviews. For example, if a specific user is a code owner of certain files they are automatically added as PR reviewers and their approval is required before the code can be merged.
 
 ---
+Related links:
+* [GitHub](https://github.com)
+* [bcgov](https://github.com/bcgov)
+* [Digital Principles for BC Goverment](https://digital.gov.bc.ca/resources/digital-principles)
+* [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/)
+* [DevOps-Request](https://github.com/BCDevOps/devops-requests/issues/new?assignees=caggles%2C+ShellyXueHan%2C+mitovskaol%2C+patricksimonian&labels=github-repo%2C+pending&template=github_repo_request.md&title=)
+* [GitHub Enterprise user licences in the BC government](github-enterprise-user-licenses-bc-government.md)
 Rewrite sources:
 * https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/github/README.md
 * https://developer.gov.bc.ca/Getting-Started-on-the-DevOps-Platform/How-to-request-new-GitHub-user-access-or-repository-creation

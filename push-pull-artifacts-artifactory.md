@@ -15,11 +15,11 @@ content owner: Cailey Jones
 
 ---
 # Push and pull artifacts in Artifactory
-After you've [set up your Artifactory service account](setup-artifactory-service-account-repository-project.md), you can pull artifacts from our caching repos. If you wish to push to Artifactory, you will need an [Artifactory project and private repository first](setup-artifactory-service-account-repository-project.md)<!-- we should totally link to the specific heading later, but since things are changing right now, that should be added later->. Once you have finished setting up your private repository, these instructions will work for pulling from them as well!
+After you've [set up your Artifactory service account](setup-artifactory-service-account-repository-project.md), you can pull artifacts from our caching repos. If you wish to push to Artifactory, you will need an [Artifactory project and private repository first](setup-artifactory-service-account-repository-project.md). After your set up your private repository, follow these instructions to pull from them.
 
-## How to pull Docker images from Artifactory
+## Pull Docker images from Artifactory
 
-These steps apply to all Docker-type repositories, not just DockerHub. These steps work for any private docker registry, not just Artifactory. Just change out the Artifactory URL for the URL of your preferred registry!
+These steps apply to all Docker-type repositories, not just DockerHub. These steps work for any private docker registry, not just Artifactory. Change out the Artifactory URL for the URL of your preferred registry.
 
 ### Test your account and pull locally
 To test your account and start to pull locally, do the following:
@@ -111,7 +111,7 @@ Don't forget that you need to update the image URL to point explicitly at Artifa
 You can now use this image in your build or deployment.
 
 ## Node Package Manager (NPM)
-In this section, we use the `npm-remote` repository in Artifactory as an example, which points to the [public default NPM repository](https://registry.npmjs.org). If you wish to pull from a different repository (such as a private one), please replace all references to `npm-remote` below with your repository's name.
+The `npm-remote` repository in Artifactory points to the [public default NPM repository](https://registry.npmjs.org). If you wish to pull from a different repository, such as a private one, replace all references to `npm-remote` below with your repository's name.
 
 1. Set the NPM registry:
 
@@ -172,7 +172,7 @@ To deploy build artifacts through Artifactory you need to add a deployment eleme
 </distributionManagement>
 ```
 
-### How to pull other package types from Artifactory
+### Pull other package types from Artifactory
 
 There are many different repository types on Artifactory. This documentation covers only those package types which are used commonly and/or for which teams have written documentation. If you are looking for instructions on how to pull other types of artifacts from Artifactory, see [JFrog's documentation on various repository types](https://www.jfrog.com/confluence/display/JFROG/Package+Management) for instructions.
 
