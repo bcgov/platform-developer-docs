@@ -18,18 +18,17 @@ content owner: Cailey Jones
 
 Artifactory is an artifact repository system by JFrog. You can find their documentation [here](https://www.jfrog.com/confluence/site/documentation). We offer this service to BC Government development teams who build cloud-native applications on the OpenShift Platform.
 
+Artifactory can be used to access artifacts of all kinds for use in your application. It is compatible with all major package types, including Docker images, Helm charts, NPM packages, and [more](https://www.jfrog.com/confluence/display/JFROG/Package+Management). 
+
+The Platform Team uses Artifactory to provide three overarching services:
+1. Remote repositories serve as caches/proxies for all major public artifact repositories/registries and several private repositories/registries for which the BC Government owns licensed access. These repositories cache artifacts that are pulled through them, reducing build time and network traffic. The list of remote repositories include (but are not limited to) DockerHub, NPM, PyPi, and RedHat's private image registry. You can find a full list of currently available remote repositories below.
+2. Artifactory Projects are spaces of quota-limited storage over which teams have full control. This allows teams to create their own private repositories on Artifactory, to which they can push and pull their own artifacts of any type. It also allows teams to control access to these repositories in a manner similar to the way teams control access to their own Openshift namespaces. Find instructions for requesting an Artifactory Project [here](setup-artifactory-service-account-repository-project.md).
+3. Xray is an add-on service to Artifactory which provides security scanning for all objects in Artifactory. This includes any objects that have been cached in Artifactory through the remote repositories, as well as all artifacts that have been pushed to any private repositories created by individual teams. Teams are able to create and review security reports on the artifacts in their private repositories.
+
 We deployed Artifactory in a high-availability configuration within the BC Government OpenShift cluster. The service is available 24/7 with best effort to restart failed systems. Private repository requests will be reviewed and handled during normal business hours.
 
 There is no charge to use Artifactory.
 
-## Features
-
-Artifactory provides cached access to publicly available and secure repositories held by other organizations. The benefits of using our caching repository include:
-* Faster builds. The package is cached on the cluster instead of having to be pulled over the internet every time.
-* Less bandwidth. You'll use less of this precious, shared resource.
-* No pull limits. This avoids problems associated with pull limits implemented by external organizations, including DockerHub.
-* Security scans on cached images
-* Private repositories. You can share access to private repositories, such as RedHat repositories, without having to pay for additional accounts.
 
 ### Repository access
 
@@ -48,7 +47,7 @@ You can use a local private repository to push your own artifacts and images, wi
 * You'll have a common space to store sensitive artifacts and images.
 * You can share artifacts with other teams working on OpenShift.
 * You have flexible control over who and how your team accesses the artifacts.
-* You can use the same pull secrets you use to access the caching repositories.
+* You can use the same pull secrets you use to access the remote repositories.
 
 ### Xray artifact scanning
 The Xray tool scans all artifacts for security issues and lets you know about potential issues. This gives you an opportunity to deal with issues before they become a problem. The benefits include the following:
@@ -65,7 +64,7 @@ The team supporting this service administers the Artifactory application, its su
 
 Your best source for support, configuration, and best practices is the developer community that uses Artifactory for their projects. Check out the [`#devops-artifactory` channel on RocketChat](https://chat.pathfinder.gov.bc.ca/channel/devops-artifactory). Service changes are also posted here.
 
-For further support, contact one of the Artifactory administrators on the [`#devops-sos` channel on RocketChat](https://chat.pathfinder.gov.bc.ca/channel/devops-sos).
+For further support in the event of an emergency/outage, contact one of the Artifactory administrators on the [`#devops-sos` channel on RocketChat](https://chat.pathfinder.gov.bc.ca/channel/devops-sos).
 
 For cluster-wide service notifications that could impact Artifactory, monitor the [`#devops-alerts` channel in RocketChat](https://chat.pathfinder.gov.bc.ca/channel/devops-alerts).
 
