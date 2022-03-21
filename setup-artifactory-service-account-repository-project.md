@@ -18,18 +18,21 @@ content owner: Cailey Jones
 
 Artifactory access is controlled through Artifactory service accounts. Service accounts are meant to be shared by teams and used by automation tools like pipelines.
 
-We use [Archeobot](bcgov/platform-services-archeobot), a custom operator, to give teams the freedom to manage their own Artifactory resources. With Archeobot, you don't need to do anything in the Artifactory application.
+We use [Archeobot](bcgov/platform-services-archeobot), a custom operator, to give teams the freedom to manage their own Artifactory resources. Archeobot can be used to create new Artifactory Service Accounts, to request new Artifactory Projects, and to request quota changes to existing Artifactory Projects. You'll find instructions for each of these tasks below!
 
 Use the information below to request an Artifactory repository or service account.
 
 ## Setup a service account
+
+> **Note!** This section refers to two different but highly related things: an `ArtifactoryServiceAccount` (which will always be written in code format as a single word like this) and an Artifactory Service Account (which is written in normal text and has spaces). The `ArtifactoryServiceAccount` refers to an Openshift object with type `ArtifactoryServiceAccount` - this is a custom resource that the Platform Team created in Openshift. The Artifactory Service Account refers to the actual account that exists inside the Artifactory software, which you can then use to interact with Artifactory's various features. While closely related to each other, they're not _quite_ the same thing. It will be helpful to keep this in mind when reading the following section!
+
 If you have a project set somewhere in the OpenShift 4 clusters, you already have a service account.
 
 An `ArtifactoryServiceAccount` object is created in the appropriate `tools` namespace, which the Artifactory Operator then actions. One such `ArtifactoryServiceAccount` object is created automatically as part of namespace provisioning and has the name `default`.
 
 There's a random license plate assigned to the end of each object name, in order to ensure uniqueness. Collect this information by running `oc describe artsvcacct default`. This also provides some information about reconciliation status, as well as other details about the account. If you need support with the Artifactory service account object, include the spec and status information in your ticket.
 
-**Note**: Use the short-name in OpenShift for ArtifactoryServiceAccount objects: `ArtSvcAcct`.
+**Note**: ArtifactoryServiceAccount objects have two available short-names to make them easier to use in the CLI: `ArtSvcAcct` and `ArtSA`.
 
 You can get the username and password out of the secret using the following command:
 
@@ -68,9 +71,59 @@ Then, the project provisioner detects the missing ArtifactoryServiceAccount obje
 
 If you've accidentally deleted secrets for a different Artifactory service account (one you created yourself, but not the `default` on in your `tools` namespace), follow the same process. The project provisioner doesn't recreate the object for you, you need to do that yourself. Delete the object, wait for Archeobot to clean everything up, and then create a new ArtifactoryServiceAccount object. You can use the same ASA name but remember the username for the account is different, because it has a different random string at the end.
 
-## Setup a project
+## Artifactory Projects and private repositories
+
+> **Note!** This section refers to two different but highly related things: an `ArtifactoryProject` (which will always be written in code format as a single word like this) and an Artifactory Project (which is written in normal text and has spaces). The `ArtifactoryProject` refers to an Openshift object with type `ArtifactoryProject` - this is a custom resource that the Platform Team created in Openshift. The Artifactory Project refers to the actual project space that exists inside the Artifactory software, which grants your team the ability to create your own repositories and control your own access to them. While closely related to each other, they're not _quite_ the same thing. It will be helpful to keep this in mind when reading the following section!
+
+If your team wishes to push artifacts to Artifactory, you will require a private repository to do so. This feature is provided via Artifactory Projects. Artifactory Projects are logical spaces of quota-based storage which teams can administer themselves. Within an Artifactory Project, a team can create their own private repositories - any number and any type that suits their needs, so long as the storage space required for these repositories remains within the provided quota. 
+
+A team can request more quota if required, but note that teams are expected to try to remain within the default quota as much as possible - so be sure to clean up your old artifacts and tags!
+
+### Create an Artifactory project
+Artifactory Projects give teams access to private repositories. If you want a private repository where you can push your own images or other artifacts, you'll need a project. If you don't want to be able to push your own images or other artifacts - if you only wish to use Artifactory remote repositories - you don't need a project.
+
+You can create an `ArtifactoryProject` object on your OpenShift namespace with the following command:
+
+`oc process -f https://raw.githubusercontent.com/bcgov/platform-services-archeobot/master/archeobot/config/samples/tmpl-artifactoryproject.yaml -p NAME="[APname]" | oc create -f -`
+
+The `APname` won't completely reflect the name of the Project as it appears in Artifactory. The project name in Artifactory looks something like `[NamespacePlate]-[APname]`. For example, if you create an `ArtifactoryProject` object in the `a1b2c3-tools` namespace and give it an `APname` of `test`, then the Project's full name is `a1b2c3-test`.
+
+The project is also given a shortname, called a project key. This is created automatically using the first letter of your `APname` and three digits of your namespace name. Using the previous example, the project key is `ta1b`. The project key must be unique.
+
+When Archeobot sees a new `ArtifactoryProject` in your namespace, it sends the Platform Team a note that you want a new Project, which the team must approve. While you wait for your new `ArtifactoryProject` to be approved, you can look at it using the following command:
+
+`oc describe artproj [APname]`.
+
+In `spec`, there's an entry for your project key and an `approval_status` box that should show **pending**. This means that we haven't approved or rejected your request for an Artifactory project.
+
+When the project is approved, the `approval_status` box should show **approved**. In this case, Archeobot knows that your `ArtifactoryProject` is approved, but it hasn't yet made the Project for you in Artifactory.
+
+You may also see **nothing-to-approve**. This status is meant to say that there are no outstanding changes to be made. If you see this, it means that your project is created in Artifactory, and you can [sign in](https://artifacts.developer.gov.bc.ca).
+
+**Note**: While you are able to patch the `approval_status` box, it doesn't mean you can approve your own project. The box is there for informational purposes. If you change it, Archeobot changes it back.
+
+### Requesting a larger quota for your Artifactory Project
+
+The default quota for any Artifactory Project is 5 GB. This should be sufficient for the needs of most teams on the platform, so long as the artifacts pushed to Artifactory are kept well-controlled. Teams are expected to keep on top of deleting old artifacts that are no longer in use in order to remain below this threshold. However, there are certainly some cases where a team may require more than 5 GB for storing their artifacts. In these cases, the team may request an increased quota for their project by editing their `ArtifactoryProject` quota, like so:
+
+`oc patch artproj [APName] -p '{"spec":{"quota":"10"}}' --type merge`
+
+The above patch action would request an increase in the project quota from 5GB to 10GB. You may replace the "10" with some other number, as required. Requests for quota increases follow the same approval process outlined in the "Create an Artifactory project" section of this document (above). Refer to that section for details on how to determine the status of your request.
+
+### Rejected requests for projects or quota increases
+If you've made a request for a new Artifactory project or quota increase and it was rejected, reach out to the Platform Services team to ask why. If you think your request was rejected in error, let the team know. If the request should have been approved, they'll switch the status to `approved` and you'll see the changes applied.
+
+If the team maintains the rejection, make sure you acknowledge the rejection. If you don't, further change requests are ignored. Acknowledge the rejection by changing your Artifactory projectProject object back to the state it was in before you made the request.
+* If you requested a new project, delete the `ArtifactoryProject` object from your namespace.
+* If you requested an increased quota, change the quota in the spec of your ArtifactoryProject back to the currentquota of your project. If you're not sure what the quota is, check the Overview page for your project in the Artifactory web GUI.
+
+After you've made the change, Archeobot reconciles once more and you'll see that your `approval_status` changes back to `nothing-to-approve` (or you will have deleted the ArtifactoryProject object, in which case you won't see anything at all). This means your rejection has been acknowledged and you can make further change requests.
+
+### Accessing your new project
 
 Once you have your Artifactory project you can add repositories and users, adjust roles, and check the results of Xray scans on artifacts.
+
+**Note: In order to use an existing Artifactory service account with your new Artifactory project, you must add that service account to the project. There are instructions for this below. If you created the `ArtifactoryProject` object in the same Openshift namespace as an existing `ArtifactoryServiceAccount` object, the related service account is NOT automatically provided access to the project.**
 
 To use these features, enter the project in the Artifactory UI. Log in and expand **All**. Choose your new project to go to that project space. If you don't see your new project, it may be because of one of the following:
 * You may not be an administrator in the applicable OpenShift namespace. Ask one of the administrators to add you to the project.
@@ -94,45 +147,7 @@ You can also add any Artifactory service account and select multiple users to ad
 
 You can also add additional roles to the project, if you want more finely-tuned control over who gets access to what.
 
-### Create a project
-Use Artifactory Projects to give teams access to private repositories. If you want a private repository where you can push your own images or other artifacts, you'll need a project. If you don't want to be able to push your own images or other artifacts, you don't need a project.
 
-You can create an ArtifactoryProject object on your OpenShift namespace with the following command:
-
-`oc process -f https://raw.githubusercontent.com/bcgov/platform-services-archeobot/master/archeobot/config/samples/tmpl-artifactoryproject.yaml -p NAME="[APname]" | oc create -f -`
-
-The `APname` won't completely reflect the name of the Project as it appears in Artifactory. The project name in Artifactory looks something like `[NamespacePlate]-[APname]`. For example, if you create an ArtifactoryProject object in the `a1b2c3-tools` namespace and give it an `APname` of `test`, then the Project's full name is `a1b2c3-test`.
-
-The project is also given a shortname, called a project key. This is created automatically using the first letter of your `APname` and three digits of your namespace name. Using the previous example, the project key is `ta1b`. The project key must be unique.
-
-When Archeobot sees a new ArtifactoryProject in your namespace, it sends the Platform Team a note that you want a new Project, which the team must approve. While you wait for your new ArtifactoryProject to be approved, you can look at it using the following command:
-
-`oc describe artproj [APname]`.
-
-In `spec`, there's an entry for your project key and an `approval_status` box that should show **pending**. This means that we haven't approved or rejected your request for an Artifactory project.
-
-When the project is approved, the `approval_status` box should show **approved**. In this case, Archeobot knows that your ArtifactoryProject is approved, but it hasn't yet made the Project for you in Artifactory.
-
-You may also see **nothing-to-approve**. This status is meant to say that there are no outstanding changes to be made. If you see this, it means that your project is created in Artifactory, and you can [sign in](https://artifacts.developer.gov.bc.ca).
-
-**Note**: While you are able to patch the `approval_status` box, it doesn't mean you can approve your own project. The box is there for informational purposes. If you change it, Archeobot changes it back.
-
-### Rejected requests for projects or quota increases
-If you've made a request for a new Artifactory project or quota increase and it was rejected, reach out to the Platform Services team to ask why. If you think your request was rejected in error, let the team know. If the request should have been approved, they'll switch the status to `approved` and you'll see the changes applied.
-
-If the team maintains the rejection, make sure you acknowledge the rejection. If you don't, further change requests are ignored. Acknowledge the rejection by changing your Artifactory projectProject object back to the state it was in before you made the request.
-* If you requested a new project, delete the ArtifactoryProject object from your namespace.
-* If you requested an increased quota, change the quota in the spec of your ArtifactoryProject back to the currentquota of your project. If you're not sure what the quota is, check the Overview page for your project in the Artifactory web GUI.
-
-After you've made the change, Archeobot reconciles once more and you'll see that your `approval_status` changes back to `nothing-to-approve` (or you will have deleted the ArtifactoryProject object, in which case you won't see anything at all). This means your rejection has been acknowledged and you can make further change requests.
-
-## Request and setup a repository
-
-You can request a repository using the [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/).
-
-Meet with the Artifact Operations team to go through the intended use of the Artifactory service and common practices. The team creates an `ArtifactoryRepository` object in the appropriate `tools` namespace, which the Artifactory Operator then actions.
-
-Once the operator has completed its action, there is a new secret in the same `tools` namespace that contains the repository name, the username, and the password of a new service account which has administrative access over the repository. Use the administrative service account to give work-related access to other service accounts. While it's possible to use the administrative user to push and pull from the new repository, it's not recommended.
 
 ### Add a repository to your project
 
@@ -149,7 +164,7 @@ To add a repository to your project, do the following:
 5. Choose your environments. These tags affect user access. For example, you can grant allow a user to pull from all repos with the `dev` tag but not the `prod` tag. Make sure you grant the appropriate level of access to the users who need the artifacts in the repository.
 6. Enable Xray indexing. Enable other options, if needed. Most of them can be left as their defaults.
 8. Save the changes.
-Your new repository is set up and you can grant access to your service accounts.
+Your new repository is set up. If you would like your Artifactory Service Accounts to push to or pull from your new repository, please ensure you follow the instructions in the previous section to add your service account to the project.
 
 ---
 Related links:
