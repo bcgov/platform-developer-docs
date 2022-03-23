@@ -24,17 +24,13 @@ As OpenShift is a shared platform, the Platform Services team wants to make sure
 1. The maximum number of **concurrent sessions** during load testing must be restricted to 40,000
 1. There must be a Platform Team member present during the test
 
-The first two requirements help make sure that the test doesn't create any negative impact on operations of other applications running on the cluster.
-
-
-Following these requirements helps avoid unexpected outcomes.
+The first two requirements help make sure that the test doesn't create any negative impacts on the operation of other applications running on the cluster. Following these requirements helps avoid unexpected outcomes.
 
 **Note**: The Silver cluster of OpenShift 4 Platform includes 6 router nodes which together can handle 60,000 concurrent active connections. Browsers and other clients usually hold a connection open for some time and make multiple requests in the same connection or use a long running connection for things like websockets. To keep the cluster stable and healthy, only two-thirds of the overall routing capacity can be targeted by the application load test.
 
-Having a Platform Operations team member present benefits your team and the platform. The Platform Services team wants keep an eye on the platform during the test so they can react in case the test causes a negative impact  on the operations of the Openshift cluster, the Platform services or other applications hosted on that cluster.
+Having a Platform Operations team member present benefits your team and the platform. The Platform Services team wants keep an eye on the platform during the test so they can react in case the test causes a negative impact on the operation of the OpenShift cluster, Platform Services, or other applications hosted on that cluster.
 
-The product team running the test **must** have a team member with admin access to the project namespaces available during the test.
-
+The product team running the test **must** have a team member with administrator access to the project namespaces available during the test.
 
 ## Get your test approved
 You need to do the following before you can perform your load test:
@@ -51,10 +47,10 @@ Before you perform your load test, create a load test plan. The load test plan o
 - Whether application relies on anything off cluster (for example, a backend database in ZoneB or an external API that is called out to)
 - Include any other relevant information you feel the Platform Services Team should have
 
-Submitting a comprehensive test plan that includes this information as part of your request to run a lost test increases your chances that your request will be approved quickly.
+Submitting a comprehensive test plan that includes this information as part of your request to run a load test increases your chance that your request is approved quickly.
 
 ### Schedule the load test
-The Platform Services Team will review your test to ensure it meets the requirements outlined above and will also confirm that no other product team has a load test scheduled at the same time.
+The Platform Services team reviews your test to ensure it meets the requirements and also confirms that no other product team has a load test scheduled at the same time.
 
 Contact [Platform Services Team](mailto:PlatformServicesTeam@gov.bc.ca) to submit your request to schedule your load test on the Private Cloud Openshift Platform.
 ---
