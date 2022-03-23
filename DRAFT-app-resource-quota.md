@@ -141,38 +141,36 @@ Add the numbers under `CPU(cores)`. As the `m` stands for millicores, add up the
 
 For the previous example, the total would then be `2 + (3+3+3+9+4)/1000 = 2.022` CPU cores of actual CPU consumption.
 
-**Q: Is there an easy way to use `oc` to get the current value of CPU Requests allowed for the project currently logged into with `oc`?**
-A: Certainly. The following one-liner will display the current value of CPU requests as currently allotted for the current project.
+You can use `oc` to get the current value of CPU requests allowed for the current project logged in with `oc`. Use the following command to show the current value of CPU requests allotted for the current project:
 
 ```bash
 oc get quota compute-long-running-quota -o=custom-columns=Requests:.status.used."requests\.cpu"
 ```
-
-Example output of the above, the `m` at the end again means millicores, so dividing the number by 1000 tells us the current project per this example has a total allotted CPU Requests value of 14.5 CPU cores.
-
+You'll get the following output:
 ```console
 Requests
 14500m
 ```
+Divide the number by 1000. The CPU requests value is 14.5 CPU cores.
 
-## Jenkins Resource Configuration Recommendations
+## Jenkins resource configuration
 
-Tuning the resources of Jenkins deployments can have a large effect on the available resources of the platform. As of writing, Jenkins accounts for the largest user of CPU Requests and Limits on the platform. Recent analysis has indicated:
+Tuning the resources of Jenkins deployments can have a large effect on available resources of the platform. Jenkins accounts for the largest user of CPU requests and limits on the platform. Recent analysis indicates the following:
 
-- **15-25% of CPU Requests** on the platform are related to Jenkins
-- **7% of the CPU Requests** are actually used, on average, over 1 day
-- **10% or More CPU Requests** for the overall platform can be saved by tuning Jenkins resources
+- **15% to 25% of CPU requests** on the platform are related to Jenkins
+- **7% of the CPU requests** are actually used, on average, over one day
+- **10% or more CPU requests** for the overall platform can be saved by tuning Jenkins resources
 
-### Recommended Configuration
+### Recommended configuration
 
-Based on the performance testing details below, the following recommendations are suggested for Jenkins deployments:
+The Platform Services team recommends the following for Jenkins deployments:
 
-- CPU Request: 100m
-- CPU Limit: 1000m (May vary depending on usage)
-- Memory Request: 512M
-- Memory Limit: 1-2GB (May vary depending on usage)
+- **CPU request**: 100 m
+- **CPU limit**: 1000 m (may vary depending on usage)
+- **Memory request**: 512 Mi
+- **Memory limit**: 1 to 2 Gi (may vary depending on usage)
 
-On a typical Jenkins deployment, the following snippet could be used if you are editing the yaml:
+On a typical Jenkins deployment, you can use the following snippet if you're editing the yaml:
 
 ```YAML
         resources:
@@ -184,7 +182,7 @@ On a typical Jenkins deployment, the following snippet could be used if you are 
             memory: "1Gi"
 ```
 
-The following command can also be used to update a Jenkins DeploymentConfig:
+Use the following command to update a Jenkins `DeploymentConfig`:
 
 ```bash
 oc patch dc/jenkins -p '{"spec": {"template": {"spec": {"containers":[{"name":"jenkins", "resources":{"requests": {"cpu":"100m", "memory":"512Mi"}, "limits": {"cpu":"1", "memory":"1Gi"}}}]}}}}'
@@ -192,7 +190,7 @@ oc patch dc/jenkins -p '{"spec": {"template": {"spec": {"containers":[{"name":"j
 
 ### Performance Testing Details
 
-The reason that Jenkins is often deployed with such high CPU and Memory Requests was related to previous scheduler issues that have since been fixed on the platform. As a result, the templates **and existing Jenkins deployments** should be tuned to reduce the CPU requests.
+Jenkins is often deployed with high CPU and memory requests due to previous scheduler issues that are resolved. The templates **and existing Jenkins deployments** should be tuned to reduce the CPU requests.
 
 A test was performed to collect the startup time of Jenkins under various resource configurations. Each test was performed 3 times and the startup time was averaged out across each iteration. The name of each test is in the format of `[cpu_requests_in_millicores]-[cpu_limits_in_millicores]-[memory_requests_in_mb]`.
 
