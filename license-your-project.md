@@ -27,7 +27,7 @@ If you want to contribute to an existing, outside project, make sure you underst
 
 ### Initiate a project
 
-If want to initiate a project or release previously created materials, be aware that the Province can only license rights that it is in a legal position to grant to others. <!-- what -->
+If want to initiate a project or release previously created materials, be aware that the Province can only license rights that it is in a legal position to grant to others.
 
 The Province’s intellectual property rights must be, at a minimum, equal to the rights under which the content will be licensed to third parties. Four open licences are approved for use that likely cover the majority of projects coming forward:
 
@@ -54,7 +54,7 @@ If your project is better suited to a different licence, discuss your requiremen
 
 ## Choose a license
 
-The following overview provided is intended to inform, not replace, the licensing review for each project.  
+The following overview provided is intended to inform, not replace, the licensing review for each project. If you think you need to engage with the Intellectual Property Program, send a request to the IPP Manager
 
 ![A flowchart that helps you choose a licence](/images/licence-chart.png)
 
@@ -95,6 +95,11 @@ The code for the Creative Commons 4.0 footer looks like this:
     </span> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">
     Creative Commons Attribution 4.0 International License</a>.
 ---
+Related links:
+- [Apache 2](https://www.apache.org/licenses/LICENSE-2.0)
+- [Creative Commons International 4.0 (CC BY)](https://creativecommons.org/licenses/by/4.0/)
+- [Open Government Licence - BC (OGL-BC)](https://www2.gov.bc.ca/gov/content/data/open-data/open-government-licence-bc)
+- [Affero General Public Licence (AGPL)](https://www.gnu.org/licenses/agpl-3.0.en.html)
 Rewrite sources:
 * https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/Licenses.md
 ---

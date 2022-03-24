@@ -16,7 +16,7 @@ content owner: Olena Mitovska
 
 # GitHub Enterprise user licences in the BC government
 
-All code by BC government teams should be open source by default. If you have closed-source code and still want to use GitHub, you can work temporarily in a private repository under the GitHub Enterprise licence. <!-- I'm not clear on why exactly one would consider using an enterprise licence. They have private code and....? It will never be opensource? check diagram -->
+All code by BC government teams should be open source by default. If you have closed-source code and still want to use GitHub, you can work temporarily in a private repository under the GitHub Enterprise licence.
 
 For more information on our GitHub organizations and their uses, see [BC Government Organizations in Github](/bc-government-organizations-in-github.md)
 
@@ -37,7 +37,7 @@ When your private org is linked to the GitHub Enterprise account certain setting
 
 ## Request GitHub Enterprise user licences
 
-Contact [Software Central Management](mailto:SoftwareCentral.Management@gov.bc.ca) and cc [Dean Picton](Dean.Picton@gov.bc.ca) <!-- what is Dean's role? this email shouldn't be direct to him, we should advise on the role of the person they need to contact. It's best practice to do that for maintenance, in case Dean is unavailable for any number of reasons -->. Use the subject line "GitHub Enterprise Request" and send the following information:  
+Contact [Software Central Management](mailto:SoftwareCentral.Management@gov.bc.ca) and cc [Dean Picton](Dean.Picton@gov.bc.ca). Use the subject line "GitHub Enterprise Request" and send the following information:  
 
 * Private GitHub organization name and whether you need a new organization created or are linking an existing private organization  
 
@@ -62,6 +62,9 @@ These users have access to all features available in GitHub Enterprise within th
 Software Central management handles your purchase order, with billing back to your expense authority. The Ministry is billed monthly for the GitHub Enterprise user licenses until Software Central gets a request asking to cancel the user licenses.
 
 ---
+Related links:
+* [BC Government Organizations in Github](/bc-government-organizations-in-github.md)
+* [Pricing](https://github.com/pricing)
 Rewrite sources:
 * https://github.com/BCDevOps/openshift-wiki/blob/master/docs/HowTo/RequestGitHubEnterpriseUserLicense.md?plain=1
 ---

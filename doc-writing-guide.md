@@ -10,11 +10,16 @@
 - Use simple words and phrases. Replace more complex words and phrases with a simpler alternative, where possible.
 - Write in the present tense.
 - Omit needless verbs, adverbs, and double verbs.
+- Use full words and little jargon (for example, repo vs repository, admin vs administrator). Strike a balance between formal and approachable. It can be done.
+- [Don't use Latin abbreviations](https://insidegovuk.blog.gov.uk/2016/07/20/changes-to-the-style-guide-no-more-eg-and-ie-etc/) (e.g., i.e., etc.). They're not always familiar to non-native English speakers, they don't always get read correctly by screen readers, and people don't speak Latin. Write around them or use the proper English.
 - Avoid the passive voice. Use verb-forward language. Who does what? What performs what action?
 - [Don't write FAQs](https://gds.blog.gov.uk/2013/07/25/faqs-why-we-dont-have-them/).
+- Front load your content. What is the most important part of a given sentence? Give the reader what they need the most as soon as possible.
 
 ## Tone and voice
 
 ## Audience and perspective
+- Don't duplicate content across pages if it can be helped.
+- Linking strategy
 
 ## Document types and goals
