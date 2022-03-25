@@ -27,7 +27,7 @@ If you want to grant a new user access to OpenShift they must have the following
 - a GitHub account (ideally with a complete profile)
 - two-factor authentication enabled on their GitHub account
 
-Additionally, the namespace where you are adding the new user must have already have been provisioned through [this process](StartingANewProject.md) and must have one or more administrative users.
+Additionally, the namespace where you are adding the new user must have already have been provisioned through [this process](./provision-new-openshift-project.md) and must have one or more administrative users.
 
 ## Add users
 
@@ -64,13 +64,19 @@ The product owner or a project administrator associated with namespace provision
 
 ## Grant namespace access
 
-Technical leads grant namespace access. For more information, see [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.9/authentication/using-rbac.html)
+Technical leads grant namespace access. For more information, see [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.9/authentication/using-rbac.html).
 
 Follow these best practices when you grant namespace access to a user:
 - Include the `@github` or `@idir` suffixes on the usernames when you grant access.
 - All usernames on our platform are lowercase. For example, the username `TheBestDev@github` won't work, but `thebestdev@github` does work.
 - Grant the least privileges needed to do the work. Keep the number of users with administrator access low. Edit is sufficient for most developers.
 ---
+Related links:
+* [BC Government organizations in Github](./bc-government-organizations-in-github.md)
+* [Provision a new project set](./provision-new-openshift-project.md)
+* [Using Just Ask! to gain access into the BCGov or BCDevops Github Organizations](https://www.youtube.com/watch?v=IvdPyx2-qm0)
+* [Add someone to the BC Government GitHub Org](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/)
+* [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.9/authentication/using-rbac.html)
 Rewrite sources:
 * https://developer.gov.bc.ca/Getting-Started-on-the-DevOps-Platform/How-to-Request-New-User-Access-to-OpenShift
 ---

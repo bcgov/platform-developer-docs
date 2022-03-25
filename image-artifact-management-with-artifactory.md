@@ -22,7 +22,7 @@ Artifactory can be used to access artifacts to use in your application. It's com
 
 The Platform Team uses Artifactory to provide the following services:
 * Remote repositories serve as caches/proxies for all major public artifact repositories/registries and several private repositories/registries where BC Government owns licensed access. These repositories cache artifacts that are pulled through them, reducing build time and network traffic. The list of remote repositories include DockerHub, NPM, PyPi, RedHat's private image registry, and more.
-* Artifactory Projects are spaces of quota-limited storage where teams have full control. This lets teams create their own private repositories on Artifactory where they can push and pull their own artifacts of any type. It also allows teams to control access to these repositories, similar to the way teams control access to their own Openshift namespaces. For more information on requesting an Artifactory Project, see [Setup an Artifactory service account, repository, and project](setup-artifactory-service-account-repository-project.md).
+* Artifactory Projects are spaces of quota-limited storage where teams have full control. This lets teams create their own private repositories on Artifactory where they can push and pull their own artifacts of any type. It also allows teams to control access to these repositories, similar to the way teams control access to their own Openshift namespaces. For more information on requesting an Artifactory Project, see [Setup an Artifactory service account, repository, and project](./setup-artifactory-service-account-repository-project.md).
 * Xray is an add-on service to Artifactory that provides security scanning for all objects in Artifactory. This includes any objects that have been cached in Artifactory through the remote repositories and all artifacts pushed to any private repositories created by individual teams. Teams are able to create and review security reports on artifacts in their private repositories.
 
 We deployed Artifactory in a high-availability configuration within the BC Government OpenShift cluster. The service is available 24/7 with best effort to restart failed systems. Private repository requests are reviewed and handled during normal business hours.
@@ -48,7 +48,7 @@ You can use a local private repository to push your own artifacts and images, wi
 * You have flexible control over who and how your team accesses the artifacts.
 * You can use the same pull secrets you use to access the remote repositories.
 
-You need to set up an Artifactory project before you can get a local private repository. For more information, see [Setup an Artifactory service account, repository, and project](setup-artifactory-service-account-repository-project.md).
+You need to set up an Artifactory project before you can get a local private repository. For more information, see [Setup an Artifactory service account, repository, and project](./setup-artifactory-service-account-repository-project.md).
 
 ### Xray artifact scanning
 The Xray tool scans all artifacts for security issues and lets you know about potential issues. This gives you an opportunity to deal with issues before they become a problem. The benefits include the following:
@@ -81,7 +81,7 @@ Other operations require turning Artifactory to read-only mode. In read-only mod
 
 ## Get started
 
-To get started using Artifactory, see [Setup an Artifactory service account, repository, and project](setup-artifactory-service-account-repository-project.md).
+To get started using Artifactory, see [Setup an Artifactory service account, repository, and project](./setup-artifactory-service-account-repository-project.md).
 
 ---
 Related links:

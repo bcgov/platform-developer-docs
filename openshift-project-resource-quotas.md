@@ -21,7 +21,7 @@ New project sets provisioned in the OpenShift Container Platform (OCP) have the 
 - **Storage**: 60 PVC count , 1 GBs overall storage with 521 MBs for backup storage and five snapshots
 **Note**: The Platform Services team may approach your team to discuss a downgrade in your quota if they find your application isn't using all of the resources within the current quota.
 
-If the default allocations aren't sufficient for your application, [you can ask for a quota increase](request-quota-increase-for-openshift-project-set.md). You'll need a Sysdig dashboard that shows that your application needs more of a specific resource type (CPU, RAM, or storage). Provide this proof to the Platform Services team before they can approve a quota increase.
+If the default allocations aren't sufficient for your application, [you can ask for a quota increase](./request-quota-increase-for-openshift-project-set.md). You'll need a Sysdig dashboard that shows that your application needs more of a specific resource type (CPU, RAM, or storage). Provide this proof to the Platform Services team before they can approve a quota increase.
 
 ## CPU quotas:
 

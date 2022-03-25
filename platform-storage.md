@@ -32,7 +32,7 @@ We have access to the following storage services for the OpenShift platform.
 
 The primary storage solution for the OpenShift platform is backed by a NetApp storage appliance that provides both file and block storage types to the cluster.
 
-All NetApp storage classes support resizing (bigger only). You can start with a small volume and edit your Persisent Volume Claim (PVC) to have a larger `.spec.resources.requests.storage` later if you need more. You may need to restart the pods attached to let the resize trigger on re-mount. **Note: the storage increase is capped by the storage quota assigned to the namespace. Check the current resource quota sizes [here](https://developer.gov.bc.ca/Project-Resource-Quotas-in-BC-Gov's-PaaS-(Openshift-4-Platform)).
+All NetApp storage classes support resizing (bigger only). You can start with a small volume and edit your Persisent Volume Claim (PVC) to have a larger `.spec.resources.requests.storage` later if you need more. You may need to restart the pods attached to let the resize trigger on re-mount. **Note: the storage increase is capped by the storage quota assigned to the namespace. Check the current resource quota sizes [here](./openshift-project-resource-quotas.md).
 
 * **NetApp File**: `netapp-file-standard` is the default storage class for the platform and the type of storage you get if you don't specify a specific `storageClass`.
 
@@ -46,7 +46,7 @@ Two additional storage classes (`netapp-file-extended` and `netapp-block-extende
 
 Snapshots can be used to maintain point-in-time copies of volumes. This empowers rapid testing by quickly resetting a PVC to a consistent state between each test run or getting an atomic view of a volume to run a backup on. Under the hood, they are very quickly created by the NetApp as a copy on write clone which means they are very space efficient.
 
-See the [Red Hat docs](https://access.redhat.com/documentation/en-us/red_hat_openshift_container_storage/4.7/html/deploying_and_managing_openshift_container_storage_using_red_hat_openstack_platform/volume-snapshots_osp) for how to create snapshots and how to create PVCs from those snapshots.
+See the [Red Hat documentation](https://access.redhat.com/documentation/en-us/red_hat_openshift_container_storage/4.7/html/deploying_and_managing_openshift_container_storage_using_red_hat_openstack_platform/volume-snapshots_osp) for how to create snapshots and how to create PVCs from those snapshots.
 
 ### S3-Compatible Object Storage (Dell EMC Elastic Cloud Storage)
 
@@ -66,9 +66,9 @@ Object Storage Service is highly fault tolerant and uses erasure coding within t
 
 You can use tools to manage your persistent storage beyond the features built in to OpenShift.
 
-* **Database backups**: We have a community project to help teams implement regular backups of their databases hosted within the platform. You can find the repo here: [BCDevOps/Backup-Container](https://github.com/bcdevops/backup-container)
+* **Database backups**: We have a community project to help teams implement regular backups of their databases hosted within the platform. You can find the repository [here](https://github.com/bcdevops/backup-container)
 
-* **Migrating storage**: Another community supported repository is available to help with migrating data from one PVC to another (moving from one storageClass to another, moving to a larger PVC, etc). You can find the repo here: [BCDevOps/StorageMigration](https://github.com/BCDevOps/StorageMigration)
+* **Migrating storage**: Another community supported repository is available to help with migrating data from one PVC to another (moving from one storageClass to another, moving to a larger PVC, etc). You can find the repository [here](https://github.com/BCDevOps/StorageMigration)
 
 ## Storage details
 
@@ -121,6 +121,13 @@ The speed of each storage solution depends on your workload. ElasticSearch speci
 * All netapp-*-standard volumes are thin provisioned and have de-duplication and compression enabled. The de-duplication and compression jobs are currently run overnight at 00:10.
 
 ---
+Related links:
+* [OpenShift project resource quotas](./openshift-project-resource-quotas.md)
+* [Backup and Restore](https://developer.gov.bc.ca/OCP4-Backup-and-Restore)
+* [Red Hat documentation](https://access.redhat.com/documentation/en-us/red_hat_openshift_container_storage/4.7/html/deploying_and_managing_openshift_container_storage_using_red_hat_openstack_platform/volume-snapshots_osp)
+* [BCDevOps/Backup-Container](https://github.com/bcdevops/backup-container)
+* [BCDevOps/StorageMigration](https://github.com/BCDevOps/StorageMigration)
+* [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing)
 Rewrite sources:
 * https://github.com/BCDevOps/openshift-wiki/blob/master/docs/OCP/OCPStorageServices.md
 * https://github.com/BCDevOps/OpenShift4-Migration/issues/59

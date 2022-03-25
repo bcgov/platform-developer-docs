@@ -34,7 +34,9 @@ We also talked about including a page that gets a little more into the details o
 
 # Login to OpenShift
 
-Teams can login to the Openshift with either a GitHub ID or IDIR. IDIR authentication is enabled in the Silver cluster of the Openshift Platform. You must have multi-factor authentication (MFA) enabled to log in with either GitHub or your IDIR. This access mechanism links to Azure Active Directory (AD). You can find instructions on how to enable MFA for your IDIR account [here](<!-- where? -->)
+Teams can login to the Openshift with either a GitHub ID or IDIR. IDIR authentication is enabled in the Silver cluster of the Openshift Platform. You must have multi-factor authentication (MFA) enabled to log in with either GitHub or your IDIR. This access mechanism links to Azure Active Directory (AD).
+
+**Note**: IDIR is a centrally managed, government-wide service. Instructions are given to new employees as part of their onboarding.
 
 You have to login with IDIR into the Openshift Console before you can associate any role bindings with the IDIR account.
 
@@ -61,6 +63,10 @@ If you have any questions or concerns about this change, post your question in [
 For more information, see [BC Government OpenShift DevOps Security Considerations](https://developer.gov.bc.ca/BC-Government-OpenShift-DevOps-Security-Considerations).
 
 ---
+Related links:
+* [Platform Project Registry](https://registry.developer.gov.bc.ca/)
+* [#devops-security channel](https://chat.developer.gov.bc.ca/channel/devops-security)
+* [BC Government OpenShift DevOps Security Considerations](https://developer.gov.bc.ca/BC-Government-OpenShift-DevOps-Security-Considerations)
 Rewrite sources:
 * https://developer.gov.bc.ca/IDIR-Login-(via-Azure-AD)-for-OpenShift-Console
 ---

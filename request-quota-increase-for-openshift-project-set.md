@@ -33,7 +33,7 @@ Before you ask for a quota increase, the Platform Services team wants you to mon
 ## Request a quota increase
 If you determine that your application needs a quota increase, you can have a product owner or technical lead on your project make the request on the **Project Edit** page on [Openshift 4 Project Registry](https://registry.developer.gov.bc.ca/public-landing). The Platform Services team must approve the request before it's processed.
 
-If you need more resources for CPU, RAM, or storage in any of the four namespaces (`dev`, `test`, `tool`, or `prod`), you must submit a standard quota increase request through the Project Registry. For more information on quotas, see [OpenShift project resource quotas](openshift-project-resource-quotas.md).
+If you need more resources for CPU, RAM, or storage in any of the four namespaces (`dev`, `test`, `tool`, or `prod`), you must submit a standard quota increase request through the Project Registry. For more information on quotas, see [OpenShift project resource quotas](./openshift-project-resource-quotas.md).
 
 ## Collect application metrics
 
@@ -81,7 +81,7 @@ Related links:
 * [Get Started with Sysdig Monitoring](https://developer.gov.bc.ca/OpenShift-User-Guide-to-Creating-and-Using-a-Sysdig-Team-for-Monitoring)
 * [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 * [Openshift 4 Project Registry](https://registry.developer.gov.bc.ca/public-landing)
-* [OpenShift project resource quotas](openshift-project-resource-quotas.md)
+* [OpenShift project resource quotas](./openshift-project-resource-quotas.md)
 * [S3 Object Storage Service](https://github.com/BCDevOps/OpenShift4-Migration/issues/59)
 
 Rewrite sources:
