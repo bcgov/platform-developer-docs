@@ -14,6 +14,7 @@ author: Jonathan Bond
 content owner: Olena Mitovska
 ---
 # Reusable services list
+Find details on the following services or tools you can use as part of your project in `bcgov`.
 
 ## Messaging Common Service
 The Common Messaging service (CMSG) is an API for sending messages to internal and external users through SMTP and SMS. You can access the CMSG programmatically through the CMSG-MESSAGING-API. For more information, see the following resources:
