@@ -11,21 +11,22 @@ audience: developer, technical lead
 
 author: Jonathan Bond
 
-content owner:
+content owner: Olena Mitovska
 ---
 # OpenShift project resource quotas
 
-New project sets provisioned in the OpenShift Container Platform (OCP) have the following default resource quotas that include a certain amount of CPU, RAM, and storage:
+New project sets provisioned in **all clusters** of the Private Cloud OpenShift Platform have the following default resource quotas that include a certain amount of CPU, RAM, and storage:
 - **CPU**: 0.5 cores as requested, 1.5 cores as the limit
 - **RAM**: 2 GBs as requested, 4 GBs as the limit
 - **Storage**: 60 PVC count , 1 GBs overall storage with 521 MBs for backup storage and five snapshots
+
 **Note**: The Platform Services team may approach your team to discuss a downgrade in your quota if they find your application isn't using all of the resources within the current quota.
 
-If the default allocations aren't sufficient for your application, [you can ask for a quota increase](request-quota-increase-for-openshift-project-set.md). You'll need a Sysdig dashboard that shows that your application needs more of a specific resource type (CPU, RAM, or storage). Provide this proof to the Platform Services team before they can approve a quota increase.
+If the default allocations aren't sufficient for your application, [you can ask for a quota increase](./request-quota-increase-for-openshift-project-set.md). You'll need a Sysdig dashboard that shows that your application needs more of a specific resource type (CPU, RAM, or storage) in a specific namespace. Provide this proof to the Platform Services team before they can approve a quota increase that you submit in the [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing).
 
 ## CPU quotas:
 
-All CPU requests and limits are shown in cores (not millicores) and represent the maximum for the combined CPU request or CPU limit values for all pods in the namespace.
+The following CPU quotas are currently available on the Platform. All CPU requests and limits are shown in cores (not millicores) and represent the maximum for the combined CPU request or CPU limit values for **all pods in a namespace**.
 
 ```
 cpu-request-0.5-limit-1.5: CPU Request 0.5 core, CPU Limit 1.5 cores
@@ -39,7 +40,7 @@ cpu-request-32-limit-64: CPU Request 32 cores, CPU Limit 64 cores
 
 ## Memory quotas:
 
-All Memory requests and limits are shown in GiB and represent the **maximum** for the combined RAM request or RAM limit values for all pods within the namespace.
+The following RAM quotas are currently available on the Platform. All Memory requests and limits are shown in GiB and represent the **maximum** for the combined RAM request or RAM limit values for **all pods in the namespace**.
 
 ```
 memory-request-2-limit-4: RAM Request 2 GiB, RAM Limit 4 GiB
@@ -52,7 +53,7 @@ memory-request-64-limit-128: RAM Request 64 GiB, RAM Limit 128 GiB
 
 ## Storage quotas:
 
-All storage sizes are in GiB. All storage quotas include 60 persistent volume claims (PVCs).
+The following storage quotas are currently available on the Platform. All storage sizes are in GiB and represent the **maximum** for the combined storage for **all PVCs within the namespace**. All storage quotas allow for up to 60 persistent volume claims (PVCs).
 
 ```
 storage-1: Overall Storage: 1 GiB, Backup Storage: 0.5 GiB
