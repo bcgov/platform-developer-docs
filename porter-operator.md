@@ -139,7 +139,7 @@ Creation of a TransportServerClaim in Silver is essentially the same as in Gold,
 * Create the NetworkPolicy for ingress from the F5 (load balancer)
 
 
-### Troubleshooting<a name="troubleshooting"></a>
+## Troubleshooting<a name="troubleshooting"></a>
 * Check the Service name used in the TransportServerClaim.  It must match the existing Service.
 * Ensure that there are pods associated with that Service and that they are operating correctly.
 * Confirm that the NetworkPolicy has been created and that its `podSelector` field matches the pods that should be reachable via the TransportServerClaim.
