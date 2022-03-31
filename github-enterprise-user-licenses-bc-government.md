@@ -65,6 +65,7 @@ Software Central management handles your purchase order, with billing back to yo
 Related links:
 * [BC Government Organizations in Github](/bc-government-organizations-in-github.md)
 * [Pricing](https://github.com/pricing)
+
 Rewrite sources:
 * https://github.com/BCDevOps/openshift-wiki/blob/master/docs/HowTo/RequestGitHubEnterpriseUserLicense.md?plain=1
 ---

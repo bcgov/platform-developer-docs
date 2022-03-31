@@ -44,7 +44,7 @@ Two good starting points to create a code of conduct for your project are the [C
 ## Contribution guidelines
 Write concise and clear contribution guidelines. Let potential contributors know how you prefer they work on projects and give them the correct info to do so.
 
-For example, if you prefer contributors fork repositories and submit [pull requests](https://help.github.com/articles/using-pull-requests/), provide links to the applicable documentation.
+For example, if you prefer contributors fork repositories and [submit pull requests](https://help.github.com/articles/using-pull-requests/), provide links to the applicable documentation.
 
 Make sure you're clear on the licence that applies to your repository and provide a link to relevant documentation.
 

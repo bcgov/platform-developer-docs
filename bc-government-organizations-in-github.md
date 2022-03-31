@@ -44,7 +44,7 @@ The `bcgov` organization contains all public code repositories that hold open-so
 The `bcgov-c` organization stores temporary (up to 12 months), private repositories with closed-source code and private documents. Closed-source projects must be moved to the `bcgov` organization at the end of the 12 months. This repository is **private**.
 
 * Use this repository if you need a temporary location for code while you collect approvals to make the code public. You must commit to making the code public in the future in order to use this repository.
-* Only the Platform Services team can create repositories in this organization. You can ask them to create a repository [here](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/).
+* Only the Platform Services team can create repositories in this organization. You can ask them to create a repository [using the Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/).
 
 Your product team can only have a permanent, private repository in `bcgov-c` if the GitOps repository has ArgoCD manifests. We strongly discourage permanent, private repositories.
 
@@ -177,6 +177,7 @@ Related links:
 * [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/)
 * [DevOps-Request](https://github.com/BCDevOps/devops-requests/issues/new?assignees=caggles%2C+ShellyXueHan%2C+mitovskaol%2C+patricksimonian&labels=github-repo%2C+pending&template=github_repo_request.md&title=)
 * [GitHub Enterprise user licences in the BC government](github-enterprise-user-licenses-bc-government.md)
+
 Rewrite sources:
 * https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/github/README.md
 * https://developer.gov.bc.ca/Getting-Started-on-the-DevOps-Platform/How-to-request-new-GitHub-user-access-or-repository-creation

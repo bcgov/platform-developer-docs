@@ -16,9 +16,11 @@ content owner: Cailey Jones
 
 # Image and artifact management with Artifactory
 
-Artifactory is an artifact repository system by JFrog. You can find their documentation [here](https://www.jfrog.com/confluence/site/documentation). We offer this service to BC Government development teams who build cloud-native applications on the OpenShift Platform.
+Artifactory is an artifact repository system by JFrog. We offer this service to BC Government development teams who build cloud-native applications on the OpenShift Platform.
 
-Artifactory can be used to access artifacts to use in your application. It's compatible with all major package types, including Docker images, Helm charts, NPM packages, and [more](https://www.jfrog.com/confluence/display/JFROG/Package+Management).
+For more information on Artifactory from JFrog, see the [Artifactory documentation](https://www.jfrog.com/confluence/site/documentation).
+
+Artifactory can be used to access artifacts to use in your application. It's compatible with all major package types, including Docker images, Helm charts, NPM packages, and more. For more information on package management, see [Package Management](https://www.jfrog.com/confluence/display/JFROG/Package+Management).
 
 The Platform Team uses Artifactory to provide the following services:
 * Remote repositories serve as caches/proxies for all major public artifact repositories/registries and several private repositories/registries where BC Government owns licensed access. These repositories cache artifacts that are pulled through them, reducing build time and network traffic. The list of remote repositories include DockerHub, NPM, PyPi, RedHat's private image registry, and more.

@@ -30,7 +30,7 @@ We have access to the following storage services for the OpenShift platform.
 
 ### OpenShift Persistent Volumes (NetApp)
 
-All NetApp storage classes support resizing (bigger only). You can start with a small volume and edit your Persisent Volume Claim (PVC) to have a larger `.spec.resources.requests.storage` later if you need more. You may need to restart the pods attached to let the resize trigger on re-mount. **Note: the storage increase is capped by the storage quota assigned to the namespace. Check the current resource quota sizes [here](./openshift-project-resource-quotas.md).
+All NetApp storage classes support resizing (bigger only). You can start with a small volume and edit your Persisent Volume Claim (PVC) to have a larger `.spec.resources.requests.storage` later if you need more. You may need to restart the pods attached to let the resize trigger on re-mount. **Note: the storage increase is capped by the storage quota assigned to the namespace. For the current resource quota sizes, see [OpenShift project resource quotas](./openshift-project-resource-quotas.md).
 
 * **NetApp File**: `netapp-file-standard` is the default storage class for the platform and the type of storage you get if you don't specify a specific `storageClass`.
 
@@ -64,9 +64,9 @@ Object Storage Service is highly fault tolerant and uses erasure coding within t
 
 You can use tools to manage your persistent storage beyond the features built in to OpenShift.
 
-* **Database backups**: We have a community project to help teams implement regular backups of their databases hosted within the platform. You can find the repository [here](https://github.com/bcdevops/backup-container)
+* **Database backups**: We have a community project to help teams implement regular backups of their databases hosted within the platform. The repository is called [backup-container](https://github.com/bcdevops/backup-container)
 
-* **Migrating storage**: Another community supported repository is available to help with migrating data from one PVC to another (moving from one storageClass to another, moving to a larger PVC, etc). You can find the repository [here](https://github.com/BCDevOps/StorageMigration)
+* **Migrating storage**: Another community supported repository is available to help with migrating data from one PVC to another (moving from one storageClass to another, moving to a larger PVC, etc). The repository is called [StorageMigration](https://github.com/BCDevOps/StorageMigration)
 
 ## Storage details
 

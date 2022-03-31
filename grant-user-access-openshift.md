@@ -16,7 +16,7 @@ content owner: Cailey Jones
 
 # Grant user access in OpenShift
 
-The OCIO Enterprise DevOps branch manages access to the the OpenShift platform. The platform provides platform and namespace-level access control. Access to the platform requires certain prerequisites and mechanisms to grant access. Information on namespace-level access is described [here](./bc-government-organizations-in-github.md).
+The OCIO Enterprise DevOps branch manages access to the the OpenShift platform. The platform provides platform and namespace-level access control. Access to the platform requires certain prerequisites and mechanisms to grant access. Information on namespace-level access is described in [BC Government organizations in Github](./bc-government-organizations-in-github.md).
 
 Every team member may not need access to OpenShift. Consider the security principle of least privilege before requesting platform access and when granting namespace-level access.
 
@@ -27,7 +27,7 @@ If you want to grant a new user access to OpenShift they must have the following
 - a GitHub account (ideally with a complete profile)
 - two-factor authentication enabled on their GitHub account
 
-Additionally, the namespace where you are adding the new user must have already have been provisioned through [this process](./provision-new-openshift-project.md) and must have one or more administrative users.
+Additionally, the namespace where you are adding the new user must have already have been provisioned through [the new project provisioning process](./provision-new-openshift-project.md) and must have one or more administrative users.
 
 ## Add users
 
@@ -54,13 +54,13 @@ To get a list of the users who have access to a namespace, and in what role, a p
 ```
 oc get rolebindings
 ```
-For more information on adding users, you can [watch this](https://www.youtube.com/watch?v=IvdPyx2-qm0) or [use this](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/).
+For more information on adding users, you can watch [Using Just Ask! to gain access into the BCGov or BCDevops Github Organizations](https://www.youtube.com/watch?v=IvdPyx2-qm0) or use [the Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/).
 
 ## Request platform access
 
 **Note**: This process only gives you platform access, not namespace access.
 
-The product owner or a project administrator associated with namespace provisioning makes a request through the [Platform Services Github Access Managment Tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/). You can learn more about the process [here](https://www.youtube.com/watch?v=IvdPyx2-qm0).
+The product owner or a project administrator associated with namespace provisioning makes a request through the [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/).
 
 ## Grant namespace access
 

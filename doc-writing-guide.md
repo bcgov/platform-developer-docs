@@ -20,6 +20,6 @@
 
 ## Audience and perspective
 - Don't duplicate content across pages if it can be helped.
-- Linking strategy
+- Linking strategy (https://www.nngroup.com/articles/writing-links/)
 
 ## Document types and goals
