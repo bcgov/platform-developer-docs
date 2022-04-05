@@ -1,7 +1,7 @@
 ---
 title: Prebuilt images
 
-description: Describes prebuilt images available for use in applications.
+description: Describes prebuilt images maintained by the Platform Services team and available for use in applications.
 
 keywords: images, Artifactory, prebuilt images, managed images
 
