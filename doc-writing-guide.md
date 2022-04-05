@@ -15,6 +15,7 @@
 - Avoid the passive voice. Use verb-forward language. Who does what? What performs what action?
 - [Don't write FAQs](https://gds.blog.gov.uk/2013/07/25/faqs-why-we-dont-have-them/).
 - Front load your content. What is the most important part of a given sentence? Give the reader what they need the most as soon as possible.
+- Use a descriptive and specific title. What does the reader _do_ with the page? What specific information do they gain?
 
 ## Tone and voice
 

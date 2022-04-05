@@ -25,6 +25,8 @@ Prebuilt images provide the following advantages:
 
 The images are available from Artifactory and you can use the `artifactory-creds` secret in your namespaces to pull the images.
 
+## On this page
+
 - [List of prebuilt images](#managed-images)
     - [App Assessment](#app-assessment)
     - [Backup container](#backup-container)
