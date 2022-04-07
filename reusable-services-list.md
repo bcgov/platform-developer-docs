@@ -128,11 +128,14 @@ The OWASP Zed Attack Proxy (ZAP) automatically finds security vulnerabilities in
 * [openshift-components](https://github.com/BCDevOps/openshift-components/tree/master/cicd/jenkins-slave-zap)
 
 ## SonarQube in Private Cloud PaaS<a name="sq-private-cloud"></a>
+
 [SonarQube®](https://www.sonarqube.org/) is an automatic code review tool you can use to detect bugs, vulnerabilities, and code smells in your code. It can integrate with your existing workflow to enable continuous code inspection across your project branches and pull requests.
 
 When a piece of code does not comply with a rule, an issue is logged on the snapshot. An issue can be logged on a source file or a unit test file.
 
-For more information, see [SonarQube Best Practices](https://developer.gov.bc.ca/Platform-Services-Security/SonarQube-Best-Practices).
+SonarQube is a community-supported service. We also encourage teams to switch to using the SonarQube Saas service.
+
+For more information, see [SonarQube Best Practices](https://developer.gov.bc.ca/Platform-Services-Security/SonarQube-Best-Practices). You can also review the [SonarQube repository](https://github.com/BCDevOps/sonarqube)
 
 ## SonarQube on OpenShift<a name="sq-openshift"></a>
 The [sonarqube repository](https://github.com/BCDevOps/sonarqube) contains all the resources you might need to deploy a SonarQube server instance in a BC government OpenShift pathfinder environment and integrate SonarQube scanning into your Jenkins pipeline.

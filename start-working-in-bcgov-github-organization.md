@@ -74,6 +74,7 @@ There may be circumstances where it's useful and appropriate for employees to co
 - Confirm your [authority to license](./license-your-project.md)
 
 Employees can also contribute to non-BC government owned intellectual property rights outside their professional roles by using their personal email linked to their GitHub account.
+
 ---
 Related links:
 * [Open Content Assessment Checklist](./checklist.md)

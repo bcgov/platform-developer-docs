@@ -40,14 +40,14 @@ There was originally talk of the material needed approval from a privacy ministe
 
 ## Privacy<a name="privacy"></a>
 
-Make sure that the content is free of personal information that may directly identify an individual (for example, name, phone number, photo, address, driver's licence number or any similar identification number).
+Make sure that the content is free of personal information that may directly identify an individual (for example, name, phone number, photo, address, driver's licence number, or any similar identification number).
 
 Ministries may contact Knowledge and Information Services to assist in privacy assessments.
 
 ## Copyright<a name="copyright"></a>
 Make sure to meet the following requirements:
 - Content is created solely by B.C. government employees.
-- Content is fully owned by the B.C. government and doesn't contain any third-party content. Collect copies of any contracts related to the content for review with the Intellectual Property Program (IPP).
+- Content is fully owned by the B.C. government and doesn't contain any third-party content. Collect copies of any contracts related to the content for review with the [Intellectual Property Program (IPP)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/intellectual-property/intellectual-property-program).
 - Content has no terms of use or exclusive licences that prohibit the Province from licensing the content on GitHub. Collect information concerning any terms of use or licences related to the content for review with the IPP.
 - You have [authority to license the content](./license-your-project.md).
 
@@ -61,9 +61,9 @@ If there are legal, contractual, or policy restrictions or limitations on the co
 
 ## Security<a name="security"></a>
 
-Contact your ministry information security officer (MISO) to make sure that all necessary security controls have been implemented.
+Contact your [Ministry Information Security Officer (MISO)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/information-security-policy-and-guidelines/role-of-miso) to make sure that all necessary security controls have been implemented.
 
-Make sure that the material been labelled **Public**, using the Information Security Classification Framework.
+Make sure that the material been labelled **Public**, using the [Information Security Classification Framework](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification).
 
 ---
 Rewrite sources:
@@ -71,6 +71,8 @@ Rewrite sources:
 
 Related links:
 - [Start working in the BCGov GitHub organization](./start-working-in-bcgov-github-organization.md)
+- [Intellectual Property Program (IPP)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/intellectual-property/intellectual-property-program)
 - [License your project](./license-your-project.md)
-
+- [Ministry Information Security Officer (MISO)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/information-security-policy-and-guidelines/role-of-miso)
+- [Information Security Classification Framework](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification)
 ---
