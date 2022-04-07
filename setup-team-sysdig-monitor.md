@@ -147,25 +147,13 @@ Now that you've created the Custom Resource, go back to Sysdig to see the new te
 
 **Note:** You may need to wait some time between creating the team before the resources show.
 
-![](/images/sysdig-pvc-dashboard.png)
-
 ## Review your monitoring dashboards<a name="review-dashboards"></a>
 Two Sysdig Teams were created and now have the following dashboards:
 - A resource dashboard provides an overview of limits and requests across all team namespaces.
 
-![](/images/sysdig-resource-dashboard.png)
-
-![](/images/sysdig-cpu-dashboard.png)
-
 - A persistent storage dashboard provides an overview of all PVC utilization. PVCs must be attached to a running pod for their metrics to show on this dashboard.
 
-![](/images/sysdig-pvc-dashboard.png)
-
 - A series of predefined dashboards exist for general use or to help users with appropriate permissions to create custom dashboards. Click `Dashboards`, then click `Add Dashboard` and `Create from Template`
-
-![](/images/sysdig-click-dashboard.png)
-
-![](/images/sysdig-create-dashboard.png)
 
 The Platform Services team recommends that teams use the [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/) to keep your dashboards code. Each dashboard is assigned to an account on Sysdig for ownership. If you delete the user (whether from the console or Custom Resource), all of the dashboards are deleted. Sysdig cloud is a SaaS and not run locally, so there's no way for us to retain the deleted dashboards for a user.
 
@@ -180,15 +168,7 @@ You can integrate Sysdig Alerts with Rocket.Chat. Both Sysdig Monitor and Rocket
 
 ### Configure RocketChat
 Rocket.Chat requires an incoming webhook and a script to parse the data from Sysdig. Do the following:
-1. Create the incoming webhook
-
-![](/images/rc-create-webhook-1.png)
-
-![](/images/rc-create-webhook-2.png)
-
-![](/images/rc-create-webhook-3.png)
-
-![](/images/rc-create-webhook-4.png)
+1. Create the incoming webhook.
 
 2. Use the following sample script for basic alert message creation:
 ```js
@@ -229,17 +209,12 @@ class Script {
 ### Create a Sysdig team notification channel
 To create a team notification channel, do the following:
 1. In Sysdig Monitor, go to your user account and click `Settings`.
-1. Click `Notification Channels` and `Add Notification Channel`. Choose `Webhook` as the type
 
-![](/images/sysdigteams-notification-channel.png)
+1. Click `Notification Channels` and `Add Notification Channel`. Choose `Webhook` as the type.
 
 1. Use the webhook URL generated from RocketChat and configure the notification channel.
 
-![](/images/sysdigteams-nc-webhook-config.png)
-
 1. Click `Save` and go to the `Alerts` section or start adding custom alerts to any of your configured dashboards.
-
-![](/images/sysdigteams-add-alert.png)
 
 By default, the alert scope is set to `everywhere`, which means all namespaces from the cluster. Make sure you set the scope to your own namespaces. For example, you can use `kubernetes.namespace.name` and pick the ones you need.
 
@@ -259,8 +234,6 @@ Some of the dashboard panels may leverage PromQL to show metrics. PromQL can be 
 - Sample PromQL Query:
 
   `((avg(kubelet_volume_stats_used_bytes/kubelet_volume_stats_capacity_bytes) by (persistentvolumeclaim)) * 100) >= 80`  
-
-![](/images/sysdigteams-alert-promql.png)
 
 ### Use Service Discovery to import application metrics endpoints
 Sysdig has a lightweight Prometheus server (Promscrape) that can [import your application metrics endpoint into Sysdig metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/configure-monitoring-integrations/migrating-from-promscrape-v1-to-v2/#migrate-using-default-configuration).
