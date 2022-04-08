@@ -16,7 +16,7 @@ content owner: Cailey Jones
 
 # Grant user access in OpenShift
 
-The OCIO Enterprise DevOps branch manages access to the the OpenShift platform. The platform provides platform and namespace-level access control. Access to the platform requires certain prerequisites and mechanisms to grant access. Information on namespace-level access is described in [BC Government organizations in Github](./bc-government-organizations-in-github.md).
+The OCIO Enterprise DevOps branch manages access to the the OpenShift platform. The platform provides platform and namespace-level access control. Access to the platform requires certain prerequisites and mechanisms to grant access.
 
 Every team member may not need access to OpenShift. Consider the security principle of least privilege before requesting platform access and when granting namespace-level access.
 
