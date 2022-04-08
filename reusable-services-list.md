@@ -64,7 +64,7 @@ For more information on Backup Container, see the following pages:
 
 ## BC Address Geocoder<a name="bc-address-geocoder"></a>
 
-The BC Address Geocoder REST API lets you integrate real-time standardization, validation, and geocoding of physical addresses into your applications. See [the Data Catalogue](https://catalogue.data.gov.bc.ca/dataset/bc-address-geocoder-web-service/resource/40d6411e-ab98-4df9-a24e-67f81c45f6fa/view/1d3c42fc-53dc-4aab-ae3b-f4d056cb00e0) for information on aspects of the REST API that aren't covered in the OpenAPI definition.
+The BC Address Geocoder REST API lets you integrate real-time standardization, validation, and geocoding of physical addresses into your applications. See [the Data Catalogue](https://catalogue.data.gov.bc.ca/dataset/bc-address-geocoder-web-service) for information on aspects of the REST API that aren't covered in the OpenAPI definition.
 
 The Geocoder helps you validate and geocode addresses (including public and related business occupants), find physical sites, intersections, and occupants, and find sites, intersections, and occupants near a point or within an area. The current baseUrl for the online geocoder is https://geocoder.api.gov.bc.ca/.
 
@@ -169,8 +169,8 @@ Related links:
 * [HETS Project](https://github.com/bcgov/hets)
 * [backup-container repository](https://github.com/BCDevOps/backup-container)
 * [jag-cullencommission repository](https://github.com/bcgov/jag-cullencommission/tree/master/openshift)
-* [Data Catalogue](https://catalogue.data.gov.bc.ca/dataset/bc-address-geocoder-web-service/resource/40d6411e-ab98-4df9-a24e-67f81c45f6fa/view/1d3c42fc-53dc-4aab-ae3b-f4d056cb00e0)
-* [Geocoder API console](https://catalogue.data.gov.bc.ca/dataset/bc-address-geocoder-web-service/resource/40d6411e-ab98-4df9-a24e-67f81c45f6fa/view/1d3c42fc-53dc-4aab-ae3b-f4d056cb00e0)
+* [Data Catalogue](https://catalogue.data.gov.bc.ca/dataset/bc-address-geocoder-web-service)
+* [Geocoder API console](https://catalogue.data.gov.bc.ca/dataset/bc-address-geocoder-web-service)
 * [Data Systems & Services request system](https://dpdd.atlassian.net/servicedesk/customer/portal/1/group/7/create/15).
 * [BC Address Geocoder Developer Guide](https://developer.gov.bc.ca/Community-Contributed-Content/BC-Address-Geocoder-Developer-Guide)
 * [BC Address Geocoder repository](https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS)
