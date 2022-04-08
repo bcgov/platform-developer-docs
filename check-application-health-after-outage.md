@@ -22,6 +22,8 @@ Still, it's always possible that an outage affects the platform and brings down 
 
 If this happens, speedy recovery is important. Use these guidelines to ensure your application recovers quickly and effectively.
 
+**Note**: These guidelines assume that you have built your application in a cloud-native, highly-resilient manner that makes effective use of the strengths of the OpenShift platform.  Make sure you follow our [Resiliency Guidelines](https://developer.gov.bc.ca/Developer-Tools/Resiliency-Guidelines). If your application is not cloud-native in its design, it won't benefit from the higher adaptability and recoverability of the platform and may need additional work to recover from a large outage.
+
 ## Check reporting channels
 
 If there is a platform-wide outage, check the following sources for more information:
@@ -53,7 +55,7 @@ Your pods will likely scale back up on their own. However, it's still a good ide
 #### Crash Loop Backoff
 This error usually indicates a problem with your application: it's repeatedly attempting to boot and failing.
 
-Your application logs should have more information and may provide further information about how to fix this issue.
+Your application logs should have more information and may provide further information about how to fix this issue. If your application enters CrashLoopBackoff during recovery from an outage, this may indicate that your application is not designed to be fully resilient.
 
 #### Image Pull Backoff
 This error generally indicates that the pod is having trouble getting to the image it needs to spin up.
@@ -70,13 +72,13 @@ However, you should check that they're working and connecting to your pods after
 
 If your route exists but can't connect to a container, even though the container is present and working, you can try to delete the pod and force it to recover.
 
-### Jenkins
+### Pipeline
 
-Jenkins isn't part of the core application you're likely to be running and often gets missed after an outage.
+Your pipeline isn't part of the core application you're likely to be running and often gets missed after an outage. Serverless pipelines are unlikely to be affected by platform-wide outages (other than being unavailable for the duration of the outage). However, if your pipeline runs via software hosted in your tools namespace (such as Jenkins), you should check that this software has recovered correctly.
 
-Run a test pipeline through Jenkins to make sure everything works as expected and you don't get caught with a problem pipeline once you start updating your app again.
+Run a test pipeline to make sure everything works as expected and you don't get caught with a problem pipeline once you start updating your app again.
 
-If you have problems with your Jenkins installation, delete the slave pods and allow them to restart, then try again.
+If you have problems with your pipeline installation, delete the member pods and allow them to restart, then try again.
 
 ### rabbitMQ
 
@@ -86,7 +88,7 @@ If you're running rabbitMQ as part of your application, you may need to restart 
 
 Create an issue template in GitHub for your application that details what you need to check to ensure that your application is up and running after an outage.
 
-Use the GitHub template below.
+Below is an example of a GitHub template that the Platform Team might use to check on RocketChat's recovery in the event of an outage. Use this example to inform the development of an appropriate issue template for your own application(s).
 
 ```
 ---
