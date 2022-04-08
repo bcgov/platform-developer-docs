@@ -16,7 +16,7 @@ content owner: Olena Mitovska
 
 # BC Government organizations in Github
 
-The BC Devops team uses [GitHub](https://github.com) to host open code and repositories. Using GitHub you can do the following:
+The BC DevOps team uses <a href="https://github.com" target="_blank">GitHub</a> to host open code and repositories. Using GitHub you can:
 * Share and control code versions
 * Use tools for team and project management
 * Track issues
@@ -27,7 +27,7 @@ The main organization the BC government owns in Github is [bcgov](https://github
 
 ## Working in the open
 
-The [Digital Principles for BC Goverment](https://digital.gov.bc.ca/resources/digital-principles) urge product teams to _work in the open_ as outlined in principle five. GitHub is the leading platform for open-source projects and allows the Province to collaborate with the open-source community to build software, support innovation, and save time and money.
+The [Digital Principles for BC Goverment](https://digital.gov.bc.ca/resources/digital-principles) urge product teams to work in the open as outlined in principle five. GitHub is the leading platform for open-source projects. It allows the Province to collaborate with the open-source community to build software, support innovation, and save time and money.
 
 ## BC Government organizations in GitHub
 
@@ -36,7 +36,7 @@ The Province owns several GitHub organizations, which are described below.
 ### `bcgov`
 
 The `bcgov` organization contains all public code repositories that hold open-source code or public documents for all BC Government teams working on the platform, including Platform Services. This organization is **public**.
-* All product teams working in the Private Cloud OpenShift Platform should use this organization
+* Most product teams working in the Private Cloud OpenShift Platform should use this organization
 * Any member of the `bcgov` organization can create repositories and any existing member can [invite other users](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/) to join the organizations.
 
 ### `bcgov-c`
@@ -45,8 +45,6 @@ The `bcgov-c` organization stores temporary (up to 12 months), private repositor
 
 * Use this repository if you need a temporary location for code while you collect approvals to make the code public. You must commit to making the code public in the future in order to use this repository.
 * Only the Platform Services team can create repositories in this organization. You can ask them to create a repository [using the Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/).
-
-Your product team can only have a permanent, private repository in `bcgov-c` if the GitOps repository has ArgoCD manifests. We strongly discourage permanent, private repositories.
 
 Your product team can only have a **permanent**, private repository in `bcgov-c` if it is a GitOps repository with ArgoCD manifests. We strongly discourage creating permanent, private repositories in this organization.
 
@@ -59,12 +57,10 @@ Your product team can only have a **permanent**, private repository in `bcgov-c`
 
 Ministry-specific **private** organizations must be linked to the BC Government's Enterprise account (user licenses are required for the members of these organizations)
 
-These organizations permanently store teams' private repositories with closed-sourced code that can't be transitioned to a public repository within 12 months. For more information on creating a private organization linked to the GitHub enterprise account, see [this page](github-enterprise-user-licenses-bc-government.md).
+These organizations permanently store teams' private repositories with closed-sourced code that can't be transitioned to a public repository within 12 months. For more information on creating a private organization linked to the GitHub enterprise account, see [GitHub Enterprise user licences in the BC government](./github-enterprise-user-licenses-bc-government.md).
 * Product teams that need a permanent location for their closed-source code should use this repository.
-* Each Ministry team must purchase their own [user licenses](github-enterprise-user-licenses-bc-government.md) to use the organization.
+* Each Ministry team must purchase their own [user licenses](./github-enterprise-user-licenses-bc-government.md) to use the organization.
 * Only Ministry GitHub administrators can create repositories in this organization. Consult with your Ministry's Information Management Branch (IMB) to get in touch with the GitHub administrators.
-
-If you're unsure which repository you should use, see the following image:
 
 ![Diagram of the BC Goverment GitHub organizations](/images/github-organization-chart.png)
 
