@@ -5,7 +5,7 @@ description: Describes how to set up and configure a team in Sysdig Monitor.
 
 keywords: sysdig, monitoring, openshift monitoring, developer guide, team guide, team, configure
 
-page purpose: Details the steps for setting up a team and using the capabilities of Sysdig Monitor.
+page purpose: Details the steps for setting up a team and reviewing the capabilities of Sysdig Monitor.
 
 audience: developer, technical lead
 
@@ -28,9 +28,6 @@ For more information on the Sysdig monitoring service, see [Monitoring with Sysd
 1. [Create a Sysdig Team](#create-team)
 1. [Sign in to your Sysdig Team](#sign-in)
 1. [Review your monitoring dashboards](#review-dashboards)
-1. [Create alert channels](#create-alert-channels)
-1. [Set up advanced functions](#advanced-functions)
-1. [Fix issues with default dashboards](#fix-issues)
 
 ## Sign in to Sysdig<a name="sign-in-sysdig"></a>
 You and your team must sign in to Sysdig to create the user account. BC Government Sysdig uses OpenID Connect and requires a GitHub account.
@@ -157,102 +154,7 @@ Two Sysdig Teams were created and now have the following dashboards:
 
 The Platform Services team recommends that teams use the [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/) to keep your dashboards code. Each dashboard is assigned to an account on Sysdig for ownership. If you delete the user (whether from the console or Custom Resource), all of the dashboards are deleted. Sysdig cloud is a SaaS and not run locally, so there's no way for us to retain the deleted dashboards for a user.
 
-## Create alert channels<a name="create-alert-channels"></a>
-You can create alert channels in Sysdig Monitor.
-
-### Create a RocketChat alert channel
-You can integrate Sysdig Alerts with Rocket.Chat. Both Sysdig Monitor and Rocket.Chat require configurations.
-- Sysdig Monitor creates a **Webhook** notification channel.
-
-- Rocket.Chat creates an **incoming webhook** with a custom script.
-
-### Configure RocketChat
-Rocket.Chat requires an incoming webhook and a script to parse the data from Sysdig. Do the following:
-1. Create the incoming webhook.
-
-2. Use the following sample script for basic alert message creation:
-```js
-class Script {
-  process_incoming_request({ request }) {
-    console.log(request.content);
-    var date = new Date(request.content.timestamp);
-
-    var alertColor = "warning";
-    if(request.content.resolved === "true"){ alertColor = "good"; }
-    else if (request.content.status === "ACTIVE") { alertColor = "danger"; }
-    return {
-      content: {
-        icon_url: "https://pbs.twimg.com/profile_images/1033062307352338432/AAPSOLRs_400x400.jpg",
-        text: "Sysdig Notification",
-        attachments: [{
-          title: request.content.alert.name,
-          pretext: request.content.alert.description,
-          title_link: request.content.event.url,
-          color: alertColor,
-          fields: [
-            {
-              title: "State",
-              value: request.content.state
-            },
-            {
-              title: "Condition",
-              value: request.content.condition
-            }
-          ]
-      }]
-      }
-    };
-  }
-}
-```
-
-### Create a Sysdig team notification channel
-To create a team notification channel, do the following:
-1. In Sysdig Monitor, go to your user account and click `Settings`.
-
-1. Click `Notification Channels` and `Add Notification Channel`. Choose `Webhook` as the type.
-
-1. Use the webhook URL generated from RocketChat and configure the notification channel.
-
-1. Click `Save` and go to the `Alerts` section or start adding custom alerts to any of your configured dashboards.
-
-By default, the alert scope is set to `everywhere`, which means all namespaces from the cluster. Make sure you set the scope to your own namespaces. For example, you can use `kubernetes.namespace.name` and pick the ones you need.
-
-## Set up advanced functions<a name="advanced-functions"></a>
-To set up other useful tools in the Sysdig Monitor space, do the following:
-
-### Create custom monitoring panels
-Sysdig scrapes Prometheus metrics. You can create custom queries using PromQL. For example:
-
-### Create a PromQL based alert
-Some of the dashboard panels may leverage PromQL to show metrics. PromQL can be used in alerts as well. The following example shows an alert for the **Persistent Volume Utilization** when hitting 80% full.
-
-- If you'd like to get PVC-specific metrics, for example, get the max percentage of storage usage:
-
-  `max(kubelet_volume_stats_used_bytes{agent_tag_cluster="gold",persistentvolumeclaim="<PVC_name>"}) / max(kubelet_volume_stats_capacity_bytes{agent_tag_cluster="gold",persistentvolumeclaim="<PVC_name>"}) * 100`
-
-- Sample PromQL Query:
-
-  `((avg(kubelet_volume_stats_used_bytes/kubelet_volume_stats_capacity_bytes) by (persistentvolumeclaim)) * 100) >= 80`  
-
-### Use Service Discovery to import application metrics endpoints
-Sysdig has a lightweight Prometheus server (Promscrape) that can [import your application metrics endpoint into Sysdig metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/configure-monitoring-integrations/migrating-from-promscrape-v1-to-v2/#migrate-using-default-configuration).
-
-To enable Promscrape to find your application metrics, do the following:
-1. Make sure the application metrics endpoint is returning Prometheus metrics. To test this, you can expose the service and curl on the URL.
-1. Add the following annotations to the application pods:
-  ```yaml
-  prometheus.io/scrape: true
-  prometheus.io/port: <metrics_port>
-  prometheus.io/path: <metrics_path>
-  # the path is usually at /metrics
-  ```
-  Don't add the annotations to the pods directly. This should be part of the infrastructure code and added in the templates. For example, if the app is using an OpenShift deployment, the annotation should be added at `deployment.spec.template.metadata.annotations`.
-
-3. Once the annotation is in place, Sysdig can scrape them. On the **Sysdig Explore** tab, look for the sysdig metrics there (Sysdig does relabeling of the metrics, so they will appear as native sysdig metrics now instead of coming from promQL Query)
-
-
-## Fix issues with default dashboards<a name="fix-issues"></a>
+### Fix issues with default dashboards<a name="fix-issues"></a>
 If you don't see default dashboards in your Sysdig team, check the following:
 1. Make sure you're on the correct Sysdig team scope.
 
@@ -262,6 +164,8 @@ If you don't see default dashboards in your Sysdig team, check the following:
 
 ---
 Related links:
+- [Set up advanced functions in Sysdig Monitor](./set-up-advanced-functions-sysdig-monitor.md)
+- [Create alert channels in Sysdig Monitor](create-alert-channels-sysdig-monitor.md)
 - [Sysdig Monitor](https://sysdig.com/products/monitor/)
 - [Project resource quotas](./openshift-project-resource-quotas.md)
 - [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/)
