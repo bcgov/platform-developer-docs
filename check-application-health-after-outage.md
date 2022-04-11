@@ -18,13 +18,16 @@ content owner: Cailey Jones
 
 One of the benefits of the OpenShift platform is a greatly reduced chance of significant unexpected outages and the near-elimination of scheduled outages. The platform is adaptable and recoverable in a way that legacy architecture is not and this lets the platform recover from hardware issues invisibly in many cases.
 
-Still, it's always possible that an outage affects the platform and brings down the applications hosted there.
+Still, it's always possible that an outage affects the platform and brings down the applications hosted there. If this happens, speedy recovery is important. Use these guidelines to ensure your application recovers quickly and effectively.
 
-If this happens, speedy recovery is important. Use these guidelines to ensure your application recovers quickly and effectively.
+## On this page
+- [Check reporting channels](#check-channels)
+- [Check your application](#check-application)
+- [Keep track of recovery steps](#keep-track)
 
-**Note**: These guidelines assume that you have built your application in a cloud-native, highly-resilient manner that makes effective use of the strengths of the OpenShift platform.  Make sure you follow our [Resiliency Guidelines](https://developer.gov.bc.ca/Developer-Tools/Resiliency-Guidelines). If your application is not cloud-native in its design, it won't benefit from the higher adaptability and recoverability of the platform and may need additional work to recover from a large outage.
+These guidelines assume that you have built your application in a cloud-native, highly-resilient manner that makes effective use of the strengths of the OpenShift platform.  Make sure you follow our [Resiliency Guidelines](https://developer.gov.bc.ca/Developer-Tools/Resiliency-Guidelines). If your application is not cloud-native in its design, it won't benefit from the higher adaptability and recoverability of the platform and may need additional work to recover from a large outage.
 
-## Check reporting channels
+## Check reporting channels<a name="check-channels"></a>
 
 If there is a platform-wide outage, check the following sources for more information:
 
@@ -34,7 +37,7 @@ If there is a platform-wide outage, check the following sources for more informa
 
 The Platform Services team keeps the community informed about the status of the outage. While the outage is in progress, there isn't much the team can do. Review the status and stay ready for the outage to end.
 
-## Check your application
+## Check your application<a name="check-application"></a>
 
 When the outage recovers, it's likely that everything recovers on its own, due to the resiliency of the applications.
 
@@ -84,7 +87,7 @@ If you have problems with your pipeline installation, delete the member pods and
 
 If you're running rabbitMQ as part of your application, you may need to restart it in case the outage caused network issues.
 
-## Keep track of recovery steps
+## Keep track of recovery steps<a name="keep-track"></a>
 
 Create an issue template in GitHub for your application that details what you need to check to ensure that your application is up and running after an outage.
 

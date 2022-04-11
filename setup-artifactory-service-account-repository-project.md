@@ -18,6 +18,12 @@ content owner: Cailey Jones
 
 Artifactory access is controlled through Artifactory service accounts. Service accounts are meant to be shared by teams and used by automation tools like pipelines.
 
+## On this page
+- [Section name](#)
+- [Section name](#)
+- [Section name](#)
+<a name=""></a>
+
 [Archeobot](bcgov/platform-services-archeobot) is a custom operator that gives teams the freedom to manage their own Artifactory resources. Archeobot can be used for the following:
 * Create new Artifactory service accounts
 * Request new Artifactory projects
@@ -30,7 +36,7 @@ When referring to service accounts, keep in mind the following differences:
 * Artifactory "service account" refers to the actual account that exists inside the Artifactory software, which you can then use to interact with Artifactory's features.
 While closely related to each other, they're not the same.
 
-## Setup a service account
+## Setup a service account<a name=""></a>
 
 If you have a project set somewhere in the OpenShift 4 clusters, you already have a service account.
 
@@ -77,7 +83,7 @@ Then, the project provisioner detects the missing ArtifactoryServiceAccount obje
 
 If you've accidentally deleted secrets for a different Artifactory service account (one you created yourself, but not the `default` on in your `tools` namespace), follow the same process. The project provisioner doesn't recreate the object for you, you need to do that yourself. Delete the object, wait for Archeobot to clean everything up, and then create a new ArtifactoryServiceAccount object. You can use the same ASA name but remember the username for the account is different, because it has a different random string at the end.
 
-## Artifactory Projects and private repositories
+## Artifactory Projects and private repositories<a name=""></a>
 
 If your team wishes to push artifacts to Artifactory, you will require a private repository to do so. This feature is provided via Artifactory Projects. Artifactory Projects are logical spaces of quota-based storage which teams can administer themselves. Within an Artifactory Project, a team can create their own private repositories - any number and any type that suits their needs, so long as the storage space required for these repositories remains within the provided quota.
 

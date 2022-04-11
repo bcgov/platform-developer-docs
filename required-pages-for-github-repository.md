@@ -20,12 +20,18 @@ When you create a repository in the `bcgov` organization, add the following mark
 - Code of conduct
 - Contribution guidelines
 
-## Licence
+## On this page
+- [Licence](#licence)
+- [ReadMe](#readme)
+- [Code of conduct](#code-of-conduct)
+- [Contribution guidelines](#contribution)
+
+## Licence<a name="licence"></a>
 Choose a licence and place a licence file in your repository before you do anything else. For important information on licences, see [License your project](./license-your-project.md).
 
 Depending on the licence you choose, add boilerplate text for the applicable licence to your README file.
 
-## ReadMe
+## ReadMe<a name="readme"></a>
 GitHub has extensive documentation on how to create a good README file for your repository. Follow these guidelines when you create your readme.
 
 For more information, see [About READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes).
@@ -36,12 +42,12 @@ Make sure to include the following:
 - Depending on your licence, boilerplate text for the applicable licence. For more information, see [License your project](./license-your-project.md).
 - A link to your code of conduct file.
 
-## Code of conduct
+## Code of conduct<a name="code-of-conduct"></a>
 Write a clear code of conduct to ensure contributors to your project foster an open and welcoming environment.
 
 Two good starting points to create a code of conduct for your project are the [Contributor Covenant](https://www.contributor-covenant.org/version/1/4/code-of-conduct/) and GitHub's guidelines on [Healthy contributions](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions).
 
-## Contribution guidelines
+## Contribution guidelines<a name="contribution"></a>
 Write concise and clear contribution guidelines. Let potential contributors know how you prefer they work on projects and give them the correct info to do so.
 
 For example, if you prefer contributors fork repositories and [submit pull requests](https://help.github.com/articles/using-pull-requests/), provide links to the applicable documentation.

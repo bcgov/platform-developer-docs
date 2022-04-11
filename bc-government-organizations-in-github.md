@@ -25,6 +25,12 @@ The BC DevOps team uses <a href="https://github.com" target="_blank">GitHub</a> 
 
 The main organization the BC government owns in Github is [bcgov](https://github.com/bcgov) where we store all open-source code developed by BC Government teams. The `bcgov` org includes close to 1000 repositories maintained by the BC Government Developer Community.
 
+## On this page
+- [Section name](#)
+- [Section name](#)
+- [Section name](#)
+<a name=""></a>
+
 ## Working in the open
 
 The [Digital Principles for BC Goverment](https://digital.gov.bc.ca/resources/digital-principles) urge product teams to work in the open as outlined in principle five. GitHub is the leading platform for open-source projects. It allows the Province to collaborate with the open-source community to build software, support innovation, and save time and money.

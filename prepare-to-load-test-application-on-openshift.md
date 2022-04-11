@@ -16,7 +16,7 @@
 # Prepare to load test an application on OpenShift
 Follow these guidelines to load test ministry applications hosted in the Silver and Gold cluster of the OpenShift 4 platform.
 
-## Requirements
+## Load testing requirements
 
 As OpenShift is a shared platform, the Platform Services team wants to make sure you're successful when you load test your application. You have to meet all the following requirements:
 

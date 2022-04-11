@@ -22,9 +22,14 @@ New project sets provisioned in **all clusters** of the Private Cloud OpenShift 
 
 **Note**: The Platform Services team may approach your team to discuss a downgrade in your quota if they find your application isn't using all of the resources within the current quota.
 
+## On this page
+- [CPU quotas](#cpu)
+- [Memory quotas](#memory)
+- [Storage quotas](#storage)
+
 If the default allocations aren't sufficient for your application, [you can ask for a quota increase](./request-quota-increase-for-openshift-project-set.md). You'll need a Sysdig dashboard that shows that your application needs more of a specific resource type (CPU, RAM, or storage) in a specific namespace. Provide this proof to the Platform Services team before they can approve a quota increase that you submit in the [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing).
 
-## CPU quotas:
+## CPU quotas<a name="cpu"></a>
 
 The following CPU quotas are currently available on the Platform. All CPU requests and limits are shown in cores (not millicores) and represent the maximum for the combined CPU request or CPU limit values for **all pods in a namespace**.
 
@@ -38,7 +43,7 @@ cpu-request-16-limit-32: CPU Request 16 cores, CPU Limit 32 cores
 cpu-request-32-limit-64: CPU Request 32 cores, CPU Limit 64 cores
 ```
 
-## Memory quotas:
+## Memory quotas<a name="memory"></a>
 
 The following RAM quotas are currently available on the Platform. All Memory requests and limits are shown in GiB and represent the **maximum** for the combined RAM request or RAM limit values for **all pods in the namespace**.
 
@@ -51,7 +56,7 @@ memory-request-32-limit-64: RAM Request 32 GiB, RAM Limit 64 GiB
 memory-request-64-limit-128: RAM Request 64 GiB, RAM Limit 128 GiB
 ```
 
-## Storage quotas:
+## Storage quotas<a name="storage"></a>
 
 The following storage quotas are currently available on the Platform. All storage sizes are in GiB and represent the **maximum** for the combined storage for **all PVCs within the namespace**. All storage quotas allow for up to 60 persistent volume claims (PVCs).
 

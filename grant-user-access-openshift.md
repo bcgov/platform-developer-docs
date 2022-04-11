@@ -20,7 +20,13 @@ The OCIO Enterprise DevOps branch manages access to the the OpenShift platform. 
 
 Every team member may not need access to OpenShift. Consider the security principle of least privilege before requesting platform access and when granting namespace-level access.
 
-## Prerequisites
+## On this page
+- [Prerequisites](#prereqs)
+- [Add users](#add-users)
+- [Request platform access](#request-access)
+- [Grant namespace access](#grant-access)
+
+## Prerequisites<a name="prereqs"></a>
 
 If you want to grant a new user access to OpenShift they must have the following:
 
@@ -29,7 +35,7 @@ If you want to grant a new user access to OpenShift they must have the following
 
 Additionally, the namespace where you are adding the new user must have already have been provisioned through [the new project provisioning process](./provision-new-openshift-project.md) and must have one or more administrative users.
 
-## Add users
+## Add users<a name="add-users"></a>
 
 You can add users in one of the following primary roles:
 
@@ -56,13 +62,13 @@ oc get rolebindings
 ```
 For more information on adding users, you can watch [Using Just Ask! to gain access into the BCGov or BCDevops Github Organizations](https://www.youtube.com/watch?v=IvdPyx2-qm0) or use [the Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/).
 
-## Request platform access
+## Request platform access<a name="request-access"></a>
 
 **Note**: This process only gives you platform access, not namespace access.
 
 The product owner or a project administrator associated with namespace provisioning makes a request through the [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/).
 
-## Grant namespace access
+## Grant namespace access<a name="grant-access"></a>
 
 Technical leads grant namespace access. For more information, see [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.9/authentication/using-rbac.html).
 

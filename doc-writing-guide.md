@@ -1,3 +1,9 @@
+## On this page
+- [Section name](#)
+- [Section name](#)
+- [Section name](#)
+<a name=""></a>
+
 ## Resources
 [BC Government: Writing for the web](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide): My all-purpose style source for this specific project.
 
@@ -20,7 +26,7 @@
 - Generally, you don't want to tell people what not to do.
 - Define abbreviations at first use.
 - Spell out numbers one to ten, use digits for everything after.
-- Use images sparingly. If you need to use images, make sure they are supplementary to the writing. Don't rely on them to explain a process.
+- Use images sparingly. If you need to use images, make sure they are supplementary to the writing. Don't rely on them to explain a process. Accessibility // out of date // links that can't be clicked // no alt text // branding and style
 
 ## Tone and voice
 
