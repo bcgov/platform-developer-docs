@@ -1,17 +1,19 @@
 ---
 title: Image and artifact management with Artifactory
 
+slug: image-artifact-management-with-artifactory
+
 description: Discusses available Artifactory features and management
 
 keywords: Artifactory, images, artifact, best practices, Artifactory management, repositories, projects, service account
 
-page purpose: Describes features at a high level and links to other useful pages with information on Artifactory
+page_purpose: Describes features at a high level and links to other useful pages with information on Artifactory
 
 audience: technical lead, developer
 
 author: Jonathan Bond
 
-content owner: Cailey Jones
+content_owner: Cailey Jones
 ---
 
 # Image and artifact management with Artifactory

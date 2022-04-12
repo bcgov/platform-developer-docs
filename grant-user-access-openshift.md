@@ -1,17 +1,19 @@
 ---
 title: Grant user access in OpenShift
 
+slug: grant-user-access-openshift
+
 description: Describes how to get users access to OpenShift.
 
 keywords: OpenShift, access, access request, new user
 
-page purpose: Describes how users get access or revoke access to OpenShift and the prerequisites.
+page_purpose: Describes how users get access or revoke access to OpenShift and the prerequisites.
 
 audience: developer, technical lead
 
 author: Jonathan Bond
 
-content owner: Cailey Jones
+content_owner: Cailey Jones
 ---
 
 # Grant user access in OpenShift

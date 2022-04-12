@@ -1,17 +1,19 @@
 ---
 title: Setup an Artifactory service account, repository, and project
 
+slug: setup-artifactory-service-account-repository-project
+
 description: Describes how a user can prepare their Artifactory project, service accounts, and repositories
 
 keywords: Archeobot, Artifactory, images, artifact, best practices, Artifactory management, repositories, projects, service account
 
-page purpose: Details how to setup Artifactory service accounts, repositories, and project. Includes various guidence on access and commands.
+page_purpose: Details how to setup Artifactory service accounts, repositories, and project. Includes various guidence on access and commands.
 
 audience: technical lead, developer
 
 author: Jonathan Bond
 
-content owner: Cailey Jones
+content_owner: Cailey Jones
 ---
 
 # Setup an Artifactory service account, repository, and project

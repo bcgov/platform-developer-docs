@@ -1,17 +1,19 @@
 ---
 title: Push and pull artifacts in Artifactory
 
+slug: push-pull-artifacts-artifactory
+
 description: Describes how to push and pull artifacts in Artifactory for Docker-type repositories
 
 keywords: push, pull, Artifactory, docker, artifact, repositories, projects
 
-page purpose: Describes how to test your account and pull locally and push and pull artifacts.
+page_purpose: Describes how to test your account and pull locally and push and pull artifacts.
 
 audience: technical lead, developer
 
 author: Jonathan Bond
 
-content owner: Cailey Jones
+content_owner: Cailey Jones
 
 ---
 # Push and pull artifacts in Artifactory

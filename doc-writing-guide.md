@@ -27,6 +27,8 @@
 - Define abbreviations at first use.
 - Spell out numbers one to ten, use digits for everything after.
 - Use images sparingly. If you need to use images, make sure they are supplementary to the writing. Don't rely on them to explain a process. Accessibility // out of date // links that can't be clicked // no alt text // branding and style
+- TOCs/On this page, only 3 or more lvl 2 headers, or long pages [more info](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/links)
+- one item lists: NO
 
 ## Tone and voice
 

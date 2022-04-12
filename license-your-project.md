@@ -1,17 +1,19 @@
 ---
 title: License your project
 
+slug: license-your-project
+
 description: Describes licence guidelines and the different types of licences used for GitHub projects
 
 keywords: licence, license, apache 2.0, BC OGL, Creative Commons, Affero, repository management, repository best practices
 
-page purpose: Outlines how to choose and use a licence for your project and describes the requirements around licensing
+page_purpose: Outlines how to choose and use a licence for your project and describes the requirements around licensing
 
 audience: developer, technical lead
 
 author: Jonathan Bond
 
-content owner: Olena Mitovska, Nick Corcoran
+content_owner: Olena Mitovska, Nick Corcoran
 ---
 # License your project
 

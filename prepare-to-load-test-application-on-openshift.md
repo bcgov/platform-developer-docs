@@ -1,18 +1,21 @@
 ---
-  title: Prepare to load test an application on OpenShift
+title: Prepare to load test an application on OpenShift
 
-  description:  Describe what to do before you load test an application
+slug: prepare-to-load-test-application-on-openshift
 
-  keywords: application profiling, profiling, network traffic, bandwidth, resiliency, HA, high availability, failover, testing, guidelines, silver, gold, OpenShift, load test, application
+description:  Describe what to do before you load test an application
 
-  page purpose: Describes the steps needed to load test an application in OpenShift. Provides further information on what developers need to do before and to schedule a test.
+keywords: application profiling, profiling, network traffic, bandwidth, resiliency, HA, high availability, failover, testing, guidelines, silver, gold, OpenShift, load test, application
 
-  audience: developer
+page_purpose: Describes the steps needed to load test an application in OpenShift. Provides further information on what developers need to do before and to schedule a test.
 
-  author: Jonathan Bond
+audience: developer
 
-  content owner: Cailey Jones
+author: Jonathan Bond
+
+content_owner: Cailey Jones
 ---
+
 # Prepare to load test an application on OpenShift
 Follow these guidelines to load test ministry applications hosted in the Silver and Gold cluster of the OpenShift 4 platform.
 

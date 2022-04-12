@@ -1,17 +1,19 @@
 ---
 title: Set up TCP connectivity on the Private Cloud OpenShift Platform
 
+slug: set-up-tcp-connectivity-on-private-cloud-openshift-platform
+
 description: Describes how to enable Silver, Gold, and GoldDR cross-cluster communication using the Porter Operator.
 
 keywords: TCP, TCP connectivity, silver, silver cluster, gold, golddr, gold cluster, golddr cluster, dr, disaster, recovery, porter, porter operator
 
-page purpose: Discusses how to enable communication between resources in the Gold/GoldDR clusters or between the Silver cluster and other networks.
+page_purpose: Discusses how to enable communication between resources in the Gold/GoldDR clusters or between the Silver cluster and other networks.
 
 audience: developer
 
 author: Ian Watts
 
-content owner: Ian Watts
+content_owner: Ian Watts
 ---
 
 # Set up TCP connectivity on the Private Cloud OpenShift Platform

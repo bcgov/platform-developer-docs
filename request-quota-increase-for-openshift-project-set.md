@@ -1,17 +1,19 @@
 ---
 title: Request a quota increase for an OpenShift project set
 
+slug: request-quota-increase-for-openshift-project-set
+
 description: Describes the process to request more resource quota for an OpenShift project
 
 keywords: openshift, resources, resource quotas, RAM, CPU, storage, optimization, claims, project
 
-page purpose: Discusses what a user needs to do to get the quota for a specific resource type increased on their OpenShift project set.
+page_purpose: Discusses what a user needs to do to get the quota for a specific resource type increased on their OpenShift project set.
 
 audience: developer, technical lead
 
 author: Jonathan Bond
 
-content owner:
+content_owner: Cailey Jones
 ---
 # Request a quota increase for an OpenShift project set
 

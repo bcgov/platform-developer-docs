@@ -1,17 +1,19 @@
 ---
 title: Reusable services list
 
+slug: reusable-services-list
+
 description: Provides an index of reusable services for developers and related information.
 
 keywords: reusable services, plugins, tools, services
 
-page purpose: Provides brief details on specific reusable services and links out to useful documentation or resources on the given service.
+page_purpose: Provides brief details on specific reusable services and links out to useful documentation or resources on the given service.
 
 audience: developer, technical lead
 
 author: Jonathan Bond
 
-content owner: Olena Mitovska
+content_owner: Olena Mitovska
 ---
 # Reusable services list
 Find details on the following services or tools you can use as part of your project in `bcgov`.

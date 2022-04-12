@@ -1,17 +1,19 @@
 ---
 title: Check application health after an outage
 
+slug: check-application-health-after-outage
+
 description: Describes aspects of your application you can check to ensure they're up and running after an outage.
 
 keywords: openshift, devops, outage, recovery
 
-page purpose: Gives guidelines on what to check on in an application if there has a platform-wide outage.
+page_purpose: Gives guidelines on what to check on in an application if there has a platform-wide outage.
 
 audience: developer
 
 author: Jonathan Bond
 
-content owner: Cailey Jones
+content_owner: Cailey Jones
 ---
 
 # Post-Outage Application Checklist

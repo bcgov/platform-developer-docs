@@ -1,17 +1,19 @@
 ---
 title: Start working in the BCGov GitHub organization
 
+slug: start-working-in-bcgov-github-organization
+
 description: Learn more about operating, and possibly maintaining, a GitHub Repository in Gov.
 
 keywords: open source, GitHub, GitHub management, repository, repository management
 
-page purpose: Describes the different ways a user might want to use or maintain and GitHub project and the requirements
+page_purpose: Describes the different ways a user might want to use or maintain and GitHub project and the requirements
 
 audience: developer
 
 author: Jonathan Bond
 
-content owner: Shelly Han
+content_owner: Shelly Han
 ---
 
 # Start working in the BCGov GitHub organization

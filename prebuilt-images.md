@@ -1,17 +1,19 @@
 ---
 title: Prebuilt images
 
+slug: prebuilt-images
+
 description: Describes prebuilt images maintained by the Platform Services team and available for use in applications.
 
 keywords: images, Artifactory, prebuilt images, managed images
 
-page purpose: Describes and lists various prebuilt images that developers can use in their projects.
+page_purpose: Describes and lists various prebuilt images that developers can use in their projects.
 
 audience: developer
 
 author: Nick Corcoran
 
-content owner: Nick Corcoran
+content_owner: Nick Corcoran
 ---
 # Prebuilt images
 

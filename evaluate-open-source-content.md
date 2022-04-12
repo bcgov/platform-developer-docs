@@ -1,17 +1,19 @@
 ---
 title: Evaluate open-source content
 
+slug: evaluate-open-source-content
+
 description: Describes guidelines to evaluate open-source content and whether you can use it on GitHub.
 
 keywords: privacy, copyright, legal, contracts, policy, security, open-source, licence, license, GitHub
 
-page purpose: Outlines the types of issues that could prevent a developer from using open-source content in their project and gives information on how to evaluate the content.
+page_purpose: Outlines the types of issues that could prevent a developer from using open-source content in their project and gives information on how to evaluate the content.
 
 audience: technical lead, developer
 
 author: Jonathan Bond
 
-content owner: Olena Mitovska/Nick Corcoran
+content_owner: Olena Mitovska/Nick Corcoran
 ---
 
 # Evaluate open-source content

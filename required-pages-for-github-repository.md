@@ -1,17 +1,19 @@
 ---
 title: Required pages for a GitHub repository
 
+slug: required-pages-for-github-repository
+
 description: Describes the pages that must be added to a project in the BC Government organization
 
 keywords: readme, contributor, code of conduct, best practices, repository, repository management, GitHub, working in GitHub, open source, working in the open
 
-page purpose: Discusses the pages that users should include in their repositories and gives guidelines on what those pages should provide
+page_purpose: Discusses the pages that users should include in their repositories and gives guidelines on what those pages should provide
 
 audience: technical lead, developer
 
 author: Jonathan Bond
 
-content owner: Olena Mitovska
+content_owner: Olena Mitovska
 ---
 # Required pages for a GitHub repository
 When you create a repository in the `bcgov` organization, add the following markdown files:

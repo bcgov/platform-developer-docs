@@ -1,17 +1,19 @@
 ---
 title: OpenShift project resource quotas
 
+slug: openshift-project-resource-quotas
+
 description: Lists the project quota levels for each type of resource on an OpenShift project set.
 
 keywords: openshift, resources, resource quotas, RAM, CPU, storage, optimization, claims, project
 
-page purpose: Lists the different levels users can have on their OpenShift project sets. The different resources available are CPU, memory, and storage.
+page_purpose: Lists the different levels users can have on their OpenShift project sets. The different resources available are CPU, memory, and storage.
 
 audience: developer, technical lead
 
 author: Jonathan Bond
 
-content owner: Olena Mitovska
+content_owner: Olena Mitovska
 ---
 # OpenShift project resource quotas
 

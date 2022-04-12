@@ -1,17 +1,19 @@
 ---
 title: Set up a team in Sysdig Monitor
 
+slug: sysdig-monitor-setup-team
+
 description: Describes how to set up and configure a team in Sysdig Monitor.
 
 keywords: sysdig, monitoring, openshift monitoring, developer guide, team guide, team, configure
 
-page purpose: Details the steps for setting up a team and reviewing the capabilities of Sysdig Monitor.
+page_purpose: Details the steps for setting up a team and reviewing the capabilities of Sysdig Monitor.
 
 audience: developer, technical lead
 
 author: Jonathan Bond
 
-content owner: Shelly Han
+content_owner: Shelly Han
 ---
 
 # Set up a team in Sysdig Monitor
