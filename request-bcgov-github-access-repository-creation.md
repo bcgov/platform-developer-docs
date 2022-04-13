@@ -5,7 +5,7 @@ slug: request-bcgov-github-access-repository-creation
 
 description: Describes how to give a user access to BC Government organizations in GitHub.
 
-keywords: github, github org, repo, open source, devops, private cloud, openshift, github enterprise, request access, access request, user access
+keywords: github, github org, repo, open source, devops, private cloud, github enterprise, request access, access request, user access
 
 page_purpose: Describes how to give a user access to the different BC Government organizations in GitHub using the Just Ask! tool.
 

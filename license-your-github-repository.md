@@ -1,9 +1,9 @@
 ---
-title: License your project
+title: License your GitHub repository
 
-slug: license-your-project
+slug: license-your-github-repository
 
-description: Describes licence guidelines and the different types of licences used for GitHub projects
+description: Describes licence guidelines and the different types of licences used for GitHub repositories
 
 keywords: licence, license, apache 2.0, BC OGL, Creative Commons, Affero, repository management, repository best practices
 
@@ -15,7 +15,7 @@ author: Jonathan Bond
 
 content_owner: Olena Mitovska, Nick Corcoran
 ---
-# License your project
+# License your GitHub repository
 
 Licences help you manage and share intellectual property for code and materials on GitHub. If you want to consume, share or contribute to anything in GitHub, you have to understand requirements associated with the relevant licence.
 

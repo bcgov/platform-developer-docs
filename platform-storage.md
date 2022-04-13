@@ -5,7 +5,7 @@ slug: platform-storage
 
 description: Describes the different storage technologies used on the OpenShift platform.
 
-keywords: netapp, net app, nfs, storage, pvc, persistent, storage options
+keywords: netapp, net app, nfs, storage, pvc, persistent, storage options, platform storage
 
 page_purpose: Describes different platform technologies, types, and services and their details.
 

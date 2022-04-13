@@ -5,7 +5,7 @@ slug: set-up-tcp-connectivity-on-private-cloud-openshift-platform
 
 description: Describes how to enable Silver, Gold, and GoldDR cross-cluster communication using the Porter Operator.
 
-keywords: TCP, TCP connectivity, silver, silver cluster, gold, golddr, gold cluster, golddr cluster, dr, disaster, recovery, porter, porter operator
+keywords: TCP, TCP connectivity, silver, silver cluster, gold, golddr, gold cluster, golddr cluster, disaster, recovery, porter, porter operator, openshift
 
 page_purpose: Discusses how to enable communication between resources in the Gold/GoldDR clusters or between the Silver cluster and other networks.
 

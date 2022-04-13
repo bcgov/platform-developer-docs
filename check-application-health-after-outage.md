@@ -5,7 +5,7 @@ slug: check-application-health-after-outage
 
 description: Describes aspects of your application you can check to ensure they're up and running after an outage.
 
-keywords: openshift, devops, outage, recovery
+keywords: openshift, devops, outage, recovery, application, application health
 
 page_purpose: Gives guidelines on what to check on in an application if there has a platform-wide outage.
 
@@ -16,7 +16,7 @@ author: Jonathan Bond
 content_owner: Cailey Jones
 ---
 
-# Post-Outage Application Checklist
+# Check application health after an outage
 
 One of the benefits of the OpenShift platform is a greatly reduced chance of significant unexpected outages and the near-elimination of scheduled outages. The platform is adaptable and recoverable in a way that legacy architecture is not and this lets the platform recover from hardware issues invisibly in many cases.
 

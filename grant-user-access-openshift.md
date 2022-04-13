@@ -5,7 +5,7 @@ slug: grant-user-access-openshift
 
 description: Describes how to get users access to OpenShift.
 
-keywords: OpenShift, access, access request, new user
+keywords: OpenShift, access, access request, new user, grant access
 
 page_purpose: Describes how users get access or revoke access to OpenShift and the prerequisites.
 

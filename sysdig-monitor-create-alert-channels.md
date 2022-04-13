@@ -5,7 +5,7 @@ slug: sysdig-monitor-create-alert-channels
 
 description: Describes how to configure alerts and notifications for a team in Sysdig Monitor.
 
-keywords: sysdig, monitoring, openshift monitoring, developer guide, team guide, team, configure
+keywords: sysdig, monitoring, openshift monitoring, developer guide, team guide, team, configure, alerts, notifications
 
 page_purpose: Details the steps for setting up notification channels and configuring them in Sysdig Monitor and RocketChat.
 

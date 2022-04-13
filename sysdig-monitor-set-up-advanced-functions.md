@@ -5,7 +5,7 @@ slug: sysdig-monitor-set-up-advanced-functions
 
 description: Describes how to set up and configure advanced functions for a team in Sysdig Monitor.
 
-keywords: sysdig, monitoring, openshift monitoring, developer guide, team guide, team, configure
+keywords: sysdig, monitoring, openshift monitoring, developer guide, team guide, team, configure, advanced functions, custom monitoring, PromQL, Service Discovery
 
 page_purpose: Details the steps for setting up advanced functions in Sysdig Monitor, including custom monitoring, PromQL alerts, and application metrics.
 

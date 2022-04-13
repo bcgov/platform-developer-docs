@@ -5,7 +5,7 @@ slug: evaluate-open-source-content
 
 description: Describes guidelines to evaluate open-source content and whether you can use it on GitHub.
 
-keywords: privacy, copyright, legal, contracts, policy, security, open-source, licence, license, GitHub
+keywords: privacy, copyright, legal, contracts, policy, security, open-source, licence, license, GitHub, repository
 
 page_purpose: Outlines the types of issues that could prevent a developer from using open-source content in their project and gives information on how to evaluate the content.
 

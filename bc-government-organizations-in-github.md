@@ -5,7 +5,7 @@ slug: bc-government-organizations-in-github
 
 description: Describes the different BC Government organizations in GitHub.
 
-keywords: github, github org, repo, open source, devops, private cloud, openshift, github enterprise
+keywords: github, github org, repo, open source, github enterprise, bcgov, github organization
 
 page_purpose: Describes the different BC Government organizations in GitHub, what they're used for, and who can use them.
 
