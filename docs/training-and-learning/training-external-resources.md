@@ -50,5 +50,5 @@ content_owner: Olena Mitovska
 
 ---
 Related links:
-
+- [Training from the Platform Services Team](./training-external-resoruces.md)
 ---

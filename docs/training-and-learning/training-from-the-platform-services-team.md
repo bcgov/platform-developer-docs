@@ -48,9 +48,5 @@ We’re developing an Openshift 201 course to cover more advanced skills than th
 
 ---
 Related links:
-<!-- 
--Link to the external resources page when developed
-
--Link to new websites equivalent of https://developer.gov.bc.ca/Platform-Services-Sprint-Review-Demo-Collection
--->
+- [External Training Resources](./training-external-resoruces.md)
 ---
