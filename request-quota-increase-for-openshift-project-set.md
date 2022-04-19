@@ -1,17 +1,19 @@
 ---
 title: Request a quota increase for an OpenShift project set
 
+slug: request-quota-increase-for-openshift-project-set
+
 description: Describes the process to request more resource quota for an OpenShift project
 
 keywords: openshift, resources, resource quotas, RAM, CPU, storage, optimization, claims, project
 
-page purpose: Discusses what a user needs to do to get the quota for a specific resource type increased on their OpenShift project set.
+page_purpose: Discusses what a user needs to do to get the quota for a specific resource type increased on their OpenShift project set.
 
 audience: developer, technical lead
 
 author: Jonathan Bond
 
-content owner:
+content_owner: Cailey Jones
 ---
 # Request a quota increase for an OpenShift project set
 
@@ -24,20 +26,25 @@ Before asking for more quota for your project set, check if the application is f
 - [Resource Management Guidelines](https://github.com/BCDevOps/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
 - [Application Resource Tuning](https://github.com/BCDevOps/developer-experience/blob/master/docs/resource-tuning-recommendations.md)
 
-## Set up resource monitoring with Sysdig Monitor
+## On this page
+- [Set up resource monitoring with Sysdig Monitor](#setup-sysdig)
+- [Request a quota increase](#request-increase)
+- [Collect application metrics](#collect-metrics)
+
+## Set up resource monitoring with Sysdig Monitor<a name="setup-sysdig"></a>
 
 Use Sysdig to monitor your application. You can access dashboards that show your application memory, CPU, and storage usage.
 
 Before you ask for a quota increase, the Platform Services team wants you to monitor and collect metrics to show how much resource your application uses. For more information, see [Get Started with Sysdig Monitoring](https://developer.gov.bc.ca/OpenShift-User-Guide-to-Creating-and-Using-a-Sysdig-Team-for-Monitoring). The documentation has all you need to onboard onto Sysdig and use the default dashboards. If you have any issues onboarding to Sysdig, contact the Platform Services team on the applicable [RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig).
 
-## Request a quota increase
+## Request a quota increase<a name="request-increase"></a>
 **Note**: Before you request a quota increase, make sure that your project is using its resources efficiently. The Platform Services team wants to be very confident your project needs more quota before they grant an increase.
 
 If you determine that your application needs a quota increase, you can have a product owner or technical lead on your project make the request on the **Project Edit** page on [Openshift 4 Project Registry](https://registry.developer.gov.bc.ca/public-landing). The Platform Services team must approve the request before it's processed.
 
 If you need more resources for CPU, RAM, or storage in any of the four namespaces (`dev`, `test`, `tool`, or `prod`), you must submit a standard quota increase request through the Project Registry. For more information on quotas, see [OpenShift project resource quotas](./openshift-project-resource-quotas.md).
 
-## Collect application metrics
+## Collect application metrics<a name="collect-metrics"></a>
 
 The Platform Services team needs to know if your application is using the current quotas efficiently. If you're running out of quota, the team wants to review resource-consumption statistics. If you're preparing for an application load increase, the teams wants to know the expected increase and how much growth room you still have.
 

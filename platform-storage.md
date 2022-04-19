@@ -1,17 +1,19 @@
 ---
 title: Platform storage
 
+slug: platform-storage
+
 description: Describes the different storage technologies used on the OpenShift platform.
 
-keywords: netapp, net app, nfs, storage, pvc, persistent, storage options
+keywords: netapp, net app, nfs, storage, pvc, persistent, storage options, platform storage
 
-page purpose: Describes different platform technologies, types, and services and their details.
+page_purpose: Describes different platform technologies, types, and services and their details.
 
 audience: technical lead, developer
 
 author: Jonathan Bond
 
-content owner: Olena Mitovska
+content_owner: Olena Mitovska
 ---
 
 # Platform storage
@@ -24,7 +26,12 @@ We use several different storage technologies on the OpenShift platform. Current
 
 * **S3 Object Storage**: Object based storage that is available via a web based API instead of through a mounted directory. A common implementation of this is the Amazon S3 API. This allows remote access storage over the internet that does not require directly attaching to a running system.
 
-## Storage services
+## On this page
+- [Storage services](#service)
+- [Tools](#tools)
+- [Storage details](#storage-details)
+
+## Storage services<a name="service"></a>
 
 We have access to the following storage services for the OpenShift platform.
 
@@ -60,7 +67,7 @@ This service replicates data between the two datacenters and the API endpoints a
 
 Object Storage Service is highly fault tolerant and uses erasure coding within the cluster, as well as asynchronous replication and automatic failover to the Calgary datacenter. The solution also offers configurable object versioning, allowing for file recovery. Due to the high fault tolerance, versioning, and redundancy, most teams don't implement additional backups. A recommended design pattern would be to replace the application's Minio storage with the direct integration with the S3 API within the Object Storage Enterprise Services.
 
-## Tools
+## Tools<a name="tools"></a>
 
 You can use tools to manage your persistent storage beyond the features built in to OpenShift.
 
@@ -68,7 +75,7 @@ You can use tools to manage your persistent storage beyond the features built in
 
 * **Migrating storage**: Another community supported repository is available to help with migrating data from one PVC to another (moving from one storageClass to another, moving to a larger PVC, etc). The repository is called [StorageMigration](https://github.com/BCDevOps/StorageMigration)
 
-## Storage details
+## Storage details<a name="storage-details"></a>
 
 ### Quotas
 All storage sizes are in GiB and backup quotas default to half the storage size. These quotas can be requested in the [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing) by a project's Product Owner or the Technical Lead.
@@ -76,7 +83,6 @@ All storage sizes are in GiB and backup quotas default to half the storage size.
 **Note**: You must to provide proof of increased storage needs to the Platform Product Director before the request can be approved and more storage is allocated to a namespace.
 
 All storage quotas include 60 PVCs and 5 VolumeSnapshots.
-
 
 - storage-1
 - storage-2
@@ -126,6 +132,7 @@ Related links:
 * [BCDevOps/Backup-Container](https://github.com/bcdevops/backup-container)
 * [BCDevOps/StorageMigration](https://github.com/BCDevOps/StorageMigration)
 * [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing)
+
 Rewrite sources:
 * https://github.com/BCDevOps/openshift-wiki/blob/master/docs/OCP/OCPStorageServices.md
 * https://github.com/BCDevOps/OpenShift4-Migration/issues/59

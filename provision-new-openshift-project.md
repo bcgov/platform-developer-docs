@@ -1,17 +1,19 @@
 ---
-  title: Provision a new OpenShift project
+title: Provision a new OpenShift project
 
-  description: Describes how to get a new project approved and provisioned in OpenShift
+slug: provision-new-openshift-project
 
-  keywords: OpenShift, approvals, Platform Services
+description: Describes how to get a new project approved and provisioned in OpenShift
 
-  page purpose: Describes the acceptance criteria to provision a new project on the OpenShift platform and the process to get the project setup.
+keywords: OpenShift, approvals, Platform Services
 
-  audience: technical lead
+page_purpose: Describes the acceptance criteria to provision a new project on the OpenShift platform and the process to get the project setup.
 
-  author: Jonathan Bond
+audience: technical lead
 
-  content owner: Olena Mitovska
+author: Jonathan Bond
+
+content_owner: Olena Mitovska
 ---
 
 # Provision a new OpenShift project

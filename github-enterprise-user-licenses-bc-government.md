@@ -1,30 +1,39 @@
 ---
 title: GitHub Enterprise user licences in the BC government
 
+slug: github-enterprise-user-licenses-bc-government
+
 description: Describes the benefits of GitHub Enterprise user licences and how to access them.
 
-keywords: GitHub, Github Enterprise, closed source, private repository, private organization
+keywords: GitHub, Github Enterprise, closed source, private repository, private organization, licence, license, user licence, user license
 
-page purpose: Discusses why you might want to use a GitHub Enterprise user licence and how to request, access, and pay for the users.
+page_purpose: Discusses why you might want to use a GitHub Enterprise user licence and how to request, access, and pay for the users.
 
 audience: technical lead, product owner
 
 author: Jonathan Bond
 
-content owner: Olena Mitovska
+content_owner: Olena Mitovska
 ---
 
 # GitHub Enterprise user licences in the BC government
 
 All code by BC government teams should be open source by default. If you have closed-source code and still want to use GitHub, you can work temporarily in a private repository under the GitHub Enterprise licence.
 
-For more information on our GitHub organizations and their uses, see [BC Government Organizations in Github](/bc-government-organizations-in-github.md)
+For more information on our GitHub organizations and their uses, see [BC Government Organizations in Github](/bc-government-organizations-in-github.md).
 
-## Benefits of a GitHub Enterprise user licence
+## On this page
+- [Benefits of a GitHub Enterprise user licence](#benefits)
+- [Enterprise account ownership](#ownership)
+- [Request GitHub Enterprise user licences](#request)
+- [Access the GitHub Enterprise account](#access)
+- [Pay for the GitHub Enterprise user licences](#payment)
+
+## Benefits of a GitHub Enterprise user licence<a name="benefits"></a>
 
 The enterprise user licence offers various features over the Free and Teams version. To find out more on the differences in featuress and pricing, see [Pricing](https://github.com/pricing).
 
-## Enterprise account ownership
+## Enterprise account ownership<a name="ownership"></a>
 
 The GitHub Enterprise account is owned by OCIO and managed by the Platform Services team. Ministries own GitHub organizations linked to the BC Government’s GitHub Enterprise accounts and the private repositories within their organizations.  
 
@@ -35,7 +44,7 @@ When your private org is linked to the GitHub Enterprise account certain setting
 * GitHub Actions is enabled for all
 * Code Dependency Insights is enabled for all organizations linked to the GitHub Enterprise account
 
-## Request GitHub Enterprise user licences
+## Request GitHub Enterprise user licences<a name="request"></a>
 
 Contact [Software Central Management](mailto:SoftwareCentral.Management@gov.bc.ca) and cc [Dean Picton](Dean.Picton@gov.bc.ca). Use the subject line "GitHub Enterprise Request" and send the following information:  
 
@@ -45,7 +54,7 @@ Contact [Software Central Management](mailto:SoftwareCentral.Management@gov.bc.c
 
 * Number of user licenses needed. If you're transferring a GitHub organization to Enterprise, request as many user licenses as you have organization members.
 
-## Access the GitHub Enterprise account
+## Access the GitHub Enterprise account<a name="access"></a>
 
 Each Ministry has GitHub administrators that manage user licences purchased by the Ministry and assign individual users to the licences. All license management and licence-to-user assignment must go through Ministry account administrators.   
 
@@ -57,7 +66,7 @@ Each Ministry has GitHub administrators that manage user licences purchased by t
 
 These users have access to all features available in GitHub Enterprise within their private org.
 
-## Pay for the GitHub Enterprise user licences
+## Pay for the GitHub Enterprise user licences<a name="payment"></a>
 
 Software Central management handles your purchase order, with billing back to your expense authority. The Ministry is billed monthly for the GitHub Enterprise user licenses until Software Central gets a request asking to cancel the user licenses.
 

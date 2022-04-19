@@ -1,17 +1,19 @@
 ---
-  title: Login to OpenShift
+title: Login to OpenShift
 
-  description: Describes how to login to the OpenShift console with your IDIR
+slug: login-to-openshift
 
-  keywords: security, privacy, IDIR, STRA, access, login, OpenShift
+description: Describes how to login to the OpenShift console with your IDIR
 
-  page purpose: Gives background and information on logging into the OpenShift console with your IDIR and the background on how it was set up.
+keywords: security, privacy, IDIR, STRA, access, login, OpenShift
 
-  audience: developer, technical lead
+page_purpose: Gives background and information on logging into the OpenShift console with your IDIR and the background on how it was set up.
 
-  author: Jonathan Bond
+audience: developer, technical lead
 
-  content owner: Cailey Jones
+author: Jonathan Bond
+
+content_owner: Cailey Jones
 ---
 
 # Login to OpenShift

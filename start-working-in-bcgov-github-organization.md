@@ -1,22 +1,29 @@
 ---
 title: Start working in the BCGov GitHub organization
 
+slug: start-working-in-bcgov-github-organization
+
 description: Learn more about operating, and possibly maintaining, a GitHub Repository in Gov.
 
 keywords: open source, GitHub, GitHub management, repository, repository management
 
-page purpose: Describes the different ways a user might want to use or maintain and GitHub project and the requirements
+page_purpose: Describes the different ways a user might want to use or maintain and GitHub project and the requirements
 
 audience: developer
 
 author: Jonathan Bond
 
-content owner: Shelly Han
+content_owner: Shelly Han
 ---
 
 # Start working in the BCGov GitHub organization
 
 If you plan sharing code developed by or for the BC government, you must complete the [Open Content Assessment Checklist](./checklist.md) and get approval from your Deputy Minister. Deputy Ministers may choose to delegate this authority to Ministry Chief Information Officers (CIOs).
+
+## On this page
+- [Post existing code or projects](#post-existing)
+- [Initiate new code or projects](#initiate)
+- [Contribute to outside code or projects](#contribute)
 
 The BC government follows the Open Development Standard, which outlines the following:
 * [Minimum content requirements](./required-pages-for-github-repository.md): README, contributing file, code of conduct, and license
@@ -25,7 +32,7 @@ The BC government follows the Open Development Standard, which outlines the foll
 
 Generally, GitHub projects fall under one of the three following categories, with different key considerations depending on the type.
 
-## Post existing code or projects
+## Post existing code or projects<a name="post-existing"></a>
 
 Projects like this follow two basic approaches, but can vary.
 
@@ -51,7 +58,7 @@ In both cases, the basic steps to release the code are similar, while the implic
 
 If you are intending to maintain an active project, make sure to establish the appropriate processes and terms to manage contributions.
 
-## Initiate new code or projects
+## Initiate new code or projects<a name="initiate"></a>
 
 These are projects that you want to manage as an open-source, collaborative project.
 
@@ -60,7 +67,7 @@ These are projects that you want to manage as an open-source, collaborative proj
 - [Create the minimum required content](./required-pages-for-github-repository.md).
 - Add a [Contributor Code of Conduct](http://contributor-covenant.org/) to your repository. This document lets people know that all are welcome to contribute, and that all who contribute pledge to make participation in the project a harassment-free experience for everyone. Include a code of conduct and provide a contact method (in the placeholder) so that people know how to report violations. Introduce the code of conduct in your `readme.md`.
 
-## Contribute to outside code or projects
+## Contribute to outside code or projects<a name="contribute"></a>
 
 There may be circumstances where it's useful and appropriate for employees to contribute to non-BC government repositories as a part of their work. In these cases, consider the following:
 
@@ -74,6 +81,7 @@ There may be circumstances where it's useful and appropriate for employees to co
 - Confirm your [authority to license](./license-your-project.md)
 
 Employees can also contribute to non-BC government owned intellectual property rights outside their professional roles by using their personal email linked to their GitHub account.
+
 ---
 Related links:
 * [Open Content Assessment Checklist](./checklist.md)

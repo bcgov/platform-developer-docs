@@ -1,23 +1,30 @@
 ---
 title: Push and pull artifacts in Artifactory
 
+slug: push-pull-artifacts-artifactory
+
 description: Describes how to push and pull artifacts in Artifactory for Docker-type repositories
 
 keywords: push, pull, Artifactory, docker, artifact, repositories, projects
 
-page purpose: Describes how to test your account and pull locally and push and pull artifacts.
+page_purpose: Describes how to test your account and pull locally and push and pull artifacts.
 
 audience: technical lead, developer
 
 author: Jonathan Bond
 
-content owner: Cailey Jones
+content_owner: Cailey Jones
 
 ---
 # Push and pull artifacts in Artifactory
 After you've [set up your Artifactory service account](./setup-artifactory-service-account-repository-project.md), you can pull artifacts from our caching repos. If you wish to push to Artifactory, you will need an [Artifactory project and private repository first](./setup-artifactory-service-account-repository-project.md). After your set up your private repository, follow these instructions to pull from them.
 
-## Pull Docker images from Artifactory
+## On this page
+- [Pull Docker images from Artifactory](#pull-docker)
+- [Node Package Manager (NPM)](#npm)
+- [Maven](#maven)
+
+## Pull Docker images from Artifactory<a name="pull-docker"></a>
 
 These steps apply to all Docker-type repositories, not just DockerHub. These steps work for any private docker registry, not just Artifactory. Change out the Artifactory URL for the URL of your preferred registry.
 
@@ -110,7 +117,7 @@ Don't forget that you need to update the image URL to point explicitly at Artifa
 
 You can now use this image in your build or deployment.
 
-## Node Package Manager (NPM)
+## Node Package Manager (NPM)<a name="npm"></a>
 The `npm-remote` repository in Artifactory points to the [public default NPM repository](https://registry.npmjs.org). If you wish to pull from a different repository, such as a private one, replace all references to `npm-remote` below with your repository's name.
 
 1. Set the NPM registry:
@@ -152,7 +159,7 @@ curl -u $AF_USERID:$AF_PASSWD https://artifacts.developer.gov.bc.ca/artifactory/
 ```
 For example, you can check out the [repo-mountie assemble file](https://github.com/bcgov/repomountie/blob/master/.s2i/bin/assemble).
 
-## Maven
+## Maven<a name="maven"></a>
 
 To deploy build artifacts through Artifactory you need to add a deployment element with the URL of a target local repository where you want to deploy your artifacts. For example:
 
