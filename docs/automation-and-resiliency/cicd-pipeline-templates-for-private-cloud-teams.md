@@ -18,7 +18,7 @@ content_owner:
 
 # CI/CD pipeline templates for Private Cloud teams
 
-Once you've built a new application and want to deploy it to the BC Government's Private Cloud OpenShift platform, you might also want to use continuous integration (CI) and continuous delivery (CD) power. This lets your team automatically build, test, and prepare code changes for production so that software delivery is more efficient and secure.
+As you develop your application for deployment to the BC Government's Private Cloud OpenShift platform, you should create a pipeline that automatically builds and tests your code so that your software delivery is efficient and secure. Use our pipeline templates to help you get started.
 
 ## On this page
 - [Pipeline templates](#pipeline-templates)
