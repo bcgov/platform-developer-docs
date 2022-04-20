@@ -13,7 +13,7 @@ audience: developer, technical lead
 
 author: Jonathan Bond
 
-content_owner:
+content_owner: Ian Watts
 ---
 
 # CI/CD pipeline templates for Private Cloud teams
