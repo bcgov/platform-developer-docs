@@ -20,9 +20,17 @@ content_owner:
 
 # Use of CI/CD Pipeline Templates for Private Cloud teams
 
-So now you have built a new and shiny app and want to deploy it to the BC Gov's Private Cloud Openshift Platform. You also want to take advantage of the Continuous integration (CI) and Continuous delivery (CD) power that can enable your team to automatically build, test, and prepare code changes for release to production so that your software delivery is more efficient, rapid and - **very importantly** - secure.
+Once you've built a new application and want to deploy it to the BC Government's Private Cloud OpenShift platform, you might also want to use continuous integration (CI) and continuous delivery (CD) power. This lets your team automatically build, test, and prepare code changes for production so that software delivery is more efficient and secure.
+
+## On this page
+- [](#)
+- [](#)
+- [](#)
+<a></a>
 
 To help teams like yours that want to get started with pipeline automation quickly or wonder what the best security practices for pipeline development are, or both!, we have created pipeline templates for the  automation technologies supported<sup>[^1](#myfootnote1)</sup> on the Private Cloud Platform.
+
+<sub><sup><a name="myfootnote1">1</a>: By **supported** we mean that not only this technology is available today on the Platform but also the Platform Services Team has expertise with this technology to help the product teams using it. While teams can absolutely use any other automation technology outside of the Platform, we may not have the expertise to support them if they need help.</sup></sub>
 
 ## Who can use these pipeline templates?
 
@@ -57,9 +65,7 @@ You are welcome to fork a repo and add more steps to the templates or make any m
 
 We hope that these pipeline templates will enable your team to enjoy the power or CI/CD automation and the best app security practices with less effort so you can spend this time on what most teams enjoy the most - building better digital services for citizens of our beautiful province.
 
-<em>Love, Platform Services Team, xo</em>
 
-<sub><sup><a name="myfootnote1">1</a>: By **supported** we mean that not only this technology is available today on the Platform but also the Platform Services Team has expertise with this technology to help the product teams using it. While teams can absolutely use any other automation technology outside of the Platform, we may not have the expertise to support them if they need help.</sup></sub>
 
 
 ---

@@ -13,7 +13,7 @@ audience: developer
 
 author: Nick Corcoran
 
-content_owner: Nick Corcoran
+content_owner: Ian Watts
 ---
 # Prebuilt images
 
@@ -29,12 +29,11 @@ The images are available from Artifactory and you can use the `artifactory-creds
 
 ## On this page
 
-- [List of prebuilt images](#managed-images)
-    - [App Assessment](#app-assessment)
-    - [Backup container](#backup-container)
-    - [Caddy s2i](#caddy-s2i)
-    - [MongoDB 3.6 HA](#mongodb-36-ha)
-    - [Patroni/Postgres](#patroni-postgres)
+- [App Assessment](#app-assessment)
+- [Backup container](#backup-container)
+- [Caddy s2i](#caddy-s2i)
+- [MongoDB 3.6 HA](#mongodb-36-ha)
+- [Patroni/Postgres](#patroni-postgres)
 - [Legacy builds](#legacy-builds)
 
 All project sets on the platform are given a secret called `artifactory-creds` that can be used to pull images from the local Artifactory service. Include this secret in your configuration if you have a deployment or StatefulSet that uses one of these images.
@@ -48,37 +47,34 @@ spec:
       containers:
 ```
 
-## List of prebuilt images
-
-### App Assessment<a name="app-assessment"></a>
+## App Assessment<a name="app-assessment"></a>
 Use the App Assessment application to identify configuration issues in your namespaces and to improve resource consumption and health checks. For more information, see [AppAssessment](https://github.com/bcgov/AppAssessment).
 
 Images: https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/app-assessment
 
-### Backup container<a name="backup-container"></a>
+## Backup container<a name="backup-container"></a>
 The community's database backup container supports four types of databases.
 - Use [this image](https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/backup-container-mariadb) to manage backups of your **MariaDB** instances.
 - Use [this image](https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/backup-container-mongo) to manage backups of your **Mongo** instances.
 - Use [this image](https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/backup-container-mssql) to manage backups of your **MSSQL** instances.
 - Use [this image](https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/backup-container-postgres) to manage backups of your **Postgres** instances.
 
-### Caddy s2i<a name="caddy-s2i"></a>
+## Caddy s2i<a name="caddy-s2i"></a>
 [Pipeline templates](https://github.com/bcgov/pipeline-templates) that have been developed for the community use the Caddy s2i image. For more information, see [s21-caddy-nodejs](https://github.com/bcgov/s2i-caddy-nodejs).
 
 Images: https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/caddy-s2i-builder
 
-### CodeQL<a name="codeql"></a>
+## CodeQL<a name="codeql"></a>
 [Pipeline templates](https://github.com/bcgov/pipeline-templates) that have been developed for the community use the CodeQL image. For more information, see [codeql](https://github.com/bcgov/pipeline-templates/tree/main/tekton/base/tasks/codeql).
 
 Images: https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/codeql
 
-
-### MongoDB 3.6 HA<a name="mongodb-36-ha"></a>
+## MongoDB 3.6 HA<a name="mongodb-36-ha"></a>
 This is version 3.6 of a MongoDB image that's ready for highly available applications. For more information, see [mongodb-replicaset-container](https://github.com/bcgov/mongodb-replicaset-container).
 
 Images: https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/mongodb-36-ha
 
-### Patroni/Postgres<a name="patroni-postgres"></a>
+## Patroni/Postgres<a name="patroni-postgres"></a>
 This image comes in two versions:
 - Patroni 1.6, with Postgres 12.4
 - Patroni 2.0, with Postgres 12.4
