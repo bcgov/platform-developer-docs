@@ -79,7 +79,7 @@ By default, the alert scope is set to `everywhere`, which means all namespaces f
 
 ---
 Related links:
-- [Set up advanced functions in Sysdig Monitor](./set-up-advanced-functions-sysdig-monitor.md)
+- [Set up advanced functions in Sysdig Monitor](set-up-advanced-functions-sysdig-monitor.md)
 - [Set up a team in Sysdig Monitor](./setup-team-sysdig-monitor.md)
 - [Create alert channels in Sysdig Monitor](create-alert-channels-sysdig-monitor.md)
 
