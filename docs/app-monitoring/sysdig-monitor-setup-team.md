@@ -169,7 +169,7 @@ Related links:
 - [Set up advanced functions in Sysdig Monitor](./sysdig-monitor-set-up-advanced-functions.md)
 - [Create alert channels in Sysdig Monitor](sysdig-monitor-create-alert-channels.md)
 - [Sysdig Monitor](https://sysdig.com/products/monitor/)
-- [Project resource quotas](openshift-project-resource-quotas.md)
+- [Project resource quotas](./automation-and-resiliency/openshift-project-resource-quotas.md)
 - [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/)
 - [BCDevOps Sysdig Monitor](https://app.sysdigcloud.com/api/oauth/openid/bcdevops)
 - [Sysdig](https://app.sysdigcloud.com)
