@@ -166,10 +166,10 @@ If you don't see default dashboards in your Sysdig team, check the following:
 
 ---
 Related links:
-- [Set up advanced functions in Sysdig Monitor](./set-up-advanced-functions-sysdig-monitor.md)
-- [Create alert channels in Sysdig Monitor](create-alert-channels-sysdig-monitor.md)
+- [Set up advanced functions in Sysdig Monitor](./sysdig-monitor-set-up-advanced-functions.md)
+- [Create alert channels in Sysdig Monitor](sysdig-monitor-create-alert-channels.md)
 - [Sysdig Monitor](https://sysdig.com/products/monitor/)
-- [Project resource quotas](./openshift-project-resource-quotas.md)
+- [Project resource quotas](openshift-project-resource-quotas.md)
 - [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/)
 - [BCDevOps Sysdig Monitor](https://app.sysdigcloud.com/api/oauth/openid/bcdevops)
 - [Sysdig](https://app.sysdigcloud.com)
