@@ -117,6 +117,10 @@ assignees: caggles, ShellyXueHan
 ```
 
 ---
+Related links:
+* [Resiliency Guidelines](https://developer.gov.bc.ca/Developer-Tools/Resiliency-Guidelines)
+* [BCGov Platform Services Status Page](https://status.developer.gov.bc.ca)
+
 Rewrite sources:
 * https://github.com/BCDevOps/developer-experience/blob/master/docs/post-outage-checklist.md
 ---

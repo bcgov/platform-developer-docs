@@ -20,18 +20,10 @@ content_owner: Ian Watts
 Use this page to learn to configure direct TCP access to services in the Private Cloud Openshift Platform using the Porter Operator.
 
 ## On this page
-1. [Direct TCP access](#direct-tcp-access)
-3. [Set up TCP connectivity in the Silver Cluster](#silver-setup)
-   1. [Confirm Service information](#silver-confirm-service-information)
-   2. [Create TransportServerClaim](#silver-create-tsc)
-   3. [Create network policy](#silver-create-network-policy)
-   3. [Test Access](#silver-test-access)
-3. [Set up TCP connectivity on the Gold Kamloops/Gold Calgary Cross-Cluster](#setup-gold-golddr)
-    1. [Confirm Service information](#gold-confirm-service-information)
-    2. [Create TransportServerClaim](#gold-create-transportserverclaim)
-    3. [Create network policy](#gold-create-network-policies)
-    4. [Check endpoints](#gold-check-endpoints)
-5. [Troubleshooting](#troubleshooting)
+- [Direct TCP access](#direct-tcp-access)
+- [Set up TCP connectivity in the Silver Cluster](#silver-setup)
+- [Set up TCP connectivity on the Gold Kamloops/Gold Calgary Cross-Cluster](#setup-gold-golddr)
+- [Troubleshooting](#troubleshooting)
 
 ## Direct TCP access<a name="direct-tcp-access"></a>
 Project teams may enable direct non-HTTPS TCP access to services within their namespaces by creating a TransportServerClaim resource.
@@ -47,7 +39,7 @@ The project must meet the following requirements:
 ## Set up TCP connectivity in the Silver Cluster<a name="silver-setup"></a>
 Use the Porter Operator to enable direct TCP access to your services in the Silver cluster.
 
-### Confirm service information<a name="silver-confirm-service-information"></a>
+### Confirm service information
 A `TransportServerClaim` is associated with a Service. Make sure that the Service exists and is associated with pods that are running so that you can verify the functionality of the connection after it's created.
 
 Use the following command:
@@ -58,7 +50,7 @@ NAME               TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)     AGE
 yourservice        ClusterIP   10.98.xx.yy     <none>        8000/TCP    10d
 ```
 
-### Create `TransportServerClaim`<a name="silver-create-tsc"></a>
+### Create `TransportServerClaim`
 Create one `TransportServerClaim` for each Service/port combination in each namespace. For example:
 ```
 # yourservice-tsc.yaml
@@ -90,7 +82,7 @@ NAME             AGE
 yourservice-tsc  1m
 ```
 
-### Create network policy<a name="silver-create-network-policy"></a>
+### Create network policy
 Create a `NetworkPolicy` to allow traffic to reach the service's pods through the load balancers. Use the following template to create a `NetworkPolicy`. Set the `namespace` and `podSelector` as appropriate.
 
 The `podSelector` parameters must match the pods that are associated with the Service used in the `TransportServerClaim`.
@@ -119,7 +111,7 @@ Create the `NetworkPolicy` in your namespace:
 
 `$ oc -n yourlicenceplate-dev apply -f allow-from-f5-ingress.yaml`
 
-### Test access<a name="silver-test-access"></a>
+### Test access
 After you create the `TransportServerClaim`, the Porter Operator creates a `TransportServer` in your namespace.
 ```
 (silver)$ oc -n yourlicenceplate-dev get ts
@@ -140,7 +132,7 @@ The Gold and GoldDR clusters are designed to be used in tandem. Production appli
 
 Use the Porter Operator to enable direct TCP access from Gold to GoldDR and vice versa. For example, this may be used for database replication.
 
-### Confirm Service information<a name="gold-confirm-service-information"></a>
+### Confirm Service information
 A `TransportServerClaim` is associated with a Service. Make sure that the Service exists and is associated with a functioning application so you can verify the functionality of the connection after it's created. For example, to create a connection between databases in each cluster, the databases should already be running and reachable by their Service.
 
 Use the following command:
@@ -150,7 +142,7 @@ NAME               TYPE        CLUSTER-IP      EXTERNAL-IP   PORT(S)     AGE
 yourservice        ClusterIP   10.98.xx.yy     <none>        8000/TCP    10d
 ```
 
-### Create `TransportServerClaim`<a name="gold-create-transportserverclaim"></a>
+### Create `TransportServerClaim`
 **Note**: `TransportServerClaims` are created only in Gold, not in GoldDR.
 
 The `TransportServerClaim` is associated with a Service and a port. Create one `TransportServerClaim` for each Service/port combination in each namespace. For example:
@@ -182,7 +174,7 @@ NAME             AGE
 yourservice-tsc  1m
 ```
 
-### Create network policy<a name="gold-create-network-policies"></a>
+### Create network policy
 Create a `NetworkPolicy` to allow traffic to reach the service's pods through the load balancers. Use the following template to create a `NetworkPolicy`. Set the `namespace` and `podSelector` as appropriate.
 
 The `podSelector` parameters must match the pods that are associated with the Service used in the `TransportServerClaim`.
@@ -211,7 +203,7 @@ Create the `NetworkPolicy` in your namespaces in both Gold and GoldDR:
 
 `$ oc -n yourlicenceplate-dev apply -f allow-from-f5-ingress.yaml`
 
-### Check endpoints<a name="gold-check-endpoints"></a>
+### Check endpoints
 After you create the `TransportServerClaim`, the Porter Operator automatically creates new endpoints in your namespace in both Gold and GoldDR. The endpoint name is the Service name followed by either "-gold" or "-golddr".
 
 Verify the endpoints:
@@ -251,9 +243,6 @@ status:
 ```
 
 ---
-Related links:
--
-
 Rewrite sources:
-
+- new page
 ---

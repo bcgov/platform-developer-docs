@@ -1,5 +1,7 @@
 # Writing guide for Platform Services technical documentation
 
+https://docs.google.com/spreadsheets/d/1uNueaRQSQ7ssrMF8zo9YQUJeHj7dL307rLww2hzGuiE/edit#gid=0
+
 ## On this page
 - [Section name](#)
 - [Section name](#)
@@ -78,6 +80,16 @@ Consider the following before using an image:
 ### On this page
 
 Use the **On this page** section as a simple table of contents. See this section on [Anchor links](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/links).
+
+### People
+
+Avoid using people's names in documentation. There are many good reasons for this:
+
+- They might be away
+- They may have left the position or changed positions
+- Organizational contact methods or means may have changed
+
+You get the idea. Essentially, when you avoid using their name, it means you avoid questions and also don't have to go back and update it later. Use their position or reference more general means of contact. For example, a RocketChat channel or a team email.
 
 ## Accessibility
 

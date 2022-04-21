@@ -121,7 +121,7 @@ Related links:
 * [Archeobot](bcgov/platform-services-archeobot)
 * [Artifactory](https://artifacts.developer.gov.bc.ca)
 * [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/)
-* [Setup an Artifactory service account, repository, and project](./setup-artifactory-service-account-repository-project.md)
+* [Setup an Artifactory service account](./setup-artifactory-service-account.md)
 
 Rewrite sources:
 * https://github.com/BCDevOps/openshift-wiki/blob/master/docs/Artifactory/ServiceDefinition.md

@@ -37,7 +37,7 @@ We have access to the following storage services for the OpenShift platform.
 
 ### OpenShift Persistent Volumes (NetApp)
 
-All NetApp storage classes support resizing (bigger only). You can start with a small volume and edit your Persisent Volume Claim (PVC) to have a larger `.spec.resources.requests.storage` later if you need more. You may need to restart the pods attached to let the resize trigger on re-mount. **Note: the storage increase is capped by the storage quota assigned to the namespace. For the current resource quota sizes, see [OpenShift project resource quotas](./openshift-project-resource-quotas.md).
+All NetApp storage classes support resizing (bigger only). You can start with a small volume and edit your Persisent Volume Claim (PVC) to have a larger `.spec.resources.requests.storage` later if you need more. You may need to restart the pods attached to let the resize trigger on re-mount. **Note: the storage increase is capped by the storage quota assigned to the namespace. For the current resource quota sizes, see [OpenShift project resource quotas](/docs/automation-and-resiliency/openshift-project-resource-quotas.md).
 
 * **NetApp File**: `netapp-file-standard` is the default storage class for the platform and the type of storage you get if you don't specify a specific `storageClass`.
 
@@ -126,7 +126,7 @@ The speed of each storage solution depends on your workload. ElasticSearch speci
 
 ---
 Related links:
-* [OpenShift project resource quotas](./openshift-project-resource-quotas.md)
+* [OpenShift project resource quotas](/docs/automation-and-resiliency/openshift-project-resource-quotas.md)
 * [Backup and Restore](https://developer.gov.bc.ca/OCP4-Backup-and-Restore)
 * [Red Hat documentation](https://access.redhat.com/documentation/en-us/red_hat_openshift_container_storage/4.7/html/deploying_and_managing_openshift_container_storage_using_red_hat_openstack_platform/volume-snapshots_osp)
 * [BCDevOps/Backup-Container](https://github.com/bcdevops/backup-container)

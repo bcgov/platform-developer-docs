@@ -26,7 +26,7 @@ Each new request must be reviewed and approved, including requests for additiona
 
 If you meet the criteria, book an onboarding meeting with the Platform Product Director to confirm your project's suitability by contacting the Platform Services Team at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca). After the alignment meeting, your product owner or your Ministry's DevOps Chapter Lead can submit a project provisioning request through the [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing). Once your request is approved, the project is created and the requestor is notified when provisioning is complete.
 
-**Note: The onboarding meeting with the [Platform Product Director](mailto:Olena.Mitovska@gov.bc.ca) is a prerequisite to having a project provisioning request approved.**
+**Note**: The onboarding meeting with the [Platform Product Director](mailto:Olena.Mitovska@gov.bc.ca) is a prerequisite to having a project provisioning request approved.
 
 **For Attorney General (AG) teams only**: Contact Ryan Loiselle at Ryan.Loiselle@gov.bc.ca to submit the request for you.
 
@@ -38,6 +38,7 @@ While you wait for the alignment meeting, check out our [OnBoarding Guide for BC
 Related links:
 * [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing)
 * [OnBoarding Guide for BC Gov DevOps Platform](https://docs.google.com/presentation/d/1UcT0b2YTPki_o0et9ZCLKv8vF19eYakJQitU85TAeD4/edit?usp=sharing)
+
 Rewrite sources:
 * https://developer.gov.bc.ca/Getting-Started-on-the-DevOps-Platform/How-to-Request-a-New-OpenShift-Project
 ---

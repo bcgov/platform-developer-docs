@@ -20,7 +20,7 @@ content_owner: Shelly Han
 
 [Sysdig Monitor](https://sysdig.com/products/monitor/) provides system-level monitoring of Kubernetes hosts and the ability to create custom dashboards, alerts, and operational level captures to diagnose application or platform-level issues.
 
-The Sysdig Teams Operator runs in the cluster and enables a team to create and manage access to a dedicated Sysdig Team account for BC Government OpenShift platform users. The team is scoped to the OpenShift namespaces that belong to the team. Sysdig also provides a default dashboard to identify system [resources, limits, and actual usage](./openshift-project-resource-quotas.md).
+The Sysdig Teams Operator runs in the cluster and enables a team to create and manage access to a dedicated Sysdig Team account for BC Government OpenShift platform users. The team is scoped to the OpenShift namespaces that belong to the team. Sysdig also provides a default dashboard to identify system [resources, limits, and actual usage](/docs/automation-and-resiliency/openshift-project-resource-quotas.md).
 
 For more information on the Sysdig monitoring service, see [Monitoring with Sysdig](New page on Wordpress site).
 
@@ -169,7 +169,7 @@ Related links:
 - [Set up advanced functions in Sysdig Monitor](./sysdig-monitor-set-up-advanced-functions.md)
 - [Create alert channels in Sysdig Monitor](sysdig-monitor-create-alert-channels.md)
 - [Sysdig Monitor](https://sysdig.com/products/monitor/)
-- [Project resource quotas](/docs/automation-and-resiliency/openshift-project-resource-quotas.md)
+- [OpenShift project resource quotas](/docs/automation-and-resiliency/openshift-project-resource-quotas.md)
 - [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/)
 - [BCDevOps Sysdig Monitor](https://app.sysdigcloud.com/api/oauth/openid/bcdevops)
 - [Sysdig](https://app.sysdigcloud.com)

@@ -18,11 +18,12 @@ content_owner: Cailey Jones
 
 # Login to OpenShift
 
-Teams can login to the Openshift with either a GitHub ID or IDIR. IDIR authentication is enabled in the Silver cluster of the Openshift Platform. You must have multi-factor authentication (MFA) enabled to log in with either GitHub or your IDIR. This access mechanism links to Azure Active Directory (AD). You get instructions on how to enable MFA for your IDIR account during onboarding.
+Teams can login to the OpenShift with either a GitHub ID or IDIR. IDIR authentication is enabled in the Silver cluster of the OpenShift Platform. You must have multi-factor authentication (MFA) enabled to log in with either GitHub or your IDIR. This access mechanism links to Azure Active Directory (AD). You get instructions on how to enable MFA for your IDIR account during onboarding.
 
-You have to login with IDIR into the Openshift Console before you can associate any role bindings with the IDIR account.
+You have to login with IDIR into the OpenShift console before you can associate any role bindings with the IDIR account.
 
 When you login to the Silver Cluster Openshift Console, you have the option of using GitHub or your Azure AD IDIR.
+
 ![Image of authorization options](https://user-images.githubusercontent.com/53879638/146621070-6d473a3d-289c-400e-86a7-947732441fac.png)
 
 ## Information for developers
@@ -45,6 +46,11 @@ If you have any questions or concerns about this change, post your question in [
 For more information, see [BC Government OpenShift DevOps Security Considerations](https://developer.gov.bc.ca/BC-Government-OpenShift-DevOps-Security-Considerations).
 
 ---
+Related links:
+* [Platform Project Registry](https://registry.developer.gov.bc.ca/)
+* [#devops-security channel](https://chat.developer.gov.bc.ca/channel/devops-security)
+* [BC Government OpenShift DevOps Security Considerations](https://developer.gov.bc.ca/BC-Government-OpenShift-DevOps-Security-Considerations)
+
 Rewrite sources:
 * https://developer.gov.bc.ca/IDIR-Login-(via-Azure-AD)-for-OpenShift-Console
 ---

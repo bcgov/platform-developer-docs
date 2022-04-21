@@ -18,7 +18,7 @@ content_owner: Shelly Han
 
 # Start working in the BCGov GitHub organization
 
-If you plan sharing code developed by or for the BC government, you must complete the [Open Content Assessment Checklist](./checklist.md) and get approval from your Deputy Minister. Deputy Ministers may choose to delegate this authority to Ministry Chief Information Officers (CIOs).
+If you plan sharing code developed by or for the BC government, [evaluate the content](./evaluate-open-source-content.md) and get approval from your Deputy Minister. Deputy Ministers may choose to delegate this authority to Ministry Chief Information Officers (CIOs).
 
 ## On this page
 - [Post existing code or projects](#post-existing)
@@ -42,7 +42,7 @@ Projects like this follow two basic approaches, but can vary.
 
 In both cases, the basic steps to release the code are similar, while the implications for project management and resourcing are not. Key requirements in these scenarios include the following:
 
-- Confirm your [authority to license](./license-your-project.md)
+- Confirm your [authority to license](./license-your-github-repository.md)
 
 	Choose an open-source license and consult with the Intellectual Property Program (IPP) to make sure government has the right to release the code.
 
@@ -62,7 +62,7 @@ If you are intending to maintain an active project, make sure to establish the a
 
 These are projects that you want to manage as an open-source, collaborative project.
 
-- Choose an open-source licence and confirm your [authority to license](./license-your-project.md)
+- Choose an open-source licence and confirm your [authority to license](./license-your-github-repository.md)
 - Determine how contributions are made and managed and include this information in the contributor file in the repository.
 - [Create the minimum required content](./required-pages-for-github-repository.md).
 - Add a [Contributor Code of Conduct](http://contributor-covenant.org/) to your repository. This document lets people know that all are welcome to contribute, and that all who contribute pledge to make participation in the project a harassment-free experience for everyone. Include a code of conduct and provide a contact method (in the placeholder) so that people know how to report violations. Introduce the code of conduct in your `readme.md`.
@@ -78,15 +78,15 @@ There may be circumstances where it's useful and appropriate for employees to co
 
 	If the project uses a reciprocal or "copyleft" license, such as GPL or Mozilla, make sure you understand the requirements for publishing any modifications you make to the code.
 
-- Confirm your [authority to license](./license-your-project.md)
+- Confirm your [authority to license](./license-your-github-repository.md)
 
 Employees can also contribute to non-BC government owned intellectual property rights outside their professional roles by using their personal email linked to their GitHub account.
 
 ---
 Related links:
-* [Open Content Assessment Checklist](./checklist.md)
+* [evaluate the content](./evaluate-open-source-content.md)
 * [Required pages for a GitHub repository](./required-pages-for-github-repository.md)
-* [License your project](./license-your-project.md)
+* [License your GitHub repository](./license-your-github-repository.md)
 
 Rewrite sources:
 * https://developer.gov.bc.ca/Code-Management/Approaches-to-CollaboratingContributing

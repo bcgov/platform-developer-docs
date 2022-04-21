@@ -36,10 +36,6 @@ These guidelines help you make sure that there are no restrictions to using the 
 
 Evaluate the content you wish to use before posting the material in a GitHub repository.
 
-<!--
-There was originally talk of the material needed approval from a privacy minister or delegate? Is that still true?
--->
-
 ## Privacy<a name="privacy"></a>
 
 Make sure that the content is free of personal information that may directly identify an individual (for example, name, phone number, photo, address, driver's licence number, or any similar identification number).
@@ -51,7 +47,7 @@ Make sure to meet the following requirements:
 - Content is created solely by B.C. government employees.
 - Content is fully owned by the B.C. government and doesn't contain any third-party content. Collect copies of any contracts related to the content for review with the [Intellectual Property Program (IPP)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/intellectual-property/intellectual-property-program).
 - Content has no terms of use or exclusive licences that prohibit the Province from licensing the content on GitHub. Collect information concerning any terms of use or licences related to the content for review with the IPP.
-- You have [authority to license the content](./license-your-project.md).
+- You have [authority to license the content](./license-your-github-repository.md).
 
 Ministries  **must**  contact the IPP to assist in this assessment. Any legal review or legal advice is provided by the Legal Services Branch.
 
@@ -68,13 +64,13 @@ Contact your [Ministry Information Security Officer (MISO)](https://www2.gov.bc.
 Make sure that the material been labelled **Public**, using the [Information Security Classification Framework](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification).
 
 ---
-Rewrite sources:
-* https://developer.gov.bc.ca/Getting-Started-on-the-DevOps-Platform/How-to-Request-a-New-OpenShift-Project
-
 Related links:
 - [Start working in the BCGov GitHub organization](./start-working-in-bcgov-github-organization.md)
 - [Intellectual Property Program (IPP)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/intellectual-property/intellectual-property-program)
-- [License your project](./license-your-project.md)
+- [License your GitHub repository](./license-your-github-repository.md)
 - [Ministry Information Security Officer (MISO)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/information-security-policy-and-guidelines/role-of-miso)
 - [Information Security Classification Framework](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification)
+
+Rewrite sources:
+* https://developer.gov.bc.ca/Getting-Started-on-the-DevOps-Platform/How-to-Request-a-New-OpenShift-Project
 ---
