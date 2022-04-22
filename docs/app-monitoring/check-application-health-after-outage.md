@@ -27,15 +27,15 @@ Still, it's always possible that an outage affects the platform and brings down 
 - [Check your application](#check-application)
 - [Keep track of recovery steps](#keep-track)
 
-These guidelines assume that you have built your application in a cloud-native, highly-resilient manner that makes effective use of the strengths of the OpenShift platform.  Make sure you follow our [Resiliency Guidelines](https://developer.gov.bc.ca/Developer-Tools/Resiliency-Guidelines). If your application is not cloud-native in its design, it won't benefit from the higher adaptability and recoverability of the platform and may need additional work to recover from a large outage.
+These guidelines assume that you have built your application in a cloud-native, highly resilient manner that makes effective use of the strengths of the OpenShift platform. Make sure you follow our [Resiliency Guidelines](https://developer.gov.bc.ca/Developer-Tools/Resiliency-Guidelines). If your application is not cloud-native in its design, it won't benefit from the higher adaptability and recoverability of the platform and may need additional work to recover from a large outage.
 
 ## Check reporting channels<a name="check-channels"></a>
 
 If there is a platform-wide outage, check the following sources for more information:
 
-- RocketChat channels `#devops-alerts`, `#devops-sos` and `#devops-operations`
+- Rocket.Chat channels `#devops-alerts`, `#devops-sos` and `#devops-operations`
 
-- Off-site [status page](https://status.developer.gov.bc.ca), if you can't access RocketChat
+- If you can't access Rocket.Chat, check the off-site [status page](https://status.developer.gov.bc.ca)
 
 The Platform Services team keeps the community informed about the status of the outage. While the outage is in progress, there isn't much the team can do. Review the status and stay ready for the outage to end.
 
@@ -85,9 +85,9 @@ Run a test pipeline to make sure everything works as expected and you don't get 
 
 If you have problems with your pipeline installation, delete the member pods and allow them to restart, then try again.
 
-### rabbitMQ
+### RabbitMQ
 
-If you're running rabbitMQ as part of your application, you may need to restart it in case the outage caused network issues.
+If you're running RabbitMQ as part of your application, you may need to restart it in case the outage caused network issues.
 
 ## Keep track of recovery steps<a name="keep-track"></a>
 

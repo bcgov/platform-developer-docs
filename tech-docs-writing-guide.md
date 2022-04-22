@@ -1,14 +1,20 @@
+
 # Writing guide for Platform Services technical documentation
 
-https://docs.google.com/spreadsheets/d/1uNueaRQSQ7ssrMF8zo9YQUJeHj7dL307rLww2hzGuiE/edit#gid=0
+Use this guide to reference the approach taken to rewrite the Platform Services technical documentation. While this is a good place to start, this document is still alive and breathing and can be modified and improved upon as needed. Don't be shy. Documentation should evolve and improve!
+
+Also, reference the [style guide](https://docs.google.com/spreadsheets/d/1uNueaRQSQ7ssrMF8zo9YQUJeHj7dL307rLww2hzGuiE/edit#gid=0) that's still in development for more specific rules. Keep in mind that the style guide tracks rules for granular usage of terms or formatting and is built around decisions made during the writing process by writers and stakeholders.
 
 ## On this page
-- [Section name](#)
-- [Section name](#)
-- [Section name](#)
-<a name=""></a>
+- [Formatting](#format)
+- [Tone and voice](#tone)
+- [Audience](#audience)
+- [Page structure and elements](#structure)
+- [Accessibility](#accessibility)
+- [Writing step-by-step instructions](#instructions)
+- [Resources](#resources)
 
-## Formatting
+## Formatting<a name="format"></a>
 Use the following guidelines for basic formatting.
 - [Define abbreviations at first use](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/abbreviations#define-abbreviations).
 
@@ -24,7 +30,7 @@ Use the following guidelines for basic formatting.
 
   `code example that seriously rocks`
 
-## Tone and voice
+## Tone and voice<a name="tone"></a>
 The [Grammar, spelling and tone](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/grammar-spelling-tone) section of the Web Style Guide thoroughly covers tone and voice, but here are the most important points to keep in mind:
 
 - Avoid the passive voice and use verb-forward language. The best way to eliminate passive voice is to consider the person or thing performing the verb in the sentence you're writing. Who does what? Even if it's a thing and not a person. For example, a program notifies a person.
@@ -41,7 +47,7 @@ The [Grammar, spelling and tone](https://www2.gov.bc.ca/gov/content/governments/
 
 - [Don't use Latin abbreviations](https://insidegovuk.blog.gov.uk/2016/07/20/changes-to-the-style-guide-no-more-eg-and-ie-etc/) (e.g., i.e., etc.). They're not always familiar to non-native English speakers, they don't always get read correctly by screen readers, and people don't speak Latin. Write around them or use the full term.
 
-## Audience and perspective
+## Audience and perspective<a name="audience"></a>
 The audience for the technical documentation generally has a high-level of devops knowledge and there are also other avenues for assistance (for example, RocketChat).
 
 ### Duplicate content
@@ -57,7 +63,7 @@ Make sure that the link to an external page is descriptive. The user should know
 ### FAQs
 [Don't write FAQs](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/faqs) or format sections as a question and answer. Just tell the reader what they need to know.
 
-## Page structure and elements
+## Page structure and elements<a name="structure"></a>
 
 ### Titles
 Use a descriptive and specific title. What does the reader do with the page? What specific information do they gain?
@@ -91,13 +97,26 @@ Avoid using people's names in documentation. There are many good reasons for thi
 
 You get the idea. Essentially, when you avoid using their name, it means you avoid questions and also don't have to go back and update it later. Use their position or reference more general means of contact. For example, a RocketChat channel or a team email.
 
-## Accessibility
+## Accessibility<a name="accessibility"></a>
 
-## Writing instructions
+Use the [BC Government's guidelines and tools](https://www2.gov.bc.ca/gov/content/home/accessible-government/toolkit) to ensure your work is accessible and inclusive.
+
+## Writing step-by-step instructions<a name="instructions"></a>
+Occasionally, you'll have to write procedures. Find some of the most useful tips below but also check out [Microsoft's best practices for instructions](https://docs.microsoft.com/en-us/style-guide/procedures-instructions/). It's a great crash course.
+
+- Use numbered and bullet lists but not multi-level lists. Don't write single-item lists.
+
 - Front load your content. What is the most important part of a given sentence? Give the reader what they need the most as soon as possible.
-- Generally, you don't want to tell people what not to do.
 
-## Resources
+- Tell people what they should do, not what they shouldn't do.
+
+- Here is especially important to write in the present tense.
+
+- Use specific verbs.
+
+- When you can, familiarize yourself with tools and programs so you can reference the UI accurately. However, tell the reader what they need to do, rather than getting too specific on the UI. Remember that the audience is already quite technical.
+
+## Resources<a name="resources"></a>
 - [BC Government: Writing for the web](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide): My all-purpose style source for this specific project.
 - [BC Government: Accessibility and Inclusion Toolkit](https://www2.gov.bc.ca/gov/content/home/accessible-government/toolkit): A must-have guide to inform you and/or check against to ensure your writing is accessible and inclusive.
 - [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/): The single best resource for web writing. If you read anything here, check out their [Top 10 tips for Microsoft style and voice](https://docs.microsoft.com/en-us/style-guide/top-10-tips-style-voice).

@@ -19,13 +19,13 @@ content_owner: Shelly Han
 # Create alert channels in Sysdig Monitor<a name="create-alert-channels"></a>
 You can create alert channels in Sysdig Monitor.
 
-## Create a RocketChat alert channel
+## Create a Rocket.Chat alert channel
 You can integrate Sysdig Alerts with Rocket.Chat. Both Sysdig Monitor and Rocket.Chat require configurations.
-- Sysdig Monitor creates a **Webhook** notification channel.
+- Sysdig Monitor creates a **webhook** notification channel.
 
 - Rocket.Chat creates an **incoming webhook** with a custom script.
 
-## Configure RocketChat
+## Configure Rocket.Chat
 Rocket.Chat requires an incoming webhook and a script to parse the data from Sysdig. Do the following:
 1. Create the incoming webhook.
 

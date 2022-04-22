@@ -25,11 +25,11 @@ The Sysdig Teams Operator runs in the cluster and enables a team to create and m
 For more information on the Sysdig monitoring service, see [Monitoring with Sysdig](New page on Wordpress site).
 
 ## On this page
-1. [Sign in to Sysdig](#sign-in-sysdig)
-1. [Create Sysdig team access](#create-access)
-1. [Create a Sysdig Team](#create-team)
-1. [Sign in to your Sysdig Team](#sign-in)
-1. [Review your monitoring dashboards](#review-dashboards)
+- [Sign in to Sysdig](#sign-in-sysdig)
+- [Create Sysdig team access](#create-access)
+- [Create a Sysdig Team](#create-team)
+- [Sign in to your Sysdig Team](#sign-in)
+- [Review your monitoring dashboards](#review-dashboards)
 
 ## Sign in to Sysdig<a name="sign-in-sysdig"></a>
 You and your team must sign in to Sysdig to create the user account. BC Government Sysdig uses OpenID Connect and requires a GitHub account.

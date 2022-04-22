@@ -56,7 +56,7 @@ Use the following process:
 
 3. Use the following guidelines, depending on the resource type:
 
-  **Compute resource quota increase**
+  **CPU or RAM quota increase**
 
   If you're requesting a CPU or memory quota increase, collect the average from each replica pod. Present the Sysdig dashboard to show more accurate figures. Use the following example:
 
