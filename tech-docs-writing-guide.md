@@ -1,9 +1,9 @@
 
 # Writing guide for Platform Services technical documentation
 
-Use this guide to reference the approach taken to rewrite the Platform Services technical documentation. While this is a good place to start, this document is still alive and breathing and can be modified and improved upon as needed. Don't be shy. Documentation should evolve and improve!
+Use this guide to reference the approach taken to rewrite the Platform Services technical documentation. While this document is a good place to start, it's still alive and breathing and can be modified and improved upon as needed. Don't be shy. Documentation should evolve and improve!
 
-Also, reference the [style guide](https://docs.google.com/spreadsheets/d/1uNueaRQSQ7ssrMF8zo9YQUJeHj7dL307rLww2hzGuiE/edit#gid=0) that's still in development for more specific rules. Keep in mind that the style guide tracks rules for granular usage of terms or formatting and is built around decisions made during the writing process by writers and stakeholders.
+Also, reference the [style and terminology guide](https://docs.google.com/spreadsheets/d/1uNueaRQSQ7ssrMF8zo9YQUJeHj7dL307rLww2hzGuiE/edit#gid=0) that's still in development for more specific rules. Keep in mind that the style guide tracks rules for granular usage of terms or formatting and is built around decisions made during the writing process by writers and stakeholders.
 
 ## On this page
 - [Formatting](#format)
@@ -15,7 +15,9 @@ Also, reference the [style guide](https://docs.google.com/spreadsheets/d/1uNueaR
 - [Resources](#resources)
 
 ## Formatting<a name="format"></a>
+
 Use the following guidelines for basic formatting.
+
 - [Define abbreviations at first use](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/abbreviations#define-abbreviations).
 
   The only exception is if you're confident that the audience understands the abbreviation or it's so common that most people would know. For example, PDF, JPEG.
@@ -31,6 +33,7 @@ Use the following guidelines for basic formatting.
   `code example that seriously rocks`
 
 ## Tone and voice<a name="tone"></a>
+
 The [Grammar, spelling and tone](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/grammar-spelling-tone) section of the Web Style Guide thoroughly covers tone and voice, but here are the most important points to keep in mind:
 
 - Avoid the passive voice and use verb-forward language. The best way to eliminate passive voice is to consider the person or thing performing the verb in the sentence you're writing. Who does what? Even if it's a thing and not a person. For example, a program notifies a person.
@@ -51,14 +54,31 @@ The [Grammar, spelling and tone](https://www2.gov.bc.ca/gov/content/governments/
 The audience for the technical documentation generally has a high-level of devops knowledge and there are also other avenues for assistance (for example, RocketChat).
 
 ### Duplicate content
-Don't duplicate content across pages. Remember the principle of **one topic = one page**. Rather than duplicating conent, link to content that's needed.
+Don't duplicate content across pages. Remember the principle of **one topic = one page**. Rather than duplicating content, link to content that's needed. There's a couple solid reasons for this:
 
-This also helps maintenance of documentation in the long run. If information or a process changes, only needs to be updated in one place. Do you future self a favour.
+- **Maintenance:** If documentation, information, or processes change, it only needs to be updated in one place. Do your future self a favour.
+
+- **Findability:** Having only one topic per page helps users find what the specific topic they need. Users know what's on the page and what they'll get out of reading the page.
+
+For example, from our own tech docs library: [BC Government organizations in GitHub](https://github.com/bcgov/platform-developer-docs/blob/main/docs/use-github-in-bcgov/bc-government-organizations-in-github.md). The first draft of this page originally contained three topics:
+
+- [BC Government organizations in GitHub](https://github.com/bcgov/platform-developer-docs/blob/main/docs/use-github-in-bcgov/bc-government-organizations-in-github.md)
+- [Remove a user's BCGov GitHub access](https://github.com/bcgov/platform-developer-docs/blob/main/docs/use-github-in-bcgov/remove-user-bcgov-github-access.md)
+- [Request BCGov GitHub access or repository creation](https://github.com/bcgov/platform-developer-docs/blob/main/docs/use-github-in-bcgov/request-bcgov-github-access-repository-creation.md)
+
+After getting feedback, these pages needed to be split. Each page now seems pretty clear what they're about and the user doesn't have to wade through the original page to find content on requests or removals.
+
+Essentially, try to put yourself in the shoes of the user and assume they'll want to go directly to the content they need, rather than stumble upon it.
+
+The resources below have more information. They are concerned largely with forms, but similar principles apply to topics:
+
+- [One thing per page](https://designnotes.blog.gov.uk/2015/07/03/one-thing-per-page/)
+- [One thing per page principle](https://mgearon.com/ux/one-thing-per-page-principle/)
 
 ### Linking strategy
 [The Nielson Norman Group has extensive and thorough guidance on writing excellent hyperlinks](https://www.nngroup.com/articles/writing-links/).
 
-Make sure that the link to an external page is descriptive. The user should know (or have a good idea) where the link is going to take them before they click on it.
+Make sure that the link to an external page is descriptive. The user should know (or have a good idea) where the link is going to take them before they click it.
 
 ### FAQs
 [Don't write FAQs](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/faqs) or format sections as a question and answer. Just tell the reader what they need to know.
@@ -117,6 +137,9 @@ Occasionally, you'll have to write procedures. Find some of the most useful tips
 - When you can, familiarize yourself with tools and programs so you can reference the UI accurately. However, tell the reader what they need to do, rather than getting too specific on the UI. Remember that the audience is already quite technical.
 
 ## Resources<a name="resources"></a>
+
 - [BC Government: Writing for the web](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide): My all-purpose style source for this specific project.
+
 - [BC Government: Accessibility and Inclusion Toolkit](https://www2.gov.bc.ca/gov/content/home/accessible-government/toolkit): A must-have guide to inform you and/or check against to ensure your writing is accessible and inclusive.
+
 - [Microsoft Writing Style Guide](https://docs.microsoft.com/en-us/style-guide/welcome/): The single best resource for web writing. If you read anything here, check out their [Top 10 tips for Microsoft style and voice](https://docs.microsoft.com/en-us/style-guide/top-10-tips-style-voice).
