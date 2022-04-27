@@ -71,6 +71,7 @@ export default function Navigation() {
           let appMonitoring = [];
           let automationAndResiliency = [];
           let buildDeployAndMaintainApps = [];
+          let designSystem = [];
           let openshiftProjectsAndAccess = [];
           let platformArchitectureReference = [];
           let reusableCodeAndServices = [];
@@ -90,6 +91,9 @@ export default function Navigation() {
                 break;
               case "build-deploy-and-maintain-apps":
                 buildDeployAndMaintainApps.push(node);
+                break;
+              case "design-system":
+                designSystem.push(node);
                 break;
               case "openshift-projects-and-access":
                 openshiftProjectsAndAccess.push(node);
@@ -180,6 +184,20 @@ export default function Navigation() {
                   <span className="category-title">App monitoring</span>
                   <ul>
                     {appMonitoring.map((page, index) => {
+                      return (
+                        <li key={`link-${index}`}>
+                          <Link to={`/${page?.frontmatter?.slug}`}>
+                            {page?.frontmatter?.title}
+                          </Link>
+                        </li>
+                      );
+                    })}
+                  </ul>
+                </li>
+                <li>
+                  <span className="category-title">Design system</span>
+                  <ul>
+                    {designSystem.map((page, index) => {
                       return (
                         <li key={`link-${index}`}>
                           <Link to={`/${page?.frontmatter?.slug}`}>
