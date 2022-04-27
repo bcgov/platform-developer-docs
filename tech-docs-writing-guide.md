@@ -3,6 +3,8 @@
 
 Use this guide to reference the approach taken to rewrite the Platform Services technical documentation. While this document is a good place to start, it's still alive and breathing and can be modified and improved upon as needed. Don't be shy. Documentation should evolve and improve!
 
+This is the paragraph I'm changing. 
+
 Also, reference the [style and terminology guide](https://docs.google.com/spreadsheets/d/1uNueaRQSQ7ssrMF8zo9YQUJeHj7dL307rLww2hzGuiE/edit#gid=0) that's still in development for more specific rules. Keep in mind that the style guide tracks rules for granular usage of terms or formatting and is built around decisions made during the writing process by writers and stakeholders.
 
 ## On this page
