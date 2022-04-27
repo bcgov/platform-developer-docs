@@ -103,6 +103,10 @@ Consider the following before using an image:
 
 - Does the image contain elements that need to be clicked on or interacted with but can't be? For example, hyperlinks.
 
+One final note on images. Writing them in markdown doesn't give a lot of options for display or to implement very specific standards, so image standards may have to be ironed out on the developer end of things.
+
+Also, when placing images in the documents, make sure they have a relative link format. For example, `../../images/image-name.png`. This ensures the images appear in the GitHub file and on the tech docs site.
+
 ### On this page
 
 Use the **On this page** section as a simple table of contents. See this section on [Anchor links](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/links).
