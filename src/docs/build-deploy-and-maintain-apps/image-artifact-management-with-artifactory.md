@@ -76,7 +76,7 @@ The Xray tool scans all artifacts for security issues and lets you know about po
 
 * Our amazing resident security expert can easily have access to the scan reports for your artifacts if you need help with them!
 
-* You can ensure all of your images - especially your production images - are secure without placing additional load on your devs!
+* You can ensure all of your images - especially your production images - are secure without placing additional load on your devs.
 
 ## Security reviews<a name="security"></a>
 
