@@ -64,11 +64,11 @@ If your project is better suited to a different licence, discuss your requiremen
 
 The following overview provided is intended to inform, not replace, the licensing review for each project. If you think you need to engage with the Intellectual Property Program, send a request to the IPP Manager
 
-![A flowchart that helps you choose a licence](/images/licence-chart.png)
+![A flowchart that helps you choose a licence](../../images/licence-chart.png)
 
 If your project is related to a community that typically uses a different licence than one of the preferred licences described above, or if you have any questions about which licence best applies to your project, contact IPP.
 
-![A flowchart to outline code preparation for GitHub](/images/github-code-preparation-chart.png)
+![A flowchart to outline code preparation for GitHub](../../images/github-code-preparation-chart.png)
 
 ## Apply the licence to your project<a name="apply-licence"></a>
 

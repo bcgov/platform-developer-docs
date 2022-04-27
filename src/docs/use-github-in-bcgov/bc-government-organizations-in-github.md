@@ -69,7 +69,7 @@ These organizations permanently store teams' private repositories with closed-so
 * Each Ministry team must purchase their own [user licenses](./github-enterprise-user-licenses-bc-government.md) to use the organization.
 * Only Ministry GitHub administrators can create repositories in this organization. Consult with your Ministry's Information Management Branch (IMB) to get in touch with the GitHub administrators.
 
-![Diagram of the BC Goverment GitHub organizations](/images/github-organization-chart.png)
+![Diagram of the BC Goverment GitHub organizations](../../images/github-organization-chart.png)
 
 ### Security Insights for GitHub Enterprise-linked organizations
 

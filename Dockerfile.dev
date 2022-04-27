@@ -1,0 +1,12 @@
+FROM node:16
+
+WORKDIR /app
+
+# COPY the package.json file, install dependencies
+COPY package.json .
+RUN npm install
+
+# copy the whole source folder (the dir is relative to the Dockerfile)
+COPY . .
+
+CMD [ "npm", "run", "develop" ]
