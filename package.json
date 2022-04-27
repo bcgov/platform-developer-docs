@@ -4,7 +4,7 @@
   "description": "Gatbys front-end for display platform developer documentation",
   "main": "index.js",
   "scripts": {
-    "build": "gatsby build",
+    "build": "gatsby build --verbose",
     "develop": "gatsby develop --host 0.0.0.0 --port 8000",
     "format": "prettier --write \"**/*.{js,jsx,ts,tsx,json,md}\"",
     "start": "gatsby develop",
