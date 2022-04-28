@@ -9,6 +9,6 @@ COPY . .
 RUN ["npm", "run", "build"]
 
 
-FROM nginx
+FROM ubi8/nginx-120
 EXPOSE 80
 COPY --from=builder /app/public /usr/share/nginx/html
