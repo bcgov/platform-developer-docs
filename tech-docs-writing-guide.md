@@ -3,7 +3,7 @@
 
 Use this guide to reference the approach taken to rewrite the Platform Services technical documentation. While this document is a good place to start, it's still alive and breathing and can be modified and improved upon as needed. Don't be shy. Documentation should evolve and improve!
 
-This is the paragraph I'm changing. 
+This is the paragraph I'm changing.
 
 Also, reference the [style and terminology guide](https://docs.google.com/spreadsheets/d/1uNueaRQSQ7ssrMF8zo9YQUJeHj7dL307rLww2hzGuiE/edit#gid=0) that's still in development for more specific rules. Keep in mind that the style guide tracks rules for granular usage of terms or formatting and is built around decisions made during the writing process by writers and stakeholders.
 
@@ -14,6 +14,7 @@ Also, reference the [style and terminology guide](https://docs.google.com/spread
 - [Page structure and elements](#structure)
 - [Accessibility](#accessibility)
 - [Writing step-by-step instructions](#instructions)
+- [Metadata](#metadata)
 - [Resources](#resources)
 
 ## Formatting<a name="format"></a>
@@ -141,6 +142,34 @@ Occasionally, you'll have to write procedures. Find some of the most useful tips
 - Use specific verbs.
 
 - When you can, familiarize yourself with tools and programs so you can reference the UI accurately. However, tell the reader what they need to do, rather than getting too specific on the UI. Remember that the audience is already quite technical.
+
+## Metadata<a name="metadata"></a>
+
+Track the metadata in the fields of each page based on these descriptions:
+
+- **title**: The title of the page. The _best_ title you can create.
+
+- **slug**: This appends the URL, so it shows the path of the page on the Gatsby site.
+
+- **description**: A brief, precise description of what a reader will find on the page.
+
+- **keywords**: These tags are important (see more below) to describe what the page is about. What kind of terms bring a reader here? What will they find?
+
+- **page_purpose**: A more in-depth description.
+
+- **audience**: Typically, a **developer** or a **technical lead**.
+
+- **author**: Whoever wrote the original draft (or drafted the rewrite).
+
+- **content_owner**: The SME of the page. They are responsible for the factual accuracy of the content.
+
+### Keywords, tags, and taxonomy
+
+It's important to track relevant keywords for each page and to refine them as the content becomes clearer. Eventually, the team uses a taxonomy to help pages get found when users search for them. But there are distinct differences, as shown in [the quotes from this blog below](https://contentstrategyinc.com/mays-vancouver-iacs-meetup-understanding-taxonomies/):
+
+- "Tags themselves are not taxonomies. You can use your taxonomic terms as tags, but the tags themselves are not taxonomy. Taxonomy is not just a list of words, it’s a controlled vocabulary."
+
+- "Metadata is information about information. Metadata describes the content and taxonomy organizes the content. Taxonomical terms should be stored as metadata, but metadata itself isn’t taxonomy."
 
 ## Resources<a name="resources"></a>
 
