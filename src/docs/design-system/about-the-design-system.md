@@ -13,7 +13,7 @@ audience: developer
 
 author: Jonathan Bond
 
-content_owner:
+content_owner: Tyler Krys
 ---
 
 # About the design system
