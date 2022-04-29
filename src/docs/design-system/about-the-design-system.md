@@ -28,7 +28,7 @@ The Platform Services design system helps developers and designers build better 
 
 Components are collectively built by the government community, meet accessibility standards and are open for input and improvement.
 
-Use the design system to custom B.C. government sites and applications. For more information about applying for external URLs, contact the B.C. government [Joint Working Group](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/digital-delivery/web-property-process/web-property-applications).
+Use the design system to customize B.C. government sites and applications. For more information about applying for external URLs, contact the B.C. government [Joint Working Group](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/digital-delivery/web-property-process/web-property-applications).
 
 ## Design system management<a name="management"></a>
 
