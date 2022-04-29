@@ -1,16 +1,29 @@
-FROM node:16 as builder
+# Build stage
+FROM node:lts-alpine as build-stage
 
+# Install node-gyp dependencies that aren't present in node:lts-alpine
+ENV PYTHONUNBUFFERED=1
+RUN apk add --update --no-cache g++ make python3 && ln -sf python3 /usr/bin/python
+RUN python3 -m ensurepip
+RUN pip3 install --no-cache --upgrade pip setuptools
+
+# Copy package.json and package-lock.json, install dependencies
 WORKDIR /app
-
-# COPY the package.json file, install dependencies, run build script
-COPY package.json .
+COPY package*.json .
 RUN npm install
+
+# Copy remaining files, run build script
 COPY . .
 RUN ["npm", "run", "build"]
 
+# Production stage
+FROM nginxinc/nginx-unprivileged:1.20 as production-stage
 
-FROM nginx
+# Copy nginx configuration
 COPY ./nginx.conf /etc/nginx/nginx.conf
-COPY --from=builder /app/public /usr/share/nginx/html
-EXPOSE 8080:8080
+
+# Copy built front-end files to nginx public web root folder
+COPY --from=build-stage /app/public /usr/share/nginx/html
+
+EXPOSE 8080
 CMD ["nginx", "-g", "daemon off;"]
