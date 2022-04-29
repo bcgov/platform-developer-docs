@@ -17,6 +17,8 @@ content_owner: Olena Mitovska
 ---
 # External Training Resources 
 
+The resources below are from sources outside of the BC Government. These provide additional context and support to go along with your [Training from the Platform Services Team](./training-external-resources.md)   
+
 ## Websites:
 
 [What is RedHat Openshift?](https://cloud.redhat.com/learn/what-is-openshift) - by RedHat
@@ -46,9 +48,7 @@ content_owner: Olena Mitovska
 [DevOps with OpenShift](https://developers.redhat.com/e-books/devops-openshift-cloud-deployments-made-easy) by Red Hat / O'Reilly Publishing
 
 
-
-
 ---
 Related links:
-- [Training from the Platform Services Team](./training-external-resoruces.md)
+- [Training from the Platform Services Team](./training-external-resources.md)
 ---
