@@ -47,7 +47,7 @@ cpu-request-32-limit-64: CPU Request 32 cores, CPU Limit 64 cores
 
 ## Memory quotas<a name="memory"></a>
 
-The following RAM quotas are currently available on the Platform. All Memory requests and limits are shown in GiB and represent the **maximum** for the combined RAM request or RAM limit values for **all pods in the namespace**.
+The following RAM quotas are currently available on the Platform. All memory requests and limits are shown in GiB and represent the **maximum** for the combined RAM request or RAM limit values for **all pods in the namespace**.
 
 ```
 memory-request-2-limit-4: RAM Request 2 GiB, RAM Limit 4 GiB
