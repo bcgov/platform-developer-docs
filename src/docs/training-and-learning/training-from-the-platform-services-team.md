@@ -1,24 +1,22 @@
 ---
 title: Training from the Platform Services Team
 
+slug: training-from-the-platform-services-team
+
 description: Describes the Openshift 101 and future 201 training, provides interal and external resources for learning Openshift.  
 
 keywords: openshift, training, onboarding
 
-page purpose: Describes the Openshift 101 and 201 training and rovides registration links for training. Provides alternatives such as videos and written training material. 
+page_purpose: Describes the Openshift 101 and 201 training and rovides registration links for training. Provides alternatives such as videos and written training material. 
 
 audience: developer, technical lead, product owner
 
 author: Matt Spencer
 
-content owner: Olena Mitovska
+content_owner: Olena Mitovska
 ---
 # Training from the Platform Services Team
 Learning how to build in openshift can be hard. We’ve put together a number of resources to help!
-
-## On this page
-- [Openshift 101 and 201](#openshift101201)
-- [Video Resources](#)
 
 ## Openshift 101 and 201 <a name="openshift101201"></a>
 
@@ -50,5 +48,5 @@ We’re developing an Openshift 201 course to cover more advanced skills than th
 
 ---
 Related links:
-<!-- Link to the external resources page when developed?>
+- [External Training Resources](./training-external-resources.md)
 ---
