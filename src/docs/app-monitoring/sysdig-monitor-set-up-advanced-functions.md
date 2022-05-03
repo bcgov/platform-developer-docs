@@ -17,7 +17,7 @@ content_owner: Shelly Han
 ---
 
 # Set up advanced functions in Sysdig Monitor<a name="advanced-functions"></a>
-To set up other useful tools in the Sysdig Monitor space, do the following:
+To set up useful tools in the Sysdig Monitor space, do the following:
 
 ## Create custom monitoring panels
 Sysdig scrapes Prometheus metrics. You can create custom queries using PromQL. For example:

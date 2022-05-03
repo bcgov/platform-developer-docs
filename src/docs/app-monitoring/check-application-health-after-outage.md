@@ -18,7 +18,7 @@ content_owner: Cailey Jones
 
 # Check application health after an outage
 
-One of the benefits of the OpenShift platform is a greatly reduced chance of significant unexpected outages and the near-elimination of scheduled outages. The platform is adaptable and recoverable in a way that legacy architecture is not and this lets the platform recover from hardware issues invisibly in many cases.
+The OpenShift platform provides a reduced chance of significant unexpected outages and near-elimination of scheduled outages. The platform is adaptable and recoverable in a way that legacy architecture is not and this lets the platform recover from hardware issues invisibly in many cases.
 
 Still, it's always possible that an outage affects the platform and brings down the applications hosted there. If this happens, speedy recovery is important. Use these guidelines to ensure your application recovers quickly and effectively.
 
@@ -27,7 +27,7 @@ Still, it's always possible that an outage affects the platform and brings down 
 - [Check your application](#check-application)
 - [Keep track of recovery steps](#keep-track)
 
-These guidelines assume that you have built your application in a cloud-native, highly resilient manner that makes effective use of the strengths of the OpenShift platform. Make sure you follow our [Resiliency Guidelines](https://developer.gov.bc.ca/Developer-Tools/Resiliency-Guidelines). If your application is not cloud-native in its design, it won't benefit from the higher adaptability and recoverability of the platform and may need additional work to recover from a large outage.
+These guidelines assume that you built your application in a cloud-native, highly resilient manner that makes effective use of the strengths of the OpenShift platform. Make sure you follow our [Resiliency Guidelines](https://developer.gov.bc.ca/Developer-Tools/Resiliency-Guidelines). If your application is not cloud-native in its design, it won't benefit from the higher adaptability and recoverability of the platform and may need additional work to recover from a large outage.
 
 ## Check reporting channels<a name="check-channels"></a>
 
@@ -41,9 +41,7 @@ The Platform Services team keeps the community informed about the status of the 
 
 ## Check your application<a name="check-application"></a>
 
-When the outage recovers, it's likely that everything recovers on its own, due to the resiliency of the applications.
-
-However, you can check the following to make sure everything is working as expected:
+When the outage recovers, it's likely that everything recovers on its own, due to the resiliency of the applications. However, you can check the following to make sure everything is working as expected:
 
 ### Connect to your application
 
@@ -65,7 +63,7 @@ Your application logs should have more information and may provide further infor
 #### Image Pull Backoff
 This error generally indicates that the pod is having trouble getting to the image it needs to spin up.
 
-This is usually an indication that there is still a problem with the cluster (check RocketChat or the status page) or with your image (check that it still exists and hasn't been corrupted).
+This is usually an indication that there is still a problem with the cluster (check Rocket.Chat or the status page) or with your image (check that it still exists and hasn't been corrupted).
 
 You can start by trying to rebuild your image.
 

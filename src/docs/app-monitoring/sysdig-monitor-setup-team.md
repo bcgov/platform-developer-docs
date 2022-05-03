@@ -34,7 +34,7 @@ For more information on the Sysdig monitoring service, see [Monitoring with Sysd
 ## Sign in to Sysdig<a name="sign-in-sysdig"></a>
 You and your team must sign in to Sysdig to create the user account. BC Government Sysdig uses OpenID Connect and requires a GitHub account.
 
-Go to the [BCDevOps Sysdig Monitor](https://app.sysdigcloud.com/api/oauth/openid/bcdevops). You can also sign in on [the Sysdig site](https://app.sysdigcloud.com). Select OpenID and type in `BCDevOps` as the company.
+Go to the [BCDevOps Sysdig Monitor](https://app.sysdigcloud.com/api/oauth/openid/bcdevops). You can also sign in on [the Sysdig site](https://app.sysdigcloud.com). Select OpenID and type `BCDevOps` as the company.
 
 On the default page, you can find the icon for your account and the email address associated with it. You may be directed to the **Catchall Team** page, which doesn't have access to resources until you create team access.
 

@@ -16,16 +16,21 @@ author: Jonathan Bond
 content_owner: Shelly Han
 ---
 
-# Create alert channels in Sysdig Monitor<a name="create-alert-channels"></a>
+# Create alert channels in Sysdig Monitor
 You can create alert channels in Sysdig Monitor.
 
-## Create a Rocket.Chat alert channel
-You can integrate Sysdig Alerts with Rocket.Chat. Both Sysdig Monitor and Rocket.Chat require configurations.
+## On this page
+- [Create a Rocket.Chat alert channel](#create-rc-channel)
+- [Configure Rocket.Chat](#configure-rc)
+- [Create a Sysdig team notification channel](#team-notification)
+
+## Create a Rocket.Chat alert channel<a name="create-rc-channel"></a>
+You can integrate Sysdig alerts with Rocket.Chat. Both Sysdig Monitor and Rocket.Chat require configurations.
 - Sysdig Monitor creates a **webhook** notification channel.
 
 - Rocket.Chat creates an **incoming webhook** with a custom script.
 
-## Configure Rocket.Chat
+## Configure Rocket.Chat<a name="configure-rc"></a>
 Rocket.Chat requires an incoming webhook and a script to parse the data from Sysdig. Do the following:
 1. Create the incoming webhook.
 
@@ -65,7 +70,7 @@ class Script {
 }
 ```
 
-## Create a Sysdig team notification channel
+## Create a Sysdig team notification channel<a name="team-notification"></a>
 To create a team notification channel, do the following:
 1. In Sysdig Monitor, go to your user account and click `Settings`.
 
