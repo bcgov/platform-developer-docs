@@ -17,12 +17,16 @@ content_owner: Ian Watts
 ---
 # Prebuilt images
 
-The Platform Services team maintains a number of general-use, prebuilt images. Use these images if you don't need to maintain your own custom versions.
+The Platform Services team maintains a number of prebuilt images. Use these images if you don't need to maintain your own custom versions.
 
 Prebuilt images provide the following advantages:
+
 * Teams don't have to maintain their own builds
+
 * The entire cluster benefits from lower resource consumption
+
 * Builds tagged with "latest" are regularly rebuilt to pick up the latest security enhancements
+
 * Images are available to all clusters through Artifactory
 
 The images are available from Artifactory and you can use the `artifactory-creds` secret in your namespaces to pull the images.

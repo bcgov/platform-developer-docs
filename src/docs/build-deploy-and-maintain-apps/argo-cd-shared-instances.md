@@ -16,8 +16,6 @@ author: Jonathan Bond
 content_owner: Ian Watts
 ---
 
-<!-- NOTE: This page was in the Documize protected space. -->
-
 # Argo CD shared instances
 
 [Argo CD](https://argo-cd.readthedocs.io/en/stable/) is a declarative, GitOps continuous delivery tool currently used in the DevExchange OpenShift clusters. Only Platform Services uses the existing Argo CD instance. It operates on cluster-level resources.
@@ -41,7 +39,7 @@ Each team gets a new GitHub repository so they can manage their application mani
 ## Configuration<a name="config"></a>
 
 ### Source repositories
-Application code resides in existing repositories. The new repo is for the YAML manifest files that are consumed by Argo CD. The project is limited to using this one repo for Argo CD configurations.
+Application code resides in existing repositories. The new repository is for the YAML manifest files that are consumed by Argo CD. The project is limited to using this one repository for Argo CD configurations.
 
 ### Namespaces
 Each project can deploy applications to any of the OpenShift namespaces in their project set (`tools`, `dev`, `test`, and `prod`). It's not be possible for a project to use Argo CD to deploy an application to any other namespace.
