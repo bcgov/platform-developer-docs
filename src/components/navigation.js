@@ -74,7 +74,11 @@ const StyledListItem = styled.li`
 `;
 
 const NavListItem = ({ id, links, title }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const path = typeof window !== "undefined" ? window.location.pathname : "";
+  const isContainingCurrentPage = links.some(link =>
+    path.includes(link.frontmatter.slug)
+  );
+  const [isOpen, setIsOpen] = useState(isContainingCurrentPage);
 
   return (
     <StyledListItem>
