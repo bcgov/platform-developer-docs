@@ -6,7 +6,7 @@ html {
 body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  color: hsla(0, 0%, 0%, 0.8);
+  color: #313132;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -442,13 +442,13 @@ ul li {
   padding-left: 0;
 }
 
-li>ol {
+li > ol {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
 }
 
-li>ul {
+li > ul {
   margin-left: 1.45rem;
   margin-bottom: calc(1.45rem / 2);
   margin-top: calc(1.45rem / 2);
@@ -466,7 +466,7 @@ p *:last-child {
   margin-bottom: 0;
 }
 
-li>p {
+li > p {
   margin-bottom: calc(1.45rem / 2);
 }
 
