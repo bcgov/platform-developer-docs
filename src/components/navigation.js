@@ -19,6 +19,7 @@ const StyledListItem = styled.li`
       display: inline-block;
       font-size: 18px;
       font-weight: 700;
+      margin-top: 8px;
       padding: 0;
     }
 
@@ -27,6 +28,7 @@ const StyledListItem = styled.li`
       border: none;
       cursor: pointer;
       height: 44px;
+      margin-right: -15px;
       min-width: 44px;
 
       &:focus {
@@ -42,14 +44,25 @@ const StyledListItem = styled.li`
   }
 
   ul {
+    margin: 8px 0;
+    list-style: none;
+
     li {
-      &:first-child {
-        margin-top: calc(1.45rem / 2);
-      }
+      margin: 0;
 
       a {
+        display: block;
         font-size: 16px;
+        padding: 8px 0;
         text-decoration: none;
+
+        &.active {
+          background-color: #f3f2f1;
+          border-color: #003366;
+          border-left: 5px solid;
+          margin: 0 -15px;
+          padding: 8px 15px 8px 10px;
+        }
 
         &:focus,
         &:hover {
@@ -80,7 +93,10 @@ const NavListItem = ({ id, links, title }) => {
         {links.map((page, index) => {
           return (
             <li key={`link-${index}`}>
-              <Link to={`/${page?.frontmatter?.slug}`}>
+              <Link
+                to={`/${page?.frontmatter?.slug}`}
+                activeClassName={"active"}
+              >
                 {page?.frontmatter?.title}
               </Link>
             </li>
@@ -104,7 +120,7 @@ const StyledDiv = styled.div`
   }
 
   nav {
-    ul {
+    ul.nav-menu {
       list-style: none;
       margin: 0;
     }
@@ -184,7 +200,7 @@ export default function Navigation() {
 
           return (
             <nav>
-              <ul>
+              <ul className="nav-menu">
                 <NavListItem
                   id="build-deploy-and-maintain-apps"
                   title="Build, deploy, and maintain apps"
