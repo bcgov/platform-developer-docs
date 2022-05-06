@@ -1,9 +1,95 @@
-import React from "react";
+import React, { useState } from "react";
 import { graphql, Link, StaticQuery } from "gatsby";
 import PropTypes from "prop-types";
 import styled from "styled-components";
 
 import SearchBar from "./search-bar";
+
+import ChevonDown from "../images/fa-chevron-down-solid.svg";
+import ChevronUp from "../images/fa-chevron-up-solid.svg";
+
+const StyledListItem = styled.li`
+  div {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    span.category-title {
+      display: inline-block;
+      font-size: 18px;
+      font-weight: 700;
+      padding: 0;
+    }
+
+    button {
+      background-color: white;
+      border: none;
+      cursor: pointer;
+      height: 44px;
+      min-width: 44px;
+
+      &:focus {
+        background-color: #fcba19;
+        box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
+        outline: none;
+      }
+
+      svg {
+        width: 20px;
+      }
+    }
+  }
+
+  ul {
+    li {
+      &:first-child {
+        margin-top: calc(1.45rem / 2);
+      }
+
+      a {
+        font-size: 16px;
+        text-decoration: none;
+
+        &:focus,
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+`;
+
+const NavListItem = ({ id, links, title }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  return (
+    <StyledListItem>
+      <div>
+        <span className="category-title">{title}</span>
+        <button
+          aria-controls={id}
+          aria-expanded={isOpen}
+          aria-label={`${isOpen ? "Collapse" : "Expand"} ${title}`}
+          onClick={() => setIsOpen(!isOpen)}
+        >
+          {isOpen ? <ChevronUp /> : <ChevonDown />}
+        </button>
+      </div>
+      <ul id={id} style={{ display: `${isOpen ? "inherit" : "none"}` }}>
+        {links.map((page, index) => {
+          return (
+            <li key={`link-${index}`}>
+              <Link to={`/${page?.frontmatter?.slug}`}>
+                {page?.frontmatter?.title}
+              </Link>
+            </li>
+          );
+        })}
+      </ul>
+    </StyledListItem>
+  );
+};
 
 const StyledDiv = styled.div`
   background-color: white;
@@ -21,25 +107,6 @@ const StyledDiv = styled.div`
     ul {
       list-style: none;
       margin: 0;
-
-      li {
-        a {
-          font-size: 16px;
-          text-decoration: none;
-
-          &:focus,
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-
-        span.category-title {
-          display: inline-block;
-          font-size: 18px;
-          font-weight: 700;
-          padding: calc(1.45rem / 2) 0;
-        }
-      }
     }
   }
 `;
@@ -118,142 +185,58 @@ export default function Navigation() {
           return (
             <nav>
               <ul>
-                <li>
-                  <span className="category-title">
-                    Build, deploy, and maintain apps
-                  </span>
-                  <ul>
-                    {buildDeployAndMaintainApps.map((page, index) => {
-                      return (
-                        <li key={`link-${index}`}>
-                          <Link to={`/${page?.frontmatter?.slug}`}>
-                            {page?.frontmatter?.title}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </li>
-                <li>
-                  <span className="category-title">
-                    OpenShift projects and access
-                  </span>
-                  <ul>
-                    {openshiftProjectsAndAccess.map((page, index) => {
-                      return (
-                        <li key={`link-${index}`}>
-                          <Link to={`/${page?.frontmatter?.slug}`}>
-                            {page?.frontmatter?.title}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </li>
-                <li>
-                  <span className="category-title">Use GitHub in BC Gov</span>
-                  <ul>
-                    {useGithubInBcgov.map((page, index) => {
-                      return (
-                        <li key={`link-${index}`}>
-                          <Link to={`/${page?.frontmatter?.slug}`}>
-                            {page?.frontmatter?.title}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </li>
-                <li>
-                  <span className="category-title">
-                    Automation and resiliency
-                  </span>
-                  <ul>
-                    {automationAndResiliency.map((page, index) => {
-                      return (
-                        <li key={`link-${index}`}>
-                          <Link to={`/${page?.frontmatter?.slug}`}>
-                            {page?.frontmatter?.title}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </li>
-                <li>
-                  <span className="category-title">App monitoring</span>
-                  <ul>
-                    {appMonitoring.map((page, index) => {
-                      return (
-                        <li key={`link-${index}`}>
-                          <Link to={`/${page?.frontmatter?.slug}`}>
-                            {page?.frontmatter?.title}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </li>
-                <li>
-                  <span className="category-title">Design system</span>
-                  <ul>
-                    {designSystem.map((page, index) => {
-                      return (
-                        <li key={`link-${index}`}>
-                          <Link to={`/${page?.frontmatter?.slug}`}>
-                            {page?.frontmatter?.title}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </li>
-                <li>
-                  <span className="category-title">
-                    Reusable code and services
-                  </span>
-                  <ul>
-                    {reusableCodeAndServices.map((page, index) => {
-                      return (
-                        <li key={`link-${index}`}>
-                          <Link to={`/${page?.frontmatter?.slug}`}>
-                            {page?.frontmatter?.title}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </li>
-                <li>
-                  <span className="category-title">
-                    Platform architecture reference
-                  </span>
-                  <ul>
-                    {platformArchitectureReference.map((page, index) => {
-                      return (
-                        <li key={`link-${index}`}>
-                          <Link to={`/${page?.frontmatter?.slug}`}>
-                            {page?.frontmatter?.title}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </li>
-                <li>
-                  <span className="category-title">Training and learning</span>
-                  <ul>
-                    {trainingAndLearning.map((page, index) => {
-                      return (
-                        <li key={`link-${index}`}>
-                          <Link to={`/${page?.frontmatter?.slug}`}>
-                            {page?.frontmatter?.title}
-                          </Link>
-                        </li>
-                      );
-                    })}
-                  </ul>
-                </li>
+                <NavListItem
+                  id="build-deploy-and-maintain-apps"
+                  title="Build, deploy, and maintain apps"
+                  links={buildDeployAndMaintainApps}
+                />
+                <NavListItem
+                  id="openshift-projects-and-access"
+                  title="OpenShift projects and access"
+                  links={openshiftProjectsAndAccess}
+                />
+                <NavListItem
+                  id="use-github-in-bc-gov"
+                  title="Use GitHub in BC Gov"
+                  links={useGithubInBcgov}
+                />
+                <NavListItem
+                  id="automation-and-resiliency"
+                  title="Automation and resiliency"
+                  links={automationAndResiliency}
+                />
+                <NavListItem
+                  id="app-monitoring"
+                  title="App monitoring"
+                  links={appMonitoring}
+                />
+                <NavListItem
+                  id="design-system"
+                  title="Design system"
+                  links={designSystem}
+                />
+                <NavListItem
+                  id="reusable-code-and-services"
+                  title="Reusable code and services"
+                  links={reusableCodeAndServices}
+                />
+                <NavListItem
+                  id="platform-architecture-reference"
+                  title="Platform architecture reference"
+                  links={platformArchitectureReference}
+                />
+                <NavListItem
+                  id="training-and-learning"
+                  title="Training and learning"
+                  links={trainingAndLearning}
+                />
+                {noCategory?.length > 0 && (
+                  <NavListItem
+                    id="uncategorized"
+                    title="Uncategorized"
+                    links={noCategory}
+                  />
+                )}
               </ul>
             </nav>
           );
