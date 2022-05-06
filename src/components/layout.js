@@ -39,6 +39,9 @@ const FlexContainer = styled.div`
   @media (max-width: 1319.98px) {
     max-width: 100%;
   }
+  @media (max-width: 767.98px) {
+    flex-direction: column;
+  }
 `;
 
 const StyledSkipNavLink = styled(SkipNavLink)`
