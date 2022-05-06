@@ -23,6 +23,7 @@ const Page = styled.div`
   display: flex;
   flex-direction: column;
   align-items: stretch;
+  height: 100vh;
   width: 100%;
 `;
 
@@ -37,6 +38,9 @@ const FlexContainer = styled.div`
 
   @media (max-width: 1319.98px) {
     max-width: 100%;
+  }
+  @media (max-width: 767.98px) {
+    flex-direction: column;
   }
 `;
 

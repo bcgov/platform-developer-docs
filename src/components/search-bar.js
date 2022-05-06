@@ -9,7 +9,8 @@ const StyledForm = styled.form`
   display: flex;
   flex-direction: row;
   justify-content: stretch;
-  margin-bottom: 10px;
+  margin: 0;
+  padding-bottom: 20px;
 
   // https://www.w3.org/WAI/tutorials/forms/labels/#note-on-hiding-elements
   label.visually-hidden {
