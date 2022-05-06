@@ -5,6 +5,7 @@ module.exports = {
     author: `@bcgov`,
     siteUrl: `https://paas.cloud.gov.bc.ca`,
   },
+  trailingSlash: `never`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-react-svg`,
