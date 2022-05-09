@@ -20,7 +20,7 @@ content_owner: Ian Watts
 
 [Argo CD](https://argo-cd.readthedocs.io/en/stable/) is a declarative, GitOps continuous delivery tool currently used in the DevExchange OpenShift clusters. Only Platform Services uses the existing Argo CD instance. It operates on cluster-level resources.
 
-A new Argo CD instance is available to project teams that are interested in using it to control the deployment of their applications.
+A new Argo CD instance is available to product teams that are interested in using it to control the deployment of their applications.
 
 ## On this page
 
@@ -30,7 +30,7 @@ A new Argo CD instance is available to project teams that are interested in usin
 
 ## Design<a name="design"></a>
 
-A shared instance of Argo CD exists in each OpenShift cluster. Project teams that request access to Argo CD are given their own project. There is a one-to-one relationship between Argo CD projects and OCP project sets/licence plates (`tools`, `dev`, `test`, and `prod` namespaces). Teams can configure as many applications as they need and deploy them to any of the OCP namespaces in their project set. Each app/environment combination is configured as a separate application in Argo CD.
+A shared instance of Argo CD exists in each OpenShift cluster. Product teams that request access to Argo CD are given their own project. There is a one-to-one relationship between Argo CD projects and OpenShift Platform (OCP) project sets/licence plates (`tools`, `dev`, `test` and `prod` namespaces). Teams can configure as many applications as they need and deploy them to any of the OCP namespaces in their project set. Each application/environment combination is configured as a separate application in Argo CD.
 
 **Note:** Application names must be unique across all projects in a cluster. For example, two teams can't both have an application named `web-app`. Use a descriptive name for each application, followed by the environment, such as `somewebapp-dev`.
 
@@ -42,7 +42,7 @@ Each team gets a new GitHub repository so they can manage their application mani
 Application code resides in existing repositories. The new repository is for the YAML manifest files that are consumed by Argo CD. The project is limited to using this one repository for Argo CD configurations.
 
 ### Namespaces
-Each project can deploy applications to any of the OpenShift namespaces in their project set (`tools`, `dev`, `test`, and `prod`). It's not be possible for a project to use Argo CD to deploy an application to any other namespace.
+Each project can deploy applications to any of the OpenShift namespaces in their project set (`tools`, `dev`, `test` and `prod`). It's not be possible for a project to use Argo CD to deploy an application to any other namespace.
 
 ### Allowed resources
 Projects don't have access to alter any cluster-level resources, only namespace-level resources.
