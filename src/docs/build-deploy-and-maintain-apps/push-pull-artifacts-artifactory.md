@@ -17,7 +17,7 @@ content_owner: Cailey Jones
 
 ---
 # Push and pull artifacts in Artifactory
-After you've [set up your Artifactory service account](./setup-artifactory-service-account-repository-project.md), you can pull artifacts from our caching repos. If you wish to push to Artifactory, you will need an [Artifactory project and private repository first](./setup-artifactory-service-account-repository-project.md). After your set up your private repository, follow these instructions to pull from them.
+After you've [set up your Artifactory service account](./setup-artifactory-service-account-repository-project.md), you can pull artifacts from the platform's caching repositories. If you wish to push to Artifactory, you will need an [Artifactory project and private repository first](./setup-artifactory-service-account-repository-project.md). After your set up your private repository, follow these instructions to pull from them.
 
 ## On this page
 - [Pull Docker images from Artifactory](#pull-docker)
@@ -30,13 +30,13 @@ These steps apply to all Docker-type repositories, not just DockerHub. These ste
 
 ### Test your account and pull locally
 To test your account and start to pull locally, do the following:
-1. On the command line, login to the registry. Type the following:
+1. On the command line, log in to the registry. Type the following:
 
 ```bash
 docker login -u <USER_NAME> -p <USER_PASSWORD> artifacts.developer.gov.bc.ca/<REPO_NAME>
 ```
 
-For example, our DockerHub caching repository looks like this:
+For example, the DockerHub caching repository looks like this:
 
 ```bash
 docker login -u <USER_NAME> -p <USER_PASSWORD> artifacts.developer.gov.bc.ca/docker-remote
@@ -70,7 +70,7 @@ oc create secret docker-registry <pull-secret-name> \
 
 Make sure you have the correct username and password from the `artifacts-[ASAname]-[random]` secret.
 
-2. Add the secret to the `default` and `builder` OpenShift service account to allow these account to use this pull secret:
+2. Add the secret to the `default` and `builder` OpenShift service account to allow the account to use this pull secret:
 
 ```
 oc secrets link default <pull_secret_name>
@@ -78,9 +78,9 @@ oc secrets link builder <pull_secret_name>
 ```
 
 **Note**: Some OpenShift documentation implies that linking the secrets in this way is the only necessary step,
-without having to add the pull secret to your deployment/build configs as below. You can try this method, but we've found that users often run into problems. We recommend you specify the pullSecret in your configurations to avoid problems.
+without having to add the pull secret to your deployment/build configurations as below. You can try this method, but we've found that users often run into problems. We recommend you specify the pull secret in your configurations to avoid problems.
 
-3. Add your pull secret to your deployment config. Do the following:
+3. Add your pull secret to your deployment configuration. Do the following:
 
 ```yaml
 apiVersion: v1
@@ -157,7 +157,7 @@ When you're ready to build and deploy on OpenShift, add the following to your as
 npm config set registry https://artifacts.developer.gov.bc.ca/artifactory/api/npm/npm-remote/
 curl -u $AF_USERID:$AF_PASSWD https://artifacts.developer.gov.bc.ca/artifactory/api/npm/auth >> ~/.npmrc
 ```
-For example, you can check out the [repo-mountie assemble file](https://github.com/bcgov/repomountie/blob/master/.s2i/bin/assemble).
+For example, you can check out the [Repo-Mountie assemble file](https://github.com/bcgov/repomountie/blob/master/.s2i/bin/assemble).
 
 ## Maven<a name="maven"></a>
 
@@ -181,7 +181,7 @@ To deploy build artifacts through Artifactory you need to add a deployment eleme
 
 ### Pull other package types from Artifactory
 
-There are many different repository types on Artifactory. This documentation covers only those package types which are used commonly and/or for which teams have written documentation. If you are looking for instructions on how to pull other types of artifacts from Artifactory, see [JFrog's documentation on various repository types](https://www.jfrog.com/confluence/display/JFROG/Package+Management) for instructions.
+There are many different repository types in Artifactory. This documentation covers only those package types which are used commonly or for which teams have written documentation. If you are looking for instructions on how to pull other types of artifacts from Artifactory, see [JFrog's documentation on various repository types](https://www.jfrog.com/confluence/display/JFROG/Package+Management) for instructions.
 
 If your team uses a specific package type not shown here, consider creating a pull request for this document to share your knowledge.
 
