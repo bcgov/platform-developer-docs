@@ -28,17 +28,17 @@ Artifactory access is controlled through Artifactory service accounts. Service a
 
 ## Archeobot<a name="archeobot"></a>
 
-[Archeobot](bcgov/platform-services-archeobot) is a custom operator that gives teams the freedom to manage their own Artifactory resources. Archeobot can be used for the following:
-* Create new Artifactory service accounts
-* Request new Artifactory projects
-* Request quota changes to existing Artifactory projects
+[Archeobot](bcgov/platform-services-archeobot) is a custom operator that gives teams the freedom to manage their own Artifactory resources. Archeobot can be used to:
+* Create new Artifactory service accounts.
+* Request new Artifactory projects.
+* Request quota changes to existing Artifactory projects.
 
 ## Setup a service account<a name="setup"></a>
 
 Use the information below to request an Artifactory repository or service account.
 
 When referring to service accounts, keep in mind the following differences:
-* `ArtifactoryServiceAccount` refers to an Openshift object with type `ArtifactoryServiceAccount`. This is a custom resource that the Platform Team created in OpenShift.
+* `ArtifactoryServiceAccount` refers to an OpenShift object with type `ArtifactoryServiceAccount`. This is a custom resource that the Platform Services team created in OpenShift.
 * Artifactory "service account" refers to the actual account that exists inside the Artifactory software, which you can then use to interact with Artifactory's features. While closely related to each other, they're not the same.
 
 If you have a project set somewhere in the OpenShift 4 clusters, you already have a service account.
@@ -68,7 +68,7 @@ Run the following command to create a new service account:
 
 The `ASAname` is the name of the ArtifactoryServiceAccount object. It's not the name of the actual account. Use a name that describes how you plan on using the account. After Archeobot reconciles your changes, you can use this account to access Artifactory.
 
-For example, if you make an account specifically for use in your Jenkins pipeline, you might want to use the name `jenkins` for the Artifactory Service Account object. This results in a secret called `artifacts-jenkins-[random]` and an account name called `jenkins-[namespace]-[random]`. Don't worry about name collisions with other teams, your account name has your namespace plate in it (the six alphanumeric characters that go before the `-tools`, `-dev`, `-test,` or `-prod` in the namespace name), so even if there's another team who called their ArtifactoryServiceAccount `jenkins`, they have a different name.
+For example, if you make an account specifically for use in your Jenkins pipeline, you might want to use the name `jenkins` for the Artifactory Service Account object. This results in a secret called `artifacts-jenkins-[random]` and an account name called `jenkins-[namespace]-[random]`. Don't worry about name collisions with other teams, your account name has your namespace plate in it (the six alphanumeric characters that go before the `-tools`, `-dev`, `-test` or `-prod` in the namespace name), so even if there's another team who called their ArtifactoryServiceAccount `jenkins`, they have a different name.
 
 ## Delete a service account<a name="delete"></a>
 You can delete a service account by deleting the ArtifactoryServiceAccount object through the OpenShift CLI. Use the following command:
@@ -85,7 +85,7 @@ Archeobot detects that the object has been deleted and removes the service accou
 
 Then, the project provisioner detects the missing ArtifactoryServiceAccount object and creates a new one in your `tools` namespace, also called `default`. This happens within about 5 minutes. Archeobot detects the `new` object and creates a new service account for you in Artifactory. The username will be different. The random string at the end changes to reflect that the account is new with a new password and new privileges.
 
-If you've accidentally deleted secrets for a different Artifactory service account (one you created yourself, but not the `default` on in your `tools` namespace), follow the same process. The project provisioner doesn't recreate the object for you, you need to do that yourself. Delete the object, wait for Archeobot to clean everything up, and then create a new ArtifactoryServiceAccount object. You can use the same ASA name but remember the username for the account is different, because it has a different random string at the end.
+If you've accidentally deleted secrets for a different Artifactory service account (one you created yourself, but not the `default` one in your `tools` namespace), follow the same process. The project provisioner doesn't recreate the object for you, you need to do that yourself. Delete the object, wait for Archeobot to clean everything up, and then create a new ArtifactoryServiceAccount object. You can use the same ASA name but remember the username for the account is different, because it has a different random string at the end.
 
 ---
 Related links:
