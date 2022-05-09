@@ -18,7 +18,7 @@ content_owner: Ian Watts
 
 # CI/CD pipeline templates for Private Cloud teams
 
-As you develop your application for deployment to the BC Government's Private Cloud OpenShift platform, you should create a pipeline that automatically builds and tests your code so that your software delivery is efficient and secure. Use our pipeline templates to help you get started.
+As you develop your application for deployment to the BC Gov Private Cloud PaaS OpenShift platform, you should create a pipeline that automatically builds and tests your code so that your software delivery is efficient and secure. Use our pipeline templates to help you get started.
 
 ## On this page
 - [Pipeline templates](#pipeline-templates)
@@ -28,11 +28,11 @@ As you develop your application for deployment to the BC Government's Private Cl
 
 To help teams that want to get started with pipeline automation, use the best security practices for pipeline development, or both, the Platform Services team created pipeline templates for automation technologies supported on the Private Cloud platform.
 
-**Note**: Supported technologies are available on the platform now and the Platform Services team has expertise with these technologies to help the product teams that use it. Teams can use any other automation technology outside of the platform, but the team might not have the expertise to support them if they need help
+**Note**: Supported technologies are available on the platform, and the Platform Services team has expertise with these technologies to help the product teams that use it. Product teams can use any other automation technology outside of the platform, but the Platform Services team might not have the expertise to support them if they need help
 
 ## Pipeline templates<a name="pipeline-templates"></a>
 
-Any product teams working in the Silver and Gold clusters on the Private Cloud platform can use pipeline templates. For guides on getting started with each of the supported technologies, see the [Security Pipeline Templates](https://github.com/bcgov/security-pipeline-templates) repository.
+Any product teams working in the Silver or Gold clusters on the BC Gov Private Cloud PaaS can use pipeline templates. For guides on getting started with each of the supported technologies, see the [Security Pipeline Templates](https://github.com/bcgov/security-pipeline-templates) repository.
 
 ## Automation technologies<a name="automation-technologies"></a>
 
