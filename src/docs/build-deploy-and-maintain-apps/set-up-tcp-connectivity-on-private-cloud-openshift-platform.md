@@ -16,8 +16,8 @@ author: Ian Watts
 content_owner: Ian Watts
 ---
 
-# Set up TCP connectivity on the Private Cloud OpenShift Platform
-Use this page to learn to configure direct TCP access to services in the Private Cloud Openshift Platform using the Porter Operator.
+# Set up TCP connectivity on the BC Gov Private Cloud PaaS OpenShift platform
+Use this page to learn how to configure direct TCP access to services on the BC Gov Private Cloud PaaS Openshift platform using the Porter Operator.
 
 ## On this page
 - [Direct TCP access](#direct-tcp-access)
@@ -26,7 +26,7 @@ Use this page to learn to configure direct TCP access to services in the Private
 - [Troubleshooting](#troubleshooting)
 
 ## Direct TCP access<a name="direct-tcp-access"></a>
-Project teams may enable direct non-HTTPS TCP access to services within their namespaces by creating a TransportServerClaim resource.
+Product teams may enable direct non-HTTPS TCP access to services within their namespaces by creating a TransportServerClaim resource.
 
 This feature is available in all production clusters, including Silver and Gold/GoldDR.
 
@@ -83,7 +83,7 @@ yourservice-tsc  1m
 ```
 
 ### Create network policy
-Create a `NetworkPolicy` to allow traffic to reach the service's pods through the load balancers. Use the following template to create a `NetworkPolicy`. Set the `namespace` and `podSelector` as appropriate.
+Create a `NetworkPolicy` to allow traffic to reach the Service's pods through the load balancers. Use the following template to create a `NetworkPolicy`. Set the `namespace` and `podSelector` as appropriate.
 
 The `podSelector` parameters must match the pods that are associated with the Service used in the `TransportServerClaim`.
 
@@ -127,7 +127,7 @@ $ timeout 5 bash -c ">/dev/tcp/142.34.194.68/65555"; echo $?
 ```
 Any return code other than `0` indicates a problem.  If that's the case, inquire about the firewall and go to [Troubleshooting](#troubleshooting).
 
-## Set up TCP connectivity on the Gold Kamloops/Gold Calgary Cross-Cluster<a name="setup-gold-golddr"></a>
+## Set up TCP connectivity on the Gold Kamloops/Gold Calgary cross-cluster<a name="setup-gold-golddr"></a>
 The Gold and GoldDR clusters are designed to be used in tandem. Production applications are typically served from the Gold cluster. Deployments in the GoldDR cluster are identical to Gold and are meant to be quickly activated as the live production system if there is a problem with the Gold cluster.
 
 Use the Porter Operator to enable direct TCP access from Gold to GoldDR and vice versa. For example, this may be used for database replication.
@@ -175,7 +175,7 @@ yourservice-tsc  1m
 ```
 
 ### Create network policy
-Create a `NetworkPolicy` to allow traffic to reach the service's pods through the load balancers. Use the following template to create a `NetworkPolicy`. Set the `namespace` and `podSelector` as appropriate.
+Create a `NetworkPolicy` to allow traffic to reach the Service's pods through the load balancers. Use the following template to create a `NetworkPolicy`. Set the `namespace` and `podSelector` as appropriate.
 
 The `podSelector` parameters must match the pods that are associated with the Service used in the `TransportServerClaim`.
 
