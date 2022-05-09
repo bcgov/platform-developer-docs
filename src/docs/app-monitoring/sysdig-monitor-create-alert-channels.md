@@ -76,7 +76,7 @@ To create a team notification channel, do the following:
 
 1. Click `Notification Channels` and `Add Notification Channel`. Choose `Webhook` as the type.
 
-1. Use the webhook URL generated from RocketChat and configure the notification channel.
+1. Use the webhook URL generated from Rocket.Chat and configure the notification channel.
 
 1. Click `Save` and go to the `Alerts` section or start adding custom alerts to any of your configured dashboards.
 
