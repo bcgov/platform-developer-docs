@@ -32,8 +32,8 @@ Every team member may not need access to OpenShift. Consider the security princi
 
 If you want to grant a new user access to OpenShift they must have the following:
 
-- a GitHub account (ideally with a complete profile)
-- two-factor authentication enabled on their GitHub account
+- A GitHub account (ideally with a complete profile)
+- Two-factor authentication enabled on their GitHub account
 
 Additionally, the namespace where you are adding the new user must have already have been provisioned through [the new project provisioning process](./provision-new-openshift-project.md) and must have one or more administrative users.
 
