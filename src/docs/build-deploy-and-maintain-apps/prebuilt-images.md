@@ -21,13 +21,13 @@ The Platform Services team maintains a number of prebuilt images. Use these imag
 
 Prebuilt images provide the following advantages:
 
-* Teams don't have to maintain their own builds
+* Teams don't have to maintain their own builds.
 
-* The entire cluster benefits from lower resource consumption
+* The entire cluster benefits from lower resource consumption.
 
-* Builds tagged with "latest" are regularly rebuilt to pick up the latest security enhancements
+* Builds tagged with "latest" are regularly rebuilt to pick up the latest security enhancements.
 
-* Images are available to all clusters through Artifactory
+* Images are available to all clusters through Artifactory.
 
 The images are available from Artifactory and you can use the `artifactory-creds` secret in your namespaces to pull the images.
 
@@ -51,8 +51,8 @@ spec:
       containers:
 ```
 
-## App Assessment<a name="app-assessment"></a>
-Use the App Assessment application to identify configuration issues in your namespaces and to improve resource consumption and health checks. For more information, see [AppAssessment](https://github.com/bcgov/AppAssessment).
+## AppAssessment<a name="app-assessment"></a>
+Use the AppAssessment application to identify configuration issues in your namespaces and to improve resource consumption and health checks. For more information, see [AppAssessment](https://github.com/bcgov/AppAssessment).
 
 Images: https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/app-assessment
 
