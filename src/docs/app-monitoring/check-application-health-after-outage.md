@@ -27,7 +27,7 @@ Still, it's always possible that an outage affects the platform and brings down 
 - [Check your application](#check-application)
 - [Keep track of recovery steps](#keep-track)
 
-These guidelines assume that you built your application in a cloud-native, highly resilient manner that makes effective use of the strengths of the OpenShift platform. Make sure you follow our [Resiliency Guidelines](https://developer.gov.bc.ca/Developer-Tools/Resiliency-Guidelines). If your application is not cloud-native in its design, it won't benefit from the higher adaptability and recoverability of the platform and may need additional work to recover from a large outage.
+These guidelines assume that you built your application in a cloud-native, highly resilient manner that makes effective use of the strengths of the OpenShift platform. Make sure you follow our [application resiliency guidelines](https://developer.gov.bc.ca/Developer-Tools/Resiliency-Guidelines). If your application is not cloud-native in its design, it won't benefit from the higher adaptability and recoverability of the platform and may need additional work to recover from a large outage.
 
 ## Check reporting channels<a name="check-channels"></a>
 
@@ -79,7 +79,7 @@ If your route exists but can't connect to a container, even though the container
 
 Your pipeline isn't part of the core application you're likely to be running and often gets missed after an outage. Serverless pipelines are unlikely to be affected by platform-wide outages (other than being unavailable for the duration of the outage). However, if your pipeline runs via software hosted in your tools namespace (such as Jenkins), you should check that this software has recovered correctly.
 
-Run a test pipeline to make sure everything works as expected and you don't get caught with a problem pipeline once you start updating your app again.
+Run a test pipeline to make sure everything works as expected and you don't get caught with a problem pipeline once you start updating your application again.
 
 If you have problems with your pipeline installation, delete the member pods and allow them to restart, then try again.
 
@@ -91,7 +91,7 @@ If you're running RabbitMQ as part of your application, you may need to restart 
 
 Create an issue template in GitHub for your application that details what you need to check to ensure that your application is up and running after an outage.
 
-Below is an example of a GitHub template that the Platform Team might use to check on RocketChat's recovery in the event of an outage. Use this example to inform the development of an appropriate issue template for your own application(s).
+Below is an example of a GitHub template that the Platform Services team might use to check on Rocket.Chat's recovery in the event of an outage. Use this example to inform the development of an appropriate issue template for your own application(s).
 
 ```
 ---
