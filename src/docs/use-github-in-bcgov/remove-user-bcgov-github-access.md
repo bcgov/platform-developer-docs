@@ -16,7 +16,7 @@ author: Jonathan Bond
 content_owner: Olena Mitovska
 ---
 
-# Remove a user's BCGov GitHub access
+# Remove a user's BC Gov GitHub access
 
 When a user no longer needs access to a repository, the product owner or administrator of the repository must remove the user. They also have to request removal of their access from the organization by using the [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/).
 
