@@ -14,6 +14,8 @@ audience: developer, technical lead
 author: Jonathan Bond
 
 content_owner: Cailey Jones
+
+sort_order: 3
 ---
 
 # Log in to OpenShift
