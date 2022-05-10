@@ -24,15 +24,15 @@ Each new request must be reviewed and approved, including requests for additiona
 
 ## Submit a project provisioning request
 
-If you meet the criteria, book an onboarding meeting with the Platform Product Director to confirm your project's suitability by contacting the Platform Services Team at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca). After the alignment meeting, your product owner or your Ministry's DevOps Chapter Lead can submit a project provisioning request through the [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing). Once your request is approved, the project is created and the requestor is notified when provisioning is complete.
+If you meet the criteria, book an onboarding meeting with the BC Gov Private Cloud PaaS product director to confirm your project's suitability, by contacting the Platform Services team at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca). After the alignment meeting, your product owner or your ministry's DevOps chapter lead can submit a project provisioning request through the [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing). Once your request is approved, the project is created and the requestor is notified when provisioning is complete.
 
-**Note**: The onboarding meeting with the [Platform Product Director](mailto:Olena.Mitovska@gov.bc.ca) is a prerequisite to having a project provisioning request approved.
+**Note**: The onboarding meeting with the platform product director is a prerequisite to having a project provisioning request approved.
 
 **For Attorney General (AG) teams only**: Contact Ryan Loiselle at Ryan.Loiselle@gov.bc.ca to submit the request for you.
 
 OpenShift namespaces are auto-generated at provisioning in the form of `<generated alphanumeric string>-<environment>`. We call them `project license plates`.
 
-While you wait for the alignment meeting, check out our [OnBoarding Guide for BC Gov DevOps Platform](https://docs.google.com/presentation/d/1UcT0b2YTPki_o0et9ZCLKv8vF19eYakJQitU85TAeD4/edit?usp=sharing) to learn about the available services and the easier way to integrate with the Platform Community.
+While you wait for the alignment meeting, check out our [OnBoarding Guide for BC Gov DevOps Platform](https://docs.google.com/presentation/d/1UcT0b2YTPki_o0et9ZCLKv8vF19eYakJQitU85TAeD4/edit?usp=sharing) to learn about the available services and the easier way to integrate with the platform community.
 
 ---
 Related links:
