@@ -14,6 +14,8 @@ audience: developer
 author: Jonathan Bond
 
 content_owner: Tyler Krys
+
+sort_order: 1
 ---
 
 # About the design system

@@ -14,6 +14,8 @@ audience: developer, technical lead
 author: Jonathan Bond
 
 content_owner: Olena Mitovska
+
+sort_order: 1
 ---
 
 # B.C. government organizations in Github

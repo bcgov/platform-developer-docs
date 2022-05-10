@@ -14,6 +14,8 @@ audience: developer
 author: Jonathan Bond
 
 content_owner: Shelly Han
+
+sort_order: 8
 ---
 
 # Start working in the BCGov GitHub organization

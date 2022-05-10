@@ -14,6 +14,8 @@ audience: developer, technical lead
 author: Jonathan Bond
 
 content_owner: Shelly Han
+
+sort_order: 3
 ---
 
 # Create alert channels in Sysdig Monitor

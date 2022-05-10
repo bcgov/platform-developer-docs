@@ -15,6 +15,7 @@ author: Jonathan Bond
 
 content_owner: Cailey Jones
 
+sort_order: 7
 ---
 # Push and pull artifacts in Artifactory
 After you've [set up your Artifactory service account](./setup-artifactory-service-account-repository-project.md), you can pull artifacts from the platform's caching repositories. If you wish to push to Artifactory, you will need an [Artifactory project and private repository first](./setup-artifactory-service-account-repository-project.md). After your set up your private repository, follow these instructions to pull from them.

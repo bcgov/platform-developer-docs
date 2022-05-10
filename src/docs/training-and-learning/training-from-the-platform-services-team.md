@@ -14,6 +14,8 @@ audience: developer, technical lead, product owner
 author: Matt Spencer
 
 content_owner: Olena Mitovska
+
+sort_order: 1
 ---
 # Training from the Platform Services team
 Learning how to build in OpenShift can be hard. We’ve put together a number of resources to help.

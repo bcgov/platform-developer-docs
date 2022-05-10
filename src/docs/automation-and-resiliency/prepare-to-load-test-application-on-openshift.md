@@ -14,6 +14,8 @@ audience: developer
 author: Jonathan Bond
 
 content_owner: Cailey Jones
+
+sort_order: 7
 ---
 
 # Prepare to load test an application on OpenShift

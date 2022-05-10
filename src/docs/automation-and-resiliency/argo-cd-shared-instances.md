@@ -14,6 +14,8 @@ audience: developer
 author: Jonathan Bond
 
 content_owner: Ian Watts
+
+sort_order: 6
 ---
 
 # Argo CD shared instances
