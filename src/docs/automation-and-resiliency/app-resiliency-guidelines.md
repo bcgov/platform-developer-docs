@@ -40,7 +40,7 @@ All you need to do is make sure that your application takes advantage of this th
 
 ## A Monitored App<a name="monitored"></a>
 
-An app that runs without failing most of the time is great, but things happen. Maintenance, failures, network problems, and sneaky little issues in the design or implementation of your app can cause strange behaviours or outages. Our platform is extremely highly available, (99.99% available as of mid-2020!) but that doesn't mean you should assume that your application is guaranteed the same - application outages can happen for reasons other than full platform outages.
+An app that runs without failing most of the time is great, but things happen. Maintenance, failures, network problems, and sneaky little issues in the design or implementation of your app can cause strange behaviours or outages. Our platform is extremely highly available, (99.98% available for the last 12 months as of mid-2022!) but that doesn't mean you should assume that your application is guaranteed the same - application outages can happen for reasons other than full platform outages.
 
 The best way to keep on top of these issues in a proactive manner is to monitor your application and ensure that there are appropriate notifications of issues. There are tons of ways that such a monitoring can be implemented:
 
