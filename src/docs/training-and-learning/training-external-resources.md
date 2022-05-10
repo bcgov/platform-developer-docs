@@ -17,7 +17,7 @@ content_owner: Olena Mitovska
 ---
 # External Training Resources 
 
-The resources below are from sources outside of the BC Government. These provide additional context and support to go along with your [Training from the Platform Services Team](./training-external-resources.md)   
+The resources below are from sources outside of the B.C. government. They provide additional context and support to go along with your [training from the Platform Services team](./training-external-resources.md)   
 
 ## Websites:
 
@@ -50,5 +50,5 @@ The resources below are from sources outside of the BC Government. These provide
 
 ---
 Related links:
-- [Training from the Platform Services Team](./training-external-resources.md)
+- [Training from the Platform Services team](./training-external-resources.md)
 ---
