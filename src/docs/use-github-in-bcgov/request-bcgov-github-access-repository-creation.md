@@ -16,7 +16,7 @@ author: Jonathan Bond
 content_owner: Olena Mitovska
 ---
 
-# Request BCGov GitHub access or repository creation
+# Request BC Gov GitHub access or repository creation
 
 If you want to invite a new user to contribute to the [BC Gov](https://github.com/orgs/bcgov/dashboard) GitHub repositories, they must have a GitHub account (ideally with a complete profile) with two-factor authentication enabled.
 
@@ -60,7 +60,7 @@ Include the following in the request:
 * New user's GitHub ID
 * New user's email address associated with the GitHub account
 * New user's organization (the government ministry and the division, branch, etc.) or company
-* New user's role on the project (for example, developer, QA, devops specialist, scrum master)
+* New user's role on the project (for example, developer, QA, DevOps specialist, scrum master)
 * GitHub repositories <!-- that they require access to? If they exist? -->
 * **Optional*: Expiry date. The team must remove users from the repository when they no longer need it.
 
