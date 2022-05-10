@@ -16,17 +16,17 @@ author: Jonathan Bond
 content_owner: Shelly Han
 ---
 
-# Start working in the BCGov GitHub organization
+# Start working in the BC Gov GitHub organization
 
-If you plan sharing code developed by or for the BC government, [evaluate the content](./evaluate-open-source-content.md) and get approval from your Deputy Minister. Deputy Ministers may choose to delegate this authority to Ministry Chief Information Officers (CIOs).
+If you plan to share code developed by or for the B.C. government, [evaluate the content](./evaluate-open-source-content.md) and get approval from your deputy minister. Deputy ministers may choose to delegate this authority to ministry chief information officers (CIOs).
 
 ## On this page
 - [Post existing code or projects](#post-existing)
 - [Initiate new code or projects](#initiate)
 - [Contribute to outside code or projects](#contribute)
 
-The BC government follows the Open Development Standard, which outlines the following:
-* [Minimum content requirements](./required-pages-for-github-repository.md): README, contributing file, code of conduct, and license
+The B.C. government follows the Open Development Standard, which outlines the following:
+* [Minimum content requirements](./required-pages-for-github-repository.md): README, contributing file, code of conduct and license
 * Roles and responsibilities
 * Basic mechanics of working in GitHub
 
@@ -36,9 +36,9 @@ Generally, GitHub projects fall under one of the three following categories, wit
 
 Projects like this follow two basic approaches, but can vary.
 
-* **Throw it over the wall**: You have code that you want to make it available because it might be useful to others. However, you don't want to make an open-ended commitment to maintain an active open-source project.
+* **Throw it over the wall**: You have code that you want to make available because it might be useful to others. However, you don't want to make an open-ended commitment to maintain an active open-source project.
 
-* **Create and run a sustainable project**: You have code that you want to make available and then run as an active project: accepting patches, soliciting code contributions, adding new maintainers, participating in user and developer forums, doing regular releases, and more.
+* **Create and run a sustainable project**: You have code that you want to make available and then run as an active project: accepting patches, soliciting code contributions, adding new maintainers, participating in user and developer forums, doing regular releases and more.
 
 In both cases, the basic steps to release the code are similar, while the implications for project management and resourcing are not. Key requirements in these scenarios include the following:
 
@@ -54,7 +54,7 @@ In both cases, the basic steps to release the code are similar, while the implic
 
 - Assess any dependencies
 
-	Check library dependencies, sample, or config data to make sure it's appropriate for release or is separated out, if needed.
+	Check library dependencies, sample or config data to make sure it's appropriate for release or is separated out, if needed.
 
 If you are intending to maintain an active project, make sure to establish the appropriate processes and terms to manage contributions.
 
@@ -69,10 +69,10 @@ These are projects that you want to manage as an open-source, collaborative proj
 
 ## Contribute to outside code or projects<a name="contribute"></a>
 
-There may be circumstances where it's useful and appropriate for employees to contribute to non-BC government repositories as a part of their work. In these cases, consider the following:
+There may be circumstances where it's useful and appropriate for employees to contribute to non-B.C. government repositories as a part of their work. In these cases, consider the following:
 
-- Make sure contributions are relevant and the size and scope are consistent with your priorities. This may involve checking with your supervisor.
-- Make sure the licensing provisions of the project you are contributing to are appropriate. For example, it's licensed under an OSI approved license and that you aren't required to assign copyright to the project.
+- Make sure contributions are relevant, and the size and scope are consistent with your priorities. This may involve checking with your supervisor.
+- Make sure the licensing provisions of the project you are contributing to are appropriate. For example, it's licensed under an OSI approved license and you aren't required to assign copyright to the project.
 
 	If the project requires you to sign a contributor agreement, get advice from Legal Services as to whether the terms are appropriate.
 
@@ -80,7 +80,7 @@ There may be circumstances where it's useful and appropriate for employees to co
 
 - Confirm your [authority to license](./license-your-github-repository.md)
 
-Employees can also contribute to non-BC government owned intellectual property rights outside their professional roles by using their personal email linked to their GitHub account.
+Employees can also contribute to non-B.C. government owned intellectual property rights outside their professional roles by using their personal email linked to their GitHub account.
 
 ---
 Related links:
