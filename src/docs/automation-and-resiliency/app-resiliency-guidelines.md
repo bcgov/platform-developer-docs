@@ -13,7 +13,7 @@ audience: developer, technical lead, product owner
 
 author: Matt Spencer
 
-content_owner: 
+content_owner: Olena Mitovska
 ---
 # Application Resiliency Guidelines
 
@@ -68,7 +68,7 @@ There are plenty of options for ensuring that this change in approach helps your
 
 Because all applications on OpenShift should be architected with the expectation that any node can go down at any time, it's imperative that applications be easy and quick to redeploy, requiring - most importantly - **no human interaction in the process**. Once the platform is given the command to deploy your software on a new pod, the process between starting up that new pod and having an accessible and useable app should require no human interference whatsoever.
 
-This means that all of your deployment configuration should be automated and kept in source-control to ensure that it is easily accessible, consistent, and up-to-date at all times! And that includes any side processes like your monitoring tasks from point 1!
+This means that all of your deployment configuration should be automated and kept in source-control to ensure that it is easily accessible, consistent, and up-to-date at all times! And that includes any side processes like your monitoring tasks from the section above!
 
 ## A Recoverable App<a name="recoverable"></a>
 
@@ -108,7 +108,7 @@ You may note that this document is pretty vague about the "hows" of these princi
 
 If you're looking for some general guidance on what high availability options exist in Openshift, our [Openshift 101](https://developer.gov.bc.ca/ExchangeLab-Course:-Openshift-101) course offering covers a number of options, including how to deploy a basic application with high availability.
 
-<!-- *Will this still apply for new tech docs site?* This is where the community comes in - if you have a highly available application, please feel free to fork this document and add links to examples from your application (along with information about your stack and any explanations you feel might be necessary). The more you reach out to help your fellow developer, the stronger a community we will be! -->
+This is where the community comes in - if you have a highly available application, please feel free to fork this document and add links to examples from your application (along with information about your stack and any explanations you feel might be necessary). The more you reach out to help your fellow developer, the stronger a community we will be!
 
 And it's very important to remember that we in the BC Government are part of a larger, international community of developers working to create better and more resilient applications. There are a lot of great resources available on the broader internet that we could never hope to match on our own.
 
@@ -154,6 +154,11 @@ The following are some fantastic examples of applications that operate on the pl
 
 ---
 Related links:
+* [12 Factor App](https://12factor.net/)
+* [Openshift: Compute Resources](https://docs.openshift.com/container-platform/3.11/dev_guide/compute_resources.html#dev-compute-resources)
+* [Horizontal Pod Autoscaler](https://docs.openshift.com/container-platform/3.11/dev_guide/pod_autoscaling.html)
+* [Quality of Service](https://docs.openshift.com/container-platform/3.11/dev_guide/compute_resources.html#quality-of-service-tiers)
+
 
 Rewrite sources:
 * https://developer.gov.bc.ca/Developer-Tools/Resiliency-Guidelines
