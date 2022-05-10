@@ -15,7 +15,7 @@ author: Ian Watts
 
 content_owner: Ian Watts
 
-sort_order: 5
+sort_order: 4
 ---
 
 # Set up TCP connectivity on the BC Gov Private Cloud PaaS OpenShift platform
