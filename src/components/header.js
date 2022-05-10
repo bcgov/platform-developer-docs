@@ -14,10 +14,7 @@ const StyledHeader = styled.header`
   background-color: #036;
   border-bottom: 2px solid #fcba19;
   color: white;
-  position: sticky;
-  top: 0;
   width: 100%;
-  z-index: 1;
 
   a {
     margin: 0 25px;
