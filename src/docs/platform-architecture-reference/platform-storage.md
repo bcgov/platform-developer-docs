@@ -22,9 +22,9 @@ We use several different storage technologies on the OpenShift platform. Current
 
 * **FILE**: File storage is an all-purpose storage type that can be attached to one or more containers. It's the recommended storage class for most general application uses and is powered by Network File System (NFS).
 
-* **BLOCK**: Block storage offers additional performance and reliability for databases or similar workloads, but is only able to be attached to 1 container at a time. This is powered by iSCSI.
+* **BLOCK**: Block storage offers additional performance and reliability for databases or similar workloads, but is only able to be attached to one container at a time. This is powered by iSCSI.
 
-* **S3 Object Storage**: Object based storage that is available via a web based API instead of through a mounted directory. A common implementation of this is the Amazon S3 API. This allows remote access storage over the internet that does not require directly attaching to a running system.
+* **S3 Object Storage**: Object-based storage that is available via a web-based API instead of through a mounted directory. A common implementation of this is the Amazon S3 API. This allows remote access storage over the internet that does not require directly attaching to a running system.
 
 ## On this page
 - [Storage services](#service)
@@ -55,21 +55,21 @@ See the [Red Hat documentation](https://access.redhat.com/documentation/en-us/re
 
 ### S3-Compatible Object Storage (Dell EMC Elastic Cloud Storage)
 
-For applications that need to store large amounts of unstructured data we recommend using the S3-compliant on-prem [Object Store Service](https://ssbc-client.gov.bc.ca/services/ObjectStorage/overview.htm) offered by OCIO's Enterprise Hosting Branch. The Object Store Services provides storage for unstructured data such as images, pdfs, and other types of files. NetApp storage offered on the OCP4 Platform isn't suitable large amounts of unstructured data. NetApp storage should only be used for structured data such as databases that require high-I/O workloads.
+For applications that need to store large amounts of unstructured data we recommend using the S3-compliant on-premises [Object Store Service](https://ssbc-client.gov.bc.ca/services/ObjectStorage/overview.htm) offered by the OCIO Enterprise Hosting branch. The Object Store Services provides storage for unstructured data such as images, PDFs and other types of files. NetApp storage offered on the OpenShift 4 Platform isn't suitable for large amounts of unstructured data. NetApp storage should only be used for structured data such as databases that require high-I/O workloads.
 
 The OCIO has an [object store](https://ssbc-client.gov.bc.ca/services/ObjectStorage/overview.htm) service that supports the AWS S3 protocol. The service is aimed at objects typically over 100 KB, updated infrequently, retained longer term, with performance response targets of 100ms or more.
 
-Contact your Ministry IMB to get access to the Ministry service account that controls access and where a bucket for your app will be provisioned.
+Contact your ministry IMB to get access to the ministry service account that controls access and where a bucket for your application will be provisioned.
 
 #### Details
 
 This service replicates data between the two datacenters and the API endpoints are load balanced between them to ensure uptime even if a datacenter goes offline.
 
-Object Storage Service is highly fault tolerant and uses erasure coding within the cluster, as well as asynchronous replication and automatic failover to the Calgary datacenter. The solution also offers configurable object versioning, allowing for file recovery. Due to the high fault tolerance, versioning, and redundancy, most teams don't implement additional backups. A recommended design pattern would be to replace the application's Minio storage with the direct integration with the S3 API within the Object Storage Enterprise Services.
+Object Storage Service is highly fault tolerant and uses erasure coding within the cluster, as well as asynchronous replication and automatic failover to the Calgary data center. The solution also offers configurable object versioning, allowing for file recovery. Due to the high fault tolerance, versioning and redundancy, most teams don't implement additional backups. A recommended design pattern would be to replace the application's Minio storage with the direct integration with the S3 API within the Object Storage Enterprise Services.
 
 ## Tools<a name="tools"></a>
 
-You can use tools to manage your persistent storage beyond the features built in to OpenShift.
+You can use tools to manage your persistent storage beyond the features built into OpenShift.
 
 * **Database backups**: We have a community project to help teams implement regular backups of their databases hosted within the platform. The repository is called [backup-container](https://github.com/bcdevops/backup-container)
 
@@ -78,9 +78,9 @@ You can use tools to manage your persistent storage beyond the features built in
 ## Storage details<a name="storage-details"></a>
 
 ### Quotas
-All storage sizes are in GiB and backup quotas default to half the storage size. These quotas can be requested in the [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing) by a project's Product Owner or the Technical Lead.
+All storage sizes are in GiB and backup quotas default to half the storage size. These quotas can be requested in the [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing) by a project's product owner or technical lead.
 
-**Note**: You must to provide proof of increased storage needs to the Platform Product Director before the request can be approved and more storage is allocated to a namespace.
+**Note**: You must provide proof of increased storage needs to the platform product director before the request can be approved and more storage is allocated to a namespace.
 
 All storage quotas include 60 PVCs and 5 VolumeSnapshots.
 
