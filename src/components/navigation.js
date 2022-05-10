@@ -197,6 +197,7 @@ export default function Navigation() {
                     frontmatter {
                       slug
                       title
+                      sort_order
                     }
                     parent {
                       ... on File {
@@ -254,6 +255,27 @@ export default function Navigation() {
                     noCategory.push(node);
                 }
               });
+
+              function sortPages(a, b) {
+                if (a?.frontmatter?.sort_order > b?.frontmatter?.sort_order) {
+                  return 1;
+                }
+                if (a?.frontmatter?.sort_order < b?.frontmatter?.sort_order) {
+                  return -1;
+                }
+                return 0;
+              }
+
+              appMonitoring.sort(sortPages);
+              automationAndResiliency.sort(sortPages);
+              buildDeployAndMaintainApps.sort(sortPages);
+              designSystem.sort(sortPages);
+              openshiftProjectsAndAccess.sort(sortPages);
+              platformArchitectureReference.sort(sortPages);
+              reusableCodeAndServices.sort(sortPages);
+              trainingAndLearning.sort(sortPages);
+              useGithubInBcgov.sort(sortPages);
+              noCategory.sort(sortPages);
 
               return (
                 <nav id="nav-menu">
