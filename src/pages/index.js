@@ -136,7 +136,11 @@ const IndexPage = () => (
         <Card>
           <h3>Automation and resiliency</h3>
           <ul>
-            <li>App resiliency guidelines</li>
+            <li>
+              <Link to={"/app-resiliency-guidelines"}>
+                App resiliency guidelines
+              </Link>
+            </li>
             <li>CI/CD Pipeline automation</li>
           </ul>
         </Card>
