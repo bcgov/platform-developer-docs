@@ -34,7 +34,7 @@ Choose a licence and place a licence file in your repository before you do anyth
 Depending on the licence you choose, add boilerplate text for the applicable licence to your README file.
 
 ## ReadMe<a name="readme"></a>
-GitHub has extensive documentation on how to create a good README file for your repository. Follow these guidelines when you create your readme.
+GitHub has extensive documentation on how to create a good README file for your repository. Follow these guidelines when you create your README.
 
 For more information, see [About READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes).
 
@@ -50,7 +50,7 @@ Write a clear code of conduct to ensure contributors to your project foster an o
 Two good starting points to create a code of conduct for your project are the [Contributor Covenant](https://www.contributor-covenant.org/version/1/4/code-of-conduct/) and GitHub's guidelines on [Healthy contributions](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions).
 
 ## Contribution guidelines<a name="contribution"></a>
-Write concise and clear contribution guidelines. Let potential contributors know how you prefer they work on projects and give them the correct info to do so.
+Write concise and clear contribution guidelines. Let potential contributors know how you prefer they work on projects and give them the correct information to do so.
 
 For example, if you prefer contributors fork repositories and [submit pull requests](https://help.github.com/articles/using-pull-requests/), provide links to the applicable documentation.
 
