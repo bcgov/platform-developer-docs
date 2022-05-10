@@ -159,6 +159,14 @@ Related links:
 * [Horizontal Pod Autoscaler](https://docs.openshift.com/container-platform/3.11/dev_guide/pod_autoscaling.html)
 * [Quality of Service](https://docs.openshift.com/container-platform/3.11/dev_guide/compute_resources.html#quality-of-service-tiers)
 
+* [Pod Terminations](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-termination)
+* [Openshift 101](https://developer.gov.bc.ca/ExchangeLab-Course:-Openshift-101)
+* [PodDisruptionBudgets](https://kubernetes.io/docs/tasks/run-application/configure-pdb/)
+* [Tools: BCDevOps Backup Container](https://github.com/BCDevOps/backup-container)
+* [Tools: Patroni](https://github.com/BCDevOps/platform-services/tree/master/apps/pgsql/patroni)
+* [Example: Rocketchat](https://github.com/BCDevOps/platform-services/tree/master/apps/rocketchat) - Platform Team
+* [Example: Keycloak](https://github.com/bcgov/ocp-sso) - Platform Team
+* [Example: Devhub](https://github.com/bcgov/devhub-app-web) - Developer Experience
 
 Rewrite sources:
 * https://developer.gov.bc.ca/Developer-Tools/Resiliency-Guidelines
