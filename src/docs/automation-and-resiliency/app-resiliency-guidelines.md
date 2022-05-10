@@ -3,13 +3,13 @@ title: App Resiliency Guidelines
 
 slug: app-resiliency-guidelines
 
-description: Describes 
+description: Describes the design and implementation process for creatin resilient applications
 
-keywords: openshift,
+keywords: openshift, resiliency, design, 12-factor, available, deployable, recoverable, resource, communtiy support, tools, examples
 
-page_purpose: 
+page_purpose: To provide an overview of the methodology for designing resilient applications
 
-audience: developer, technical lead
+audience: developer, technical lead, product owner
 
 author: Matt Spencer
 
@@ -142,7 +142,7 @@ The following are some fantastic examples of applications that operate on the pl
 **[Keycloak](https://github.com/bcgov/ocp-sso)** - Platform Team
 
 * A highly available implementation of Keycloak
-* An example of how to implement Patroni (in the future, this will become an example of highly-available EDB instead)
+* An example of how to implement Patroni (in the future, this will become an example of a highly-available Enterprise DataBase (EDB) instead)
 
 **[Devhub](https://github.com/bcgov/devhub-app-web)** - Developer Experience
 
