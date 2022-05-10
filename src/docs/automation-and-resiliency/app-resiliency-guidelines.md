@@ -14,6 +14,8 @@ audience: developer, technical lead, product owner
 author: Matt Spencer
 
 content_owner: Olena Mitovska
+
+sort_order: 2
 ---
 # Application Resiliency Guidelines
 
