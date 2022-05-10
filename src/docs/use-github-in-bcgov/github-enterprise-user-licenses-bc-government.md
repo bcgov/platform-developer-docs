@@ -14,6 +14,8 @@ audience: technical lead, product owner
 author: Jonathan Bond
 
 content_owner: Olena Mitovska
+
+sort_order: 4
 ---
 
 # GitHub Enterprise user licences in the B.C. government

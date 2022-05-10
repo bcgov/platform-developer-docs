@@ -14,6 +14,8 @@ audience: developer, technical lead
 author: Jonathan Bond
 
 content_owner: Olena Mitovska
+
+sort_order: 2
 ---
 # Reusable services list
 Find details on the following services or tools you can use as part of your project in `bcgov`.

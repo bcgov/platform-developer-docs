@@ -30,6 +30,7 @@ export const pageQuery = graphql`
         audience
         author
         content_owner
+        sort_order
       }
     }
   }

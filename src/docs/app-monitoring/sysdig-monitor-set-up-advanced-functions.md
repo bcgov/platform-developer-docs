@@ -14,6 +14,8 @@ audience: developer, technical lead
 author: Jonathan Bond
 
 content_owner: Shelly Han
+
+sort_order: 2
 ---
 
 # Set up advanced functions in Sysdig Monitor<a name="advanced-functions"></a>

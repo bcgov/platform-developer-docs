@@ -14,6 +14,8 @@ audience: technical lead, developer
 author: Jonathan Bond
 
 content_owner: Olena Mitovska
+
+sort_order: 7
 ---
 # Required pages for a GitHub repository
 When you create a repository in the `bcgov` organization, add the following markdown files:

@@ -14,6 +14,8 @@ audience: developer
 author: Jonathan Bond
 
 content_owner: Cailey Jones
+
+sort_order: 4
 ---
 
 # Check application health after an outage

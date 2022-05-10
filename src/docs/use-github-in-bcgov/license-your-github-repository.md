@@ -14,6 +14,8 @@ audience: developer, technical lead
 author: Jonathan Bond
 
 content_owner: Olena Mitovska, Nick Corcoran
+
+sort_order: 9
 ---
 # License your GitHub repository
 

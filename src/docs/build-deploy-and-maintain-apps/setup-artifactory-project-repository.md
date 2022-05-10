@@ -14,6 +14,8 @@ audience: technical lead, developer
 author: Jonathan Bond
 
 content_owner: Cailey Jones
+
+sort_order: 8
 ---
 
 # Set up an Artifactory project and repository

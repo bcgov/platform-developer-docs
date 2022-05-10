@@ -14,6 +14,8 @@ audience: developer, technical lead
 author: Jonathan Bond
 
 content_owner: Cailey Jones
+
+sort_order: 5
 ---
 # Request a quota increase for an OpenShift project set
 

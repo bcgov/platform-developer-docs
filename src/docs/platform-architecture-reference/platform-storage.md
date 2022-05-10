@@ -14,6 +14,8 @@ audience: technical lead, developer
 author: Jonathan Bond
 
 content_owner: Olena Mitovska
+
+sort_order: 3
 ---
 
 # Platform storage
