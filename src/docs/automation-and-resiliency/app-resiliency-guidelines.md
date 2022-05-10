@@ -34,7 +34,7 @@ One of the most amazing benefits of working on the Openshift Platform is that, w
 
 ## What does "Correctly Designed" mean?<a name="correctly-designed"></a>
 
-All you need to do is make sure that your application takes advantage of this through some specific design requirements. These are outlined through the concept of a [12 Factor App](https://12factor.net/). Of course, this is a technical outline for technical users - here's a bit more of an accessible list of what it means to have a resilient app!
+All you need to do is make sure that your application takes advantage of Openshift through some specific design requirements. These are outlined through the concept of a [12 Factor App](https://12factor.net/). Of course, this is a technical outline for technical users - here's a bit more of an accessible list of what it means to have a resilient app!
 
 **Note: If you're a technical user looking for some help on how to make a 12-factor app happen, skip to the bottom of this document for examples of applications that run in a resilient manner on our platform already, and feel free to ask those teams for some advice on how they got there!**
 
