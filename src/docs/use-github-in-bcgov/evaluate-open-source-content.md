@@ -20,7 +20,7 @@ content_owner: Olena Mitovska/Nick Corcoran
 
 Use the following guidelines to make sure that you are able to use existing, open-source content on GitHub.
 
-For more information on approval requirements, see [Start working in the BCGov GitHub organization](./start-working-in-bcgov-github-organization.md).
+For more information on approval requirements, see [Start working in the BC Gov GitHub organization](./start-working-in-bcgov-github-organization.md).
 
 ## On this page
 - [Privacy](#privacy)
@@ -31,14 +31,14 @@ For more information on approval requirements, see [Start working in the BCGov G
 These guidelines help you make sure that there are no restrictions to using the material publicly. Restrictions may be due to one of the following concerns:
 - Privacy
 - Copyright
-- Legal, contractual, or policy
+- Legal, contractual or policy
 - Security
 
 Evaluate the content you wish to use before posting the material in a GitHub repository.
 
 ## Privacy<a name="privacy"></a>
 
-Make sure that the content is free of personal information that may directly identify an individual (for example, name, phone number, photo, address, driver's licence number, or any similar identification number).
+Make sure that the content is free of personal information that may directly identify an individual (for example, name, phone number, photo, address, driver's licence number or any similar identification number).
 
 Ministries may contact Knowledge and Information Services to assist in privacy assessments.
 
@@ -53,15 +53,15 @@ Ministries  **must**  contact the IPP to assist in this assessment. Any legal re
 
 ## Legal, contractual or policy constraints<a name="legal-contractual-policy"></a>
 
-Make sure that the public release and use of the content is permitted under law, contract, or policy. For example, make sure that there are no relevant legal, contractual, or policy restrictions or limitations.
+Make sure that the public release and use of the content is permitted under law, contract or policy. For example, make sure that there are no relevant legal, contractual or policy restrictions or limitations.
 
-If there are legal, contractual, or policy restrictions or limitations on the content, you must address them before you can use the content.
+If there are legal, contractual or policy restrictions or limitations on the content, you must address them before you can use the content.
 
 ## Security<a name="security"></a>
 
 Contact your [Ministry Information Security Officer (MISO)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/information-security-policy-and-guidelines/role-of-miso) to make sure that all necessary security controls have been implemented.
 
-Make sure that the material been labelled **Public**, using the [Information Security Classification Framework](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification).
+Make sure that the material has been labelled **Public**, using the [Information Security Classification Framework](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification).
 
 ---
 Related links:
