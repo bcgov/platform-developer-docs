@@ -51,10 +51,10 @@ IPP examines the development history of the content, which can take the form of 
 
 ### Preferred licenses
 
-- [Apache 2](https://www.apache.org/licenses/LICENSE-2.0) for publishing code
-- [Creative Commons International 4.0 (CC BY)](https://creativecommons.org/licenses/by/4.0/) for other documentation, artistic resources and educational material
-- [Open Government Licence - BC (OGL-BC)](https://www2.gov.bc.ca/gov/content/data/open-data/open-government-licence-bc) for making government generated and owned data available to the public
-- [Affero General Public Licence (AGPL)](https://www.gnu.org/licenses/agpl-3.0.en.html) for works already containing that licence or for which maintaining open access to any modifications is critical
+- [Apache 2](https://www.apache.org/licenses/LICENSE-2.0) for publishing code.
+- [Creative Commons International 4.0 (CC BY)](https://creativecommons.org/licenses/by/4.0/) for other documentation, artistic resources and educational material.
+- [Open Government Licence - BC (OGL-BC)](https://www2.gov.bc.ca/gov/content/data/open-data/open-government-licence-bc) for making government generated and owned data available to the public.
+- [Affero General Public Licence (AGPL)](https://www.gnu.org/licenses/agpl-3.0.en.html) for works already containing that licence or for which maintaining open access to any modifications is critical.
 
 Use these licences, as they are widely accepted, and follow a consistent approach to licensing. This increases efficiency for both developers and consumers.
 
@@ -74,7 +74,7 @@ If your project is related to a community that typically uses a different licenc
 
 Place the licence file for your project in the repository before you do anything else. The default license for code repositories is Apache 2.0.
 
-Use the following boiler-plate text you must put into the comments header of every source code file, as well as the bottom of your README.md:
+Use the following boiler-plate text in the comments header of every source code file, as well as the bottom of your README.md:
 
     Copyright 2019 Province of British Columbia
 
