@@ -283,7 +283,7 @@ export default function Navigation() {
                   <ul>
                     <NavListItem
                       id="build-deploy-and-maintain-apps"
-                      title="Build, deploy, and maintain apps"
+                      title="Build, deploy and maintain apps"
                       links={buildDeployAndMaintainApps}
                     />
                     <NavListItem

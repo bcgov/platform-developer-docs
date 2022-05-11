@@ -67,7 +67,7 @@ const IndexPage = () => (
           </ul>
         </Card>
         <Card>
-          <h2>Build, Deploy, and Maintain Apps</h2>
+          <h2>Build, Deploy and Maintain Apps</h2>
           <p>Best practices on the platform.</p>
           <ul>
             <li>Build an application (coming soon)</li>
