@@ -28,6 +28,7 @@ const StyledForm = styled.form`
     flex-grow: 1;
     border: 2px solid #606060;
     padding: 5px;
+    width: 100%;
   }
 
   button {
