@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: `Platform Services Documentation`,
+    title: `Private Cloud as a Service Technical Documentation`,
     description: `Documentation for the BC Government's Private Cloud Platform as a Service.`,
     author: `@bcgov`,
     siteUrl: `https://paas.cloud.gov.bc.ca`,
@@ -17,8 +17,8 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Platform Developer Docs`,
-        short_name: `Platform Developer Docs`,
+        name: `Private Cloud as a Service Technical Documentation`,
+        short_name: `Private Cloud Tech Docs`,
         start_url: `/`,
         background_color: `white`,
         // This will impact how browsers show your PWA/website
