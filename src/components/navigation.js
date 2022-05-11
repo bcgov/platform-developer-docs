@@ -155,6 +155,7 @@ const StyledDiv = styled.div`
     border-right: none;
     border-bottom: 1px solid #b1b4b6;
     box-shadow: 1px 1px 3px rgb(0 0 0 / 10%);
+    width: 100%;
     min-width: 100%;
   }
 
@@ -282,7 +283,7 @@ export default function Navigation() {
                   <ul>
                     <NavListItem
                       id="build-deploy-and-maintain-apps"
-                      title="Build, deploy, and maintain apps"
+                      title="Build, deploy and maintain apps"
                       links={buildDeployAndMaintainApps}
                     />
                     <NavListItem
