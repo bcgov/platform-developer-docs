@@ -70,10 +70,10 @@ const IndexPage = () => (
           <h2>Build, Deploy, and Maintain Apps</h2>
           <p>Best practices on the platform.</p>
           <ul>
-            <li>Build an application</li>
-            <li>Deploy an application</li>
-            <li>Monitor an application</li>
-            <li>Retire an application</li>
+            <li>Build an application (coming soon)</li>
+            <li>Deploy an application (coming soon)</li>
+            <li>Monitor an application (coming soon)</li>
+            <li>Retire an application (coming soon)</li>
           </ul>
         </Card>
       </Grid>
@@ -86,7 +86,7 @@ const IndexPage = () => (
             overview of the build and deploy processes for cloud-native
             applications on OpenShift.
           </p>
-          <p>Register for OpenShift 101.</p>
+          <p>Register for OpenShift 101. (coming soon)</p>
         </Card>
         <Card>
           <h3>RocketChat</h3>
@@ -94,16 +94,16 @@ const IndexPage = () => (
             Rocket.Chat will be your main communication channel for platform
             updates and support while you work in the BC Gov Private Cloud PaaS.
           </p>
-          <p>Log in to RocketChat.</p>
+          <p>Log in to RocketChat. (coming soon)</p>
         </Card>
         <Card>
           <h3>Platform community MeetUps</h3>
           <p>
             Every month, we host a platform community MeetUp where product teams
-            from  across the B.C. government give technical demos of their
+            from across the B.C. government give technical demos of their
             application.
           </p>
-          <p>Learn how to register.</p>
+          <p>Learn how to register. (coming soon)</p>
         </Card>
       </Grid>
       <h2>Dive deeper</h2>
@@ -111,10 +111,10 @@ const IndexPage = () => (
         <Card>
           <h3>Security and privacy compliance</h3>
           <ul>
-            <li>STRA and PIA for Private Cloud Platform</li>
-            <li>Vault Secret Managment Service</li>
-            <li>Artifactory Trusted Repository Service</li>
-            <li>Security best practices for apps</li>
+            <li>STRA and PIA for Private Cloud Platform (coming soon)</li>
+            <li>Vault Secret Managment Service (coming soon)</li>
+            <li>Artifactory Trusted Repository Service (coming soon)</li>
+            <li>Security best practices for apps (coming soon)</li>
           </ul>
         </Card>
         <Card>
@@ -130,7 +130,7 @@ const IndexPage = () => (
                 Request access to BCGov org in GitHub
               </Link>
             </li>
-            <li>Best practices for working in GitHub</li>
+            <li>Best practices for working in GitHub (coming soon)</li>
           </ul>
         </Card>
         <Card>
@@ -141,7 +141,7 @@ const IndexPage = () => (
                 App resiliency guidelines
               </Link>
             </li>
-            <li>CI/CD Pipeline automation</li>
+            <li>CI/CD Pipeline automation (coming soon)</li>
           </ul>
         </Card>
         <Card>
@@ -157,64 +157,64 @@ const IndexPage = () => (
                 Set up advance functions in Sysdig Monitor
               </Link>
             </li>
-            <li>Four gold signals for app monitoring</li>
-            <li>App Logging</li>
+            <li>Four gold signals for app monitoring (coming soon)</li>
+            <li>App Logging (coming soon)</li>
           </ul>
         </Card>
         <Card>
           <h3>Database and API management</h3>
           <ul>
-            <li>Open source database technologies</li>
-            <li>High availability database clusters</li>
-            <li>API guidelines</li>
+            <li>Open source database technologies (coming soon)</li>
+            <li>High availability database clusters (coming soon)</li>
+            <li>API guidelines (coming soon)</li>
           </ul>
         </Card>
         <Card>
           <h3>Reusable code and services</h3>
           <ul>
-            <li>KeyCloak SSO</li>
+            <li>KeyCloak SSO (coming soon)</li>
             <li>
               <Link to={"/reusable-services-list"}>Reusable services list</Link>
             </li>
-            <li>Project examples</li>
+            <li>Project examples (coming soon)</li>
           </ul>
         </Card>
         <Card>
           <h3>Platform architecture reference</h3>
           <ul>
-            <li>Platform storage</li>
-            <li>Platform architecture</li>
+            <li>Platform storage (coming soon)</li>
+            <li>Platform architecture (coming soon)</li>
           </ul>
         </Card>
         <Card>
           <h3>Troubleshooting</h3>
           <ul>
-            <li>Database issues</li>
-            <li>Application issues</li>
-            <li>Network connectivity issues</li>
+            <li>Database issues (coming soon)</li>
+            <li>Application issues (coming soon)</li>
+            <li>Network connectivity issues (coming soon)</li>
           </ul>
         </Card>
       </Grid>
       <h2>Get support on the platform</h2>
       <Grid className="col-3">
         <Card>
-          <h3>Report an Incident</h3>
+          <h3>Report an Incident (coming soon)</h3>
           <p>
             If you think an incident has occurred with our services, you can
             report it by following the steps outlined.
           </p>
         </Card>
         <Card>
-          <h3>Get Help or Support</h3>
+          <h3>Get Help or Support (coming soon)</h3>
           <p>
             We follow a community-based support model. You can use our
             self-serve resources or ask for help from the platform community.
           </p>
         </Card>
         <Card>
-          <h3>DevOps Requests</h3>
+          <h3>DevOps Requests (coming soon)</h3>
           <p>
-            Not sure where to go to get things done on the platform? We’ve
+            Not sure where to go to get things done on the platform? We've
             outlined common platform tasks and links to additional instructions.
           </p>
         </Card>
