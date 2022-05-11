@@ -28,6 +28,7 @@ const StyledHeader = styled.header`
     &.vertical {
       height: 65px;
       width: 58px;
+      min-width: 58px;
       margin-right: 20px;
     }
   }
