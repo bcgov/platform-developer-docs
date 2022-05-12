@@ -1,9 +1,9 @@
 ---
-title: Vault Secret Management Service
+title: Vault Secrets Management Service
 
-slug: vault-secret-management-service
+slug: vault-secrets-management-service
 
-description: describes the vault secret management service and how it is used in the BC Government
+description: describes the vault secrets management service and how it is used in the BC Government
 
 keywords: 
 
@@ -13,12 +13,12 @@ audience: developer, technical lead
 
 author: Matt Spencer 
 
-content_owner: Nick Corcoran
+content_owner: Cailey Jones
 ---
 
 # Vault Secrets Management Service
 
-The BC Government Vault Secret Management Service, based on the Hashicorp Vault product, provides a tool for securely accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, or certificates. Vault provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.
+The BC Government Vault Secrets Management Service, based on the Hashicorp Vault product, provides a tool for securely accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, or certificates. Vault provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.
 
 Kubernetes Secrets backed by ETCD are still available for use by platform teams. It is recommended that Kubernetes Secrets be reserved for non-secrets (e.g. environment variables).
 

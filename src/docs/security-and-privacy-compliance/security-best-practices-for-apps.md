@@ -25,13 +25,15 @@ Government employees should take particular care to adhere to security and priva
 
 ## On this page
 - [Open Development Basics](#open-development-basics)
-- [What does 'doing it right' mean?](#doing-it-right)
+- [What does 'doing it right' mean?](#what-does-"doing-it-right"-mean)
+- [Secure Coding Guideline](#secure-coding-guideline)
+- [Application Security Self-Assessment](#application-security-self-assessment)
 
-## Open Development Basics <a name="open-development-basics"></a>
+## Open Development Basics 
 
 There is a [healthy debate](http://www.dwheeler.com/secure-programs/Secure-Programs-HOWTO/open-source-security.html) in the security community around the use and development of OSS applications and the implications of exposing the code publicly vs keeping it behind closed doors. The debate boils down to the fact that there is no conclusive evidence that deems either Open or Closed source as inherently more secure. It all comes down to the people (the coders) and their willingness to build security into their code. The one thing that coding in the open does for security is that the public scrutiny of a coders work is proven as a motivating factor for "doing it right" from the start.
 
-## What does "doing it right" mean? <a name="doing-it-right"></a>
+## What does "doing it right" mean?
 
 ### Separate Code from Deployment
 
@@ -49,9 +51,138 @@ Sounds obvious but this step has been skipped by every developer in the world at
 
 Most languages, platforms and products have best practices for securing applications - find them, follow them and keep current because security is a moving target.
 
+## Secure Coding Guideline
+
+This helpful [secure coding guideline](https://wehackpurple.com/pushing-left-like-a-boss-part-5-14-secure-coding-summary/) for developers was published by We Hack Purple. 
+
+1. [Input validation](https://wehackpurple.com/pushing-left-like-a-boss-part-5-1-input-validation-output-encoding-and-parameterized-queries/) should be used in every possible scenario. This includes [Redirects and Forwards](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-6%e2%80%8a-%e2%80%8aredirects-and-forwards/).
+2. [Output Encoding](https://wehackpurple.com/pushing-left-like-a-boss-part-5-1-input-validation-output-encoding-and-parameterized-queries/) is required for all output.
+3. [Parameterized Queries](https://wehackpurple.com/pushing-left-like-a-boss-part-5-1-input-validation-output-encoding-and-parameterized-queries/) are mandatory.
+4. All 3rd party code must be [verified not to contain known vulnerabilities](https://wehackpurple.com/5-2-safe-dependencies/).
+5. Every applicable [security header](https://medium.com/bugbountywriteup/security-headers-1c770105940b) should be used.
+6. All [client-side and browser hardening strategies](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-3%e2%80%8a-%e2%80%8abrowser-and-client-side-hardening/) available to you are required, as outlined here.
+7. Use the identity and [session management](https://wehackpurple.com/pushing-left-like-a-boss-part-5-4-session-management/) features available to you in your framework or from your cloud provider and follow this guidance.
+8. Take every possible precaution when performing [file uploads](https://wehackpurple.com/pushing-left-like-a-boss-part-5-5-file-uploads/), including scanning it for vulnerabilities such as [AssemblyLine](https://cyber.gc.ca/en/assemblyline).
+9. Nothing of any consequence should ever be stored in [URL parameters](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-7%e2%80%8a-%e2%80%8aurl-parameters/).
+10. Sensitive data should be stored in [secure cookies](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-8%e2%80%8a-%e2%80%8asecuring-your-cookies/), and all available security features for cookies should be used.
+11. All errors should be caught, handled and logged, as per [this article](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-9%e2%80%8a-%e2%80%8aerror-handling-and-logging/). Never log sensitive information.
+12. [Do not trust data, always verify](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-10%e2%80%8a-%e2%80%8auntrusted-data/).
+13. Use the [_Authorization_ features in your framework](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-11%e2%80%8a-%e2%80%8aauthorization-authz/), do not write your own.
+14. Use the [_Authentication_ features in your framework](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-12%e2%80%8a-%e2%80%8aauthentication-authn-identity-and-access-control/), do not write your own.
+15. [HTTPS only](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-13%e2%80%8a-%e2%80%8ahttps-only/). Use only unbroken and industry standard protocols (currents standard is 1.2 TLS).
+16. Always use the security features in your framework and never write your own. Always keep your framework up to date.
+
+  `In order to ensure that your developers are following these guidelines, code review is recommended.`
+
+## Application Security Self-Assessment
+
+This document contains a set of items to think about, questions to ask, tools, and references for conducting a STRA in a BCGov DevOps environment. Based on various Information Security frameworks, the focus is on the system and the practices of the team supporting it and avoids the enterprise policy questions.
+
+For further detail or questions/answsers please contact your Ministry security team.
+
+### Preparation
+
+Understand:
+
+* Scope and timeline of the assessment
+* Criticality of the system
+  * consider Confidentiality, Integrity and Availablity requirements
+  * consider whether the system is a [Critical System](https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/information-security/defensible-security/critical_systems_standard.pdf)
+
+### Asset Management
+
+* Is there an inventory of:
+  * hosts, platform, and/or system stack?
+  * critical software components and versions?
+  * licenses?
+* Is there a process to keep the inventory up to date?
+* Have you [classified your data](https://intranet.gov.bc.ca/thehub/ocio/ocio-enterprise-services/information-security-branch/advisory-services/information-security-classification-guidelines)?
+
+### System Design
+
+* Is there a Data Flow Diagram or other document describing:
+  * all entities, (servers, services, APIs, end-users and admin)?
+  * all communications between entities (protocols, ports, direction)?
+* Is the design kept up to date?
+
+### System Implementation
+
+* Do firewall rules support the system design?
+* Do network security policies (i.e. Aporeto) limit communications between components?
+  * Use encrypted communications wherever possible (e.g. between app server component and database component)
+* Are all exposures necessary (i.e. no unused services running)?
+* Does a port scan confirm the above (i.e. nmap)?
+* Is TLS configuration sufficient? (e.g. Grade A at [https://www.ssllabs.com/ssltest/](https://www.ssllabs.com/ssltest/))?
+  * Ensure Entrust certificate used for Prod environments
+* Consider encrypting database elements that contain [Protected B/C data](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification)
+
+### Access Management
+
+* Is there idir/BCeID integration or an exemption otherwise?
+  * follow OAuth2 best practices
+* Are \_A accounts used for server admin?
+* Have any default user accounts been removed?
+* Is the process for granting/revoking access documented?
+  * to include details for clients, ministry staff, devs, admins
+* Is access control centralized (i.e. Active Directory)?
+* Is the purpose/location of system accounts documented?
+* Do system accounts have the least amount of privilege?
+* Are system passwords/keys well protected?
+  * Ensure secrets are not exposed in GitHub repos or OCP environment variables
+  * Utilize Vault\* when available
+
+### Vulnerability Management
+
+* Are there vulnerability notifications for all critical software components?
+  * Dependabot alerts (SCA)
+* Is there testing for each build:
+  * static code analysis (e.g. SonarQube, SonarCloud)?
+  * dynamic app testing (e.g. ZAP)?
+  * review container vulnerability analysis (CVA) (e.g. Aqua/Artifactory Xray)\* when available
+  * user testing (e.g. fuzzing, invalid inputs)?
+  * APIs protected/not leaking data?
+* Consider Interactive Application Security Testing (IAST)
+
+### Change Management
+
+* Are critical security patches prioritized?
+* Are changes scheduled?
+* Are changes tested?
+* Are changes/outages communicated:
+  * from service providers (e.g. Hosting)?
+  * to stakeholders?
+* Do no permit local auth in Prod instances
+
+### Logging and Monitoring
+
+* Do logs record an appropriate level of detail for each of the following categoies of events?
+  * Web Access?
+  * Error?
+  * System?
+  * Admin access?
+* Are logs stored external to the system?
+* Retention of security logs (e.g. access logs) is minimum 13 months.
+* Are logs protected from tampering/deletion?
+* Are there alerts to notify system admins/owners of:
+  * system outages?
+  * performance degradation?
+  * unauthorized access attempts/misuse (e.g. brute force)?
+
+### Backup and Retention
+
+* Are there backups for critical data?
+* Are there periodic/recent restore tests?
+* Is data at-rest protected (e.g. encrypted disks)?
+* Business Continuity
+  * Are Recovery Time Objectives defined (e.g. maximum downtime)?
+  * Is there a communication plan for unexpected outages?
+  * Is there a contact list for key staff and alternates?
+  * Are operating manuals/docs sufficient for others to understand?
+  * Have recovery plans been tested?
+
 ---
 Related links:
-- [Vault Secret Management Service](./vault-secret-management-service.md)
+- [Vaults Secret Management Service](./vault-secrets-management-service.md)
 - [Linux Foundation OSS Security Badges](https://github.com/linuxfoundation/cii-best-practices-badge)
 - [Unix, PHP, Python and general programing](http://www.dwheeler.com/secure-programs/Secure-Programs-HOWTO/index.html)
 - [Java](https://www.java.com/en/security/developer-info.jsp)
@@ -63,5 +194,7 @@ Related links:
 
 Rewrite sources:
 * https://developer.gov.bc.ca/Platform-Services-Security/BC-Government-Vault-Secrets-Management
+* https://wehackpurple.com/pushing-left-like-a-boss-part-5-14-secure-coding-summary/
+* https://developer.gov.bc.ca/Information-and-Application-Security/Application-Security-Self-Assessment
 
 ---
