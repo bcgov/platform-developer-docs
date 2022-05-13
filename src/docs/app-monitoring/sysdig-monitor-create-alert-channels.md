@@ -18,16 +18,16 @@ content_owner: Shelly Han
 sort_order: 2
 ---
 
-# Create alert channels in Sysdig Monitor
-You can create alerts on specific monitoring metrics in Sysdig Monitor to notify your team when things need attention.
+# Create alerts in Sysdig Monitor
+You can create alerts based on monitoring dashboards in Sysdig Monitor, that notify your team when something needs attention.
 
-You can integrate Sysdig alerts with Rocket.Chat. Here are some steps to setup the Sysdig alert notification on RC.
+Here are some steps on how to setup the Sysdig alerts with [Rocket.Chat](https://chat.developer.gov.bc.ca/).
 
 ## On this page
-- [Create a Rocket.Chat chat channel and webhook for alert messages](#create-rc-channel)
-- [Create a Sysdig team notification channel](#team-notification)
+- [Create a Rocket.Chat chat channel and webhook for alert messages](#rc-channel)
+- [Create a Sysdig team notification channel](#sysdig-notification-channel)
 
-## Create a Rocket.Chat chat channel and webhook for alert messages<a name="create-rc-channel"></a>
+## Create a Rocket.Chat chat channel and webhook for alert messages<a name="rc-channel"></a>
 
 Rocket.Chat requires an incoming webhook and a script to parse the data from Sysdig. Do the following:
 - Create a RC chat channel for the alert messages to arrive if there isn't one.
@@ -79,17 +79,18 @@ Here's how the webhook should look like:
 ![RC webhook config](../../images/sysdig-team-rc-alert-webhook-config.png)
 
 
-## Create a Sysdig team notification channel<a name="team-notification"></a>
-To create a team notification channel, do the following:
+## Create a Sysdig team notification channel<a name="sysdig-notification-channel"></a>
+
+To create a Sysdig team notification channel, do the following:
+
 1. In Sysdig Monitor, go to your user account and click `Settings`.
 
 1. Click `Notification Channels` and `Add Notification Channel`. Choose `Webhook` as the type.
 
-1. Use the webhook URL generated from Rocket.Chat and configure the notification channel.
+1. Use the webhook URL generated from Rocket.Chat and configure the notification channel. Name the channel in the formate of `Rocketchat-alert-channel-<APP_TEAM_NAME>`.
 
-1. Click `Save` and go to the `Alerts` section or start adding custom alerts to any of your configured dashboards.
+1. Click `Save` and now you should be able to test it by clicking on the kabab menu icon and `Test Channel`.
 
-By default, the alert scope is set to `everywhere`, which means all namespaces from the cluster. Make sure you set the scope to your own namespaces. For example, you can use `kubernetes.namespace.name` and pick the ones you need.
 
 ---
 Related links:
