@@ -1,5 +1,5 @@
 ---
-title: Set up advanced functions in Sysdig Monitor
+title: Set up advanced metrics in Sysdig Monitor
 
 slug: sysdig-monitor-set-up-advanced-functions
 
@@ -15,7 +15,7 @@ author: Jonathan Bond
 
 content_owner: Shelly Han
 
-sort_order: 2
+sort_order: 3
 ---
 
 # Set up advanced functions in Sysdig Monitor<a name="advanced-functions"></a>

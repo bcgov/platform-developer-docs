@@ -1,5 +1,5 @@
 ---
-title: Create alert channels in Sysdig Monitor
+title: Create alerts and notifications in Sysdig Monitor
 
 slug: sysdig-monitor-create-alert-channels
 
