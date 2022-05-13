@@ -11,7 +11,11 @@ export default function Template({
   const { frontmatter, html } = markdownRemark;
   return (
     <Layout>
-      <Seo title={frontmatter?.title} />
+      <Seo
+        title={frontmatter?.title}
+        description={frontmatter?.description}
+        meta={[{ property: "keywords", content: frontmatter?.keywords }]}
+      />
       <main dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   );
