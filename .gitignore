@@ -3,4 +3,5 @@ node_modules
 
 # Gatsby files
 .cache
+.env*
 public
