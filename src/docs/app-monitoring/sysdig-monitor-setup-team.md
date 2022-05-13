@@ -29,7 +29,6 @@ For more information on Sysdig Monitor, see [Monitoring with Sysdig](New page on
 ## On this page
 - [Sign in to Sysdig](#sign-in-sysdig)
 - [Create Sysdig team access](#create-access)
-- [Create a Sysdig Team](#create-team)
 - [Sign in to your Sysdig Team](#sign-in)
 - [Review your monitoring dashboards](#review-dashboards)
 - [Troubleshoot access issues](#troubleshooting)
@@ -49,63 +48,55 @@ You and your team must sign in to Sysdig to create the user account. The B.C. go
   - **Note** that Sysdig identifies users by the email, so it's important to use the correct email address for yourself as well as your team members.
 
 
-## Create Sysdig team access<a name="create-access"></a>
-The OpenShift Operator runs in the background and creates a Sysdig RBAC and dashboard for you. The operator looks for a `sysdig-team` custom resource from your `*-tools` namespace. The `sysdig-team` resource does the following:
+## Create Sysdig Team Access<a name="create-access"></a>
+The OpenShift Operator runs in the background and creates a Sysdig team RBAC and dashboard for you. The operator looks for a `sysdig-team` custom resource from your `*-tools` namespace. There are two parts of work to create Sysdig team access.
 
-- Creates a Custom Resource in your project's `tools` namespace.
 
-- Creates an access control list within the Custom Resource that identifies users by the email address.
+### Part 1 - Compose the sysdig-team object manifest
 
-**Note**: All team members need to sign in to Sysdig first. Each user can find the email address on the [Sysdig User Profile](https://app.sysdigcloud.com/#/settings/user).
+Here is a sample of the `sysdig-team` custom resource manifest, you can find the template file to use [here](./sysdig-team-sample.yaml):
 
-Only GitHub IDs are currently configured from SSO. Once the Custom Resource is created, two teams are also created:
-  - **[license-plate]-team**: All Kubernetes-related objects can be monitored here, except persistent volume claim (PVC) metrics.
+![Sample sysdig-team Custom Resource](../../images/sysdig-team-manifest-sample.png)
 
-  - **[license-plate]-team-persistent-storage**: You can monitor PVC utilization here.
 
-**Note**: PVC metrics are scraped from kubelet services, which are no longer available from `kubernetes.*` scope.
+**Name and Namespace:**
+The `sysdig-team` Custom Resource should be created in your Openshift project set `tools` namespace. Name it using the license plate number for your project set to make sure it's unique.
 
-### Sample sysdig-team object
-```yaml
-apiVersion: ops.gov.bc.ca/v1alpha1
-kind: SysdigTeam
-metadata:
-  name: 101ed4-sysdigteam
-  namespace: 101ed4-tools
-spec:
-  team:
-    description: The Sysdig Team for the Platform Services Documize
-    users:
-    - name: shelly.han@gov.bc.ca
-      role: ROLE_TEAM_MANAGER
-    - name: patrick.simonian@gov.bc.ca
-      role: ROLE_TEAM_EDIT
-    - name: billy.li@gov.bc.ca
-      role: ROLE_TEAM_STANDARD
-    - name: olena.mitovska@gov.bc.ca
-      role: ROLE_TEAM_READ
+**Team Description:**
+Add some description for the sysdig team.
+
+**Team Users:**
+A list of users to be added to this team.
+
+  - `User Name` - Sysdig identifies users by ***the email address***, so make sure to have everyone login to Sysdig and obtain the correct email from their [Sysdig User Profile](https://app.sysdigcloud.com/#/settings/user).
+
+  - `User Role` - Here are the available roles to assign to different team members
+
+    - `ROLE_TEAM_EDIT (Advanced User)`: Read/write access to the components of the application available to the team. Can create/edit/delete dashboards, alerts, or other content. Recommended for admins and team members that need to create and manage dashboards.
+
+    - `ROLE_TEAM_STANDARD (Standard User)`: Same as Advanced User but without access to the **Explore** page. Recommended for developers that need to refer to dashboards for resources tuning and service monitoring.
+
+    - `ROLE_TEAM_READ (View-only User)`: This role has read only access to the environment in the team scope. Recommended for project owners and team members from the business area.
+
+
+### Part 2 - Create the sysdig-team Custom Resource
+
+> **Note:**
+> - Only apply role updates to the Custom Resource from `tools` namespace! Do not use the Sysdig Monitor UI to modify team access because the operator reconciliation will overwrite any UI changes to team roles and settings.
+> - If your project set is on Gold and GoldDR clusters, only create the `sysdig-team` Custom Resource in the Gold cluster. The Sysdig operator can create the dashboards for your applications across both clusters.
+
+So now you have the `sysdig-team` manifest file ready, use `oc apply` and let the operator creates team on Sysdig.
+
+```shell
+# switch to the tools namespace
+oc project <PROJECT_SET_LICENSE_PLATE>-tools
+# edit the sample sysdig-team resource and apply the manifest
+oc apply -f sysdig-team-sample.yaml
 ```
 
-### Available roles
-You can use the following available roles:
-- `ROLE_TEAM_MANAGER (Team Manager, mandatory)`: This role can create, edit or delete dashboards, alerts or other content. They can also add or delete team members or change team member permissions. You must have at least one team manager, otherwise the operator can't create default templates for you.
+## Verify Sysdig Team Creation<a name="verify-team-creation"></a>
 
-- `ROLE_TEAM_EDIT (Advanced User)`: This role can create, edit or delete dashboards, alerts or other content.
-
-- `ROLE_TEAM_STANDARD (Standard User)`: This advanced user doesn't have access to the **Explore** page. For example, for developers who are not interested in monitoring information.
-
-- `ROLE_TEAM_READ (View-only User)`: This role has read access to the environment in the team scope, but can't create, edit or delete dashboards, alerts or other content.
-
-Apply role updates to the Custom Resource, not the Sysdig Monitor user interface. Reconciliation of the SysdigTeams Operator overwrites any UI changes to team roles.
-
-## Create a Sysdig Team<a name="create-team"></a>
-Use `oc apply` with the [sysdig-team object](#sysdig-team-object) custom resource yaml in your `tools` namespace so the operator creates the Sysdig Team. For example:
-
-  ```shell
-  oc project 101ed4-tools
-  oc apply -f sysdigteam-sample.yml
-  ```
-Use `oc describe sysdig-team <your_sysdig_team_cr_name>` to validate that the Sysdig Team was created:
+Use `oc describe sysdig-team <PROJECT_SET_LICENSE_PLATE>-sysdigteam` to validate that the Sysdig Team was created:
 
   ```shell
   Name:         101ed4-sysdigteam
@@ -141,14 +132,22 @@ Use `oc describe sysdig-team <your_sysdig_team_cr_name>` to validate that the Sy
   Events:                    <none>
   ```
 
-Check the following:
-- In the **Message:**, it should say `Awaiting next reconciliation`.
+You should expect to see the following from the `sysdig-team` outcome:
+```shell
+Message:               Awaiting next reconciliation
+Reason:                Successful
+```
 
-- In the **Reason:**, it should say `Successful`.
+If both of these show, the `sysdig-team` Custom Resource is processed successfully. You can go back to Sysdig to see the new team scope and default dashboards.
+- login to Sysdig like how you did just now.
 
-If both of these show, the Sysdig Team was created successfully. If you don't see `Awaiting next reconciliation`, contact the Platform Services team on the [#devops-sysdig Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig!).
+- Navigate to the bottom left hand of the page to switch your team, which should be named as **[PROJECT_SET_LICENSE_PLATE]-team**.
 
-If your project set is on Gold and GoldDR clusters, only create the sysdig-team Custom Resource in the Gold cluster. The Sysdig operator can create the dashboards for your applications across both clusters.
+- You may need to wait some time between the creation of the team and resources to display.
+
+<!-- TODO: add image -->
+<!-- ![Switch to the new sysdig team](../../images/sysdig-teams-switch.png) -->
+
 
 ## Sign in to your Sysdig Team<a name="sign-in"></a>
 Now that you've created the Custom Resource, go back to Sysdig to see the new team scope and default dashboards.
