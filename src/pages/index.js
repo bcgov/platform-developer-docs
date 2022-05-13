@@ -89,12 +89,22 @@ const IndexPage = () => (
           <p>Register for OpenShift 101. (coming soon)</p>
         </Card>
         <Card>
-          <h3>RocketChat</h3>
+          <h3>Rocket.Chat</h3>
           <p>
             Rocket.Chat will be your main communication channel for platform
             updates and support while you work in the BC Gov Private Cloud PaaS.
+            Read about{" "}
+            <a href="https://platform-services-dev.apps.silver.devops.gov.bc.ca/support-and-community/stay-connected/">
+              how to stay connected in Rocket.Chat
+            </a>
+            .
           </p>
-          <p>Log in to RocketChat. (coming soon)</p>
+          <p>
+            <a href="htttps://chat.developer.gov.bc.ca">
+              Log in to Rocket.Chat
+            </a>
+            .
+          </p>
         </Card>
         <Card>
           <h3>Platform community MeetUps</h3>
@@ -103,7 +113,12 @@ const IndexPage = () => (
             from across the B.C. government give technical demos of their
             application.
           </p>
-          <p>Learn how to register. (coming soon)</p>
+          <p>
+            <a href="https://platform-services-dev.apps.silver.devops.gov.bc.ca/support-and-community/events-in-the-bc-gov-private-cloud-paas/">
+              Learn how to register for this and other events
+            </a>
+            .
+          </p>
         </Card>
       </Grid>
       <h2>Dive deeper</h2>
@@ -198,24 +213,37 @@ const IndexPage = () => (
       <h2>Get support on the platform</h2>
       <Grid className="col-3">
         <Card>
-          <h3>Report an Incident (coming soon)</h3>
+          <h3>Report a Platform Incident</h3>
           <p>
             If you think an incident has occurred with our services, you can
-            report it by following the steps outlined.
+            report it by{" "}
+            <a href="https://platform-services-dev.apps.silver.devops.gov.bc.ca/support-and-community/support-incident-response-flow/">
+              following these steps
+            </a>
+            .
           </p>
         </Card>
         <Card>
-          <h3>Get Help or Support (coming soon)</h3>
+          <h3>Get Help or Support</h3>
           <p>
             We follow a community-based support model. You can use our
-            self-serve resources or ask for help from the platform community.
+            self-serve resources or ask for help from the platform community.{" "}
+            <a href="https://platform-services-dev.apps.silver.devops.gov.bc.ca/support-and-community/how-to-get-support-or-help/">
+              Learn how to get help on the Platform
+            </a>
+            .
           </p>
         </Card>
         <Card>
-          <h3>DevOps Requests (coming soon)</h3>
+          <h3>DevOps Requests</h3>
           <p>
             Not sure where to go to get things done on the platform? We've
-            outlined common platform tasks and links to additional instructions.
+            outlined common platform tasks and links to additional instructions.{" "}
+            <a href="https://platform-services-dev.apps.silver.devops.gov.bc.ca/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/">
+              Learn how to get help with some of the most commonly searched-for
+              tasks
+            </a>
+            .
           </p>
         </Card>
       </Grid>
