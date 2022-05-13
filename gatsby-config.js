@@ -1,9 +1,13 @@
+require("dotenv").config({
+  path: `.env.${process.env.NODE_ENV}`,
+});
+
 module.exports = {
   siteMetadata: {
     title: `Private Cloud as a Service Technical Documentation`,
     description: `Documentation for the BC Government's Private Cloud Platform as a Service.`,
     author: `@bcgov`,
-    siteUrl: `https://paas.cloud.gov.bc.ca`,
+    siteUrl: `${process.env.GATSBY_SITE_URL}`,
   },
   trailingSlash: `never`,
   plugins: [
@@ -12,6 +16,7 @@ module.exports = {
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
+    `gatsby-plugin-sitemap`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-catch-links`,
     {
