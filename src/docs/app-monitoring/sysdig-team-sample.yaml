@@ -1,0 +1,15 @@
+apiVersion: ops.gov.bc.ca/v1alpha1
+kind: SysdigTeam
+metadata:
+  name: <PROJECT_SET_LICENSE_PLATE>-sysdigteam
+  namespace: <PROJECT_SET_LICENSE_PLATE>-tools
+spec:
+  team:
+    description: The Sysdig Team for the OpenShift Project Set <PROJECT_SET_NAME>
+    users:
+    - name: <sysdig_email_for_admin>
+      role: ROLE_TEAM_EDIT
+    - name: <sysdig_email_for_developer>
+      role: ROLE_TEAM_STANDARD
+    - name: <sysdig_email_for_po>
+      role: ROLE_TEAM_READ
