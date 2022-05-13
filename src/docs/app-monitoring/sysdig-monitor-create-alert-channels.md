@@ -19,24 +19,27 @@ sort_order: 2
 ---
 
 # Create alert channels in Sysdig Monitor
-You can create alert channels in Sysdig Monitor.
+You can create alerts on specific monitoring metrics in Sysdig Monitor to notify your team when things need attention.
+
+You can integrate Sysdig alerts with Rocket.Chat. Here are some steps to setup the Sysdig alert notification on RC.
 
 ## On this page
-- [Create a Rocket.Chat alert channel](#create-rc-channel)
-- [Configure Rocket.Chat](#configure-rc)
+- [Create a Rocket.Chat chat channel and webhook for alert messages](#create-rc-channel)
 - [Create a Sysdig team notification channel](#team-notification)
 
-## Create a Rocket.Chat alert channel<a name="create-rc-channel"></a>
-You can integrate Sysdig alerts with Rocket.Chat. Both Sysdig Monitor and Rocket.Chat require configurations.
-- Sysdig Monitor creates a **webhook** notification channel.
+## Create a Rocket.Chat chat channel and webhook for alert messages<a name="create-rc-channel"></a>
 
-- Rocket.Chat creates an **incoming webhook** with a custom script.
-
-## Configure Rocket.Chat<a name="configure-rc"></a>
 Rocket.Chat requires an incoming webhook and a script to parse the data from Sysdig. Do the following:
-1. Create the incoming webhook.
+- Create a RC chat channel for the alert messages to arrive if there isn't one.
 
-2. Use the following sample script for basic alert message creation:
+- Create an incoming webhook to the chat channel:
+
+  - Click on your avatar -> Administration -> Intergrations -> New (from Incoming tab)
+
+  - Name the webhook in the format of `sysdig-alert-webhook-<APP_TEAM_NAME>`
+
+  - Use the following sample script for basic alert message creation:
+
 ```js
 class Script {
   process_incoming_request({ request }) {
@@ -71,6 +74,10 @@ class Script {
   }
 }
 ```
+
+Here's how the webhook should look like:
+![RC webhook config](../../images/sysdig-team-rc-alert-webhook-config.png)
+
 
 ## Create a Sysdig team notification channel<a name="team-notification"></a>
 To create a team notification channel, do the following:
