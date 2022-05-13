@@ -173,17 +173,15 @@ You should see the following dashboard templates from your Sysdig team:
 
 ---
 Related links:
+- [BCDevOps Sysdig Monitor Service](https://app.sysdigcloud.com/api/oauth/openid/bcdevops)
 - [Set up advanced functions in Sysdig Monitor](./sysdig-monitor-set-up-advanced-functions.md)
 - [Create alert channels in Sysdig Monitor](sysdig-monitor-create-alert-channels.md)
 - [Sysdig Monitor](https://sysdig.com/products/monitor/)
 - [OpenShift project resource quotas](/docs/automation-and-resiliency/openshift-project-resource-quotas.md)
 - [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/)
-- [BCDevOps Sysdig Monitor](https://app.sysdigcloud.com/api/oauth/openid/bcdevops)
-- [Sysdig](https://app.sysdigcloud.com)
 - [Monitoring with Sysdig](New page on Wordpress site)
 - [Sydig User Profile](https://app.sysdigcloud.com/#/settings/user)
-- [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig!)
-- [Migrate Using Default Configuration](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/configure-monitoring-integrations/migrating-from-promscrape-v1-to-v2/#migrate-using-default-configuration)
+- [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 
 Related resources:
 - [Sysdig Monitor](https://docs.sysdig.com/en/sysdig-monitor.html)
@@ -191,7 +189,6 @@ Related resources:
 - [Sysdig Alerts](https://docs.sysdig.com/en/alerts.html)
 - [Sysdig Alerts with Kubernetes and PromQL](https://sysdig.com/blog/alerting-kubernetes/)
 - [Sysdig Teams Blog](https://sysdig.com/blog/introducing-sysdig-teams/)
-- [Sysdig Teams Docs ](https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html#al_UUID-c54169b7-c8f5-4990-6b63-dd2e25b96cce_UUID-3dc7a7aa-2549-23a2-94e2-cee57bdd538f)
 - [Sysdig User Management Docs](https://docs.sysdig.com/en/manage-teams-and-roles.html)
 - [Sysdig User Roles](https://docs.sysdig.com/en/user-and-team-administration.html)
 
