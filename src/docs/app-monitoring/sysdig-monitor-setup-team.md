@@ -32,15 +32,22 @@ For more information on Sysdig Monitor, see [Monitoring with Sysdig](New page on
 - [Create a Sysdig Team](#create-team)
 - [Sign in to your Sysdig Team](#sign-in)
 - [Review your monitoring dashboards](#review-dashboards)
+- [Troubleshoot access issues](#troubleshooting)
+
 
 ## Sign in to Sysdig<a name="sign-in-sysdig"></a>
 You and your team must sign in to Sysdig to create the user account. The B.C. government Sysdig uses OpenID Connect and requires a GitHub account.
 
-Go to the [BCDevOps Sysdig Monitor](https://app.sysdigcloud.com/api/oauth/openid/bcdevops). You can also sign in on [the Sysdig site](https://app.sysdigcloud.com). Select OpenID and type `BCDevOps` as the company.
+- Go to the [BCDevOps Sysdig Monitor](https://app.sysdigcloud.com/api/oauth/openid/bcdevops).
 
-On the default page, you can find the icon for your account and the email address associated with it. You may be directed to the **Catchall Team** page, which doesn't have access to resources until you create team access.
+  - Alternatively, you can also sign in on [the Sysdig site](https://app.sysdigcloud.com). Select OpenID and type `BCDevOps` as the company.
 
-Sysdig identifies users by the email, so it's important to use the correct email address for yourself as well as your team members.
+- Upon login, you will be presented with a default page. You may be directed to the **Catchall Team** which has access to no resources at the moment (the team resources and access will be created in later steps).
+
+- At the bottom left corner of the default page, you can find the initial icon for your account and the email address associated with it.
+
+  - **Note** that Sysdig identifies users by the email, so it's important to use the correct email address for yourself as well as your team members.
+
 
 ## Create Sysdig team access<a name="create-access"></a>
 The OpenShift Operator runs in the background and creates a Sysdig RBAC and dashboard for you. The operator looks for a `sysdig-team` custom resource from your `*-tools` namespace. The `sysdig-team` resource does the following:
@@ -158,13 +165,14 @@ Two Sysdig Teams were created and now have the following dashboards:
 
 The Platform Services team recommends that teams use the [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/) to keep your dashboards code. Each dashboard is assigned to an account on Sysdig for ownership. If you delete the user (whether from the console or Custom Resource), all of the dashboards are deleted. Sysdig cloud is a software as a service (SaaS) and not run locally, so there's no way for us to retain the deleted dashboards for a user.
 
-### Fix issues with default dashboards<a name="fix-issues"></a>
-If you don't see default dashboards in your Sysdig team, check the following:
-1. Make sure you're on the correct Sysdig team scope.
+## Troubleshooting <a name="troubleshooting"></a>
 
-1. Check your Sysdig account profile and match it to the email address that you have provided on the `sysdig-team custom resource` in the `tools` namespace. If the administrator's email doesn't match the corresponding user on Sysdig, it won't be able to create the dashboards. Delete the `sysdig-team` from `tools` namespace and recreate it.
+- error from `sysdig-team` custom resource: if you don't see `Awaiting next reconciliation` after waiting for 5mins, contact the Platform Services team on the [#devops-sysdig Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig!). Make sure to include the OpenShift cluster and namespace information.
 
-  **Note**: If you created custom dashboards already, make sure to import them as code using the [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/) first before deleting the Custom Resource.
+- If you don't see the sysdig team created, please double check your Sysdig account profile and match it to the email address that you have provided in the `sysdig-team` custom resource in `tools` namespace. If there is a mismatch, reapply the custom resource.
+
+- If you don't see default dashboard in your Sysdig team, contact the Platform Services team on the [#devops-sysdig Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig!).
+
 
 ---
 Related links:
