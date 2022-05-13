@@ -29,7 +29,7 @@ For more information on Sysdig Monitor, see [Monitoring with Sysdig](New page on
 ## On this page
 - [Sign in to Sysdig](#sign-in-sysdig)
 - [Create Sysdig team access](#create-access)
-- [Sign in to your Sysdig Team](#sign-in)
+- [Verify Sysdig Team Creation](#verify-team-creation)
 - [Review your monitoring dashboards](#review-dashboards)
 - [Troubleshoot access issues](#troubleshooting)
 
@@ -149,20 +149,18 @@ If both of these show, the `sysdig-team` Custom Resource is processed successful
 <!-- ![Switch to the new sysdig team](../../images/sysdig-teams-switch.png) -->
 
 
-## Sign in to your Sysdig Team<a name="sign-in"></a>
-Now that you've created the Custom Resource, go back to Sysdig to see the new team scope and default dashboards.
-
-**Note:** You may need to wait some time between creating the team before the resources show.
-
 ## Review your monitoring dashboards<a name="review-dashboards"></a>
-Two Sysdig Teams were created and now have the following dashboards:
-- A resource dashboard provides an overview of limits and requests across all team namespaces.
 
-- A persistent storage dashboard provides an overview of all PVC utilization. PVCs must be attached to a running pod for their metrics to show on this dashboard.
+You should see the following dashboard templates from your Sysdig team:
+- A resource dashboard template provides an overview of Resource Allocation for production namespace. You can make copies of it for different environments.
 
-- A series of predefined dashboards exist for general use or to help users with appropriate permissions to create custom dashboards. Click `Dashboards`, then click `Add Dashboard` and `Create from Template`
+- A series of Sysdig predefined dashboards exist for general use or to help teams create custom dashboards. Click `Dashboards`, then click `Add Dashboard` and `Create from Template` to pick a template to use.
 
-The Platform Services team recommends that teams use the [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/) to keep your dashboards code. Each dashboard is assigned to an account on Sysdig for ownership. If you delete the user (whether from the console or Custom Resource), all of the dashboards are deleted. Sysdig cloud is a software as a service (SaaS) and not run locally, so there's no way for us to retain the deleted dashboards for a user.
+<!-- TODO: add image -->
+<!-- ![List of default dashboard templates](../../images/sysdig-teams-dashboard-templates.png) -->
+
+> **Note:** The Platform Services team recommends that teams use the [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/) to keep your dashboards as code. Each dashboard is assigned to an account on Sysdig for ownership. If you delete the user (whether from the console or Custom Resource), all of the dashboards are deleted. Sysdig Cloud (SaaS) does not provide a service to retain the deleted dashboards for a user.
+
 
 ## Troubleshooting <a name="troubleshooting"></a>
 
