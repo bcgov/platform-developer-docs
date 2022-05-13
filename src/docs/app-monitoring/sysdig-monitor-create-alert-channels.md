@@ -15,7 +15,7 @@ author: Jonathan Bond
 
 content_owner: Shelly Han
 
-sort_order: 3
+sort_order: 2
 ---
 
 # Create alert channels in Sysdig Monitor
