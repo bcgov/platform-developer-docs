@@ -9,7 +9,7 @@ module.exports = {
     author: `@bcgov`,
     siteUrl: `${process.env.GATSBY_SITE_URL}`,
   },
-  trailingSlash: `never`,
+  trailingSlash: `always`,
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-react-svg`,
