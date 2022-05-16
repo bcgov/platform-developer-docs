@@ -1,21 +1,73 @@
 import * as React from "react";
 import { useEffect, useState } from "react";
 import axios from "axios";
+import { Link } from "gatsby";
+import styled from "styled-components";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
+const StyledListItem = styled.li`
+  a {
+    color: #313132;
+    text-decoration: none;
+
+    div {
+      box-shadow: none;
+      padding: 0.8em 1em;
+
+      cite {
+        color: green;
+        font-size: 12px;
+      }
+
+      p.title {
+        color: #1a5a96;
+        font-size: 18px;
+        margin: 8px 0;
+      }
+
+      &:hover {
+        box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.4);
+
+        p.title {
+          text-decoration: underline;
+        }
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      div {
+        padding: 0.8em 0;
+      }
+    }
+  }
+`;
+
 const Result = ({ item }) => {
   return (
-    <li>
-      <p>
-        <strong>{item?.htmlTitle}</strong>
-      </p>
-      <p>Item description goes here</p>
-      <p>Item display URL goes here</p>
-    </li>
+    <StyledListItem>
+      <Link to={`/${item.link.split("/")[3]}/`}>
+        <div>
+          <cite dangerouslySetInnerHTML={{ __html: item.htmlFormattedUrl }} />
+          <p
+            className="title"
+            dangerouslySetInnerHTML={{ __html: item.htmlTitle }}
+          />
+          <p
+            className="snippet"
+            dangerouslySetInnerHTML={{ __html: item.htmlSnippet }}
+          />
+        </div>
+      </Link>
+    </StyledListItem>
   );
 };
+
+const StyledList = styled.ol`
+  list-style: none;
+  margin-left: 0;
+`;
 
 const SearchPage = () => {
   const [isLoading, setIsLoading] = useState(true);
@@ -37,8 +89,6 @@ const SearchPage = () => {
     "&q=" +
     query;
 
-  console.log("searchUrl: ", searchUrl);
-
   useEffect(() => {
     axios
       .get(searchUrl)
@@ -56,7 +106,7 @@ const SearchPage = () => {
 
   return (
     <Layout>
-      <Seo title="Search" />
+      <Seo title={`Search: ${query}`} />
       <main>
         <h1>Search</h1>
 
@@ -67,15 +117,15 @@ const SearchPage = () => {
         ) : (
           <>
             <p>
-              Displaying {results?.searchInformation?.totalResults} results for{" "}
+              {results?.searchInformation?.totalResults} results for{" "}
               <strong>{query}</strong>
             </p>
             {parseInt(results?.searchInformation?.totalResults) > 0 && (
-              <ul>
+              <StyledList>
                 {results?.items?.map((item, index) => {
                   return <Result item={item} key={`search-result-${index}`} />;
                 })}
-              </ul>
+              </StyledList>
             )}
           </>
         )}
