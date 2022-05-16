@@ -145,8 +145,7 @@ If both of these show, the `sysdig-team` Custom Resource is processed successful
 
 - You may need to wait some time between the creation of the team and resources to display.
 
-<!-- TODO: add image -->
-<!-- ![Switch to the new sysdig team](../../images/sysdig-teams-switch.png) -->
+![Switch to the new sysdig team](../../images/sysdig-team-switch.png)
 
 
 ## Review your monitoring dashboards<a name="review-dashboards"></a>
@@ -156,8 +155,7 @@ You should see the following dashboard templates from your Sysdig team:
 
 - A series of Sysdig predefined dashboards exist for general use or to help teams create custom dashboards. Click `Dashboards`, then click `Add Dashboard` and `Create from Template` to pick a template to use.
 
-<!-- TODO: add image -->
-<!-- ![List of default dashboard templates](../../images/sysdig-teams-dashboard-templates.png) -->
+![List of default dashboard templates](../../images/sysdig-team-dashboard-templates.png)
 
 > **Note:** The Platform Services team recommends that teams use the [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/) to keep your dashboards as code. Each dashboard is assigned to an account on Sysdig for ownership. If you delete the user (whether from the console or Custom Resource), all of the dashboards are deleted. Sysdig Cloud (SaaS) does not provide a service to retain the deleted dashboards for a user.
 
