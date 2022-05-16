@@ -96,7 +96,7 @@ Understand:
   * critical software components and versions?
   * licenses?
 * Is there a process to keep the inventory up to date?
-* Have you [classified your data](https://intranet.gov.bc.ca/thehub/ocio/ocio-enterprise-services/information-security-branch/advisory-services/information-security-classification-guidelines)?
+* Have you [classified your data](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification)?
 
 ### System Design
 
@@ -108,7 +108,7 @@ Understand:
 ### System Implementation
 
 * Do firewall rules support the system design?
-* Do network security policies (i.e. Aporeto) limit communications between components?
+* Do network security policies (i.e. KNPs) limit communications between components?
   * Use encrypted communications wherever possible (e.g. between app server component and database component)
 * Are all exposures necessary (i.e. no unused services running)?
 * Does a port scan confirm the above (i.e. nmap)?
@@ -118,18 +118,17 @@ Understand:
 
 ### Access Management
 
-* Is there idir/BCeID integration or an exemption otherwise?
+* Is there IDIR/BCeID integration (for application access) or an exemption otherwise?
   * follow OAuth2 best practices
-* Are \_A accounts used for server admin?
 * Have any default user accounts been removed?
 * Is the process for granting/revoking access documented?
   * to include details for clients, ministry staff, devs, admins
-* Is access control centralized (i.e. Active Directory)?
+* Is access control centralized (i.e. Active Directory, KeyCloak)?
 * Is the purpose/location of system accounts documented?
 * Do system accounts have the least amount of privilege?
 * Are system passwords/keys well protected?
   * Ensure secrets are not exposed in GitHub repos or OCP environment variables
-  * Utilize Vault\* when available
+  * Utilize Vault
 
 ### Vulnerability Management
 
@@ -137,8 +136,8 @@ Understand:
   * Dependabot alerts (SCA)
 * Is there testing for each build:
   * static code analysis (e.g. SonarQube, SonarCloud)?
-  * dynamic app testing (e.g. ZAP)?
-  * review container vulnerability analysis (CVA) (e.g. Aqua/Artifactory Xray)\* when available
+  * dynamic app testing (e.g. OWASP ZAP)?
+  * review container vulnerability analysis (CVA) (e.g. ACS/Artifactory Xray)
   * user testing (e.g. fuzzing, invalid inputs)?
   * APIs protected/not leaking data?
 * Consider Interactive Application Security Testing (IAST)
@@ -152,6 +151,7 @@ Understand:
   * from service providers (e.g. Hosting)?
   * to stakeholders?
 * Do no permit local auth in Prod instances
+* Do not use production data in non-production environments for testing
 
 ### Logging and Monitoring
 
