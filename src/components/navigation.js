@@ -101,7 +101,7 @@ const NavListItem = ({ id, links, title }) => {
           return (
             <li key={`link-${index}`}>
               <Link
-                to={`/${page?.frontmatter?.slug}`}
+                to={`/${page?.frontmatter?.slug}/`}
                 activeClassName={"active"}
               >
                 {page?.frontmatter?.title}
