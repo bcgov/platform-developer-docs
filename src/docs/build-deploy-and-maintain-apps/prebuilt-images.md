@@ -59,11 +59,11 @@ Use the AppAssessment application to identify configuration issues in your names
 Images: https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/app-assessment
 
 ## Backup container<a name="backup-container"></a>
-The community's database backup container supports four types of databases.
-- Use [this image](https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/backup-container-mariadb) to manage backups of your **MariaDB** instances.
-- Use [this image](https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/backup-container-mongo) to manage backups of your **Mongo** instances.
-- Use [this image](https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/backup-container-mssql) to manage backups of your **MSSQL** instances.
-- Use [this image](https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/backup-container-postgres) to manage backups of your **Postgres** instances.
+The community's database backup container supports four types of databases. Find an image to:
+- [Manage backups of your **MariaDB** instances](https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/backup-container-mariadb) 
+- [Manage backups of your **Mongo** instances](https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/backup-container-mongo)
+- [Manage backups of your **MSSQL** instances](https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/backup-container-mssql)
+- [Manage backups of your **Postgres** instances](https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/backup-container-postgres)
 
 ## Caddy s2i<a name="caddy-s2i"></a>
 [Pipeline templates](https://github.com/bcgov/pipeline-templates) that have been developed for the community use the Caddy s2i image. For more information, see [s21-caddy-nodejs](https://github.com/bcgov/s2i-caddy-nodejs).
