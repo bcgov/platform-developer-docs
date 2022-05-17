@@ -15,7 +15,7 @@ author: Jonathan Bond
 
 content_owner: Shelly Han
 
-sort_order: 1
+sort_order: 2
 ---
 
 # Set up a team in Sysdig Monitor
