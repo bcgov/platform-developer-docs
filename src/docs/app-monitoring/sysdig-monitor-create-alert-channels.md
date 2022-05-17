@@ -1,5 +1,5 @@
 ---
-title: Create alert channels in Sysdig Monitor
+title: Create alerts and notifications in Sysdig Monitor
 
 slug: sysdig-monitor-create-alert-channels
 
@@ -18,25 +18,30 @@ content_owner: Shelly Han
 sort_order: 3
 ---
 
-# Create alert channels in Sysdig Monitor
-You can create alert channels in Sysdig Monitor.
+# Create alerts in Sysdig Monitor
+You can create alerts based on monitoring dashboards in Sysdig Monitor, that notify your team when something needs attention.
+
+Here are some steps on how to setup the Sysdig alerts with [Rocket.Chat](https://chat.developer.gov.bc.ca/).
 
 ## On this page
-- [Create a Rocket.Chat alert channel](#create-rc-channel)
-- [Configure Rocket.Chat](#configure-rc)
-- [Create a Sysdig team notification channel](#team-notification)
+- [Create a Rocket.Chat chat channel and webhook for alert messages](#rc-channel)
+- [Create a Sysdig team notification channel](#sysdig-notification-channel)
+- [Create a Sysdig alert](#sysdig-alert)
 
-## Create a Rocket.Chat alert channel<a name="create-rc-channel"></a>
-You can integrate Sysdig alerts with Rocket.Chat. Both Sysdig Monitor and Rocket.Chat require configurations.
-- Sysdig Monitor creates a **webhook** notification channel.
 
-- Rocket.Chat creates an **incoming webhook** with a custom script.
+## Create a Rocket.Chat chat channel and webhook for alert messages<a name="rc-channel"></a>
 
-## Configure Rocket.Chat<a name="configure-rc"></a>
 Rocket.Chat requires an incoming webhook and a script to parse the data from Sysdig. Do the following:
-1. Create the incoming webhook.
+- Create a RC chat channel for the alert messages to arrive if there isn't one.
 
-2. Use the following sample script for basic alert message creation:
+- Create an incoming webhook to the chat channel:
+
+  - Click on your avatar -> Administration -> Intergrations -> New (from Incoming tab)
+
+  - Name the webhook in the format of `sysdig-alert-webhook-<APP_TEAM_NAME>`
+
+  - Use the following sample script for basic alert message creation:
+
 ```js
 class Script {
   process_incoming_request({ request }) {
@@ -72,21 +77,51 @@ class Script {
 }
 ```
 
-## Create a Sysdig team notification channel<a name="team-notification"></a>
-To create a team notification channel, do the following:
+Here's how the webhook should look like:
+![RC webhook config](../../images/sysdig-team-rc-alert-webhook-config.png)
+
+
+## Create a Sysdig team notification channel<a name="sysdig-notification-channel"></a>
+
+To create a Sysdig team notification channel, do the following:
+
 1. In Sysdig Monitor, go to your user account and click `Settings`.
 
 1. Click `Notification Channels` and `Add Notification Channel`. Choose `Webhook` as the type.
 
-1. Use the webhook URL generated from Rocket.Chat and configure the notification channel.
+1. Use the webhook URL generated from Rocket.Chat and configure the notification channel. Name the channel in the formate of `Rocketchat-alert-channel-<APP_TEAM_NAME>`.
 
-1. Click `Save` and go to the `Alerts` section or start adding custom alerts to any of your configured dashboards.
+1. Click `Save` and now you should be able to test it by clicking on the kebab menu icon and `Test Channel`.
 
-By default, the alert scope is set to `everywhere`, which means all namespaces from the cluster. Make sure you set the scope to your own namespaces. For example, you can use `kubernetes.namespace.name` and pick the ones you need.
+
+## Creating an Alert<a name="sysdig-alert"></a>
+
+It's recommended to create alerts from an application monitoring metrics, which helps to define good alerting thresholds.
+
+- Navigate to the `Alerts` section on the left hand navigation bar, you can see all the alerts within this Sysdig team scope
+
+- To create an alert from metrics, head over to the dashboard. Pick the metric panel and click on `Create Alert` from kebab menu icon.
+
+- The alert contains:
+
+  - `Metric`: make sure if has the correct aggregation. **Note**: For PromQL based alerts, triggering threshold is defined as part of the metric query. See picture below!
+
+  - `Scope`: the alert scope by default is set to `everywhere`, which means all namespaces from the cluster. Make sure you set the scope to your own namespaces if not specified. For example, you can use `kube_namespace_name` and `kube_cluster_name`.
+
+  - `Trigger`: the triggering threshold should be based on the statistic from past monitoring. You can also refer to the data from `Preview` section on the right.
+
+  - `Notify`: pick the Sysdig notification channel to send alert messages to.
+
+  - Others: feel free to explore other features available for alerting!
+
+
+![Create alert from metric](../../images/sysdig-team-alert-create.png)
+![Configure an alert](../../images/sysdig-team-alert-config.png)
+![Configure PromQL alert](../../images/sysdig-team-alert-config-promql.png)
 
 ---
 Related links:
-- [Set up advanced functions in Sysdig Monitor](sysdig-monitor-set-up-advanced-functions.md)
+- [Set up advanced functions in Sysdig Monitor](./sysdig-monitor-set-up-advanced-functions.md)
 - [Set up a team in Sysdig Monitor](./sysdig-monitor-setup-team.md)
 
 Related resources:
@@ -95,7 +130,6 @@ Related resources:
 - [Sysdig Alerts](https://docs.sysdig.com/en/alerts.html)
 - [Sysdig Alerts with Kubernetes and PromQL](https://sysdig.com/blog/alerting-kubernetes/)
 - [Sysdig Teams Blog](https://sysdig.com/blog/introducing-sysdig-teams/)
-- [Sysdig Teams Docs ](https://docs.sysdig.com/en/grouping,-scoping,-and-segmenting-metrics.html#al_UUID-c54169b7-c8f5-4990-6b63-dd2e25b96cce_UUID-3dc7a7aa-2549-23a2-94e2-cee57bdd538f)
 - [Sysdig User Management Docs](https://docs.sysdig.com/en/manage-teams-and-roles.html)
 - [Sysdig User Roles](https://docs.sysdig.com/en/user-and-team-administration.html)
 

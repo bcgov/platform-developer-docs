@@ -1,5 +1,5 @@
 ---
-title: Set up advanced functions in Sysdig Monitor
+title: Set up advanced metrics in Sysdig Monitor
 
 slug: sysdig-monitor-set-up-advanced-functions
 
@@ -15,17 +15,25 @@ author: Jonathan Bond
 
 content_owner: Shelly Han
 
-sort_order: 2
+sort_order: 4
 ---
 
-# Set up advanced functions in Sysdig Monitor<a name="advanced-functions"></a>
-To set up useful tools in the Sysdig Monitor space, do the following:
+# Advanced Usage in Sysdig Monitor
 
-## Create custom monitoring panels
-Sysdig scrapes Prometheus metrics. You can create custom queries using PromQL. For example:
+## On this page
+- [Use Service Discovery to import application metrics endpoints](#sysdig-service-discovery)
+- [Create a PromQL based alert](#promql-alert)
+- [Use Service Discovery to import application metrics endpoints](#sysdig-service-discovery)
 
-## Create a PromQL based alert
-Some of the dashboard panels may leverage PromQL to show metrics. PromQL can be used in alerts as well. The following example shows an alert for the **Persistent Volume Utilization** when hitting 80% full.
+
+## Creating PromQL metrics<a name="explore-promql"></a>
+Sysdig scrapes Prometheus metrics, you can create custom queries using PromQL. Here is a great way to start exploring:
+
+![Sysdig exploring](../../images/sysdig_team_promql_explore.png)
+
+
+## Create a PromQL based alert<a name="promql-alert"></a>
+PromQL can be used in Alerts as well. The following example shows an alert for the **Persistent Volume Utilization** when hitting 80% full. 
 
 - If you'd like to get PVC-specific metrics, for example, get the max percentage of storage usage:
 
@@ -33,9 +41,13 @@ Some of the dashboard panels may leverage PromQL to show metrics. PromQL can be 
 
 - Sample PromQL Query:
 
-  `((avg(kubelet_volume_stats_used_bytes/kubelet_volume_stats_capacity_bytes) by (persistentvolumeclaim)) * 100) >= 80`  
+  `((avg(kubelet_volume_stats_used_bytes/kubelet_volume_stats_capacity_bytes) by (persistentvolumeclaim)) * 100) >= 80`
 
-### Use Service Discovery to import application metrics endpoints
+![Configure PromQL alert](../../images/sysdig-team-alert-config-promql.png)
+
+
+## Use Service Discovery to import application metrics endpoints<a name="sysdig-service-discovery"></a>
+
 Sysdig has a lightweight Prometheus server (Promscrape) that can [import your application metrics endpoint into Sysdig metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/configure-monitoring-integrations/migrating-from-promscrape-v1-to-v2/#migrate-using-default-configuration).
 
 To enable Promscrape to find your application metrics, do the following:
@@ -51,11 +63,12 @@ To enable Promscrape to find your application metrics, do the following:
 
 3. Once the annotation is in place, Sysdig can scrape them. On the **Sysdig Explore** tab, look for the sysdig metrics there (Sysdig does relabeling of the metrics, so they will appear as native sysdig metrics now instead of coming from promQL Query)
 
+
 ---
 Related links:
 - [Set up a team in Sysdig Monitor](./setup-team-sysdig-monitor.md)
-- [Create alert channels in Sysdig Monitor](create-alert-channels-sysdig-monitor.md)
-- [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig!)
+- [Create alert channels in Sysdig Monitor](./create-alert-channels-sysdig-monitor.md)
+- [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 - [Migrate Using Default Configuration](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/configure-monitoring-integrations/migrating-from-promscrape-v1-to-v2/#migrate-using-default-configuration)
 
 Related resources:
