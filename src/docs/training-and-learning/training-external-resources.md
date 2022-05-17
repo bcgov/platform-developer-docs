@@ -19,7 +19,7 @@ sort_order: 3
 ---
 # External training resources 
 
-The resources below are from sources outside of the B.C. government. They provide additional context and support to go along with your [training from the Platform Services team](./training-external-resources.md)   
+The resources below are from sources outside of the B.C. government. They provide additional context and support to go along with your [training from the Platform Services team](./training-external-resources.md).   
 
 ## Websites:
 
