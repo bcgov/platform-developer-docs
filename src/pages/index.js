@@ -80,13 +80,15 @@ const IndexPage = () => (
       <h2>Training and Learning</h2>
       <Grid className="col-3">
         <Card>
-          <h3>OpenShift 101</h3>
+          <h3>Free OpenShift Training</h3>
           <p>
-            This training covers several technical topics, and provides an
-            overview of the build and deploy processes for cloud-native
-            applications on OpenShift.
+            Read about{" "}
+            <a href="https://platform-services-dev.apps.silver.devops.gov.bc.ca/support-and-community/training-from-the-private-cloud-team/">
+              the free training
+            </a>{" "}
+            that is offered on the Platform and get access to other learning
+            resources.
           </p>
-          <p>Register for OpenShift 101. (coming soon)</p>
         </Card>
         <Card>
           <h3>Rocket.Chat</h3>
