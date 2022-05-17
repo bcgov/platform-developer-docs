@@ -68,7 +68,7 @@ To enable Promscrape to find your application metrics, do the following:
 Related links:
 - [Set up a team in Sysdig Monitor](./setup-team-sysdig-monitor.md)
 - [Create alert channels in Sysdig Monitor](./create-alert-channels-sysdig-monitor.md)
-- [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig!)
+- [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 - [Migrate Using Default Configuration](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations-for-sysdig-monitor/configure-monitoring-integrations/migrating-from-promscrape-v1-to-v2/#migrate-using-default-configuration)
 
 Related resources:

@@ -162,11 +162,11 @@ You should see the following dashboard templates from your Sysdig team:
 
 ## Troubleshooting <a name="troubleshooting"></a>
 
-- error from `sysdig-team` custom resource: if you don't see `Awaiting next reconciliation` after waiting for 5mins, contact the Platform Services team on the [#devops-sysdig Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig!). Make sure to include the OpenShift cluster and namespace information.
+- error from `sysdig-team` custom resource: if you don't see `Awaiting next reconciliation` after waiting for 5mins, contact the Platform Services team on the [#devops-sysdig Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig). Make sure to include the OpenShift cluster and namespace information.
 
 - If you don't see the sysdig team created, please double check your Sysdig account profile and match it to the email address that you have provided in the `sysdig-team` custom resource in `tools` namespace. If there is a mismatch, reapply the custom resource.
 
-- If you don't see default dashboard in your Sysdig team, contact the Platform Services team on the [#devops-sysdig Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig!).
+- If you don't see default dashboard in your Sysdig team, contact the Platform Services team on the [#devops-sysdig Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig).
 
 
 ---
