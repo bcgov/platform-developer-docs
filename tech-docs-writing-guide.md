@@ -165,6 +165,8 @@ Track the metadata in the fields of each page based on these descriptions:
 
 - **content_owner**: The SME of the page. They are responsible for the factual accuracy of the content.
 
+- **sort_order**: Determines the order of the link to the page within the navigation menu.
+
 ### Keywords, tags, and taxonomy
 
 It's important to track relevant keywords for each page and to refine them as the content becomes clearer. Eventually, the team uses a taxonomy to help pages get found when users search for them. But there are distinct differences, as shown in [the quotes from this blog below](https://contentstrategyinc.com/mays-vancouver-iacs-meetup-understanding-taxonomies/):
