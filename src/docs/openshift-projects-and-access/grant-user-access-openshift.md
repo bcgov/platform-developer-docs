@@ -53,7 +53,12 @@ To add another user with edit role to the namespace who can create and delete ap
 oc adm policy add-role-to-user edit <collaborator>
 ```
 
-Replace ``<collaborator>`` with the name of the user as displayed by the ``oc whoami`` command when run by that user.
+Replace ``<collaborator>`` with the name of the user as displayed by the ``oc whoami`` command when run by that user. 
+
+A few important notes about the format of usernames: 
+- Usernames will always be of the form ``<github-username>@github`` or ``<idir-username>@idir`` depending on whether the user logs into the Openshift console using their Github account or IDIR account. You must include the ``@github`` or ``@idir`` in order for any of these commands to function properly.
+- Usernames are case-sensitive and are required to be lowercase. This is particularly important for those who use GitHub accounts. Many GitHub accounts have capital letters in them, but these usernames are made lowercase when used in Openshift, and using these capital letters will not work. 
+- For example, if my GitHub username is ``CoolGovvieDev``, my Openshift username would be exactly ``coolgovviedev@github``. If you were to try to run these commands on a user called ``CoolGovvieDev@github``, it would not work properly. If you were to try to run these commands on a user called ``coolgovviedev``, it would not work properly.
 
 To remove a user from a namespace, run:
 
