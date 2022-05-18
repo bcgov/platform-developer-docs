@@ -83,7 +83,7 @@ The resources below have more information. They are concerned largely with forms
 
 Make sure that the link to an external page is descriptive. The user should know (or have a good idea) where the link is going to take them before they click it.
 
-When linking from one Markdown page in the `./src/docs/` folder to another, write the link in the form `/<slug of the target page>`. While these links won't work when viewing the page on GitHub, they will work on the Gatsby site.
+When linking from one Markdown page in the `./src/docs/` folder to another, write the link in the form `/<slug of the target page>/`. While these links won't work when viewing the page on GitHub, they will work on the Gatsby site.
 
 ### FAQs
 [Don't write FAQs](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/faqs) or format sections as a question and answer. Just tell the reader what they need to know.
