@@ -66,9 +66,9 @@ Your product team can only have a **permanent**, private repository in `bcgov-c`
 
 Ministry-specific **private** organizations must be linked to the B.C. government's Enterprise account (user licenses are required for the members of these organizations).
 
-These organizations permanently store teams' private repositories with closed-sourced code that can't be transitioned to a public repository within 12 months. For more information on creating a private organization linked to the GitHub enterprise account, see [GitHub Enterprise user licences in the B.C. government](./github-enterprise-user-licenses-bc-government.md).
+These organizations permanently store teams' private repositories with closed-sourced code that can't be transitioned to a public repository within 12 months. For more information on creating a private organization linked to the GitHub enterprise account, see [GitHub Enterprise user licences in the B.C. government](/github-enterprise-user-licenses-bc-government/).
 * Product teams that need a permanent location for their closed-source code should use this repository.
-* Each ministry team must purchase their own [user licenses](./github-enterprise-user-licenses-bc-government.md) to use the organization.
+* Each ministry team must purchase their own [user licenses](/github-enterprise-user-licenses-bc-government/) to use the organization.
 * Only ministry GitHub administrators can create repositories in this organization. Consult with your ministry's Information Management Branch (IMB) to get in touch with the GitHub administrators.
 
 ![Diagram of the BC Goverment GitHub organizations](../../images/github-organization-chart.png)
@@ -83,9 +83,9 @@ Related links:
 * [bcgov](https://github.com/bcgov)
 * [Digital Principles for BC Goverment](https://digital.gov.bc.ca/resources/digital-principles)
 * [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/)
-* [GitHub Enterprise user licences in the BC government](./github-enterprise-user-licenses-bc-government.md)
-* [Remove a user's BCGov GitHub access](./remove-user-bcgov-github-access.md)
-* [Request BCGov GitHub access or repository creation](./request-bcgov-github-access-repository-creation.md)
+* [GitHub Enterprise user licences in the BC government](/github-enterprise-user-licenses-bc-government/)
+* [Remove a user's BCGov GitHub access](/remove-user-bcgov-github-access/)
+* [Request BCGov GitHub access or repository creation](/request-bcgov-github-access-repository-creation/)
 
 Rewrite sources:
 * https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/github/README.md

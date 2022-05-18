@@ -31,7 +31,7 @@ When you create a repository in the `bcgov` organization, add the following mark
 - [Contribution guidelines](#contribution)
 
 ## Licence<a name="licence"></a>
-Choose a licence and place a licence file in your repository before you do anything else. For important information on licences, see [License your project](./license-your-project.md).
+Choose a licence and place a licence file in your repository before you do anything else. For important information on licences, see [License your GitHub repository](/license-your-github-repository/).
 
 Depending on the licence you choose, add boilerplate text for the applicable licence to your README file.
 
@@ -43,7 +43,7 @@ For more information, see [About READMEs](https://docs.github.com/en/repositorie
 Make sure to include the following:
 - A brief description of your project.
 - An overview on how to contribute to the repository with a link to your contribution guidelines.
-- Depending on your licence, boilerplate text for the applicable licence. For more information, see [License your GitHub repository](./license-your-github-repository.md).
+- Depending on your licence, boilerplate text for the applicable licence. For more information, see [License your GitHub repository](/license-your-github-repository/).
 - A link to your code of conduct file.
 
 ## Code of conduct<a name="code-of-conduct"></a>
@@ -61,7 +61,7 @@ Make sure you're clear on the licence that applies to your repository and provid
 ---
 Related links:
 * [About READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
-* [License your GitHub repository](./license-your-github-repository.md)
+* [License your GitHub repository](/license-your-github-repository/)
 * [Contributor Covenant](https://www.contributor-covenant.org/version/1/4/code-of-conduct/)
 * [Healthy contributions](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions)
 * [Using pull requests](https://help.github.com/articles/using-pull-requests/)

@@ -39,8 +39,8 @@ GitHub User Access Removal Request:
 ---
 Related links:
 * [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/)
-* [BC Government organizations in Github](./bc-government-organizations-in-github.md)
-* [Request BCGov GitHub access or repository creation](./request-bcgov-github-access-repository-creation.md)
+* [BC Government organizations in GitHub](/bc-government-organizations-in-github/)
+* [Request BCGov GitHub access or repository creation](/request-bcgov-github-access-repository-creation/)
 
 Rewrite sources:
 * https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/github/README.md

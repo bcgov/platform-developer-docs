@@ -18,7 +18,7 @@ content_owner: Cailey Jones
 sort_order: 7
 ---
 # Push and pull artifacts in Artifactory
-After you've [set up your Artifactory service account](./setup-artifactory-service-account-repository-project.md), you can pull artifacts from the platform's caching repositories. If you wish to push to Artifactory, you will need an [Artifactory project and private repository first](./setup-artifactory-service-account-repository-project.md). After your set up your private repository, follow these instructions to pull from them.
+After you've [set up your Artifactory service account](/setup-artifactory-service-account/), you can pull artifacts from the platform's caching repositories. If you wish to push to Artifactory, you will need an [Artifactory project and private repository first](/setup-artifactory-project-repository/). After your set up your private repository, follow these instructions to pull from them.
 
 ## On this page
 - [Pull Docker images from Artifactory](#pull-docker)
@@ -188,7 +188,8 @@ If your team uses a specific package type not shown here, consider creating a pu
 
 ---
 Related links:
-* [Setup an Artifactory service account, repository, and project](./setup-artifactory-service-account-repository-project.md)
+* [Set up an Artifactory service account](/setup-artifactory-service-account/)
+* [Set up an Artifactory project and repository](/setup-artifactory-project-repository/)
 * [NPM repository](https://registry.npmjs.org)
 * [repo-mountie assemble file](https://github.com/bcgov/repomountie/blob/master/.s2i/bin/assemble)
 
