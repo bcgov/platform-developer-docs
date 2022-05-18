@@ -50,5 +50,5 @@ We’re developing an OpenShift 201 course to cover more advanced skills than th
 
 ---
 Related links:
-- [External training resources](./training-external-resources.md)
+- [External training resources](/training-external-resources/)
 ---

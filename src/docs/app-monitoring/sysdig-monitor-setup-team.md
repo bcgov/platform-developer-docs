@@ -22,7 +22,7 @@ sort_order: 2
 
 [Sysdig Monitor](https://sysdig.com/products/monitor/) provides system-level monitoring of Kubernetes hosts and the ability to create custom dashboards, alerts and operational-level captures to diagnose application or platform-level issues.
 
-The Sysdig Teams Operator runs in the cluster and enables a team to create and manage access to a dedicated Sysdig Team account for BC Gov Private Cloud PaaS OpenShift platform users. The team is scoped to the OpenShift namespaces that belong to the team. Sysdig also provides a default dashboard to identify system [resources, limits and actual usage](/docs/automation-and-resiliency/openshift-project-resource-quotas.md).
+The Sysdig Teams Operator runs in the cluster and enables a team to create and manage access to a dedicated Sysdig Team account for BC Gov Private Cloud PaaS OpenShift platform users. The team is scoped to the OpenShift namespaces that belong to the team. Sysdig also provides a default dashboard to identify system [resources, limits and actual usage](/openshift-project-resource-quotas/).
 
 For more information on Sysdig Monitor, see [Monitoring with Sysdig](New page on Wordpress site).
 
@@ -172,10 +172,10 @@ You should see the following dashboard templates from your Sysdig team:
 ---
 Related links:
 - [BCDevOps Sysdig Monitor Service](https://app.sysdigcloud.com/api/oauth/openid/bcdevops)
-- [Set up advanced functions in Sysdig Monitor](./sysdig-monitor-set-up-advanced-functions.md)
-- [Create alert channels in Sysdig Monitor](./sysdig-monitor-create-alert-channels.md)
+- [Set up advanced functions in Sysdig Monitor](/sysdig-monitor-set-up-advanced-functions/)
+- [Create alert channels in Sysdig Monitor](/sysdig-monitor-create-alert-channels/)
 - [Sysdig Monitor](https://sysdig.com/products/monitor/)
-- [OpenShift project resource quotas](/docs/automation-and-resiliency/openshift-project-resource-quotas.md)
+- [OpenShift project resource quotas](/openshift-project-resource-quotas/)
 - [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/)
 - [Monitoring with Sysdig](New page on Wordpress site)
 - [Sydig User Profile](https://app.sysdigcloud.com/#/settings/user)

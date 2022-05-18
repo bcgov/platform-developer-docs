@@ -111,9 +111,9 @@ Related links:
 * [Digital Principles for BC Goverment](https://digital.gov.bc.ca/resources/digital-principles)
 * [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/)
 * [DevOps-Request](https://github.com/BCDevOps/devops-requests/issues/new?assignees=caggles%2C+ShellyXueHan%2C+mitovskaol%2C+patricksimonian&labels=github-repo%2C+pending&template=github_repo_request.md&title=)
-* [GitHub Enterprise user licences in the BC government](./github-enterprise-user-licenses-bc-government.md)
-* [BC Government organizations in Github](./bc-government-organizations-in-github.md)
-* [Remove a user's BCGov GitHub access](./remove-user-bcgov-github-access.md)
+* [GitHub Enterprise user licences in the BC government](/github-enterprise-user-licenses-bc-government/)
+* [BC Government organizations in GitHub](/bc-government-organizations-in-github/)
+* [Remove a user's BCGov GitHub access](/remove-user-bcgov-github-access/)
 
 Rewrite sources:
 * https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/github/README.md

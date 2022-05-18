@@ -33,9 +33,9 @@ tags:
 
 ### Here are the documents for you to follow through:
 
-1. [Set up a team in Sysdig Monitor](./sysdig-monitor-setup-team.md)
-1. [Create alerts for metrics](./sysdig-monitor-create-alert-channels.md)
-1. [Advanced Usage in Sysdig Monitor](./sysdig-monitor-set-up-advanced-functions.md)
+1. [Set up a team in Sysdig Monitor](/sysdig-monitor-setup-team/)
+1. [Create alerts for metrics](/sysdig-monitor-create-alert-channels/)
+1. [Advanced Usage in Sysdig Monitor](/sysdig-monitor-set-up-advanced-functions/)
 
 If you have any questions about Sysdig or application monitoring, please contact the Platform Services team on the [#devops-sysdig Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig).
 
@@ -43,7 +43,7 @@ If you have any questions about Sysdig or application monitoring, please contact
 Related links:
 - [BCDevOps Sysdig Monitor Service](https://app.sysdigcloud.com/api/oauth/openid/bcdevops)
 - [Sysdig Monitor](https://sysdig.com/products/monitor/)
-- [OpenShift project resource quotas](/docs/automation-and-resiliency/openshift-project-resource-quotas.md)
+- [OpenShift project resource quotas](/openshift-project-resource-quotas/)
 - [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/)
 - [Monitoring with Sysdig](New page on Wordpress site)
 - [Sydig User Profile](https://app.sysdigcloud.com/#/settings/user)
