@@ -20,11 +20,11 @@ sort_order: 1
 
 # Provision a new OpenShift project
 
-On the OpenShift platform, different teams organize their work in isolated projects. Before you can work on the platform, you need to submit a project provisioning request to have a project set provisioned for you on the Private Cloud PaaS.
+On the OpenShift platform, different teams organize their work in isolated projects. Before you can work on the platform, you need to submit a project provisioning request to have a project set provisioned for you on the BC Gov Private Cloud PaaS.
 
 Each new request must be reviewed and approved, including requests for additional projects from teams that already have one or more projects on the platform.
 
-Read more about project provisioning and the prerequisites in [this article](https://platform-services-dev.apps.silver.devops.gov.bc.ca/our-products-in-the-private-cloud-paas/project-registry/) or submit the project provisioning request through [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing).
+[Read more about project provisioning and the prerequisites](https://platform-services-dev.apps.silver.devops.gov.bc.ca/our-products-in-the-private-cloud-paas/project-registry/) or submit a project provisioning request through [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing).
 
 ---
 
