@@ -27,6 +27,7 @@ function Seo({ description, lang, meta, title }) {
 
   const metaDescription = description || site.siteMetadata.description;
   const defaultTitle = site.siteMetadata?.title;
+  const GOOGLE_SITE_VERIFICATION = process.env.GATSBY_GOOGLE_SITE_VERIFICATION;
 
   return (
     <Helmet
@@ -70,7 +71,7 @@ function Seo({ description, lang, meta, title }) {
         },
         {
           name: `google-site-verification`,
-          content: `JVI2MS3FZYtm4YWMHYsQbQUHdzCWB8rf2bEd1FRWfxE`,
+          content: GOOGLE_SITE_VERIFICATION,
         },
       ].concat(meta)}
     />
