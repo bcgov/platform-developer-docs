@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 import SearchBar from "./search-bar";
 
-import SvgChevonDown from "../images/fa-chevron-down-solid.svg";
+import SvgChevronDown from "../images/fa-chevron-down-solid.svg";
 import SvgChevronUp from "../images/fa-chevron-up-solid.svg";
 import SvgOpenMenu from "../images/fa-bars-solid.svg";
 import SvgCloseMenu from "../images/fa-xmark-solid.svg";
@@ -93,7 +93,7 @@ const NavListItem = ({ id, links, title }) => {
           aria-label={`${isOpen ? "Collapse" : "Expand"} ${title}`}
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <SvgChevronUp /> : <SvgChevonDown />}
+          {isOpen ? <SvgChevronUp /> : <SvgChevronDown />}
         </button>
       </div>
       <ul id={id} style={{ display: `${isOpen ? "inherit" : "none"}` }}>

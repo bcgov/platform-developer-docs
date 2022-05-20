@@ -18,6 +18,18 @@ A Gatsby application for these documents is included in this repository.
 
 Use `Dockerfile.dev` and `docker-compose.dev.yaml` for local development using `gatsby-cli`.
 
+Copy the example `.env` files and fill them with your environment variables:
+
+```sh
+cp .env.development.example .env.development
+cp .env.production.example .env.production
+```
+
+- `GATSBY_GOOGLE_CUSTOM_SEARCH_API_KEY` is a [Google Cloud Platform API key](https://console.cloud.google.com/apis/credentials) that needs access to the [Custom Search API](https://developers.google.com/custom-search/v1/introduction)
+- `GATSBY_GOOGLE_SEARCH_ENGINE_ID` refers to a specific Google custom search engine instance
+- `GATSBY_GOOGLE_SITE_VERIFICATION` is a meta tag value that ties the Google custom search engine instance to a specific instance of our deployed Gatsby site, allowing us to access information about the pages indexed by Google in [Google Search Console](https://search.google.com/search-console/about)
+- `GATSBY_SITE_URL` is used to by `./gatsby-config.js` to populate the `siteMetadata.siteUrl` field
+
 ### Production Build
 
 Use `Dockerfile.prod` and `docker-compose.prod.yaml` for a production build served by nginx.
