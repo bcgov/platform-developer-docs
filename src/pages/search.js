@@ -4,6 +4,7 @@ import axios from "axios";
 import { Link, navigate } from "gatsby";
 import styled from "styled-components";
 
+import Alert from "../components/alert";
 import Layout from "../components/layout";
 import Pagination from "../components/pagination";
 import Seo from "../components/seo";
@@ -214,7 +215,7 @@ const SearchPage = () => {
             />
           )}
 
-        {isError && <p>Error</p>}
+        {isError && <Alert type="error">Error fetching search results</Alert>}
       </main>
     </Layout>
   );
