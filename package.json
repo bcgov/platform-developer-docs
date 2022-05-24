@@ -28,6 +28,7 @@
     "axios": "^0.27.2",
     "babel-plugin-styled-components": "^2.0.7",
     "dotenv": "^16.0.1",
+    "escape-string-regexp": "^4.0.0",
     "gatsby": "^4.12.1",
     "gatsby-plugin-catch-links": "^4.12.1",
     "gatsby-plugin-image": "^2.12.1",
@@ -46,7 +47,8 @@
     "gatsby-transformer-sharp": "^4.12.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
-    "react-responsive": "^9.0.0-beta.6"
+    "react-responsive": "^9.0.0-beta.6",
+    "unist-util-visit": "^2.0.3"
   },
   "devDependencies": {
     "gatsby-cli": "^4.13.0",
