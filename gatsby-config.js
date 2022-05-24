@@ -57,6 +57,20 @@ module.exports = {
       resolve: `gatsby-transformer-remark`,
       options: {
         plugins: [
+          {
+            resolve: "gatsby-remark-string-replace",
+            options: {
+              // List your find and replace values. Both values must be strings.
+              // This is required.
+              replacements: {
+                WORDPRESS_BASE_URL: `${process.env.GATSBY_WORDPRESS_SITE_BASE_URL}`,
+              },
+              // By default, values are delimited to reduce the chances of
+              // conflicting with real content. You can change the prefix here.
+              // Set to `false` to disable the prefix.
+              delimiter: "%",
+            },
+          },
           `gatsby-remark-autolink-headers`,
           `gatsby-remark-copy-linked-files`,
           {
