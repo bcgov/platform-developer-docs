@@ -78,6 +78,7 @@ const SearchBar = () => {
         type="text"
         placeholder="Search"
         onChange={e => setQuery(e.target.value)}
+        autoComplete={"off"}
       />
       <button type="submit" aria-label="Search">
         <SearchIcon />
