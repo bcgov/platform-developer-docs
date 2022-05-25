@@ -85,6 +85,8 @@ Make sure that the link to an external page is descriptive. The user should know
 
 When linking from one Markdown page in the `./src/docs/` folder to another, write the link in the form `/<slug of the target page>/`. While these links won't work when viewing the page on GitHub, they will work on the Gatsby site.
 
+When linking from Markdown pages in `./src/docs/` to the Private Cloud PaaS WordPress site, use the token `%WORDPRESS_BASE_URL%` in place of the site address and before the path of the document being linked to, in the form `%WORDPRESS_BASE_URL%/path-to-page/`. This is to allow for different WordPress URLs to be injected depending on the environment. 
+
 ### FAQs
 [Don't write FAQs](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/faqs) or format sections as a question and answer. Just tell the reader what they need to know.
 
