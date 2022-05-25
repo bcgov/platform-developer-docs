@@ -28,7 +28,8 @@ cp .env.production.example .env.production
 - `GATSBY_GOOGLE_CUSTOM_SEARCH_API_KEY` is a [Google Cloud Platform API key](https://console.cloud.google.com/apis/credentials) that needs access to the [Custom Search API](https://developers.google.com/custom-search/v1/introduction)
 - `GATSBY_GOOGLE_SEARCH_ENGINE_ID` refers to a specific Google custom search engine instance
 - `GATSBY_GOOGLE_SITE_VERIFICATION` is a meta tag value that ties the Google custom search engine instance to a specific instance of our deployed Gatsby site, allowing us to access information about the pages indexed by Google in [Google Search Console](https://search.google.com/search-console/about)
-- `GATSBY_SITE_URL` is used to by `./gatsby-config.js` to populate the `siteMetadata.siteUrl` field
+- `GATSBY_SITE_URL` is used by `./gatsby-config.js` to populate the `siteMetadata.siteUrl` field
+- `GATSBY_WORDPRESS_SITE_BASE_URL` is used by `./gatsby-config.js` to allow us to link to our WordPress site in a tokenized fashion from our Markdown documents
 
 ### Production Build
 
