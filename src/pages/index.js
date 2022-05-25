@@ -5,6 +5,8 @@ import styled from "styled-components";
 import Layout from "../components/layout";
 import Seo from "../components/seo";
 
+const WORDPRESS_BASE_URL = process.env.GATSBY_WORDPRESS_SITE_BASE_URL;
+
 const Grid = styled.div`
   display: grid;
   justify-items: stretch;
@@ -83,7 +85,9 @@ const IndexPage = () => (
           <h3>Free OpenShift Training</h3>
           <p>
             Read about{" "}
-            <a href="https://platform-services-dev.apps.silver.devops.gov.bc.ca/support-and-community/training-from-the-private-cloud-team/">
+            <a
+              href={`${WORDPRESS_BASE_URL}/support-and-community/platform-training-and-resources/`}
+            >
               the free training
             </a>{" "}
             that is offered on the Platform and get access to other learning
@@ -96,7 +100,9 @@ const IndexPage = () => (
             Rocket.Chat will be your main communication channel for platform
             updates and support while you work in the BC Gov Private Cloud PaaS.
             Read about{" "}
-            <a href="https://platform-services-dev.apps.silver.devops.gov.bc.ca/support-and-community/stay-connected/">
+            <a
+              href={`${WORDPRESS_BASE_URL}/support-and-community/stay-connected/`}
+            >
               how to stay connected in Rocket.Chat
             </a>
             .
@@ -116,7 +122,9 @@ const IndexPage = () => (
             application.
           </p>
           <p>
-            <a href="https://platform-services-dev.apps.silver.devops.gov.bc.ca/support-and-community/events-in-the-bc-gov-private-cloud-paas/">
+            <a
+              href={`${WORDPRESS_BASE_URL}/support-and-community/events-in-the-bc-gov-private-cloud-paas/`}
+            >
               Learn how to register for this and other events
             </a>
             .
@@ -219,7 +227,9 @@ const IndexPage = () => (
           <p>
             If you think an incident has occurred with our services, you can
             report it by{" "}
-            <a href="https://platform-services-dev.apps.silver.devops.gov.bc.ca/support-and-community/support-incident-response-flow/">
+            <a
+              href={`${WORDPRESS_BASE_URL}/support-and-community/support-incident-response-flow/`}
+            >
               following these steps
             </a>
             .
@@ -230,7 +240,9 @@ const IndexPage = () => (
           <p>
             We follow a community-based support model. You can use our
             self-serve resources or ask for help from the platform community.{" "}
-            <a href="https://platform-services-dev.apps.silver.devops.gov.bc.ca/support-and-community/how-to-get-support-or-help/">
+            <a
+              href={`${WORDPRESS_BASE_URL}/support-and-community/how-to-get-support-or-help/`}
+            >
               Learn how to get help on the Platform
             </a>
             .
@@ -241,7 +253,9 @@ const IndexPage = () => (
           <p>
             Not sure where to go to get things done on the platform? We've
             outlined common platform tasks and links to additional instructions.{" "}
-            <a href="https://platform-services-dev.apps.silver.devops.gov.bc.ca/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/">
+            <a
+              href={`${WORDPRESS_BASE_URL}/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/`}
+            >
               Learn how to get help with some of the most commonly searched-for
               tasks
             </a>
