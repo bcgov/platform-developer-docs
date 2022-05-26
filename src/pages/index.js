@@ -117,8 +117,8 @@ const IndexPage = () => (
         <Card>
           <h3>Platform community MeetUps</h3>
           <p>
-            Every month, we host a platform community MeetUp where product teams
-            from across the B.C. government give technical demos of their
+            Every 3 weeks, we host a platform community MeetUp where product
+            teams from across the B.C. government give technical demos of their
             application.
           </p>
           <p>
