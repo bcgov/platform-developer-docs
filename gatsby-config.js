@@ -4,8 +4,8 @@ require("dotenv").config({
 
 module.exports = {
   siteMetadata: {
-    title: `Private Cloud as a Service Technical Documentation`,
-    description: `Documentation for the BC Government's Private Cloud Platform as a Service.`,
+    title: `Private Cloud as a Service Platform Technical Documentation`,
+    description: `Documentation for the BC Government's Private Cloud as a Service Platform.`,
     author: `@bcgov`,
     siteUrl: `${process.env.GATSBY_SITE_URL}`,
   },
@@ -22,7 +22,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `Private Cloud as a Service Technical Documentation`,
+        name: `Private Cloud as a Service Platform Technical Documentation`,
         short_name: `Private Cloud Tech Docs`,
         start_url: `/`,
         background_color: `white`,
