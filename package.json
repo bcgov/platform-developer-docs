@@ -10,7 +10,7 @@
     "start": "gatsby develop",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
-    "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\" && exit 1"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -51,7 +51,12 @@
     "unist-util-visit": "^2.0.3"
   },
   "devDependencies": {
+    "babel-jest": "^28.1.0",
+    "babel-preset-gatsby": "^2.15.0",
     "gatsby-cli": "^4.13.0",
-    "prettier": "^2.6.2"
+    "identity-obj-proxy": "^3.0.0",
+    "jest": "^28.1.0",
+    "prettier": "^2.6.2",
+    "react-test-renderer": "^17.0.2"
   }
 }
