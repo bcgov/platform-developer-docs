@@ -217,6 +217,7 @@ export default function Navigation() {
               let openshiftProjectsAndAccess = [];
               let platformArchitectureReference = [];
               let reusableCodeAndServices = [];
+              let securityAndPrivacyCompliance = [];
               let trainingAndLearning = [];
               let useGithubInBcgov = [];
               let noCategory = [];
@@ -246,6 +247,9 @@ export default function Navigation() {
                   case "reusable-code-and-services":
                     reusableCodeAndServices.push(node);
                     break;
+                  case "security-and-privacy-compliance":
+                    securityAndPrivacyCompliance.push(node);
+                    break;
                   case "training-and-learning":
                     trainingAndLearning.push(node);
                     break;
@@ -274,6 +278,7 @@ export default function Navigation() {
               openshiftProjectsAndAccess.sort(sortPages);
               platformArchitectureReference.sort(sortPages);
               reusableCodeAndServices.sort(sortPages);
+              securityAndPrivacyCompliance.sort(sortPages);
               trainingAndLearning.sort(sortPages);
               useGithubInBcgov.sort(sortPages);
               noCategory.sort(sortPages);
@@ -307,9 +312,9 @@ export default function Navigation() {
                       links={appMonitoring}
                     />
                     <NavListItem
-                      id="design-system"
-                      title="Design system"
-                      links={designSystem}
+                      id="security-and-privacy-compliance"
+                      title="Security and privacy compliance"
+                      links={securityAndPrivacyCompliance}
                     />
                     <NavListItem
                       id="reusable-code-and-services"
@@ -325,6 +330,11 @@ export default function Navigation() {
                       id="training-and-learning"
                       title="Training and learning"
                       links={trainingAndLearning}
+                    />
+                    <NavListItem
+                      id="design-system"
+                      title="Design system"
+                      links={designSystem}
                     />
                     {noCategory?.length > 0 && (
                       <NavListItem
