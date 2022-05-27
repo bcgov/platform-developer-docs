@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Header renders correctly 1`] = `
+<header
+  className="sc-bczRLJ hzFTZB"
+>
+  <div
+    className="sc-gsnTZi hPKblw"
+  >
+    <a
+      className="sc-dkzDqf kgoWbv"
+      href="/"
+      style={
+        Object {
+          "color": "white",
+          "textDecoration": "none",
+        }
+      }
+    >
+      <test-file-stub
+        className="logo horizontal"
+      />
+      <span>
+        Site Title
+      </span>
+    </a>
+  </div>
+</header>
+`;
