@@ -56,7 +56,7 @@ spec:
 ## AppAssessment<a name="app-assessment"></a>
 Use the AppAssessment application to identify configuration issues in your namespaces and to improve resource consumption and health checks. For more information, see [AppAssessment](https://github.com/bcgov/AppAssessment).
 
-Images: https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/app-assessment
+Images: [AppAssessment images in Artifactory](https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/app-assessment)
 
 ## Backup container<a name="backup-container"></a>
 The community's database backup container supports four types of databases. Find an image to:
@@ -68,17 +68,17 @@ The community's database backup container supports four types of databases. Find
 ## Caddy s2i<a name="caddy-s2i"></a>
 [Pipeline templates](https://github.com/bcgov/pipeline-templates) that have been developed for the community use the Caddy s2i image. For more information, see [s21-caddy-nodejs](https://github.com/bcgov/s2i-caddy-nodejs).
 
-Images: https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/caddy-s2i-builder
+Images: [Caddy s2i images in Artifactory](https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/caddy-s2i-builder)
 
 ## CodeQL<a name="codeql"></a>
 [Pipeline templates](https://github.com/bcgov/pipeline-templates) that have been developed for the community use the CodeQL image. For more information, see [codeql](https://github.com/bcgov/pipeline-templates/tree/main/tekton/base/tasks/codeql).
 
-Images: https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/codeql
+Images: [CodeQL images in Artifactory](https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/codeql)
 
 ## MongoDB 3.6 HA<a name="mongodb-36-ha"></a>
 This is version 3.6 of a MongoDB image that's ready for highly available applications. For more information, see [mongodb-replicaset-container](https://github.com/bcgov/mongodb-replicaset-container).
 
-Images: https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/mongodb-36-ha
+Images: [MongoDB images in Artifactory](https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/mongodb-36-ha)
 
 ## Patroni/Postgres<a name="patroni-postgres"></a>
 This image comes in two versions:
@@ -87,7 +87,7 @@ This image comes in two versions:
 
 For more information, see [patroni-postgres-container](https://github.com/bcgov/patroni-postgres-container.git).
 
-Images: https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/patroni-postgres
+Images: [Patroni/Postgres images in Artiactory](https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/patroni-postgres)
 
 ## Legacy builds<a name="legacy-builds"></a>
 Previously, some of these builds were available on the local image registry of each OpenShift cluster in the `bcgov` namespace.
