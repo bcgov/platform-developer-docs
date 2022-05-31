@@ -56,7 +56,7 @@ In both cases, the basic steps to release the code are similar, while the implic
 
 - Assess any dependencies
 
-	Check library dependencies, sample or config data to make sure it's appropriate for release or is separated out, if needed.
+	Check library dependencies, sample or configuration data to make sure it's appropriate for release or is separated out, if needed.
 
 If you are intending to maintain an active project, make sure to establish the appropriate processes and terms to manage contributions.
 
