@@ -105,7 +105,7 @@ You can also add additional roles to the project, if you want more finely-tuned 
 
 To add a repository to your project, do the following:
 1. Click the gear icon and then choose **Repositories**. Click **Add Repositories**.
-2. Choose a local repository. If you only need to push images to Artifactory, use a local repository.
+2. Choose a repository. If you only need to push images to Artifactory, use a local repository.
 3. Choose a package type.
 4. Create a name for your new repository. All repositories in projects have the project key prefixed automatically. Use the following naming convention:
 
