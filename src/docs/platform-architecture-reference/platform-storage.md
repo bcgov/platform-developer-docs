@@ -20,7 +20,7 @@ sort_order: 3
 
 # Platform storage
 
-We use several different storage technologies on the OpenShift platform. Currently, we have three types of persistent storage available:
+We use several different storage technologies in OpenShift. Currently, we have three types of persistent storage available:
 
 * **FILE**: File storage is an all-purpose storage type that can be attached to one or more containers. It's the recommended storage class for most general application uses and is powered by Network File System (NFS).
 
@@ -47,7 +47,7 @@ All NetApp storage classes support resizing (bigger only). You can start with a 
 
 * **NetApp Block**: `netapp-block-standard` is the current block `storageClass` target and the `storageClass` you should use for your block storage needs.
 
-Two additional storage classes (`netapp-file-extended` and `netapp-block-extended`) aren't available to dev teams. They are reserved for operations teams to use for infrastructure components, like the ElasticSearch stack or the image registry.
+Two additional storage classes (`netapp-file-extended` and `netapp-block-extended`) aren't available to product teams. They are reserved for the Platform Operations team to use for infrastructure components, like the ElasticSearch stack or the image registry.
 
 ### OpenShift Volume Snapshots
 
@@ -57,7 +57,7 @@ See the [Red Hat documentation](https://access.redhat.com/documentation/en-us/re
 
 ### S3-Compatible Object Storage (Dell EMC Elastic Cloud Storage)
 
-For applications that need to store large amounts of unstructured data we recommend using the S3-compliant on-premises [Object Store Service](https://ssbc-client.gov.bc.ca/services/ObjectStorage/overview.htm) offered by the OCIO Enterprise Hosting branch. The Object Store Services provides storage for unstructured data such as images, PDFs and other types of files. NetApp storage offered on the OpenShift 4 Platform isn't suitable for large amounts of unstructured data. NetApp storage should only be used for structured data such as databases that require high-I/O workloads.
+For applications that need to store large amounts of unstructured data we recommend using the S3-compliant on-premises [Object Store Service](https://ssbc-client.gov.bc.ca/services/ObjectStorage/overview.htm) offered by the OCIO Enterprise Hosting branch. The Object Store Service provides storage for unstructured data such as images, PDFs and other types of files. NetApp storage offered on the OpenShift 4 Platform isn't suitable for large amounts of unstructured data. NetApp storage should only be used for structured data such as databases that require high-I/O workloads.
 
 The OCIO has an [object store](https://ssbc-client.gov.bc.ca/services/ObjectStorage/overview.htm) service that supports the AWS S3 protocol. The service is aimed at objects typically over 100 KB, updated infrequently, retained longer term, with performance response targets of 100ms or more.
 
