@@ -19,7 +19,7 @@ sort_order: 4
 ---
 
 # Set up TCP connectivity on the BC Gov Private Cloud PaaS OpenShift platform
-Use this page to learn how to configure direct TCP access to services on the BC Gov Private Cloud PaaS Openshift platform using the Porter Operator.
+Use this page to learn how to configure direct [transmission control protocol (TCP)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) access to services on the BC Gov Private Cloud PaaS using the Porter Operator.
 
 ## On this page
 - [Direct TCP access](#direct-tcp-access)
