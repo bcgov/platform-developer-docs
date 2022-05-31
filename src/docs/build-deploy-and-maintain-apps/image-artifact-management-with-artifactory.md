@@ -83,7 +83,7 @@ The Xray tool scans all artifacts for security issues and lets you know about po
 
 ## Security reviews<a name="security"></a>
 
-Artifactory is covered by the existing OpenShift [Privacy Impact Assessment (PIA)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/privacy/privacy-impact-assessments). A [Security Threat Risk Assessment (STRA)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/security-threat-and-risk-assessment) is currently underway.
+Privacy Impact Assessment (PIA) and Security Threat Risk Assessment (STRA) have been completed for Sysdig Monitor. These assessments are available by request only, the request can be sent to PlatformServicesTeam@gov.bc.ca.
 
 ## Artifactory support, processes, and communications<a name="support-processes-comms"></a>
 The team supporting this service administers the Artifactory application, its supporting database and the S3 storage system that contains the packages uploaded to Artifactory.
