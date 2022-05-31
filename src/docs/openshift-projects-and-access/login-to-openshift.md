@@ -43,7 +43,7 @@ We don't intend to leverage SSO integration for IDIR onto GitHub at this time. Y
 
 **Note**: There won't be automated migration for the namespace access role bindings created for the GitHub ID to the IDIR accounts performed by the Platform Services team. Any such migrations would have to be done by product teams themselves.
 
-If you have any questions or concerns about this change, post your question in [#devops-security channel](https://chat.developer.gov.bc.ca/channel/devops-security) in Rocket.Chat and tag Nick Corcoran, our Platform Security Architect.
+If you have any questions or concerns about this change, post your question in [#devops-security channel](https://chat.developer.gov.bc.ca/channel/devops-security)in Rocket.Chat.
 
 For more information, see [BC Government OpenShift DevOps Security Considerations](https://developer.gov.bc.ca/BC-Government-OpenShift-DevOps-Security-Considerations).
 
