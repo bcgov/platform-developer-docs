@@ -72,7 +72,7 @@ Use the following process:
 
   | Component name | Description (Optional) | PVC type | PVC size | Storage Utilization |
   |----------------|------------------------|----------|----------|---------------------|
-  | Rocket.Chat DB patroni statefulset | to store persistent data | netapp-file-standard | 5Gi | 80% |
+  | Rocket.Chat DB patroni statefulset | to store persistent data | netapp-file-standard | 5GiB | 80% |
 
 4. Compare the current resource utilization and compare it with the quota. Explain how much more quota you need and why. Include the following:
   - Current quota in the project set
