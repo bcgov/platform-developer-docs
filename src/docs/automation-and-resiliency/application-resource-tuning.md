@@ -57,13 +57,13 @@ Having a **2:1 ratio** of CPU Limit:CPU Request is a great next step for teams w
 
 Having a **1.5:1 ratio** of CPU Limit:CPU Request is an amazing goal for teams who have already started tuning their applications and are looking to make the best possible use of the platform's capabilities. Using a 1.5:1 ratio makes you an **amazing community member**!
 
-### [](https://developer.gov.bc.ca/Developer-Tools/Resource-Tuning-Recommendations#cpu-and-memory-utilization)CPU and Memory Utilization
+### CPU and Memory Utilization
 
 Here is a 4 minute video that includes an example of resource tuning for a sample OpenShift application.
 
 [https://youtu.be/rkxVZgn9icU](https://youtu.be/rkxVZgn9icU)
 
-### []()Resources
+### Resources
 
 **Deploying pods without specifying  a limit or a request** 
 
@@ -101,7 +101,7 @@ There is a way that requires you to make use of the `oc` client versus using the
 
 For the above, the column of numbers involving `CPU(cores)` is what you want to add up. the `m` suffix stands for millicores, so for the above, add up the numbers and divide by 1000 to get the actual consumption of CPU cores by the pods in the current project. If the CPU usage has no `m` suffix, then that is just measured in cores, and not millicores. For the above example, the total would then be 2 + (3+3+3+9+4)/1000 = 2.022 CPU cores of actual CPU consumption.
 
-The vertical pod autoscaling tool can be used to calculate resource recommendations based on the real time resources used by your pods. <!-- insert video link-->
+The vertical pod autoscaling tool can be used to calculate resource recommendations based on the real time resources used by your pods. [This video demonstration](https://youtu.be/nZMtJRQR3jY) shows how it can be done.
 
 **Get current request values with oc command**  To get the current value of CPU Requests allowed for the project currently logged into with `oc` The following one-liner will display the current value of CPU requests as currently allotted for the current project.
 
@@ -111,7 +111,7 @@ Example output of the above, the `m` at the end again means millicores, so divid
 
     Requests 14500m
 
-## [](https://developer.gov.bc.ca/Developer-Tools/Resource-Tuning-Recommendations#jenkins-resource-configuration-recommendations)Jenkins Resource Configuration Recommendations
+## Jenkins Resource Configuration Recommendations
 
 Tuning the resources of Jenkins deployments can have a large effect on the available resources of the platform. As of writing, Jenkins accounts for the largest user of CPU Requests and Limits on the platform. Recent analysis has indicated:
 
@@ -119,7 +119,7 @@ Tuning the resources of Jenkins deployments can have a large effect on the avail
 * **7% of the CPU Requests** are actually used, on average, over 1 day
 * **10% or More CPU Requests** for the overall platform can be saved by tuning Jenkins resources
 
-### [](https://developer.gov.bc.ca/Developer-Tools/Resource-Tuning-Recommendations#recommended-configuration)Recommended Configuration
+### Recommended Configuration
 
 Based on the performance testing details below, the following recommendations are suggested for Jenkins deployments:
 
@@ -136,7 +136,7 @@ The following command can also be used to update a Jenkins DeploymentConfig:
 
     oc patch dc/jenkins -p '{"spec": {"template": {"spec": {"containers":[{"name":"jenkins", "resources":{"requests": {"cpu":"100m", "memory":"512Mi"}, "limits": {"cpu":"1", "memory":"1Gi"}}}]}}}}'
 
-### [](https://developer.gov.bc.ca/Developer-Tools/Resource-Tuning-Recommendations#performance-testing-details)Performance Testing Details
+### Performance Testing Details
 
 The reason that Jenkins is often deployed with such high CPU and Memory Requests was related to previous scheduler issues that have since been fixed on the platform. As a result, the templates **and existing Jenkins deployments** should be tuned to reduce the CPU requests.
 
@@ -178,7 +178,7 @@ The observations from the testing can be summarized as follows:
   * Memory Request: 512M
   * Memory Limit: 1-2GB (May vary depending on usage)
 
-### [](https://developer.gov.bc.ca/Developer-Tools/Resource-Tuning-Recommendations#advanced-jenkins-resource-tuning)Advanced Jenkins Resource Tuning
+### Advanced Jenkins Resource Tuning
 
 Consider monitoring the upper and lower bounds of CPU and memory usage of Jenkins instances over time. When idle, it has been observed that Jenkins uses under `5m` of CPU and about `650Mi` of memory. As per the **General Guidelines** above, "set requests to the _minimum_ of what your application needs." It is ideal to reserve resources conservatively (especially for workloads that are often idle), and leverage resource limits to burst when active.
 
@@ -232,29 +232,29 @@ Existing pods that are terminated (manually or by other means) will not be resch
 
 Because resource quota changes do not impact existing pods, coordination with teams during this transition process will be crucial to ensure workloads are patched accordingly and will redeploy within the bounds of the resource quota.
 
-### [](https://developer.gov.bc.ca/Developer-Tools/Resource-Tuning-Recommendations#openshift-templates-consideration-for-reduced-quota)OpenShift Templates Consideration for Reduced Quota
+### OpenShift Templates Consideration for Reduced Quota
 
 When deploying a workload such as Jenkins from the OpenShift Catalog, you may not be prompted to configure all of the CPU and memory requests and limits. In the case of Jenkins, you may only define the memory limit (defaults to 1Gi) which will set the memory requests to the same value.
 
 To accommodate a reduced project quota, the `oc patch` command (depicted above) should be used with more appropriate CPU and memory requests and quotas for all workloads in the tools project. Otherwise, these workloads may not become schedulable if their combined total requests/limits exceed the maximums defined by project quotas.
 
-### [](https://developer.gov.bc.ca/Developer-Tools/Resource-Tuning-Recommendations#viewing-quota-usage)Viewing Quota Usage
+### Viewing Quota Usage
 
 You can identify current resource quota consumption and properly size resource requests and limits of existing/new workloads using either the OpenShift web console or `oc` command-line tool.
 
-#### [](https://developer.gov.bc.ca/Developer-Tools/Resource-Tuning-Recommendations#viewing-quota-usage-gui)Viewing Quota Usage (GUI)
+#### Viewing Quota Usage (GUI)
 
 From the OpenShift web console, in the **Administrator** perspective, proceed to **Administration** \> **ResourceQuotas** and select the appropriate `ResourceQuota` (i.e., `compute-long-running-quota`). Here is an example:
 
 ![tools example compute-long-running-quota](https://github.com/BCDevOps/developer-experience/blob/master/docs/images/tools-example-compute-long-running-quota.png?raw=true)
 
-#### [](https://developer.gov.bc.ca/Developer-Tools/Resource-Tuning-Recommendations#viewing-quota-usage-cli)Viewing Quota Usage (CLI)
+#### Viewing Quota Usage (CLI)
 
 To describe a specific quota, use the `oc` tool:
 
     $ oc describe resourcequotas compute-long-running-quota # -n <project> Name: compute-long-running-quota Namespace: <license>-tools Scopes: NotBestEffort, NotTerminating * Matches all pods that have at least one resource requirement set. These pods have a burstable or guaranteed quality of service. * Matches all pods that do not have an active deadline. These pods usually include long running pods whose container command is not expected to terminate. Resource Used Hard -------- ---- ---- limits.cpu 1860m 8 limits.memory 5184Mi 32Gi pods 9 100 requests.cpu 610m 4 requests.memory 2752Mi 16Gi
 
-### [](https://developer.gov.bc.ca/Developer-Tools/Resource-Tuning-Recommendations#risks-reducing-resource-reservation)Risks Reducing Resource Reservation
+### Risks Reducing Resource Reservation
 
 Consider these risks when reducing resource quotas (and subsequently, requests/limits).
 
