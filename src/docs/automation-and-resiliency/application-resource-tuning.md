@@ -25,7 +25,7 @@ As touched upon in the [Resiliency Guidelines](/App-Resiliency-Guidelines#resour
 * Resource availability for your own applications
 * Resource availability for other tenant applications
 
-While [_Resource Quotas_](https://developer.gov.bc.ca/Project-Resource-Quotas-in-BC-Gov's-PaaS-(Openshift-4-Platform)) are quite generous, these quotas must be seen as a tool to allow tenants enough resources to temporarily burst usage for experimentation, rather than an upper limit of consistent use. The platform is not sized to support every tenant fully utilizing their _Resource Quota_.
+While [_Resource Quotas_](./src/docs/automation-and-resiliency/openshift-project-resource-quotas) are quite generous, these quotas must be seen as a tool to allow tenants enough resources to temporarily burst usage for experimentation, rather than an upper limit of consistent use. The platform is not sized to support every tenant fully utilizing their _Resource Quota_.
 
 **Resource Requests**  
 Resource requests are guaranteed and reserved for the pod. _Scheduling decisions are made based on the request_ to ensure that a node has enough capacity available to meet the requested value.
