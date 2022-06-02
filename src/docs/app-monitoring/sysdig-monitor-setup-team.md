@@ -84,6 +84,7 @@ A list of users to be added to this team.
 > **Note:**
 > - Only apply role updates to the Custom Resource from `tools` namespace! Do not use the Sysdig Monitor UI to modify team access because the operator reconciliation will overwrite any UI changes to team roles and settings.
 > - If your project set is on Gold and GoldDR clusters, only create the `sysdig-team` Custom Resource in the Gold cluster. The Sysdig operator can create the dashboards for your applications across both clusters.
+> - It's important to keep a single and unique `sysdig-team` Custom Resource per project set because you don't want to have duplicated teams on Sysdig. Please make sure to remove `sysdig-team` Custom Resource from dev/test/prod namespace if they are created accidentally.
 
 So now you have the `sysdig-team` manifest file ready, use `oc apply` and let the operator creates team on Sysdig.
 
@@ -164,7 +165,10 @@ You should see the following dashboard templates from your Sysdig team:
 
 - error from `sysdig-team` custom resource: if you don't see `Awaiting next reconciliation` after waiting for 5mins, contact the Platform Services team on the [#devops-sysdig Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig). Make sure to include the OpenShift cluster and namespace information.
 
-- If you don't see the sysdig team created, please double check your Sysdig account profile and match it to the email address that you have provided in the `sysdig-team` custom resource in `tools` namespace. If there is a mismatch, reapply the custom resource.
+- If you don't see the sysdig team created, please double check:
+  - that `sysdig-team` custom resource is created in `tools` namespace
+  - that there are no duplicated `sysdig-team` custom resource in dev/test/prod namespaces. Please run `oc -n <NAMESPACE> delete sysdig-team <SYSDIG-TEAM-NAME>` to delete the extra custom resource!
+  - that your Sysdig account profile and match it to the email address that you have provided in the `sysdig-team` custom resource. If there is a mismatch, reapply the custom resource.
 
 - If you don't see default dashboard in your Sysdig team, contact the Platform Services team on the [#devops-sysdig Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig).
 
