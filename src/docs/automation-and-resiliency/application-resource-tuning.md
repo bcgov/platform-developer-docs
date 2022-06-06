@@ -115,7 +115,8 @@ The vertical pod autoscaling tool can be used to calculate resource recommendati
 
 **Get current request values with oc command**  To get the current value of CPU Requests allowed for the project currently logged into with `oc` The following one-liner will display the current value of CPU requests as currently allotted for the current project.
 
-    oc get quota compute-long-running-quota -o=custom-columns=Requests:.status.used."requests\.cpu"
+```bash
+oc get quota compute-long-running-quota -o=custom-columns=Requests:.status.used."requests\.cpu"
 
 Example output of the above, the `m` at the end again means millicores, so dividing the number by 1000 tells us the current project per this example has a total allotted CPU Requests value of 14.5 CPU cores.
 
