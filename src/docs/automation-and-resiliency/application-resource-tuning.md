@@ -188,7 +188,7 @@ The observations from the testing can be summarized as follows:
 * The gain from a CPU Limit of 1000m to 2000m is minor
 * One ideal configuration looks like this:
   * CPU Request: 100m
-  * CPU Limit: 1000m+
+  * CPU limit: 1000m+
   * Memory Request: 512M
   * Memory Limit: 1-2GB (May vary depending on usage)
 
