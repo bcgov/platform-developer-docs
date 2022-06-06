@@ -28,7 +28,7 @@ As touched upon in the [Resiliency Guidelines](/App-Resiliency-Guidelines#resour
 While [Resource Quotas](./src/docs/automation-and-resiliency/openshift-project-resource-quotas) are quite generous, these quotas must be seen as a tool to allow tenants enough resources to temporarily burst usage for experimentation, rather than an upper limit of consistent use. The platform is not sized to support every tenant fully utilizing their _Resource Quota_.
 
 **Resource Requests**  
-Resource requests are guaranteed and reserved for the pod. _Scheduling decisions are made based on the request_ to ensure that a node has enough capacity available to meet the requested value.
+Resource requests are guaranteed and reserved for the pod. _Pod scheduling decisions are made based on the request_ to ensure that a node has enough capacity available to meet the requested value. Inefficient use of requests lead to having to buy more licenses and hardware for the platform.
 
 **Resource Limits**  
 Resource limits set an upper limit of what a pod can burst to if the resources are available on the node.
@@ -65,7 +65,7 @@ Here is a 4 minute video that includes an example of resource tuning for a sampl
 
 ### Resources
 
-**Deploying pods without specifying  a limit or a request** 
+**Deploying pods without specifying a limit or a request** 
 
 If you deploy pods without setting limits or requests, they will be deployed with the following defaults:
 
@@ -134,7 +134,8 @@ On a typical Jenkins deployment, the following snippet could be used if you are 
 
 The following command can also be used to update a Jenkins DeploymentConfig:
 
-    oc patch dc/jenkins -p '{"spec": {"template": {"spec": {"containers":[{"name":"jenkins", "resources":{"requests": {"cpu":"100m", "memory":"512Mi"}, "limits": {"cpu":"1", "memory":"1Gi"}}}]}}}}'
+```bash
+oc patch dc/jenkins -p '{"spec": {"template": {"spec": {"containers":[{"name":"jenkins", "resources":{"requests": {"cpu":"100m", "memory":"512Mi"}, "limits": {"cpu":"1", "memory":"1Gi"}}}]}}}}'
 
 ### Performance Testing Details
 
