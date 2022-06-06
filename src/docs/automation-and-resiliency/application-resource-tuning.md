@@ -20,12 +20,12 @@ sort_order: 2
 
 # Application Resource Tuning
 
-As touched upon in the [Resiliency Guidelines](/App-Resiliency-Guidelines#resourced), deploying applications with appropriate CPU and Memory [_Requests and Limits_](https://docs.openshift.com/container-platform/3.11/admin_guide/overcommit.html#requests-and-limits) is critical to ensure:
+As touched upon in the [Resiliency Guidelines](/App-Resiliency-Guidelines#resourced), deploying applications with appropriate CPU and Memory [Requests and Limits](https://docs.openshift.com/container-platform/3.11/admin_guide/overcommit.html#requests-and-limits) is critical to ensure:
 
 * Resource availability for your own applications
 * Resource availability for other tenant applications
 
-While [_Resource Quotas_](./src/docs/automation-and-resiliency/openshift-project-resource-quotas) are quite generous, these quotas must be seen as a tool to allow tenants enough resources to temporarily burst usage for experimentation, rather than an upper limit of consistent use. The platform is not sized to support every tenant fully utilizing their _Resource Quota_.
+While [Resource Quotas](./src/docs/automation-and-resiliency/openshift-project-resource-quotas) are quite generous, these quotas must be seen as a tool to allow tenants enough resources to temporarily burst usage for experimentation, rather than an upper limit of consistent use. The platform is not sized to support every tenant fully utilizing their _Resource Quota_.
 
 **Resource Requests**  
 Resource requests are guaranteed and reserved for the pod. _Scheduling decisions are made based on the request_ to ensure that a node has enough capacity available to meet the requested value.
@@ -33,7 +33,7 @@ Resource requests are guaranteed and reserved for the pod. _Scheduling decisions
 **Resource Limits**  
 Resource limits set an upper limit of what a pod can burst to if the resources are available on the node.
 
-## [](https://developer.gov.bc.ca/Developer-Tools/Resource-Tuning-Recommendations#setting-requests-and-limits)Setting Requests and Limits
+## Setting Requests and Limits
 
 ❗ **If you set a resource limit, you should also set a resource request.** Otherwise the Request will match the limit. For example, a Deployment with _no_ defined CPU request and a defined CPU limit of 1 core will _result in a pod with a request of 1 CPU and a limit of 1 CPU_.
 
@@ -77,7 +77,7 @@ If you deploy pods without setting limits or requests, they will be deployed wit
 This is the NOT same as specifying a resource request or limit of 0\.
 
 **Setting the request and limits to 0**  
-If you set requests and limits to 0, pods will run under the BestEffort QoS class, using whatever spare capacity is available on the node.
+If you set requests and limits to 0, pods will run under the [BestEffort QoS class](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/), using whatever spare capacity is available on the node.
 
 🔺 Assigning `0` as a request or limit must be done through the CLI or directly in the manifest. The Web Console will not accept `0` as a request or limit while editing the resources on a Deployment; it will apply the platform defaults outlined in the previous answer.
 
