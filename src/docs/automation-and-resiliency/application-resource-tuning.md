@@ -65,7 +65,7 @@ Here is a 4 minute video that includes an example of resource tuning for a sampl
 
 ### Resources
 
-**Deploying pods without specifying  a limit or a request** 
+**Deploying pods without specifying a limit or a request** 
 
 If you deploy pods without setting limits or requests, they will be deployed with the following defaults:
 
