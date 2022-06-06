@@ -25,7 +25,7 @@ As touched upon in the [resiliency guidelines](/App-Resiliency-Guidelines#resour
 * Resource availability for your own applications
 * Resource availability for other tenant applications
 
-While [Resource Quotas](./src/docs/automation-and-resiliency/openshift-project-resource-quotas) are quite generous, these quotas must be seen as a tool to allow tenants enough resources to temporarily burst usage for experimentation, rather than an upper limit of consistent use. The platform is not sized to support every tenant fully utilizing their _Resource Quota_.
+While [resource quotas](./src/docs/automation-and-resiliency/openshift-project-resource-quotas) are quite generous, these quotas must be seen as a tool to allow tenants enough resources to temporarily burst usage for experimentation, rather than an upper limit of consistent use. The platform is not sized to support every tenant fully utilizing their _resource quota_.
 
 **Resource Requests**  
 Resource requests are guaranteed and reserved for the pod. _Pod scheduling decisions are made based on the request_ to ensure that a node has enough capacity available to meet the requested value. Inefficient use of requests lead to having to buy more licenses and hardware for the platform.
