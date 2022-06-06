@@ -47,15 +47,15 @@ Resource limits set an upper limit of what a pod can burst to if the resources a
 
 ⭐ ⭐ ⭐
 
-Having a **3:1 ratio** of CPU Limit:CPU Request is a good starting place for new applications that haven't yet been tuned. Using a 3:1 ratio makes you a **good community member**!
+Having a **3:1 ratio** of CPU Request:CPU Utilization is a good starting place for new applications that haven't yet been tuned. Using a 3:1 ratio makes you a **good community member**!
 
 ⭐ ⭐ ⭐ ⭐
 
-Having a **2:1 ratio** of CPU Limit:CPU Request is a great next step for teams whose projects are working and stable, and who are in a position to start tuning their application more effectively - especially those who are seeking to make better use of horizontal scaling. Using a 2:1 ratio makes you a **great community member**!
+Having a **2:1 ratio** of CPU Request:CPU Utilization is a great next step for teams whose projects are working and stable, and who are in a position to start tuning their application more effectively - especially those who are seeking to make better use of horizontal scaling. Using a 2:1 ratio makes you a **great community member**!
 
 ⭐ ⭐ ⭐ ⭐ ⭐
 
-Having a **1.5:1 ratio** of CPU Limit:CPU Request is an amazing goal for teams who have already started tuning their applications and are looking to make the best possible use of the platform's capabilities. Using a 1.5:1 ratio makes you an **amazing community member**!
+Having a **1.5:1 ratio** of CPU Request:CPU Utilization is an amazing goal for teams who have already started tuning their applications and are looking to make the best possible use of the platform's capabilities. Using a 1.5:1 ratio makes you an **amazing community member**!
 
 ### CPU and Memory Utilization
 
@@ -136,6 +136,7 @@ The following command can also be used to update a Jenkins DeploymentConfig:
 
 ```bash
 oc patch dc/jenkins -p '{"spec": {"template": {"spec": {"containers":[{"name":"jenkins", "resources":{"requests": {"cpu":"100m", "memory":"512Mi"}, "limits": {"cpu":"1", "memory":"1Gi"}}}]}}}}'
+```
 
 ### Performance Testing Details
 
@@ -143,30 +144,21 @@ The reason that Jenkins is often deployed with such high CPU and Memory Requests
 
 A test was performed to collect the startup time of Jenkins under various resource configurations. Each test was performed 3 times and the startup time was averaged out across each iteration. The name of each test is in the format of `[cpu_requests_in_millicores]-[cpu_limits_in_millicores]-[memory_requests_in_mb]`.
 
-![Jenkins performance test results](https://github.com/BCDevOps/developer-experience/blob/master/docs/images/jenkins_performance_test_results.png?raw=true)Test NameAverage Startup Time (s)
+![Jenkins performance test results](https://github.com/BCDevOps/developer-experience/blob/master/docs/images/jenkins_performance_test_results.png?raw=true)
 
-100m-req-500m-limit-128m295
-
-100m-req-500m-limit-512m248
-
-100m-req-500m-limit-128m368
-
-100m-req-1000m-limit-128m163
-
-100m-req-500m-limit-512m185
-
-100m-req-1000m-limit-512m77
-
-100m-req-2000m-limit-512m80
-
-500m-req-1000m-limit-128m137
-
-500m-req-1000m-limit-512m91
-
-1000m-req-2000m-limit-128m131
-
-1000m-req-2000m-limit-512m73
-
+| Test Name                  | Average Startup Time (s) |   |   |   |
+|----------------------------|--------------------------|---|---|---|
+| 100m-req-500m-limit-128m   | 295                      |   |   |   |
+| 100m-req-500m-limit-512m   | 248                      |   |   |   |
+| 100m-req-500m-limit-128m   | 368                      |   |   |   |
+| 100m-req-1000m-limit-128m  | 163                      |   |   |   |
+| 100m-req-500m-limit-512m   | 185                      |   |   |   |
+| 100m-req-1000m-limit-512m  | 77                       |   |   |   |
+| 100m-req-2000m-limit-512m  | 80                       |   |   |   |
+| 500m-req-1000m-limit-128m  | 137                      |   |   |   |
+| 500m-req-1000m-limit-512m  | 91                       |   |   |   |
+| 1000m-req-2000m-limit-128m | 131                      |   |   |   |
+| 1000m-req-2000m-limit-512m | 73                       |   |   |   |
 The observations from the testing can be summarized as follows:
 
 * CPU Limit has the largest effect on Startup Performance
@@ -201,37 +193,7 @@ This section identifies the problem and mitigation recommendation of resource ov
 
 ### Decoupling Tools Namespaces Quotas and Limit Ranges
 
-Currently, all namespaces provided to a product in a cluster are assigned the same T-shirt-sized resource quotas and limit ranges. <!-- can this be said more clearly?-->
-
 It is recommended to decouple the quotas and limits sizing of the tools namespace from the other environment namespaces (i.e., dev, test, prod) to adjust only the quotas and limits of the tools namespaces separately.
-
-### Tools Namespaces Quota Tuning
-
-While teams are encouraged to patch the CPU and memory requests and limits of existing tools (i.e., Jenkins instances) to reduce over-allocation of resources, current resource quotas do not enforce this. Reducing resource quotas in the tools namespaces will dissuade and prevent this practice moving forward.
-
-#### Tools Namespaces Quota Sizing Recommendation
-
-According to Cost Management and OpenShift Monitoring, the median CPU usage (per pod) is below `10m` on average (including idling). Namespace-wide CPU usage was measured at about `50m`-`100m` on average (some exceptions below or above).
-
-This allocation affects the `compute-long-running-quota` `ResourceQuota`. Modifying or creating a new based on this resource quota will be required to reduce current maximums for the tools namespaces.
-
-Based on these statistics, it is recommended to reduce CPU requests and limits in the `compute-long-running-quota` `ResourceQuota`. To start, CPU requests may be dropped to as low as `500m`, and potentially lower after evaluating with time if this change does not inhibit work. CPU limits should be several multiples of the proposed CPU requests (i.e., `2000m`, `4000m`, `8000m`, or more) depending on realistic CPU usage of the average tools namespace workload when experiencing high load.
-
-However, as this is a substantial difference from current tools namespaces quota sizing, refer to [Tools Namespaces Quota Reduction Process](https://developer.gov.bc.ca/Developer-Tools/Resource-Tuning-Recommendations#tools-namespaces-quota-reduction-process) for considerations to alleviate undesired outcomes.
-
-As of writing, oversized CPU requests are the focus of concern. Memory is an incompressible resource that cannot be throttled as with CPU. If reduction of memory allocation is also considered, a conservative approach should be applied to lessen the risk of pod evictions and `OOM`-based termination.
-
-#### Tools Namespaces Quota Reduction Process
-
-Consider lowering resource quotas incrementally (i.e., reduce resource maximums by 25% of original value every 2 weeks). This is to mitigate issues that may arise for consumers of the tools namespaces and monitor any increases of pod evictions or `OOM`-based termination. This approach can indicate (less detrimentally) when a resource quota is becoming too small.
-
-Reducing a resource quota will not impact running workloads immediately. If the sum of any resource constraints will be above the allotted after modifying the quota, running workloads will **not** be terminated or modified in any way. The resource quota will display over resource requests/limits, as in the example below:
-
-![Tools example quota overage](https://github.com/BCDevOps/developer-experience/blob/master/docs/images/tools-example-quota-overage.png?raw=true)
-
-Existing pods that are terminated (manually or by other means) will not be rescheduled if resource requests/limits cannot be satisfied. Patching a `Deployment(Config)` will terminate any existing pod(s). If new pods do not come up, the configured resource requests/limits may need to be adjusted to accommodate the resized resource quota.
-
-Because resource quota changes do not impact existing pods, coordination with teams during this transition process will be crucial to ensure workloads are patched accordingly and will redeploy within the bounds of the resource quota.
 
 ### OpenShift Templates Consideration for Reduced Quota
 
@@ -253,7 +215,21 @@ From the OpenShift web console, in the **Administrator** perspective, proceed to
 
 To describe a specific quota, use the `oc` tool:
 
-    $ oc describe resourcequotas compute-long-running-quota # -n <project> Name: compute-long-running-quota Namespace: <license>-tools Scopes: NotBestEffort, NotTerminating * Matches all pods that have at least one resource requirement set. These pods have a burstable or guaranteed quality of service. * Matches all pods that do not have an active deadline. These pods usually include long running pods whose container command is not expected to terminate. Resource Used Hard -------- ---- ---- limits.cpu 1860m 8 limits.memory 5184Mi 32Gi pods 9 100 requests.cpu 610m 4 requests.memory 2752Mi 16Gi
+```console 
+$ oc describe resourcequotas compute-long-running-quota # -n <project>
+Name:       compute-long-running-quota
+Namespace:  <license>-tools
+Scopes:     NotBestEffort, NotTerminating
+ * Matches all pods that have at least one resource requirement set. These pods have a burstable or guaranteed quality of service.
+ * Matches all pods that do not have an active deadline. These pods usually include long running pods whose container command is not expected to terminate.
+Resource         Used    Hard
+--------         ----    ----
+limits.cpu       1860m   8
+limits.memory    5184Mi  32Gi
+pods             9       100
+requests.cpu     610m    4
+requests.memory  2752Mi  16Gi
+```
 
 ### Risks Reducing Resource Reservation
 
@@ -278,8 +254,6 @@ However, this will not cause pod evictions, and CPU throttling (extensively belo
 Nodes running out of memory can be more troublesome than CPU saturation. Regardless of node capacity, workloads that consume beyond their configured memory limits will immediately be terminated. However, if the workload is above its memory requests (but within its memory limits) and its node is running out of memory, the workload may be evicted (depending on the scheduler and priority) to reclaim that memory.
 
 Because memory is incompressible, memory requests and limits should be a little more generous to mitigate pod eviction/termination.
-
-
 
 ---
 Related links:
