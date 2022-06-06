@@ -130,7 +130,15 @@ Based on the performance testing details below, the following recommendations ar
 
 On a typical Jenkins deployment, the following snippet could be used if you are editing the yaml:
 
-     resources: requests: cpu: "100m" memory: "512Mi" limits: cpu: "1" memory: "1Gi"
+```yaml
+spec:
+  resources:
+    requests:
+      cpu: "100m"
+      memory: "512Mi"
+    limits:
+      cpu: "1"
+      memory: "1Gi"
 
 The following command can also be used to update a Jenkins DeploymentConfig:
 
