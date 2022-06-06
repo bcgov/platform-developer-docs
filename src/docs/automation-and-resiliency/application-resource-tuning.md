@@ -30,7 +30,7 @@ While [resource quotas](./src/docs/automation-and-resiliency/openshift-project-r
 **Resource requests**  
 Resource requests are guaranteed and reserved for the pod. _Pod scheduling decisions are made based on the request_ to ensure that a node has enough capacity available to meet the requested value. Inefficient use of requests lead to having to buy more licenses and hardware for the platform.
 
-**Resource Limits**  
+**Resource limits**  
 Resource limits set an upper limit of what a pod can burst to if the resources are available on the node.
 
 ## Setting Requests and Limits
