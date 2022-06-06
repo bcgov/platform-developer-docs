@@ -43,25 +43,24 @@ Resource limits set an upper limit of what a pod can burst to if the resources a
 ☑ Set limits to a reasonable burstable number of what a single pod should support.  
 ☑ Use horizontal pod autoscalers where possible, rather than large CPU and memory limits.
 
-**Being A Good Resource Citizen**
+**Being a good resource citizen**
 
 ⭐ ⭐ ⭐
 
-Having a **3:1 ratio** of CPU Request:CPU Utilization is a good starting place for new applications that haven't yet been tuned. Using a 3:1 ratio makes you a **good community member**!
+Having a **3:1 ratio** of CPU request:CPU utilization is a good starting place for new applications that haven't yet been tuned. Using a 3:1 ratio makes you a **good community member**.
 
 ⭐ ⭐ ⭐ ⭐
 
-Having a **2:1 ratio** of CPU Request:CPU Utilization is a great next step for teams whose projects are working and stable, and who are in a position to start tuning their application more effectively - especially those who are seeking to make better use of horizontal scaling. Using a 2:1 ratio makes you a **great community member**!
+Having a **2:1 ratio** of CPU request:CPU utilization is a great next step for teams whose projects are working and stable, and who are in a position to start tuning their application more effectively - especially those who are seeking to make better use of horizontal scaling. Using a 2:1 ratio makes you a **great community member**.
 
 ⭐ ⭐ ⭐ ⭐ ⭐
 
-Having a **1.5:1 ratio** of CPU Request:CPU Utilization is an amazing goal for teams who have already started tuning their applications and are looking to make the best possible use of the platform's capabilities. Using a 1.5:1 ratio makes you an **amazing community member**!
+Having a **1.5:1 ratio** of CPU request:CPU utilization is an amazing goal for teams who have already started tuning their applications and are looking to make the best possible use of the platform's capabilities. Using a 1.5:1 ratio makes you an **amazing community member**.
 
 ### CPU and Memory Utilization
 
-Here is a 4 minute video that includes an example of resource tuning for a sample OpenShift application.
+[Watch a four-minute video](https://youtu.be/rkxVZgn9icU) that includes an example of resource tuning for a sample OpenShift application.
 
-[https://youtu.be/rkxVZgn9icU](https://youtu.be/rkxVZgn9icU)
 
 ### Resources
 
@@ -69,17 +68,17 @@ Here is a 4 minute video that includes an example of resource tuning for a sampl
 
 If you deploy pods without setting limits or requests, they will be deployed with the following defaults:
 
-* CPU Request: 100m
-* CPU Limit: 250m
-* Memory Request: 256Mi
-* Memory Limit: 1Gi
+* CPU request: 100m
+* CPU limit: 250m
+* Memory request: 256Mi
+* Memory limit: 1Gi
 
-This is the NOT same as specifying a resource request or limit of 0\.
+This is NOT the same as specifying a resource request or limit of 0\.
 
 **Setting the request and limits to 0**  
 If you set requests and limits to 0, pods will run under the [BestEffort QoS class](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/), using whatever spare capacity is available on the node.
 
-🔺 Assigning `0` as a request or limit must be done through the CLI or directly in the manifest. The Web Console will not accept `0` as a request or limit while editing the resources on a Deployment; it will apply the platform defaults outlined in the previous answer.
+🔺 Assigning `0` as a request or limit must be done through the CLI or directly in the manifest. The Web Console will not accept `0` as a request or limit while editing the resources on a deployment; it will apply the platform defaults outlined in the previous answer.
 
 **Specifying a limit value only**  
 If you only specify a limit value, but not a request value, your pods will be deployed with a request that is identical to the limit.
@@ -87,8 +86,8 @@ If you only specify a limit value, but not a request value, your pods will be de
 **Specifying a request value only**   
 If you only specify a request value, pods will be deployed with the configured request, and will have the default limit applied of:
 
-* CPU Limit: 250m
-* Memory Limit: 1Gi
+* CPU limit: 250m
+* Memory limit: 1Gi
 
 **Creating a deployment with a request that is higher than the default limit**  
 If you create a deployment with a request value that is higher than the default limits above, you will be required to define a limit.
@@ -114,34 +113,34 @@ For the above, the column of numbers involving `CPU(cores)` is what you want to 
 
 The vertical pod autoscaling tool can be used to calculate resource recommendations based on the real time resources used by your pods. [This video demonstration](https://youtu.be/nZMtJRQR3jY) shows how it can be done.
 
-**Get current request values with oc command**  To get the current value of CPU Requests allowed for the project currently logged into with `oc` The following one-liner will display the current value of CPU requests as currently allotted for the current project.
+**Get current request values with oc command**  To get the current value of CPU requests allowed for the project currently logged into with `oc` The following one-liner will display the current value of CPU requests as currently allotted for the current project.
 
 ```bash
 oc get quota compute-long-running-quota -o=custom-columns=Requests:.status.used."requests\.cpu"
 ```
 
-Example output of the above, the `m` at the end again means millicores, so dividing the number by 1000 tells us the current project per this example has a total allotted CPU Requests value of 14.5 CPU cores.
+Example output of the above, the `m` at the end again means millicores, so dividing the number by 1000 tells us the current project per this example has a total allotted CPU requests value of 14.5 CPU cores.
 
     Requests 14500m
 
-## Jenkins Resource Configuration Recommendations
+## Jenkins resource configuration recommendations
 
-Tuning the resources of Jenkins deployments can have a large effect on the available resources of the platform. As of writing, Jenkins accounts for the largest user of CPU Requests and Limits on the platform. Recent analysis has indicated:
+Tuning the resources of Jenkins deployments can have a large effect on the available resources of the platform. As of writing, Jenkins accounts for the largest user of CPU requests and limits on the platform. Recent analysis has indicated:
 
-* **15-25% of CPU Requests** on the platform are related to Jenkins
-* **7% of the CPU Requests** are actually used, on average, over 1 day
-* **10% or More CPU Requests** for the overall platform can be saved by tuning Jenkins resources
+* **15-25% of CPU requests** on the platform are related to Jenkins
+* **7% of the CPU requests** are actually used, on average, over 1 day
+* **10% or more CPU requests** for the overall platform can be saved by tuning Jenkins resources
 
-### Recommended Configuration
+### Recommended configuration
 
 Based on the performance testing details below, the following recommendations are suggested for Jenkins deployments:
 
-* CPU Request: 100m
-* CPU Limit: 1000m (May vary depending on usage)
-* Memory Request: 512M
-* Memory Limit: 1-2GB (May vary depending on usage)
+* CPU request: 100m
+* CPU limit: 1000m (May vary depending on usage)
+* Memory request: 512M
+* Memory limit: 1-2GB (May vary depending on usage)
 
-On a typical Jenkins deployment, the following snippet could be used if you are editing the yaml:
+On a typical Jenkins deployment, the following snippet can be used if you are editing the yaml:
 
 ```yaml
 spec:
@@ -159,11 +158,11 @@ The following command can also be used to update a Jenkins DeploymentConfig:
 oc patch dc/jenkins -p '{"spec": {"template": {"spec": {"containers":[{"name":"jenkins", "resources":{"requests": {"cpu":"100m", "memory":"512Mi"}, "limits": {"cpu":"1", "memory":"1Gi"}}}]}}}}'
 ```
 
-### Performance Testing Details
+### Performance testing details
 
-The reason that Jenkins is often deployed with such high CPU and Memory Requests was related to previous scheduler issues that have since been fixed on the platform. As a result, the templates **and existing Jenkins deployments** should be tuned to reduce the CPU requests.
+The reason that Jenkins is often deployed with such high CPU and memory requests was related to previous scheduler issues that have since been fixed on the platform. As a result, the templates **and existing Jenkins deployments** should be tuned to reduce the CPU requests.
 
-A test was performed to collect the startup time of Jenkins under various resource configurations. Each test was performed 3 times and the startup time was averaged out across each iteration. The name of each test is in the format of `[cpu_requests_in_millicores]-[cpu_limits_in_millicores]-[memory_requests_in_mb]`.
+A test was performed to collect the startup time of Jenkins under various resource configurations. Each test was performed three times and the startup time was averaged out across each iteration. The name of each test is in the format of `[cpu_requests_in_millicores]-[cpu_limits_in_millicores]-[memory_requests_in_mb]`.
 
 ![Jenkins performance test results](https://github.com/BCDevOps/developer-experience/blob/master/docs/images/jenkins_performance_test_results.png?raw=true)
 
@@ -182,17 +181,17 @@ A test was performed to collect the startup time of Jenkins under various resour
 | 1000m-req-2000m-limit-512m | 73                       |   |   |   |
 The observations from the testing can be summarized as follows:
 
-* CPU Limit has the largest effect on Startup Performance
-* CPU Request has little effect on Startup Performance
-* The gain from a CPU Limit of 500m to 1000m is major
-* The gain from a CPU Limit of 1000m to 2000m is minor
+* CPU limit has the largest effect on startup performance
+* CPU request has little effect on startup performance
+* The gain from a CPU limit of 500m to 1000m is major
+* The gain from a CPU limit of 1000m to 2000m is minor
 * One ideal configuration looks like this:
-  * CPU Request: 100m
+  * CPU request: 100m
   * CPU limit: 1000m+
-  * Memory Request: 512M
-  * Memory Limit: 1-2GB (May vary depending on usage)
+  * Memory request: 512M
+  * Memory limit: 1-2GB (May vary depending on usage)
 
-### Advanced Jenkins Resource Tuning
+### Advanced Jenkins resource tuning
 
 Consider monitoring the upper and lower bounds of CPU and memory usage of Jenkins instances over time. When idle, it has been observed that Jenkins uses under `5m` of CPU and about `650Mi` of memory. As per the **General Guidelines** above, "set requests to the _minimum_ of what your application needs." It is ideal to reserve resources conservatively (especially for workloads that are often idle), and leverage resource limits to burst when active.
 
@@ -200,7 +199,7 @@ Consider monitoring the upper and lower bounds of CPU and memory usage of Jenkin
 
 Also, consider other workloads you may need to run in the tools namespace when accounting for requests/limits allocation to be within the allotted maximums.
 
-## Tools Namespaces Resource Quota Recommendations
+## Tools namespaces resource quota recommendations
 
 Every product in a cluster is provided a license plate and a namespace for each environment (i.e., dev, test, prod). These products also have a **tools** namespace defined as `<license>-tools`, where tooling such as Jenkins are deployed.
 
