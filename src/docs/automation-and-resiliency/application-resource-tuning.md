@@ -93,7 +93,7 @@ If you only specify a request value, pods will be deployed with the configured r
 **Creating a deployment with a request that is higher than the default limit**  
 If you create a deployment with a request value that is higher than the default limits above, you will be required to define a limit.
 
-**Checking  CPU consumption of running pods in a namespace"** 
+**Checking CPU consumption of running pods in a namespace"** 
 
 There is a way that requires you to make use of the `oc` client versus using the web console. Additional math will be required past this point as there is no way of automating this in a cross-platform fashion using just `oc`.
 
