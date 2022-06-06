@@ -211,27 +211,27 @@ In short, the recommendation is to lower compute resource requests and leverage 
 
 This section identifies the problem and mitigation recommendation of resource over-allocation in tools namespaces.
 
-### Decoupling Tools Namespaces Quotas and Limit Ranges
+### Decoupling tools namespaces quotas and limit ranges
 
 It is recommended to decouple the quotas and limits sizing of the tools namespace from the other environment namespaces (i.e., dev, test, prod) to adjust only the quotas and limits of the tools namespaces separately.
 
-### OpenShift Templates Consideration for Reduced Quota
+### OpenShift templates considerations for reduced quota
 
 When deploying a workload such as Jenkins from the OpenShift Catalog, you may not be prompted to configure all of the CPU and memory requests and limits. In the case of Jenkins, you may only define the memory limit (defaults to 1Gi) which will set the memory requests to the same value.
 
 To accommodate a reduced project quota, the `oc patch` command (depicted above) should be used with more appropriate CPU and memory requests and quotas for all workloads in the tools project. Otherwise, these workloads may not become schedulable if their combined total requests/limits exceed the maximums defined by project quotas.
 
-### Viewing Quota Usage
+### Viewing quota usage
 
 You can identify current resource quota consumption and properly size resource requests and limits of existing/new workloads using either the OpenShift web console or `oc` command-line tool.
 
-#### Viewing Quota Usage (GUI)
+#### Viewing quota usage (GUI)
 
 From the OpenShift web console, in the **Administrator** perspective, proceed to **Administration** \> **ResourceQuotas** and select the appropriate `ResourceQuota` (i.e., `compute-long-running-quota`). Here is an example:
 
 ![tools example compute-long-running-quota](https://github.com/BCDevOps/developer-experience/blob/master/docs/images/tools-example-compute-long-running-quota.png?raw=true)
 
-#### Viewing Quota Usage (CLI)
+#### Viewing quota usage (CLI)
 
 To describe a specific quota, use the `oc` tool:
 
@@ -251,25 +251,25 @@ requests.cpu     610m    4
 requests.memory  2752Mi  16Gi
 ```
 
-### Risks Reducing Resource Reservation
+### Risks reducing resource reservation
 
 Consider these risks when reducing resource quotas (and subsequently, requests/limits).
 
 See [Configuring your cluster to place pods on overcommitted nodes](https://docs.openshift.com/container-platform/latest/nodes/clusters/nodes-cluster-overcommit.html) for more details.
 
-#### Simultaneous Resource Claiming
+#### Simultaneous resource claiming
 
 Reducing resource requests ["works on the assumption that not all the pods will claim all of their usable resources at the same time"](https://cloud.redhat.com/blog/full-cluster-part-2-protecting-nodes).
 
 Consideration must be made to determine if several workloads across the cluster would be bursting above their requests, simultaneously at a specific time of day.
 
-#### Node CPU Saturation
+#### Node CPU saturation
 
 Very low CPU requests (i.e., `5m`) may be assigned to workloads such as Jenkins that have minuscule CPU usage when idle, and rely on CPU limits to burst during pipeline runs. A potential risk with this configuration is if the node a workload is scheduled on is being heavily utilized, the workload will not be able to burst much higher than the given CPU requests, potentially causing a significant slowdown.
 
-However, this will not cause pod evictions, and CPU throttling (extensively below CPU limits) can be mitigated ensuring nodes across the cluster are evenly balanced and not overutilized.
+However, this will not cause pod evictions, and CPU throttling (extensively below CPU limits) can be mitigated ensuring nodes across the cluster are evenly balanced and not over-utilized.
 
-#### Node Memory Saturation
+#### Node memory saturation
 
 Nodes running out of memory can be more troublesome than CPU saturation. Regardless of node capacity, workloads that consume beyond their configured memory limits will immediately be terminated. However, if the workload is above its memory requests (but within its memory limits) and its node is running out of memory, the workload may be evicted (depending on the scheduler and priority) to reclaim that memory.
 
