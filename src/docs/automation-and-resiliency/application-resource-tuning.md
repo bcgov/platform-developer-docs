@@ -108,6 +108,7 @@ NAME CPU(cores) MEMORY(bytes)
 <redacted> 4m 98Mi 
 <redacted> 0m 28Mi 
 <redacted> 2m 26Mi
+```
 
 For the above, the column of numbers involving `CPU(cores)` is what you want to add up. the `m` suffix stands for millicores, so for the above, add up the numbers and divide by 1000 to get the actual consumption of CPU cores by the pods in the current project. If the CPU usage has no `m` suffix, then that is just measured in cores, and not millicores. For the above example, the total would then be 2 + (3+3+3+9+4)/1000 = 2.022 CPU cores of actual CPU consumption.
 
@@ -117,6 +118,7 @@ The vertical pod autoscaling tool can be used to calculate resource recommendati
 
 ```bash
 oc get quota compute-long-running-quota -o=custom-columns=Requests:.status.used."requests\.cpu"
+```
 
 Example output of the above, the `m` at the end again means millicores, so dividing the number by 1000 tells us the current project per this example has a total allotted CPU Requests value of 14.5 CPU cores.
 
@@ -150,7 +152,7 @@ spec:
     limits:
       cpu: "1"
       memory: "1Gi"
-
+```
 The following command can also be used to update a Jenkins DeploymentConfig:
 
 ```bash
