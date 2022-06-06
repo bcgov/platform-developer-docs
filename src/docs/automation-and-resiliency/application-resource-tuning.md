@@ -35,7 +35,7 @@ Resource limits set an upper limit of what a pod can burst to if the resources a
 
 ## Setting Requests and Limits
 
-❗ **If you set a resource limit, you should also set a resource request.** Otherwise the Request will match the limit. For example, a Deployment with _no_ defined CPU request and a defined CPU limit of 1 core will _result in a pod with a request of 1 CPU and a limit of 1 CPU_.
+❗ **If you set a resource limit, you should also set a resource request.** Otherwise the request will match the limit. For example, a deployment with _no_ defined CPU request and a defined CPU limit of 1 core will _result in a pod with a request of 1 CPU and a limit of 1 CPU_.
 
 **General Guidelines**  
 ☑ Set requests and limits.  
