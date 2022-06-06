@@ -20,7 +20,7 @@ sort_order: 2
 
 # Application Resource Tuning
 
-As touched upon in the [Resiliency Guidelines](/App-Resiliency-Guidelines#resourced), deploying applications with appropriate CPU and Memory [Requests and Limits](https://docs.openshift.com/container-platform/3.11/admin_guide/overcommit.html#requests-and-limits) is critical to ensure:
+As touched upon in the [resiliency guidelines](/App-Resiliency-Guidelines#resourced), deploying applications with appropriate [CPU and memory requests and limits](https://docs.openshift.com/container-platform/3.11/admin_guide/overcommit.html#requests-and-limits) is critical to ensure:
 
 * Resource availability for your own applications
 * Resource availability for other tenant applications
