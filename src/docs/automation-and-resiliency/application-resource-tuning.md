@@ -201,11 +201,11 @@ Also, consider other workloads you may need to run in the tools namespace when a
 
 ## Tools namespaces resource quota recommendations
 
-Every product in a cluster is provided a license plate and a namespace for each environment (i.e., dev, test, prod). These products also have a **tools** namespace defined as `<license>-tools`, where tooling such as Jenkins are deployed.
+Every product in a cluster is provided a license plate and a namespace for each environment (dev, test, prod). These products also have a **tools** namespace defined as `<license>-tools`, where tooling such as Jenkins are deployed.
 
 As of writing, there is a discrepancy between compute resources (especially CPU) requested compared to actual usage.
 
-Jenkins instances in tools namespaces across the cluster are requesting much more resources than they are utilizing on average. These overcommitted Jenkins instances are one of the largest contributors to this over-allocation problem.
+On average, Jenkins instances in tools namespaces across the cluster are requesting much more resources than they are utilizing. These overcommitted Jenkins instances are one of the largest contributors to this over-allocation problem.
 
 In short, the recommendation is to lower compute resource requests and leverage resource limits in a burstable fashion.
 
@@ -213,11 +213,11 @@ This section identifies the problem and mitigation recommendation of resource ov
 
 ### Decoupling tools namespaces quotas and limit ranges
 
-It is recommended to decouple the quotas and limits sizing of the tools namespace from the other environment namespaces (i.e., dev, test, prod) to adjust only the quotas and limits of the tools namespaces separately.
+It is recommended to decouple the quotas and limits sizing of the tools namespace from the other environment namespaces (dev, test, prod), to separately adjust the quotas and limits of the tools namespaces.
 
-### OpenShift templates considerations for reduced quota
+### OpenShift template considerations for reduced quota
 
-When deploying a workload such as Jenkins from the OpenShift Catalog, you may not be prompted to configure all of the CPU and memory requests and limits. In the case of Jenkins, you may only define the memory limit (defaults to 1Gi) which will set the memory requests to the same value.
+When deploying a workload such as Jenkins from the OpenShift catalog, you may not be prompted to configure all of the CPU and memory requests and limits. In the case of Jenkins, you may only define the memory limit (defaults to 1Gi) which will set the memory requests to the same value.
 
 To accommodate a reduced project quota, the `oc patch` command (depicted above) should be used with more appropriate CPU and memory requests and quotas for all workloads in the tools project. Otherwise, these workloads may not become schedulable if their combined total requests/limits exceed the maximums defined by project quotas.
 
@@ -261,13 +261,13 @@ See [Configuring your cluster to place pods on overcommitted nodes](https://docs
 
 Reducing resource requests ["works on the assumption that not all the pods will claim all of their usable resources at the same time"](https://cloud.redhat.com/blog/full-cluster-part-2-protecting-nodes).
 
-Consideration must be made to determine if several workloads across the cluster would be bursting above their requests, simultaneously at a specific time of day.
+Consideration must be made to determine if several workloads across the cluster would be bursting above their requests simultaneously at a specific time of day.
 
 #### Node CPU saturation
 
-Very low CPU requests (i.e., `5m`) may be assigned to workloads such as Jenkins that have minuscule CPU usage when idle, and rely on CPU limits to burst during pipeline runs. A potential risk with this configuration is if the node a workload is scheduled on is being heavily utilized, the workload will not be able to burst much higher than the given CPU requests, potentially causing a significant slowdown.
+Very low CPU requests (i.e., `5m`) may be assigned to workloads such as Jenkins that have minuscule CPU usage when idle, and rely on CPU limits to burst during pipeline runs. A potential risk with this configuration is if the node a workload is scheduled on is being heavily utilized. The workload will not be able to burst much higher than the given CPU requests, potentially causing a significant slowdown.
 
-However, this will not cause pod evictions, and CPU throttling (extensively below CPU limits) can be mitigated ensuring nodes across the cluster are evenly balanced and not over-utilized.
+However, this will not cause pod evictions. CPU throttling (extensively below CPU limits) can be mitigated, ensuring nodes across the cluster are evenly balanced and not over-utilized.
 
 #### Node memory saturation
 
