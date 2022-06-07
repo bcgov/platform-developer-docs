@@ -251,7 +251,7 @@ requests.cpu     610m    4
 requests.memory  2752Mi  16Gi
 ```
 
-### Risks reducing resource reservation
+### Risks associated with reducing resource reservation
 
 Consider these risks when reducing resource quotas (and subsequently, requests/limits).
 
