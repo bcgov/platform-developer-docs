@@ -21,6 +21,17 @@ sort_order:
 # Deploy an Application
 
 
+- Automation CI/CD Link
+- Configuring Apps for Resiliency ()
+- Multi-node deployment
+- Resource tuning
+- Data Backups 
+- Vanity domains / TLS Certs
+- Kubernetes Network policies (use 201 content when available, create )
+- 
+
+
+
 ## On this page
 - 
 
