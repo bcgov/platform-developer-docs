@@ -3,12 +3,12 @@ on: [push]
 jobs:
   test:
     runs-on: ubuntu-latest
-  steps:
-    - uses: actions/checkout@v3
-    - uses: actions/setup-node@v3
-      with:
-        node-version: "16"
-    - name: Clean-install dependencies
-      run: npm ci
-    - name: Jest unit tests with coverage
-      run: npm run test -- --coverage --passWithNoTests
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - name: Clean-install dependencies
+        run: npm ci
+      - name: Jest unit tests with coverage
+        run: npm run test -- --coverage --passWithNoTests
