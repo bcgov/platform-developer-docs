@@ -6,3 +6,6 @@ node_modules
 .env.development
 .env.production
 public
+
+# Jest coverage directory
+coverage
