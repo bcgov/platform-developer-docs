@@ -111,9 +111,18 @@ NAME CPU(cores) MEMORY(bytes)
 
 For the above, the column of numbers involving `CPU(cores)` is what you want to add up. the `m` suffix stands for millicores, so for the above, add up the numbers and divide by 1000 to get the actual consumption of CPU cores by the pods in the current project. If the CPU usage has no `m` suffix, then that is just measured in cores, and not millicores. For the above example, the total would then be 2 + (3+3+3+9+4)/1000 = 2.022 CPU cores of actual CPU consumption.
 
+_Note:  unless you're running a scientific application or you know it's multithreaded you should not be giving an app any more than 1-core._
+
 The vertical pod autoscaling tool can be used to calculate resource recommendations based on the real time resources used by your pods. [This video demonstration](https://youtu.be/nZMtJRQR3jY) shows how it can be done.
 
 **Get current request values with oc command**  To get the current value of CPU requests allowed for the project currently logged into with `oc` The following one-liner will display the current value of CPU requests as currently allotted for the current project.
+
+```bash
+oc get quota compute-long-running-quota -o=custom-columns=Requests:.status.used."requests\.cpu"
+```
+
+
+Below is an example output of the above command, the `m` at the end again means millicores, so dividing the number by 1000 tells us the current project per this example has a total allotted CPU requests value of 14.5 CPU cores.
 
 ```console
 oc get quota compute-long-running-quota -o=custom-columns=Requests:.status.used."requests\.cpu"
@@ -121,7 +130,7 @@ Requests
 14500m
 ```
 
-Example output of the above, the `m` at the end again means millicores, so dividing the number by 1000 tells us the current project per this example has a total allotted CPU requests value of 14.5 CPU cores.
+_Note:  unless you're running a scientific application or you know it's multithreaded you should not be giving an app any more than 1-core._
 
 
 ## Jenkins resource configuration recommendations
@@ -167,19 +176,20 @@ A test was performed to collect the startup time of Jenkins under various resour
 
 ![Jenkins performance test results](https://github.com/BCDevOps/developer-experience/blob/master/docs/images/jenkins_performance_test_results.png?raw=true)
 
-| Test Name                  | Average Startup Time (s) |   |   |   |
-|----------------------------|--------------------------|---|---|---|
-| 100m-req-500m-limit-128m   | 295                      |   |   |   |
-| 100m-req-500m-limit-512m   | 248                      |   |   |   |
-| 100m-req-500m-limit-128m   | 368                      |   |   |   |
-| 100m-req-1000m-limit-128m  | 163                      |   |   |   |
-| 100m-req-500m-limit-512m   | 185                      |   |   |   |
-| 100m-req-1000m-limit-512m  | 77                       |   |   |   |
-| 100m-req-2000m-limit-512m  | 80                       |   |   |   |
-| 500m-req-1000m-limit-128m  | 137                      |   |   |   |
-| 500m-req-1000m-limit-512m  | 91                       |   |   |   |
-| 1000m-req-2000m-limit-128m | 131                      |   |   |   |
-| 1000m-req-2000m-limit-512m | 73                       |   |   |   |
+| Test Name                  | Average Startup Time (s) |   
+|----------------------------|--------------------------|
+| 100m-req-500m-limit-128m   | 295                      | 
+| 100m-req-500m-limit-512m   | 248                      |   
+| 100m-req-500m-limit-128m   | 368                      |  
+| 100m-req-1000m-limit-128m  | 163                      |   
+| 100m-req-500m-limit-512m   | 185                      |  
+| 100m-req-1000m-limit-512m  | 77                       |   
+| 100m-req-2000m-limit-512m  | 80                       |   
+| 500m-req-1000m-limit-128m  | 137                      |   
+| 500m-req-1000m-limit-512m  | 91                       | 
+| 1000m-req-2000m-limit-128m | 131                      |
+| 1000m-req-2000m-limit-512m | 73                       |   
+
 The observations from the testing can be summarized as follows:
 
 * CPU limit has the largest effect on startup performance
