@@ -1,8 +1,9 @@
-name: run-tests
+name: run-tests1
 on:
   push:
     branches:
-      - "*"
+      # Run on push to every branch except main
+      - "**"
       - "!main"
 jobs:
   test:
