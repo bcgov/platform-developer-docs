@@ -119,10 +119,10 @@ The vertical pod autoscaling tool can be used to calculate resource recommendati
 oc get quota compute-long-running-quota -o=custom-columns=Requests:.status.used."requests\.cpu"
 Requests
 14500m
+```
 
 Example output of the above, the `m` at the end again means millicores, so dividing the number by 1000 tells us the current project per this example has a total allotted CPU requests value of 14.5 CPU cores.
 
-    Requests 14500m
 
 ## Jenkins resource configuration recommendations
 
