@@ -1,0 +1,14 @@
+name: run-tests
+on: [push]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+  steps:
+    - uses: actions/checkout@main
+    - uses: actions/setup-node@main
+      with:
+        node-version: "16"
+    - name: Clean-install dependencies
+      run: npm ci
+    - name: Jest unit tests with coverage
+      run: npm run test -- --coverage --passWithNoTests
