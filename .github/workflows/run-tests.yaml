@@ -9,6 +9,11 @@ jobs:
         with:
           node-version: "16"
       - name: Clean-install dependencies
-        run: npm ci
+        run: |
+          if [ -e package-lock.json ]; then
+          npm ci
+          else
+          npm i
+          fi
       - name: Jest unit tests with coverage
         run: npm run test -- --coverage --passWithNoTests
