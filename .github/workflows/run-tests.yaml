@@ -1,0 +1,19 @@
+name: Run Jest unit tests
+on:
+  push:
+    branches:
+      # Run on push to every branch except main
+      - "**"
+      - "!main"
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: "16"
+      - name: Install dependencies
+        run: npm install
+      - name: Jest unit tests with coverage
+        run: npm run test -- --coverage --passWithNoTests
