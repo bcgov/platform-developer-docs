@@ -30,6 +30,7 @@
     "dotenv": "^16.0.1",
     "escape-string-regexp": "^4.0.0",
     "gatsby": "^4.12.1",
+    "gatsby-plugin-canonical-urls": "^4.16.0",
     "gatsby-plugin-catch-links": "^4.12.1",
     "gatsby-plugin-image": "^2.12.1",
     "gatsby-plugin-manifest": "^4.12.1",

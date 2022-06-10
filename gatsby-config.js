@@ -7,7 +7,7 @@ module.exports = {
     title: `Private Cloud as a Service Platform Technical Documentation`,
     description: `Documentation for the BC Government's Private Cloud as a Service Platform.`,
     author: `@bcgov`,
-    siteUrl: `${process.env.GATSBY_SITE_URL}`,
+    siteUrl: `https://beta-docs.developer.gov.bc.ca/`,
   },
   trailingSlash: `always`,
   plugins: [
@@ -19,6 +19,13 @@ module.exports = {
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-styled-components`,
     `gatsby-plugin-catch-links`,
+    {
+      resolve: `gatsby-plugin-canonical-urls`,
+      options: {
+        siteUrl: `https://beta-docs.developer.gov.bc.ca/`,
+        stripQueryString: true,
+      },
+    },
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
