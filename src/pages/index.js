@@ -159,9 +159,11 @@ const IndexPage = () => {
                 </Link>
               </li>
               <li>
-                <Link to={"/request-bcgov-github-access-repository-creation"}>
-                  Request access to BCGov org in GitHub
-                </Link>
+                <a
+                  href={`${WORDPRESS_BASE_URL}/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/`}
+                >
+                  Common platform requests in the BC Gov Private Cloud PaaS
+                </a>
               </li>
               <li>Best practices for working in GitHub (coming soon)</li>
             </ul>
