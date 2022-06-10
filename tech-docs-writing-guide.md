@@ -65,9 +65,9 @@ Don't duplicate content across pages. Remember the principle of **one topic = on
 
 For example, from our own tech docs library: [BC Government organizations in GitHub](https://github.com/bcgov/platform-developer-docs/blob/main/docs/use-github-in-bcgov/bc-government-organizations-in-github.md). The first draft of this page originally contained three topics:
 
-- [BC Government organizations in GitHub](https://github.com/bcgov/platform-developer-docs/blob/main/docs/use-github-in-bcgov/bc-government-organizations-in-github.md)
-- [Remove a user's BCGov GitHub access](https://github.com/bcgov/platform-developer-docs/blob/main/docs/use-github-in-bcgov/remove-user-bcgov-github-access.md)
-- [Request BCGov GitHub access or repository creation](https://github.com/bcgov/platform-developer-docs/blob/main/docs/use-github-in-bcgov/request-bcgov-github-access-repository-creation.md)
+- [BC Government organizations in GitHub](https://github.com/bcgov/platform-developer-docs/blob/main/src/docs/use-github-in-bcgov/bc-government-organizations-in-github.md)
+- [Remove a user's BCGov GitHub access](https://github.com/bcgov/platform-developer-docs/blob/main/src/docs/use-github-in-bcgov/remove-user-bcgov-github-access.md)
+- [Request BCGov GitHub access or repository creation](https://github.com/bcgov/platform-developer-docs/commit/40ddd75ed72cb4599a119e581df9b7a668a774b3)
 
 After getting feedback, these pages needed to be split. Each page now seems pretty clear what they're about and the user doesn't have to wade through the original page to find content on requests or removals.
 

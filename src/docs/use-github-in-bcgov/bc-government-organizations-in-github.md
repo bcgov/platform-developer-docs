@@ -85,7 +85,7 @@ Related links:
 * [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/)
 * [GitHub Enterprise user licences in the BC government](/github-enterprise-user-licenses-bc-government/)
 * [Remove a user's BCGov GitHub access](/remove-user-bcgov-github-access/)
-* [Request BCGov GitHub access or repository creation](/request-bcgov-github-access-repository-creation/)
+* [Common platform requests in the BC Gov Private Cloud PaaS](%WORDPRESS_BASE_URL%/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/)
 
 Rewrite sources:
 * https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/github/README.md
