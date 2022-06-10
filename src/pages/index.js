@@ -116,7 +116,7 @@ const IndexPage = () => {
               .
             </p>
             <p>
-              <a href="htttps://chat.developer.gov.bc.ca">
+              <a href="https://chat.developer.gov.bc.ca">
                 Log in to Rocket.Chat
               </a>
               .
