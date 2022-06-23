@@ -6,6 +6,7 @@ import styled from "styled-components";
 
 import Alert from "../components/alert";
 import Layout from "../components/layout";
+import LoadSpinnerGroup from "../components/load-spinner";
 import Pagination from "../components/pagination";
 import Seo from "../components/seo";
 
@@ -151,9 +152,12 @@ const SearchPage = () => {
         <h1>Search</h1>
 
         {isLoading ? (
-          <p>
-            Loading results for <strong>{query}</strong>
-          </p>
+          <>
+            <p>
+              Loading results for <strong>{query}</strong>
+            </p>
+            <LoadSpinnerGroup count={3} />
+          </>
         ) : (
           <>
             {parseInt(results?.searchInformation?.totalResults) > pageSize ? (
