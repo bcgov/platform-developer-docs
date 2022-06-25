@@ -20,12 +20,12 @@ sort_order: 2
 
 # Application resource tuning
 
-As touched upon in the [resiliency guidelines](/App-Resiliency-Guidelines#resourced), deploying applications with appropriate [CPU and memory requests and limits](https://docs.openshift.com/container-platform/3.11/admin_guide/overcommit.html#requests-and-limits) is critical to ensure:
+As touched upon in the [resiliency guidelines](/app-resiliency-guidelines/), deploying applications with appropriate [CPU and memory requests and limits](https://docs.openshift.com/container-platform/3.11/admin_guide/overcommit.html#requests-and-limits) is critical to ensure:
 
 * Resource availability for your own applications
 * Resource availability for other tenant applications
 
-While [resource quotas](./src/docs/automation-and-resiliency/openshift-project-resource-quotas) are quite generous, these quotas must be seen as a tool to allow tenants enough resources to temporarily burst usage for experimentation, rather than an upper limit of consistent use. The platform is not sized to support every tenant fully utilizing their _resource quota_.
+While [resource quotas](/openshift-project-resource-quotas/) are quite generous, these quotas must be seen as a tool to allow tenants enough resources to temporarily burst usage for experimentation, rather than an upper limit of consistent use. The platform is not sized to support every tenant fully utilizing their _resource quota_.
 
 **Resource requests**  
 Resource requests are guaranteed and reserved for the pod. _Pod scheduling decisions are made based on the request_ to ensure that a node has enough capacity available to meet the requested value. Inefficient use of requests lead to having to buy more licenses and hardware for the platform.
