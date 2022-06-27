@@ -1,0 +1,58 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Footer renders correctly 1`] = `
+<footer
+  className="sc-bczRLJ jSDzGT"
+>
+  <div
+    className="sc-gsnTZi hPKblw"
+  >
+    <nav>
+      <ul>
+        <li>
+          <a
+            href="/"
+          >
+            Home
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www2.gov.bc.ca/gov/content?id=79F93E018712422FBC8E674A67A70535"
+          >
+            Disclaimer
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www2.gov.bc.ca/gov/content?id=9E890E16955E4FF4BF3B0E07B4722932"
+          >
+            Privacy
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www2.gov.bc.ca/gov/content?id=E08E79740F9C41B9B0C484685CC5E412"
+          >
+            Accessibility
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://www2.gov.bc.ca/gov/content?id=1AAACC9C65754E4D89A118B875E0FBDA"
+          >
+            Copyright
+          </a>
+        </li>
+        <li>
+          <a
+            href="https://github.com/bcgov/platform-developer-docs/issues"
+          >
+            Contact Us
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</footer>
+`;

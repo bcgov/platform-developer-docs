@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby";
 import styled from "styled-components";
 
 const StyledFooter = styled.footer`
@@ -50,8 +51,18 @@ const StyledFooter = styled.footer`
         flex-direction: column;
         align-items: baseline;
 
-        li > a {
-          border-right: none;
+        li {
+          a {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            border-right: none;
+            min-height: 44px;
+          }
+
+          &:last-child {
+            margin-bottom: 1em;
+          }
         }
       }
     }
@@ -74,22 +85,37 @@ const Footer = () => (
       <nav>
         <ul>
           <li>
-            <a href=".">Home</a>
+            <Link to={"/"}>Home</Link>
           </li>
           <li>
-            <a href=".">Disclaimer</a>
+            {/* CMS Lite permalink to https://www2.gov.bc.ca/gov/content/home/disclaimer */}
+            <a href="https://www2.gov.bc.ca/gov/content?id=79F93E018712422FBC8E674A67A70535">
+              Disclaimer
+            </a>
           </li>
           <li>
-            <a href=".">Privacy</a>
+            {/* CMS Lite permalink to https://www2.gov.bc.ca/gov/content/home/privacy */}
+            <a href="https://www2.gov.bc.ca/gov/content?id=9E890E16955E4FF4BF3B0E07B4722932">
+              Privacy
+            </a>
           </li>
           <li>
-            <a href=".">Accessibility</a>
+            {/* CMS Lite permalink to https://www2.gov.bc.ca/gov/content/home/accessible-government */}
+            <a href="https://www2.gov.bc.ca/gov/content?id=E08E79740F9C41B9B0C484685CC5E412">
+              Accessibility
+            </a>
           </li>
           <li>
-            <a href=".">Copyright</a>
+            {/* CMS Lite permalink to https://www2.gov.bc.ca/gov/content/home/copyright */}
+            <a href="https://www2.gov.bc.ca/gov/content?id=1AAACC9C65754E4D89A118B875E0FBDA">
+              Copyright
+            </a>
           </li>
           <li>
-            <a href=".">Contact Us</a>
+            {/* GitHub link to repository Issues page */}
+            <a href="https://github.com/bcgov/platform-developer-docs/issues">
+              Contact Us
+            </a>
           </li>
         </ul>
       </nav>
