@@ -51,8 +51,18 @@ const StyledFooter = styled.footer`
         flex-direction: column;
         align-items: baseline;
 
-        li > a {
-          border-right: none;
+        li {
+          a {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            border-right: none;
+            min-height: 44px;
+          }
+
+          &:last-child {
+            margin-bottom: 1em;
+          }
         }
       }
     }
