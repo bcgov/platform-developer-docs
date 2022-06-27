@@ -101,7 +101,10 @@ const Footer = () => (
             </a>
           </li>
           <li>
-            <a href=".">Contact Us</a>
+            {/* GitHub link to repository Issues page */}
+            <a href="https://github.com/bcgov/platform-developer-docs/issues">
+              Contact Us
+            </a>
           </li>
         </ul>
       </nav>
