@@ -1,4 +1,5 @@
 import * as React from "react";
+import { Link } from "gatsby";
 import styled from "styled-components";
 
 const StyledFooter = styled.footer`
@@ -74,7 +75,7 @@ const Footer = () => (
       <nav>
         <ul>
           <li>
-            <a href=".">Home</a>
+            <Link to={"/"}>Home</Link>
           </li>
           <li>
             {/* CMS Lite permalink to https://www2.gov.bc.ca/gov/content/home/disclaimer */}
