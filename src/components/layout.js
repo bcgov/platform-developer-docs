@@ -64,7 +64,7 @@ const StyledSkipNavContent = styled(SkipNavContent)`
   }
 `;
 
-const Layout = ({ children }) => {
+const Layout = ({ children, location }) => {
   const data = useStaticQuery(graphql`
     query SiteTitleQuery {
       site {
@@ -81,7 +81,7 @@ const Layout = ({ children }) => {
       <StyledSkipNavLink>Skip to main content</StyledSkipNavLink>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <FlexContainer>
-        <Navigation />
+        <Navigation location={location} />
         <StyledSkipNavContent>{children}</StyledSkipNavContent>
       </FlexContainer>
       <Footer />
@@ -91,6 +91,9 @@ const Layout = ({ children }) => {
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 export default Layout;
