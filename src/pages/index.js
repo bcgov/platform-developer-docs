@@ -35,7 +35,7 @@ const Card = styled.div`
   border: 1px solid rgb(225, 225, 225);
 `;
 
-const IndexPage = () => {
+const IndexPage = ({ location }) => {
   const data = useStaticQuery(graphql`
     query IndexSiteTitleQuery {
       site {
@@ -47,7 +47,7 @@ const IndexPage = () => {
   `);
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo title="Home" />
       <main>
         <h1>Welcome to the {data.site.siteMetadata.title || `Title`}</h1>

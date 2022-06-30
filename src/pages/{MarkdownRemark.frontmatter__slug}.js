@@ -5,12 +5,13 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
+  data, // injected by the GraphQL query: https://www.gatsbyjs.com/docs/working-with-images-in-markdown/#inline-images-with-gatsby-remark-images
+  location, // supplied by Gatsby to top-level page components: https://www.gatsbyjs.com/docs/location-data-from-props/
 }) {
   const { markdownRemark } = data; // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark;
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo
         title={frontmatter?.title}
         description={frontmatter?.description}

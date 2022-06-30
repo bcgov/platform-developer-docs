@@ -78,7 +78,7 @@ const StyledList = styled.ol`
   margin-left: 0;
 `;
 
-const SearchPage = () => {
+const SearchPage = ({ location }) => {
   const [isLoading, setIsLoading] = useState(true);
   const [isError, setIsError] = useState(false);
   const [results, setResults] = useState({});
@@ -143,7 +143,7 @@ const SearchPage = () => {
   }
 
   return (
-    <Layout>
+    <Layout location={location}>
       <Seo
         title={`Search: ${query}`}
         meta={[{ name: "robots", content: "noindex" }]} // Search pages should be excluded from public search engines
