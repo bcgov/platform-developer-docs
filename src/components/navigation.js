@@ -76,8 +76,7 @@ const StyledListItem = styled.li`
   }
 `;
 
-const NavListItem = ({ id, links, title }) => {
-  const path = typeof window !== "undefined" ? window.location.pathname : "";
+const NavListItem = ({ id, links, path, title }) => {
   const isContainingCurrentPage = links.some(link =>
     path.includes(link.frontmatter.slug)
   );
@@ -165,9 +164,10 @@ const StyledDiv = styled.div`
   }
 `;
 
-export default function Navigation() {
+export default function Navigation({ location }) {
   const isSmallScreen = useMediaQuery({ query: "(max-width: 767.98px)" });
   const [isOpen, setIsOpen] = useState(!isSmallScreen);
+  const path = location.pathname;
 
   return (
     <>
@@ -290,57 +290,68 @@ export default function Navigation() {
                       id="build-deploy-and-maintain-apps"
                       title="Build, deploy and maintain apps"
                       links={buildDeployAndMaintainApps}
+                      path={path}
                     />
                     <NavListItem
                       id="openshift-projects-and-access"
                       title="OpenShift projects and access"
                       links={openshiftProjectsAndAccess}
+                      path={path}
                     />
                     <NavListItem
                       id="use-github-in-bc-gov"
                       title="Use GitHub in BC Gov"
                       links={useGithubInBcgov}
+                      path={path}
                     />
                     <NavListItem
                       id="automation-and-resiliency"
                       title="Automation and resiliency"
                       links={automationAndResiliency}
+                      path={path}
                     />
                     <NavListItem
                       id="app-monitoring"
                       title="App monitoring"
                       links={appMonitoring}
+                      path={path}
                     />
                     <NavListItem
                       id="security-and-privacy-compliance"
                       title="Security and privacy compliance"
                       links={securityAndPrivacyCompliance}
+                      path={path}
                     />
                     <NavListItem
                       id="reusable-code-and-services"
                       title="Reusable code and services"
                       links={reusableCodeAndServices}
+                      path={path}
                     />
                     <NavListItem
                       id="platform-architecture-reference"
                       title="Platform architecture reference"
                       links={platformArchitectureReference}
+                      path={path}
                     />
                     <NavListItem
                       id="training-and-learning"
                       title="Training and learning"
                       links={trainingAndLearning}
+                      path={path}
                     />
                     <NavListItem
                       id="design-system"
                       title="Design system"
                       links={designSystem}
+                      path={path}
                     />
                     {noCategory?.length > 0 && (
                       <NavListItem
                         id="uncategorized"
                         title="Uncategorized"
                         links={noCategory}
+                        path={path}
                       />
                     )}
                   </ul>
@@ -355,9 +366,13 @@ export default function Navigation() {
 }
 
 Navigation.propTypes = {
-  links: PropTypes.array,
+  location: PropTypes.shape({
+    pathname: PropTypes.string.isRequired,
+  }).isRequired,
 };
 
 Navigation.defaultProps = {
-  links: [],
+  location: {
+    pathname: "/",
+  },
 };
