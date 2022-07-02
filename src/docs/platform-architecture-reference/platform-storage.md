@@ -39,7 +39,7 @@ We have access to the following storage services for the OpenShift platform.
 
 ### OpenShift Persistent Volumes (NetApp)
 
-All NetApp storage classes support resizing (bigger only). You can start with a small volume and edit your Persisent Volume Claim (PVC) to have a larger `.spec.resources.requests.storage` later if you need more. You may need to restart the pods attached to let the resize trigger on re-mount. **Note: the storage increase is capped by the storage quota assigned to the namespace. For the current resource quota sizes, see [OpenShift project resource quotas](/openshift-project-resource-quotas/).
+All NetApp storage classes support resizing (bigger only). You can start with a small volume and edit your Persistent Volume Claim (PVC) to have a larger `.spec.resources.requests.storage` later if you need more. You may need to restart the pods attached to let the resize trigger on re-mount. **Note: the storage increase is capped by the storage quota assigned to the namespace. For the current resource quota sizes, see [OpenShift project resource quotas](/openshift-project-resource-quotas/).
 
 * **NetApp File**: `netapp-file-standard` is the default storage class for the platform and the type of storage you get if you don't specify a specific `storageClass`.
 

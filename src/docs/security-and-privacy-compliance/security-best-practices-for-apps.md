@@ -86,7 +86,7 @@ Understand:
 
 * Scope and timeline of the assessment
 * Criticality of the system
-  * consider Confidentiality, Integrity and Availablity requirements
+  * consider Confidentiality, Integrity and Availability requirements
   * consider whether the system is a [Critical System](https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/information-security/defensible-security/critical_systems_standard.pdf)
 
 ### Asset Management
@@ -184,7 +184,7 @@ Understand:
 Related links:
 - [Vault Secrets Management Service](/vault-secrets-management-service/)
 - [Linux Foundation OSS Security Badges](https://github.com/linuxfoundation/cii-best-practices-badge)
-- [Unix, PHP, Python and general programing](http://www.dwheeler.com/secure-programs/Secure-Programs-HOWTO/index.html)
+- [Unix, PHP, Python and general programming](http://www.dwheeler.com/secure-programs/Secure-Programs-HOWTO/index.html)
 - [Java](https://www.java.com/en/security/developer-info.jsp)
 - [MSDN: Windows & .NET](https://msdn.microsoft.com/en-us/library/zdh19h94(v=vs.140).aspx)
 - [WordPress](http://stevegrunwell.github.io/wordpress-security-basics/#/)

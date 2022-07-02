@@ -43,7 +43,7 @@ Currently, the following technologies are available to product teams:
 - [GitHub Actions](https://github.com/bcgov/security-pipeline-templates/tree/main/.github/workflows)
 - [Openshift Pipelines (Tekton)](https://github.com/bcgov/security-pipeline-templates/tree/main/tekton)
 
-While Jenkins is technically supported on the platform the Platform Services team highly discourages teams from using this technology as it's inefficient with the use of valuable platform resources. Over the next few months we'll be guiding the teams that currently use Jenkins to transition to a more modern and efficient technology.
+While Jenkins is technically supported on the platform, the Platform Services team highly discourages teams from using this technology as it's inefficient with the use of valuable platform resources. Over the next few months we'll be guiding the teams that currently use Jenkins to transition to a more modern and efficient technology.
 
 ## Choose a technology<a name="choose-technology"></a>
 

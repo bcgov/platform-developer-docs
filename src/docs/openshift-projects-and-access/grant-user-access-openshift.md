@@ -20,7 +20,7 @@ sort_order: 2
 
 # Grant user access in OpenShift
 
-Access to the the OpenShift platform is self-serve and is available to IDIR users and members of the bcgov organization in GitHub. The platform provides platform and namespace-level access control. Access to the platform requires certain prerequisites and mechanisms to grant access.
+Access to the OpenShift platform is self-serve and is available to IDIR users and members of the bcgov organization in GitHub. The platform provides platform and namespace-level access control. Access to the platform requires certain prerequisites and mechanisms to grant access.
 
 Existing bcgov organization members can invite other users to the organization. Every team member may not need access to OpenShift. Consider the security principle of least privilege before requesting platform access and when granting namespace-level access.
 

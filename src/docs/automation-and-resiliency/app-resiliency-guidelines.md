@@ -68,7 +68,7 @@ There are plenty of options for ensuring that this change in approach helps your
 
 ## An Easily Deployable App<a name="easily-deployable"></a>
 
-Because all applications on OpenShift should be architected with the expectation that any node can go down at any time, it's imperative that applications be easy and quick to redeploy, requiring - most importantly - **no human interaction in the process**. Once the platform is given the command to deploy your software on a new pod, the process between starting up that new pod and having an accessible and useable app should require no human interference whatsoever.
+Because all applications on OpenShift should be architected with the expectation that any node can go down at any time, it's imperative that applications be easy and quick to redeploy, requiring - most importantly - **no human interaction in the process**. Once the platform is given the command to deploy your software on a new pod, the process between starting up that new pod and having an accessible and usable app should require no human interference whatsoever.
 
 This means that all of your deployment configuration should be automated and kept in source-control to ensure that it is easily accessible, consistent, and up-to-date at all times! And that includes any side processes like your monitoring tasks from the section above!
 
