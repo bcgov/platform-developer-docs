@@ -88,11 +88,11 @@ Privacy Impact Assessment (PIA) and Security Threat Risk Assessment (STRA) have 
 ## Artifactory support, processes, and communications<a name="support-processes-comms"></a>
 The team supporting this service administers the Artifactory application, its supporting database and the S3 storage system that contains the packages uploaded to Artifactory.
 
-Your best source for support, configuration and best practices is the developer community that uses Artifactory for their projects. Check out the [`#devops-artifactory` channel on Rocket.Chat](https://chat.pathfinder.gov.bc.ca/channel/devops-artifactory). Service changes are also posted here.
+Your best source for support, configuration and best practices is the developer community that uses Artifactory for their projects. Check out the [`#devops-artifactory` channel on Rocket.Chat](https://chat.developer.gov.bc.ca/channel/devops-artifactory). Service changes are also posted here.
 
-For further support in the event of an emergency or outage, contact one of the Artifactory administrators on the [`#devops-sos` channel on Rocket.Chat](https://chat.pathfinder.gov.bc.ca/channel/devops-sos).
+For further support in the event of an emergency or outage, contact one of the Artifactory administrators on the [`#devops-sos` channel on Rocket.Chat](https://chat.developer.gov.bc.ca/channel/devops-sos).
 
-For cluster-wide service notifications that could impact Artifactory, monitor the [`#devops-alerts` channel in Rocket.Chat](https://chat.pathfinder.gov.bc.ca/channel/devops-alerts).
+For cluster-wide service notifications that could impact Artifactory, monitor the [`#devops-alerts` channel in Rocket.Chat](https://chat.developer.gov.bc.ca/channel/devops-alerts).
 
 ## Service improvements and disruptions<a name="service-improvements"></a>
 
@@ -111,9 +111,9 @@ Related links:
 * [JFROG documentation](https://www.jfrog.com/confluence/site/documentation)
 * [Privacy Impact Assessment (PIA)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/privacy/privacy-impact-assessments)
 * [Security Threat Risk Assessment (STRA)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/security-threat-and-risk-assessment)
-* [#devops-artifactory](https://chat.pathfinder.gov.bc.ca/channel/devops-artifactory)
-* [#devops-sos](https://chat.pathfinder.gov.bc.ca/channel/devops-sos)
-* [#devops-alerts](https://chat.pathfinder.gov.bc.ca/channel/devops-alerts)
+* [#devops-artifactory](https://chat.developer.gov.bc.ca/channel/devops-artifactory)
+* [#devops-sos](https://chat.developer.gov.bc.ca/channel/devops-sos)
+* [#devops-alerts](https://chat.developer.gov.bc.ca/channel/devops-alerts)
 * [Setup an Artifactory service account](/setup-artifactory-service-account/)
 * [Setup an Artifactory project and repository](/setup-artifactory-project-repository/)
 
