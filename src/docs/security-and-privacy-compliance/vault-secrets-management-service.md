@@ -26,7 +26,7 @@ Non-secrets may be stored in Vault if desired.
 
 ## On this page
 - [Features and Functions](#features-and-functions)
-- [Eligibility and Prerequesites](#eligibility-and-prerequesites)
+- [Eligibility and Prerequisites](#eligibility-and-prerequisites)
 - [How to Request](#how-to-request)
 - [Availability](#availability)
 - [How do I get help?](#how-do-i-get-help)
@@ -53,9 +53,9 @@ All secrets in Vault have a lease associated with them. At the end of the lease,
 ### Revocation:
 Vault has built-in support for secret revocation. Vault can revoke not only single secrets, but a tree of secrets, for example all secrets read by a specific user, or all secrets of a particular type. Revocation assists in key rolling as well as locking down systems in the case of an intrusion.
 
-## Eligibility and Prerequisites <a name="eligibility-and-prerequesites"></a>
+## Eligibility and Prerequisites <a name="eligibility-and-prerequisites"></a>
 
-Development teams are provisioned a Vault service account for each environment (dev, test, prod, and tools) through the automation backing the [Platform Services Registry](https://registry.developer.gov.bc.ca/public-landing). Each ProjectSet created in the Registry can have up to two technical contacts assosicated with it, these technical contacts are given write access to Vault and can manage secrets within a ProjectSet's two mount points (nonprod, prod).
+Development teams are provisioned a Vault service account for each environment (dev, test, prod, and tools) through the automation backing the [Platform Services Registry](https://registry.developer.gov.bc.ca/public-landing). Each ProjectSet created in the Registry can have up to two technical contacts associated with it, these technical contacts are given write access to Vault and can manage secrets within a ProjectSet's two mount points (nonprod, prod).
 
 ## How to Request <a name="how-to-request"></a>
 You don’t need to request access to Vault! If you have a project set, you have at least one technical contact who can access Vault through the CLI or UI, and you have a Kubernetes Service Account associated with your project set's Vault Mount Points in each namespace environment. (dev, test, prod, and tools).

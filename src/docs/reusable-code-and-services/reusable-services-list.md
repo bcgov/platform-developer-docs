@@ -142,7 +142,7 @@ SonarQube is a community-supported service. We also encourage teams to switch to
 For more information, see [SonarQube Best Practices](https://developer.gov.bc.ca/Platform-Services-Security/SonarQube-Best-Practices). You can also review the [SonarQube repository](https://github.com/BCDevOps/sonarqube)
 
 ## SonarQube on OpenShift<a name="sq-openshift"></a>
-The [sonarqube repository](https://github.com/BCDevOps/sonarqube) contains all the resources you might need to deploy a SonarQube server instance in a B.C. government OpenShift pathfinder environment and integrate SonarQube scanning into your Jenkins pipeline.
+The [sonarqube repository](https://github.com/BCDevOps/sonarqube) contains all the resources you might need to deploy a SonarQube server instance in a B.C. government OpenShift environment and integrate SonarQube scanning into your Jenkins pipeline.
 
 This work was inspired by the [OpenShift Demos SonarQube for OpenShift](https://github.com/OpenShiftDemos/sonarqube-openshift-docker).
 

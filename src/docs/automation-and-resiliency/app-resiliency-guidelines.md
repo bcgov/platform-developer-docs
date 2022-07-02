@@ -54,7 +54,7 @@ The best way to keep on top of these issues in a proactive manner is to monitor 
 
 Many of these notification options provide your team an opportunity to act to prevent an outage before one even starts - finding out, for example, that your storage is almost full _before_ it fills up means that your team can act to deal with the storage issue _before_ it causes an outage or service issue. Still others let you know the moment an outage starts and can provide extremely valuable information about the cause of the outage, so your team can begin troubleshooting right away without having to wait for users to inform you of the problem.
 
-Your team should also ensure you are in the [#devops-alerts channel](https://chat.pathfinder.gov.bc.ca/channel/devops-alerts) in RocketChat where notices of upcoming maintenance are posted. The channel is quite low volume, so it may be worth turning up your RocketChat notification settings for the channel to **All messages**.
+Your team should also ensure you are in the [#devops-alerts channel](https://chat.developer.gov.bc.ca/channel/devops-alerts) in RocketChat where notices of upcoming maintenance are posted. The channel is quite low volume, so it may be worth turning up your RocketChat notification settings for the channel to **All messages**.
 
 ## A Highly Available App<a name="highly-available"></a>
 
@@ -68,7 +68,7 @@ There are plenty of options for ensuring that this change in approach helps your
 
 ## An Easily Deployable App<a name="easily-deployable"></a>
 
-Because all applications on OpenShift should be architected with the expectation that any node can go down at any time, it's imperative that applications be easy and quick to redeploy, requiring - most importantly - **no human interaction in the process**. Once the platform is given the command to deploy your software on a new pod, the process between starting up that new pod and having an accessible and useable app should require no human interference whatsoever.
+Because all applications on OpenShift should be architected with the expectation that any node can go down at any time, it's imperative that applications be easy and quick to redeploy, requiring - most importantly - **no human interaction in the process**. Once the platform is given the command to deploy your software on a new pod, the process between starting up that new pod and having an accessible and usable app should require no human interference whatsoever.
 
 This means that all of your deployment configuration should be automated and kept in source-control to ensure that it is easily accessible, consistent, and up-to-date at all times! And that includes any side processes like your monitoring tasks from the section above!
 

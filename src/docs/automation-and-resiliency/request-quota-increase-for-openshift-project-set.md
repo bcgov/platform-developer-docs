@@ -78,7 +78,7 @@ Use the following process:
   - Current quota in the project set
   - Total CPU, memory or storage currently used
   - Expected quota increase amount with a detailed allocation plan
-5. Email the request to the Platform Services team at [PlatformServicesTeam@gov.bc.ca](PlatformServicesTeam@gov.bc.ca). Make sure you provide the Sysdig dashboard and ask to book a meeting.
+5. Email the request to the Platform Services team at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca). Make sure you provide the Sysdig dashboard and ask to book a meeting.
 
   If you need to store a large amount of unstructured data, consider using the [S3 Object Storage Service](https://github.com/BCDevOps/OpenShift4-Migration/issues/59) provided by Enterprise Hosting.
 

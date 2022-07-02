@@ -33,7 +33,7 @@ For more information on our GitHub organizations and their uses, see [B.C. gover
 
 ## Benefits of a GitHub Enterprise user licence<a name="benefits"></a>
 
-The enterprise user licence offers various features over the Free and Teams version. To find out more on the differences in featuress and pricing, see [Pricing](https://github.com/pricing).
+The enterprise user licence offers various features over the Free and Teams version. To find out more on the differences in features and pricing, see [Pricing](https://github.com/pricing).
 
 ## Enterprise account ownership<a name="ownership"></a>
 

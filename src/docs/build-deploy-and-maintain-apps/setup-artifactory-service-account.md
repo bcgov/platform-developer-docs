@@ -30,7 +30,7 @@ Artifactory access is controlled through Artifactory service accounts. Service a
 
 ## Archeobot<a name="archeobot"></a>
 
-[Archeobot](bcgov/platform-services-archeobot) is a custom operator that gives teams the freedom to manage their own Artifactory resources. Archeobot can be used to:
+[Archeobot](https://github.com/bcgov/platform-services-archeobot) is a custom operator that gives teams the freedom to manage their own Artifactory resources. Archeobot can be used to:
 * Create new Artifactory service accounts.
 * Request new Artifactory projects.
 * Request quota changes to existing Artifactory projects.
