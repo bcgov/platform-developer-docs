@@ -58,7 +58,3 @@ Submitting a comprehensive test plan that includes this information as part of y
 The Platform Services team reviews your test to ensure it meets the requirements and also confirms that no other product team has a load test scheduled at the same time.
 
 Contact the Platform Services team at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca) to submit your request to schedule your load test.
----
-Rewrite sources:
-* https://github.com/bcgov/platform-developer-docs/tree/review-technical-docs
----
