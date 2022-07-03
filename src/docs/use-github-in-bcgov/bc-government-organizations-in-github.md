@@ -81,7 +81,7 @@ The Security Insight feature is available for all organizations linked to the co
 Related links:
 * [GitHub](https://github.com)
 * [bcgov](https://github.com/bcgov)
-* [Digital Principles for BC Goverment](https://digital.gov.bc.ca/resources/digital-principles)
+* [Digital Principles for BC Government](https://digital.gov.bc.ca/resources/digital-principles)
 * [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/)
 * [GitHub Enterprise user licences in the BC government](/github-enterprise-user-licenses-bc-government/)
 * [Remove a user's BCGov GitHub access](/remove-user-bcgov-github-access/)
