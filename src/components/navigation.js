@@ -213,6 +213,7 @@ export default function Navigation({ location }) {
               let appMonitoring = [];
               let automationAndResiliency = [];
               let buildDeployAndMaintainApps = [];
+              let databaseAndApiManagement = [];
               let designSystem = [];
               let openshiftProjectsAndAccess = [];
               let platformArchitectureReference = [];
@@ -234,6 +235,9 @@ export default function Navigation({ location }) {
                     break;
                   case "build-deploy-and-maintain-apps":
                     buildDeployAndMaintainApps.push(node);
+                    break;
+                  case "database-and-api-management":
+                    databaseAndApiManagement.push(node);
                     break;
                   case "design-system":
                     designSystem.push(node);
@@ -274,6 +278,7 @@ export default function Navigation({ location }) {
               appMonitoring.sort(sortPages);
               automationAndResiliency.sort(sortPages);
               buildDeployAndMaintainApps.sort(sortPages);
+              databaseAndApiManagement.sort(sortPages);
               designSystem.sort(sortPages);
               openshiftProjectsAndAccess.sort(sortPages);
               platformArchitectureReference.sort(sortPages);
@@ -314,6 +319,12 @@ export default function Navigation({ location }) {
                       id="app-monitoring"
                       title="App monitoring"
                       links={appMonitoring}
+                      path={path}
+                    />
+                    <NavListItem
+                      id="database-and-api-management"
+                      title="Database and API management"
+                      links={databaseAndApiManagement}
                       path={path}
                     />
                     <NavListItem
