@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://beta-docs.developer.gov.bc.ca/sitemap/sitemap-index.xml
