@@ -17,9 +17,9 @@ content_owner: Olena Mitovska
 
 sort_order: 2
 ---
-# Application Resiliency Guidelines
+# Application resiliency guidelines
 
-One of the most amazing benefits of working on the Openshift Platform is that, when your application has been designed with a few key ideas in mind, you can avoid many of the regular outages that are almost unavoidable on legacy infrastructure. All that time you used to spend with your application down because you needed to patch a server? Gone. If a node needs to go down for patching purposes, a correctly designed application can simply spin up another pod on another node, and your users won't even notice. Sounds great, right? But the question is, then: how do you design an application for Openshift if it's so different from applications designed for legacy infrastructure?
+One of the most amazing benefits of working on Openshift is that, when your application has been designed with a few key ideas in mind, you can avoid many of the regular outages that are almost unavoidable on legacy infrastructure. All that time you used to spend with your application down because you needed to patch a server? Gone. If a node needs to go down for patching purposes, a correctly designed application can simply spin up another pod on another node, and your users won't even notice. Sounds great, right? But the question is, then: how do you design an application for Openshift if it's so different from applications designed for legacy infrastructure?
 
 
 ## On this page
