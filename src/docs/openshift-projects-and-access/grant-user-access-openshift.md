@@ -43,9 +43,9 @@ Additionally, the namespace where you are adding the new user must have already 
 
 You can add users in one of the following primary roles:
 
-* ``admin`` A project manager who can view any resource in the namespace and modify any resource in the namespace except for quota.  An ``admin`` user can delete the namespace.
-* ``edit`` A user that can modify most objects in a namespace, but can't view or modify roles or bindings. An ``edit`` user can create and delete applications in the namespace.
-* ``view`` A user who can't make any modifications, but can see most objects in a namespace.
+* ``admin`` A project manager who can view any resource in the namespace and modify any resource in the namespace except for quota.  An ``admin`` user can delete the namespace
+* ``edit`` A user that can modify most objects in a namespace, but can't view or modify roles or bindings. An ``edit`` user can create and delete applications in the namespace
+* ``view`` A user who can't make any modifications, but can see most objects in a namespace
 
 To add another user with edit role to the namespace who can create and delete applications, use the ``oc adm policy`` command. You must be in the namespace when you run this command.
 
@@ -77,9 +77,9 @@ The product owner or a project administrator associated with namespace provision
 Technical leads grant namespace access. For more information, see [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.9/authentication/using-rbac.html).
 
 Follow these best practices when you grant namespace access to a user:
-- Include the `@github` or `@idir` suffixes on the usernames when you grant access.
-- All usernames on our platform are lowercase. For example, the username `TheBestDev@github` won't work, but `thebestdev@github` does work.
-- Grant the least privileges needed to do the work. Keep the number of users with administrator access low. Edit is sufficient for most developers.
+- Include the `@github` or `@idir` suffixes on the usernames when you grant access
+- All usernames on our platform are lowercase. For example, the username `TheBestDev@github` won't work, but `thebestdev@github` does work
+- Grant the least privileges needed to do the work. Keep the number of users with administrator access low. Edit is sufficient for most developers
 
 ---
 Related links:
