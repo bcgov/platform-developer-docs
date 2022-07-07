@@ -37,7 +37,7 @@ Find details on the following services or tools you can use as part of your proj
 
 ## Messaging Common service<a name="messaging-common-service"></a>
 The Common Messaging service (CMSG) is an API for sending messages to internal and external users through SMTP and SMS. You can access the CMSG programmatically through the CMSG-MESSAGING-API. For more information, see the following resources:
-* [GitHub repository](https://github.com/bcgov/nr-messaging-service-showcase).
+* [GitHub repository](https://github.com/bcgov/nr-messaging-service-showcase)
 * [About the Messaging Common Service](https://developer.gov.bc.ca/Community-Contributed-Content/About-the-Messaging-Common-Service)
 * [Messaging Service Developer Guide](https://developer.gov.bc.ca/Community-Contributed-Content/Messaging-Service-Developer-Guide)
 
@@ -148,13 +148,13 @@ This work was inspired by the [OpenShift Demos SonarQube for OpenShift](https://
 
 For more information, see the following pages:
 * [SonarQube on OpenShift](https://developer.gov.bc.ca/Community-Contributed-Content/SonarQube-on-OpenShift)
-* [sonarqube repository](https://github.com/BCDevOps/sonarqube)
+* [SonarQube repository](https://github.com/BCDevOps/sonarqube)
 
 For information on upgrading plugins, see the following pages:
 * [Upgrading Plugins Manually](https://github.com/BCDevOps/sonarqube/blob/master/docs/upgrading-plugins-manually.md)
 * [Upgrading with Bundled Plugins](https://github.com/BCDevOps/sonarqube/blob/master/docs/upgrading-with-bundled-plugins.md)
 
-You can also integrate a [ZAP Plugin for SonarQube](https://github.com/OtherDevOpsGene/zap-sonar-plugin).
+You can also integrate a [ZAP plugin for SonarQube](https://github.com/OtherDevOpsGene/zap-sonar-plugin).
 
 ## WeasyPrint HTML to PDF/PNG Microservice<a name="weasyprint"></a>
 The [docker-weasyprint](https://github.com/BCDevOps/docker-weasyprint) project bundles WeasyPrint into a simple, OpenShift-compatible, HTML to PDF/PNG microservice with a simple REST interface.
