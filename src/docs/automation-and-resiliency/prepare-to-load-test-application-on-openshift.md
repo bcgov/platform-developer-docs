@@ -18,16 +18,16 @@ content_owner: Cailey Jones
 sort_order: 7
 ---
 
-# Prepare to load test an application on OpenShift
+# Prepare to load test an application in OpenShift
 Follow these guidelines to load test ministry applications hosted in the Silver and Gold cluster of the OpenShift 4 platform.
 
 ## Load testing requirements
 
 As OpenShift is a shared platform, the Platform Services team wants to make sure you're successful when you load test your application. You have to meet all the following requirements:
 
-1. The test must take place after 5:30 pm on a weekday.
-1. The maximum number of **concurrent sessions** during load testing must be restricted to 40,000.
-1. There must be a Platform Operations team member present during the test.
+1. The test must take place after 5:30 pm on a weekday
+1. The maximum number of **concurrent sessions** during load testing must be restricted to 40,000
+1. There must be a Platform Operations team member present during the test
 
 The first two requirements help make sure that the test doesn't create any negative impacts on the operation of other applications running in the cluster. Following these requirements helps avoid unexpected outcomes.
 
@@ -44,11 +44,11 @@ You need to do the following before you can perform your load test:
 
 ### Create a load test plan
 Before you perform your load test, create a load test plan. The load test plan outlines:
-- The duration of the test and the weekday you want to run the test.
-- The application namespaces you plan on targeting (for example, production only or both test and production).
-- The ramp up time and speed.
-- What constitutes a success or failure of the test (for example, response time under two seconds at all times, less than 10% errors in the response,  or more).
-- The origin of generated traffic (for example, outside of the B.C. government network or internally).
+- The duration of the test and the weekday you want to run the test
+- The application namespaces you plan on targeting (for example, production only or both test and production)
+- The ramp up time and speed
+- What constitutes a success or failure of the test (for example, response time under two seconds at all times, less than 10% errors in the response,  or more)
+- The origin of generated traffic (for example, outside of the B.C. government network or internally)
 - Whether application relies on anything off cluster (for example, a backend database in ZoneB or an external API that is called out to)
 - Include any other relevant information you feel the Platform Services team should have
 
