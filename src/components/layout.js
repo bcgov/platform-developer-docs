@@ -61,6 +61,10 @@ const StyledSkipNavContent = styled(SkipNavContent)`
   main {
     flex-grow: 1;
     margin: 30px;
+
+    @media (max-width: 767.98px) {
+      margin: 15px;
+    }
   }
 `;
 

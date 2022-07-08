@@ -156,6 +156,7 @@ const StyledDiv = styled.div`
     box-shadow: 1px 1px 3px rgb(0 0 0 / 10%);
     width: 100%;
     min-width: 100%;
+    padding: 15px;
   }
 
   nav > ul {
