@@ -22,11 +22,11 @@ Learning how to build in OpenShift can be hard. We’ve put together a number of
 
 ## Openshift 101 and 201 <a name="openshift101201"></a>
 
-Your first step in learning OpenShift is signing up for the [OpenShift 101 course](https://www.eventbrite.ca/e/311464688267/). This course includes a theory 'workshop' component, and a practical series of 'lab exercises'. 
+The BC Gov Provate Cloud PaaS OpenShift 101 and 201 courses include a theory 'workshop' component, and a practical series of 'lab exercises'. OpenShift 101 is recommended for all new teams joining the platform. OpenShift 201 is a more advanced course for platform users who want to advance their skills in OpenShift.
 
-If the course fills up, email PlatformServicesTeam@gov.bc.ca - preference is given to recently onboarded teams. If you’re unable to attend a training session, we will soon be offering recordings. 
+If the courses fill up, email PlatformServicesTeam@gov.bc.ca - preference is given to recently onboarded teams. If you’re unable to attend a training session, we will soon be offering recordings. 
 
-In September 2022 we will be launching an OpenShift 201 course to cover more advanced skills, building from the 101 course. 
+[Register for an OpenShift course](https://platform-services-dev.apps.silver.devops.gov.bc.ca/support-and-community/platform-training-and-resources/).
  
  ## Video resources <a name="video"></a>
 
