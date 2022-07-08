@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { graphql, Link, StaticQuery } from "gatsby";
 import PropTypes from "prop-types";
 import { useMediaQuery } from "react-responsive";
@@ -168,6 +168,12 @@ export default function Navigation({ location }) {
   const isSmallScreen = useMediaQuery({ query: "(max-width: 767.98px)" });
   const [isOpen, setIsOpen] = useState(!isSmallScreen);
   const path = location.pathname;
+
+  // Handle window resizing so that someone moving from a small screen
+  // with the menu closed will see the menu on a wide screen
+  useEffect(() => {
+    if (!isSmallScreen) setIsOpen(true);
+  }, [isSmallScreen]);
 
   return (
     <>
