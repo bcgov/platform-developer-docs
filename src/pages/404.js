@@ -18,7 +18,7 @@ const NotFoundPage = ({ location }) => {
    */
   function getSearchPath() {
     return (
-      "/search/?q=" + encodeURI(pathname.replace(/([\/_-\s])/g, " ").trim())
+      "/search/?q=" + encodeURI(pathname.replace(/([/_-\s])/g, " ").trim())
     );
   }
 
