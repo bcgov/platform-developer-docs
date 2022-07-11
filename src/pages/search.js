@@ -50,8 +50,10 @@ const StyledListItem = styled.li`
 const Result = ({ item }) => {
   // This split assumes that item.link is a full URL (not a partial path)
   // and that we are serving the site from a sub-domain (not a sub-directory)
+  // Ex: https://beta-docs.developer.gov.bc.ca/ -> /
+  //     https://beta-docs.developer.gov.bc.ca/login-to-openshift/ -> /login-to-openshift/
   function getItemPath(item) {
-    return `/${item.link.split("/")[3]}/`;
+    return `/${item.link.split("/").slice(3).join("/")}`;
   }
 
   return (
