@@ -8,6 +8,7 @@ module.exports = {
     description: `Documentation for the BC Government's Private Cloud as a Service Platform.`,
     author: `@bcgov`,
     siteUrl: `https://beta-docs.developer.gov.bc.ca/`,
+    googleSiteVerification: `${process.env.GATSBY_GOOGLE_SITE_VERIFICATION}`,
   },
   trailingSlash: `always`,
   plugins: [
