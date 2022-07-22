@@ -42,7 +42,6 @@ const IndexPage = ({ location }) => {
 
   return (
     <Layout location={location}>
-      <Seo title="Home" />
       <main>
         <h1>Welcome to the {title || `Title`}</h1>
         <Grid className="col-2">
@@ -276,3 +275,7 @@ const IndexPage = ({ location }) => {
 };
 
 export default IndexPage;
+
+export const Head = () => {
+  return <Seo title="Home" />;
+};

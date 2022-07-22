@@ -146,10 +146,6 @@ const SearchPage = ({ location }) => {
 
   return (
     <Layout location={location}>
-      <Seo
-        title={`Search: ${query}`}
-        meta={[{ name: "robots", content: "noindex" }]} // Search pages should be excluded from public search engines
-      />
       <main>
         <h1>Search</h1>
 
@@ -228,3 +224,16 @@ const SearchPage = ({ location }) => {
 };
 
 export default SearchPage;
+
+export const Head = () => {
+  const query = new URLSearchParams(
+    typeof window !== "undefined" ? window.location.search : null
+  ).get("q");
+
+  return (
+    <Seo title={`Search: ${query}`}>
+      {/* Search pages should be excluded from public search engines */}
+      <meta name="robots" content="noindex" />
+    </Seo>
+  );
+};
