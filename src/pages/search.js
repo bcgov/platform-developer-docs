@@ -10,6 +10,8 @@ import LoadSpinnerGroup from "../components/load-spinner";
 import Pagination from "../components/pagination";
 import Seo from "../components/seo";
 
+import { useSearchParams } from "../hooks/useSearchParams";
+
 const StyledListItem = styled.li`
   a {
     color: #313132;
@@ -41,7 +43,7 @@ const StyledListItem = styled.li`
 
     @media (max-width: 767.98px) {
       div {
-        padding: 0.8em 0;
+        padding: 0.8em 0.4em;
       }
     }
   }
@@ -85,10 +87,8 @@ const SearchPage = ({ location }) => {
   const [isError, setIsError] = useState(false);
   const [results, setResults] = useState({});
 
-  // Query params
-  const params = new URLSearchParams(
-    typeof window !== "undefined" ? window.location.search : null
-  );
+  // Query parameters
+  const params = useSearchParams();
   const query = params.get("q");
   const currentPage = Number(params.get("p")) || 1;
 
@@ -129,12 +129,10 @@ const SearchPage = ({ location }) => {
     axios
       .get(searchUrl)
       .then(response => {
-        console.log("response: ", response);
         setResults(response?.data);
         setIsLoading(false);
       })
       .catch(error => {
-        console.log("error: ", error);
         setIsError(true);
         setIsLoading(false);
       });
@@ -146,10 +144,6 @@ const SearchPage = ({ location }) => {
 
   return (
     <Layout location={location}>
-      <Seo
-        title={`Search: ${query}`}
-        meta={[{ name: "robots", content: "noindex" }]} // Search pages should be excluded from public search engines
-      />
       <main>
         <h1>Search</h1>
 
@@ -228,3 +222,14 @@ const SearchPage = ({ location }) => {
 };
 
 export default SearchPage;
+
+export const Head = () => {
+  const query = useSearchParams().get("q");
+
+  return (
+    <Seo title={`Search: ${query}`}>
+      {/* Search pages should be excluded from public search engines */}
+      <meta name="robots" content="noindex" />
+    </Seo>
+  );
+};

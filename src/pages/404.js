@@ -24,10 +24,6 @@ const NotFoundPage = ({ location }) => {
 
   return (
     <Layout location={location}>
-      <Seo
-        title="404: Not found"
-        meta={[{ name: "robots", content: "noindex" }]} // 404 pages should be excluded from public search engines
-      />
       <main>
         <h1>404: Not Found</h1>
         <p>Hmmm, it seems like we don't have a page like:</p>
@@ -47,3 +43,12 @@ const NotFoundPage = ({ location }) => {
 };
 
 export default NotFoundPage;
+
+export const Head = () => {
+  return (
+    <Seo title="404: Not Found">
+      {/* 404 pages should be excluded from public search engines */}
+      <meta name="robots" content="noindex" />
+    </Seo>
+  );
+};
