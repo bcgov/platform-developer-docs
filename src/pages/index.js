@@ -1,9 +1,11 @@
 import * as React from "react";
-import { graphql, Link, useStaticQuery } from "gatsby";
+import { Link } from "gatsby";
 import styled from "styled-components";
 
 import Layout from "../components/layout";
 import Seo from "../components/seo";
+
+import { useSiteMetadata } from "../hooks/useSiteMetadata";
 
 const WORDPRESS_BASE_URL = process.env.GATSBY_WORDPRESS_SITE_BASE_URL;
 
@@ -36,21 +38,13 @@ const Card = styled.div`
 `;
 
 const IndexPage = ({ location }) => {
-  const data = useStaticQuery(graphql`
-    query IndexSiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+  const { title } = useSiteMetadata();
 
   return (
     <Layout location={location}>
       <Seo title="Home" />
       <main>
-        <h1>Welcome to the {data.site.siteMetadata.title || `Title`}</h1>
+        <h1>Welcome to the {title || `Title`}</h1>
         <Grid className="col-2">
           <Card>
             <h2>Get Started</h2>
