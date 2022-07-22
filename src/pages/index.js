@@ -94,7 +94,7 @@ const IndexPage = ({ location }) => {
             <p>
               Read about{" "}
               <a
-                href={`${WORDPRESS_BASE_URL}/support-and-community/platform-training-and-resources/`}
+                href={`${WORDPRESS_BASE_URL}/private-cloud/support-and-community/platform-training-and-resources/`}
               >
                 the free training
               </a>{" "}
