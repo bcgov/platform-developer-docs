@@ -129,12 +129,10 @@ const SearchPage = ({ location }) => {
     axios
       .get(searchUrl)
       .then(response => {
-        console.log("response: ", response);
         setResults(response?.data);
         setIsLoading(false);
       })
       .catch(error => {
-        console.log("error: ", error);
         setIsError(true);
         setIsLoading(false);
       });
