@@ -10,6 +10,8 @@ import LoadSpinnerGroup from "../components/load-spinner";
 import Pagination from "../components/pagination";
 import Seo from "../components/seo";
 
+import { useSearchParams } from "../hooks/useSearchParams";
+
 const StyledListItem = styled.li`
   a {
     color: #313132;
@@ -85,10 +87,8 @@ const SearchPage = ({ location }) => {
   const [isError, setIsError] = useState(false);
   const [results, setResults] = useState({});
 
-  // Query params
-  const params = new URLSearchParams(
-    typeof window !== "undefined" ? window.location.search : null
-  );
+  // Query parameters
+  const params = useSearchParams();
   const query = params.get("q");
   const currentPage = Number(params.get("p")) || 1;
 
@@ -224,9 +224,7 @@ const SearchPage = ({ location }) => {
 export default SearchPage;
 
 export const Head = () => {
-  const query = new URLSearchParams(
-    typeof window !== "undefined" ? window.location.search : null
-  ).get("q");
+  const query = useSearchParams().get("q");
 
   return (
     <Seo title={`Search: ${query}`}>
