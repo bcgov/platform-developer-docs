@@ -43,7 +43,7 @@ const StyledListItem = styled.li`
 
     @media (max-width: 767.98px) {
       div {
-        padding: 0.8em 0;
+        padding: 0.8em 0.4em;
       }
     }
   }
