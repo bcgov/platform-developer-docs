@@ -17,31 +17,59 @@ const StyledListItem = styled.li`
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    margin: 0 -15px;
+    padding: 0 15px;
+    width: auto;
 
-    span.category-title {
-      display: inline-block;
-      font-size: 18px;
-      font-weight: 700;
-      margin-top: 8px;
-      padding: 0;
-    }
-
-    button {
-      background-color: white;
-      border: none;
-      cursor: pointer;
-      height: 44px;
-      margin-right: -15px;
-      min-width: 44px;
-
-      &:focus {
+    &:focus-within {
+      div {
         background-color: #fcba19;
         box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
         outline: none;
       }
+    }
 
-      svg {
-        width: 20px;
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      min-height: 44px;
+      padding: 0;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+      }
+
+      span.category-title {
+        display: inline-block;
+        flex-grow: 1;
+        font-size: 18px;
+        font-weight: 700;
+        margin: 8px 15px 0 0;
+        padding: 0;
+        text-align: initial;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 44px;
+        height: 44px;
+
+        svg {
+          width: 20px;
+        }
+      }
+    }
+
+    &:hover {
+      span.category-title {
+        text-decoration: underline;
       }
     }
   }
@@ -85,14 +113,14 @@ const NavListItem = ({ id, links, path, title }) => {
   return (
     <StyledListItem>
       <div>
-        <span className="category-title">{title}</span>
         <button
           aria-controls={id}
           aria-expanded={isOpen}
           aria-label={`${isOpen ? "Collapse" : "Expand"} ${title}`}
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <SvgChevronUp /> : <SvgChevronDown />}
+          <span className="category-title">{title}</span>
+          <div>{isOpen ? <SvgChevronUp /> : <SvgChevronDown />}</div>
         </button>
       </div>
       <ul id={id} style={{ display: `${isOpen ? "inherit" : "none"}` }}>
