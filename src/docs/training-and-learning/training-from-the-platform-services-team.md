@@ -3,11 +3,11 @@ title: Training from the Platform Services Team
 
 slug: training-from-the-platform-services-team
 
-description: Describes the Openshift 101 and future 201 training, provides interal and external resources for learning Openshift.  
+description: Describes the OpenShift 101 and future 201 training, provides internal and external resources for learning OpenShift.  
 
 keywords: openshift, training, onboarding
 
-page_purpose: Describes the Openshift 101 and 201 training and rovides registration links for training. Provides alternatives such as videos and written training material. 
+page_purpose: Describes the OpenShift 101 and 201 training and provides registration links for training. Provides alternatives such as videos and written training material. 
 
 audience: developer, technical lead, product owner
 
@@ -22,11 +22,11 @@ Learning how to build in OpenShift can be hard. We’ve put together a number of
 
 ## Openshift 101 and 201 <a name="openshift101201"></a>
 
-Your first step in learning OpenShift is signing up for the [OpenShift 101 workshop](https://www.eventbrite.ca/e/311464688267/) and the [Openshift 101 lab](https://www.eventbrite.ca/e/311481077287). 
+The BC Gov Provate Cloud PaaS OpenShift 101 and 201 courses include a theory 'workshop' component, and a practical series of 'lab exercises'. OpenShift 101 is recommended for all new teams joining the platform. OpenShift 201 is a more advanced course for platform users who want to advance their skills in OpenShift.
 
-If the course fills up, email PlatformServicesTeam@gov.bc.ca - preference is given to recently onboarded teams. If you’re unable to attend a training session, we will soon be offering recordings. 
+If the courses fill up, email PlatformServicesTeam@gov.bc.ca - preference is given to recently onboarded teams. If you’re unable to attend a training session, we will soon be offering recordings. 
 
-We’re developing an OpenShift 201 course to cover more advanced skills than the 101 course. 
+[Register for an OpenShift course](%WORDPRESS_BASE_URL%/private-cloud/support-and-community/platform-training-and-resources/).
  
  ## Video resources <a name="video"></a>
 

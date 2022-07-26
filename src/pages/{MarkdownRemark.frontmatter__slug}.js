@@ -5,22 +5,28 @@ import Layout from "../components/layout";
 import Seo from "../components/seo";
 
 export default function Template({
-  data, // injected by the GraphQL query: https://www.gatsbyjs.com/docs/working-with-images-in-markdown/#inline-images-with-gatsby-remark-images
+  data, // injected by the GraphQL pageQuery below: https://www.gatsbyjs.com/docs/how-to/routing/adding-markdown-pages/
   location, // supplied by Gatsby to top-level page components: https://www.gatsbyjs.com/docs/location-data-from-props/
 }) {
-  const { markdownRemark } = data; // data.markdownRemark holds your post data
-  const { frontmatter, html } = markdownRemark;
+  const { markdownRemark } = data;
+  const { html } = markdownRemark;
   return (
     <Layout location={location}>
-      <Seo
-        title={frontmatter?.title}
-        description={frontmatter?.description}
-        meta={[{ property: "keywords", content: frontmatter?.keywords }]}
-      />
       <main dangerouslySetInnerHTML={{ __html: html }} />
     </Layout>
   );
 }
+
+export const Head = ({ data }) => {
+  const { markdownRemark } = data;
+  const { frontmatter } = markdownRemark;
+
+  return (
+    <Seo title={frontmatter?.title} description={frontmatter?.description}>
+      <meta property="keywords" content={frontmatter?.keywords} />
+    </Seo>
+  );
+};
 
 export const pageQuery = graphql`
   query ($id: String!) {

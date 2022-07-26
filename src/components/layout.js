@@ -7,7 +7,6 @@
 
 import React from "react";
 import PropTypes from "prop-types";
-import { useStaticQuery, graphql } from "gatsby";
 import { SkipNavLink, SkipNavContent } from "@reach/skip-nav";
 import styled from "styled-components";
 
@@ -15,6 +14,8 @@ import Header from "./header";
 import Navigation from "./navigation";
 import Footer from "./footer";
 import FontStyles from "./font-styles";
+
+import { useSiteMetadata } from "../hooks/useSiteMetadata";
 
 import "./layout.css";
 import "@reach/skip-nav/styles.css";
@@ -61,25 +62,21 @@ const StyledSkipNavContent = styled(SkipNavContent)`
   main {
     flex-grow: 1;
     margin: 30px;
+
+    @media (max-width: 767.98px) {
+      margin: 15px;
+    }
   }
 `;
 
 const Layout = ({ children, location }) => {
-  const data = useStaticQuery(graphql`
-    query SiteTitleQuery {
-      site {
-        siteMetadata {
-          title
-        }
-      }
-    }
-  `);
+  const { title } = useSiteMetadata();
 
   return (
     <Page>
       <FontStyles />
       <StyledSkipNavLink>Skip to main content</StyledSkipNavLink>
-      <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
+      <Header siteTitle={title || `Title`} />
       <FlexContainer>
         <Navigation location={location} />
         <StyledSkipNavContent>{children}</StyledSkipNavContent>

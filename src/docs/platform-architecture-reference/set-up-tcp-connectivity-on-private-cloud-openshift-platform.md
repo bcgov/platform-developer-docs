@@ -18,7 +18,7 @@ content_owner: Ian Watts
 sort_order: 4
 ---
 
-# Set up TCP connectivity on the BC Gov Private Cloud PaaS OpenShift platform
+# Set up TCP connectivity on OpenShift
 Use this page to learn how to configure direct [transmission control protocol (TCP)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) access to services on the BC Gov Private Cloud PaaS using the Porter Operator.
 
 ## On this page
@@ -232,10 +232,10 @@ Any return code other than `0` indicates a problem.  If that's the case, inquire
 
 ## Troubleshooting<a name="troubleshooting"></a>
 Resolve issues by trying the following:
-* Check the Service name used in the `TransportServerClaim`. It must match the existing Service.
-* Make sure that there are pods associated with that Service and that they are operating correctly.
-* Confirm that the `NetworkPolicy` has been created and that its `podSelector` field matches the pods that should be reachable through the `TransportServerClaim`.
-* Check the `TransportServerClaim` itself for status information.
+* Check the Service name used in the `TransportServerClaim`. It must match the existing Service
+* Make sure that there are pods associated with that Service and that they are operating correctly
+* Confirm that the `NetworkPolicy` has been created and that its `podSelector` field matches the pods that should be reachable through the `TransportServerClaim`
+* Check the `TransportServerClaim` itself for status information
 ```
 $ oc -n yourlicenceplate-dev get tscs yourservice-tsc -o yaml
 ...

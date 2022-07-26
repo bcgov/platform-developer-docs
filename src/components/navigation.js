@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { graphql, Link, StaticQuery } from "gatsby";
 import PropTypes from "prop-types";
 import { useMediaQuery } from "react-responsive";
@@ -17,31 +17,59 @@ const StyledListItem = styled.li`
     flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
+    margin: 0 -15px;
+    padding: 0 15px;
+    width: auto;
 
-    span.category-title {
-      display: inline-block;
-      font-size: 18px;
-      font-weight: 700;
-      margin-top: 8px;
-      padding: 0;
-    }
-
-    button {
-      background-color: white;
-      border: none;
-      cursor: pointer;
-      height: 44px;
-      margin-right: -15px;
-      min-width: 44px;
-
-      &:focus {
+    &:focus-within {
+      div {
         background-color: #fcba19;
         box-shadow: 0 -2px #ffdd00, 0 4px #0b0c0c;
         outline: none;
       }
+    }
 
-      svg {
-        width: 20px;
+    button {
+      background: none;
+      border: none;
+      cursor: pointer;
+      display: flex;
+      flex-direction: row;
+      min-height: 44px;
+      padding: 0;
+      width: 100%;
+
+      &:focus {
+        outline: none;
+      }
+
+      span.category-title {
+        display: inline-block;
+        flex-grow: 1;
+        font-size: 18px;
+        font-weight: 700;
+        margin: 8px 15px 0 0;
+        padding: 0;
+        text-align: initial;
+      }
+
+      div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-around;
+        width: 44px;
+        height: 44px;
+
+        svg {
+          width: 20px;
+        }
+      }
+    }
+
+    &:hover {
+      span.category-title {
+        text-decoration: underline;
       }
     }
   }
@@ -85,14 +113,14 @@ const NavListItem = ({ id, links, path, title }) => {
   return (
     <StyledListItem>
       <div>
-        <span className="category-title">{title}</span>
         <button
           aria-controls={id}
           aria-expanded={isOpen}
           aria-label={`${isOpen ? "Collapse" : "Expand"} ${title}`}
           onClick={() => setIsOpen(!isOpen)}
         >
-          {isOpen ? <SvgChevronUp /> : <SvgChevronDown />}
+          <span className="category-title">{title}</span>
+          <div>{isOpen ? <SvgChevronUp /> : <SvgChevronDown />}</div>
         </button>
       </div>
       <ul id={id} style={{ display: `${isOpen ? "inherit" : "none"}` }}>
@@ -156,6 +184,7 @@ const StyledDiv = styled.div`
     box-shadow: 1px 1px 3px rgb(0 0 0 / 10%);
     width: 100%;
     min-width: 100%;
+    padding: 15px;
   }
 
   nav > ul {
@@ -168,6 +197,12 @@ export default function Navigation({ location }) {
   const isSmallScreen = useMediaQuery({ query: "(max-width: 767.98px)" });
   const [isOpen, setIsOpen] = useState(!isSmallScreen);
   const path = location.pathname;
+
+  // Handle window resizing so that someone moving from a small screen
+  // with the menu closed will see the menu on a wide screen
+  useEffect(() => {
+    if (!isSmallScreen) setIsOpen(true);
+  }, [isSmallScreen]);
 
   return (
     <>

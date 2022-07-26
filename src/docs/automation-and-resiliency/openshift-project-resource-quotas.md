@@ -19,7 +19,7 @@ sort_order: 4
 ---
 # OpenShift project resource quotas
 
-New project sets provisioned in **all clusters** of the BC Gov Private Cloud PaaS OpenShift platform have the following default resource quotas that include a certain amount of CPU, RAM and storage:
+New project sets provisioned in **all clusters** of the BC Gov Private Cloud PaaS have the following default resource quotas that include a certain amount of CPU, RAM and storage:
 - **CPU**: 0.5 cores as requested, 1.5 cores as the limit
 - **RAM**: 2 GB as requested, 4 GB as the limit
 - **Storage**: 60 PVC count , 1 GB overall storage with 521 MB for backup storage and five snapshots
