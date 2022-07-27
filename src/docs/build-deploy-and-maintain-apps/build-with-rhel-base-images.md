@@ -20,11 +20,11 @@ sort_order: 10
 
 # Build with RHEL Base Images
 
-If you wish to use a [RHEL based image](https://catalog.redhat.com/software/containers/search?p=1&architecture=amd64&vendor_name=Red%20Hat%7CRed%20Hat%2C%20Inc.) to build upon you will need to take some extra steps to get access to the RHEL Subscription included in the OpenShift Platform.
+If you wish to use a [Red Hat Enterprise Linux (RHEL)](https://catalog.redhat.com/software/containers/search?p=1&architecture=amd64&vendor_name=Red%20Hat%7CRed%20Hat%2C%20Inc.) based image to build upon, you will need to take some extra steps to get access to the RHEL Subscription included in the OpenShift Platform.
 
 Popular choices for RHEL base images are [ubi8](https://catalog.redhat.com/software/containers/ubi8/5c647760bed8bd28d0e38f9f) and [openshift4/ose-cli](https://catalog.redhat.com/software/containers/openshift4/ose-cli/5cd9ba3f5a13467289f4d51d).
 
-Reminder that you can pull these via [Artifactory](artifacts.developer.gov.bc.ca/redhat-docker-remote) as well via `artifacts.developer.gov.bc.ca/redhat-docker-remote`.
+Reminder: you can pull these via [Artifactory](artifacts.developer.gov.bc.ca/redhat-docker-remote) as well via `artifacts.developer.gov.bc.ca/redhat-docker-remote`.
 
 ## RHEL Entitlements
 
@@ -87,7 +87,7 @@ When you perform an Entitlement Build using RHEL 7, you must have the following 
 RUN rm /etc/rhsm-host
 ```
 
-It's not needed for RHEL 8 or 9 based images.
+The command above is not needed for RHEL 8 or 9 based images.
 
 Then use `yum` or `dnf` to install your packages. Here's a sample of how to do that cleanly.
 
@@ -103,5 +103,12 @@ RUN INSTALL_PKGS="space separated list of packages" && \
 ---
 Related links:
 
-- [OCP 4.9 Docs - Adding subscription entitlements as a build secret](
-https://docs.openshift.com/container-platform/4.9/cicd/builds/running-entitled-builds.html#builds-source-secrets-entitlements_running-entitled-builds)
+- [OCP 4.9 Docs - Adding subscription entitlements as a build secret](https://docs.openshift.com/container-platform/4.9/cicd/builds/running-entitled-builds.html#builds-source-secrets-entitlements_running-entitled-builds)
+
+- [Red Hat Enterprise Linux (RHEL)](https://catalog.redhat.com/software/containers/search?p=1&architecture=amd64&vendor_name=Red%20Hat%7CRed%20Hat%2C%20Inc.)
+
+- [ubi8](https://catalog.redhat.com/software/containers/ubi8/5c647760bed8bd28d0e38f9f)
+
+- [openshift4/ose-cli](https://catalog.redhat.com/software/containers/openshift4/ose-cli/5cd9ba3f5a13467289f4d51d)
+
+- [Build Volumes](https://docs.openshift.com/container-platform/4.9/cicd/builds/build-strategies.html#builds-using-build-volumes_build-strategies-docker)
