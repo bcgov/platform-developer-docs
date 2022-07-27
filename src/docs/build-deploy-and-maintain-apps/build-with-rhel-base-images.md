@@ -24,7 +24,7 @@ If you wish to use a [Red Hat Enterprise Linux (RHEL)](https://catalog.redhat.co
 
 Popular choices for RHEL base images are [ubi8](https://catalog.redhat.com/software/containers/ubi8/5c647760bed8bd28d0e38f9f) and [openshift4/ose-cli](https://catalog.redhat.com/software/containers/openshift4/ose-cli/5cd9ba3f5a13467289f4d51d).
 
-Reminder: you can pull these via [Artifactory](artifacts.developer.gov.bc.ca/redhat-docker-remote) as well via `artifacts.developer.gov.bc.ca/redhat-docker-remote`.
+Reminder: you can pull these via [Artifactory](https://github.com/BCDevOps/developer-experience/blob/master/apps/artifactory/DEVHUB-README.md) as well via `artifacts.developer.gov.bc.ca/redhat-docker-remote`.
 
 ## RHEL Entitlements
 
