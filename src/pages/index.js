@@ -143,7 +143,11 @@ const IndexPage = ({ location }) => {
                   Vault Secrets Management Service
                 </Link>
               </li>
-              <li>Artifactory Trusted Repository Service (coming soon)</li>
+              <li>
+                <Link to={"/image-artifact-management-with-artifactory/"}>
+                  Artifactory Trusted Repository Service
+                </Link>
+              </li>
               <li>Security best practices for apps (coming soon)</li>
             </ul>
           </Card>
