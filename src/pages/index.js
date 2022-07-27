@@ -161,7 +161,7 @@ const IndexPage = ({ location }) => {
               </li>
               <li>
                 <a
-                  href={`${WORDPRESS_BASE_URL}/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/`}
+                  href={`${WORDPRESS_BASE_URL}/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/`}
                 >
                   Common platform requests in the BC Gov Private Cloud PaaS
                 </a>
