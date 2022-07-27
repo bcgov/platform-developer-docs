@@ -53,17 +53,17 @@ const IndexPage = ({ location }) => {
             </p>
             <ul>
               <li>
-                <Link to={"/provision-new-openshift-project"}>
+                <Link to={"/provision-new-openshift-project/"}>
                   Provision a new project in OpenShift
                 </Link>
               </li>
               <li>
-                <Link to={"/grant-user-access-openshift"}>
+                <Link to={"/grant-user-access-openshift/"}>
                   User access in OpenShift
                 </Link>
               </li>
               <li>
-                <Link to={"/openshift-project-resource-quotas"}>
+                <Link to={"/openshift-project-resource-quotas/"}>
                   Project resource quotas
                 </Link>
               </li>
@@ -139,7 +139,7 @@ const IndexPage = ({ location }) => {
             <ul>
               <li>STRA and PIA for Private Cloud Platform (coming soon)</li>
               <li>
-                <Link to={"/vault-secrets-management-service"}>
+                <Link to={"/vault-secrets-management-service/"}>
                   Vault Secrets Management Service
                 </Link>
               </li>
@@ -151,7 +151,7 @@ const IndexPage = ({ location }) => {
             <h3>Use GitHub in BC Gov</h3>
             <ul>
               <li>
-                <Link to={"/bc-government-organizations-in-github"}>
+                <Link to={"/bc-government-organizations-in-github/"}>
                   BC Government Organizations in Github
                 </Link>
               </li>
@@ -169,7 +169,7 @@ const IndexPage = ({ location }) => {
             <h3>Automation and resiliency</h3>
             <ul>
               <li>
-                <Link to={"/app-resiliency-guidelines"}>
+                <Link to={"/app-resiliency-guidelines/"}>
                   App resiliency guidelines
                 </Link>
               </li>
@@ -180,12 +180,12 @@ const IndexPage = ({ location }) => {
             <h3>App Monitoring</h3>
             <ul>
               <li>
-                <Link to={"/sysdig-monitor-setup-team"}>
+                <Link to={"/sysdig-monitor-setup-team/"}>
                   Set up a team in Sysdig Monitor
                 </Link>
               </li>
               <li>
-                <Link to={"/sysdig-monitor-set-up-advanced-functions"}>
+                <Link to={"/sysdig-monitor-set-up-advanced-functions/"}>
                   Set up advance functions in Sysdig Monitor
                 </Link>
               </li>
@@ -206,7 +206,7 @@ const IndexPage = ({ location }) => {
             <ul>
               <li>KeyCloak SSO (coming soon)</li>
               <li>
-                <Link to={"/reusable-services-list"}>
+                <Link to={"/reusable-services-list/"}>
                   Reusable services list
                 </Link>
               </li>
