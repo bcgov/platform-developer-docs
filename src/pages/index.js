@@ -138,7 +138,11 @@ const IndexPage = ({ location }) => {
             <h3>Security and privacy compliance</h3>
             <ul>
               <li>STRA and PIA for Private Cloud Platform (coming soon)</li>
-              <li>Vault Secret Managment Service (coming soon)</li>
+              <li>
+                <Link to={"/vault-secrets-management-service"}>
+                  Vault Secrets Management Service
+                </Link>
+              </li>
               <li>Artifactory Trusted Repository Service (coming soon)</li>
               <li>Security best practices for apps (coming soon)</li>
             </ul>
