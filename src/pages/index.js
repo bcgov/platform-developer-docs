@@ -102,7 +102,7 @@ const IndexPage = ({ location }) => {
               updates and support while you work in the BC Gov Private Cloud
               PaaS. Read about{" "}
               <a
-                href={`${WORDPRESS_BASE_URL}/support-and-community/stay-connected/`}
+                href={`${WORDPRESS_BASE_URL}/private-cloud/support-and-community/stay-connected/`}
               >
                 how to stay connected in Rocket.Chat
               </a>
@@ -124,7 +124,7 @@ const IndexPage = ({ location }) => {
             </p>
             <p>
               <a
-                href={`${WORDPRESS_BASE_URL}/support-and-community/events-in-the-bc-gov-private-cloud-paas/`}
+                href={`${WORDPRESS_BASE_URL}/private-cloud/support-and-community/events-in-the-bc-gov-private-cloud-paas/`}
               >
                 Learn how to register for this and other events
               </a>
@@ -241,7 +241,7 @@ const IndexPage = ({ location }) => {
               If you think an incident has occurred with our services, you can
               report it by{" "}
               <a
-                href={`${WORDPRESS_BASE_URL}/support-and-community/support-incident-response-flow/`}
+                href={`${WORDPRESS_BASE_URL}/private-cloud/support-and-community/support-incident-response-flow/`}
               >
                 following these steps
               </a>
@@ -254,7 +254,7 @@ const IndexPage = ({ location }) => {
               We follow a community-based support model. You can use our
               self-serve resources or ask for help from the platform community.{" "}
               <a
-                href={`${WORDPRESS_BASE_URL}/support-and-community/how-to-get-support-or-help/`}
+                href={`${WORDPRESS_BASE_URL}/private-cloud/support-and-community/how-to-get-support-or-help/`}
               >
                 Learn how to get help on the Platform
               </a>
@@ -268,7 +268,7 @@ const IndexPage = ({ location }) => {
               outlined common platform tasks and links to additional
               instructions.{" "}
               <a
-                href={`${WORDPRESS_BASE_URL}/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/`}
+                href={`${WORDPRESS_BASE_URL}/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/`}
               >
                 Learn how to get help with some of the most commonly
                 searched-for tasks
