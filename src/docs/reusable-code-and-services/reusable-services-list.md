@@ -178,7 +178,6 @@ Related links:
 * [Data Systems & Services request system](https://dpdd.atlassian.net/servicedesk/customer/portal/1/group/7/create/15).
 * [BC Address Geocoder Developer Guide](https://developer.gov.bc.ca/Community-Contributed-Content/BC-Address-Geocoder-Developer-Guide)
 * [BC Address Geocoder repository](https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS)
-* [DGEN-API](https://api.nrs.gov.bc.ca/dgen-api/)
 * [Natural Resource Ministry's (NRM) API Store](https://apistore.nrs.gov.bc.ca/store/apis/info?name=dgen-api&version=v1&provider=admin)
 * [Windward](https://www.windwardstudios.com/)
 * [quick-start materials](https://www.windwardstudios.com/resources/quick-start).
