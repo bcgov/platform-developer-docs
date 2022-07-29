@@ -1,9 +1,9 @@
 ---
-title: Sysdig Monitoring Guildline for shared services and apps
+title: title: Sysdig Monitoring Guideline for Platform Shared Services
 
 slug: sysdig-monitor-setup
 
-description: Default monitoring standards that will be applied to all our services and apps.
+description: Service Golden Signal - monitoring standards and best practise that will be applied to Platform Shared Services.
 
 keywords: sysdig, sysdig monitor, SLI , monitoring, openshift monitoring, developer guide, team guide, team, configure
 
@@ -18,23 +18,38 @@ content_owner: Billy Li
 sort_order: 2
 ---
 
-The four golden signals of SRE are latency, traffic, errors, and saturation. SRE’s golden signals define what it means for the system to be “healthy.”  And our monitoring standard will be build based on those four aspect.
+The four golden signals of Site Reliability Engineering (SRE) are latency, traffic, errors, and saturation. SRE’s golden signals define what it means for the system to be “healthy”. The following monitoring standard will be built based on those four aspects.
 
 # Using PromQL
 
-The Prometheus Query Language (PromQL) is the defacto standard for querying Prometheus metric data. PromQL is designed to allow the user to select and aggregate time-series data. And building dashboard in sysdig is havily rely on PromQL. The PromQL language is documented at [Prometheus Query Basics](https://prometheus.io/docs/prometheus/latest/querying/basics/).
+The Prometheus Query Language (PromQL) is the defacto standard for querying Prometheus metric data. PromQL is designed to allow the user to select and aggregate time-series data. And building dashboard in Sysdig is heavily relying on PromQL. The PromQL language is documented at [Prometheus Query Basics](https://prometheus.io/docs/prometheus/latest/querying/basics/).
 
-# Resources monitoring with Sysdig(Saturation)
+## Resources monitoring with Sysdig (Saturation)
 
 The saturation is a high-level overview of the utilization of the system. How much more capacity does the service have? When is the service maxed out? Because most systems begin to degrade before utilization hits 100%, we also need to determine a benchmark for a “healthy” percentage of utilization. What level of saturation ensures service performance and availability for user?
 
 We monitoring resources from cpu, ram, and storage.
 
+
+## Team Scope
+
 ### CPU:
+
+Get appication CPU usage by using:
+```
+avg(avg_over_time(sysdig_container_cpu_cores_used{$__scope,kube_pod_label_app= "platsrv-registry", kube_statefulset_label_app = 'platsrv-registry'}[$__interval]))
+```
+Get appication requested CPU  by using:
+```
+avg(avg_over_time(kube_pod_sysdig_resource_requests_cpu_cores{$__scope, kube_pod_label_app= "platsrv-registry", kube_statefulset_label_app = 'platsrv-registry'}[$__interval]))
+```
+
+
 We can learn how many resources the application is actually using vs how much it requested, and to get resources utilization based off that. CPU Used vs Requested(Utilization) where it the percentage between `sysdig_container_cpu_cores_used` and `kube_pod_sysdig_resource_requests_cpu_cores`. 
 
+
 ```
-sum(last_over_time(sysdig_container_cpu_cores_used{kube_cluster_name=~$Cluster,kube_namespace_name=~$Namespace}[$__interval])) / (sum(last_over_time(kube_pod_sysdig_resource_requests_cpu_cores{kube_cluster_name=~$Cluster,kube_namespace_name=~$Namespace}[$__interval])) ) * 100
+sum(last_over_time(sysdig_container_cpu_cores_used{kube_cluster_name=~$Cluster,kube_namespace_name=~$Namespace, kube_deployment_label_app = "<YOUR_APP_LABEL_NAME>"}[$__interval])) / (sum(last_over_time(kube_pod_sysdig_resource_requests_cpu_cores{kube_cluster_name=~$Cluster,kube_namespace_name=~$Namespace, kube_deployment_label_app = "<YOUR_APP_LABEL_NAME>"}[$__interval])) ) * 100
 ```
 
 CPU Used vs Limited(Threshold) where is the percentage between `sysdig_container_cpu_cores_used` and `kube_pod_sysdig_resource_limits_cpu_cores`. We can learn how much more resources are available for the the application
@@ -44,20 +59,33 @@ sum(last_over_time(sysdig_container_cpu_cores_used{kube_cluster_name=~$Cluster,k
 
 For Utilization, we would like to achieve as much high as possible. However, 80% or above is not always achievable , but we will try our best while make sure the application meets other SLO.
 
-As from Limitations aspect, I have set up an alert so when its 80%, it will send a rc message notify us to give it more resources as it almost run out. we can then give it more resources or do a Horizontal auto-scale depending on the situation.
+As from Limitations aspect for namespaces, I have set up an alert so when its 80%, it will send a rc message notify us to give it more resources as it almost run out. we can then give it more resources or do a Horizontal auto-scale depending on the situation.
 ```
 sum(last_over_time(sysdig_container_cpu_cores_used{kube_cluster_name=~"silver",kube_namespace_name=~"platform-registry-prod"}[10s])) / (sum(last_over_time(kube_pod_sysdig_resource_limits_cpu_cores{kube_cluster_name=~"silver",kube_namespace_name=~"platform-registry-prod"}[10s])) ) > 0.8
 ```
+
+
+
 ### Memory
 
 Similar as CPU, RAM monitoring will aslo focus on Limitation and Utilization.
 
-Utilization will be calculated by the `sysdig_container_memory_used_bytes`/`kube_resourcequota_sysdig_requests_memory_used`, to achieve 80% or above is still desired.
+Application Memory Usage can be get by query:
 ```
-sum(last_over_time(sysdig_container_memory_used_bytes{kube_cluster_name=~$Cluster,kube_namespace_name=~$Namespace}[$__interval])) / (sum(last_over_time(kube_resourcequota_sysdig_requests_memory_used{kube_cluster_name=~$Cluster,kube_namespace_name=~$Namespace}[$__interval]))) * 100
+avg(avg_over_time(sysdig_container_memory_used_bytes{$__scope, kube_pod_label_app= "platsrv-registry", kube_statefulset_label_app = 'platsrv-registry'}[$__interval]))
 ```
 
-Threhold will be the ration between `sysdig_container_memory_used_bytes` and `kube_pod_sysdig_resource_limits_memory_bytes`
+Application requested Memory can be retrived by query: 
+
+```
+avg(avg_over_time(kube_pod_sysdig_resource_requests_memory_bytes{$__scope, kube_pod_label_app= "platsrv-registry", kube_statefulset_label_app = 'platsrv-registry'}[$__interval]))
+```
+Utilization will be calculated by the `sysdig_container_memory_used_bytes`/`kube_resourcequota_sysdig_requests_memory_used`, to achieve 80% or above is still desired.
+```
+sum(last_over_time(sysdig_container_memory_used_bytes{kube_cluster_name=~$Cluster,kube_namespace_name=~$Namespace, kube_pod_label_app= "platsrv-registry", kube_statefulset_label_app = 'platsrv-registry'}[$__interval])) / (sum(last_over_time(kube_pod_sysdig_resource_requests_memory_bytes{kube_cluster_name=~$Cluster,kube_namespace_name=~$Namespace, kube_pod_label_app= "platsrv-registry", kube_statefulset_label_app = 'platsrv-registry'}[$__interval]))) * 100
+```
+
+Threhold for the namespace will be the ration between `sysdig_container_memory_used_bytes` and `kube_pod_sysdig_resource_limits_memory_bytes`
 
 ```
 sum(last_over_time(sysdig_container_memory_used_bytes{kube_cluster_name=~$Cluster,kube_namespace_name=~$Namespace}[$__interval])) / (sum(last_over_time(kube_pod_sysdig_resource_limits_memory_bytes{kube_cluster_name=~$Cluster,kube_namespace_name=~$Namespace}[$__interval]))) * 100
