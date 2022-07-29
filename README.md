@@ -2,7 +2,9 @@
 
 [![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 
-This is a single location for all technical/developer documentation for product teams working on the Private Cloud Openshift Platform.
+This is a single location for all technical/developer documentation for product teams working on the Private Cloud OpenShift Platform.
+
+Visit the deployed Gatsby site at [beta-docs.developer.gov.bc.ca](https://beta-docs.developer.gov.bc.ca).
 
 ## Documentation
 
