@@ -57,9 +57,9 @@ See the [Red Hat documentation](https://access.redhat.com/documentation/en-us/re
 
 ### S3-Compatible Object Storage (Dell EMC Elastic Cloud Storage)
 
-For applications that need to store large amounts of unstructured data we recommend using the S3-compliant on-premises [Object Store Service](https://ssbc-client.gov.bc.ca/services/ObjectStorage/overview.htm) offered by the OCIO Enterprise Hosting branch. The Object Store Service provides storage for unstructured data such as images, PDFs and other types of files. NetApp storage offered on the OpenShift 4 Platform isn't suitable for large amounts of unstructured data. NetApp storage should only be used for structured data such as databases that require high-I/O workloads.
+For applications that need to store large amounts of unstructured data we recommend using the S3-compliant on-premises [Object Store Service](https://ssbc-client.gov.bc.ca/services/ObjectStorage/overview.htm) (requires IDIR) offered by the OCIO Enterprise Hosting branch. The Object Store Service provides storage for unstructured data such as images, PDFs and other types of files using protocols including S3, NFS, and HTTP. The service is aimed at objects typically over 100 KB, updated infrequently, retained longer term, with performance response targets of 100ms or more.
 
-The OCIO has an [object store](https://ssbc-client.gov.bc.ca/services/ObjectStorage/overview.htm) service that supports the AWS S3 protocol. The service is aimed at objects typically over 100 KB, updated infrequently, retained longer term, with performance response targets of 100ms or more.
+NetApp storage offered on the OpenShift 4 Platform isn't suitable for large amounts of unstructured data. NetApp storage should only be used for structured data such as databases that require high-I/O workloads.
 
 Contact your ministry IMB to get access to the ministry service account that controls access and where a bucket for your application will be provisioned.
 

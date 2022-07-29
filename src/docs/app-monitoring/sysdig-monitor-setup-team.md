@@ -72,7 +72,7 @@ A list of users to be added to this team.
 
   - `User Role` - These are the available roles to assign to different team members:
 
-    - `ROLE_TEAM_EDIT (Advanced User)`: Read and write access to the components of the application available to the team. Can create, edit and delete dashboards, alerts or other content. Recommended for admininstrators and team members that need to create and manage dashboards.
+    - `ROLE_TEAM_EDIT (Advanced User)`: Read and write access to the components of the application available to the team. Can create, edit and delete dashboards, alerts or other content. Recommended for administrators and team members that need to create and manage dashboards.
 
     - `ROLE_TEAM_STANDARD (Standard User)`: Same as Advanced User but without access to the **Explore** page. Recommended for developers that need to refer to dashboards for resource tuning and service monitoring.
 

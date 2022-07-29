@@ -70,7 +70,7 @@ For more information on Backup Container, see the following pages:
 
 The BC Address Geocoder REST API lets you integrate real-time standardization, validation and geocoding of physical addresses into your applications. See [the Data Catalogue](https://catalogue.data.gov.bc.ca/dataset/bc-address-geocoder-web-service) for information on aspects of the REST API that aren't covered in the OpenAPI definition.
 
-The Geocoder helps you validate and geocode addresses (including public and related business occupants); find physical sites, intersections and occupants; and find sites, intersections and occupants near a point or within an area. The current baseUrl for the online geocoder is https://geocoder.api.gov.bc.ca/.
+The Geocoder helps you validate and geocode addresses (including public and related business occupants); find physical sites, intersections and occupants; and find sites, intersections and occupants near a point or within an area. The current baseUrl for the online geocoder is `https://geocoder.api.gov.bc.ca/`.
 
 The URL allows both public and gated access. Gated access requires an APIkey. To get a sandbox APIkey with a maximum rate of 1000 requests per minute, visit the [Geocoder API console](https://catalogue.data.gov.bc.ca/dataset/bc-address-geocoder-web-service/resource/40d6411e-ab98-4df9-a24e-67f81c45f6fa/view/1d3c42fc-53dc-4aab-ae3b-f4d056cb00e0). You can get an unrestricted APIkey for use in government applications by opening a ticket with the [Data Systems & Services request system](https://dpdd.atlassian.net/servicedesk/customer/portal/1/group/7/create/15).
 
@@ -79,7 +79,7 @@ For more information on the BC Address Geocoder, see the following pages:
 * [BC Address Geocoder repository](https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS)
 
 ## Common Document Generation service<a name="dgen"></a>
-Use the Document Generation service (DGEN) to generate documents using template files that contain field values from a database. Once generated, the completed document is stored in the Document Management Service (DMS) repository where you can view and sign it with an electronic signature. You must access DGEN programmatically through the [DGEN-API](https://api.nrs.gov.bc.ca/dgen-api/). You can find a description of the API in the [Natural Resource Ministry's (NRM) API Store](https://apistore.nrs.gov.bc.ca/store/apis/info?name=dgen-api&version=v1&provider=admin).
+Use the Document Generation service (DGEN) to generate documents using template files that contain field values from a database. Once generated, the completed document is stored in the Document Management Service (DMS) repository where you can view and sign it with an electronic signature. You must access DGEN programmatically through the DGEN-API (`https://api.nrs.gov.bc.ca/dgen-api/`). You can find a description of the API in the [Natural Resource Ministry's (NRM) API Store](https://apistore.nrs.gov.bc.ca/store/apis/info?name=dgen-api&version=v1&provider=admin).
 
 ### Features
 
