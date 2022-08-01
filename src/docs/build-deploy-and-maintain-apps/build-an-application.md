@@ -33,6 +33,21 @@ sort_order:
 
 Point to topics: 
 
+- Understanding BC Onboarding
+- Working with Podman, Buildah, Docker, Jib, and Kaniko. 
+- Shifting Left with Images and Containerization
+- Utilizing Images for Microservice Architecture
+- Setting up Multi Stage Images
+- Semetric Versioning of Images
+- Hardening and producing Secure Images
+- Understanding Open Container Initiative (OCI)
+- Working with S2I (OpenShift) vs Non S2I
+- Configuration Management and Version Control of Images within Artifactory
+- Building Images with Tekton for Cloud Native CI/CD
+- Testing Images and Containers for Performance
+- Integrating Databases into the PaaS
+_______________________________________________________________________________
+
 - Process of building an app (Openshift site)
 - Image management - use artifactory ( link to Artifactory landing page)
 - Link to Openshift Website Build Strategy (S2I, Binary, Docker)
