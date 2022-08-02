@@ -149,15 +149,15 @@ Occasionally, you'll have to write procedures. Find some of the most useful tips
 
 ## Metadata<a name="metadata"></a>
 
-Track the metadata in the fields of each page based on these descriptions:
+We use YAML frontmatter in our Markdown files to add metadata to our documents. These fields are necessary to generate pages properly. Track the metadata in the fields of each page based on these descriptions:
 
-- **title**: The title of the page. The _best_ title you can create.
+- **title**: The title of the page. The _best_ title you can create. Used to generate the `<title>` tag.
 
-- **slug**: This appends the URL, so it shows the path of the page on the Gatsby site. Ex: Using `slug: landing-page` will cause the page to appear on the Gatsby site at `/landing-page`.
+- **slug**: Used to generate the page path in the URL. Please use lowercase and separate words with `-`. Ex: Using `slug: landing-page` will cause the page to appear on the Gatsby site at `/landing-page/`.
 
-- **description**: A brief, precise description of what a reader will find on the page.
+- **description**: A brief, precise description of what a reader will find on the page. Used to generate the `<meta name="description">` tag.
 
-- **keywords**: These tags are important (see more below) to describe what the page is about. What kind of terms bring a reader here? What will they find?
+- **keywords**: These tags are important (see more below) to describe what the page is about. What kind of terms bring a reader here? What will they find? Used to generate the `<meta property="keywords">` tag.
 
 - **page_purpose**: A more in-depth description.
 
@@ -167,7 +167,7 @@ Track the metadata in the fields of each page based on these descriptions:
 
 - **content_owner**: The SME of the page. They are responsible for the factual accuracy of the content.
 
-- **sort_order**: Determines the order of the link to the page within the navigation menu.
+- **sort_order**: Used to determine the sort order of the page within a navigation menu category.
 
 ### Keywords, tags, and taxonomy
 
