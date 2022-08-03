@@ -20,7 +20,7 @@ sort_order: 1
 
 # About the design system
 
-The Platform Services design system helps developers and designers build better digital products and services. It’s a collection of digital resources and tools, including a library of reusable user interface components and design patterns. The system makes it easier and faster to build custom B.C. government websites and applications.
+The [BC Government Design System for Digital Services](https://developer.gov.bc.ca/Design-System/About-the-Design-System) helps developers and designers build better digital products and services. It’s a collection of digital resources and tools, including a library of reusable user interface components and design patterns. The system makes it easier and faster to build custom B.C. government websites and applications.
 
 ## On this page
 
@@ -60,6 +60,7 @@ You can contribute to the design system by doing any of the following:
 
 ---
 Related links:
+* [BC Design System](https://developer.gov.bc.ca/Design-System/About-the-Design-System)
 * [Joint Working Group](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/digital-delivery/web-property-process/web-property-applications)
 * [Propose a New Component](https://developer.gov.bc.ca/Design-System/Propose-a-New-Component)
 
