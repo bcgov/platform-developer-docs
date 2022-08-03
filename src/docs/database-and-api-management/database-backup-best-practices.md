@@ -55,7 +55,7 @@ A much more common type of database failure involves the partial corruption or l
 
 More frequent backups will reduce the risk of data loss, but will increase costs. Running backups requires considerable CPU and memory. Keeping more dump files will require more storage. It is up to your team to balance this risk vs cost appropriately for your application.
 
-You should also consider how often you'll perform a complete backup vs a delta backup. Most teams run delta backups every night, and one complete backup per week (usually run on the weekend). If you use this approach, recovering your database will require the complete backup from the weekend, plus each of the delta backups that have run since. In other words, you would need one complete backup file and up to six delta backup files.
+You should also consider how often you'll perform a complete backup versus a delta backup. Most teams run delta backups every night, and one complete backup per week (usually run on the weekend). If you use this approach, recovering your database will require the complete backup from the weekend, plus each of the delta backups that have run since. In other words, you would need one complete backup file and up to six delta backup files.
 
 It might seem like a good idea to just skip delta backups entirely, and to run only complete backups. This would increase your storage requirements significantly. Your backups would also take much longer to run. You can trust your delta backups as long as you store them safely and schedule them correctly. These are both topics that we will discuss in the next two questions!
 
