@@ -91,7 +91,7 @@ You should also consider costs and overhead that might be associated with your b
 
 The `nfs-file-backup` PVCs are backed up the storage administrators, and these backups are stored off-site. Recovering from a backup stored on an `nfs-file-backup` PVC is usually very fast, since the backups remain on the cluster. However, if you were unable to access the `nfs-file-backup` PVC (due to a significant problem with your namespace or the entire cluster), recovering from these off-site backups requires that you make a request to the storage administrators. This would increase your recovery time significantly. The `nfs-file-backup` PVCs are more expensive than S3 storage, but are easier to set-up.
 
-Your team should already have access to the `nfs-file-backup` storage option. All teams working on Openshift automatically have access to PVCs of this type.
+Your team should already have access to the `nfs-file-backup` storage option. All teams working on OpenShift automatically have access to PVCs of this type.
 
 The BC Government's S3 storage service is highly available and has disaster recovery features that are managed by its administrators. If you use an S3 bucket, you do not need to worry about off-site backups or restoring from off-site backups, as all of this is done for you. In the event of a major problem with the main S3 storage site, the software will recover automatically to another site with little-to-no downtime. This means that your backups will be easily accessible to you, even in the event of a major outage. However, because the backups are not stored on-cluster, they are vulnerable to network issues. S3 storage is much cheaper than `nfs-file-backup`, but is also more complex to set up.
 
