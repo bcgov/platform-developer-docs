@@ -37,11 +37,11 @@ We monitoring resources from cpu, ram, and storage.
 
 Get appication CPU usage by using:
 ```
-avg(avg_over_time(sysdig_container_cpu_cores_used{$__scope,kube_pod_label_app= "platsrv-registry", kube_statefulset_label_app = 'platsrv-registry'}[$__interval]))
+avg(avg_over_time(sysdig_container_cpu_cores_used{$__scope,kube_pod_label_app= "<YOUR_APP_LABEL_NAME>", kube_statefulset_label_app = '<YOUR_APP_LABEL_NAME>'}[$__interval]))
 ```
 Get appication requested CPU  by using:
 ```
-avg(avg_over_time(kube_pod_sysdig_resource_requests_cpu_cores{$__scope, kube_pod_label_app= "platsrv-registry", kube_statefulset_label_app = 'platsrv-registry'}[$__interval]))
+avg(avg_over_time(kube_pod_sysdig_resource_requests_cpu_cores{$__scope, kube_pod_label_app= "<YOUR_APP_LABEL_NAME>", kube_statefulset_label_app = '<YOUR_APP_LABEL_NAME>'}[$__interval]))
 ```
 
 
@@ -72,17 +72,17 @@ Similar as CPU, RAM monitoring will aslo focus on Limitation and Utilization.
 
 Application Memory Usage can be get by query:
 ```
-avg(avg_over_time(sysdig_container_memory_used_bytes{$__scope, kube_pod_label_app= "platsrv-registry", kube_statefulset_label_app = 'platsrv-registry'}[$__interval]))
+avg(avg_over_time(sysdig_container_memory_used_bytes{$__scope, kube_pod_label_app= "<YOUR_APP_LABEL_NAME>", kube_statefulset_label_app = '<YOUR_APP_LABEL_NAME>'}[$__interval]))
 ```
 
 Application requested Memory can be retrived by query: 
 
 ```
-avg(avg_over_time(kube_pod_sysdig_resource_requests_memory_bytes{$__scope, kube_pod_label_app= "platsrv-registry", kube_statefulset_label_app = 'platsrv-registry'}[$__interval]))
+avg(avg_over_time(kube_pod_sysdig_resource_requests_memory_bytes{$__scope, kube_pod_label_app= "<YOUR_APP_LABEL_NAME>", kube_statefulset_label_app = '<YOUR_APP_LABEL_NAME>'}[$__interval]))
 ```
 Utilization will be calculated by the `sysdig_container_memory_used_bytes`/`kube_resourcequota_sysdig_requests_memory_used`, to achieve 80% or above is still desired.
 ```
-sum(last_over_time(sysdig_container_memory_used_bytes{kube_cluster_name=~$Cluster,kube_namespace_name=~$Namespace, kube_pod_label_app= "platsrv-registry", kube_statefulset_label_app = 'platsrv-registry'}[$__interval])) / (sum(last_over_time(kube_pod_sysdig_resource_requests_memory_bytes{kube_cluster_name=~$Cluster,kube_namespace_name=~$Namespace, kube_pod_label_app= "platsrv-registry", kube_statefulset_label_app = 'platsrv-registry'}[$__interval]))) * 100
+sum(last_over_time(sysdig_container_memory_used_bytes{kube_cluster_name=~$Cluster,kube_namespace_name=~$Namespace, kube_pod_label_app= "<YOUR_APP_LABEL_NAME>", kube_statefulset_label_app = '<YOUR_APP_LABEL_NAME>'}[$__interval])) / (sum(last_over_time(kube_pod_sysdig_resource_requests_memory_bytes{kube_cluster_name=~$Cluster,kube_namespace_name=~$Namespace, kube_pod_label_app= "<YOUR_APP_LABEL_NAME>", kube_statefulset_label_app = '<YOUR_APP_LABEL_NAME>'}[$__interval]))) * 100
 ```
 
 Threhold for the namespace will be the ration between `sysdig_container_memory_used_bytes` and `kube_pod_sysdig_resource_limits_memory_bytes`
