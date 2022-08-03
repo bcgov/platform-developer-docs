@@ -1,6 +1,6 @@
 # Open-Source Database Technologies
 
-If you haven't yet taken a look at our [High Availability Database Clusters](high-availability-database-clusters.md) documentation, we recommend you check that out first. It contains an outline of how databases work on the Openshift platform and why it's important to use highly-available databases. All the technologies discussed here are highly-available.
+If you haven't yet taken a look at our [High Availability Database Clusters](high-availability-database-clusters.md) documentation, we recommend you check that out first. It contains an outline of how databases work on the OpenShift platform and why it's important to use highly-available databases. All the technologies discussed here are highly-available.
 ## Postgres
 
 [Postgres](https://www.postgresql.org/) is the most common database running on the Openshift platform. It is not highly available on its own, so teams use [Patroni](https://github.com/bcgov/patroni-postgres-container) or [CrunchyDB](https://github.com/bcgov/how-to-workshops/tree/master/crunchydb). These are both ways to deploy Postgres in a highly-available way. 
