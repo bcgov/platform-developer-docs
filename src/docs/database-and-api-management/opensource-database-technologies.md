@@ -21,7 +21,7 @@ You can find a Platform Team supported image for MongoDB at `artifacts.developer
 
 ## Redis
 
-[Redis](https://redis.io/) technically isn't a database at all. It's an in-memory datastore. Because it keeps the data in-memory, it is very fast but requires a lot of memory to run. It's best used for very small datasets that need to be accessed very quickly. Despite being an in-memory datastore, it's still able to store its data on-disk, which means you can use persistent volume claims (PVCs) on Openshift to ensure that the data will persist after the pod restarts. It also has fewer of the strict limitations placed on most databases.  
+[Redis](https://redis.io/) technically isn't a database at all. It's an in-memory datastore. Because it keeps the data in-memory, it is very fast but requires a lot of memory to run. It's best used for very small datasets that need to be accessed very quickly. Despite being an in-memory datastore, it's still able to store its data on-disk, which means you can use persistent volume claims (PVCs) on OpenShift to ensure that the data will persist after the pod restarts. It also has fewer of the strict limitations placed on most databases.  
 
 The Platform Team does not provide a supported image for Redis. 
 
