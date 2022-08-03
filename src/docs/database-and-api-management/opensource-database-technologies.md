@@ -1,3 +1,23 @@
+---
+title: Open-Source Database Technologies
+
+slug: opensource-database-technologies
+
+description: Describes various open-source database technologies used on the OpenShift platform
+
+keywords: database, open-source, data, OpenShift
+
+page_purpose: Informs readers of some of the database options available to them which do not require a license
+
+audience: developer, technical lead
+
+author: Cailey Jones
+
+content_owner: Cailey Jones
+
+sort_order: 2
+---
+
 # Open-Source Database Technologies
 
 If you haven't yet taken a look at our [High Availability Database Clusters](high-availability-database-clusters.md) documentation, we recommend you check that out first. It contains an outline of how databases work on the OpenShift platform and why it's important to use highly-available databases. All the technologies discussed here are highly-available.
@@ -21,7 +41,11 @@ You can find a Platform Team supported image for MongoDB at `artifacts.developer
 
 ## Redis
 
-[Redis](https://redis.io/) technically isn't a database at all. It's an in-memory datastore. Because it keeps the data in-memory, it is very fast but requires a lot of memory to run. It's best used for very small datasets that need to be accessed very quickly. Despite being an in-memory datastore, it's still able to store its data on-disk, which means you can use persistent volume claims (PVCs) on OpenShift to ensure that the data will persist after the pod restarts. It also has fewer of the strict limitations placed on most databases.  
+[Redis](https://redis.io/) technically isn't a database at all. It's an in-memory datastore that stores data in key-value pairs. 
 
-The Platform Team does not provide a supported image for Redis. 
+You can think of Redis data as being stored in data structures similar to those commonly found in many programming languages, like dictionaries. 
+
+Because it keeps the data in-memory, it is very fast but requires a lot of memory to run. It's best used for very small datasets that need to be accessed very quickly. Despite being an in-memory datastore, it's still able to store its data on-disk, which means you can use persistent volume claims (PVCs) on OpenShift to ensure that the data will persist after the pod restarts. It also has fewer of the strict limitations placed on most databases.  
+
+A useful Redis image is included in the `openshift` namespace by default. This image is provided by RedHat and is not supported by the Platform Team.
 

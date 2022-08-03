@@ -1,3 +1,23 @@
+---
+title: Database Backup Best Practices
+
+slug: database-backup-best-practices
+
+description: Step-by-step guide for creating a data recovery plan, and a list of tools to support implementation of that data recovery plan.
+
+keywords: database, data, OpenShift, high-availability, backup, recovery
+
+page_purpose: Helps teams to make informed decisions about their backup plans, and provides guidance on how to implement those plans
+
+audience: developer, technical lead
+
+author: Cailey Jones
+
+content_owner: Cailey Jones
+
+sort_order: 3
+---
+
 # Database Backup Best Practices
 
 If something bad happens to your database, you will want to recover your application's data quickly, easily, and with up-to-date data. With that goal in mind, your data recovery plan should include these three considerations:
@@ -158,6 +178,10 @@ The [backup-container](https://github.com/BCDevOps/backup-container) is a commun
 
 The backup-container provides automation for both backing up and recovering your database. It automatically recovers the dump file in to an empty database and runs some simple tests against it to ensure that the dump file is useable. 
 
+The backup container is already built to help you answer most of the questions in your backup and recovery plan. It contains default values that are appropriate for the majority of applications on the OpenShift platform. It's a great place to start if you're unsure of how to implement things like the number of backup files to keep.
+
+You should take a look at the [documentation for the backup container](https://github.com/BCDevOps/backup-container) to find out more about how it works and how to use it.
+
 The recovery plan questions at a glance:
 * **What data do you want to back up?** Everything.
 * **How often you want to back up your data?** Configurable, but daily by default.
@@ -173,6 +197,8 @@ The recovery plan questions at a glance:
 The CrunchyDB operator allows teams to set up a Postgres database quickly and easily, and includes functionality for automating both backup and recovery. If your team is using the CrunchyDB operator, you should use this option. If your team is not using the operator to run your database, this option is not available.
 
 You can read more in the official [documentation on CrunchyDB backup and restore functions](https://access.crunchydata.com/documentation/postgres-operator/4.1.2/overview/backup-restore-overview/). You'll also want to check out the [documentation on the PGO Scheduler](https://access.crunchydata.com/documentation/postgres-operator/4.1.2/overview/scheduler-overview/). The scheduler is used to automate the backup and restoration processes.
+
+The backup features of the CrunchyDB operator are powerful, but they still require that you set up a lot of your own automation. You'll be able to find some help on the #crunchydb channel on RocketChat. You can also take a look at the [backup-container](https://github.com/BCDevOps/backup-container). It contains scripts for automating the exact kinds of tasks you'll need to automate here, and can be used as a template.
 
 The recovery plan questions at a glance:
 * **What data do you want to back up?** Everything.

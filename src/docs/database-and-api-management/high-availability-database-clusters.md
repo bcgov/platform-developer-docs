@@ -1,3 +1,23 @@
+---
+title: High Availability Database Clusters
+
+slug: high-availability-database-clusters
+
+description: Describes high availability database clusters and why it's necessary to use them on OpenShift
+
+keywords: database, data, OpenShift, high-availability
+
+page_purpose: Provides information on what high availability database cluster are, how they work, and why they need to be used on a containerized platform like OpenShift
+
+audience: developer, technical lead
+
+author: Cailey Jones
+
+content_owner: Cailey Jones
+
+sort_order: 1
+---
+
 # High Availability Database Clusters
 
 Your database must be highly available (HA) to run well on the OpenShift Platform.
