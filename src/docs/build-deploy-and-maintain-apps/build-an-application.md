@@ -60,7 +60,7 @@ _______________________________________________________________________________
 - Automation technologies for CICD pipelines (link to CI/CD Pipeline automation) technologies page 
 - Design System for Front End
 - Open Source Database Technologies
-- 12 Factor App Development Principles (copy paste this content): https://developer.gov.bc.ca/12-Factor-Apps
+- 12 Factor App Development Principles (copy paste this content): https://developer.gov.bc.ca/12-Factor-Apps or perhaps better to link directly to the source here: https://12factor.net/
 ---
 Related links:
 * 
