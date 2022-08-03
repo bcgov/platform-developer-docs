@@ -63,7 +63,7 @@ It might seem like a good idea to just skip delta backups entirely, and to run o
 
 Most teams on the Openshift platform choose between two common defaults: an `nfs-file-backup` PVC (persistent volume claim), or an S3 bucket. You can find out more in 
 
-You should always store backup files in multiple physical locations. If some major catastrophe were to impact the physical space that houses the Openshift cluster (like a fire or flood), you will still be able to recover your data because you have made sure to store copies of your backups in another location.
+You should always store backup files in multiple physical locations. If some major catastrophe were to impact the physical space that houses the OpenShift cluster (like a fire or flood), you will still be able to recover your data because you have made sure to store copies of your backups in another location.
 
 You should also make sure that your backups can be accessed as quickly as possible. If your database is corrupted or unavailable, your application is suffering a full or partial outage. The longer it takes your team to recover your data, the longer the outage will be.
 
