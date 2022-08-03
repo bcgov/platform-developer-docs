@@ -17,7 +17,7 @@ Postgres is a [relational database](https://insightsoftware.com/blog/whats-the-d
 
 MongoDB is a [non-relational database](https://insightsoftware.com/blog/whats-the-difference-relational-vs-non-relational-databases/). If a relational database would better suit your application's needs, consider [Postgres](#postgres) instead.
 
-You can find Platform Team supported image for MongoDB at `artifacts.developer.gov.bc.ca/bcgov-docker-local/mongodb-36-ha`. 
+You can find a Platform Team supported image for MongoDB at `artifacts.developer.gov.bc.ca/bcgov-docker-local/mongodb-36-ha`. 
 
 ## Redis
 
