@@ -1,6 +1,6 @@
 # High Availability Database Clusters
 
-Your database must be highly available (HA) to run well on the Openshift Platform.
+Your database must be highly available (HA) to run well on the OpenShift Platform.
 
 The platform has a very high uptime. Maintenance can take place without requiring downtime and it can continue to function even in the event of a hardware failure.
 
