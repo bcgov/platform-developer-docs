@@ -47,7 +47,7 @@ Most database backup utilities default to backing up everything in your database
 
 [ ] **How often you want to back up your data?**
 
-A common default here is "daily." Most teams run database backups once per day.
+A common default here is 'daily'. Most teams run database backups once per day.
 
 A database failure is considered catastrophic if all the files related to the database become corrupted or otherwise unavailable. In such an event, you would need to recover your data from your most recent backup. This means that it's possible to lose all data more recent than your most recent backup. However, a failure of this severity is very rare.
 
