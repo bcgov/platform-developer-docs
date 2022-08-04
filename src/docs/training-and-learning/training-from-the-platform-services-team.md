@@ -48,6 +48,10 @@ If the courses fill up, email PlatformServicesTeam@gov.bc.ca - preference is giv
 
  - [OpenShift 101 Source to Image (S2I) Build](https://youtu.be/uTnBWfG-3Ns)
 
+ - [Getting started with the Sysdig and using it to monitor application resource utilization](https://youtu.be/wZrOdxlc_2c)
+
+ - [Horizontal Pod Autoscaling and Vertical Pod Autoscaling for Resource Management In OpenShift](https://youtu.be/nZMtJRQR3jY)
+
 ---
 Related links:
 - [External training resources](/training-external-resources/)
