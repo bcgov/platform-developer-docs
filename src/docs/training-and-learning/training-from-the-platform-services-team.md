@@ -30,6 +30,8 @@ If the courses fill up, email PlatformServicesTeam@gov.bc.ca - preference is giv
  
  ## Video resources <a name="video"></a>
 
+The videos below can also be found on this [youtube playlist](https://www.youtube.com/playlist?list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg)
+
  - [Reusable Front-End UI Components for BC Gov-themed web applications](https://www.youtube.com/watch?v=eFi5QJo2hgo&t=4s)
 
  - [PodDisruptionBudget Setting in Application Configuration in OpenShift](https://www.youtube.com/watch?v=0AGZ5no6-yo)
@@ -51,6 +53,22 @@ If the courses fill up, email PlatformServicesTeam@gov.bc.ca - preference is giv
  - [Getting started with the Sysdig and using it to monitor application resource utilization](https://youtu.be/wZrOdxlc_2c)
 
  - [Horizontal Pod Autoscaling and Vertical Pod Autoscaling for Resource Management In OpenShift](https://youtu.be/nZMtJRQR3jY)
+ 
+ - [App Migration from Openshift On-prem to ARO](https://youtu.be/i-auqEUcR5U)
+
+ - [Reusable Front-End REACT and Vue Component Library for BC Gov Web Apps](https://www.youtube.com/watch?v=eFi5QJo2hgo&list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg&index=2&t=21s)
+
+ - [Four Golden Signals for App Monitoring](https://youtu.be/W9xM5rd9CaQ)
+
+- [Namespace provisioning in Openshift 4 using GitOps approach](https://youtu.be/5aSon_DVbRM) 
+
+- [Openshift 4 Platform – New Project Registry Demo](https://youtu.be/HiHsd-Rg57E)
+
+- [Integrating with KeyCloak SSO and BC Services Card on Openshift](https://youtu.be/IGONgJkvwms)
+
+- [Using BC Service Card Self Service Onboarding Application](https://youtu.be/H2tKvOQ8x4k) 
+
+- [Devcontainers and why developers love them](https://youtu.be/g3fvDQCEaK0)
 
 ---
 Related links:
