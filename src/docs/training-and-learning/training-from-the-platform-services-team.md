@@ -30,7 +30,7 @@ If the courses fill up, email PlatformServicesTeam@gov.bc.ca - preference is giv
  
  ## Video resources <a name="video"></a>
 
-The videos below can also be found on this [youtube playlist](https://www.youtube.com/playlist?list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg)
+The videos below can also be found on this [YouTube playlist](https://www.youtube.com/playlist?list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg).
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
