@@ -66,6 +66,11 @@ const StyledSkipNavContent = styled(SkipNavContent)`
     @media (max-width: 767.98px) {
       margin: 15px;
     }
+
+    /* Wrapper div for iframes created by gatsby-remark-responsive-iframe */
+    div.gatsby-resp-iframe-wrapper {
+      margin-bottom: 1.25em;
+    }
   }
 `;
 
