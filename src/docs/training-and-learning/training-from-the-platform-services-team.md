@@ -32,6 +32,8 @@ If the courses fill up, email PlatformServicesTeam@gov.bc.ca - preference is giv
 
 The videos below can also be found on this [youtube playlist](https://www.youtube.com/playlist?list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg)
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
  - [Reusable Front-End UI Components for BC Gov-themed web applications](https://www.youtube.com/watch?v=eFi5QJo2hgo&t=4s)
 
  - [PodDisruptionBudget Setting in Application Configuration in OpenShift](https://www.youtube.com/watch?v=0AGZ5no6-yo)
