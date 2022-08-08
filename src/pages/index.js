@@ -177,7 +177,11 @@ const IndexPage = ({ location }) => {
                   App resiliency guidelines
                 </Link>
               </li>
-              <li>CI/CD Pipeline automation (coming soon)</li>
+              <li>
+                <Link to={"/ci-cd-pipeline-templates/"}>
+                  CI/CD Pipeline automation
+                </Link>
+              </li>
             </ul>
           </Card>
           <Card>
