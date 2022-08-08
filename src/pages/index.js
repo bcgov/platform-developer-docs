@@ -148,7 +148,11 @@ const IndexPage = ({ location }) => {
                   Artifactory Trusted Repository Service
                 </Link>
               </li>
-              <li>Security best practices for apps (coming soon)</li>
+              <li>
+                <Link to={"/security-best-practices-for-apps/"}>
+                  Security best practices for apps
+                </Link>
+              </li>
             </ul>
           </Card>
           <Card>
