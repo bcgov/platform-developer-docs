@@ -148,7 +148,11 @@ const IndexPage = ({ location }) => {
                   Artifactory Trusted Repository Service
                 </Link>
               </li>
-              <li>Security best practices for apps (coming soon)</li>
+              <li>
+                <Link to={"/security-best-practices-for-apps/"}>
+                  Security best practices for apps
+                </Link>
+              </li>
             </ul>
           </Card>
           <Card>
@@ -177,7 +181,11 @@ const IndexPage = ({ location }) => {
                   App resiliency guidelines
                 </Link>
               </li>
-              <li>CI/CD Pipeline automation (coming soon)</li>
+              <li>
+                <Link to={"/ci-cd-pipeline-templates/"}>
+                  CI/CD Pipeline automation
+                </Link>
+              </li>
             </ul>
           </Card>
           <Card>
@@ -200,8 +208,16 @@ const IndexPage = ({ location }) => {
           <Card>
             <h3>Database and API management</h3>
             <ul>
-              <li>Open source database technologies (coming soon)</li>
-              <li>High availability database clusters (coming soon)</li>
+              <li>
+                <Link to={"/opensource-database-technologies/"}>
+                  Open source database technologies
+                </Link>
+              </li>
+              <li>
+                <Link to={"/high-availability-database-clusters/"}>
+                  High availability database clusters
+                </Link>
+              </li>
               <li>API guidelines (coming soon)</li>
             </ul>
           </Card>
