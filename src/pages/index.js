@@ -200,8 +200,16 @@ const IndexPage = ({ location }) => {
           <Card>
             <h3>Database and API management</h3>
             <ul>
-              <li>Open source database technologies (coming soon)</li>
-              <li>High availability database clusters (coming soon)</li>
+              <li>
+                <Link to={"/opensource-database-technologies/"}>
+                  Open source database technologies
+                </Link>
+              </li>
+              <li>
+                <Link to={"/high-availability-database-clusters/"}>
+                  High availability database clusters
+                </Link>
+              </li>
               <li>API guidelines (coming soon)</li>
             </ul>
           </Card>
