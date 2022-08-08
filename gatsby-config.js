@@ -11,13 +11,13 @@ module.exports = {
   },
   trailingSlash: `always`,
   plugins: [
+    `gatsby-plugin-catch-links`,
     `gatsby-plugin-react-svg`,
     `gatsby-plugin-image`,
     `gatsby-plugin-sharp`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sitemap`,
     `gatsby-plugin-styled-components`,
-    `gatsby-plugin-catch-links`,
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {

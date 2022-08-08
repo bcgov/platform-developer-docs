@@ -51,6 +51,6 @@ So, what does this mean for your software architecture?
 
 ## High Availability Database Options
 
-For information on open-source and free options for highly-available database software, check out our [Open-Source Database Technologies](opensource-database-technologies.md) documentation.
+For information on open-source and free options for highly-available database software, check out our [Open-Source Database Technologies](/opensource-database-technologies) documentation.
 
-If your team is looking for a licensed database option to benefit from enterprise support, check out our [Licensed Database Products](licensed-database-products.md) documentation.
+If your team is looking for a licensed database option to benefit from enterprise support, check out our [Licensed Database Products](/licensed-database-products/) documentation.
