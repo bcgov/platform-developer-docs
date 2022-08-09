@@ -34,7 +34,7 @@ Once you've set up your recovery plan, you can apply it using one of the many [a
 
 Before we dig into the details of how to create and implement your data recovery plan, we should discuss a few terms and basics.
 
-For a quick introduction to databases in general, check out our [Open-Source Database Technologies](/opensource-database-technologies) document. This is a great spot to get a more detailed introduction to some database-specific terminology.
+For a quick introduction to databases in general, check out our [Open-Source Database Technologies](/opensource-database-technologies/) document. This is a great spot to get a more detailed introduction to some database-specific terminology.
 
 ### Database Dumps
 
