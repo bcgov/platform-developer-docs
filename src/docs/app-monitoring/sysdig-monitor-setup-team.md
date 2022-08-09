@@ -60,7 +60,7 @@ Below is a sample of the `sysdig-team` custom resource manifest.  We also provid
 
 
 **Name and Namespace:**
-The `sysdig-team` custom resource should be created in your Openshift project set `tools` namespace. Name it using the license plate number for your project set to make sure it's unique.
+The `sysdig-team` custom resource should be created in your OpenShift project set `tools` namespace. Name it using the license plate number for your project set to make sure it's unique.
 
 **Team Description:**
 Add a description for the sysdig team.

@@ -90,7 +90,7 @@ Related links:
 * [Application Resource Tuning](https://github.com/BCDevOps/developer-experience/blob/master/docs/resource-tuning-recommendations.md)
 * [Get Started with Sysdig Monitoring](https://developer.gov.bc.ca/OpenShift-User-Guide-to-Creating-and-Using-a-Sysdig-Team-for-Monitoring)
 * [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
-* [Openshift 4 Project Registry](https://registry.developer.gov.bc.ca/public-landing)
+* [OpenShift 4 Project Registry](https://registry.developer.gov.bc.ca/public-landing)
 * [OpenShift project resource quotas](/openshift-project-resource-quotas/)
 * [S3 Object Storage Service](https://github.com/BCDevOps/OpenShift4-Migration/issues/59)
 

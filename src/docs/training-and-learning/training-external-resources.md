@@ -3,11 +3,11 @@ title: External training resources
 
 slug: training-external-resources 
 
-description: Contains links to Openshift 101 resources that come from outside of the BC Government
+description: Contains links to OpenShift 101 resources that come from outside of the BC Government
 
 keywords: training, links, resources, openshift, onboarding
 
-page_purpose: To provide materials to aid building an understanding of Openshift and give additional context to other training 
+page_purpose: To provide materials to aid building an understanding of OpenShift and give additional context to other training 
 
 audience: developer, technical lead, product owner
 
@@ -23,7 +23,7 @@ The resources below are from sources outside of the B.C. government. They provid
 
 ## Websites:
 
-[What is RedHat Openshift?](https://cloud.redhat.com/learn/what-is-openshift) - by RedHat
+[What is RedHat OpenShift?](https://cloud.redhat.com/learn/what-is-openshift) - by RedHat
 
 [OpenShift Documentation](https://docs.openshift.com/container-platform/) - by RedHat
 

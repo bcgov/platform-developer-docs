@@ -41,7 +41,7 @@ Any product teams working in the Silver or Gold clusters on the BC Gov Private C
 Currently, the following technologies are available to product teams:
 - [ArgoCD](https://github.com/BCDevOps/openshift-wiki/blob/b1a4e6db91932fd3f29705a5c8ee44983abf8763/docs/ArgoCD/argocd_info.md)
 - [GitHub Actions](https://github.com/bcgov/security-pipeline-templates/tree/main/.github/workflows)
-- [Openshift Pipelines (Tekton)](https://github.com/bcgov/security-pipeline-templates/tree/main/tekton)
+- [OpenShift Pipelines (Tekton)](https://github.com/bcgov/security-pipeline-templates/tree/main/tekton)
 
 While Jenkins is technically supported on the platform, the Platform Services team highly discourages teams from using this technology as it's inefficient with the use of valuable platform resources. Over the next few months we'll be guiding the teams that currently use Jenkins to transition to a more modern and efficient technology.
 

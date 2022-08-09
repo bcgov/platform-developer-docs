@@ -20,7 +20,7 @@ sort_order: 1
 # Training from the Platform Services team
 Learning how to build in OpenShift can be hard. We’ve put together a number of resources to help.
 
-## Openshift 101 and 201 <a name="openshift101201"></a>
+## OpenShift 101 and 201 <a name="openshift101201"></a>
 
 The BC Gov Provate Cloud PaaS OpenShift 101 and 201 courses include a theory 'workshop' component, and a practical series of 'lab exercises'. OpenShift 101 is recommended for all new teams joining the platform. OpenShift 201 is a more advanced course for platform users who want to advance their skills in OpenShift.
 
@@ -56,17 +56,17 @@ The videos below can also be found on this [YouTube playlist](https://www.youtub
 
  - [Horizontal Pod Autoscaling and Vertical Pod Autoscaling for Resource Management In OpenShift](https://youtu.be/nZMtJRQR3jY)
  
- - [App Migration from Openshift On-prem to ARO](https://youtu.be/i-auqEUcR5U)
+ - [App Migration from OpenShift On-prem to ARO](https://youtu.be/i-auqEUcR5U)
 
  - [Reusable Front-End REACT and Vue Component Library for BC Gov Web Apps](https://www.youtube.com/watch?v=eFi5QJo2hgo&list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg&index=2&t=21s)
 
  - [Four Golden Signals for App Monitoring](https://youtu.be/W9xM5rd9CaQ)
 
-- [Namespace provisioning in Openshift 4 using GitOps approach](https://youtu.be/5aSon_DVbRM) 
+- [Namespace provisioning in OpenShift 4 using GitOps approach](https://youtu.be/5aSon_DVbRM) 
 
-- [Openshift 4 Platform – New Project Registry Demo](https://youtu.be/HiHsd-Rg57E)
+- [OpenShift 4 Platform – New Project Registry Demo](https://youtu.be/HiHsd-Rg57E)
 
-- [Integrating with KeyCloak SSO and BC Services Card on Openshift](https://youtu.be/IGONgJkvwms)
+- [Integrating with KeyCloak SSO and BC Services Card on OpenShift](https://youtu.be/IGONgJkvwms)
 
 - [Using BC Service Card Self Service Onboarding Application](https://youtu.be/H2tKvOQ8x4k) 
 

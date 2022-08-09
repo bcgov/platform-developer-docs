@@ -38,7 +38,7 @@ For a quick introduction to databases in general, check out our [Open-Source Dat
 
 ### Database Dumps
 
-Every major DBMS (database management software) comes with a **backup utility tool**. You can find the documentation for the most common DBMSes on the Openshift Platform below:
+Every major DBMS (database management software) comes with a **backup utility tool**. You can find the documentation for the most common DBMSes on the OpenShift Platform below:
 * Postgres: [pg_dump](https://www.postgresql.org/docs/current/app-pgdump.html)
 * MongoDB: [mongodump](https://www.mongodb.com/docs/database-tools/mongodump/)
 * MySQL: [mysqldump](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
