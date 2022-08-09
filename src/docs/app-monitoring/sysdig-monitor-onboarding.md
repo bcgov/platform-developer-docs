@@ -16,14 +16,6 @@ author: Shelly Han
 content_owner: Shelly Han
 
 sort_order: 1
-
-# This is to be removed when moving out of devhub
-tags:
-- Sysdig
-- monitoring
-- openshift monitoring
-- developer guide
-- team guide
 ---
 
 # Onboarding to application monitoring with Sysdig
