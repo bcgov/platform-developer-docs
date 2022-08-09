@@ -101,6 +101,7 @@ RUN INSTALL_PKGS="space separated list of packages" && \
 ```
 
 ---
+
 Related links:
 
 - [OCP 4.9 Docs - Adding subscription entitlements as a build secret](https://docs.openshift.com/container-platform/4.9/cicd/builds/running-entitled-builds.html#builds-source-secrets-entitlements_running-entitled-builds)
