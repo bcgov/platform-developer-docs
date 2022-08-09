@@ -24,7 +24,7 @@ Teams can log in to OpenShift with either a GitHub ID or IDIR. IDIR authenticati
 
 You have to log in with IDIR into the OpenShift console before you can associate any role bindings with the IDIR account.
 
-When you log in to the Silver cluster Openshift console, you have the option of using GitHub or your Azure AD IDIR.
+When you log in to the Silver cluster OpenShift console, you have the option of using GitHub or your Azure AD IDIR.
 
 ![Image of authorization options](https://user-images.githubusercontent.com/53879638/146621070-6d473a3d-289c-400e-86a7-947732441fac.png)
 
