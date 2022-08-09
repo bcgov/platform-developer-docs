@@ -1,5 +1,5 @@
 ---
-title: High Availability Database Clusters
+title: High availability database clusters
 
 slug: high-availability-database-clusters
 
@@ -18,7 +18,7 @@ content_owner: Cailey Jones
 sort_order: 1
 ---
 
-# High Availability Database Clusters
+# High availability database clusters
 
 Your database must be highly available (HA) to run well on the OpenShift Platform.
 

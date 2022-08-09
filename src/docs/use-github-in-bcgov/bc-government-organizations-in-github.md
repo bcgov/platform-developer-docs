@@ -18,7 +18,7 @@ content_owner: Olena Mitovska
 sort_order: 1
 ---
 
-# B.C. government organizations in Github
+# BC Government organizations in Github
 
 BC Gov Private Cloud PaaS product teams use <a href="https://github.com" target="_blank">GitHub</a> to host open code and repositories. Using GitHub you can:
 * Share and control code versions

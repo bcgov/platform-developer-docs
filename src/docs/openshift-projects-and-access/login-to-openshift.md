@@ -1,5 +1,5 @@
 ---
-title: Login to OpenShift
+title: Log in to OpenShift
 
 slug: login-to-openshift
 

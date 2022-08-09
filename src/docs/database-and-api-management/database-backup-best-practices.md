@@ -1,5 +1,5 @@
 ---
-title: Database Backup Best Practices
+title: Database backup best practices
 
 slug: database-backup-best-practices
 
@@ -18,7 +18,7 @@ content_owner: Cailey Jones
 sort_order: 3
 ---
 
-# Database Backup Best Practices
+# Database backup best practices
 
 If something bad happens to your database, you will want to recover your application's data quickly, easily, and with up-to-date data. With that goal in mind, your data recovery plan should include these three considerations:
 

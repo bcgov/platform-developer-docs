@@ -18,7 +18,7 @@ content_owner: Shelly Han
 sort_order: 4
 ---
 
-# Advanced Usage in Sysdig Monitor
+# Set up advanced metrics in Sysdig Monitor
 
 ## On this page
 - [Use Service Discovery to import application metrics endpoints](#sysdig-service-discovery)

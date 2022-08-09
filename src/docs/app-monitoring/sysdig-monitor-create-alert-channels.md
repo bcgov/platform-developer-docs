@@ -18,7 +18,8 @@ content_owner: Shelly Han
 sort_order: 3
 ---
 
-# Create alerts in Sysdig Monitor
+# Create alerts and notifications in Sysdig Monitor
+
 You can create alerts based on monitoring dashboards in Sysdig Monitor, that notify your team when something needs attention.
 
 Here are some steps on how to setup the Sysdig alerts with [Rocket.Chat](https://chat.developer.gov.bc.ca/).

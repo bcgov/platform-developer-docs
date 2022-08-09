@@ -18,7 +18,7 @@ content_owner: Shelly Han
 sort_order: 8
 ---
 
-# Start working in the BC Gov GitHub organization
+# Start working in the BCGov GitHub organization
 
 If you plan to share code developed by or for the B.C. government, [evaluate the content](/evaluate-open-source-content/) and get approval from your deputy minister. Deputy ministers may choose to delegate this authority to ministry chief information officers (CIOs).
 

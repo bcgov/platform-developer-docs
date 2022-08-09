@@ -18,7 +18,7 @@ content_owner: Olena Mitovska
 sort_order: 4
 ---
 
-# GitHub Enterprise user licences in the B.C. government
+# GitHub Enterprise user licences in the BC government
 
 All code by B.C. government teams should be open source by default. If you have closed-source code and still want to use GitHub, you can work temporarily in a private repository under the GitHub Enterprise licence.
 

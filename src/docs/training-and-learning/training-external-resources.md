@@ -1,5 +1,5 @@
 ---
-title: External Training Resources
+title: External training resources
 
 slug: training-external-resources 
 

@@ -1,5 +1,5 @@
 ---
-title: Vault Secrets Management
+title: Vault secrets management
 
 slug: vault-secrets-management-service
 
@@ -16,7 +16,7 @@ author: Matt Spencer
 content_owner: Cailey Jones
 ---
 
-# Vault Secrets Management
+# Vault secrets management
 
 The B.C. government Vault Secrets Management tool, based on the HashiCorp Vault product, provides a tool for securely accessing secrets. A secret is anything that you want to tightly control access to, such as API keys, passwords, or certificates. Vault provides a unified interface to any secret, while providing tight access control and recording a detailed audit log.
 

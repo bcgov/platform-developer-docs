@@ -1,5 +1,5 @@
 ---
-title: App Resiliency Guidelines
+title: Application resiliency guidelines
 
 slug: app-resiliency-guidelines
 
