@@ -46,7 +46,7 @@ const IndexPage = ({ location }) => {
         <h1>Welcome to the {title || `Title`}</h1>
         <Grid className="col-2">
           <Card>
-            <h2>Get Started</h2>
+            <h2>Get started</h2>
             <p>
               Start here for the first steps on working in our OpenShift
               environment.
@@ -70,7 +70,7 @@ const IndexPage = ({ location }) => {
             </ul>
           </Card>
           <Card>
-            <h2>Build, Deploy and Maintain Apps</h2>
+            <h2>Build, deploy and maintain apps</h2>
             <p>Best practices on the platform.</p>
             <ul>
               <li>Build an application (coming soon)</li>
@@ -80,10 +80,10 @@ const IndexPage = ({ location }) => {
             </ul>
           </Card>
         </Grid>
-        <h2>Training and Learning</h2>
+        <h2>Training and learning</h2>
         <Grid className="col-3">
           <Card>
-            <h3>Free OpenShift Training</h3>
+            <h3>Free OpenShift training</h3>
             <p>
               Read about{" "}
               <a
@@ -140,12 +140,12 @@ const IndexPage = ({ location }) => {
               <li>STRA and PIA for Private Cloud Platform (coming soon)</li>
               <li>
                 <Link to={"/vault-secrets-management-service/"}>
-                  Vault Secrets Management Service
+                  Vault secrets management service
                 </Link>
               </li>
               <li>
                 <Link to={"/image-artifact-management-with-artifactory/"}>
-                  Artifactory Trusted Repository Service
+                  Artifactory trusted repository service
                 </Link>
               </li>
               <li>
@@ -160,7 +160,7 @@ const IndexPage = ({ location }) => {
             <ul>
               <li>
                 <Link to={"/bc-government-organizations-in-github/"}>
-                  BC Government Organizations in Github
+                  BC Government organizations in GitHub
                 </Link>
               </li>
               <li>
@@ -183,13 +183,13 @@ const IndexPage = ({ location }) => {
               </li>
               <li>
                 <Link to={"/ci-cd-pipeline-templates/"}>
-                  CI/CD Pipeline automation
+                  CI/CD pipeline automation
                 </Link>
               </li>
             </ul>
           </Card>
           <Card>
-            <h3>App Monitoring</h3>
+            <h3>App monitoring</h3>
             <ul>
               <li>
                 <Link to={"/sysdig-monitor-setup-team/"}>
@@ -202,7 +202,7 @@ const IndexPage = ({ location }) => {
                 </Link>
               </li>
               <li>Four gold signals for app monitoring (coming soon)</li>
-              <li>App Logging (coming soon)</li>
+              <li>App logging (coming soon)</li>
             </ul>
           </Card>
           <Card>
@@ -252,7 +252,7 @@ const IndexPage = ({ location }) => {
         <h2>Get support on the platform</h2>
         <Grid className="col-3">
           <Card>
-            <h3>Report a Platform Incident</h3>
+            <h3>Report a platform incident</h3>
             <p>
               If you think an incident has occurred with our services, you can
               report it by{" "}
@@ -265,7 +265,7 @@ const IndexPage = ({ location }) => {
             </p>
           </Card>
           <Card>
-            <h3>Get Help or Support</h3>
+            <h3>Get help or support</h3>
             <p>
               We follow a community-based support model. You can use our
               self-serve resources or ask for help from the platform community.{" "}
@@ -278,7 +278,7 @@ const IndexPage = ({ location }) => {
             </p>
           </Card>
           <Card>
-            <h3>DevOps Requests</h3>
+            <h3>DevOps requests</h3>
             <p>
               Not sure where to go to get things done on the platform? We've
               outlined common platform tasks and links to additional
