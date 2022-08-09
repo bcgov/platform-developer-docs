@@ -33,7 +33,7 @@ Postgres is a [relational database](https://insightsoftware.com/blog/whats-the-d
 
 ## MongoDB
 
-[MongoDB](https://www.mongodb.com/) is the next most common database. It has built-in HA capabilities, and you can find an [example of how to deploy a Mongo replica set on Github](https://github.com/bcgov/mongodb-replicaset-container). 
+[MongoDB](https://www.mongodb.com/) is the next most common database. It has built-in HA capabilities, and you can find an [example of how to deploy a Mongo replica set on GitHub](https://github.com/bcgov/mongodb-replicaset-container). 
 
 MongoDB is a [non-relational database](https://insightsoftware.com/blog/whats-the-difference-relational-vs-non-relational-databases/). If a relational database would better suit your application's needs, consider [Postgres](#postgres) instead.
 

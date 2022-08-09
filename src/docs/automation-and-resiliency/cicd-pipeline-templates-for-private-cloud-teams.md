@@ -49,7 +49,7 @@ While Jenkins is technically supported on the platform, the Platform Services te
 
 Each team should make the final decision on which technology they want to use and may depend on their experience and comfort with each tool. The Platform Services team recommends the following, depending on your team's level of experience:
 
-- If your team has limited experience with automation pipelines, the combination of Github Actions for builds and ArgoCD for deployments.
+- If your team has limited experience with automation pipelines, the combination of GitHub Actions for builds and ArgoCD for deployments.
 
 - For more mature teams with previous automation experience, OpenShift Pipelines is a good choice.
 

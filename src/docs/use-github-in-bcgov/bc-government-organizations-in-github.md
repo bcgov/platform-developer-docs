@@ -1,5 +1,5 @@
 ---
-title: BC Government organizations in Github
+title: BC Government organizations in GitHub
 
 slug: bc-government-organizations-in-github
 
@@ -18,7 +18,7 @@ content_owner: Olena Mitovska
 sort_order: 1
 ---
 
-# BC Government organizations in Github
+# BC Government organizations in GitHub
 
 BC Gov Private Cloud PaaS product teams use <a href="https://github.com" target="_blank">GitHub</a> to host open code and repositories. Using GitHub you can:
 * Share and control code versions
@@ -27,7 +27,7 @@ BC Gov Private Cloud PaaS product teams use <a href="https://github.com" target=
 * Collaborate with the open-source community
 * Integrate automation tools
 
-The main organization the B.C. government owns in Github is [bcgov](https://github.com/bcgov) where we store all open-source code developed by B.C. government teams. The `bcgov` organization includes close to 1000 repositories maintained by the B.C. government developer community.
+The main organization the B.C. government owns in GitHub is [bcgov](https://github.com/bcgov) where we store all open-source code developed by B.C. government teams. The `bcgov` organization includes close to 1000 repositories maintained by the B.C. government developer community.
 
 ## On this page
 - [Working in the open](#work-in-open)

@@ -5,7 +5,7 @@ slug: github-enterprise-user-licenses-bc-government
 
 description: Describes the benefits of GitHub Enterprise user licences and how to access them.
 
-keywords: GitHub, Github Enterprise, closed source, private repository, private organization, licence, license, user licence, user license
+keywords: GitHub, GitHub Enterprise, closed source, private repository, private organization, licence, license, user licence, user license
 
 page_purpose: Discusses why you might want to use a GitHub Enterprise user licence and how to request, access, and pay for the users.
 

@@ -64,7 +64,7 @@ To get a list of the users who have access to a namespace, and in what role, a p
 ```
 oc get rolebindings
 ```
-For more information on adding users, you can watch [Using Just Ask! to gain access into the BCGov or BCDevops Github Organizations](https://www.youtube.com/watch?v=IvdPyx2-qm0) or use [the Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/).
+For more information on adding users, you can watch [Using Just Ask! to gain access into the BCGov or BCDevops GitHub Organizations](https://www.youtube.com/watch?v=IvdPyx2-qm0) or use [the Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/).
 
 ## Request platform access<a name="request-access"></a>
 
@@ -83,9 +83,9 @@ Follow these best practices when you grant namespace access to a user:
 
 ---
 Related links:
-* [BC Government organizations in Github](/bc-government-organizations-in-github/)
+* [BC Government organizations in GitHub](/bc-government-organizations-in-github/)
 * [Provision a new project set](/provision-new-openshift-project/)
-* [Using Just Ask! to gain access into the BCGov or BCDevops Github Organizations](https://www.youtube.com/watch?v=IvdPyx2-qm0)
+* [Using Just Ask! to gain access into the BCGov or BCDevops GitHub Organizations](https://www.youtube.com/watch?v=IvdPyx2-qm0)
 * [Add someone to the BC Government GitHub Org](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/)
 * [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.9/authentication/using-rbac.html)
 
