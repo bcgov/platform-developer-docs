@@ -22,7 +22,14 @@ sort_order: 10
 
 Image streams provide a means of creating and updating container images in an on-going way. As improvements are made to an image, tags can be used to assign new version numbers and keep track of changes.
 
-## Component parts
+## On this page
+- [Component parts](#component-parts)
+- [Getting info](#getting-info)
+- [Make use of tags](#make-use-of-tags)
+- [Smaller is better](#smaller-is-better)
+- [Usage notifications](#usage-notifications)
+
+## Component parts <a name="component-parts"></a>
 
 ### Image
 
@@ -38,7 +45,7 @@ There is a pruning script that runs in the evenings. It will remove all but the 
 
 An image stream contains multiple tags.
 
-## Getting Info
+## Getting Info <a name="getting-info"></a>
 
 The `oc describe ImageStream` command will provide a lot of info about the images, tags, and streams in your namespace.
 
@@ -92,13 +99,13 @@ Tags:                   9
 
 Here we can see the `python` image stream has several tags. In the `3.8` tag, there are a couple revisions of the image.
 
-## Make use of Tags
+## Make use of Tags <a name="make-use-of-tags"></a>
 
 The tag `latest` is commonly used for the most recent build of an image, and likely changes frequently. For production workloads you should rarely use the `latest` tag of an imagestream as it has a high chance of changing unexpectedly and breaking production. Instead, build and push to `latest` then tag that revision to something like `test` for testing and `prod` for production. This lets you test and promote an image in a controlled way.
 
 On the opposite end, be sure to not make too many tags. Some teams create a new tag for each pull request in their continuous integration process. But this can leave a lot of unneeded images in the registry. Be sure to clean up any unused tags after.
 
-## Smaller is better
+## Smaller is better <a name="smaller-is-better"></a>
 
 Since images need to be copied to the host to run the pod and cached there, having smaller images will improve the startup time of the pods.
 
@@ -138,7 +145,7 @@ Exposes Ports:  8080/tcp
 ...
 ```
 
-## Usage Notifications
+## Usage Notifications <a name="usage-notifications"></a>
 
 The platform will now be sending a weekly email to teams that are using too much space on the registry. The image registry is a shared service and overuse of it can lead to other teams being unable to push their builds, or to the platform team having to buy more storage space.
 
