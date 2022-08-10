@@ -30,13 +30,13 @@ Don't forget: **Automate Everything!** You should automate every part of your da
 
 Once you've set up your recovery plan, you can apply it using one of the many [automated backup solutions](#automated-backup-solutions) popular on the platform. Remember that you are not required to use the ones listed here. If it suits your needs to use something else or to create your own, feel free! But remember: it's easier to ask for help if there are lots of other people using the same tool!
 
-## Database Backup Basics
+## Database backup basics
 
 Before we dig into the details of how to create and implement your data recovery plan, we should discuss a few terms and basics.
 
 For a quick introduction to databases in general, check out our [Open-Source Database Technologies](/opensource-database-technologies/) document. This is a great spot to get a more detailed introduction to some database-specific terminology.
 
-### Database Dumps
+### Database dumps
 
 Every major DBMS (database management software) comes with a **backup utility tool**. You can find the documentation for the most common DBMSes on the OpenShift Platform below:
 * Postgres: [pg_dump](https://www.postgresql.org/docs/current/app-pgdump.html)
@@ -47,13 +47,13 @@ Running one of these tools will produce a file (usually called a "database dump"
 
 You _must_ use these utility tools for your backups. Don't try to backup your database by saving the datafiles directly. If you do, your data may become corrupted. Any trusted backup automation tool (including those mentioned in this document) will use these utility tools.
 
-### Backup Types
+### Backup types
 
 A **complete backup** is a backup file which contains everything required for a database to be recovered completely from scratch. These are larger than other types of backup, but they're more reliable because they don't depend on anything but a single dump file to work.
 
 A **delta backup** is a record of changes to the database since the last backup. Delta backups are smaller than complete backups. If you need to recover your database with a delta backup file, you'll need the most recent complete backup _and_ all of the delta backups that have taken place since. Deltas are a great way to reduce backup storage requirements. They're also very reliable as long as you can ensure the availability of the other files that would be necessary to restore your database.
 
-## Backing Up Your Data
+## Backing up your data
 
 This first part of your data recovery plan should answer the following questions:
 
@@ -120,7 +120,7 @@ The second problem can remain hidden until you need the dump file. By then, it's
 
 Both the backup and recovery test should send notifications to your team. The Platform Team recommends that you send notifications of both successes and failures. That way, if some failure prevents a notification from being sent, you can still tell there's a problem. Most teams set up a Rocketchat webhook to recieve the status information of both the backup and recovery processes. Teams usually set up the webhook to post these messages to a private channel for the team.
 
-## Recovering Your Data
+## Recovering your data
 
 This second part of your data recovery plan should answer the following questions:
 
@@ -149,7 +149,7 @@ Your team should outline the full recovery process with special focus on those s
 
 Your team should schedule regular tests for each of the recovery procedures you develop.
 
-## Monitoring Your Database
+## Monitoring your database
 
 The best way to ensure the integrity of your data is to prevent problems from occurring in the first place. Monitoring your database status can help you to prevent issues that might otherwise require database recovery.
 
@@ -166,7 +166,7 @@ Keep in mind:
 * many DBMS will prevent your database from starting if the storage is too full. This is to prevent data corruption. You should set your threshold well below this point for your DBMS. For Patroni, this is 90%, so we recommend a threshold of 80 or below.
 * if you are close to the maximum quota for your namespace, you may not be able to increase your storage space or CPU/memory to prevent failure while you investigate the root cause. Set your thresholds accordingly.
 
-## Automated Backup Solutions
+## Automated backup solutions
 
 So now you have an idea of what you hope to accomplish with your backup and recovery process. How do you implement this plan? There are many requirements, and building your own automation for all of this seems like a lot of work.
 
@@ -192,7 +192,7 @@ The recovery plan questions at a glance:
 * **What does the recovery process look like?** The built-in recovery process only recovers the dump file into an empty database. If you wish to use point-in-time recovery, your team will need to build appropriate automation for that. You will also need to cover any additional considerations for connecting your application to your recovered database or the recreation of other necessary objects.
 * **How will your database be monitored?** Your team will need to set up their own monitoring.
 
-### CrunchyDB Operator
+### CrunchyDB operator
 
 The CrunchyDB operator allows teams to set up a Postgres database quickly and easily, and includes functionality for automating both backup and recovery. If your team is using the CrunchyDB operator, you should use this option. If your team is not using the operator to run your database, this option is not available.
 

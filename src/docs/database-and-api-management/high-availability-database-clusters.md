@@ -26,7 +26,7 @@ The platform has a very high uptime. Maintenance can take place without requirin
 
 But, you must design your applications to take advantage of this high up-time. For databases, this means that they *must* be highly-available. If you try to run a database that is not highly-available, your database may suffer outages and data corruption even more often than it would on traditional infrastructure.
 
-## Database Basics
+## Database basics
 
 Before we talk a little more about highly-available databases, we should cover some key information about databases in general and common terms that you'll see both in these documents and in database-related documentation elsewhere.
 
@@ -34,7 +34,7 @@ Before we talk a little more about highly-available databases, we should cover s
 
 **Database High Availability Manager** (or DB HA Manager) refers to the software that allows your database to be highly-available. Sometimes, the DB HA Manager is built-in to the DBMS: MongoDB has a built-in DB HA Manager. In other cases, the DB HA Manager is separate: for example, both Patroni and the CrunchyDB Operator are DB HA Managers for Postgres. 
 
-## Highly-Available Databases are Different
+## Highly-available databases are different
 
 A typical highly-available deployment has 3+ pods. All the pods are running the same application. Traffic can connect to any one of them, and they all share the same storage. If any pod goes down, the other two are there to run the application while another pod spins up to replace the one that failed. It doesn't matter which pod is which, because they're all doing the same stateless things.
 
@@ -49,7 +49,7 @@ So, what does this mean for your software architecture?
 * The primary instance will have more load than the secondary instances. Since any member of the cluster can be elected as primary, you need provide all instances with enough compute resources to act as the primary instance.
 * Your application must be able to handle connecting to a new instance at any time.
 
-## High Availability Database Options
+## High availability database options
 
 For information on open-source and free options for highly-available database software, check out our [Open-Source Database Technologies](/opensource-database-technologies/) documentation.
 
