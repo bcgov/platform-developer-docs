@@ -18,7 +18,7 @@ content_owner: Cailey Jones
 sort_order: 7
 ---
 
-# Prepare to load test an application in OpenShift
+# Prepare to load test an application on OpenShift
 Follow these guidelines to load test ministry applications hosted in the Silver and Gold cluster of the OpenShift 4 platform.
 
 ## Load testing requirements

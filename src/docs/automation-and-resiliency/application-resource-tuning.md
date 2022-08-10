@@ -1,5 +1,5 @@
 ---
-title: Application Resource Tuning  
+title: Application resource tuning
 
 slug: application-resource-tuning
 

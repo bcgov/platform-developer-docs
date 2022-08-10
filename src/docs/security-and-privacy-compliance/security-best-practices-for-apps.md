@@ -1,5 +1,5 @@
 ---
-title: Security Best Practices For Apps
+title: Security best practices for apps
 
 slug: security-best-practices-for-apps
 
@@ -17,7 +17,7 @@ content_owner: Nick Corcoran
 ---
 <!-- Draft in progress -->
 
-# Security best practices for applications
+# Security best practices for apps
 
 You should take particular care to adhere to security and privacy requirements when working on content in an open environment such as GitHub. The Office of the Chief Information Officer (OCIO) provides the IM/IT Standards you are required to follow, and the content you work with on GitHub must conform with the requirements of being labeled as "Public" using the OCIO Information Security Classification Framework.
 
@@ -29,7 +29,7 @@ You should take particular care to adhere to security and privacy requirements w
 - [Secure Coding Guideline](#secure-coding-guideline)
 - [Application Security Self-Assessment](#application-security-self-assessment)
 
-## Open Development Basics 
+## Open development basics
 
 There is a [healthy debate](http://www.dwheeler.com/secure-programs/Secure-Programs-HOWTO/open-source-security.html) in the security community around the use and development of operation support system (OSS) applications and the implications of exposing the code publicly versus keeping it behind closed doors. The debate boils down to the fact that there is no conclusive evidence that deems either open or closed source as inherently more secure. It all comes down to the people (the coders) and their willingness to build security into their code. The one thing that coding in the open does for security is that the public scrutiny of a coders work is proven as a motivating factor for "doing it right" from the start.
 

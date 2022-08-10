@@ -97,6 +97,8 @@ Use a descriptive and specific title. What does the reader do with the page? Wha
 
 Good titles help with findability and usability.
 
+[Use sentence case](https://www2.gov.bc.ca/gov/content?id=8E987979EA6842D7BDE3EDEEA9331787#case) for titles and headings.
+
 ### Images
 Use images sparingly. If you need to use images, make sure they are supplementary to the writing. Don't rely on them to explain a process.
 

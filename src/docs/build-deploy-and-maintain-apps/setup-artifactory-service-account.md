@@ -1,5 +1,5 @@
 ---
-title: Setup an Artifactory service account
+title: Set up an Artifactory service account
 
 slug: setup-artifactory-service-account
 
@@ -18,7 +18,7 @@ content_owner: Cailey Jones
 sort_order: 9
 ---
 
-# Setup an Artifactory service account
+# Set up an Artifactory service account
 
 Artifactory access is controlled through Artifactory service accounts. Service accounts are meant to be shared by teams and used by automation tools like pipelines.
 

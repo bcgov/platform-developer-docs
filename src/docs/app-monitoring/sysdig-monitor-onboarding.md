@@ -16,17 +16,9 @@ author: Shelly Han
 content_owner: Shelly Han
 
 sort_order: 1
-
-# This is to be removed when moving out of devhub
-tags:
-- Sysdig
-- monitoring
-- openshift monitoring
-- developer guide
-- team guide
 ---
 
-# Start monitoring with Sysdig
+# Onboarding to application monitoring with Sysdig
 
 [Sysdig Monitor](https://sysdig.com/products/monitor/) provides system-level monitoring of Kubernetes hosts and the ability to create custom dashboards, alerts and operational-level captures to diagnose application or platform-level issues.
 

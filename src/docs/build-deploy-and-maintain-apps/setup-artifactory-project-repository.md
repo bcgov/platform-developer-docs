@@ -1,5 +1,5 @@
 ---
-title: Setup an Artifactory project and repository
+title: Set up an Artifactory project and repository
 
 slug: setup-artifactory-project-repository
 

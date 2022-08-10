@@ -18,7 +18,7 @@ content_owner: Ian Watts
 sort_order: 4
 ---
 
-# Set up TCP connectivity on OpenShift
+# Set up TCP connectivity on the Private Cloud OpenShift Platform
 Use this page to learn how to configure direct [transmission control protocol (TCP)](https://en.wikipedia.org/wiki/Transmission_Control_Protocol) access to services on the BC Gov Private Cloud PaaS using the Porter Operator.
 
 ## On this page

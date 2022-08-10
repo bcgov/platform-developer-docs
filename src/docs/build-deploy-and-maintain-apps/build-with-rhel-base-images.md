@@ -1,5 +1,5 @@
 ---
-title: Build with RHEL Base Images
+title: Build with RHEL base images
 
 slug: build-with-rhel-base-images
 
@@ -18,7 +18,7 @@ content_owner: Matt Spencer
 sort_order: 10
 ---
 
-# Build with RHEL Base Images
+# Build with RHEL base images
 
 If you wish to use a [Red Hat Enterprise Linux (RHEL)](https://catalog.redhat.com/software/containers/search?p=1&architecture=amd64&vendor_name=Red%20Hat%7CRed%20Hat%2C%20Inc.) based image to build upon, you will need to take some extra steps to get access to the RHEL Subscription included in the OpenShift Platform.
 
@@ -101,6 +101,7 @@ RUN INSTALL_PKGS="space separated list of packages" && \
 ```
 
 ---
+
 Related links:
 
 - [OCP 4.9 Docs - Adding subscription entitlements as a build secret](https://docs.openshift.com/container-platform/4.9/cicd/builds/running-entitled-builds.html#builds-source-secrets-entitlements_running-entitled-builds)

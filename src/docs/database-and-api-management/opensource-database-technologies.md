@@ -1,5 +1,5 @@
 ---
-title: Open-Source Database Technologies
+title: Open-source database technologies
 
 slug: opensource-database-technologies
 
@@ -18,7 +18,7 @@ content_owner: Cailey Jones
 sort_order: 2
 ---
 
-# Open-Source Database Technologies
+# Open-source database technologies
 
 If you haven't yet taken a look at our [High Availability Database Clusters](/high-availability-database-clusters/) documentation, we recommend you check that out first. It contains an outline of how databases work on the OpenShift platform and why it's important to use highly-available databases. All the technologies discussed here are highly-available.
 ## Postgres
@@ -33,7 +33,7 @@ Postgres is a [relational database](https://insightsoftware.com/blog/whats-the-d
 
 ## MongoDB
 
-[MongoDB](https://www.mongodb.com/) is the next most common database. It has built-in HA capabilities, and you can find an [example of how to deploy a Mongo replica set on Github](https://github.com/bcgov/mongodb-replicaset-container). 
+[MongoDB](https://www.mongodb.com/) is the next most common database. It has built-in HA capabilities, and you can find an [example of how to deploy a Mongo replica set on GitHub](https://github.com/bcgov/mongodb-replicaset-container). 
 
 MongoDB is a [non-relational database](https://insightsoftware.com/blog/whats-the-difference-relational-vs-non-relational-databases/). If a relational database would better suit your application's needs, consider [Postgres](#postgres) instead.
 
