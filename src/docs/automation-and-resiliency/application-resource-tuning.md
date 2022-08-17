@@ -33,6 +33,11 @@ Resource requests are guaranteed and reserved for the pod. _Pod scheduling decis
 **Resource limits**  
 Resource limits set an upper limit of what a pod can burst to if the resources are available on the node.
 
+## On this page
+- [Settings requests and limits](#setting-requests-and-limits)
+- [Jenkins resource configuration recommendations](#jenkins-resource-configuration-recommendations)
+- [Tools namespaces resource quota recommendations](#tools-namespaces-resource-quota-recommendations)
+
 ## Setting requests and limits
 
 ❗ **If you set a resource limit, you should also set a resource request.** Otherwise the request will match the limit. For example, a deployment with _no_ defined CPU request and a defined CPU limit of 1 core will _result in a pod with a request of 1 CPU and a limit of 1 CPU_.
