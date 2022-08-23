@@ -132,7 +132,7 @@ The OWASP Zed Attack Proxy (ZAP) automatically finds security vulnerabilities in
 * [OWASP ZAP Security Vulnerability Scanning](https://developer.gov.bc.ca/Developer-Toy-Box/OWASP-ZAP-Security-Vulnerability-Scanning)
 * [openshift-components](https://github.com/BCDevOps/openshift-components/tree/master/cicd/jenkins-slave-zap)
 
-## Pathfinder Single Sign On Keycloak
+## Pathfinder Single Sign-On Keycloak
 
 The Pathfinder Single Sign-On (SSO) team provides the Common Hosted Single Sign-On (CSS) App. This is a self-service app that allows you to integrate with BC government approved login services (identity providers).
 
