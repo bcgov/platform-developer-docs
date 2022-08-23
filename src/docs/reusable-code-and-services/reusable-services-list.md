@@ -31,6 +31,7 @@ Find details on the following services or tools you can use as part of your proj
 - [go-crond](#go-crond)
 - [Matomo OpenShift](#matomo-openshift)
 - [OWASP ZAP Security Vulnerability Scanning](#owasp-zap)
+- [Pathfinder Single Sign-On (SSO) Keycloak](#pathfinder-single-sign-on-keycloak)
 - [SonarQube in Private Cloud PaaS](#sq-private-cloud)
 - [SonarQube on OpenShift](#sq-openshift)
 - [WeasyPrint HTML to PDF/PNG](#weasyprint)
@@ -130,6 +131,17 @@ Matomo OpenShift provides a set of OpenShift configurations to set up an instanc
 The OWASP Zed Attack Proxy (ZAP) automatically finds security vulnerabilities in web applications. For more information, see the following pages:
 * [OWASP ZAP Security Vulnerability Scanning](https://developer.gov.bc.ca/Developer-Toy-Box/OWASP-ZAP-Security-Vulnerability-Scanning)
 * [openshift-components](https://github.com/BCDevOps/openshift-components/tree/master/cicd/jenkins-slave-zap)
+
+## Pathfinder Single Sign On Keycloak
+
+The Pathfinder Single Sign-On (SSO) team provides the Common Hosted Single Sign-On (CSS) App. This is a self-service app that allows you to integrate with BC government approved login services (identity providers).
+
+The Pathfinder SSO service is built on the foundations of Keycloak/Redhat SSO.
+
+* [Request an integration](https://bcgov.github.io/sso-requests/)
+* [An overview of our CSS App](https://github.com/bcgov/sso-keycloak/wiki)
+* [What is Keycloak (our take)](https://github.com/bcgov/sso-keycloak/wiki/What-is-Keycloak-@-BC-Government%3F)
+* [Additional references](https://github.com/bcgov/sso-keycloak/wiki/Useful-References)
 
 ## SonarQube in the BC Gov Private Cloud PaaS<a name="sq-private-cloud"></a>
 

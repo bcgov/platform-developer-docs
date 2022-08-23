@@ -224,7 +224,15 @@ const IndexPage = ({ location }) => {
           <Card>
             <h3>Reusable code and services</h3>
             <ul>
-              <li>KeyCloak SSO (coming soon)</li>
+              <li>
+                <Link
+                  to={
+                    "/reusable-services-list/#pathfinder-single-sign-on-keycloak"
+                  }
+                >
+                  Pathfinder SSO Keycloak
+                </Link>
+              </li>
               <li>
                 <Link to={"/reusable-services-list/"}>
                   Reusable services list
