@@ -88,3 +88,14 @@ As the team increased velocity and delivery the capability of setting up standar
 *   Beta.1 – Identifies a new Pre-Release and can be updated injunction with Major, Minor, and Patch. 
 *   Meta – This can include any metadata. (e.g., Git Commit Number). 
 The additional number structure can allow the capability to set up pipelines and other automation tasks to quickly keep track of image changes when speed increases. 
+
+## Think Stateless at the Start ##
+Stateless should be the first thing to think about when working with any Container Orchestrated environment such as OpenShift. The Platform as a Service (PaaS) recommended approach is Stateless, which will help allow the performance to drastically increase. OpenShift runs much slower when it must reference metadata to determine the Statefullness of an application. Therefore to increase speed for all applications it is recommended for Stateless. However, this cannot always be the case but should be a first approach to consider. 
+Stateless is a term used when an application does not care about the node that is running it. 
+Immutable reference that the images are self-constained with all the instructions it needs to run is within the image itself.
+Below is some information to consider when working with Stateless: 
+*   Attempt to avoid using sessions that can increase a load of complexity to the container and application. 
+*   Stateless scales horizontally with ease compared to Stateful
+*   Stateless apps can run on cache and run a lot faster than associating Persistent Storage.
+*   A Stateless application may require less storage to run the application. 
+*   Very easy to decouple and connect to additional micro-services.  
