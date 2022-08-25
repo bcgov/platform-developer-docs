@@ -8,16 +8,16 @@ This is the paragraph I'm changing.
 Also, reference the [style and terminology guide](https://docs.google.com/spreadsheets/d/1uNueaRQSQ7ssrMF8zo9YQUJeHj7dL307rLww2hzGuiE/edit#gid=0) that's still in development for more specific rules. Keep in mind that the style guide tracks rules for granular usage of terms or formatting and is built around decisions made during the writing process by writers and stakeholders.
 
 ## On this page
-- [Formatting](#format)
-- [Tone and voice](#tone)
-- [Audience](#audience)
-- [Page structure and elements](#structure)
+- [Formatting](#formatting)
+- [Tone and voice](#tone-and-voice)
+- [Audience](#audience-and-perspective)
+- [Page structure and elements](#page-structure-and-elements)
 - [Accessibility](#accessibility)
-- [Writing step-by-step instructions](#instructions)
+- [Writing step-by-step instructions](#writing-step-by-step-instructions)
 - [Metadata](#metadata)
 - [Resources](#resources)
 
-## Formatting<a name="format"></a>
+## Formatting
 
 Use the following guidelines for basic formatting.
 
@@ -35,7 +35,7 @@ Use the following guidelines for basic formatting.
 
   `code example that seriously rocks`
 
-## Tone and voice<a name="tone"></a>
+## Tone and voice
 
 The [Grammar, spelling and tone](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/grammar-spelling-tone) section of the Web Style Guide thoroughly covers tone and voice, but here are the most important points to keep in mind:
 
@@ -53,8 +53,8 @@ The [Grammar, spelling and tone](https://www2.gov.bc.ca/gov/content/governments/
 
 - [Don't use Latin abbreviations](https://insidegovuk.blog.gov.uk/2016/07/20/changes-to-the-style-guide-no-more-eg-and-ie-etc/) (e.g., i.e., etc.). They're not always familiar to non-native English speakers, they don't always get read correctly by screen readers, and people don't speak Latin. Write around them or use the full term.
 
-## Audience and perspective<a name="audience"></a>
-The audience for the technical documentation generally has a high-level of devops knowledge and there are also other avenues for assistance (for example, RocketChat).
+## Audience and perspective
+The audience for the technical documentation generally has a high-level of devops knowledge and there are also other avenues for assistance (for example, Rocket.Chat).
 
 ### Duplicate content
 Don't duplicate content across pages. Remember the principle of **one topic = one page**. Rather than duplicating content, link to content that's needed. There's a couple solid reasons for this:
@@ -79,7 +79,7 @@ The resources below have more information. They are concerned largely with forms
 - [One thing per page principle](https://mgearon.com/ux/one-thing-per-page-principle/)
 
 ### Linking strategy
-[The Nielson Norman Group has extensive and thorough guidance on writing excellent hyperlinks](https://www.nngroup.com/articles/writing-links/).
+[The Nielsen Norman Group has extensive and thorough guidance on writing excellent hyperlinks](https://www.nngroup.com/articles/writing-links/).
 
 Make sure that the link to an external page is descriptive. The user should know (or have a good idea) where the link is going to take them before they click it.
 
@@ -90,7 +90,7 @@ When linking from Markdown pages in `./src/docs/` to the Cloud WordPress site, u
 ### FAQs
 [Don't write FAQs](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/faqs) or format sections as a question and answer. Just tell the reader what they need to know.
 
-## Page structure and elements<a name="structure"></a>
+## Page structure and elements
 
 ### Titles
 Use a descriptive and specific title. What does the reader do with the page? What specific information do they gain?
@@ -120,6 +120,10 @@ Also, when placing images in the documents, make sure they have a relative link 
 
 Use the **On this page** section as a simple table of contents. See this section on [Anchor links](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/links).
 
+There is no need to manually add anchor links (like `<a name="example"></a>`) in order to create the table of contents. Both GitHub and Gatsby automatically generate IDs for all levels of headings using the same rules. When creating the ID, headings are set to lower-case, whitespace is replaced with dashes, and special characters are removed.
+
+Not sure what the ID for your new heading will be? Add the heading to the document and view it on GitHub. Mouse-over the heading and click the link icon to the left of the heading to move the browser to that anchor. Grab the ID from the URL bar.
+
 ### People
 
 Avoid using people's names in documentation. There are many good reasons for this:
@@ -128,13 +132,13 @@ Avoid using people's names in documentation. There are many good reasons for thi
 - They may have left the position or changed positions
 - Organizational contact methods or means may have changed
 
-You get the idea. Essentially, when you avoid using their name, it means you avoid questions and also don't have to go back and update it later. Use their position or reference more general means of contact. For example, a RocketChat channel or a team email.
+You get the idea. Essentially, when you avoid using their name, it means you avoid questions and also don't have to go back and update it later. Use their position or reference more general means of contact. For example, a Rocket.Chat channel or a team email.
 
-## Accessibility<a name="accessibility"></a>
+## Accessibility
 
 Use the [BC Government's guidelines and tools](https://www2.gov.bc.ca/gov/content/home/accessible-government/toolkit) to ensure your work is accessible and inclusive.
 
-## Writing step-by-step instructions<a name="instructions"></a>
+## Writing step-by-step instructions
 Occasionally, you'll have to write procedures. Find some of the most useful tips below but also check out [Microsoft's best practices for instructions](https://docs.microsoft.com/en-us/style-guide/procedures-instructions/). It's a great crash course.
 
 - Use numbered and bullet lists but not multi-level lists. Don't write single-item lists.
@@ -149,7 +153,7 @@ Occasionally, you'll have to write procedures. Find some of the most useful tips
 
 - When you can, familiarize yourself with tools and programs so you can reference the UI accurately. However, tell the reader what they need to do, rather than getting too specific on the UI. Remember that the audience is already quite technical.
 
-## Metadata<a name="metadata"></a>
+## Metadata
 
 We use YAML frontmatter in our Markdown files to add metadata to our documents. These fields are necessary to generate pages properly. Track the metadata in the fields of each page based on these descriptions:
 
@@ -179,7 +183,7 @@ It's important to track relevant keywords for each page and to refine them as th
 
 - "Metadata is information about information. Metadata describes the content and taxonomy organizes the content. Taxonomical terms should be stored as metadata, but metadata itself isn’t taxonomy."
 
-## Resources<a name="resources"></a>
+## Resources
 
 - [BC Government: Writing for the web](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide): My all-purpose style source for this specific project.
 

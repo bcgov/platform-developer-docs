@@ -25,12 +25,12 @@ You can create alerts based on monitoring dashboards in Sysdig Monitor, that not
 Here are some steps on how to setup the Sysdig alerts with [Rocket.Chat](https://chat.developer.gov.bc.ca/).
 
 ## On this page
-- [Create a Rocket.Chat chat channel and webhook for alert messages](#rc-channel)
-- [Create a Sysdig team notification channel](#sysdig-notification-channel)
-- [Create a Sysdig alert](#sysdig-alert)
+- [Create a Rocket.Chat chat channel and webhook for alert messages](#create-a-rocketchat-chat-channel-and-webhook-for-alert-messages)
+- [Create a Sysdig team notification channel](#create-a-sysdig-team-notification-channel)
+- [Creating an alert](#creating-an-alert)
 
 
-## Create a Rocket.Chat chat channel and webhook for alert messages<a name="rc-channel"></a>
+## Create a Rocket.Chat chat channel and webhook for alert messages
 
 Rocket.Chat requires an incoming webhook and a script to parse the data from Sysdig. Do the following:
 - Create a RC chat channel for the alert messages to arrive if there isn't one.
@@ -82,7 +82,7 @@ Here's how the webhook should look like:
 ![RC webhook config](../../images/sysdig-team-rc-alert-webhook-config.png)
 
 
-## Create a Sysdig team notification channel<a name="sysdig-notification-channel"></a>
+## Create a Sysdig team notification channel
 
 To create a Sysdig team notification channel, do the following:
 
@@ -95,7 +95,7 @@ To create a Sysdig team notification channel, do the following:
 1. Click `Save` and now you should be able to test it by clicking on the kebab menu icon and `Test Channel`.
 
 
-## Creating an Alert<a name="sysdig-alert"></a>
+## Creating an Alert
 
 It's recommended to create alerts from an application monitoring metrics, which helps to define good alerting thresholds.
 

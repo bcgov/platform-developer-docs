@@ -25,18 +25,18 @@ As you develop your application for deployment to the BC Gov Private Cloud PaaS 
 ## On this page
 - [Pipeline templates](#pipeline-templates)
 - [Automation technologies](#automation-technologies)
-- [Choose a technology](#choose-technology)
-- [Contribute to a pipeline template](#contribution)
+- [Choose a technology](#choose-a-technology)
+- [Contribute to a pipeline template](#contribute-to-a-pipeline-template)
 
 To help teams that want to get started with pipeline automation, use the best security practices for pipeline development, or both, the Platform Services team created pipeline templates for automation technologies supported on the Private Cloud platform.
 
 **Note**: Supported technologies are available on the platform, and the Platform Services team has expertise with these technologies to help the product teams that use it. Product teams can use any other automation technology outside of the platform, but the Platform Services team might not have the expertise to support them if they need help
 
-## Pipeline templates<a name="pipeline-templates"></a>
+## Pipeline templates
 
 Any product teams working in the Silver or Gold clusters on the BC Gov Private Cloud PaaS can use pipeline templates. For guides on getting started with each of the supported technologies, see the [Security Pipeline Templates](https://github.com/bcgov/security-pipeline-templates) repository.
 
-## Automation technologies<a name="automation-technologies"></a>
+## Automation technologies
 
 Currently, the following technologies are available to product teams:
 - [ArgoCD](https://github.com/BCDevOps/openshift-wiki/blob/b1a4e6db91932fd3f29705a5c8ee44983abf8763/docs/ArgoCD/argocd_info.md)
@@ -45,7 +45,7 @@ Currently, the following technologies are available to product teams:
 
 While Jenkins is technically supported on the platform, the Platform Services team highly discourages teams from using this technology as it's inefficient with the use of valuable platform resources. Over the next few months we'll be guiding the teams that currently use Jenkins to transition to a more modern and efficient technology.
 
-## Choose a technology<a name="choose-technology"></a>
+## Choose a technology
 
 Each team should make the final decision on which technology they want to use and may depend on their experience and comfort with each tool. The Platform Services team recommends the following, depending on your team's level of experience:
 
@@ -61,7 +61,7 @@ While teams can use GitHub Actions for both builds (CI) and deployments (CD), Ar
 
 - An improved security model
 
-## Contribute to a pipeline template<a name="contribution"></a>
+## Contribute to a pipeline template
 
 If you want to contribute to a pipeline template, you can fork a repository and add more steps to the templates or make any modifications to improve the template. Submit a pull request and tag any of the platform administrators for review.
 

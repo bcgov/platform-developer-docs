@@ -25,13 +25,13 @@ The OpenShift platform provides a reduced chance of significant unexpected outag
 Still, it's always possible that an outage affects the platform and brings down the applications hosted there. If this happens, speedy recovery is important. Use these guidelines to ensure your application recovers quickly and effectively.
 
 ## On this page
-- [Check reporting channels](#check-channels)
-- [Check your application](#check-application)
-- [Keep track of recovery steps](#keep-track)
+- [Check reporting channels](#check-reporting-channels)
+- [Check your application](#check-your-application)
+- [Keep track of recovery steps](#keep-track-of-recovery-steps)
 
 These guidelines assume that you built your application in a cloud-native, highly resilient manner that makes effective use of the strengths of the OpenShift platform. Make sure you follow our [application resiliency guidelines](https://developer.gov.bc.ca/Developer-Tools/Resiliency-Guidelines). If your application is not cloud-native in its design, it won't benefit from the higher adaptability and recoverability of the platform and may need additional work to recover from a large outage.
 
-## Check reporting channels<a name="check-channels"></a>
+## Check reporting channels
 
 If there is a platform-wide outage, check the following sources for more information:
 
@@ -41,7 +41,7 @@ If there is a platform-wide outage, check the following sources for more informa
 
 The Platform Services team keeps the community informed about the status of the outage. While the outage is in progress, there isn't much the team can do. Review the status and stay ready for the outage to end.
 
-## Check your application<a name="check-application"></a>
+## Check your application
 
 When the outage recovers, it's likely that everything recovers on its own, due to the resiliency of the applications. However, you can check the following to make sure everything is working as expected:
 
@@ -89,7 +89,7 @@ If you have problems with your pipeline installation, delete the member pods and
 
 If you're running RabbitMQ as part of your application, you may need to restart it in case the outage caused network issues.
 
-## Keep track of recovery steps<a name="keep-track"></a>
+## Keep track of recovery steps
 
 Create an issue template in GitHub for your application that details what you need to check to ensure that your application is up and running after an outage.
 
@@ -110,7 +110,7 @@ assignees: caggles, ShellyXueHan
 - [ ] MongoDB pods are up, running, communicating with each other and with the application.
 ## Routes
 - [ ] Is Rocketchat Prod available through it's normal route?
-- [ ] Fix route to re-point to the production instance if we've swapped over to the maintenace instance during this outage.
+- [ ] Fix route to re-point to the production instance if we've swapped over to the maintenance instance during this outage.
 ## Backups
 - [ ] Manually run the recovery test script to make sure that the most recent backup is working.
 - [ ] Ensure that next scheduled backup occurs as expected.

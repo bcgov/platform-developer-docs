@@ -23,11 +23,11 @@ Use this page to learn how to configure direct [transmission control protocol (T
 
 ## On this page
 - [Direct TCP access](#direct-tcp-access)
-- [Set up TCP connectivity in the Silver Cluster](#silver-setup)
-- [Set up TCP connectivity on the Gold Kamloops/Gold Calgary Cross-Cluster](#setup-gold-golddr)
+- [Set up TCP connectivity in the Silver Cluster](#set-up-tcp-connectivity-in-the-silver-cluster)
+- [Set up TCP connectivity on the Gold Kamloops/Gold Calgary Cross-Cluster](#set-up-tcp-connectivity-on-the-gold-kamloopsgold-calgary-cross-cluster)
 - [Troubleshooting](#troubleshooting)
 
-## Direct TCP access<a name="direct-tcp-access"></a>
+## Direct TCP access
 Product teams may enable direct non-HTTPS TCP access to services within their namespaces by creating a TransportServerClaim resource.
 
 This feature is available in all production clusters, including Silver and Gold/GoldDR.
@@ -38,7 +38,7 @@ The project must meet the following requirements:
 - Administrative access to the namespaces
 - `oc` command line tool
 
-## Set up TCP connectivity in the Silver Cluster<a name="silver-setup"></a>
+## Set up TCP connectivity in the Silver Cluster
 Use the Porter Operator to enable direct TCP access to your services in the Silver cluster.
 
 ### Confirm service information
@@ -129,7 +129,7 @@ $ timeout 5 bash -c ">/dev/tcp/142.34.194.68/65555"; echo $?
 ```
 Any return code other than `0` indicates a problem.  If that's the case, inquire about the firewall and go to [Troubleshooting](#troubleshooting).
 
-## Set up TCP connectivity on the Gold Kamloops/Gold Calgary cross-cluster<a name="setup-gold-golddr"></a>
+## Set up TCP connectivity on the Gold Kamloops/Gold Calgary cross-cluster
 The Gold and GoldDR clusters are designed to be used in tandem. Production applications are typically served from the Gold cluster. Deployments in the GoldDR cluster are identical to Gold and are meant to be quickly activated as the live production system if there is a problem with the Gold cluster.
 
 Use the Porter Operator to enable direct TCP access from Gold to GoldDR and vice versa. For example, this may be used for database replication.
@@ -230,7 +230,7 @@ Confirm connectivity from any pod in either cluster. Replace `65555` with the po
 ```
 Any return code other than `0` indicates a problem.  If that's the case, inquire about the firewall and go to [Troubleshooting](#troubleshooting).
 
-## Troubleshooting<a name="troubleshooting"></a>
+## Troubleshooting
 Resolve issues by trying the following:
 * Check the Service name used in the `TransportServerClaim`. It must match the existing Service
 * Make sure that there are pods associated with that Service and that they are operating correctly

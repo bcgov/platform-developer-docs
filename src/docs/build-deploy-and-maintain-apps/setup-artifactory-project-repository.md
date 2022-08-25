@@ -23,15 +23,15 @@ sort_order: 8
 If your team wishes to push artifacts to Artifactory, you will require a private repository to do so. This feature is provided via Artifactory Projects. Artifactory Projects are logical spaces of quota-based storage which teams can administer themselves. Within an Artifactory Project, a team can create their own private repositories - any number and any type that suits their needs, so long as the storage space required for these repositories remains within the provided quota.
 
 ## On this page
-- [Create an Artifactory project](#create-project)
-- [Request a larger quota for your Artifactory project](#request-quota)
-- [Access your new project](#access-project)
-- [Add users and service accounts to a project](#add-users)
-- [Add a repository to your project](#add-repo)
+- [Create an Artifactory project](#create-an-artifactory-project)
+- [Request a larger quota for your Artifactory project](#request-a-larger-quota-for-your-artifactory-project)
+- [Access your new project](#access-your-new-project)
+- [Add users and service accounts to a project](#add-users-and-service-accounts-to-a-project)
+- [Add a repository to your project](#add-a-repository-to-your-project)
 
 A team can request more quota if required, but note that teams are expected to try to remain within the default quota as much as possible - so be sure to clean up your old artifacts and tags.
 
-## Create an Artifactory project<a name="create-project"></a>
+## Create an Artifactory project
 Artifactory Projects give teams access to private repositories. If you want a private repository where you can push your own images or other artifacts, you'll need a project. If you don't want to be able to push your own images or other artifacts - if you only wish to use Artifactory remote repositories - you don't need a project.
 
 You can create an `ArtifactoryProject` object on your OpenShift namespace with the following command:
@@ -54,7 +54,7 @@ You may also see **nothing-to-approve**. This status is meant to say that there 
 
 **Note**: While you are able to patch the `approval_status` box, it doesn't mean you can approve your own project. The box is there for informational purposes. If you change it, Archeobot changes it back.
 
-## Request a larger quota for your Artifactory project<a name="request-quota"></a>
+## Request a larger quota for your Artifactory project
 
 The default quota for any Artifactory Project is 5 GB. This should be sufficient for the needs of most teams on the platform, as long as the artifacts pushed to Artifactory are well-controlled. Teams must delete old artifacts that are no longer in use in order to remain below this threshold.
 
@@ -73,7 +73,7 @@ If the team maintains the rejection, make sure you acknowledge the rejection. If
 
 After you've made the change, Archeobot reconciles once more and you'll see that your `approval_status` changes back to `nothing-to-approve` (or you will have deleted the ArtifactoryProject object, in which case you won't see anything at all). This means your rejection has been acknowledged and you can make further change requests.
 
-## Access your new project<a name="access-project"></a>
+## Access your new project
 
 Once you have your Artifactory project you can add repositories and users, adjust roles and check the results of Xray scans on artifacts.
 
@@ -85,7 +85,7 @@ To use these features, enter the project in the Artifactory UI. Log in and expan
 
 After you've entered the project in the Artifactory UI, some tabs with boxes and gears are visible. Click the gears to enter the administrator space in your project.
 
-## Add users and service accounts to a project<a name="add-users"></a>
+## Add users and service accounts to a project
 
 Once you've gotten your project, make sure to add your own service account to the project, as it's not added automatically when the project is created.
 
@@ -101,7 +101,7 @@ You can also add any Artifactory service account and select multiple users to ad
 
 You can also add additional roles to the project, if you want more finely-tuned control over who gets access to what.
 
-## Add a repository to your project<a name="add-repo"></a>
+## Add a repository to your project
 
 To add a repository to your project, do the following:
 1. Click the gear icon and then choose **Repositories**. Click **Add Repositories**.

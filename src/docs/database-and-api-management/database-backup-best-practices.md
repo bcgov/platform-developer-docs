@@ -22,9 +22,11 @@ sort_order: 3
 
 If something bad happens to your database, you will want to recover your application's data quickly, easily, and with up-to-date data. With that goal in mind, your data recovery plan should include these three considerations:
 
+- [Database backup basics](#database-backup-basics)
 - [Backing up your data](#backing-up-your-data)
 - [Recovering your data](#recovering-your-data)
 - [Monitoring your database](#monitoring-your-database)
+- [Automated backup solutions](#automated-backup-solutions)
 
 Don't forget: **Automate Everything!** You should automate every part of your data recovery plan, as much as possible! Automation makes your data recovery plan faster and more reliable.
 
@@ -118,7 +120,7 @@ Backup problems can appear in two different ways:
 
 The second problem can remain hidden until you need the dump file. By then, it's too late, and you've lost data. In order to avoid this problem, your backup automation should include a step to recover your data into a temporary database. It should also include a test to make sure the expected data is present. Since you'll want to automate your recovery process anyway (as mentioned in [Recovering your data](#recovering-your-data)), this is a good opportunity to test it!
 
-Both the backup and recovery test should send notifications to your team. The Platform Team recommends that you send notifications of both successes and failures. That way, if some failure prevents a notification from being sent, you can still tell there's a problem. Most teams set up a Rocketchat webhook to recieve the status information of both the backup and recovery processes. Teams usually set up the webhook to post these messages to a private channel for the team.
+Both the backup and recovery test should send notifications to your team. The Platform Team recommends that you send notifications of both successes and failures. That way, if some failure prevents a notification from being sent, you can still tell there's a problem. Most teams set up a Rocket.Chat webhook to receive the status information of both the backup and recovery processes. Teams usually set up the webhook to post these messages to a private channel for the team.
 
 ## Recovering your data
 
@@ -187,7 +189,7 @@ The recovery plan questions at a glance:
 * **How often you want to back up your data?** Configurable, but daily by default.
 * **Where will the backups be stored?** An `nfs-file-backup` PVC. If you wish to use S3, you can add your own small automation step to send the dump file to your bucket.
 * **How many backup files will you keep?** Configurable, but 6 daily, 4 weekly, 1 monthly by default.
-* **How will your team be notified of backup problems?** Includes built-in steps for sending status of both backup and recovery test to Rocketchat.
+* **How will your team be notified of backup problems?** Includes built-in steps for sending status of both backup and recovery test to Rocket.Chat.
 * **How will your team access your dump files?** The built-in recovery process assumes that you already have a dump file on en `nfs-file-backup` PVC. Any additional steps to get it there (either by pulling from S3 or recovering the PVC) must be performed by the team.
 * **What does the recovery process look like?** The built-in recovery process only recovers the dump file into an empty database. If you wish to use point-in-time recovery, your team will need to build appropriate automation for that. You will also need to cover any additional considerations for connecting your application to your recovered database or the recreation of other necessary objects.
 * **How will your database be monitored?** Your team will need to set up their own monitoring.

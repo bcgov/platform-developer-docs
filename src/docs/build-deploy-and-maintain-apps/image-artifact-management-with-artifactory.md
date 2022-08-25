@@ -25,13 +25,13 @@ Artifactory is an artifact repository system by JFrog. This service is available
 For more information on Artifactory from JFrog, see the [Artifactory documentation](https://www.jfrog.com/confluence/site/documentation).
 
 ## On this page
-- [Remote (caching/proxy) repository access](#remote-repos)
-- [Local private repositories](#local-repos)
-- [Xray artifact scanning](#xray)
-- [Security reviews](#security)
-- [Artifactory support, processes, and communications](#support-processes-comms)
-- [Service improvements and disruptions](#service-improvements)
-- [Set up Artifactory](#setup)
+- [Remote (caching/proxy) repository access](#remote-cachingproxy-repository-access)
+- [Local private repositories](#local-private-repositories)
+- [Xray artifact scanning](#xray-artifact-scanning)
+- [Security reviews](#security-reviews)
+- [Artifactory support, processes, and communications](#artifactory-support-processes-and-communications)
+- [Service improvements and disruptions](#service-improvements-and-disruptions)
+- [Set up Artifactory](#set-up-artifactory)
 
 Use Artifactory to access artifacts for your application. It's compatible with all major package types, including Docker images, Helm charts, NPM packages and more. For more information on package management, see [Package Management](https://www.jfrog.com/confluence/display/JFROG/Package+Management).
 
@@ -47,7 +47,7 @@ We deployed Artifactory in a highly available configuration in the B.C. governme
 
 There is no charge to use Artifactory.
 
-## Remote (caching/proxy) repository access<a name="remote-repos"></a>
+## Remote (caching/proxy) repository access
 
 Access to remote (caching) repositories is available by default to anyone in the Silver or Gold clusters. When a project set is provisioned, an Artifactory service account is created at the same time, with a secret in the tools namespace available to use.
 
@@ -59,7 +59,7 @@ jq -r '(["ARTIFACTORYKEY","SOURCEURL"] | (., map(length*"-"))), (.[] | [.key, .u
 
 If there is a specific public repository you want to see cached through Artifactory, reach out to the Platform Services team to ask about adding it.
 
-## Local private repositories<a name="local-repos"></a>
+## Local private repositories
 You can use a local private repository to push your own artifacts and images, with control over access. The benefits include the following:
 
 * You'll have a common space to store sensitive artifacts and images.
@@ -72,7 +72,7 @@ You can use a local private repository to push your own artifacts and images, wi
 
 You need to set up an Artifactory project before you can get a local private repository. For more information, see [Setup an Artifactory project and repository](/setup-artifactory-project-repository/).
 
-## Xray artifact scanning<a name="xray"></a>
+## Xray artifact scanning
 The Xray tool scans all artifacts for security issues and lets you know about potential issues. This gives you an opportunity to deal with issues before they become a problem. The benefits include the following:
 
 * Getting images scanned is easy. You only need a private repository in Artifactory.
@@ -81,11 +81,12 @@ The Xray tool scans all artifacts for security issues and lets you know about po
 
 * You can ensure all of your images - especially your production images - are secure without placing additional load on your developers.
 
-## Security reviews<a name="security"></a>
+## Security reviews
 
 Privacy Impact Assessment (PIA) and Security Threat Risk Assessment (STRA) have been completed for Sysdig Monitor. These assessments are available by request only, the request can be sent to PlatformServicesTeam@gov.bc.ca.
 
-## Artifactory support, processes, and communications<a name="support-processes-comms"></a>
+## Artifactory support, processes, and communications
+
 The team supporting this service administers the Artifactory application, its supporting database and the S3 storage system that contains the packages uploaded to Artifactory.
 
 Your best source for support, configuration and best practices is the developer community that uses Artifactory for their projects. Check out the [`#devops-artifactory` channel on Rocket.Chat](https://chat.developer.gov.bc.ca/channel/devops-artifactory). Service changes are also posted here.
@@ -94,7 +95,7 @@ For further support in the event of an emergency or outage, contact one of the A
 
 For cluster-wide service notifications that could impact Artifactory, monitor the [`#devops-alerts` channel in Rocket.Chat](https://chat.developer.gov.bc.ca/channel/devops-alerts).
 
-## Service improvements and disruptions<a name="service-improvements"></a>
+## Service improvements and disruptions
 
 Artifactory service improvements include software upgrades for both Artifactory and its operator, feature integrations for the operator, bug fixes and more.
 
@@ -102,7 +103,7 @@ These operations don't result in expected disruptions for users. If the Platform
 
 Other operations require turning Artifactory to read-only mode. In read-only mode you'll still be able to pull from Artifactory, but not push. If the team expects a disruption, they'll notify everyone about the planned read-only window at least a day before in the `#devops-artifactory` and `#devops-alerts`channels.
 
-## Set up Artifactory<a name="setup"></a>
+## Set up Artifactory
 
 To get started using Artifactory, see [Setup an Artifactory service account](/setup-artifactory-service-account/).
 
