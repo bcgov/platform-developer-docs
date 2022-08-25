@@ -22,12 +22,12 @@ sort_order: 9
 Licences help you manage and share intellectual property for code and materials on GitHub. If you want to consume, share or contribute to anything in GitHub, you have to understand requirements associated with the relevant licence.
 
 ## On this page
-- [Licence guidelines](#guidelines)
-- [Authority to license](#authority-licence)
-- [Choose a licence](#choose-licence)
-- [Apply the licence to your project](#apply-licence)
+- [Licence guidelines](#licence-guidelines)
+- [Authority to license](#authority-to-license)
+- [Choose a licence](#choose-a-licence)
+- [Apply the licence to your project](#apply-the-licence-to-your-project)
 
-## Licence guidelines<a name="guidelines"></a>
+## Licence guidelines
 
 Note if the licence attached to material restricts modification or redistribution of the content. If a licence isn't attached to content, assume that it's "all rights reserved" and can't be used without the express permission of the copyright owner.
 
@@ -41,7 +41,7 @@ If want to initiate a project or release previously created materials, be aware 
 
 The Province’s intellectual property rights must be, at a minimum, equal to the rights under which the content will be licensed to third parties. Four open licences are approved for use that likely cover the majority of projects coming forward:
 
-## Authority to license<a name="authority-licence"></a>
+## Authority to license
 
 The Intellectual Property Program (IPP) must approve licences of B.C. government owned intellectual property unless a ministry has either specific legislative authority or Treasury Board approval that lets them license the intellectual property rights of the Province to third parties. When IPP is the authority for the licensing, you work with IPP to find the best fit to meet the licensing needs of the project.
 
@@ -62,7 +62,7 @@ Use these licences, as they are widely accepted, and follow a consistent approac
 
 If your project is better suited to a different licence, discuss your requirements with the IPP. They can help answer your questions and advise on your need for any other legal or risk management advice.
 
-## Choose a licence<a name="choose-licence"></a>
+## Choose a licence
 
 The following overview provided is intended to inform, not replace, the licensing review for each project. If you think you need to engage with the Intellectual Property Program, send a request to the IPP Manager
 
@@ -72,7 +72,7 @@ If your project is related to a community that typically uses a different licenc
 
 ![A flowchart to outline code preparation for GitHub](../../images/github-code-preparation-chart.png)
 
-## Apply the licence to your project<a name="apply-licence"></a>
+## Apply the licence to your project
 
 Place the licence file for your project in the repository before you do anything else. The default license for code repositories is Apache 2.0.
 
