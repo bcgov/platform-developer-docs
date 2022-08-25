@@ -27,10 +27,10 @@ A new Argo CD instance is available to product teams that are interested in usin
 ## On this page
 
 - [Design](#design)
-- [Configuration](#config)
+- [Configuration](#configuration)
 - [Access](#access)
 
-## Design<a name="design"></a>
+## Design
 
 A shared instance of Argo CD exists in each OpenShift cluster. Product teams that request access to Argo CD are given their own project. There is a one-to-one relationship between Argo CD projects and OpenShift Platform (OCP) project sets/licence plates (`tools`, `dev`, `test` and `prod` namespaces). Teams can configure as many applications as they need and deploy them to any of the OCP namespaces in their project set. Each application/environment combination is configured as a separate application in Argo CD.
 
@@ -38,7 +38,7 @@ A shared instance of Argo CD exists in each OpenShift cluster. Product teams tha
 
 Each team gets a new GitHub repository so they can manage their application manifests. Teams manage multiple applications from this repository, each having its own directory or branch.
 
-## Configuration<a name="config"></a>
+## Configuration
 
 ### Source repositories
 Application code resides in existing repositories. The new repository is for the YAML manifest files that are consumed by Argo CD. The project is limited to using this one repository for Argo CD configurations.
@@ -49,7 +49,7 @@ Each project can deploy applications to any of the OpenShift namespaces in their
 ### Allowed resources
 Projects don't have access to alter any cluster-level resources, only namespace-level resources.
 
-## Access<a name="access"></a>
+## Access
 
 Access to an Argo CD project is based on membership in a Keycloak group unique to that project. The team can manage their Keycloak group membership themselves with a `CustomResourceDefinition` defined in a YAML file in their own GitHub repository. An operator consumes these YAML files and maintains Keycloak group membership so that teams don't have to make a request to the Platform Services team.
 
