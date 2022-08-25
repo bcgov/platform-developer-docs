@@ -189,7 +189,7 @@ The recovery plan questions at a glance:
 * **How often you want to back up your data?** Configurable, but daily by default.
 * **Where will the backups be stored?** An `nfs-file-backup` PVC. If you wish to use S3, you can add your own small automation step to send the dump file to your bucket.
 * **How many backup files will you keep?** Configurable, but 6 daily, 4 weekly, 1 monthly by default.
-* **How will your team be notified of backup problems?** Includes built-in steps for sending status of both backup and recovery test to Rocketchat.
+* **How will your team be notified of backup problems?** Includes built-in steps for sending status of both backup and recovery test to Rocket.Chat.
 * **How will your team access your dump files?** The built-in recovery process assumes that you already have a dump file on en `nfs-file-backup` PVC. Any additional steps to get it there (either by pulling from S3 or recovering the PVC) must be performed by the team.
 * **What does the recovery process look like?** The built-in recovery process only recovers the dump file into an empty database. If you wish to use point-in-time recovery, your team will need to build appropriate automation for that. You will also need to cover any additional considerations for connecting your application to your recovered database or the recreation of other necessary objects.
 * **How will your database be monitored?** Your team will need to set up their own monitoring.
