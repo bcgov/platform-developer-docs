@@ -22,24 +22,24 @@ sort_order: 2
 One of the most amazing benefits of working on OpenShift is that, when your application has been designed with a few key ideas in mind, you can avoid many of the regular outages that are almost unavoidable on legacy infrastructure. All that time you used to spend with your application down because you needed to patch a server? Gone. If a node needs to go down for patching purposes, a correctly designed application can simply spin up another pod on another node, and your users won't even notice. Sounds great, right? But the question is, then: how do you design an application for OpenShift if it's so different from applications designed for legacy infrastructure?
 
 ## On this page
-- [What does "Correctly Designed" mean?](#correctly-designed)
-- [A Monitored App](#monitored)
-- [A Highly Available App](#highly-available)
-- [An Easily Deployable App](#easily-deployable)
-- [A Recoverable App](#recoverable)
-- [A Correctly Resourced App](#resourced)
-- [A Well Behaved App](#behaved)
-- [Community Support](#community-support)
+- [What does correctly designed mean?](#what-does-correctly-designed-mean)
+- [A monitored application](#a-monitored-application)
+- [A highly available application](#a-highly-available-application)
+- [An easily deployable application](#an-easily-deployable-application)
+- [A recoverable application](#a-recoverable-application)
+- [A correctly resourced application](#a-correctly-resourced-application)
+- [A well behaved application](#a-well-behaved-application)
+- [Community support](#community-support)
 - [Tools](#tools)
 - [Examples](#examples)
 
-## What does correctly designed mean?<a name="correctly-designed"></a>
+## What does correctly designed mean?
 
 All you need to do is make sure that your application takes advantage of OpenShift through some specific design requirements. These are outlined through the concept of a [12 factor application](https://12factor.net/). 
 
 **Note:** If you're a technical user looking for some help on how to make a 12-factor application, go to the bottom of this document for examples of applications that run in a resilient manner on the platform. Feel free to ask those teams for some advice on how they got there.
 
-## A monitored application<a name="monitored"></a>
+## A monitored application
 
 An application that runs without failing most of the time is great, but things happen. Maintenance, failures, network problems and sneaky little issues in the design or implementation of your application can cause strange behaviours or outages. The platform is extremely highly available, (99.98% available for the last 12 months as of mid-2022) but that doesn't mean you should assume that your application is guaranteed the same availability. Application outages can happen for reasons other than full platform outages.
 
@@ -54,7 +54,7 @@ Many of these notification options provide your team an opportunity to act to pr
 
 Your team should also ensure you are in the [#devops-alerts channel](https://chat.developer.gov.bc.ca/channel/devops-alerts) in Rocket.Chat where notices of upcoming maintenance are posted. There are not many messages sent in this channel, so we recommend switching your Rocket.Chat notification settings for the channel to **All messages**.
 
-## A highly available application<a name="highly-available"></a>
+## A highly available application
 
 The platform may have very high availability in general, but our individual nodes do not. This doesn't mean the nodes are unstable or difficult to use. It just means that the way we approach maintenance and infrastructure problems are a little different from the way things work in the legacy application world. Did you know that we don't guarantee a single node will be up for more than 24 hours at a time? That's right. Our nodes will be restarted or changed very often. This might sound like a big problem with the platform, but it's actually a feature. It means that the platform team can be extremely proactive about keeping the platform's physical infrastructure in great shape.
 
@@ -64,17 +64,17 @@ There are plenty of options for ensuring that this change in approach helps your
 
 ![Markdown Flow Chart](../../images/availability.png)
 
-## An easily deployable application<a name="easily-deployable"></a>
+## An easily deployable application
 
 Because all applications on OpenShift should be architected with the expectation that any node can go down at any time, it's imperative that applications be easy and quick to redeploy. This requires - most importantly - **no human interaction in the process**. Once the platform is given the command to deploy your software on a new pod, the process between starting up that new pod and having an accessible and usable application should require no human interference whatsoever.
 
 This means that all of your deployment configuration should be automated and kept in source-control to ensure that it is easily accessible, consistent, and up-to-date at all times. That includes any side processes like your monitoring tasks from the section above.
 
-## A recoverable application<a name="recoverable"></a>
+## A recoverable application
 
 This part isn't so different from legacy applications. If you need to recover your application due to data corruption or some other significant failure, it's important that your application be architected to do so quickly and easily. Most of this is covered by having an application that is easily deployable, but it's also important that you have the ability to recover any stateful data or configurations that cannot be held in a repository. In other words, you need to be able to recover your database and application passwords.
 
-## A correctly resourced application<a name="resourced"></a>
+## A correctly resourced application
 
 Ensuring your application has the resources it needs, without taking too much, is a balancing act. Different applications and environments will also need different levels of service.
 
@@ -90,7 +90,7 @@ If your pod has limits higher than its requests it will run Burstable and get at
 
 If your pod has the requests and limits set to the same value then it will run Guaranteed QoS class. It will have preferential access to compute resources and will be the last to be evicted if a node should become overloaded. This is best for applications in the prod namespace as they need the best uptime.
 
-## A well behaved application<a name="behaved"></a>
+## A well behaved application
 
 It is important to ensure your application is well behaved and doesn't impede the cluster's Operator work or impact the cluster's ability to heal.
 
@@ -102,7 +102,7 @@ If your application is making use of [pod disruption budgets](https://kubernetes
 
 Ensure that your pods are not in a `CrashLoopBackOff` state for too long. If they have been crashing for more than a day the Platform Operations team might just delete them or scale down their replicaset.
 
-## Community support<a name="community-support"></a>
+## Community support
 
 You may note that this document is pretty vague about the "hows" of these principles. This is because it can vary from application to application, and technology stack to technology stack. The design needs for a highly available chat application are very different from those of a highly available static website.
 
@@ -112,7 +112,7 @@ This is where the community comes in. If you have a highly available application
 
 It's also very important to remember that in the B.C. government, we are part of a larger, international community of developers working to create better and more resilient applications. There are a lot of great resources available on the broader internet that we could never hope to match here.
 
-## Tools<a name="tools"></a>
+## Tools
 
 The Developer Exchange community is full of great developers seeking ways to help the rest of the community. Here are some examples of tools that you can use to help build a more resilient application:
 
@@ -126,7 +126,7 @@ The Developer Exchange community is full of great developers seeking ways to hel
 * An open-source option for creating a highly available Postgres cluster
 
 
-## Examples<a name="examples"></a>
+## Examples
 
 The following are some fantastic examples of applications that operate on the platform with high resiliency design, as well as a couple of quick summaries of how and why the teams who built the applications made the decisions they did. If you're aiming to build something similar to an application shown here, please always feel free to ask the team in question for their advice on how to make your application more resilient as well.
 
@@ -150,7 +150,6 @@ The following are some fantastic examples of applications that operate on the pl
 * a chain-build gastby (react app) that builds nodejs into a caddy server
 
 **Note:** If your team has a resilient design of any kind - even if you haven't perfected it - please fork this document and add your repository as an example. Nobody is perfect, and in-progress examples are a great help for teams trying to learn where to start.
-
 
 ---
 Related links:
