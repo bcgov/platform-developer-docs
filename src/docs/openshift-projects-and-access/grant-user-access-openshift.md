@@ -25,12 +25,12 @@ Access to the OpenShift platform is self-serve and is available to IDIR users an
 Existing bcgov organization members can invite other users to the organization. Every team member may not need access to OpenShift. Consider the security principle of least privilege before requesting platform access and when granting namespace-level access.
 
 ## On this page
-- [Prerequisites](#prereqs)
+- [Prerequisites](#prerequisites)
 - [Add users](#add-users)
-- [Request platform access](#request-access)
-- [Grant namespace access](#grant-access)
+- [Request platform access](#request-platform-access)
+- [Grant namespace access](#grant-namespace-access)
 
-## Prerequisites<a name="prereqs"></a>
+## Prerequisites
 
 If you want to grant a new user access to OpenShift they must have the following:
 
@@ -39,7 +39,7 @@ If you want to grant a new user access to OpenShift they must have the following
 
 Additionally, the namespace where you are adding the new user must have already have been provisioned through [the new project provisioning process](/provision-new-openshift-project/) and must have one or more administrative users.
 
-## Add users<a name="add-users"></a>
+## Add users
 
 You can add users in one of the following primary roles:
 
@@ -66,13 +66,13 @@ oc get rolebindings
 ```
 For more information on adding users, you can watch [Using Just Ask! to gain access into the BCGov or BCDevops GitHub Organizations](https://www.youtube.com/watch?v=IvdPyx2-qm0) or use [the Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/).
 
-## Request platform access<a name="request-access"></a>
+## Request platform access
 
 **Note**: This process only gives you platform access, not namespace access.
 
 The product owner or a project administrator associated with namespace provisioning makes a request through the [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/).
 
-## Grant namespace access<a name="grant-access"></a>
+## Grant namespace access
 
 Technical leads grant namespace access. For more information, see [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.9/authentication/using-rbac.html).
 
