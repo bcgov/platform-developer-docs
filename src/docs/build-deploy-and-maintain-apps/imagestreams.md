@@ -20,7 +20,7 @@ sort_order: 10
 
 # Best practices for managing image streams
 
-Image streams provide a means of creating and updating container images in an on-going way. As improvements are made to an image, tags can be used to assign new version numbers and keep track of changes.
+Image streams provide a means of creating and updating container images in an ongoing way. As improvements are made to an image, tags can be used to assign new version numbers and keep track of changes.
 
 ## On this page
 - [Component parts](#component-parts)
