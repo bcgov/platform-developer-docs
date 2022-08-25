@@ -24,18 +24,18 @@ Artifactory access is controlled through Artifactory service accounts. Service a
 
 ## On this page
 - [Archeobot](#archeobot)
-- [Setup a service account](#setup)
-- [Create multiple service accounts](#multiple-accounts)
-- [Delete a service account](#delete)
+- [Setup a service account](#setup-a-service-account)
+- [Create multiple service accounts](#create-multiple-service-accounts)
+- [Delete a service account](#delete-a-service-account)
 
-## Archeobot<a name="archeobot"></a>
+## Archeobot
 
 [Archeobot](https://github.com/bcgov/platform-services-archeobot) is a custom operator that gives teams the freedom to manage their own Artifactory resources. Archeobot can be used to:
 * Create new Artifactory service accounts.
 * Request new Artifactory projects.
 * Request quota changes to existing Artifactory projects.
 
-## Setup a service account<a name="setup"></a>
+## Setup a service account
 
 Use the information below to request an Artifactory repository or service account.
 
@@ -61,7 +61,7 @@ Users with edit and administrator access on the `tools` namespace can also creat
 
 If either of the secrets is deleted manually, the operator can act to change the password of the service account. Then it recreates one or both secrets with the new password. This is an easy method for teams to change their service account passwords.
 
-## Create multiple service accounts<a name="multiple-accounts"></a>
+## Create multiple service accounts
 You're able to make as many Artifactory service accounts as you need, in as many namespaces as required. Be aware that Archeobot needs to be able to keep up with the amount you're making.
 
 Run the following command to create a new service account:
@@ -72,7 +72,7 @@ The `ASAname` is the name of the ArtifactoryServiceAccount object. It's not the 
 
 For example, if you make an account specifically for use in your Jenkins pipeline, you might want to use the name `jenkins` for the Artifactory Service Account object. This results in a secret called `artifacts-jenkins-[random]` and an account name called `jenkins-[namespace]-[random]`. Don't worry about name collisions with other teams, your account name has your namespace plate in it (the six alphanumeric characters that go before the `-tools`, `-dev`, `-test` or `-prod` in the namespace name), so even if there's another team who called their ArtifactoryServiceAccount `jenkins`, they have a different name.
 
-## Delete a service account<a name="delete"></a>
+## Delete a service account
 You can delete a service account by deleting the ArtifactoryServiceAccount object through the OpenShift CLI. Use the following command:
 `oc delete ArtifactoryServiceAccount [ASAname]` or `oc delete artsvcacct [ASAname]`.
 
