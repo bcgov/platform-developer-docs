@@ -54,7 +54,7 @@ The [Grammar, spelling and tone](https://www2.gov.bc.ca/gov/content/governments/
 - [Don't use Latin abbreviations](https://insidegovuk.blog.gov.uk/2016/07/20/changes-to-the-style-guide-no-more-eg-and-ie-etc/) (e.g., i.e., etc.). They're not always familiar to non-native English speakers, they don't always get read correctly by screen readers, and people don't speak Latin. Write around them or use the full term.
 
 ## Audience and perspective
-The audience for the technical documentation generally has a high-level of devops knowledge and there are also other avenues for assistance (for example, RocketChat).
+The audience for the technical documentation generally has a high-level of devops knowledge and there are also other avenues for assistance (for example, Rocket.Chat).
 
 ### Duplicate content
 Don't duplicate content across pages. Remember the principle of **one topic = one page**. Rather than duplicating content, link to content that's needed. There's a couple solid reasons for this:
@@ -79,7 +79,7 @@ The resources below have more information. They are concerned largely with forms
 - [One thing per page principle](https://mgearon.com/ux/one-thing-per-page-principle/)
 
 ### Linking strategy
-[The Nielson Norman Group has extensive and thorough guidance on writing excellent hyperlinks](https://www.nngroup.com/articles/writing-links/).
+[The Nielsen Norman Group has extensive and thorough guidance on writing excellent hyperlinks](https://www.nngroup.com/articles/writing-links/).
 
 Make sure that the link to an external page is descriptive. The user should know (or have a good idea) where the link is going to take them before they click it.
 
@@ -128,7 +128,7 @@ Avoid using people's names in documentation. There are many good reasons for thi
 - They may have left the position or changed positions
 - Organizational contact methods or means may have changed
 
-You get the idea. Essentially, when you avoid using their name, it means you avoid questions and also don't have to go back and update it later. Use their position or reference more general means of contact. For example, a RocketChat channel or a team email.
+You get the idea. Essentially, when you avoid using their name, it means you avoid questions and also don't have to go back and update it later. Use their position or reference more general means of contact. For example, a Rocket.Chat channel or a team email.
 
 ## Accessibility
 
