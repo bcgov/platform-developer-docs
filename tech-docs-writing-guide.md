@@ -120,6 +120,10 @@ Also, when placing images in the documents, make sure they have a relative link 
 
 Use the **On this page** section as a simple table of contents. See this section on [Anchor links](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/links).
 
+There is no need to manually add anchor links (like `<a name="example"></a>`) in order to create the table of contents. Both GitHub and Gatsby automatically generate IDs for all levels of headings using the same rules. When creating the ID, headings are set to lower-case, whitespace is replaced with dashes, and special characters are removed.
+
+Not sure what the ID for your new heading will be? Add the heading to the document and view it on GitHub. Mouse-over the heading and click the link icon to the left of the heading to move the browser to that anchor. Grab the ID from the URL bar.
+
 ### People
 
 Avoid using people's names in documentation. There are many good reasons for this:
