@@ -110,7 +110,7 @@ assignees: caggles, ShellyXueHan
 - [ ] MongoDB pods are up, running, communicating with each other and with the application.
 ## Routes
 - [ ] Is Rocketchat Prod available through it's normal route?
-- [ ] Fix route to re-point to the production instance if we've swapped over to the maintenace instance during this outage.
+- [ ] Fix route to re-point to the production instance if we've swapped over to the maintenance instance during this outage.
 ## Backups
 - [ ] Manually run the recovery test script to make sure that the most recent backup is working.
 - [ ] Ensure that next scheduled backup occurs as expected.
