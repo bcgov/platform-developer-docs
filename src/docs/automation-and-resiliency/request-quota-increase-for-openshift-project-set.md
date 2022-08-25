@@ -25,8 +25,8 @@ There are three different resource types on the platform:
 - Storage
 
 Before asking for more quota for your project set, check if the application is fully using the resources and confirm that the usage is expected. Use the following information to help determine the level of resource the application needs:
-- [Resource Management Guidelines](https://github.com/BCDevOps/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
-- [Application Resource Tuning](https://github.com/BCDevOps/developer-experience/blob/master/docs/resource-tuning-recommendations.md)
+- [Resource management guidelines](https://github.com/BCDevOps/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
+- [Application resource tuning](/application-resource-tuning/)
 
 ## On this page
 - [Set up resource monitoring with Sysdig Monitor](#set-up-resource-monitoring-with-sysdig-monitor)
