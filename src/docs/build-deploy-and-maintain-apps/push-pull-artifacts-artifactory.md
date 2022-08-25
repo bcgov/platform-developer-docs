@@ -21,11 +21,11 @@ sort_order: 7
 After you've [set up your Artifactory service account](/setup-artifactory-service-account/), you can pull artifacts from the platform's caching repositories. If you wish to push to Artifactory, you will need an [Artifactory project and private repository first](/setup-artifactory-project-repository/). After your set up your private repository, follow these instructions to pull from them.
 
 ## On this page
-- [Pull Docker images from Artifactory](#pull-docker)
-- [Node Package Manager (NPM)](#npm)
+- [Pull Docker images from Artifactory](#pull-docker-images-from-artifactory)
+- [Node Package Manager (NPM)](#node-package-manager-npm)
 - [Maven](#maven)
 
-## Pull Docker images from Artifactory<a name="pull-docker"></a>
+## Pull Docker images from Artifactory
 
 These steps apply to all Docker-type repositories, not just DockerHub. These steps work for any private docker registry, not just Artifactory. Change out the Artifactory URL for the URL of your preferred registry.
 
@@ -118,7 +118,7 @@ Don't forget that you need to update the image URL to point explicitly at Artifa
 
 You can now use this image in your build or deployment.
 
-## Node Package Manager (NPM)<a name="npm"></a>
+## Node Package Manager (NPM)
 The `npm-remote` repository in Artifactory points to the [public default NPM repository](https://registry.npmjs.org). If you wish to pull from a different repository, such as a private one, replace all references to `npm-remote` below with your repository's name.
 
 1. Set the NPM registry:
@@ -160,7 +160,7 @@ curl -u $AF_USERID:$AF_PASSWD https://artifacts.developer.gov.bc.ca/artifactory/
 ```
 For example, you can check out the [Repo-Mountie assemble file](https://github.com/bcgov/repomountie/blob/master/.s2i/bin/assemble).
 
-## Maven<a name="maven"></a>
+## Maven
 
 To deploy build artifacts through Artifactory you need to add a deployment element with the URL of a target local repository where you want to deploy your artifacts. For example:
 
