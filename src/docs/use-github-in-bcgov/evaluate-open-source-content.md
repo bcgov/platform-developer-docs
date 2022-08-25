@@ -27,7 +27,7 @@ For more information on approval requirements, see [Start working in the BC Gov 
 ## On this page
 - [Privacy](#privacy)
 - [Copyright](#copyright)
-- [Legal, contractual, or policy](#legal-contractual-policy)
+- [Legal, contractual, or policy](#legal-contractual-or-policy-constraints)
 - [Security](#security)
 
 These guidelines help you make sure that there are no restrictions to using the material publicly. Restrictions may be due to one of the following concerns:
@@ -38,13 +38,13 @@ These guidelines help you make sure that there are no restrictions to using the 
 
 Evaluate the content you wish to use before posting the material in a GitHub repository.
 
-## Privacy<a name="privacy"></a>
+## Privacy
 
 Make sure that the content is free of personal information that may directly identify an individual (for example, name, phone number, photo, address, driver's licence number or any similar identification number).
 
 Ministries may contact Knowledge and Information Services to assist in privacy assessments.
 
-## Copyright<a name="copyright"></a>
+## Copyright
 Make sure to meet the following requirements:
 - Content is created solely by B.C. government employees
 - Content is fully owned by the B.C. government and doesn't contain any third-party content. Collect copies of any contracts related to the content for review with the [Intellectual Property Program (IPP)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/intellectual-property/intellectual-property-program)
@@ -53,13 +53,13 @@ Make sure to meet the following requirements:
 
 Ministries  **must**  contact the IPP to assist in this assessment. Any legal review or legal advice is provided by the Legal Services Branch.
 
-## Legal, contractual or policy constraints<a name="legal-contractual-policy"></a>
+## Legal, contractual or policy constraints
 
 Make sure that the public release and use of the content is permitted under law, contract or policy. For example, make sure that there are no relevant legal, contractual or policy restrictions or limitations.
 
 If there are legal, contractual or policy restrictions or limitations on the content, you must address them before you can use the content.
 
-## Security<a name="security"></a>
+## Security
 
 Contact your [Ministry Information Security Officer (MISO)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/information-security-policy-and-guidelines/role-of-miso) to make sure that all necessary security controls have been implemented.
 
