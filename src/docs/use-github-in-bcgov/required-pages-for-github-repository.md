@@ -17,7 +17,9 @@ content_owner: Olena Mitovska
 
 sort_order: 7
 ---
+
 # Required pages for a GitHub repository
+
 When you create a repository in the `bcgov` organization, add the following markdown files:
 - License
 - README
@@ -28,14 +30,14 @@ When you create a repository in the `bcgov` organization, add the following mark
 - [Licence](#licence)
 - [ReadMe](#readme)
 - [Code of conduct](#code-of-conduct)
-- [Contribution guidelines](#contribution)
+- [Contribution guidelines](#contribution-guidelines)
 
-## Licence<a name="licence"></a>
+## Licence
 Choose a licence and place a licence file in your repository before you do anything else. For important information on licences, see [License your GitHub repository](/license-your-github-repository/).
 
 Depending on the licence you choose, add boilerplate text for the applicable licence to your README file.
 
-## ReadMe<a name="readme"></a>
+## ReadMe
 GitHub has extensive documentation on how to create a good README file for your repository. Follow these guidelines when you create your README.
 
 For more information, see [About READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes).
@@ -46,12 +48,12 @@ Make sure to include the following:
 - Depending on your licence, boilerplate text for the applicable licence. For more information, see [License your GitHub repository](/license-your-github-repository/)
 - A link to your code of conduct file
 
-## Code of conduct<a name="code-of-conduct"></a>
+## Code of conduct
 Write a clear code of conduct to ensure contributors to your project foster an open and welcoming environment.
 
 Two good starting points to create a code of conduct for your project are the [Contributor Covenant](https://www.contributor-covenant.org/version/1/4/code-of-conduct/) and GitHub's guidelines on [healthy contributions](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions).
 
-## Contribution guidelines<a name="contribution"></a>
+## Contribution guidelines
 Write concise and clear contribution guidelines. Let potential contributors know how you prefer they work on projects and give them the correct information to do so.
 
 For example, if you prefer contributors fork repositories and [submit pull requests](https://help.github.com/articles/using-pull-requests/), provide links to the applicable documentation.
