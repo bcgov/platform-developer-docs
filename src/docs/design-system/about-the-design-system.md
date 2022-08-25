@@ -24,21 +24,21 @@ The [BC Government Design System for Digital Services](https://developer.gov.bc.
 
 ## On this page
 
-- [Design system management](#management)
-- [How the design system works](#design-system)
-- [Contribute to the design system](#contribute)
+- [Design system management](#design-system-management)
+- [How the design system works](#how-the-design-system-works)
+- [Contribute to the design system](#contribute-to-the-design-system)
 
 Components are collectively built by the government community, meet accessibility standards and are open for input and improvement.
 
 Use the design system to customize B.C. government sites and applications. For more information about applying for external URLs, contact the B.C. government [Joint Working Group](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/digital-delivery/web-property-process/web-property-applications).
 
-## Design system management<a name="management"></a>
+## Design system management
 
 A team of designers, developers and the government community manage the design system. The system is part of DevHub, a project that brings together user interface and backend resources for digital teams.
 
 The design system is open source, which means that anybody can provide input, offer suggestions and get involved. The system is collectively built and maintained by the government community.
 
-## How the design system works<a name="design-system"></a>
+## How the design system works
 
 The design system gives developers the tools they need to build digital government products and services. Because the community produces all tools and resources, we're committed to:
 
@@ -48,7 +48,7 @@ The design system gives developers the tools they need to build digital governme
 
 - **Open-source development:** The system is built in GitHub and meant to be shared and improved by everyone. The code is open source and our work is in the open. We are transparent about how choices are made and tools are improved.
 
-## Contribute to the design system<a name="contribute"></a>
+## Contribute to the design system
 
 You can contribute to the design system by doing any of the following:
 
