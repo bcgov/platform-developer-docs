@@ -20,7 +20,7 @@ sort_order: 1
 
 # BC Government organizations in GitHub
 
-BC Gov Private Cloud PaaS product teams use <a href="https://github.com" target="_blank">GitHub</a> to host open code and repositories. Using GitHub you can:
+BC Gov Private Cloud PaaS product teams use [GitHub](https://github.com) to host open code and repositories. Using GitHub you can:
 * Share and control code versions
 * Use tools for team and project management
 * Track issues
@@ -30,15 +30,15 @@ BC Gov Private Cloud PaaS product teams use <a href="https://github.com" target=
 The main organization the B.C. government owns in GitHub is [bcgov](https://github.com/bcgov) where we store all open-source code developed by B.C. government teams. The `bcgov` organization includes close to 1000 repositories maintained by the B.C. government developer community.
 
 ## On this page
-- [Working in the open](#work-in-open)
-- [Organizations in GitHub](#gov-orgs)
-- [Ministry-specific private organizations in GitHub Enterprise](#ministry-private-orgs)
+- [Working in the open](#working-in-the-open)
+- [Organizations in GitHub](#organizations-in-github)
+- [Ministry-specific private organizations in GitHub Enterprise](#ministry-specific-private-organizations-in-github-enterprise)
 
-## Working in the open<a name="work-in-open"></a>
+## Working in the open
 
 The [Digital Principles for the Government of B.C.](https://digital.gov.bc.ca/resources/digital-principles) urge product teams to work in the open as outlined in principle five. GitHub is the leading platform for open-source projects. It allows the Province to collaborate with the open-source community to build software, support innovation and save time and money.
 
-## Organizations in GitHub<a name="gov-orgs"></a>
+## Organizations in GitHub
 
 The Province owns several GitHub organizations, which are described below.
 
@@ -62,7 +62,7 @@ Your product team can only have a **permanent**, private repository in `bcgov-c`
 * Only the Platform Services team can create repositories in this organization.
 * GitHub application integration (for example, SonarCloud testing) needs to be individually enabled for each repository. The Platform Services team approves all third-party application integration in all B.C. government organizations.
 
-## Ministry-specific private organizations in GitHub Enterprise<a name="ministry-private-orgs"></a>
+## Ministry-specific private organizations in GitHub Enterprise
 
 Ministry-specific **private** organizations must be linked to the B.C. government's Enterprise account (user licenses are required for the members of these organizations).
 
