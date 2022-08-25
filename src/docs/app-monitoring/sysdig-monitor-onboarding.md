@@ -26,8 +26,8 @@ sort_order: 1
 ### Here are the documents for you to follow through:
 
 1. [Set up a team in Sysdig Monitor](/sysdig-monitor-setup-team/)
-1. [Create alerts for metrics](/sysdig-monitor-create-alert-channels/)
-1. [Advanced usage in Sysdig Monitor](/sysdig-monitor-set-up-advanced-functions/)
+2. [Create alerts and notifications in Sysdig Monitor](/sysdig-monitor-create-alert-channels/)
+3. [Set up advanced metrics in Sysdig Monitor](/sysdig-monitor-set-up-advanced-functions/)
 
 If you have any questions about Sysdig or application monitoring, please contact the Platform Services team on the [#devops-sysdig Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig).
 
