@@ -22,9 +22,11 @@ sort_order: 3
 
 If something bad happens to your database, you will want to recover your application's data quickly, easily, and with up-to-date data. With that goal in mind, your data recovery plan should include these three considerations:
 
+- [Database backup basics](#database-backup-basics)
 - [Backing up your data](#backing-up-your-data)
 - [Recovering your data](#recovering-your-data)
 - [Monitoring your database](#monitoring-your-database)
+- [Automated backup solutions](#automated-backup-solutions)
 
 Don't forget: **Automate Everything!** You should automate every part of your data recovery plan, as much as possible! Automation makes your data recovery plan faster and more reliable.
 
