@@ -29,11 +29,11 @@ We use several different storage technologies in OpenShift. Currently, we have t
 * **S3 Object Storage**: Object-based storage that is available via a web-based API instead of through a mounted directory. A common implementation of this is the Amazon S3 API. This allows remote access storage over the internet that does not require directly attaching to a running system.
 
 ## On this page
-- [Storage services](#service)
+- [Storage services](#storage-services)
 - [Tools](#tools)
 - [Storage details](#storage-details)
 
-## Storage services<a name="service"></a>
+## Storage services
 
 We have access to the following storage services for the OpenShift platform.
 
@@ -69,7 +69,7 @@ This service replicates data between the two datacenters and the API endpoints a
 
 Object Storage Service is highly fault tolerant and uses erasure coding within the cluster, as well as asynchronous replication and automatic failover to the Calgary data center. The solution also offers configurable object versioning, allowing for file recovery. Due to the high fault tolerance, versioning and redundancy, most teams don't implement additional backups. A recommended design pattern would be to replace the application's Minio storage with the direct integration with the S3 API within the Object Storage Enterprise Services.
 
-## Tools<a name="tools"></a>
+## Tools
 
 You can use tools to manage your persistent storage beyond the features built into OpenShift.
 
@@ -77,7 +77,7 @@ You can use tools to manage your persistent storage beyond the features built in
 
 * **Migrating storage**: Another community supported repository is available to help with migrating data from one PVC to another (moving from one storageClass to another, moving to a larger PVC, etc). The repository is called [StorageMigration](https://github.com/BCDevOps/StorageMigration)
 
-## Storage details<a name="storage-details"></a>
+## Storage details
 
 ### Quotas
 All storage sizes are in GiB and backup quotas default to half the storage size. These quotas can be requested in the [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing) by a project's product owner or technical lead.
