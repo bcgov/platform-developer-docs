@@ -23,9 +23,9 @@ sort_order: 8
 If you plan to share code developed by or for the B.C. government, [evaluate the content](/evaluate-open-source-content/) and get approval from your deputy minister. Deputy ministers may choose to delegate this authority to ministry chief information officers (CIOs).
 
 ## On this page
-- [Post existing code or projects](#post-existing)
-- [Initiate new code or projects](#initiate)
-- [Contribute to outside code or projects](#contribute)
+- [Post existing code or projects](#post-existing-code-or-projects)
+- [Initiate new code or projects](#initiate-new-code-or-projects)
+- [Contribute to outside code or projects](#contribute-to-outside-code-or-projects)
 
 The B.C. government follows the Open Development Standard, which outlines the following:
 * [Minimum content requirements](/required-pages-for-github-repository/): README, contributing file, code of conduct and license
@@ -34,7 +34,7 @@ The B.C. government follows the Open Development Standard, which outlines the fo
 
 Generally, GitHub projects fall under one of the three following categories, with different key considerations depending on the type.
 
-## Post existing code or projects<a name="post-existing"></a>
+## Post existing code or projects
 
 Projects like this follow two basic approaches, but can vary.
 
@@ -60,7 +60,7 @@ In both cases, the basic steps to release the code are similar, while the implic
 
 If you are intending to maintain an active project, make sure to establish the appropriate processes and terms to manage contributions.
 
-## Initiate new code or projects<a name="initiate"></a>
+## Initiate new code or projects
 
 These are projects that you want to manage as an open-source, collaborative project.
 
@@ -69,7 +69,7 @@ These are projects that you want to manage as an open-source, collaborative proj
 - [Create the minimum required content](/required-pages-for-github-repository/).
 - Add a [Contributor Code of Conduct](http://contributor-covenant.org/) to your repository. This document lets people know that all are welcome to contribute, and that all who contribute pledge to make participation in the project a harassment-free experience for everyone. Include a code of conduct and provide a contact method (in the placeholder) so that people know how to report violations. Introduce the code of conduct in your `readme.md`.
 
-## Contribute to outside code or projects<a name="contribute"></a>
+## Contribute to outside code or projects
 
 There may be circumstances where it's useful and appropriate for employees to contribute to non-B.C. government repositories as a part of their work. In these cases, consider the following:
 
