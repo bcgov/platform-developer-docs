@@ -120,7 +120,7 @@ Backup problems can appear in two different ways:
 
 The second problem can remain hidden until you need the dump file. By then, it's too late, and you've lost data. In order to avoid this problem, your backup automation should include a step to recover your data into a temporary database. It should also include a test to make sure the expected data is present. Since you'll want to automate your recovery process anyway (as mentioned in [Recovering your data](#recovering-your-data)), this is a good opportunity to test it!
 
-Both the backup and recovery test should send notifications to your team. The Platform Team recommends that you send notifications of both successes and failures. That way, if some failure prevents a notification from being sent, you can still tell there's a problem. Most teams set up a Rocketchat webhook to recieve the status information of both the backup and recovery processes. Teams usually set up the webhook to post these messages to a private channel for the team.
+Both the backup and recovery test should send notifications to your team. The Platform Team recommends that you send notifications of both successes and failures. That way, if some failure prevents a notification from being sent, you can still tell there's a problem. Most teams set up a Rocket.Chat webhook to receive the status information of both the backup and recovery processes. Teams usually set up the webhook to post these messages to a private channel for the team.
 
 ## Recovering your data
 
