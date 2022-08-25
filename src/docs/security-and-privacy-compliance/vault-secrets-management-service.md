@@ -25,16 +25,16 @@ You can also still use Kubernetes Secrets backed by ETCD. It is recommended that
 Non-secrets may be stored in Vault if desired.
 
 ## On this page
-- [Features and Functions](#features-and-functions)
-- [Eligibility and Prerequisites](#eligibility-and-prerequisites)
-- [How to Request](#how-to-request)
+- [Features and functions](#features-and-functions)
+- [Eligibility and prerequisites](#eligibility-and-prerequisites)
+- [How to request access](#how-to-request-access)
 - [Availability](#availability)
 - [How do I get help?](#how-do-i-get-help)
 - [What does it cost?](#what-does-it-cost)
-- [Support Roles, Processes, Communications (platform ops)](#support)
-- [Service Delivery](#service-delivery)
+- [Support roles, processes, communications (platform operations)](#support-roles-processes-communications-platform-operations)
+- [Service delivery](#service-delivery)
 
-## Features and functions <a name="features-and-functions"></a>
+## Features and functions
 
 Users of this service gain access to the following:
 
@@ -55,20 +55,20 @@ All secrets in Vault have a lease associated with them. At the end of the lease,
 ### Revocation:
 Vault has built-in support for secret revocation. Vault can revoke not only single secrets, but a tree of secrets, for example all secrets read by a specific user, or all secrets of a particular type. Revocation assists in key rolling as well as locking down systems in the case of an intrusion.
 
-## Eligibility and prerequisites <a name="eligibility-and-prerequisites"></a>
+## Eligibility and prerequisites
 
 Your team is provisioned a Vault service account for each environment (dev, test, prod, and tools) through the automation backing the [Platform Services Registry](https://registry.developer.gov.bc.ca/public-landing). Each ProjectSet created in the registry can have up to two technical contacts associated with it. These technical contacts are given write access to Vault and can manage secrets within a ProjectSet's two mount points (nonprod, prod).
 
-## How to request access<a name="how-to-request"></a>
+## How to request access
 You don’t need to request access to Vault. If you have a project set, you have at least one technical contact who can access Vault through the CLI or UI, and you have a Kubernetes Service Account associated with your project set's Vault Mount Points in each namespace environment. (dev, test, prod, and tools).
 
 Service Accounts take the form of `licensePlate-vault`
 
-## Availability <a name="availability"></a>
+## Availability
 
 The Vault Secrets Management tool is deployed in a high-availability configuration within the highly available Gold clusters in OpenShift. This service is available 24/7 with best effort to restart failed systems.
 
-## How do I get help? <a name="help"></a>
+## How do I get help?
 
 The best source of help is the vibrant community of product teams using Vault for their projects.
 
@@ -76,11 +76,11 @@ You can find this highly talented and knowledgeable group in the [#devops-vault 
 
 For help beyond this contact one of the Vault administrators via the [#devops-sos channel on Rocket.Chat](https://chat.developer.gov.bc.ca/channel/devops-sos).
 
-## What does it cost? <a name="what-does-it-cost"></a>
+## What does it cost?
 
 There is no charge for this service.
 
-## Support roles, processes, communications (platform operations) <a name="support"></a>
+## Support roles, processes, communications (platform operations)
 
 The team supporting this service administers the Vault application and its supporting services.
 
@@ -92,7 +92,7 @@ For cluster wide service notifications that may impact Vault monitor, use the [#
 
 For teams without Rocket.Chat access or to escalate a question or concern, contact us by email at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca). 
 
-## Service delivery <a name="service-delivery"></a>
+## Service delivery
 
 ### Request workflows
 
