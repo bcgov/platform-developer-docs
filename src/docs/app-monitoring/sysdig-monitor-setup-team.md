@@ -27,14 +27,14 @@ The Sysdig Teams Operator runs in the cluster and enables a team to create and m
 For more information on Sysdig Monitor, see [Monitoring with Sysdig](%WORDPRESS_BASE_URL%/private-cloud/our-products-in-the-private-cloud-paas/monitoring-with-sysdig/).
 
 ## On this page
-- [Sign in to Sysdig](#sign-in-sysdig)
-- [Create Sysdig team access](#create-access)
-- [Verify Sysdig Team Creation](#verify-team-creation)
-- [Review your monitoring dashboards](#review-dashboards)
-- [Troubleshoot access issues](#troubleshooting)
+- [Sign in to Sysdig](#sign-in-to-sysdig)
+- [Create Sysdig team access](#create-sysdig-team-access)
+- [Verify Sysdig team creation](#verify-sysdig-team-creation)
+- [Review your monitoring dashboards](#review-your-monitoring-dashboards)
+- [Troubleshooting](#troubleshooting)
 
 
-## Sign in to Sysdig<a name="sign-in-sysdig"></a>
+## Sign in to Sysdig
 You and your team must sign in to Sysdig to create the user account. The B.C. government Sysdig uses OpenID Connect and requires a GitHub account.
 
 - Go to the [BCDevOps Sysdig Monitor](https://app.sysdigcloud.com/api/oauth/openid/bcdevops).
@@ -48,7 +48,7 @@ You and your team must sign in to Sysdig to create the user account. The B.C. go
   - **Note:** Sysdig identifies users by the email, so it's important to use the correct email address for yourself as well as your team members.
 
 
-## Create Sysdig Team Access<a name="create-access"></a>
+## Create Sysdig team access
 The OpenShift Operator runs in the background and creates a Sysdig team RBAC and dashboard for you. The operator looks for a `sysdig-team` custom resource from your `*-tools` namespace. There are two parts of work to create Sysdig team access.
 
 
@@ -95,7 +95,7 @@ oc project <PROJECT_SET_LICENSE_PLATE>-tools
 oc apply -f sysdig-team-sample.yaml
 ```
 
-## Verify Sysdig team creation<a name="verify-team-creation"></a>
+## Verify Sysdig team creation
 
 Use `oc describe sysdig-team <PROJECT_SET_LICENSE_PLATE>-sysdigteam` to validate that the Sysdig team was created:
 
@@ -151,7 +151,7 @@ To access them:
 ![Switch to the new sysdig team](../../images/sysdig-team-switch.png)
 
 
-## Review your monitoring dashboards<a name="review-dashboards"></a>
+## Review your monitoring dashboards
 
 You should see the following dashboard templates from your Sysdig team:
 - A resource dashboard template provides an overview of resource allocation for production namespace. You can make copies of it for different environments.
@@ -163,7 +163,7 @@ You should see the following dashboard templates from your Sysdig team:
 > **Note:** The Platform Services team recommends that you use the [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/) to keep your dashboards as code. Each dashboard is assigned to an account on Sysdig for ownership. If you delete the user (whether from the console or custom resource), all of the dashboards are deleted. Sysdig Cloud (SaaS) does not provide a service to retain the deleted dashboards for a user.
 
 
-## Troubleshooting <a name="troubleshooting"></a>
+## Troubleshooting
 
 - Error from `sysdig-team` custom resource: if you don't see `Awaiting next reconciliation` after waiting for 5 minutes, contact the Platform Services team on the [#devops-sysdig Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig). Make sure to include the OpenShift cluster and namespace information.
 
