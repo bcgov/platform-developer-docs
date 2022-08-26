@@ -75,6 +75,8 @@ The videos below can also be found on this [YouTube playlist](https://www.youtub
 - [Devcontainers and why developers love them](https://youtu.be/g3fvDQCEaK0)
 
 - [Repomountie Demo](https://youtu.be/Jkbj9Jav7ss)
+
+- [ACS-Jira Integration Demo](https://www.youtube.com/watch?v=h5nNHvRhYcI)
 ---
 Related links:
 - [External training resources](/training-external-resources/)
