@@ -98,4 +98,26 @@ Below is some information to consider when working with Stateless:
 *   Stateless scales horizontally with ease compared to Stateful
 *   Stateless apps can run on cache and run a lot faster than associating Persistent Storage.
 *   A Stateless application may require less storage to run the application. 
-*   Very easy to decouple and connect to additional micro-services.  
+*   Very easy to decouple and connect to additional micro-services.
+
+## Code Everything with Immutable Architectures ##
+Let's first cover what "Immutable" actually means. This means that there are no "in-place" configurations done against the running container. When developing images immutable is the way to go. If any configuration changes need to happen then they should happen within the image with a "shift-left" approach. Immutable architectures are:
+*   Consistent - This means that what is tested and reviewed is the same that is in production. If .devcontainers are utilized this could also mean that it's consistent in development as well. 
+*   Reliability - By having that sense of consistency when either developing or when pushing immutable architectures; will provide that reliability allowing the capability to expand elsewhere if errors occur. 
+*   Predictability - Chaos Engineering is already being put in place when using a shift-left approach and immutable architectures. For instance, the images change to be scanned for Common Vulnerabilities and Exposures (CVE)s as well as Dynamic Application Security Tested (DAST) propr to pushing to production. This provides a sense of predictability of what will be provided as the product. 
+
+### What does "shift-left" mean? ### 
+Shift-left is the process of testing the exact configuration or immutable architecture prior to pushing it into a cloud-native environment. Therefore by doing this it helps mitigate risk. 
+
+### Benefits with Immutable Architectures ###
+
+Removal of Configuration Drift
+First, let's define what is Configuration drift. Configuration Drift where environments are missing configuration items (CI)s. This process usually involves human error. Utilizing GitOps approaches and immutable architectures will help remove the configuration drift. 
+Simplified Toolchain for Delivery
+
+When using GitOps approaches, immutable architectures, and code everything approaches; this will help simplify the need for multiple Configuration Management processes and tools used to track the value stream. Utilizing GitOps will help remove the need for multiple tools within the toolchain which will help maximize the effort used in core tools. 
+*   Shared Responsibility Model
+When developing Cloud Native applications one of the first things to understand is what Shared Responsibility means. So let's identify what is Shared Responsibility in terms of Cloud Native. Shared responsibility is the understanding between the IaaS or PaaS and the customer. The customer contains a responsibility as well as the IaaS or PaaS. 
+
+Common Responsibility of the Customer:
+*   Application Security - In containerize orchestration, this would be in the sense of hardening the image. These could be Common Vulnerabilities and Exposure (CVEs), Application vulnerabilities with the code itself, penetration vulnerabilities, patch updating the image, and more. Another example could be Zero-Day attacks. These go hand in hand with CVEs but these types of attacks happen quickly and are to be fixed by the customer quickly if considered a high or critical level.
