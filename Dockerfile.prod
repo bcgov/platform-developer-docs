@@ -12,9 +12,9 @@ WORKDIR /app
 COPY package*.json .
 RUN npm install
 
-# Copy remaining files, run build script
+# Copy remaining files, run build script with no ANSI color codes
 COPY . .
-RUN ["npm", "run", "build"]
+RUN NO_COLOR=true npm run build
 
 # Production stage
 FROM nginxinc/nginx-unprivileged:1.20 as production-stage
