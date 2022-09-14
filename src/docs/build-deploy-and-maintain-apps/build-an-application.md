@@ -106,7 +106,7 @@ Let's first cover what "Immutable" actually means. This means that there are no 
 *   Reliability - By having that sense of consistency when either developing or when pushing immutable architectures; will provide that reliability allowing the capability to expand elsewhere if errors occur. 
 *   Predictability - Chaos Engineering is already being put in place when using a shift-left approach and immutable architectures. For instance, the images change to be scanned for Common Vulnerabilities and Exposures (CVE)s as well as Dynamic Application Security Tested (DAST) propr to pushing to production. This provides a sense of predictability of what will be provided as the product. 
 
-### What does "shift-left" mean? ### 
+### What does "shift-left" mean? ###
 Shift-left is the process of testing the exact configuration or immutable architecture prior to pushing it into a cloud-native environment. Therefore by doing this it helps mitigate risk. 
 
 ### Benefits with Immutable Architectures ###
