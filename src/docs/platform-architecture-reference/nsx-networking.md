@@ -1,3 +1,23 @@
+---
+title: NSX Networking 
+
+slug: nsx-networking
+
+description: 
+
+keywords: NSX, SDN, cluster, SNAT,  openshift
+
+page_purpose: 
+
+audience: technical lead, developer
+
+author: Steven Barre
+
+content_owner: Steven Barre
+
+sort_order: 
+---
+
 # NSX SDN Cluster <!-- omit in toc -->
 
 - [Segment](#segment)
