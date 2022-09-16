@@ -18,11 +18,14 @@ content_owner: Steven Barre
 sort_order: 
 ---
 
-# NSX networking <!-- omit in toc -->
+<!-- omit in toc -->
+# NSX networking
 
 The new Emerald cluster is running on VMware NSX and leveraging the SDN provided by it. There are several differences from the traditional OCP clusters documented here to assist product teams on getting up to speed with the NSX SDN cluster.
 
+<!-- omit in toc -->
 ## On this page
+
 - [API](#api)
   - [Web console](#web-console)
 - [Segment](#segment)
@@ -242,7 +245,7 @@ spec:
   egress:
   - to:
     - ipBlock:
-        cidr: 142.34.229.249
+        cidr: 142.34.229.249/32
     ports:
     - port: 8080
       protocol: TCP
@@ -255,7 +258,7 @@ spec:
 
 Most applications recognize the environment variables for proxies. Set them on your pod and see if things "just work".
 
-```
+```bash
 HTTP_PROXY=http://swpxkam.gov.bc.ca:8080
 HTTPS_PROXY=https://swpxkam.gov.bc.ca:8080
 NO_PROXY=.gov.bc.ca
