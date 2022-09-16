@@ -1,5 +1,5 @@
 ---
-title: NSX Networking 
+title: NSX networking 
 
 slug: nsx-networking
 
@@ -18,7 +18,7 @@ content_owner: Steven Barre
 sort_order: 
 ---
 
-# NSX SDN Cluster <!-- omit in toc -->
+# NSX networking
 
 - [API](#api)
   - [Web console](#web-console)
