@@ -5,7 +5,7 @@ slug: nsx-networking
 
 description: The new Emerald cluster is running on VMware NSX and leveraging the SDN provided by it. There are several differences from the traditional OCP clusters documented here to assist product teams on getting up to speed.
 
-keywords: NSX, SDN, cluster, SNAT,  openshift
+keywords: NSX, SDN, cluster, SNAT, OpenShift
 
 page_purpose: Educate product teams on the specific requirements for NSX clusters
 
