@@ -1,11 +1,11 @@
 ---
-title: NSX Networking 
+title: NSX networking 
 
 slug: nsx-networking
 
 description: The new Emerald cluster is running on VMware NSX and leveraging the SDN provided by it. There are several differences from the traditional OCP clusters documented here to assist product teams on getting up to speed.
 
-keywords: NSX, SDN, cluster, SNAT,  openshift
+keywords: NSX, SDN, cluster, SNAT, OpenShift
 
 page_purpose: Educate product teams on the specific requirements for NSX clusters
 
@@ -18,24 +18,27 @@ content_owner: Steven Barre
 sort_order: 
 ---
 
-# NSX SDN Cluster <!-- omit in toc -->
+# NSX networking
 
+The new Emerald cluster is running on VMware NSX and leveraging the SDN provided by it. There are several differences from the traditional OCP clusters documented here to assist product teams on getting up to speed with the NSX SDN cluster.
+
+## On this page
 - [API](#api)
-  - [Web Console](#web-console)
+  - [Web console](#web-console)
 - [Segment](#segment)
 - [SNAT IP](#snat-ip)
 - [NetPol differences](#netpol-differences)
   - [Egress](#egress)
   - [Route access](#route-access)
 - [Vault](#vault)
-- [Forward Proxy](#forward-proxy)
-- [Data Classification](#data-classification)
+- [Forward proxy](#forward-proxy)
+- [Data classification](#data-classification)
 
 ## API
 
 The API for the NSX clusters is still publicly available so that GitHub Actions and other external tools can connect.
 
-### Web Console
+### Web console
 
 The web console is limited to only within government networks. Please connect to the VPN or be on an office network to access the web console.
 
@@ -217,7 +220,7 @@ spec:
     - Egress
 ```
 
-## Forward Proxy
+## Forward proxy
 
 While the `*-tools` namespace has a public SNAT IP and can easily reach the internet, the rest of the namespaces cannot directly connect to the internet.
 
@@ -260,12 +263,12 @@ NO_PROXY=.gov.bc.ca
 
 The URL allowlist for the proxy is shared by the whole /16 subnet. So if you need access to additional URLs, please contact the Ops Team to request a change to the URL list.
 
-## Data Classification
+## Data classification
 
 In `*-tools` namespaces, all pods will be treated as having a `low` data classification, unless labeled otherwise. This is so that build pods, which can't be labeled, are treated properly by the guardrails.
 
 In all other namespaces, pods MUST have a label of `DataClass` with a value of either `Low`, `Medium`, or `High`. Unlabeled pods will be unable to communicate.
 
-`DataClass=Low` pods can optionally have a label of `Internet-Ingress=DENY` which prevents them from getting access via Routes, but then let's them talk to High Data Class workloads.
+`DataClass=Low` pods can optionally have a label of `Internet-Ingress=DENY` which prevents them from getting access via Routes, but then lets them talk to High Data Class workloads.
 
-You can read more about the [SDN Security Classification Model](https://bcgov.sharepoint.com/:w:/r/teams/04091/Shared%20Documents/SDN/Core%20Documents/SDN%20Security%20Classification%20Model.docx?d=wa10f5e8a5863475a9b6fc46d8b88e18f&csf=1&web=1&e=sZBEAc) on Sharepoint.
+You can read more about the [SDN Security Classification Model](https://bcgov.sharepoint.com/:w:/r/teams/04091/Shared%20Documents/SDN/Core%20Documents/SDN%20Security%20Classification%20Model.docx?d=wa10f5e8a5863475a9b6fc46d8b88e18f&csf=1&web=1&e=sZBEAc) by requesting access on Sharepoint.
