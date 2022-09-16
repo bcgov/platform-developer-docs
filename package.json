@@ -1,7 +1,7 @@
 {
   "name": "platform-developer-docs",
   "version": "0.0.1",
-  "description": "Gatbys front-end for display platform developer documentation",
+  "description": "React (Gatsby) front-end for the BC Government Private Cloud as a Service Platform Technical Documentation website",
   "main": "index.js",
   "scripts": {
     "build": "gatsby build --verbose",
