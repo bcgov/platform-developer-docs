@@ -20,6 +20,9 @@ sort_order:
 
 # NSX networking
 
+The new Emerald cluster is running on VMware NSX and leveraging the SDN provided by it. There are several differences from the traditional OCP clusters documented here to assist product teams on getting up to speed with the NSX SDN cluster.
+
+## On this page
 - [API](#api)
   - [Web console](#web-console)
 - [Segment](#segment)
