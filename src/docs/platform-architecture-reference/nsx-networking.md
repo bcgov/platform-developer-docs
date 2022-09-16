@@ -245,7 +245,7 @@ spec:
   egress:
   - to:
     - ipBlock:
-        cidr: 142.34.229.249
+        cidr: 142.34.229.249/32
     ports:
     - port: 8080
       protocol: TCP
