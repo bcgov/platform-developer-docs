@@ -21,21 +21,21 @@ sort_order:
 # NSX SDN Cluster <!-- omit in toc -->
 
 - [API](#api)
-  - [Web Console](#web-console)
+  - [Web console](#web-console)
 - [Segment](#segment)
 - [SNAT IP](#snat-ip)
 - [NetPol differences](#netpol-differences)
   - [Egress](#egress)
   - [Route access](#route-access)
 - [Vault](#vault)
-- [Forward Proxy](#forward-proxy)
-- [Data Classification](#data-classification)
+- [Forward proxy](#forward-proxy)
+- [Data classification](#data-classification)
 
 ## API
 
 The API for the NSX clusters is still publicly available so that GitHub Actions and other external tools can connect.
 
-### Web Console
+### Web console
 
 The web console is limited to only within government networks. Please connect to the VPN or be on an office network to access the web console.
 
@@ -217,7 +217,7 @@ spec:
     - Egress
 ```
 
-## Forward Proxy
+## Forward proxy
 
 While the `*-tools` namespace has a public SNAT IP and can easily reach the internet, the rest of the namespaces cannot directly connect to the internet.
 
@@ -260,7 +260,7 @@ NO_PROXY=.gov.bc.ca
 
 The URL allowlist for the proxy is shared by the whole /16 subnet. So if you need access to additional URLs, please contact the Ops Team to request a change to the URL list.
 
-## Data Classification
+## Data classification
 
 In `*-tools` namespaces, all pods will be treated as having a `low` data classification, unless labeled otherwise. This is so that build pods, which can't be labeled, are treated properly by the guardrails.
 
