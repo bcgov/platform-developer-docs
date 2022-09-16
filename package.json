@@ -17,7 +17,7 @@
     "url": "git+https://github.com/bcgov/platform-developer-docs.git"
   },
   "author": "Tyler Krys <Tyler.Krys@gov.bc.ca>",
-  "license": "ISC",
+  "license": "Apache-2.0",
   "bugs": {
     "url": "https://github.com/bcgov/platform-developer-docs/issues"
   },
