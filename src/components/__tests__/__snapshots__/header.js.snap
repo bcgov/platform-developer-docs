@@ -11,7 +11,7 @@ exports[`Header renders correctly 1`] = `
       className="sc-dkzDqf kgoWbv"
       href="/"
       style={
-        Object {
+        {
           "color": "white",
           "textDecoration": "none",
         }
