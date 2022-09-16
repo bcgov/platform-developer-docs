@@ -258,7 +258,7 @@ spec:
 
 Most applications recognize the environment variables for proxies. Set them on your pod and see if things "just work".
 
-```
+```bash
 HTTP_PROXY=http://swpxkam.gov.bc.ca:8080
 HTTPS_PROXY=https://swpxkam.gov.bc.ca:8080
 NO_PROXY=.gov.bc.ca
