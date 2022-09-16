@@ -269,6 +269,6 @@ In `*-tools` namespaces, all pods will be treated as having a `low` data classif
 
 In all other namespaces, pods MUST have a label of `DataClass` with a value of either `Low`, `Medium`, or `High`. Unlabeled pods will be unable to communicate.
 
-`DataClass=Low` pods can optionally have a label of `Internet-Ingress=DENY` which prevents them from getting access via Routes, but then let's them talk to High Data Class workloads.
+`DataClass=Low` pods can optionally have a label of `Internet-Ingress=DENY` which prevents them from getting access via Routes, but then lets them talk to High Data Class workloads.
 
-You can read more about the [SDN Security Classification Model](https://bcgov.sharepoint.com/:w:/r/teams/04091/Shared%20Documents/SDN/Core%20Documents/SDN%20Security%20Classification%20Model.docx?d=wa10f5e8a5863475a9b6fc46d8b88e18f&csf=1&web=1&e=sZBEAc) on Sharepoint.
+You can read more about the [SDN Security Classification Model](https://bcgov.sharepoint.com/:w:/r/teams/04091/Shared%20Documents/SDN/Core%20Documents/SDN%20Security%20Classification%20Model.docx?d=wa10f5e8a5863475a9b6fc46d8b88e18f&csf=1&web=1&e=sZBEAc) by requesting access on Sharepoint.
