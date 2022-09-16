@@ -250,7 +250,7 @@ spec:
   - Egress
 ```
 
-Most applications recognize the env vars for proxies. Set them on your pod and see if things "just work".
+Most applications recognize the environment variables for proxies. Set them on your pod and see if things "just work".
 
 ```
 HTTP_PROXY=http://swpxkam.gov.bc.ca:8080
