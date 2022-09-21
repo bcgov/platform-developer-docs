@@ -77,6 +77,8 @@ The videos below can also be found on this [YouTube playlist](https://www.youtub
 - [Repomountie Demo](https://youtu.be/Jkbj9Jav7ss)
 
 - [ACS-Jira Integration Demo](https://www.youtube.com/watch?v=h5nNHvRhYcI)
+
+- [Infrascructure as Code, Manifests & Templates Demo](https://youtu.be/GMuRFx1bHuw)
 ---
 Related links:
 - [External training resources](/training-external-resources/)
