@@ -29,6 +29,10 @@ The BC Gov Provate Cloud PaaS OpenShift 101 and 201 courses include a theory 'wo
 If the courses fill up, email PlatformServicesTeam@gov.bc.ca - preference is given to recently onboarded teams. If you’re unable to attend a training session, we will soon be offering recordings. 
 
 [Register for an OpenShift course](%WORDPRESS_BASE_URL%/private-cloud/support-and-community/platform-training-and-resources/).
+
+## How-to-workshops
+
+The [how to workshops](https://github.com/bcgov/how-to-workshops) page hosts some demo projects and quick start guides that may assist you in getting stared with network policies and Crunchy DB databases.  
  
  ## Video resources
 
