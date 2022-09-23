@@ -286,6 +286,10 @@ Nodes running out of memory can be more troublesome than CPU saturation. Regardl
 
 Because memory is incompressible, memory requests and limits should be a little more generous to mitigate pod eviction/termination.
 
+## Related training content
+
+The [OpenShift 101 & 201 training](/training-from-the-platform-services-team/) covers some of the principles of resource tuning. There is a related lab exercise and video demonstration [here](https://github.com/BCDevOps/devops-platform-workshops/blob/master/openshift-201/resource-mgmt.md)
+
 ---
 Related links:
 *
