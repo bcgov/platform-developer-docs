@@ -65,6 +65,10 @@ While teams can use GitHub Actions for both builds (CI) and deployments (CD), Ar
 
 If you want to contribute to a pipeline template, you can fork a repository and add more steps to the templates or make any modifications to improve the template. Submit a pull request and tag any of the platform administrators for review.
 
+## Related training content
+
+The [OpenShift 201 training](/training-from-the-platform-services-team/) features content related to using pipelines. There is a related lab exercise and video demonstration [here](https://github.com/BCDevOps/devops-platform-workshops/blob/master/openshift-201/pipelines.md)
+
 ---
 Related links:
 * [Security Pipeline Templates](https://github.com/bcgov/security-pipeline-templates)
