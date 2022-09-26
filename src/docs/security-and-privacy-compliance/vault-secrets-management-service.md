@@ -64,6 +64,8 @@ You don’t need to request access to Vault. If you have a project set, you have
 
 Service Accounts take the form of `licensePlate-vault`
 
+Here is the [step-by-step guild](https://github.com/bcgov/how-to-workshops/tree/master/vault) on integrating Vault into your application on OpenShift.
+
 ## Availability
 
 The Vault Secrets Management tool is deployed in a high-availability configuration within the highly available Gold clusters in OpenShift. This service is available 24/7 with best effort to restart failed systems.
