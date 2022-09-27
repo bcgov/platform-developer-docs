@@ -64,6 +64,8 @@ You don’t need to request access to Vault. If you have a project set, you have
 
 Service Accounts take the form of `licensePlate-vault`
 
+Here is the [step-by-step guide on integrating Vault](https://github.com/bcgov/how-to-workshops/tree/master/vault) into your application on OpenShift.
+
 ## Availability
 
 The Vault Secrets Management tool is deployed in a high-availability configuration within the highly available Gold clusters in OpenShift. This service is available 24/7 with best effort to restart failed systems.
@@ -119,8 +121,5 @@ An STRA for Vault has been completed by the Platform Services team.
 ---
 Related links:
 [Security Best Practices For Apps](/security-best-practices-for-apps/)
-
-Rewrite sources:
-* https://developer.gov.bc.ca/Platform-Services-Security/BC-Government-Vault-Secrets-Management
 
 ---
