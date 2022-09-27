@@ -64,7 +64,7 @@ You don’t need to request access to Vault. If you have a project set, you have
 
 Service Accounts take the form of `licensePlate-vault`
 
-Here is the [step-by-step guild](https://github.com/bcgov/how-to-workshops/tree/master/vault) on integrating Vault into your application on OpenShift.
+Here is the [step-by-step guide on integrating Vault](https://github.com/bcgov/how-to-workshops/tree/master/vault) into your application on OpenShift.
 
 ## Availability
 
