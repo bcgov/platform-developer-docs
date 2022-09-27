@@ -122,7 +122,4 @@ An STRA for Vault has been completed by the Platform Services team.
 Related links:
 [Security Best Practices For Apps](/security-best-practices-for-apps/)
 
-Rewrite sources:
-* https://developer.gov.bc.ca/Platform-Services-Security/BC-Government-Vault-Secrets-Management
-
 ---
