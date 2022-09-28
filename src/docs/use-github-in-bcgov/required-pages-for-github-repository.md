@@ -67,10 +67,7 @@ Related links:
 * [Contributor Covenant](https://www.contributor-covenant.org/version/1/4/code-of-conduct/)
 * [Healthy contributions](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions)
 * [Using pull requests](https://help.github.com/articles/using-pull-requests/)
-
-Rewrite sources:
-* https://developer.gov.bc.ca/Code-Management/Sample-Code-of-Conduct
-* https://developer.gov.bc.ca/Code-Management/Sample-Contributing-File
-* https://developer.gov.bc.ca/Code-Management/Sample-Readme-File
-* https://developer.gov.bc.ca/Github-Practices-in-Gov
+* [Sample code of conduct file](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/SAMPLE-CODE_OF_CONDUCT.md)
+* [Sample contributing file](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/SAMPLE-CONTRIBUTING.md)
+* [Sample readme file](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/SAMPLE-README.md)
 ---
