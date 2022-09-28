@@ -48,10 +48,14 @@ Make sure to include the following:
 - Depending on your licence, boilerplate text for the applicable licence. For more information, see [License your GitHub repository](/license-your-github-repository/)
 - A link to your code of conduct file
 
+See a [sample README file](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/SAMPLE-README.md).
+
 ## Code of conduct
 Write a clear code of conduct to ensure contributors to your project foster an open and welcoming environment.
 
 Two good starting points to create a code of conduct for your project are the [Contributor Covenant](https://www.contributor-covenant.org/version/1/4/code-of-conduct/) and GitHub's guidelines on [healthy contributions](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions).
+
+See a [sample code of conduct file](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/SAMPLE-CODE_OF_CONDUCT.md).
 
 ## Contribution guidelines
 Write concise and clear contribution guidelines. Let potential contributors know how you prefer they work on projects and give them the correct information to do so.
@@ -60,6 +64,8 @@ For example, if you prefer contributors fork repositories and [submit pull reque
 
 Make sure you're clear on the licence that applies to your repository and provide a link to relevant documentation.
 
+See a [sample contributing file](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/SAMPLE-CONTRIBUTING.md).
+
 ---
 Related links:
 * [About READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
@@ -67,7 +73,4 @@ Related links:
 * [Contributor Covenant](https://www.contributor-covenant.org/version/1/4/code-of-conduct/)
 * [Healthy contributions](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions)
 * [Using pull requests](https://help.github.com/articles/using-pull-requests/)
-* [Sample code of conduct file](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/SAMPLE-CODE_OF_CONDUCT.md)
-* [Sample contributing file](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/SAMPLE-CONTRIBUTING.md)
-* [Sample readme file](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/SAMPLE-README.md)
 ---
