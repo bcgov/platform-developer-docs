@@ -39,6 +39,10 @@ For more information on what is String Interperlation, review here: https://en.w
 
 ## Best Practices for Helm ##
 * Utilize Values to Dynamically change Static Values
+* Utilize Labels to find resources easier
+* Update Readme files and Update Helm Documentation
+* Test Charts 
+* Make reusable Charts by using Template Functions
 
 # Utilizing Source to Image to Deploy #
 Understanding source to image source to image is the capability of taking the source which in this case is a git repository and then processing it image. It is a tool that Red Hat created specifically for the OpenShift environment, allowing quickly the capability of building automatically from a git repository, the image that's going to be used to deploy into the OpenShift cluster
