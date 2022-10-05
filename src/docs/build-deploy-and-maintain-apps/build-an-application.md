@@ -102,7 +102,7 @@ Below is some information to consider when working with Stateless:
 
 ## Code Everything with Immutable Architectures ##
 Let's first cover what "Immutable" actually means. This means that there are no "in-place" configurations done against the running container. When developing images immutable is the way to go. If any configuration changes need to happen then they should happen within the image with a "shift-left" approach. Immutable architectures are:
-*   Consistent - This means that what is tested and reviewed is the same that is in production. If .devcontainers are utilized this could also mean that it's consistent in development as well. 
+*   Consistent - This means that what is tested and reviewed is the same that is in production. If .devcontainers are utilized this could also mean that it's consistent in development as well. 
 *   Reliability - By having that sense of consistency when either developing or when pushing immutable architectures; will provide that reliability allowing the capability to expand elsewhere if errors occur. 
 *   Predictability - Chaos Engineering is already being put in place when using a shift-left approach and immutable architectures. For instance, the images change to be scanned for Common Vulnerabilities and Exposures (CVE)s as well as Dynamic Application Security Tested (DAST) propr to pushing to production. This provides a sense of predictability of what will be provided as the product. 
 
@@ -121,3 +121,8 @@ When developing Cloud Native applications one of the first things to understand 
 
 Common Responsibility of the Customer:
 *   Application Security - In containerize orchestration, this would be in the sense of hardening the image. These could be Common Vulnerabilities and Exposure (CVEs), Application vulnerabilities with the code itself, penetration vulnerabilities, patch updating the image, and more. Another example could be Zero-Day attacks. These go hand in hand with CVEs but these types of attacks happen quickly and are to be fixed by the customer quickly if considered a high or critical level.
+
+## Utilizing Common Services in PaaS ##
+The PaaS does provide some common services that can be utilize to mitigiate risk and vunerbilites far left proior. These tools can be utilized while using Tekton (OpenShift) pipelines. 
+
+* SonarQube - SonarQube is a Code Quaility Scanning Tool. The tool contains various langugues that then verify best practices. Sonarqube can identify some vunerbilities but SonarQube is more of a best practice and code quaility tool than a Static Application Security Testing (SAST) tool. 
