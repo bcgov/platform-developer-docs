@@ -43,6 +43,7 @@ For more information on what is String Interperlation, review here: https://en.w
 * Update Readme files and Update Helm Documentation
 * Test Charts 
 * Make reusable Charts by using Template Functions
+* Utilize Lookup Functions to help remove Secret Regeneration
 
 # Utilizing Source to Image to Deploy #
 Understanding source to image source to image is the capability of taking the source which in this case is a git repository and then processing it image. It is a tool that Red Hat created specifically for the OpenShift environment, allowing quickly the capability of building automatically from a git repository, the image that's going to be used to deploy into the OpenShift cluster
@@ -71,7 +72,7 @@ You can and should use automation to build, test and deploy your application. Th
 If you apply the correct design principles, applications deployed on the OpenShift platform can avoid many of the common types of outages that  would be unavoidable if working with legacy infrastructure. See the [Application Resiliency Guidelines](/automation-and-resiliency/app-resiliency-guidelines) page for more information about these principles.
 
 ## Multi-node deployment
-
+It is highly recommended to utilize a Stateless architecture for deployment than a Stateful deployment.
 
 ## Resource Tuning
 [Application Resource Tuning](/application-resource-tuning)
