@@ -1,3 +1,23 @@
+---
+title: OpenShift Network Policies
+
+slug: openshift-network-policies
+
+description: Describes how to use Kubernetes Network Policies for an OpenShift product.
+
+keywords: knp, policy, nsx, network, zero trust, default deny, sdn
+
+page_purpose: Describes how to use Kubernetes Network Policies.
+
+audience: technical lead, developer
+
+author: Nick Corcoran
+
+content_owner: Olena Mitovska
+
+sort_order: 3
+---
+
 # OpenShift Network Policies
 
 Without a network policy in place, all pods in a namespace are accessible from other pods and network endpoints. To isolate one or more pods in a namespace, you can create NetworkPolicy objects in that namespace to indicate the allowed incoming connections. Namespace administrators can create and delete NetworkPolicy objects within their own namespaces. A 'deny by default' policy is automatically created and active in all namespaces on the platform. 
