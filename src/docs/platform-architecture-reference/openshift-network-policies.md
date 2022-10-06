@@ -3,7 +3,7 @@ title: OpenShift network policies
 
 slug: openshift-network-policies
 
-description: Describes how to use Kubernetes Network Policies for an OpenShift product.
+description: How to use Kubernetes Network Policies for an OpenShift product on the BCGov Private Cloud platform.
 
 keywords: knp, policy, nsx, network, zero trust, default deny, sdn
 
