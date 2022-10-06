@@ -159,7 +159,7 @@ The curl command should not complete and eventually time out.
 
 You can also try to navigate to the route URL from your browser.
 
-https://route-https-yourapp-dev.apps.silver.devops.gov.bc.ca/
+`https://route-https-yourapp-dev.apps.silver.devops.gov.bc.ca/`
 
 This should also fail. If it does seem to be working try from a incognito window or clearing your browsers cache.
 
