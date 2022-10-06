@@ -1,5 +1,5 @@
 ---
-title: OpenShift Network Policies
+title: OpenShift network policies
 
 slug: openshift-network-policies
 
@@ -18,7 +18,7 @@ content_owner: Olena Mitovska
 sort_order: 3
 ---
 
-# OpenShift Network Policies
+# OpenShift network policies
 
 Without a network policy in place, all pods in a namespace are accessible from other pods and network endpoints. To isolate one or more pods in a namespace, you can create NetworkPolicy objects in that namespace to indicate the allowed incoming connections. Namespace administrators can create and delete NetworkPolicy objects within their own namespaces. A 'deny by default' policy is automatically created and active in all namespaces on the platform. 
 
@@ -42,7 +42,7 @@ By using network policies declarative YAML this code becomes part of your applic
 The primary BC Gov OpenShift clusters are configured with OpenShift SDN networking which does not support Egress Network Policies.  This applies to the following OpenShift Clusters: CLAB, KLAB, SILVER, GOLD, GOLD-DR.  
 KLAB2 and Emerald clusters use a different SDN technology (VMWare NSX-T) which DOES support (and requires) Egress Network Policies.  Details on NSX Networking can be found here: https://cloud.gov.bc.ca/private-cloud/nsx-networking/
 
-## Network Policy Structure
+## NetworkPolicy structure
 
 
 ```yaml
@@ -125,7 +125,7 @@ contains a single from element allowing connections from Pods with the label rol
 
 contains two elements in the from array, and allows connections from Pods in the local Namespace with the label role=client, or from any Pod in any namespace with the label user=alice.
 
-## Deny By Default Policy
+## Deny by default policy
 
 You'll notice that there is a `platform-services-controlled-deny-by-default` network policy in your namespace that will show up even if you delete it! This is controlled by the platform administrators.
 
@@ -187,7 +187,7 @@ You can test out connectiving using a curl command :
 
 You should now recieve a response returning from the curl command.
 
-## Allow from OpenShift Router
+## Allow from OpenShift router
 
 As network traffic from the route flows through the OpenShift router pods to our http pods we'll need to allow traffic from those pods. We can do that with a `namespaceSelector` that matches the namespace the router pods live in.
 
@@ -210,7 +210,7 @@ spec:
 If you now try to access the route from your browser, it should be working.
 
 
-## Allow only from specific Pod & Port
+## Allow only from specific Pod & port
 
 If you want to only allow specific traffic to access a pod on a specific port you can do that too!
 
