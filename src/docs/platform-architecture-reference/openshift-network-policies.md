@@ -97,7 +97,7 @@ spec:
 * **podSelector:** This selects particular Pods in the same namespace as the NetworkPolicy which should be allowed as ingress sources or egress destinations.
 
 
-**NOTE:** namespaceSelector and podSelector can be used together in A single to/from entry that selects particular Pods within particular namespaces. Be careful to use correct YAML syntax!
+**NOTE:** namespaceSelector and podSelector can be used together in a single to/from entry that selects particular Pods within particular namespaces. Be careful to use correct YAML syntax!
 
 ```yaml
   ingress:
@@ -181,11 +181,11 @@ spec:
     - podSelector: {}
 ```
 
-You can test out connectiving using a curl command :
+You can test out connectivity using a curl command :
 
 `oc -n [-dev] rsh [pod1 name] curl -v [pod2 ip]:8080`
 
-You should now recieve a response returning from the curl command.
+You should now receive a response returning from the curl command.
 
 ## Allow from OpenShift router
 
