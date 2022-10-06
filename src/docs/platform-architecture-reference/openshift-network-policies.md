@@ -244,7 +244,7 @@ If you would like a more in-depth testing of pod-to-pod or ingress/egress commun
 https://github.com/BCDevOps/devops-platform-workshops/blob/master/openshift-201/network-policy.md
 
 
-## Links
+## Related links
 
 * https://docs.openshift.com/container-platform/4.8/networking/ovn_kubernetes_network_provider/about-ovn-kubernetes.html
 * https://kubernetes.io/docs/concepts/services-networking/network-policies/
