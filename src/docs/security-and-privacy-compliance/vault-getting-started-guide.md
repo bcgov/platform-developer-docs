@@ -65,7 +65,7 @@ For each Openshift Project Set ($LICENSE_PLATE-dev/test/prod/tools - eg: abc123-
 
 5. Click **Sign In** and login with github through SSO
 
-![vault-login.gif](assets/gifs/vault-login.gif)
+![vault-login.gif](../../images/vault-login.gif)
 
 #### Vault CLI
 
@@ -196,7 +196,7 @@ $LICENSE_PLATE-prod                     #secret engine
 
 #### Sample Deployment using the Kubernetes Service Account
 
-When you look at the [getting-started-demo](./getting-started-demo/README.md) you'll see there's already a deployment template to assist. The three important parts of this vault demo are:
+When you look at the [getting-started-demo](https://github.com/bcgov/platform-services-vault-demo-app) you'll see there's already a deployment template to assist. The three important parts of this vault demo are:
 - part 1 - `annotations`
 - part 2 - `serviceaccount`
 - part 3 - source secret file
