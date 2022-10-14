@@ -24,20 +24,18 @@ The Vault service is available at [https://vault.developer.gov.bc.ca/](https://v
 
 In this guide, you will learn how to access Vault and deploy a working example using sample secrets from your Vault Mount Points. Mount Points can be thought of as "MiniVaults" or related to paths within a linux filesystem that can be locked down and secured.
 
-## Table of Contents
+## On this page
 
-* [Vault - Getting Started Guide](#vault---getting-started-guide)
-   * [Table of Contents](#table-of-contents)
-   * [Access](#access)
-      * [User Access - Manage Vault Secret Resources](#user-access)
-         * [login to Vault UI](#vault-ui)
-         * [login to Vault CLI](#vault-cli)
-         * [Verify your Vault resources](#verify-your-vault-resources)
-      * [Kubernetes Service Account Access - Application Secret Usage](#kubernetes-service-account-access)
-         * [Vault Secret Structures](#vault-secret-structures)
-         * [Sample Deployment using the Kubernetes Service Account](#sample-deployment-using-the-kubernetes-service-account)
-   * [Support](#support)
-   * [References](#references)
+- [Access](#access)
+  - [User access for managing Vault secret resources](#user-access-for-managing-vault-secret-resources)
+    - [Log in to Vault UI](#log-in-to-vault-ui)
+    - [Log in to Vault CLI](#log-in-to-vault-cli)
+    - [Verify your Vault resources](#verify-your-vault-resources)
+  - [Kubernetes Service Account Access for application secret usage](#kubernetes-service-account-access-for-application-secret-usage)
+    - [Vault secret structures](#vault-secret-structures)
+    - [Sample deployment using the Kubernetes Service Account](#sample-deployment-using-the-kubernetes-service-account)
+- [Support](#support)
+- [References](#references)
 
 ## Access
 
@@ -47,13 +45,13 @@ There are two types of access to manage secrets on Vault,
 
 User Access gives authorized users the ability to create and write secrets, while KSA Access only provides read access, which is used for application pods to full secret values from Vault.
 
-### User access
+### User access for managing Vault secret resources
 
 User Access is controlled through a combination of RedHat Single-Sign On (KeyCloak) and automation integrated with the [Platform Services Registry]((https://registry.developer.gov.bc.ca/)).
 
 For each Openshift Project Set ($LICENSE_PLATE-dev/test/prod/tools - eg: abc123-dev, abc123-test, abc123-prod, abc123-tools), up to two Technical Contacts would be grant access to Vault due to license limitation. These technical contacts will be given write access to the Mount Points set up by the registry.
 
-#### Vault UI
+#### Log in to Vault UI
 
 1. Head over to <https://vault.developer.gov.bc.ca/>
 
@@ -67,7 +65,7 @@ For each Openshift Project Set ($LICENSE_PLATE-dev/test/prod/tools - eg: abc123-
 
 ![vault-login.gif](../../images/vault-login.gif)
 
-#### Vault CLI
+#### Log in to Vault CLI
 
 1. Set Environment Variables
 
@@ -156,7 +154,7 @@ Each secret engine has been provisioned with a sample `helloworld` secret. Confi
     hello    world
     ```
 
-### Kubernetes Service Account Access
+### Kubernetes Service Account Access for application secret usage
 
 Kubernetes Service Account (KSA) Access is configured using k8s authentication. Vault is configured with a unique k8s auth path for each cluster that has Vault enabled.
 
