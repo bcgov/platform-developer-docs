@@ -244,7 +244,9 @@ const IndexPage = ({ location }) => {
           <Card>
             <h3>Platform architecture reference</h3>
             <ul>
-              <li>Platform storage (coming soon)</li>
+              <li>
+                <Link to={"/platform-storage/"}>Platform storage</Link>
+              </li>
               <li>Platform architecture (coming soon)</li>
             </ul>
           </Card>
