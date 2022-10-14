@@ -1,5 +1,5 @@
 ---
-title: Vault - Getting Started Guide
+title: Vault getting started guide
 
 slug: vault-getting-started-guide
 
@@ -16,7 +16,7 @@ author: Shelly Han
 content_owner: Shelly Han
 ---
 
-# Vault - Getting Started Guide
+# Vault getting started guide
 
 The Platform Services team has deployed Hashicorp's Vault application with disaster recovery in our Gold service clusters (Gold Kamloops and Gold Calgary), the service is available to all BC Government Development Teams on **both** the Silver and Gold service clusters. 
 
@@ -47,7 +47,7 @@ There are two types of access to manage secrets on Vault,
 
 User Access gives authorized users the ability to create and write secrets, while KSA Access only provides read access, which is used for application pods to full secret values from Vault.
 
-### User Access
+### User access
 
 User Access is controlled through a combination of RedHat Single-Sign On (KeyCloak) and automation integrated with the [Platform Services Registry]((https://registry.developer.gov.bc.ca/)).
 
@@ -162,7 +162,7 @@ Kubernetes Service Account (KSA) Access is configured using k8s authentication. 
 
 The Vault KSA name takes the form of `$LICENSE_PLATE-vault` in all project set namespaces. This service account should be used for the Resource that will control your pods (from Deployments, StatefulSets, etc). Additional Roles can be Bound to this KSA through a RoleBinding with the desired Role if application requires it.
 
-#### Vault Secret Structures
+#### Vault secret structures
 
 We organized our secrets as follows:
 
@@ -194,7 +194,7 @@ $LICENSE_PLATE-prod                     #secret engine
 
 > NOTE: Don't use a hyphen in a "key".  Vault will accept the value but it's problematic in the Openshift templates which shows up as an error in the vault-init container.
 
-#### Sample Deployment using the Kubernetes Service Account
+#### Sample deployment using the Kubernetes Service Account
 
 When you look at the [getting-started-demo](https://github.com/bcgov/platform-services-vault-demo-app) you'll see there's already a deployment template to assist. The three important parts of this vault demo are:
 - part 1 - `annotations`
