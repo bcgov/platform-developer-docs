@@ -14,6 +14,8 @@ audience: developer, technical lead
 author: Shelly Han
 
 content_owner: Shelly Han
+
+sort_order: 3
 ---
 
 # Vault getting started guide

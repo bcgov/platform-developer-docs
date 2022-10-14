@@ -14,6 +14,8 @@ audience: developer, technical lead
 author: Matt Spencer 
 
 content_owner: Cailey Jones
+
+sort_order: 2
 ---
 
 # Vault secrets management

@@ -14,6 +14,8 @@ audience: developer, technical lead
 author: Matt Spencer 
 
 content_owner: Nick Corcoran
+
+sort_order: 1
 ---
 
 # Security best practices for apps
