@@ -194,7 +194,7 @@ $LICENSE_PLATE-prod                     #secret engine
 
 #### Sample deployment using the Kubernetes Service Account
 
-When you look at the [getting-started-demo](https://github.com/bcgov/platform-services-vault-demo-app) you'll see there's already a deployment template to assist. The three important parts of this vault demo are:
+When you look at the [vault-demo-app](https://github.com/bcgov/platform-services-vault-demo-app) you'll see there's already a deployment template to assist. The three important parts of this vault demo are:
 - part 1 - `annotations`
 - part 2 - `serviceaccount`
 - part 3 - source secret file
