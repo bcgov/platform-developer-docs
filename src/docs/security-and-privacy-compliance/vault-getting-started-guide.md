@@ -47,7 +47,7 @@ User Access gives authorized users the ability to create and write secrets, whil
 
 ### User access for managing Vault secret resources
 
-User Access is controlled through a combination of RedHat Single-Sign On (KeyCloak) and automation integrated with the [Platform Services Registry]((https://registry.developer.gov.bc.ca/)).
+User Access is controlled through a combination of RedHat Single-Sign On (KeyCloak) and automation integrated with the [Platform Services Registry](https://registry.developer.gov.bc.ca/).
 
 For each Openshift Project Set ($LICENSE_PLATE-dev/test/prod/tools - eg: abc123-dev, abc123-test, abc123-prod, abc123-tools), up to two Technical Contacts would be grant access to Vault due to license limitation. These technical contacts will be given write access to the Mount Points set up by the registry.
 
