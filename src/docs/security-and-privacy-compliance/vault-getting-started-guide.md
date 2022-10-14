@@ -18,11 +18,11 @@ content_owner: Shelly Han
 
 # Vault getting started guide
 
-The Platform Services team has deployed Hashicorp's Vault application with disaster recovery in our Gold service clusters (Gold Kamloops and Gold Calgary), the service is available to all BC Government Development Teams on **both** the Silver and Gold service clusters. 
+The Platform Services team has deployed Hashicorp's Vault application with disaster recovery in our Gold service clusters (Gold Kamloops and Gold Calgary), the service is available to all BC Government development teams on **both** the Silver and Gold service clusters. 
 
 The Vault service is available at [https://vault.developer.gov.bc.ca/](https://vault.developer.gov.bc.ca/).
 
-In this guide, you will learn how to access Vault and deploy a working example using sample secrets from your Vault Mount Points. Mount Points can be thought of as "MiniVaults" or related to paths within a linux filesystem that can be locked down and secured.
+In this guide, you will learn how to access Vault and deploy a working example using sample secrets from your Vault Mount Points. Mount Points can be thought of as "MiniVaults" or related to paths within a Linux filesystem that can be locked down and secured.
 
 ## On this page
 
@@ -47,9 +47,9 @@ User Access gives authorized users the ability to create and write secrets, whil
 
 ### User access for managing Vault secret resources
 
-User Access is controlled through a combination of RedHat Single-Sign On (KeyCloak) and automation integrated with the [Platform Services Registry](https://registry.developer.gov.bc.ca/).
+User Access is controlled through a combination of Red Hat Single-Sign On (KeyCloak) and automation integrated with the [Platform Services Registry](https://registry.developer.gov.bc.ca/).
 
-For each Openshift Project Set ($LICENSE_PLATE-dev/test/prod/tools - eg: abc123-dev, abc123-test, abc123-prod, abc123-tools), up to two Technical Contacts would be grant access to Vault due to license limitation. These technical contacts will be given write access to the Mount Points set up by the registry.
+For each OpenShift Project Set ($LICENSE_PLATE-dev/test/prod/tools - eg: abc123-dev, abc123-test, abc123-prod, abc123-tools), up to two technical contacts would be grant access to Vault due to license limitation. These technical contacts will be given write access to the Mount Points set up by the registry.
 
 #### Log in to Vault UI
 
@@ -61,7 +61,7 @@ For each Openshift Project Set ($LICENSE_PLATE-dev/test/prod/tools - eg: abc123-
 
 4. Enter your `LICENSE_PLATE` for the **Role** (example uses `abc123` as the `LICENSE_PLATE`)
 
-5. Click **Sign In** and login with github through SSO
+5. Click **Sign In** and login with GitHub through SSO
 
 ![vault-login.gif](../../images/vault-login.gif)
 
@@ -158,7 +158,7 @@ Each secret engine has been provisioned with a sample `helloworld` secret. Confi
 
 Kubernetes Service Account (KSA) Access is configured using k8s authentication. Vault is configured with a unique k8s auth path for each cluster that has Vault enabled.
 
-The Vault KSA name takes the form of `$LICENSE_PLATE-vault` in all project set namespaces. This service account should be used for the Resource that will control your pods (from Deployments, StatefulSets, etc). Additional Roles can be Bound to this KSA through a RoleBinding with the desired Role if application requires it.
+The Vault KSA name takes the form of `$LICENSE_PLATE-vault` in all project set namespaces. This service account should be used for the Resource that will control your pods (from Deployments, StatefulSets, etc). Additional Roles can be bound to this KSA through a RoleBinding with the desired Role if application requires it.
 
 #### Vault secret structures
 
@@ -190,7 +190,7 @@ $LICENSE_PLATE-prod                     #secret engine
 -     |---prod_service_account_pass     #secret data
 ```
 
-> NOTE: Don't use a hyphen in a "key".  Vault will accept the value but it's problematic in the Openshift templates which shows up as an error in the vault-init container.
+> NOTE: Don't use a hyphen in a "key".  Vault will accept the value but it's problematic in the OpenShift templates which shows up as an error in the vault-init container.
 
 #### Sample deployment using the Kubernetes Service Account
 
@@ -268,7 +268,7 @@ spec:
 
 **Part 2 - Vault Service Account**
 
-Note the additional line under spec with `2. Service Account`. This is the service account that is needed to connect to the Vault. This account has been created already for you in Openshift so on the surface it's straight forward.
+Note the additional line under spec with `2. Service Account`. This is the service account that is needed to connect to the Vault. This account has been created already for you in OpenShift so on the surface it's straight forward.
 
 There's a issue to be aware of with using this service account (SA): your application container will also use this SA to pull images and for management. So if you are using an image from tools namespace, make sure to add an ImagePuller rolebinding to the SA. If you are using Artifactory, add the imagePullSecrets to either the SA or the deployment spec.
 
