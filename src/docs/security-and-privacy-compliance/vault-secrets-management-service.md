@@ -14,6 +14,8 @@ audience: developer, technical lead
 author: Matt Spencer 
 
 content_owner: Cailey Jones
+
+sort_order: 2
 ---
 
 # Vault secrets management
@@ -64,7 +66,7 @@ You don’t need to request access to Vault. If you have a project set, you have
 
 Service Accounts take the form of `licensePlate-vault`
 
-Here is the [step-by-step guide on integrating Vault](https://github.com/bcgov/how-to-workshops/tree/master/vault) into your application on OpenShift.
+Here is the [step-by-step guide on integrating Vault](/vault-getting-started-guide/) into your application on OpenShift.
 
 ## Availability
 
@@ -120,6 +122,6 @@ An STRA for Vault has been completed by the Platform Services team.
 
 ---
 Related links:
-[Security Best Practices For Apps](/security-best-practices-for-apps/)
-
+- [Vault getting started guide](/vault-getting-started-guide/)
+- [Security best practices for apps](/security-best-practices-for-apps/)
 ---
