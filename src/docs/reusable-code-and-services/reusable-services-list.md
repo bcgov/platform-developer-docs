@@ -21,7 +21,6 @@ sort_order: 2
 Find details on the following services or tools you can use as part of your project in `bcgov`.
 
 ## On this page
-- [Messaging Common service](#messaging-common-service)
 - [Backup Container](#backup-container)
 - [BC Address Geocoder](#bc-address-geocoder)
 - [Common Document Generation service](#common-document-generation-service)
@@ -35,19 +34,6 @@ Find details on the following services or tools you can use as part of your proj
 - [SonarQube in Private Cloud PaaS](#sonarqube-in-the-bc-gov-private-cloud-paas)
 - [SonarQube on OpenShift](#sonarqube-on-openshift)
 - [WeasyPrint HTML to PDF/PNG](#weasyprint-html-to-pdfpng-microservice)
-
-## Messaging Common service
-The Common Messaging service (CMSG) is an API for sending messages to internal and external users through SMTP and SMS. You can access the CMSG programmatically through the CMSG-MESSAGING-API. For more information, see the following resources:
-* [GitHub repository](https://github.com/bcgov/nr-messaging-service-showcase)
-* [About the Messaging Common Service](https://developer.gov.bc.ca/Community-Contributed-Content/About-the-Messaging-Common-Service)
-* [Messaging Service Developer Guide](https://developer.gov.bc.ca/Community-Contributed-Content/Messaging-Service-Developer-Guide)
-
-### Features
-The CMSG implements a REST API to Oracle’s User Messaging Service, part of the Oracle Fusion Middleware stack. Oracle software gives you the ability to delay sending messages and check message statuses. Guaranteed delivery is also an option.
-
-However, you can't currently send SMS content through the CMSG-MESSAGING-API, use timed email release or guaranteed email delivery. You can also add attachments to messages, but only PDF documents currently.
-
-The API supports HTML content. The value of mediaType in the request should be text or HTML to render HTML content in the email.
 
 ## Backup Container
 
