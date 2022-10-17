@@ -23,8 +23,9 @@ Find details on the following services or tools you can use as part of your proj
 ## On this page
 - [Backup Container](#backup-container)
 - [BC Address Geocoder](#bc-address-geocoder)
-- [Common Document Generation service](#common-document-generation-service)
-- [Common Hosted Email service](#common-hosted-email-service)
+- [Common Document Generation Service](#common-document-generation-service)
+- [Common Hosted Email Service](#common-hosted-email-service)
+- [Common Object Management Service](#common-object-management-service)
 - [Common Services Get Token](#common-services-get-token)
 - [Fathom](#fathom)
 - [go-crond](#go-crond)
