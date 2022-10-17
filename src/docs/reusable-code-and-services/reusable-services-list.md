@@ -21,11 +21,11 @@ sort_order: 2
 Find details on the following services or tools you can use as part of your project in `bcgov`.
 
 ## On this page
-- [Messaging Common service](#messaging-common-service)
 - [Backup Container](#backup-container)
 - [BC Address Geocoder](#bc-address-geocoder)
-- [Common Document Generation service](#common-document-generation-service)
-- [Common Hosted Email service](#common-hosted-email-service)
+- [Common Document Generation Service](#common-document-generation-service)
+- [Common Hosted Email Service](#common-hosted-email-service)
+- [Common Object Management Service](#common-object-management-service)
 - [Common Services Get Token](#common-services-get-token)
 - [Fathom](#fathom)
 - [go-crond](#go-crond)
@@ -35,19 +35,6 @@ Find details on the following services or tools you can use as part of your proj
 - [SonarQube in Private Cloud PaaS](#sonarqube-in-the-bc-gov-private-cloud-paas)
 - [SonarQube on OpenShift](#sonarqube-on-openshift)
 - [WeasyPrint HTML to PDF/PNG](#weasyprint-html-to-pdfpng-microservice)
-
-## Messaging Common service
-The Common Messaging service (CMSG) is an API for sending messages to internal and external users through SMTP and SMS. You can access the CMSG programmatically through the CMSG-MESSAGING-API. For more information, see the following resources:
-* [GitHub repository](https://github.com/bcgov/nr-messaging-service-showcase)
-* [About the Messaging Common Service](https://developer.gov.bc.ca/Community-Contributed-Content/About-the-Messaging-Common-Service)
-* [Messaging Service Developer Guide](https://developer.gov.bc.ca/Community-Contributed-Content/Messaging-Service-Developer-Guide)
-
-### Features
-The CMSG implements a REST API to Oracle’s User Messaging Service, part of the Oracle Fusion Middleware stack. Oracle software gives you the ability to delay sending messages and check message statuses. Guaranteed delivery is also an option.
-
-However, you can't currently send SMS content through the CMSG-MESSAGING-API, use timed email release or guaranteed email delivery. You can also add attachments to messages, but only PDF documents currently.
-
-The API supports HTML content. The value of mediaType in the request should be text or HTML to render HTML content in the email.
 
 ## Backup Container
 
@@ -79,29 +66,27 @@ For more information on the BC Address Geocoder, see the following pages:
 * [BC Address Geocoder Developer Guide](https://developer.gov.bc.ca/Community-Contributed-Content/BC-Address-Geocoder-Developer-Guide)
 * [BC Address Geocoder repository](https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS)
 
-## Common Document Generation service
+## Common Document Generation Service
 
-Use the Document Generation service (DGEN) to generate documents using template files that contain field values from a database. Once generated, the completed document is stored in the Document Management Service (DMS) repository where you can view and sign it with an electronic signature. You must access DGEN programmatically through the DGEN-API (`https://api.nrs.gov.bc.ca/dgen-api/`). You can find a description of the API in the [Natural Resource Ministry's (NRM) API Store](https://apistore.nrs.gov.bc.ca/store/apis/info?name=dgen-api&version=v1&provider=admin).
+Use the Common Document Generation Service (CDOGS) to generate PDF or XML-based documents (ex: docx, xlsx, pptx, odt, ods, odp, and html). The CDOGS API can merge complex datasets into document templates. It supports any XML-based document templates including but not limited to Microsoft Office, LibreOffice, and OpenOffice.
 
-### Features
+For more information on CDOGS, see the following pages:
+* [Common Document Generation Service (CDOGS) product overview](https://digital.gov.bc.ca/common-components/common-document-generation-service)
+* [Common Document Generation Service (CDOGS) documentation](https://bcgov.github.io/common-service-showcase/services/cdogs.html)
 
-DGEN is based upon a commercial product from [Windward](https://www.windwardstudios.com/). The DGEN-API exposes some of the services provided by Windward's document generation engine and provides a layer of abstraction between the Windward commercial product and users of the DGEN service. If needed, Windward can be changed out at a later date and replaced by an open-source product without changes to the DGEN-API.
+## Common Hosted Email Service
 
-Some business areas within NRM built customized document generation engines (for example, Crown Lands, e-Licensing). However, they tend to be maintenance intensive, are limited to specific business areas and technologies, and require updates each time Microsoft Office is updated.
+Use the Common Hosted Email Service (CHES) to send emails programmatically. For more information on CHES, see the following pages:
+* [Common Hosted Email Service (CHES) product overview](https://digital.gov.bc.ca/common-components/common-hosted-email-service)
+* [Common Hosted Email Service (CHES) documentation](https://bcgov.github.io/common-service-showcase/services/ches.html)
 
-The Windward document generation engine is a server-based process that can be used by any business area within the NRM. It's compatible with Microsoft Office tools, but unlike Microsoft Office macros, the Windward document templates are XML-based and have minimal dependencies on specific versions of Microsoft Office. DGEN uses XML template files that are developed using Windward's Template Designer plug-in.
+## Common Object Management Service
 
-Windward offers a number of [quick-start materials](https://www.windwardstudios.com/resources/quick-start).
+Using the Common Object Management Service (COMS), take advantage of more cost-effective storage solutions for your new or existing business applications with an authorization and authentication method that suits your application’s business requirements. COMS is a secure REST API that lets you connect your application to any S3 bucket.
 
-For more information on DGEN, see the following pages:
-* [DGEN Developer's Guide](https://developer.gov.bc.ca/Community-Contributed-Content/DGEN-Developer's-Guide)
-* [Document Generation Showcase](https://github.com/bcgov/document-generation-showcase)
-
-## Common Hosted Email service
-
-The Common Hosted Email service is hosted by the `bcgov` organization. For more information on the application, see the following pages:
-* [Common Hosted Email service](https://bcgov.github.io/common-hosted-email-service/app/)
-* [common-hosted-email-service repository](https://github.com/bcgov/common-hosted-email-service)
+For more information on COMS, see the following pages:
+* [Common Object Management Service (COMS) product overview](https://digital.gov.bc.ca/common-components/common-object-management-service)
+* [Common Object Management Service (COMS) documentation](https://bcgov.github.io/common-service-showcase/services/coms.html)
 
 ## Common Services Get Token
 
