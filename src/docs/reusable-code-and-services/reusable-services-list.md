@@ -73,9 +73,11 @@ For more information on CDOGS, see the following pages:
 * [Common Document Generation Service (CDOGS) product overview](https://digital.gov.bc.ca/common-components/common-document-generation-service)
 * [Common Document Generation Service (CDOGS) documentation](https://bcgov.github.io/common-service-showcase/services/cdogs.html)
 
-DGEN is based upon a commercial product from [Windward](https://www.windwardstudios.com/). The DGEN-API exposes some of the services provided by Windward's document generation engine and provides a layer of abstraction between the Windward commercial product and users of the DGEN service. If needed, Windward can be changed out at a later date and replaced by an open-source product without changes to the DGEN-API.
+## Common Hosted Email Service
 
-Some business areas within NRM built customized document generation engines (for example, Crown Lands, e-Licensing). However, they tend to be maintenance intensive, are limited to specific business areas and technologies, and require updates each time Microsoft Office is updated.
+Use the Common Hosted Email Service (CHES) to send emails programmatically. For more information on CHES, see the following pages:
+* [Common Hosted Email Service (CHES) product overview](https://digital.gov.bc.ca/common-components/common-hosted-email-service)
+* [Common Hosted Email Service (CHES) documentation](https://bcgov.github.io/common-service-showcase/services/ches.html)
 
 The Windward document generation engine is a server-based process that can be used by any business area within the NRM. It's compatible with Microsoft Office tools, but unlike Microsoft Office macros, the Windward document templates are XML-based and have minimal dependencies on specific versions of Microsoft Office. DGEN uses XML template files that are developed using Windward's Template Designer plug-in.
 
