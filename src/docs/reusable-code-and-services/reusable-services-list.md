@@ -65,11 +65,13 @@ For more information on the BC Address Geocoder, see the following pages:
 * [BC Address Geocoder Developer Guide](https://developer.gov.bc.ca/Community-Contributed-Content/BC-Address-Geocoder-Developer-Guide)
 * [BC Address Geocoder repository](https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS)
 
-## Common Document Generation service
+## Common Document Generation Service
 
-Use the Document Generation service (DGEN) to generate documents using template files that contain field values from a database. Once generated, the completed document is stored in the Document Management Service (DMS) repository where you can view and sign it with an electronic signature. You must access DGEN programmatically through the DGEN-API (`https://api.nrs.gov.bc.ca/dgen-api/`). You can find a description of the API in the [Natural Resource Ministry's (NRM) API Store](https://apistore.nrs.gov.bc.ca/store/apis/info?name=dgen-api&version=v1&provider=admin).
+Use the Common Document Generation Service (CDOGS) to generate PDF or XML-based documents (ex: docx, xlsx, pptx, odt, ods, odp, and html). The CDOGS API can merge complex datasets into document templates. It supports any XML-based document templates including but not limited to Microsoft Office, LibreOffice, and OpenOffice.
 
-### Features
+For more information on CDOGS, see the following pages:
+* [Common Document Generation Service (CDOGS) product overview](https://digital.gov.bc.ca/common-components/common-document-generation-service)
+* [Common Document Generation Service (CDOGS) documentation](https://bcgov.github.io/common-service-showcase/services/cdogs.html)
 
 DGEN is based upon a commercial product from [Windward](https://www.windwardstudios.com/). The DGEN-API exposes some of the services provided by Windward's document generation engine and provides a layer of abstraction between the Windward commercial product and users of the DGEN service. If needed, Windward can be changed out at a later date and replaced by an open-source product without changes to the DGEN-API.
 
