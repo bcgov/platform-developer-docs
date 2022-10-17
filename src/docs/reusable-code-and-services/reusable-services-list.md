@@ -79,19 +79,13 @@ Use the Common Hosted Email Service (CHES) to send emails programmatically. For 
 * [Common Hosted Email Service (CHES) product overview](https://digital.gov.bc.ca/common-components/common-hosted-email-service)
 * [Common Hosted Email Service (CHES) documentation](https://bcgov.github.io/common-service-showcase/services/ches.html)
 
-The Windward document generation engine is a server-based process that can be used by any business area within the NRM. It's compatible with Microsoft Office tools, but unlike Microsoft Office macros, the Windward document templates are XML-based and have minimal dependencies on specific versions of Microsoft Office. DGEN uses XML template files that are developed using Windward's Template Designer plug-in.
+## Common Object Management Service
 
-Windward offers a number of [quick-start materials](https://www.windwardstudios.com/resources/quick-start).
+Using the Common Object Management Service (COMS), take advantage of more cost-effective storage solutions for your new or existing business applications with an authorization and authentication method that suits your application’s business requirements. COMS is a secure REST API that lets you connect your application to any S3 bucket.
 
-For more information on DGEN, see the following pages:
-* [DGEN Developer's Guide](https://developer.gov.bc.ca/Community-Contributed-Content/DGEN-Developer's-Guide)
-* [Document Generation Showcase](https://github.com/bcgov/document-generation-showcase)
-
-## Common Hosted Email service
-
-The Common Hosted Email service is hosted by the `bcgov` organization. For more information on the application, see the following pages:
-* [Common Hosted Email service](https://bcgov.github.io/common-hosted-email-service/app/)
-* [common-hosted-email-service repository](https://github.com/bcgov/common-hosted-email-service)
+For more information on COMS, see the following pages:
+* [Common Object Management Service (COMS) product overview](https://digital.gov.bc.ca/common-components/common-object-management-service)
+* [Common Object Management Service (COMS) documentation](https://bcgov.github.io/common-service-showcase/services/coms.html)
 
 ## Common Services Get Token
 
