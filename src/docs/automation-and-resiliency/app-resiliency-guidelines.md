@@ -3,9 +3,9 @@ title: Application resiliency guidelines
 
 slug: app-resiliency-guidelines
 
-description: Describes the design and implementation process for creatin resilient applications
+description: Describes the design and implementation process for creating resilient applications
 
-keywords: openshift, resiliency, design, 12-factor, available, deployable, recoverable, resource, communtiy support, tools, examples
+keywords: openshift, resiliency, design, 12-factor, available, deployable, recoverable, resource, community support, tools, examples
 
 page_purpose: To provide an overview of the methodology for designing resilient applications
 
