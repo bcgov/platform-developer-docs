@@ -1,24 +1,34 @@
+---
+title: Horizontal and Vertical Autoscaling Demo 
+
+slug: horizontal-and-vertical-autoscaling-demo
+
+description: Outlines the process for using a horizontal and vertical pod autoscaler together. 
+
+keywords: openshift, resiliency, design, 12-factor, available, deployable, recoverable, resource, community support, tools, examples
+
+page_purpose: This demo illustrates how a VPA can be used to get resource recommendations without applying them, and then these resource recommendations can be manually applied while a HPA runs in order to scale the number of pods based on load.
+
+audience: developer, technical lead, product owner
+
+author: Tetsuya Morikawa
+
+content_owner: Olena Mitovska
+
+sort_order: 
+
+---
+# Horizontal and Vertical Autoscaling Demo
+
+## On this page: 
 - [Horizontal Pod Autoscaler](#horizontal-pod-autoscaler)
-  - [Prep for HPA Demo](#prep-for-hpa-demo)
-  - [HPA Demo](#hpa-demo)
 - [Vertical Pod Autoscaler](#vertical-pod-autoscaler)
-  - [Prep for VPA](#prep-for-vpa)
-  - [VPA Demo](#vpa-demo)
-- [HPA + VPA FOR EASY RESOURCE TUNING DEMO](#hpa--vpa-for-easy-resource-tuning-demo)
-  - [Use **VPA** to learn optimum resource settings for your deployments](#use-vpa-to-learn-optimum-resource-settings-for-your-deployments)
-    - [Step 1](#step-1)
-    - [Step 2](#step-2)
-    - [Step 3](#step-3)
-    - [Step 4](#step-4)
-  - [Use **HPA** to make your deployments scalable](#use-hpa-to-make-your-deployments-scalable)
-    - [Step 5](#step-5)
-    - [Step 6](#step-6)
-    - [Step 7](#step-7)
+- [HPA + VPA For Easy Resource Tuning Demo](#hpa--vpa-for-easy-resource-tuning-demo)
 - [VPA Experiments](#vpa-experiments)
-  - [VPA with Statefulset app, such as Patroni HA cluster](#vpa-with-statefulset-app-such-as-patroni-ha-cluster)
-    - [Deploy Patroni cluster template](#deploy-patroni-cluster-template)
-    - [Check Pods resource usages and VPA's recommendations](#check-pods-resource-usages-and-vpas-recommendations)
-  - [Conclusion - Can VPA be used for stateful workload?](#conclusion---can-vpa-be-used-for-stateful-workload)
+- [VPA with Statefulset app, such as Patroni HA cluster](#vpa-with-statefulset-app-such-as-patroni-ha-cluster)
+- [Deploy Patroni cluster template](#deploy-patroni-cluster-template)
+- [Check Pods resource usages and VPA's recommendations](#check-pods-resource-usages-and-vpas-recommendations)
+- [Conclusion - Can VPA be used for stateful workload?](#conclusion---can-vpa-be-used-for-stateful-workload)
 - [References](#references)
 
 ## Horizontal Pod Autoscaler
@@ -985,7 +995,7 @@ The VPA overrides the default statefulset's resources as described in the output
 
 ## References
 
-- [AUTOSCALING - HPA and VPA​ ppt](https://advsolcan.sharepoint.com/:p:/r/sites/ManagedContainerServicesMCS/_layouts/15/Doc.aspx?sourcedoc=%7B25D8DD76-8672-4ED8-8379-DC3B0093A65F%7D&file=2022-xx-xx%20AUTOSCALING%20-%20HPA%20and%20VPA.pptx&action=edit&mobileredirect=true&cid=93ab4cf3-8fc6-4de6-8c81-8efc5f475efc)
+- [Autoscaling - HPA and VPA​ ppt](https://advsolcan.sharepoint.com/:p:/r/sites/ManagedContainerServicesMCS/_layouts/15/Doc.aspx?sourcedoc=%7B25D8DD76-8672-4ED8-8379-DC3B0093A65F%7D&file=2022-xx-xx%20AUTOSCALING%20-%20HPA%20and%20VPA.pptx&action=edit&mobileredirect=true&cid=93ab4cf3-8fc6-4de6-8c81-8efc5f475efc)
 - [Deliver presentation on HPA and VPA to PS Team#223](https://app.zenhub.com/workspaces/platform-experience-5bb7c5ab4b5806bc2beb9d15/issues/bcdevops/developer-experience/2235)
 - [HorizontalPodAutoscaler Walkthrough](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/)
 - [HPA - Algorithm details](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/#algorithm-details)
@@ -996,4 +1006,4 @@ The VPA overrides the default statefulset's resources as described in the output
 - [Vertical Pod Autoscaler FAQ](https://github.com/kubernetes/autoscaler/blob/master/vertical-pod-autoscaler/FAQ.md)
 - [6 Metrics to Watch for on Your Kubernetes Cluster](https://komodor.com/blog/6-metrics-to-watch-for-on-your-kubernetes-cluster/)
 
--- End
+
