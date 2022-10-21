@@ -1,5 +1,5 @@
 ---
-title: Horizontal and Vertical Autoscaling Demo 
+title: Horizontal and vertical pod autoscaling demo 
 
 slug: horizontal-and-vertical-autoscaling-demo
 
@@ -18,7 +18,7 @@ content_owner: Olena Mitovska
 sort_order: 
 
 ---
-# Horizontal and Vertical Autoscaling Demo
+# Horizontal and vertical pod autoscaling demo
 
 ## On this page: 
 - [Horizontal Pod Autoscaler](#horizontal-pod-autoscaler)
@@ -33,7 +33,7 @@ sort_order:
 
 ## Horizontal Pod Autoscaler
 
-### Prep for HPA Demo
+### Prep for HPA demo
 
 1. Create a project or use empty project.
 
@@ -120,7 +120,7 @@ sort_order:
 
     ```
 
-### HPA Demo
+### HPA demo
 
 1. HPA yaml file
 
@@ -291,7 +291,7 @@ sort_order:
 
     Note: In this Demo, `tats-vpa-test` is used. Also, CPU and Memory requests are set to be small on purpose.
 
-### VPA Demo
+### VPA demo
 
 1. Create `Off mode` vpa yaml:
 
@@ -428,7 +428,7 @@ sort_order:
 
     Note: The VPA does not change the Deployment settings. Therefore, when the VPA is deleted, the Pod will revert to its original required values.
 
-## HPA + VPA FOR EASY RESOURCE TUNING DEMO
+## HPA + VPA for easy resource tuning demo
 
 The best practices in our OpenShift are the following 7 steps;
 
@@ -450,7 +450,7 @@ The best practices in our OpenShift are the following 7 steps;
 
     Step 7: Run a load test to generate a load that will trigger the HPA and increase the number of replicas to confirm everything works as expected
 
-### Use **VPA** to learn optimum resource settings for your deployments
+### Use VPA to learn optimum resource settings for your deployments
 
 #### Step 1
 
@@ -607,7 +607,7 @@ $ oc get vpa example-vpa-recommender -o=jsonpath='{.status.recommendation}' | jq
 }
 ```
 
-### Use **HPA** to make your deployments scalable
+### Use HPA to make your deployments scalable
 
 #### Step 5
 
@@ -760,7 +760,7 @@ Events:
   Normal  SuccessfulRescale  18m   horizontal-pod-autoscaler  New size: 5; reason: All metrics below target
 ```
 
-## VPA Experiments
+## VPA experiments
 
 ### VPA with Statefulset app, such as Patroni HA cluster
 
