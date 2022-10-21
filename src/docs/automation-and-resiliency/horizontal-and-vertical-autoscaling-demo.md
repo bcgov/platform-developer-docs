@@ -39,19 +39,15 @@ This demonstration of OpenShift's Horizontal Pod Autoscaler (HPA) and Vertical P
 
 ### Prep for HPA demo
 
-1. Create a project or use empty project.
-
-    Create a project;
+1. Switch to an empty namespace.
 
     ```console
-    $ oc new-project <project name>
+    $ oc project <namespace name>
     ```
-
-    In this Demo, `tats-hpa-test` is created.
 
 2. Deploy the example deployment.
 
-    From `tats-hpa-test` project, Navigate to `Workloads` > `Deployment`, Click `Create Deployment`. Add resources and click `Create`.
+    Open your namespace on the OpenShift web console. Navigate to `Workloads` > `Deployment`, Click `Create Deployment`. Add resources and click `Create`.
 
     The resources you will add are like below:
 
@@ -128,16 +124,16 @@ This demonstration of OpenShift's Horizontal Pod Autoscaler (HPA) and Vertical P
 
 1. HPA yaml file
 
-    From `tats-hpa-test` project, Navigate to Workloads > HorizontalPodAutoscalers, Click `Create HorizontalPodAutoscaler` to create the example HPA. (Change parameters as you test. eg, change averageUtilization etc)
+    Open your namespace in the web console, then Navigate to Workloads > HorizontalPodAutoscalers, Click `Create HorizontalPodAutoscaler` to create the example HPA. (Change parameters as you test. eg, change averageUtilization etc)
 
-    Or use the HPA example below:
+    Or use the HPA example below after adding your namespace name to replace `<namespace>`:
 
     ```yaml
     apiVersion: autoscaling/v2beta2
     kind: HorizontalPodAutoscaler
     metadata:
       name: example-hpa
-      namespace: tats-test3
+      namespace: <namespace>
     spec:
       scaleTargetRef:
         apiVersion: apps/v1
@@ -253,21 +249,20 @@ This demonstration of OpenShift's Horizontal Pod Autoscaler (HPA) and Vertical P
 
 ### Prep for VPA
 
-1. Create `tats-vpa-test` project:
+1. Switch to an empty namespace.
 
     ```console
-    $ oc new-project tats-vpa-test
-    Now using project "tats-vpa-test" on server "https://api.klab.devops.gov.bc.ca:6443".
+    $ oc project <namespace name>
     ```
 
-2. Deploy `example` deployment:
+2. Deploy `example` deployment after replace `<namespace name>` with your namespace's name:
 
     ```yaml
     apiVersion: apps/v1
     kind: Deployment
     metadata:
       name: example
-      namespace: <your NS>
+      namespace: <namespace name>
     spec:
       selector:
         matchLabels:
@@ -293,7 +288,7 @@ This demonstration of OpenShift's Horizontal Pod Autoscaler (HPA) and Vertical P
                   memory: 10Mi
     ```
 
-    Note: In this Demo, `tats-vpa-test` is used. Also, CPU and Memory requests are set to be small on purpose.
+    Note: In this Demo, CPU and Memory requests are set to be small on purpose.
 
 ### VPA demo
 
@@ -460,7 +455,7 @@ The best practices in our OpenShift are the following 7 steps;
 
 Identify deployments in your namespace that you think need a resource increase/decrease
 
-Follow the steps in [Example Nginx Application Deployment](ExampleAppDeployment.md) and deploy a demo app in your namespace. In this Demo, `tats-autoscaling-demo` namespace is used.
+Follow the steps in [Example Nginx Application Deployment](ExampleAppDeployment.md) and deploy a demo app in your namespace.
 
 #### Step 2
 
@@ -627,7 +622,7 @@ $ oc get deployment nginx-hello-world-as-demo -o yaml
     <...>
     spec:
       containers:
-      - image: image-registry.apps.klab.devops.gov.bc.ca/tats-autoscaling-demo/nginx-hello-world-as-demo
+      - image: image-registry.apps.klab.devops.gov.bc.ca/<namespace name>/nginx-hello-world-as-demo
         imagePullPolicy: Always
         name: nginx
         resources:
@@ -716,7 +711,7 @@ apiVersion: autoscaling/v2beta2
 kind: HorizontalPodAutoscaler
 metadata:
   name: example-hpa-cpu-metrics
-  namespace: tats-autoscaling-test
+  namespace: <namespace name>
 spec:
   scaleTargetRef:
     apiVersion: apps/v1
@@ -773,9 +768,9 @@ Using bcgov's Patroni template, Deploy Patroni HA cluster with 3 replicas and te
 #### Deploy Patroni cluster template
 
 ```console
-// Create a new project or use your test project
-NS="tats-patroni-test" # use your namespace
-$ oc new-project $NS
+//Switch to an unused namespace.
+
+    $ oc project <namespace name>
 
 // Clone patroni template repo
 $ git clone https://github.com/bcgov/patroni-postgres-container.git
@@ -833,7 +828,7 @@ apiVersion: autoscaling.k8s.io/v1
 kind: VerticalPodAutoscaler
 metadata:
   name: patroni-test-vpa       # Name of your vpa
-  namespace: tats-patroni-test # Name of your namespace
+  namespace: <namespace name> # Name of your namespace
 spec:
   targetRef:
     apiVersion: "apps/v1"
@@ -925,7 +920,7 @@ apiVersion: autoscaling.k8s.io/v1
 kind: VerticalPodAutoscaler
 metadata:
   name: patroni-test-vpa
-  namespace: tats-patroni-test
+  namespace: <namespace name>
 spec:
   targetRef:
     apiVersion: "apps/v1"
