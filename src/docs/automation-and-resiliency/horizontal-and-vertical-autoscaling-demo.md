@@ -995,8 +995,6 @@ The VPA overrides the default statefulset's resources as described in the output
 
 ## References
 
-- [Autoscaling - HPA and VPA​ ppt](https://advsolcan.sharepoint.com/:p:/r/sites/ManagedContainerServicesMCS/_layouts/15/Doc.aspx?sourcedoc=%7B25D8DD76-8672-4ED8-8379-DC3B0093A65F%7D&file=2022-xx-xx%20AUTOSCALING%20-%20HPA%20and%20VPA.pptx&action=edit&mobileredirect=true&cid=93ab4cf3-8fc6-4de6-8c81-8efc5f475efc)
-- [Deliver presentation on HPA and VPA to PS Team#223](https://app.zenhub.com/workspaces/platform-experience-5bb7c5ab4b5806bc2beb9d15/issues/bcdevops/developer-experience/2235)
 - [HorizontalPodAutoscaler Walkthrough](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/)
 - [HPA - Algorithm details](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/#algorithm-details)
 - [Vertical Pod Autoscaling: The Definitive Guide](https://povilasv.me/vertical-pod-autoscaling-the-definitive-guide/)
