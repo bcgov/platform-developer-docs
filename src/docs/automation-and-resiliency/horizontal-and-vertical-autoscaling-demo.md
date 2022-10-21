@@ -768,7 +768,7 @@ Events:
 
 ### VPA with StatefulSet app, such as Patroni HA cluster
 
-Using bcgov's patroni template, Deploy patroni HA cluster with 3 replicas and test VPA behaviors with a couple scenarios. The purpose of this experiment is to see how VPA behaves in terms of calculating recommendations and updating these pods during scale up/down when they are running under different resource conditions.
+Using bcgov's Patroni template, Deploy Patroni HA cluster with 3 replicas and test VPA behaviors with a couple scenarios. The purpose of this experiment is to see how VPA behaves in terms of calculating recommendations and updating these pods during scale up/down when they are running under different resource conditions.
 
 #### Deploy Patroni cluster template
 
@@ -823,7 +823,7 @@ patroni-1   91m          77Mi
 patroni-2   101m         80Mi
 ```
 
-As you can see above, Each pod shows much lower resource usages than requested values in the default statefulset. Also there is a gap between the pods' resource usages. (i.e. patroni-0 uses 73m, while patroni-2 uses 101m)
+As you can see above, Each pod shows much lower resource usages than requested values in the default StatefulSet. Also there is a gap between the pods' resource usages. (i.e. patroni-0 uses 73m, while patroni-2 uses 101m)
 
 Next, Deploy VPA with `Off mode` and let the VPA calculate the recommendations and see how it'll compute the appropriate resource values.
 
@@ -953,7 +953,7 @@ patroni-1   109m       262144k    436m       262144k
 patroni-2   109m       262144k    436m       262144k
 ```
 
-All three pods will be recreated(scale up or down, in this case it's down) one by one as `updateStrategy` is set to `RollingUpdate` in the statefulset. It will take a minutes or so.
+All three pods will be recreated(scale up or down, in this case it's down) one by one as `updateStrategy` is set to `RollingUpdate` in the StatefulSet. It will take a minutes or so.
 
 In the stateful set, CPU and Memory resources are still the same as the default:
 
@@ -987,11 +987,11 @@ $ oc describe pods patroni-0
 <...>
 ```
 
-The VPA overrides the default statefulset's resources as described in the output above when the pod was recreated. And the VPA sees statefulset workload's historical usages from all replicated pods and calculates percentiles (recommendations). Therefore the recommendations will be applied to all pods in the statefulset.
+The VPA overrides the default StatefulSet's resources as described in the output above when the pod was recreated. And the VPA sees StatefulSet workload's historical usages from all replicated pods and calculates percentiles (recommendations). Therefore the recommendations will be applied to all pods in the StatefulSet.
 
 ### Conclusion - Can VPA be used for stateful workload?
 
-1. Yes. VPA can work with stateful workloads such as HA databases as long as they run on the Openshift (Kubernetes) platform. Make sure stateful workloads are configured for HA and allow pods to be suspended (as pods are stopped and re-created by VPA).
+1. Yes. VPA can work with stateful workloads such as HA databases as long as they run on the OpenShift (Kubernetes) platform. Make sure stateful workloads are configured for HA and allow pods to be suspended (as pods are stopped and re-created by VPA).
 2. If your stateful workloads are not configured for HA, Use `Off` mode or `Initial` mode. And get the recommendation and scale up your workload manually. (`Initial` mode will update the requests once the pod has rolled. -- VPA is not going to do it automatically.)
 3. VPA calculates stateful set workload's percentile as recommended values, therefore the target recommendation will be applied to the stateful set, which means that all pods will have the same request values.
 4. Run VPA for a while. The longer the data, the better to obtain correct recommendations. (Up to a week)
