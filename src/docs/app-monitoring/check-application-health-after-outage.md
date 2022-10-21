@@ -28,8 +28,9 @@ Still, it's always possible that an outage affects the platform and brings down 
 - [Check reporting channels](#check-reporting-channels)
 - [Check your application](#check-your-application)
 - [Keep track of recovery steps](#keep-track-of-recovery-steps)
+- [Related links](#related-links)
 
-These guidelines assume that you built your application in a cloud-native, highly resilient manner that makes effective use of the strengths of the OpenShift platform. Make sure you follow our [application resiliency guidelines](https://developer.gov.bc.ca/Developer-Tools/Resiliency-Guidelines). If your application is not cloud-native in its design, it won't benefit from the higher adaptability and recoverability of the platform and may need additional work to recover from a large outage.
+These guidelines assume that you built your application in a cloud-native, highly resilient manner that makes effective use of the strengths of the OpenShift platform. Make sure you follow our [application resiliency guidelines](/app-resiliency-guidelines/). If your application is not cloud-native in its design, it won't benefit from the higher adaptability and recoverability of the platform and may need additional work to recover from a large outage.
 
 ## Check reporting channels
 
@@ -116,11 +117,7 @@ assignees: caggles, ShellyXueHan
 - [ ] Ensure that next scheduled backup occurs as expected.
 ```
 
----
-Related links:
-* [Resiliency Guidelines](https://developer.gov.bc.ca/Developer-Tools/Resiliency-Guidelines)
-* [BCGov Platform Services Status Page](https://status.developer.gov.bc.ca)
+## Related links
 
-Rewrite sources:
-* https://github.com/BCDevOps/developer-experience/blob/master/docs/post-outage-checklist.md
----
+- [Resiliency Guidelines](/app-resiliency-guidelines/)
+- [BCGov Platform Services Status Page](https://status.developer.gov.bc.ca)
