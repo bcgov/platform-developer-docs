@@ -1,24 +1,26 @@
 ---
 title: Horizontal and vertical pod autoscaling demo 
 
-slug: horizontal-and-vertical-autoscaling-demo
+slug: horizontal-and-vertical-pod-autoscaling-demo
 
-description: Outlines the process for using a horizontal and vertical pod autoscaler together. 
+description: This demonstration of OpenShift's Horizontal Pod Autoscaler (HPA) and Vertical Pod Autoscaler (VPA) is intended to help you build a correctly resourced application. It illustrates how a VPA can be used to get resource recommendations without applying them. Then, these resource recommendations can be manually applied while a HPA runs to scale the number of pods based on load.
 
-keywords: openshift, resiliency, design, 12-factor, available, deployable, recoverable, resource, community support, tools, examples
+keywords: Horizontal Pod Autoscaler, HPA, Vertical Pod Autoscaler, VPA, openshift, resiliency, design, 12-factor, available, deployable, recoverable, resource, community support, tools, examples
 
-page_purpose: This demo illustrates how a VPA can be used to get resource recommendations without applying them, and then these resource recommendations can be manually applied while a HPA runs in order to scale the number of pods based on load.
+page_purpose: Demo how a VPA can be used to get resource recommendations without applying them. Manually apply resource recommendations while a HPA runs to scale the number of pods based on load.
 
 audience: developer, technical lead, product owner
 
-author: Tetsuya Morikawa
+author: Tatsuya Morikawa
 
 content_owner: Olena Mitovska
 
-sort_order: 
+sort_order: 8
 
 ---
 # Horizontal and vertical pod autoscaling demo
+
+This demonstration of OpenShift's Horizontal Pod Autoscaler (HPA) and Vertical Pod Autoscaler (VPA) is intended to help you build [a correctly resourced application](https://beta-docs.developer.gov.bc.ca/app-resiliency-guidelines/#a-correctly-resourced-application). It illustrates how a VPA can be used to get resource recommendations without applying them. Then, these resource recommendations can be manually applied while a HPA runs to scale the number of pods based on load.
 
 ## On this page: 
 - [Horizontal Pod Autoscaler](#horizontal-pod-autoscaler)
