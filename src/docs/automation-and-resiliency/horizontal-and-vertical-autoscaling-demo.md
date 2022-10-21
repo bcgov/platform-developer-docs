@@ -23,13 +23,15 @@ sort_order:
 ## On this page: 
 - [Horizontal Pod Autoscaler](#horizontal-pod-autoscaler)
 - [Vertical Pod Autoscaler](#vertical-pod-autoscaler)
-- [HPA + VPA For Easy Resource Tuning Demo](#hpa--vpa-for-easy-resource-tuning-demo)
-- [VPA Experiments](#vpa-experiments)
-- [VPA with Statefulset app, such as Patroni HA cluster](#vpa-with-statefulset-app-such-as-patroni-ha-cluster)
-- [Deploy Patroni cluster template](#deploy-patroni-cluster-template)
-- [Check Pods resource usages and VPA's recommendations](#check-pods-resource-usages-and-vpas-recommendations)
-- [Conclusion - Can VPA be used for stateful workload?](#conclusion---can-vpa-be-used-for-stateful-workload)
-- [References](#references)
+- [HPA + VPA for easy resource tuning demo](#hpa--vpa-for-easy-resource-tuning-demo)
+  - [Use VPA to learn optimum resource settings for your deployments](#use-vpa-to-learn-optimum-resource-settings-for-your-deployments)
+  - [Use HPA to make your deployments scalable](#use-hpa-to-make-your-deployments-scalable)
+- [VPA experiments](#vpa-experiments)
+  - [VPA with StatefulSet app, such as Patroni HA cluster](#vpa-with-statefulset-app-such-as-patroni-ha-cluster)
+    - [Deploy Patroni cluster template](#deploy-patroni-cluster-template)
+    - [Check Pods resource usages and VPA's recommendations](#check-pods-resource-usages-and-vpas-recommendations)
+  - [Conclusion - Can VPA be used for stateful workload?](#conclusion---can-vpa-be-used-for-stateful-workload)
+- [Related links](#related-links)
 
 ## Horizontal Pod Autoscaler
 
@@ -762,7 +764,7 @@ Events:
 
 ## VPA experiments
 
-### VPA with Statefulset app, such as Patroni HA cluster
+### VPA with StatefulSet app, such as Patroni HA cluster
 
 Using bcgov's patroni template, Deploy patroni HA cluster with 3 replicas and test VPA behaviors with a couple scenarios. The purpose of this experiment is to see how VPA behaves in terms of calculating recommendations and updating these pods during scale up/down when they are running under different resource conditions.
 
@@ -993,7 +995,7 @@ The VPA overrides the default statefulset's resources as described in the output
 4. Run VPA for a while. The longer the data, the better to obtain correct recommendations. (Up to a week)
 5. There is a case that VPA may not be useful. Please read : [How to Enable a Customized VPA Recommender on OpenShift](https://cloud.redhat.com/blog/how-to-enable-a-customized-vpa-recommender-on-openshift)
 
-## References
+## Related links
 
 - [HorizontalPodAutoscaler Walkthrough](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale-walkthrough/)
 - [HPA - Algorithm details](https://kubernetes.io/docs/tasks/run-application/horizontal-pod-autoscale/#algorithm-details)
