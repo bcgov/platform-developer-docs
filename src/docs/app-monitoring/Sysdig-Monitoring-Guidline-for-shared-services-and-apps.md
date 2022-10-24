@@ -18,6 +18,33 @@ content_owner: Billy Li
 sort_order: 2
 ---
 
+## Intro
+
+SRE stand for Site Reliability Engineering, it becomes an important concept to ensure applications' reliability by getting system back to steadystate as quick. We can use software as tools to gain full visibility into application/system's health, and being able to identify and solve the issue before it affect application's stakeholder. 
+
+
+In this documentation, we will go through basica concept of SRE and setup a SRE for Registry application as an example.
+
+
+
+#### Registry
+Registry is an application where teams can submit requests for provisioning namespaces in OpenShift 4 (OCP4) clusters, as well as perform other tasks such as:
+
+* Update project contact details and other metadata;
+* Request their project namespace set be created additional clusters;
+* Request other resources be provisioned such as KeyCloak realms or Artifactory pull-through repositories.
+ managed by platform services team
+
+
+For more details of what is Registry app and how it works can be found in [here](https://github.com/bcgov/platform-services-registry/blob/master/docs/Whole-project-workflow.md).
+
+### Setting up SRE
+The scope of SRE includes the deployment, configuration, and monitoring of app, as well as the availability, latency, change management, emergency response, and capacity management of services in production. We use several essential tools: `SLO, SLA and SLI` in SRE planning and practice, you can find google's definnation for those terms in [here](https://cloud.google.com/blog/products/devops-sre/sre-fundamentals-slis-slas-and-slos). And to identify those is always the first step. 
+Use Registry as an example
+
+
+
+
 The four golden signals of Site Reliability Engineering (SRE) are latency, traffic, errors, and saturation. SRE’s golden signals define what it means for the system to be “healthy”. The following monitoring standard will be built based on those four aspects.
 
 # Using PromQL
