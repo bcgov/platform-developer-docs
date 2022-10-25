@@ -40,7 +40,37 @@ For more details of what is Registry app and how it works can be found in [here]
 
 ### Setting up SRE
 The scope of SRE includes the deployment, configuration, and monitoring of app, as well as the availability, latency, change management, emergency response, and capacity management of services in production. We use several essential tools: `SLO, SLA and SLI` in SRE planning and practice, you can find google's definnation for those terms in [here](https://cloud.google.com/blog/products/devops-sre/sre-fundamentals-slis-slas-and-slos). And to identify those is always the first step. 
-Use Registry as an example
+I will Use Registry as an example to walk through this process.
+
+#### SLA
+The client should be at the centre of every aspect of your customer agreement. An incident may need fixing ten different issues on the back end. But from the client's perspective, the only thing that matters is that the system works as it should, and facts should be reflected in your SLAs and SLOs. Be sure to limit your promises to the high-level, user-facing functionality, and always use plain language in SLAs. Based on this, we can comeup some SLA for Registry:
+
+* Normal user can  successfully load Registry dashboard within 5 seconds.
+* Admin user can  successfully load Registry dashboard within 13 seconds.
+* An approved product request can be provisioned within an hour.
+* Application is up online 99% of the time.
+* Update product request can be processed within an hour.
+
+
+#### SLO 
+The defination of s SLO is: a service level objective: a target value or range of values for a service level that is measured by an SLI. Google have a really [good doc](https://sre.google/workbook/implementing-slos/#:~:text=For%20example%2C%20if%20you%20have,50%25%20of%20the%20error%20budget.) for how to gets start.
+what do you want to promise your customers is deciding how reliable you want your service to be depends on what your customers expect. For exapmle if your SLA states that your customers will receive a response to each request they make in 300 milliseconds, then perhaps your SLO should state that the response will be returned in 200 milliseconds. Choosing an appropriate SLO is hard. Once we have SLA that we know can make our user happy, SLO is like the botton line of our promise. Therefore, it is in our best interest to catch an issue before it breaches our SLA so that you have time to fix it. And this promise often comes up with consequences if we breake it. Again, I will use Registry as an exapmle and the time period is for each month:
+
+
+* Retriving all products information from db should be less than 8 sec. 
+* Retriving 30 products information from db should be less than 2 sec. 
+* Web, API, and DB should be up 99.5% of the time
+* DB should have backup every 30 mins
+* Provisioner jobs can be completed within 40 mins
+
+
+The reason of breaking those objects or booking a maintance windows need to be annanced  in [#internal-devops-registry](https://chat.developer.gov.bc.ca/group/internal-devops-registry). 
+
+#### SLIs
+
+* Number of successful HTTP requests / total HTTP requests (success rate) should be greater than 99.99%
+* The response time per request should be less than 300ms
+* Web and API resources utilization (used/request) should be less than 80%
 
 
 
