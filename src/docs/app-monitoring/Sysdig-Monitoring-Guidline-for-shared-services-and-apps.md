@@ -68,29 +68,30 @@ The reason of breaking those objects or booking a maintance windows need to be a
 
 #### SLIs
 
+SLI golden signals include request latency, availability, error rate, and system throughput. Those matrices define what it means for the system to be “healthy”. 
+
+Registry has those following monitoring standards be built based on those four aspects.
+
 * Number of successful HTTP requests / total HTTP requests (success rate) should be greater than 99.99%
 * The response time per request should be less than 300ms
 * Web and API resources utilization (used/request) should be less than 80%
 
 
+Sysdig and Uptime.com are some tools that I use to get SLI metrices for Registry
 
-
-The four golden signals of Site Reliability Engineering (SRE) are latency, traffic, errors, and saturation. SRE’s golden signals define what it means for the system to be “healthy”. The following monitoring standard will be built based on those four aspects.
-
-# Using PromQL
-
-The Prometheus Query Language (PromQL) is the standard for querying Prometheus metric data. PromQL is designed to allow the user to select and aggregate time-series data. And building a dashboard in Sysdig is heavily reliant on PromQL. The PromQL language is documented at [Prometheus Query Basics](https://prometheus.io/docs/prometheus/latest/querying/basics/).
-
-## Resources monitoring with Sysdig (Saturation)
+### Resources monitoring with Sysdig (Saturation)
 
 The saturation is a high-level overview of the utilization of the system. How much more capacity does the service have? When is the service maxed out? Because most systems begin to degrade before utilization hits 100%, we also need to determine a benchmark for a “healthy” percentage of utilization. What level of saturation ensures service performance and availability for the user?
 
 We monitor resources from CPU, ram, and storage.
 
+#### Using PromQL
 
-## Team Scope
+The Prometheus Query Language (PromQL) is the standard for querying Prometheus metric data. PromQL is designed to allow the user to select and aggregate time-series data. And building a dashboard in Sysdig is heavily reliant on PromQL. The PromQL language is documented at [Prometheus Query Basics](https://prometheus.io/docs/prometheus/latest/querying/basics/).
 
-### CPU:
+### Team Scope
+
+#### CPU:
 
 Get application CPU usage by using:
 ```
@@ -123,7 +124,7 @@ sum(last_over_time(sysdig_container_cpu_cores_used{kube_cluster_name=~"silver",k
 
 
 
-### Memory
+#### Memory
 
 Similar to CPU, RAM monitoring will also focus on Limitations and Utilization.
 
@@ -149,7 +150,7 @@ sum(last_over_time(sysdig_container_memory_used_bytes{kube_cluster_name=~$Cluste
 ```
 
 
-## Latency
+#### Latency
 Most services consider request latency—how long it takes to return a response to a request—as a key SLI. Other common SLIs include the error rate, often expressed as a fraction of all requests received, and system throughput, typically measured in requests per second. The measurements are often aggregated: i.e., raw data is collected over a measurement window and then turned into a rate, average, or percentile.
 
 Define a benchmark for “good” latency rates. Then, monitor the latency of successful requests against failed requests to keep track of health. Tracking latency across the entire system can help identify which services are not performing well and allows teams to detect incidents faster. The latency of errors can help improve the speed at which teams identify an incident – meaning they can dive into incident response faster.
@@ -158,7 +159,7 @@ Ideally, the SLI directly measures a service level of interest, but sometimes on
 
 So for example, We do want to keep our response time within 3 seconds as our SLO upper boundary. We will set our sysdig_connection_net_request_time SLO at any request that takes longer than 5 sec to be served and will trigger a notification (increase more quota or refine algorithms ).
 
-## Traffic Monitoring
+#### Traffic Monitoring
 
 It’s a good idea to add metrics or metric labels that allow the dashboards to break down served traffic by status code (unless the metrics your service uses for SLI purposes already include this information). Here are some recommendations:
 
@@ -180,7 +181,7 @@ Using sysdig_connection_net_total_bytes to monitor the upload and download speed
 ```
 
 
-## Errors:
+#### Errors:
 
 We need to monitor the rate of errors happening across the entire system but also at the individual service level. Whether those errors are based on manually defined logic or they’re explicit errors such as failed HTTP requests, as long as we can detect them early, we can then better meet our SLO and reduce application downtime.
 
@@ -195,9 +196,33 @@ If we see a high error number, we would be expecting that there may exist a logi
  It’s also important to define which errors are critical and which ones are less dangerous. This can help teams identify the true health of service in the eyes of a customer and take rapid action to fix frequent errors.
 
 
+### Uptime.com
+
+I also set up a transactional test for registry, this will keep loading the dashboard page and make sure components are successfully loaded. 
+Uptime.com is able to provide the uptime/downtime of your application and the percentage of the uptime for a period of time. And it can also send out notification to us so we can take reactions.
+
+#### Runbook
+To achieve 99.5% of the uptime, means that we only allows to have 7m 12s of downtime perday. And this is where RunBooks come to help. 
+In SRE, we want to automate things as much as possible. Runbooks in the context of cloud operations are a list of actions executed by SREs to complete a particular task. These jobs could involve responding to incidents, managing costs, clearing performance obstacles and more. 
 
 
+##### Runbook for Incident Response
+One of the regular responsibilities of SREs is incident response. What steps might an SRE take to address the outage? 
+1. Trigger
+2. Troubleshooting
+3. Root cause analysis
+4. Fix
 
+Runbooks can incorporate logic (such as if-else statements and loops) and other features in addition to being merely a list of actions (e.g. wait for a resource). It is a instruction tells us or automation system when SLO gets break, what should we do to bring system back to normal so we don't break our SLA. 
 
+For simple example: 
+* When couple of the request to db failed/timeout happens one or two times: 
+  - we want to run a command in our backup-container to backup whatever we currently have in our db.
+  - give primary more quota
 
+*  when dashboard load time approch to our SLO
+ - we want to scale up and kill the old pod.
+ - report to dev team to check network status
+
+Here's some [reference](https://www.xenonstack.com/insights/automation-runbook-for-sre) for automation runbook. Also we are introducing [runwhen](https://www.runwhen.com/) on our platform to help you automated this process. 
 
