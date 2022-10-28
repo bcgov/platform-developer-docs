@@ -10,6 +10,8 @@ Visit the deployed Gatsby site at [beta-docs.developer.gov.bc.ca](https://beta-d
 
 Markdown documents are located in `./src/docs` with related images in `./src/images`.
 
+In progress (not yet published) documents are located in `./src/drafts`.
+
 Please see [Writing guide for Platform Services technical documentation](./tech-docs-writing-guide.md) for documentation formatting and contribution information.
 
 ## Gatsby application
