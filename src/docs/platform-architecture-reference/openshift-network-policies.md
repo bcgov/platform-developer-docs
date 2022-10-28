@@ -1,5 +1,3 @@
-<!-- omit in toc -->
-
 ---
 title: OpenShift network policies
 
@@ -25,7 +23,7 @@ sort_order: 3
 Without a network policy in place, all pods in a namespace are accessible from other pods and network endpoints. To isolate one or more pods in a namespace, you can create NetworkPolicy objects in that namespace to indicate the allowed incoming connections. Namespace administrators can create and delete NetworkPolicy objects within their own namespaces. A 'deny by default' policy is automatically created and active in all namespaces on the platform. 
 
 ## On this page
-
+<!-- omit in toc -->
 - [OpenShift network policies](#openshift-network-policies)
   - [On this page](#on-this-page)
   - [About network policies](#about-network-policies)
