@@ -124,7 +124,7 @@ What this above NetwokPolicy example does....:
 
 **NOTES:**
 
-- `cider` and `except` fields can be used in the Ingress and Egress both.
+- `cidr` and `except` fields can be used in the Ingress and Egress both.
 - For the details of NetworkPolicy API specs for OCP 4.10, Please refer [NetworkPolicy networking.k8s.io/v1](https://docs.openshift.com/container-platform/4.10/rest_api/network_apis/networkpolicy-networking-k8s-io-v1.html)
 - `namespaceSelector` and `podSelector` can be used together in a single to/from entry that selects particular Pods within particular namespaces, like the examples below. Be careful to use correct YAML syntax!
 
