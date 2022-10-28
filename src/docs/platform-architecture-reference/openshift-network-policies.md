@@ -1,3 +1,5 @@
+<!-- omit in toc -->
+
 ---
 title: OpenShift network policies
 
@@ -110,7 +112,7 @@ spec:
 * **ports.protocol:** The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP.
 * **podSelector:** This selects particular Pods in the same namespace as the NetworkPolicy which should be allowed as ingress sources or egress destinations.
 
-What this NetwokPolicy example above is doing...:
+What this above NetwokPolicy example does....:
 
 1. isolates "role=db" pods in the "default" namespace for both ingress and egress traffic (if they weren't already isolated)
 
@@ -277,3 +279,5 @@ If you would like a more in-depth testing of pod-to-pod or ingress/egress commun
 * https://docs.openshift.com/container-platform/4.10/networking/ovn_kubernetes_network_provider/about-ovn-kubernetes.html
 * https://kubernetes.io/docs/concepts/services-networking/network-policies/
 * https://docs.openshift.com/acs/3.72/operating/manage-network-policies.html
+* https://cloud.redhat.com/blog/guide-to-kubernetes-egress-network-policies
+* https://github.com/ahmetb/kubernetes-network-policy-recipes
