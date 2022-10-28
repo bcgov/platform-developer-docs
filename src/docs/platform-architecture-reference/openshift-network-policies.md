@@ -24,13 +24,15 @@ Without a network policy in place, all pods in a namespace are accessible from o
 
 ## On this page
 
-- [About network policies](#about-network-policies)
-- [NetworkPolicy structure](#networkpolicy-structure)
-- [Deny by default policy](#deny-by-default-policy)
-- [Allow from the same namespace](#allow-from-the-same-namespace)
-- [Allow from OpenShift router](#allow-from-openshift-router)
-- [Allow only from specific Pod & port](#allow-only-from-specific-pod--port)
-- [Related links](#related-links)
+- [OpenShift network policies](#openshift-network-policies)
+  - [On this page](#on-this-page)
+  - [About network policies](#about-network-policies)
+  - [NetworkPolicy structure](#networkpolicy-structure)
+  - [Deny by default policy](#deny-by-default-policy)
+  - [Allow from the same namespace](#allow-from-the-same-namespace)
+  - [Allow from OpenShift router](#allow-from-openshift-router)
+  - [Allow only from specific Pod & port](#allow-only-from-specific-pod--port)
+  - [Related links](#related-links)
 
 ## About network policies
 
@@ -50,12 +52,12 @@ For a connection from a source pod to a destination pod to be allowed, both the 
 
 By using network policies declarative YAML this code becomes part of your application, ensuring the consistency of “single source of truth” from your codebase.
 
-**Note:** 
-The primary BC Gov OpenShift clusters are configured with OpenShift SDN networking which does not support Egress Network Policies.  This applies to the following OpenShift Clusters: CLAB, KLAB, SILVER, GOLD, GOLD-DR.  
-KLAB2 and Emerald clusters use a different SDN technology (VMWare NSX-T) which DOES support (and requires) Egress Network Policies.  Details on NSX Networking can be found in the [IDIR protected content area of the Private Cloud website](https://cloud.gov.bc.ca/private-cloud/idir-protected-content/).
+**Note:**
+~~The primary BC Gov OpenShift clusters are configured with OpenShift SDN networking which does not support Egress Network Policies.  This applies to the following OpenShift Clusters: CLAB, KLAB, SILVER, GOLD, GOLD-DR.~~
+From OpenShift version 4.10, CLAB, KLAB, SILVER, GOLD, GOLD-DR clusters are now supporting Egress network policies.
+KLAB2 and Emerald clusters use a different SDN technology (VMWare NSX-T) which also DOES support (and requires) Egress Network Policies. Details on NSX Networking can be found in the [IDIR protected content area of the Private Cloud website - Guide for Emerald teams](https://cloud.gov.bc.ca/private-cloud/guide-for-emerald-teams/#netpol-differences).
 
 ## NetworkPolicy structure
-
 
 ```yaml
 apiVersion: networking.k8s.io/v1
@@ -74,6 +76,8 @@ spec:
     - from:
         - ipBlock:
             cidr: 172.17.0.0/16
+            except:
+              - 172.17.1.0/24
         - namespaceSelector:
             matchLabels:
               project: myproject
@@ -87,29 +91,42 @@ spec:
     - to:
         - ipBlock:
             cidr: 10.0.0.0/24
-        - namespaceSelector:
-            matchLabels:
-              project: myproject
-        - podSelector:
-            matchLabels:
-              role: frontend
       ports:
         - protocol: TCP
           port: 5978
 ```
+
 * **namespace:** network polices are scoped to namespaces.
 * **podSelector:** selects the grouping of pods to which the policy applies or empty podSelector selects all pods in the namespace.
-* **policyTypes:** list which may include either Ingress, Egress, or both. 
+* **policyTypes:** list which may include either Ingress, Egress, or both.
 * **ingress:** each rule allows traffic which matches both the from and ports sections.
 * **egress:** each rule allows traffic which matches both the to and ports sections.
+* **ipBlock:** IPBlock describes a particular CIDR (Ex. "192.168.1.1/24","2001:db9::/64") that is allowed to the pods matched by a NetworkPolicySpec's podSelector. The except entry describes CIDRs that should not be included within this rule.
+* **cidr:** CIDR is a string representing the IP Block Valid examples are "192.168.1.1/24" or "2001:db9::/64".
+* **except:** Except is a slice of CIDRs that should not be included within an IP Block Valid examples are "192.168.1.1/24" or "2001:db9::/64" Except values will be rejected if they are outside the CIDR range.
 * **namespaceSelector:** This selects particular namespaces for which all Pods should be allowed as ingress sources or egress destinations.
 * **ipBlock:** This selects particular IP CIDR ranges to allow as ingress sources or egress destinations. These should be cluster-external IPs, since Pod IPs are ephemeral and unpredictable.
 * **ports.port:** The port on the given protocol. This can either be a numerical or named port on a pod. If this field is not provided, this matches all port names and numbers. If present, only traffic on the specified protocol AND port will be matched.
 * **ports.protocol:** The protocol (TCP, UDP, or SCTP) which traffic must match. If not specified, this field defaults to TCP.
 * **podSelector:** This selects particular Pods in the same namespace as the NetworkPolicy which should be allowed as ingress sources or egress destinations.
 
+What this NetwokPolicy example above is doing...:
 
-**NOTE:** namespaceSelector and podSelector can be used together in a single to/from entry that selects particular Pods within particular namespaces. Be careful to use correct YAML syntax!
+1. isolates "role=db" pods in the "default" namespace for both ingress and egress traffic (if they weren't already isolated)
+
+2. **Ingress rules** allows connections to all pods in the "default" namespace with the label "role=db" on TCP port 6379 from:
+
+- any pod in the "default" namespace with the label "role=frontend"
+- any pod in a namespace with the label "project=myproject"
+- IP addresses in the ranges 172.17.0.0–172.17.0.255 and 172.17.2.0–172.17.255.255 (ie, all of 172.17.0.0/16 except 172.17.1.0/24)
+
+3. **Egress rules** allows connections from any pod in the "default" namespace with the label "role=db" to CIDR 10.0.0.0/24 on TCP port 5978
+
+**NOTES:**
+
+- `cider` and `except` fields can be used in the Ingress and Egress both.
+- For the details of NetworkPolicy API specs for OCP 4.10, Please refer [NetworkPolicy networking.k8s.io/v1](https://docs.openshift.com/container-platform/4.10/rest_api/network_apis/networkpolicy-networking-k8s-io-v1.html)
+- `namespaceSelector` and `podSelector` can be used together in a single to/from entry that selects particular Pods within particular namespaces, like the examples below. Be careful to use correct YAML syntax!
 
 ```yaml
   ingress:
@@ -122,7 +139,7 @@ spec:
           role: client
 ```
 
-contains a single from element allowing connections from Pods with the label role=client in namespaces with the label user=alice. But this policy:
+contains **a single from element** allowing connections from Pods with the label role=client in namespaces with the label user=alice. But this policy:
 
 ```yaml
   ingress:
@@ -135,7 +152,7 @@ contains a single from element allowing connections from Pods with the label rol
           role: client
 ```
 
-contains two elements in the from array, and allows connections from Pods in the local Namespace with the label role=client, or from any Pod in any namespace with the label user=alice.
+contains **two elements in the from array**, and allows connections from Pods in the local Namespace with the label role=client, or from any Pod in any namespace with the label user=alice.
 
 ## Deny by default policy
 
@@ -155,8 +172,9 @@ metadata:
 spec:
   podSelector: {}
   policyTypes:
-    - Ingress
+  - Ingress
 ```
+
 The deny by default network policy is there to enforce the zero trust networking or walled garden pattern. So we start by denying all then build our allow list.
 
 To test the `deny-by-default` network policy and see if you can curl the http server running in one pod from another pod. Update the command below based on your pod name and pod ip address.
@@ -203,7 +221,6 @@ You should now receive a response returning from the curl command.
 
 As network traffic from the route flows through the OpenShift router pods to our http pods we'll need to allow traffic from those pods. We can do that with a `namespaceSelector` that matches the namespace the router pods live in.
 
-
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
@@ -219,8 +236,8 @@ spec:
   policyTypes:
   - Ingress
 ```
-If you now try to access the route from your browser, it should be working.
 
+If you now try to access the route from your browser, it should be working.
 
 ## Allow only from specific Pod & port
 
@@ -251,13 +268,12 @@ spec:
 
 Once you have your network policy in place you'll need to set up some more pods to test. You can scale your deployment down to 1 pod to make things more straight forward. Keep in mind if you have any autoscalers in place.
 
-
 If you would like a more in-depth testing of pod-to-pod or ingress/egress communications, please see the OCP 201 training materials:
-https://github.com/BCDevOps/devops-platform-workshops/blob/master/openshift-201/network-policy.md
 
+- https://github.com/BCDevOps/devops-platform-workshops/blob/master/openshift-201/network-policy.md
 
 ## Related links
 
-* https://docs.openshift.com/container-platform/4.8/networking/ovn_kubernetes_network_provider/about-ovn-kubernetes.html
+* https://docs.openshift.com/container-platform/4.10/networking/ovn_kubernetes_network_provider/about-ovn-kubernetes.html
 * https://kubernetes.io/docs/concepts/services-networking/network-policies/
-* https://docs.openshift.com/acs/3.70/operating/manage-network-policies.html
+* https://docs.openshift.com/acs/3.72/operating/manage-network-policies.html
