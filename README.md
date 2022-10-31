@@ -20,7 +20,7 @@ A Gatsby application for these documents is included in this repository.
 
 ### Local Development
 
-Use `Dockerfile.dev` and `docker-compose.dev.yaml` for local development using `gatsby-cli`.
+Use `Dockerfile.dev` and `docker-compose.dev.yaml` for local development using `gatsby-cli`. If you prefer to run locally without Docker, use the Node.js major version specified in `.nvmrc` and `Dockerfile.dev`.
 
 Copy the example `.env` files and fill them with your environment variables:
 
