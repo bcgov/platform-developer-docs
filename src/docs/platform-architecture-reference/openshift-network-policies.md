@@ -30,6 +30,7 @@ Without a network policy in place, all pods in a namespace are accessible from o
 - [Allow from the same namespace](#allow-from-the-same-namespace)
 - [Allow from OpenShift router](#allow-from-openshift-router)
 - [Allow only from specific Pod & port](#allow-only-from-specific-pod--port)
+- [Egress example - Allow only to specific Pod & Port](#egress-example---allow-only-to-specific-pod--port)
 - [Egress example - DENY outbound (egress) traffic from an application](#egress-example---deny-outbound-egress-traffic-from-an-application)
 - [Related links](#related-links)
 
@@ -248,7 +249,7 @@ Here is an example of a network policy which applies to only specific pods:
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: allow-nginx-2-to-mysql
+  name: allow-mysql-from-nginx-2
 spec:
   podSelector:
     matchLabels:
@@ -265,25 +266,56 @@ spec:
           port: 3306
 ```
 
-## Egress example - DENY outbound (egress) traffic from an application
+## Egress example - Allow only to specific Pod & Port
 
-If you want to prevent an application from establishing any connections to outside of the Pod. For example,  restricting outbound traffic of single-instance databases and datastores.
-
-Assuming your target pod has `app=db` label.
+Using the previous **Ingress** NetworkPolicy, create an **Egress** NetworkPolicy to allow only TO specific Pod & port.
 
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: deny-egress-app-db
+  name: egress-allow-nginx-2-to-mysql    # Change name
 spec:
   podSelector:
     matchLabels:
-      app: db
+      deployment: hello-world-nginx-2   # Change labels to `deployment: hello-world-nginx-2`. It's from `spec.ingress.from.podSelector` in the previous yaml
+  policyTypes:
+    - Egress                            # Change `Ingress` to `Egress`, 
+  egress:                               # Change `ingress` to `egress`
+    - to:                               # Change `from:` to `to:`
+        - podSelector:
+            matchLabels:
+              name: mysql              # Change labels to `name: mysql`. it's from `spec.podSelector` in the previous yaml
+      ports:
+        - protocol: TCP
+          port: 3306                   # mysql is using 3306 bi-directional port. So this is no need to be changed.
+```
+
+## Egress example - DENY outbound (egress) traffic from an application
+
+If you want to prevent an application from establishing any connections to outside of the Pod.
+
+Assuming your target pod has `role=frontend` label.
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-egress-frontend
+spec:
+  podSelector:
+    matchLabels:
+      role: frontend
   policyTypes:
   - Egress
   egress: []
 ```
+
+* **podSelector:** matches to `role=frontend` pods
+* **policyTypes:** `Engress` (outboud) traffic will be enforced
+* **egress: []** Empty rule set does not whitelist any traffic, therefore all egress (outbound) traffic is blocked. You can drop this field altogether and have the same effect.
+
+
 
 Once you have your network policy in place you'll need to set up some more pods to test. You can scale your deployment down to 1 pod to make things more straight forward. Keep in mind if you have any autoscalers in place.
 
