@@ -30,6 +30,7 @@ Without a network policy in place, all pods in a namespace are accessible from o
 - [Allow from the same namespace](#allow-from-the-same-namespace)
 - [Allow from OpenShift router](#allow-from-openshift-router)
 - [Allow only from specific Pod & port](#allow-only-from-specific-pod--port)
+- [Egress example - DENY outbound (egress) traffic from an application](#egress-example---deny-outbound-egress-traffic-from-an-application)
 - [Related links](#related-links)
 
 ## About network policies
@@ -262,6 +263,27 @@ spec:
       ports:
         - protocol: TCP
           port: 3306
+```
+
+## Egress example - DENY outbound (egress) traffic from an application
+
+- If you want to prevent an application from establishing any connections to outside of the Pod.
+- Use case for restricting outbound traffic of single-instance databases and datastores.
+
+Assuming your app has `app=web` label.
+
+```yaml
+apiVersion: networking.k8s.io/v1
+kind: NetworkPolicy
+metadata:
+  name: deny-egress-app-web
+spec:
+  podSelector:
+    matchLabels:
+      app: web
+  policyTypes:
+  - Egress
+  egress: []
 ```
 
 Once you have your network policy in place you'll need to set up some more pods to test. You can scale your deployment down to 1 pod to make things more straight forward. Keep in mind if you have any autoscalers in place.
