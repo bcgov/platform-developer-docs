@@ -291,6 +291,8 @@ spec:
           port: 3306                   # mysql is using 3306 bi-directional port. So this is no need to be changed.
 ```
 
+If the database is in a different namespace, add `egress.to.namespaceSelector` field under the `egress.to`.
+
 ## Egress example - DENY outbound (egress) traffic from an application
 
 If you want to prevent an application from establishing any connections to outside of the Pod.
