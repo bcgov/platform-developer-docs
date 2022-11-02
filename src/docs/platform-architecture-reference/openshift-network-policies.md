@@ -31,7 +31,7 @@ Without a network policy in place, all pods in a namespace are accessible from o
 - [Allow from OpenShift router](#allow-from-openshift-router)
 - [Allow only from specific Pod & port](#allow-only-from-specific-pod--port)
 - [Egress example - Allow only to specific Pod & Port](#egress-example---allow-only-to-specific-pod--port)
-- [Egress example - DENY outbound (egress) traffic from an application](#egress-example---deny-outbound-egress-traffic-from-an-application)
+- [Egress example - Deny outbound (egress) traffic from an application](#egress-example---deny-outbound-egress-traffic-from-an-application)
 - [Related links](#related-links)
 
 ## About network policies
@@ -291,33 +291,31 @@ spec:
           port: 3306                   # mysql is using 3306 bi-directional port. So this is no need to be changed.
 ```
 
-If the database is in a different namespace, add `egress.to.namespaceSelector` field under the `egress.to`.
+If the database pod is in a different namespace, add `egress.to.namespaceSelector` field under the `egress.to`.
 
-## Egress example - DENY outbound (egress) traffic from an application
+## Egress example - Deny outbound (egress) traffic from an application
 
 If you want to prevent an application from establishing any connections to outside of the Pod.
 
-Assuming your target pod has `role=frontend` label.
+Assuming your target pod has `app=test` label.
 
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: deny-egress-frontend
+  name: deny-egress-app-test
 spec:
   podSelector:
     matchLabels:
-      role: frontend
+      app: test
   policyTypes:
   - Egress
   egress: []
 ```
 
-* **podSelector:** matches to `role=frontend` pods
-* **policyTypes:** `Engress` (outboud) traffic will be enforced
+* **podSelector:** matches to `app=test` pods
+* **policyTypes:** `Egress` (outboud) traffic will be enforced
 * **egress: []** Empty rule set does not whitelist any traffic, therefore all egress (outbound) traffic is blocked. You can drop this field altogether and have the same effect.
-
-
 
 Once you have your network policy in place you'll need to set up some more pods to test. You can scale your deployment down to 1 pod to make things more straight forward. Keep in mind if you have any autoscalers in place.
 
