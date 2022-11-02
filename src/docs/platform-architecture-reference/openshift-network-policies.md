@@ -267,20 +267,19 @@ spec:
 
 ## Egress example - DENY outbound (egress) traffic from an application
 
-- If you want to prevent an application from establishing any connections to outside of the Pod.
-- Use case for restricting outbound traffic of single-instance databases and datastores.
+If you want to prevent an application from establishing any connections to outside of the Pod. For example,  restricting outbound traffic of single-instance databases and datastores.
 
-Assuming your app has `app=web` label.
+Assuming your target pod has `app=db` label.
 
 ```yaml
 apiVersion: networking.k8s.io/v1
 kind: NetworkPolicy
 metadata:
-  name: deny-egress-app-web
+  name: deny-egress-app-db
 spec:
   podSelector:
     matchLabels:
-      app: web
+      app: db
   policyTypes:
   - Egress
   egress: []
