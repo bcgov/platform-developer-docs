@@ -298,7 +298,7 @@ If you would like a more in-depth testing of pod-to-pod or ingress/egress commun
 
 ## Related links
 
-* https://docs.openshift.com/container-platform/4.10/networking/ovn_kubernetes_network_provider/about-ovn-kubernetes.html
+* https://docs.openshift.com/container-platform/4.10/networking/openshift_sdn/about-openshift-sdn.html
 * https://kubernetes.io/docs/concepts/services-networking/network-policies/
 * https://docs.openshift.com/acs/3.72/operating/manage-network-policies.html
 * https://cloud.redhat.com/blog/guide-to-kubernetes-egress-network-policies
