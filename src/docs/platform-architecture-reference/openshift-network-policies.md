@@ -30,7 +30,6 @@ Without a network policy in place, all pods in a namespace are accessible from o
 - [Allow from the same namespace](#allow-from-the-same-namespace)
 - [Allow from OpenShift router](#allow-from-openshift-router)
 - [Allow only from specific Pod & port](#allow-only-from-specific-pod--port)
-- [Egress example - Allow only to specific Pod & Port](#egress-example---allow-only-to-specific-pod--port)
 - [Egress example - Deny outbound (egress) traffic from an application](#egress-example---deny-outbound-egress-traffic-from-an-application)
 - [Related links](#related-links)
 
@@ -54,7 +53,7 @@ By using network policies declarative YAML this code becomes part of your applic
 
 **Note:**
 ~~The primary BC Gov OpenShift clusters are configured with OpenShift SDN networking which does not support Egress Network Policies.  This applies to the following OpenShift Clusters: CLAB, KLAB, SILVER, GOLD, GOLD-DR.~~
-From OpenShift version 4.10, CLAB, KLAB, SILVER, GOLD, GOLD-DR clusters are now supporting limited Egress network policies.
+From OpenShift version 4.10, CLAB, KLAB, SILVER, GOLD, GOLD-DR clusters are now supporting **limited Egress**(see below notes) network policies.
 KLAB2 and Emerald clusters use a different SDN technology (VMWare NSX-T) which also DOES support (and requires) Egress Network Policies. Details on NSX Networking can be found in the [IDIR protected content area of the Private Cloud website - Guide for Emerald teams](https://cloud.gov.bc.ca/private-cloud/guide-for-emerald-teams/#netpol-differences).
 
 ## NetworkPolicy structure
@@ -124,6 +123,7 @@ What this above NetwokPolicy example does....:
 
 **NOTES:**
 
+- **Limited Egress** in OCP 4.10 clusters. Since our clusters are using `Openshift SDN cluster network provider` (exception with KLAB2 and Emerald), Egress can only be used with `.spec.egress.to.ipBlock` and `.spec.egress.to.ipBlock.except` rules. [OCP 4.10 release note](https://docs.openshift.com/container-platform/4.10/release_notes/ocp-4-10-release-notes.html#ocp-4-10-openshift-sdn-netpol-egress-policies)
 - `cidr` and `except` fields can be used in the Ingress and Egress both.
 - For the details of NetworkPolicy API specs for OCP 4.10, Please refer [NetworkPolicy networking.k8s.io/v1](https://docs.openshift.com/container-platform/4.10/rest_api/network_apis/networkpolicy-networking-k8s-io-v1.html)
 - `namespaceSelector` and `podSelector` can be used together in a single to/from entry that selects particular Pods within particular namespaces, like the examples below. Be careful to use correct YAML syntax!
@@ -265,33 +265,6 @@ spec:
         - protocol: TCP
           port: 3306
 ```
-
-## Egress example - Allow only to specific Pod & Port
-
-Using the previous **Ingress** NetworkPolicy, create an **Egress** NetworkPolicy to allow only TO specific Pod & port.
-
-```yaml
-apiVersion: networking.k8s.io/v1
-kind: NetworkPolicy
-metadata:
-  name: egress-allow-nginx-2-to-mysql    # Change name
-spec:
-  podSelector:
-    matchLabels:
-      deployment: hello-world-nginx-2   # Change labels to `deployment: hello-world-nginx-2`. It's from `spec.ingress.from.podSelector` in the previous yaml
-  policyTypes:
-    - Egress                            # Change `Ingress` to `Egress`, 
-  egress:                               # Change `ingress` to `egress`
-    - to:                               # Change `from:` to `to:`
-        - podSelector:
-            matchLabels:
-              name: mysql              # Change labels to `name: mysql`. it's from `spec.podSelector` in the previous yaml
-      ports:
-        - protocol: TCP
-          port: 3306                   # mysql is using 3306 bi-directional port. So this is no need to be changed.
-```
-
-If the database pod is in a different namespace, add `egress.to.namespaceSelector` field under the `egress.to`.
 
 ## Egress example - Deny outbound (egress) traffic from an application
 
