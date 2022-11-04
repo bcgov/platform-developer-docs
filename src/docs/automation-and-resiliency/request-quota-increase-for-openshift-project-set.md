@@ -37,7 +37,7 @@ Before asking for more quota for your project set, check if the application is f
 
 Use Sysdig to monitor your application. You can access dashboards that show your application memory, CPU and storage usage.
 
-Before you ask for a quota increase, the Platform Services team wants you to monitor and collect metrics to show how much resource your application uses. For more information, see [Get Started with Sysdig Monitor](https://beta-docs.developer.gov.bc.ca/sysdig-monitor-onboarding/). The documentation has all you need to onboard onto Sysdig and use the default dashboards. If you have any issues onboarding to Sysdig, contact the Platform Services team on the applicable [Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig).
+Before you ask for a quota increase, the Platform Services team wants you to monitor and collect metrics to show how much resource your application uses. For more information, see [Onboarding to application monitoring with Sysdig](/sysdig-monitor-onboarding/). The documentation has all you need to onboard onto Sysdig and use the default dashboards. If you have any issues onboarding to Sysdig, contact the Platform Services team on the applicable [Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig).
 
 ## Request a quota increase
 **Note**: Before you request a quota increase, make sure that your project is using its resources efficiently. The Platform Services team wants to be very confident your project needs more quota before they grant an increase.
@@ -88,7 +88,7 @@ Once the quota increase request is approved, the specified namespaces are upgrad
 Related links:
 * [Resource Management Guidelines](https://github.com/BCDevOps/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
 * [Application Resource Tuning](https://github.com/BCDevOps/developer-experience/blob/master/docs/resource-tuning-recommendations.md)
-* [Get Started with Sysdig Monitoring](https://beta-docs.developer.gov.bc.ca/sysdig-monitor-onboarding/)
+* [Get Started with Sysdig Monitoring](/sysdig-monitor-onboarding/)
 * [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 * [OpenShift 4 Project Registry](https://registry.developer.gov.bc.ca/public-landing)
 * [OpenShift project resource quotas](/openshift-project-resource-quotas/)
