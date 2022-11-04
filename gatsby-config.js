@@ -6,7 +6,7 @@ module.exports = {
   siteMetadata: {
     title: `Private Cloud as a Service Platform Technical Documentation`,
     description: `Documentation for the BC Government's Private Cloud as a Service Platform.`,
-    siteUrl: `https://beta-docs.developer.gov.bc.ca/`,
+    siteUrl: `https://docs.developer.gov.bc.ca/`,
     googleSiteVerification: `${process.env.GATSBY_GOOGLE_SITE_VERIFICATION}`,
   },
   trailingSlash: `always`,
@@ -21,7 +21,7 @@ module.exports = {
     {
       resolve: `gatsby-plugin-canonical-urls`,
       options: {
-        siteUrl: `https://beta-docs.developer.gov.bc.ca/`,
+        siteUrl: `https://docs.developer.gov.bc.ca/`,
         stripQueryString: true,
       },
     },
