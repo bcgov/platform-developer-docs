@@ -109,6 +109,7 @@ const SearchPage = ({ location }) => {
 
   const API_KEY = process.env.GATSBY_GOOGLE_CUSTOM_SEARCH_API_KEY;
   const SEARCH_ENGINE_ID = process.env.GATSBY_GOOGLE_SEARCH_ENGINE_ID;
+  const SHOW_SEARCH_ALERT = process.env.GATSBY_SHOW_SEARCH_ALERT;
 
   const searchUrl =
     "https://customsearch.googleapis.com/customsearch/v1?" +
@@ -146,6 +147,45 @@ const SearchPage = ({ location }) => {
     <Layout location={location}>
       <main>
         <h1>Search</h1>
+
+        {SHOW_SEARCH_ALERT && (
+          <Alert type="info">
+            <p>Heads up!</p>
+            <p>
+              We are migrating our search engine to use our production URL,{" "}
+              <code>docs.developer.gov.bc.ca</code>.
+            </p>
+            <p>
+              During this migration phase, results might be a little broken.
+            </p>
+            <p>Try your search directly on Google with the links below:</p>
+            <ul>
+              <li>
+                Old URL:{" "}
+                <a
+                  href={`https://www.google.ca/search?q=site%3Abeta-docs.developer.gov.bc.ca+${query}`}
+                >
+                  beta-docs
+                </a>
+              </li>
+              <li>
+                New URL:{" "}
+                <a
+                  href={`https://www.google.ca/search?q=site%3Adocs.developer.gov.bc.ca+${query}`}
+                >
+                  docs
+                </a>
+              </li>
+            </ul>
+            <p>
+              Can't find what you're looking for? Email{" "}
+              <a href="mailto:PlatformServicesTeam@gov.bc.ca">
+                PlatformServicesTeam@gov.bc.ca
+              </a>{" "}
+              or ask us in Rocket.Chat.
+            </p>
+          </Alert>
+        )}
 
         {isLoading ? (
           <>
