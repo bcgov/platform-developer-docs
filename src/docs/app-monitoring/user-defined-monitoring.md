@@ -34,6 +34,7 @@ Utilizing Prometheus client libraries, You can push your app's metrics to Promet
 - [Expose the metrics from your app](#expose-the-metrics-from-your-app)
 - [Create a ServiceMonitor](#create-a-servicemonitor)
 - [Querying Prometheus](#querying-prometheus)
+- [Sysdig Monitor](#sysdig-monitor)
 - [References](#references)
 
 ## Instrument your application with custom metrics
@@ -146,4 +147,10 @@ PromQL is a rich language​ and there’s a lot you can do with PromQL to manip
 
 Note: Data is stored for 15 days currently.​
 
+## Sysdig Monitor
+
+You can now let Sysdig agent collecting your custom metrics and show them in the Sysdig console. Add `prometheus.io/scrape=true` annotation set in your pod. The Sysdig agent will scrape your application pod and send its `/metriics` to the Sysdig console.
+
 ## References
+
+- https://docs.sysdig.com/en/docs/sysdig-monitor/monitoring-integrations/custom-integrations/collect-prometheus-metrics/#agent-compatibility
