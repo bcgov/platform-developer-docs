@@ -151,6 +151,47 @@ Note: Data is stored for 15 days currently.​
 
 You can now let Sysdig agent collecting your custom metrics and show them in the Sysdig console. Add `prometheus.io/scrape=true` annotation set in your pod. The Sysdig agent will scrape your application pod and send its `/metriics` to the Sysdig console.
 
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    prometheus.io/scrape: "true"
+  labels:
+    app: myapp
+  name: myapp
+  namespace: myapp-namespace
+<...>
+```
+
+Metrics can be checked from your pod also
+
+```console
+$ oc rsh myapp
+(app-root) sh-4.4$ curl http://localhost:8000/metrics
+# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 66.0
+<...>
+response_size_bytes{metric="REQUEST_SIZE",url="https://nginx-openshift-bcgov-nagios.apps.clab.devops.gov.bc.ca/test.txt"} 270.0
+response_size_bytes{metric="SIZE_DOWNLOAD_T",url="https://nginx-openshift-bcgov-nagios.apps.clab.devops.gov.bc.ca/test.txt"} 5.24288e+06
+# HELP response_count_total Response by code
+# TYPE response_count_total counter
+response_count_total{code="200",url="http://nginx-openshift-bcgov-nagios.apps.klab.devops.gov.bc.ca/"} 192.0
+response_count_total{code="200",url="http://nginx-openshift-bcgov-nagios.apps.clab.devops.gov.bc.ca/"} 192.0
+response_count_total{code="200",url="https://nginx-openshift-bcgov-nagios.apps.klab.devops.gov.bc.ca/"} 192.0
+response_count_total{code="200",url="https://nginx-openshift-bcgov-nagios.apps.clab.devops.gov.bc.ca/"} 192.0
+response_count_total{code="200",url="https://status.developer.gov.bc.ca/"} 192.0
+response_count_total{code="200",url="http://nginx-openshift-bcgov-nagios.apps.klab.devops.gov.bc.ca/test.txt"} 192.0
+<...>
+```
+
+And same metrics can be seen on the sysdig monitor web-console.
+
+![user defined monitoring2](../../images/user-defined-monitoring2.png)
+
 ## References
 
-- https://docs.sysdig.com/en/docs/sysdig-monitor/monitoring-integrations/custom-integrations/collect-prometheus-metrics/#agent-compatibility
+- [Sysdig - Automatically scraping any Kubernetes pods](https://docs.sysdig.com/en/docs/sysdig-monitor/monitoring-integrations/custom-integrations/collect-prometheus-metrics/#agent-compatibility)
+- [checking sysdig teams and dashboards](https://docs.developer.gov.bc.ca/sysdig-monitor-setup-team/#review-your-monitoring-dashboards)
+- [Creating sysdig alert](https://docs.developer.gov.bc.ca/sysdig-monitor-create-alert-channels/#creating-an-alert)
