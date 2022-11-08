@@ -36,6 +36,7 @@ Utilizing Prometheus client libraries, You can push your app's metrics to Promet
 - [Querying Prometheus](#querying-prometheus)
 - [Sysdig Monitor](#sysdig-monitor)
 - [Sysdig Monitor Alert](#sysdig-monitor-alert)
+- [Monitor user-defined projects](#monitor-user-defined-projects)
 - [References](#references)
 
 ## Instrument your application with custom metrics
@@ -197,13 +198,22 @@ To set up Sysdig alert using your custom metrics, you'll need to create a dashbo
 
 ![user defined monitoring3](../../images/user-defined-monitoring3.png)
 
+Sysdig alert example;
+
+![user defined monitoring4](../../images/user-defined-monitoring4.png)
+
 For detail steps, please read the documents below:
 
 - [Checking sysdig teams and dashboards](https://docs.developer.gov.bc.ca/sysdig-monitor-setup-team/#review-your-monitoring-dashboards)
 - [Creating sysdig alert](https://docs.developer.gov.bc.ca/sysdig-monitor-create-alert-channels/#creating-an-alert)
+
+## Monitor user-defined projects
+
+To monitor your own projects, by using the OpenShift Container Platform web console.
 
 ## References
 
 - [Sysdig - Automatically scraping any Kubernetes pods](https://docs.sysdig.com/en/docs/sysdig-monitor/monitoring-integrations/custom-integrations/collect-prometheus-metrics/#agent-compatibility)
 - [Checking sysdig teams and dashboards](https://docs.developer.gov.bc.ca/sysdig-monitor-setup-team/#review-your-monitoring-dashboards)
 - [Creating sysdig alert](https://docs.developer.gov.bc.ca/sysdig-monitor-create-alert-channels/#creating-an-alert)
+- [Granting users permission to monitor user-defined projects](https://docs.openshift.com/container-platform/4.10/monitoring/enabling-monitoring-for-user-defined-projects.html#granting-users-permission-to-monitor-user-defined-projects_enabling-monitoring-for-user-defined-projects)
