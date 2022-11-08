@@ -35,6 +35,7 @@ Utilizing Prometheus client libraries, You can push your app's metrics to Promet
 - [Create a ServiceMonitor](#create-a-servicemonitor)
 - [Querying Prometheus](#querying-prometheus)
 - [Sysdig Monitor](#sysdig-monitor)
+- [Sysdig Monitor Alert](#sysdig-monitor-alert)
 - [References](#references)
 
 ## Instrument your application with custom metrics
@@ -186,12 +187,23 @@ response_count_total{code="200",url="http://nginx-openshift-bcgov-nagios.apps.kl
 <...>
 ```
 
-And same metrics can be seen on the sysdig monitor web-console.
+And same metrics can be seen in the Sysdig monitor web-console.
 
 ![user defined monitoring2](../../images/user-defined-monitoring2.png)
+
+## Sysdig Monitor Alert
+
+To set up Sysdig alert using your custom metrics, you'll need to create a dashboard with the metrics, and then you can setup an alert like below;
+
+![user defined monitoring3](../../images/user-defined-monitoring3.png)
+
+For detail steps, please read the documents below:
+
+- [Checking sysdig teams and dashboards](https://docs.developer.gov.bc.ca/sysdig-monitor-setup-team/#review-your-monitoring-dashboards)
+- [Creating sysdig alert](https://docs.developer.gov.bc.ca/sysdig-monitor-create-alert-channels/#creating-an-alert)
 
 ## References
 
 - [Sysdig - Automatically scraping any Kubernetes pods](https://docs.sysdig.com/en/docs/sysdig-monitor/monitoring-integrations/custom-integrations/collect-prometheus-metrics/#agent-compatibility)
-- [checking sysdig teams and dashboards](https://docs.developer.gov.bc.ca/sysdig-monitor-setup-team/#review-your-monitoring-dashboards)
+- [Checking sysdig teams and dashboards](https://docs.developer.gov.bc.ca/sysdig-monitor-setup-team/#review-your-monitoring-dashboards)
 - [Creating sysdig alert](https://docs.developer.gov.bc.ca/sysdig-monitor-create-alert-channels/#creating-an-alert)
