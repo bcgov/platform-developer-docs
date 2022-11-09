@@ -1,5 +1,5 @@
 ---
-title: Payment Card Processing for OpenShift Applications
+title: Payment card processing for OpenShift applications
 
 slug: paymend-card-processing
 
