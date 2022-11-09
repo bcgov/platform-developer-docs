@@ -4,7 +4,7 @@
 
 This is a single location for all technical/developer documentation for product teams working on the Private Cloud OpenShift Platform.
 
-Visit the deployed Gatsby site at [beta-docs.developer.gov.bc.ca](https://beta-docs.developer.gov.bc.ca).
+Visit the deployed Gatsby site at [docs.developer.gov.bc.ca](https://docs.developer.gov.bc.ca).
 
 ## Documentation
 

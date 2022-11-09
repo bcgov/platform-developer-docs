@@ -50,10 +50,17 @@ const StyledListItem = styled.li`
 `;
 
 const Result = ({ item }) => {
+  // The reason for using crafting our URIs this way is so we can use the Gatsby
+  // <Link> component to link between internal pages for maximum speed.
+  // If we used the the full URLs coming back from Google, we would have to use
+  // <a> tags which causes the browser to navigate, breaking our Single Page App
+  // feel and speed.
+  // See: https://www.gatsbyjs.com/docs/reference/built-in-components/gatsby-link/
+  //
   // This split assumes that item.link is a full URL (not a partial path)
   // and that we are serving the site from a sub-domain (not a sub-directory)
-  // Ex: https://beta-docs.developer.gov.bc.ca/ -> /
-  //     https://beta-docs.developer.gov.bc.ca/login-to-openshift/ -> /login-to-openshift/
+  // Ex: https://docs.developer.gov.bc.ca/ -> /
+  //     https://docs.developer.gov.bc.ca/login-to-openshift/ -> /login-to-openshift/
   function getItemPath(item) {
     return `/${item.link.split("/").slice(3).join("/")}`;
   }
