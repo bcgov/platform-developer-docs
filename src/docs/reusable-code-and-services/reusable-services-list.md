@@ -143,16 +143,15 @@ When a piece of code does not comply with a rule, an issue is logged on the snap
 
 SonarQube is a community-supported service. We also encourage teams to switch to using the SonarQube SaaS service.
 
-For more information, see [SonarQube Best Practices](https://developer.gov.bc.ca/Platform-Services-Security/SonarQube-Best-Practices). You can also review the [SonarQube repository](https://github.com/BCDevOps/sonarqube)
+For more information, see the [SonarQube repository](https://github.com/BCDevOps/sonarqube).
 
 ## SonarQube on OpenShift
 
-The [sonarqube repository](https://github.com/BCDevOps/sonarqube) contains all the resources you might need to deploy a SonarQube server instance in a B.C. government OpenShift environment and integrate SonarQube scanning into your Jenkins pipeline.
+The [SonarQube repository](https://github.com/BCDevOps/sonarqube) contains all the resources you might need to deploy a SonarQube server instance in a B.C. government OpenShift environment and integrate SonarQube scanning into your Jenkins pipeline.
 
 This work was inspired by the [OpenShift Demos SonarQube for OpenShift](https://github.com/OpenShiftDemos/sonarqube-openshift-docker).
 
 For more information, see the following pages:
-* [SonarQube on OpenShift](https://developer.gov.bc.ca/Community-Contributed-Content/SonarQube-on-OpenShift)
 * [SonarQube repository](https://github.com/BCDevOps/sonarqube)
 
 For information on upgrading plugins, see the following pages:
