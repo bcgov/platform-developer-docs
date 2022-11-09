@@ -47,11 +47,11 @@ Direct sale is a new offering of PayBC platform where external application can u
 
 From a User interface perspective, the below screen is what is rendered by PayBC as part of the Client application UI flow. The remaining data exchange, functions are background processes transparent to the User.
 
-![payBC](../../images//paybc.png)
+![PayBC enter payment information dialog](../../images//paybc.png)
 
 ### Context diagram
 
-![payment flow](../../images//paymentflow.png)
+![Direct Pay - Payment Flow diagram](../../images//paymentflow.png)
 
  **Payment data flow:**
 
