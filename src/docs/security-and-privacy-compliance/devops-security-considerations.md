@@ -3,11 +3,11 @@ title: DevOps security considerations
 
 slug: devops-security-considerations
 
-description: this page describes the various security tools available on the platform
+description: Learn about DevOps security considerations and tools on the BC Government OpenShift Private Cloud Platform as a Service.
 
 keywords: security, privacy, secrets, tls, ssl, pipeline, templates, container scanning, STRA, network policies, vault
 
-page_purpose: 
+page_purpose: This page describes the various security tools available on the platform.
 
 audience: developer, technical lead
 
