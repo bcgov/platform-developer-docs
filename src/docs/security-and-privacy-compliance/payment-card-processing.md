@@ -1,7 +1,7 @@
 ---
 title: Payment card processing for OpenShift applications
 
-slug: paymend-card-processing
+slug: payment-card-processing
 
 description: how to use centralized payment card processing for OpenShift apps
 
