@@ -3,11 +3,11 @@ title: Payment card processing for OpenShift applications
 
 slug: payment-card-processing
 
-description: how to use centralized payment card processing for OpenShift apps
+description: How to use centralized payment card processing for OpenShift applications
 
 keywords: openshift, pci-dss, pci, payment, processing, paybc, project, devops 
 
-page_purpose: guides application teams through the process and considerations around accepting payment through their applciations 
+page_purpose: Guides application teams through the process and considerations around accepting payment through their applications 
 
 audience: developer, technical lead, product owner
 
