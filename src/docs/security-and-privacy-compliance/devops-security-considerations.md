@@ -169,7 +169,7 @@ The Platform Services team maintains an Access Control Policy for all platform t
 
 Network policies help the platform and project teams to better control communications between components.  While KNPs only apply as INGRESS rules (not egress), they help to improve our overall security posture.  KNPs only apply to on-cluster communications (i.e. between pods in a namespace, or between namespaces).  For off-cluster communications, hosting is investigating a VMWare tool called NSX-T.  NSX-T governs network policies for our Emerald cluster.
 
-Find our more about using KNPs to control network security for an application hosted on the Private Cloud Openshift Platform in [this document](https://beta-docs.developer.gov.bc.ca/openshift-network-policies/). 
+Find our more about using KNPs to control network security for an application hosted on the Private Cloud Openshift Platform in the [OpenShift network policies](/openshift-network-policies/) document. 
 
 More details on KNPs can be found here: https://kubernetes.io/docs/concepts/services-networking/network-policies/
 
@@ -183,8 +183,8 @@ Here is a representation of what an application build pipeline should look like:
 ![PlatformSec drawio](https://user-images.githubusercontent.com/53879638/144318963-fdb5b877-88b8-451d-accf-2d24918c0d62.png)
 
 The pipeline templates above make it easier to include the tools described below:
-  - https://beta-docs.developer.gov.bc.ca/reusable-services-list/#sonarqube-in-the-bc-gov-private-cloud-paas
-  - https://beta-docs.developer.gov.bc.ca/reusable-services-list/#owasp-zap-security-vulnerability-scanning
+  - [SonarQube in the BC Gov Private Cloud PaaS](/reusable-services-list/#sonarqube-in-the-bc-gov-private-cloud-paas)
+  - [OWASP ZAP Security Vulnerability Scanning](/reusable-services-list/#owasp-zap-security-vulnerability-scanning)
 
 **What do each of these types of scanning tools do for me?**
 
@@ -265,14 +265,14 @@ This 'secrets' store should actually only be used for configurations.  Values ar
 
 The preferred secrets management tool for team use on OpenShift.
 - https://cloud.gov.bc.ca/private-cloud/our-products-in-the-private-cloud-paas/vault-secrets-management/
-- https://beta-docs.developer.gov.bc.ca/vault-secrets-management-service/
-- https://beta-docs.developer.gov.bc.ca/vault-getting-started-guide/
+- [Vault secrets management service](/vault-secrets-management-service/)
+- [Vault getting started guide](/vault-getting-started-guide/)
 
 ------
 ### <a name="gitops-cluster-configuration-management"></a>GitOps/Cluster Configuration Management
 
 Argo CD provides a GitOps capability for sync'ing a Git repository with an OpenShift configuration (platform or application).
-- https://beta-docs.developer.gov.bc.ca/argo-cd-usage/
+- [Argo CD usage](/argo-cd-usage/)
 
 We are in the process of testing out the GitOps Operator, based on ArgoCD, that is integrated into OpenShift.  This may replace (partially or completely) our custom ArgoCD implementation.
 
@@ -311,7 +311,7 @@ This tool provides a more wholistic view of logs for an application or at the pl
 
 This tool allows our platform admins and platfrom teams to build monitoring dashboards.
 - https://cloud.gov.bc.ca/private-cloud/our-products-in-the-private-cloud-paas/monitoring-with-sysdig/
-- https://beta-docs.developer.gov.bc.ca/sysdig-monitor-onboarding/
+- [Onboarding to application monitoring with Sysdig](/sysdig-monitor-onboarding/)
 - https://app.sysdigcloud.com/#/login
 
 **Security Information and Event Monitoring (SIEM):**
@@ -333,8 +333,8 @@ This tools help us to observe platform service availability:
 ------
 ### <a name="backups"></a>Backups
 **OpenShift:**
-- https://beta-docs.developer.gov.bc.ca/reusable-services-list/#backup-container
-- https://beta-docs.developer.gov.bc.ca/database-backup-best-practices/
+- [Backup Container](/reusable-services-list/#backup-container)
+- [Database backup best practices](/database-backup-best-practices/)
 
 **GitHub:**
 - https://github.com/bcgov-c/platform-services-docs/blob/main/github-backups.md
@@ -360,7 +360,7 @@ Here is a summary of the GitHub organizations we own and their purposes:
 - bcgov-platform-services - git repository for platform services team
 
 These resources are available:
-- https://beta-docs.developer.gov.bc.ca/bc-government-organizations-in-github/
+- [BC Government organizations in GitHub](/bc-government-organizations-in-github/)
 
 **GitHub Apps**
 
@@ -369,7 +369,7 @@ Teams may request GitHub apps to be associated with their own or all projects in
 **GitHub Enterprise**
 
 We are currently piloting the use of GitHub Enterprise.  
-- https://beta-docs.developer.gov.bc.ca/github-enterprise-user-licenses-bc-government/
+- [GitHub Enterprise user licences in the BC government](/github-enterprise-user-licenses-bc-government/)
 - https://github.com/enterprises/bcgov-ent/sso
 
 ------
@@ -395,10 +395,10 @@ The platform services team provides training to onboarding teams, as well as sup
 - Various Rocket Chat channels
 
 **App security self assessment:**
-- https://beta-docs.developer.gov.bc.ca/security-best-practices-for-apps/
+- [Security best practices for apps](/security-best-practices-for-apps/)
 
 **Best practices for building apps on OpenShift:**
-- https://beta-docs.developer.gov.bc.ca/
+- [Private Cloud as a Service Platform Technical Documentation](/)
 
 **Contact**
 For all other matters concerning security on the OpenShift Container Platform, please contact PlatformServicesTeam@gov.bc.ca.
