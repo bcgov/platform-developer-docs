@@ -119,7 +119,7 @@ For specifics, please contact the platform services team at PlatformServicesTeam
 ### <a name="platform-product-registry"></a>Platform Product Registry
 
 Here, we maintain a listing of all products with deployments on each OpenShift cluster. 
-![platformregistryexample](https://user-images.githubusercontent.com/53879638/144318853-104588bc-0db8-4cd7-8616-13c1c137f199.JPG)
+![Platform Product Registry example view](../../images/platform-product-registry-example-view.jpg)
 
 https://registry.developer.gov.bc.ca/public-landing?redirect=/dashboard
 
@@ -180,7 +180,7 @@ In order to reduce effort in implementing secure tools into a build pipeline, we
 - https://github.com/bcgov/Security-pipeline-templates/
 
 Here is a representation of what an application build pipeline should look like:
-![PlatformSec drawio](https://user-images.githubusercontent.com/53879638/144318963-fdb5b877-88b8-451d-accf-2d24918c0d62.png)
+![Application build pipeline example diagram](../../images/application-build-pipeline-example.png)
 
 The pipeline templates above make it easier to include the tools described below:
   - [SonarQube in the BC Gov Private Cloud PaaS](/reusable-services-list/#sonarqube-in-the-bc-gov-private-cloud-paas)
@@ -253,7 +253,7 @@ Generate a .csr for each site:
 -  Once order is fulfilled/shipped by DXC, Ministry Service Desk sends 'Completed Order' notification to business area
 -  *Note:* This process may be slightly different using MyServiceCentre.
 
-![TLS_Order](https://user-images.githubusercontent.com/53879638/144319065-af4ae9f9-3d61-41b3-977b-36a600e51b0a.png)
+![TLS certificate order lifecycle diagram](../../images/tls-certificate-order-lifecycle.png)
 
 ------
 ### <a name="secrets-management"></a>Secrets Management
@@ -300,7 +300,7 @@ The Platform Services team provides a number of tools to help ensure our platfor
 **OpenShift UI:**
 
 Within the OpenShift interface, project teams can view logs associated with a given pod through the Logs tab.  
-![logging_ui](https://user-images.githubusercontent.com/53879638/144319141-d387a02c-6b9e-4330-ab5b-6e2711e39565.JPG)
+![OpenShift Pod details screen Logs tab example](../../images/openshift-pod-details-logs-tab-example.jpg)
 
 **Kibana:**
 
