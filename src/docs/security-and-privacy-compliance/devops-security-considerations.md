@@ -1,5 +1,5 @@
 ---
-title: Devops Security Considerations
+title: DevOps security considerations
 
 slug: devops-security-considerations
 
