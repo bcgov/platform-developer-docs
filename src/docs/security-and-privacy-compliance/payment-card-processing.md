@@ -93,6 +93,8 @@ A transaction date is a required parameter and should be in yyyy-MM-dd format. I
 The PayBC reference number is a unique number across the portal. It will be assigned to the onboarding ministries by the PayBC.
 ### 3 glDate
 Gl date is a required parameter and should be in yyyy-MM-dd format. It should not be in the past.
+
+```
 GL Processing Logic,
     > Day End, transaction after Cut off time (4 PM) ,
            GL Date if in past to be increased by 1 day and posted next day 4 PM
@@ -100,6 +102,8 @@ GL Processing Logic,
            GL Date if in past to be increased by 1 day and posted next day 4 PM
     > Year End transaction after Cut off time (4 PM) ,
            GL Date if in past to be increased by 1 day and posted next day 4 PM
+```
+
 ### 4 Description
 The description is a mandatory parameter and must not be greater than 100 characters.
 ### 5 pbcTxnNumber
@@ -115,10 +119,13 @@ calling website.
 It is a required parameter. Only CAD is in scope as of now.
 ### 10 Revenue
 It consists of three parts i.e line number, revenue amount and revenue account. The format of revenue is
+
+```
     lineNumber1:revenueAccount1:revenueAmount1|
     lineNumber2:revenueAccount2:revenueAmount2|……….
-    
-Example: 1:039.18ACE.14691.8928.1800000.000000.0000:50.00
+```
+
+Example: `1:039.18ACE.14691.8928.1800000.000000.0000:50.00`
     
   10.1 LINENUMBER
      The line number is a required part of the revenue request parameter and its value must be numeric.
@@ -139,19 +146,11 @@ It is a required field. The hash value is calculated on the request parameters u
 
 Hash value can be calculated as follows:
 
-hashValue = MD5( (trnDate=2020-04-18&pbcRefNumber=10006&glDate=2020-04-18
-&description=Direct
-Sale&pbcTxnNumber=EZ000101&trnAmount=10.00&paymentMethod=CC&currency=CAD&red
-irectUri=https://localhost:7002/index.html&revenue=1:039.18ACE.14691.8928.1800000.
-000000.0000:10.00&ref1=&ref2=&ref3=) + API Key)
+`hashValue = MD5( (trnDate=2020-04-18&pbcRefNumber=10006&glDate=2020-04-18&description=DirectSale&pbcTxnNumber=EZ000101&trnAmount=10.00&paymentMethod=CC&currency=CAD&redirectUri=https://localhost:7002/index.html&revenue=1:039.18ACE.14691.8928.1800000.000000.0000:10.00&ref1=&ref2=&ref3=) + API Key)`
 
 The final Query string will be
-? trnDate=2020-04-18&pbcRefNumber=10006&glDate=2020-04-18
-&description=Direct
-Sale&pbcTxnNumber=EZ000101&trnAmount=10.00&paymentMethod=CC&currency=CAD&red
-irectUri=https://localhost:7002/index.html&revenue=1:039.18ACE.14691.8928.1800000.
-000000.0000:10.00 &ref1=&ref2=&ref3=&hashValue=
-a6955be6fa57ea42537cb79eaefb08b0.
+
+`?trnDate=2020-04-18&pbcRefNumber=10006&glDate=2020-04-18&description=DirectSale&pbcTxnNumber=EZ000101&trnAmount=10.00&paymentMethod=CC&currency=CAD&redirectUri=https://localhost:7002/index.html&revenue=1:039.18ACE.14691.8928.1800000.000000.0000:10.00 &ref1=&ref2=&ref3=&hashValue=a6955be6fa57ea42537cb79eaefb08b0.`
 
 ### 13 Example
 ```
@@ -236,25 +235,33 @@ trnApproved=0
 ## **Query GET Web Service**
 GET webservice endpoint will be provided from PayBC to get transaction status and details for completed transaction, Query web service will be hosted on a separate server and port from PayBC and AR CFS web service and will be oauth2 authenticated with a separate client id and secret.
 
-<u>GET Url pattern</u>
-https://servername:port/ords/cas/paybc/payment/<paybc ref no>/<transaction no>
+<u>GET URL pattern</u>
 
-e.g
-https://servername:port/ords/cas/paybc/payment/10006/EZ000101
+`https://servername:port/ords/cas/paybc/payment/<paybc ref no>/<transaction no>`
+
+e.g. `https://servername:port/ords/cas/paybc/payment/10006/EZ000101`
 
 <u>Response</u>
-If No data in PayBC
-     404 Not Found, if Data is not found
 
-If data in PayBC
-PNDNG = Pending means no payment was made
-PAID = Successful payment was received
-CMPLT = Successful payment was received and GL was posted to CFS
+If No data in PayBC:
 
-NEW = Revenue Record Created in CFS
-REJECT = CFS GL post failed, GLErrorMessage will have details
-IN PROCESS= CFS GL Process in progress.
-PROCESSED = CFS GL post successful
+   404 Not Found, if Data is not found
+
+If data in PayBC:
+
+   PNDNG = Pending means no payment was made
+
+   PAID = Successful payment was received
+
+   CMPLT = Successful payment was received and GL was posted to CFS
+
+   NEW = Revenue Record Created in CFS
+
+   REJECT = CFS GL post failed, GLErrorMessage will have details
+
+   IN PROCESS= CFS GL Process in progress.
+
+   PROCESSED = CFS GL post successful
 
 ```
 {
