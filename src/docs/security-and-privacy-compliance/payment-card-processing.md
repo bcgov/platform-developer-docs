@@ -37,7 +37,7 @@ Alternatively, Ministries may host their own PCI-DSS proxy service for connectio
 - [Validation](#validation)
 - [Response](#response)
 - [Query GET Web Service](#query-get-web-service)
-- [Post Web Service](#post-web-service)
+- [POST Web Service](#post-web-service)
 
 ## Direct sale with PayBC overview
 
@@ -291,14 +291,15 @@ PROCESSED = CFS GL post successful
 
 
 
-## **Post Web Service**
+## **POST Web Service**
 POST webservice endpoint will be provided from PayBC to update the revenue for paid transaction.
 Revenue can only be updated for PAID Transactions and if GL status is NEW/REJECT POST Url pattern.
 
+<u>POST URL pattern</u>
+
 `https://servername:port/ords/cas/paybc/payment/<paybc ref no>/<transaction no>`
 
-e.g
-`https://servername:port/ords/cas/paybc/payment/10006/EZ000101`
+e.g `https://servername:port/ords/cas/paybc/payment/10006/EZ000101`
 
 ```
 {
