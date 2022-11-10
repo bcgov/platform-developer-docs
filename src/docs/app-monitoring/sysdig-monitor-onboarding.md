@@ -22,8 +22,7 @@ sort_order: 1
 
 [Sysdig Monitor](https://sysdig.com/products/monitor/) provides system-level monitoring of Kubernetes hosts and the ability to create custom dashboards, alerts and operational-level captures to diagnose application or platform-level issues.
 
-
-### Here are the documents for you to follow through:
+## Documents in this onboarding guide
 
 1. [Set up a team in Sysdig Monitor](/sysdig-monitor-setup-team/)
 2. [Create alerts and notifications in Sysdig Monitor](/sysdig-monitor-create-alert-channels/)
