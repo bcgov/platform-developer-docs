@@ -36,7 +36,7 @@ Utilizing Prometheus client libraries, You can push your app's metrics to Promet
 - [Querying Prometheus](#querying-prometheus)
 - [Sysdig Monitor](#sysdig-monitor)
 - [Sysdig Monitor Alert](#sysdig-monitor-alert)
-- [Monitor user-defined projects](#monitor-user-defined-projects)
+- [Monitor user-defined projects using Alertmanager](#monitor-user-defined-projects-using-alertmanager)
 - [References](#references)
 
 ## Instrument your application with custom metrics
@@ -207,9 +207,9 @@ For detail steps, please read the documents below:
 - [Checking sysdig teams and dashboards](https://docs.developer.gov.bc.ca/sysdig-monitor-setup-team/#review-your-monitoring-dashboards)
 - [Creating sysdig alert](https://docs.developer.gov.bc.ca/sysdig-monitor-create-alert-channels/#creating-an-alert)
 
-## Monitor user-defined projects
+## Monitor user-defined projects using Alertmanager
 
-To monitor your own projects, by using the OpenShift Container Platform web console.
+Technical preview for our Openshift Clusters (OCP 4.10). It is possible to set up Alertmanager rule for a user-defined projects so that the granted user(s) by the monitoring-rules-edit role can create, modify, and deleting PrometheusRule custom resources for their project. It's coming with OCP 4.11.
 
 ## References
 
@@ -217,3 +217,5 @@ To monitor your own projects, by using the OpenShift Container Platform web cons
 - [Checking sysdig teams and dashboards](https://docs.developer.gov.bc.ca/sysdig-monitor-setup-team/#review-your-monitoring-dashboards)
 - [Creating sysdig alert](https://docs.developer.gov.bc.ca/sysdig-monitor-create-alert-channels/#creating-an-alert)
 - [Granting users permission to monitor user-defined projects](https://docs.openshift.com/container-platform/4.10/monitoring/enabling-monitoring-for-user-defined-projects.html#granting-users-permission-to-monitor-user-defined-projects_enabling-monitoring-for-user-defined-projects)
+- [Enabling monitoring for user-defined projects](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.10/html/monitoring/enabling-monitoring-for-user-defined-projects)
+- [Enabling alert routing for user-defined projects](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.10/html/monitoring/enabling-alert-routing-for-user-defined-projects)
