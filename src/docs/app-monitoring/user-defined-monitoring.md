@@ -151,7 +151,7 @@ Note: Data is stored for 15 days currently.​
 
 ## Sysdig Monitor
 
-You can now let Sysdig agent collecting your custom metrics and show them in the Sysdig console. Add `prometheus.io/scrape=true` annotation set in your pod. The Sysdig agent will scrape your application pod and send its `/metriics` to the Sysdig console.
+You can now let Sysdig agent collecting your custom metrics and show them in the Sysdig console. Add `prometheus.io/scrape=true` annotation set in your pod. The Sysdig agent will scrape your application pod and send its `/metrics` to the Sysdig console.
 
 ```yaml
 apiVersion: v1
