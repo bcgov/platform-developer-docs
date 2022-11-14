@@ -33,8 +33,4 @@ Related links:
 - [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing)
 - [OnBoarding Guide for BC Gov DevOps Platform](https://docs.google.com/presentation/d/1UcT0b2YTPki_o0et9ZCLKv8vF19eYakJQitU85TAeD4/edit?usp=sharing)
 
-Rewrite sources:
-
-- https://developer.gov.bc.ca/Getting-Started-on-the-DevOps-Platform/How-to-Request-a-New-OpenShift-Project
-
 ---
