@@ -106,7 +106,7 @@ Ensure that your pods are not in a `CrashLoopBackOff` state for too long. If the
 
 You may note that this document is pretty vague about the "hows" of these principles. This is because it can vary from application to application, and technology stack to technology stack. The design needs for a highly available chat application are very different from those of a highly available static website.
 
-If you're looking for some general guidance on what high availability options exist in OpenShift, attend our [OpenShift 101] training.(https://developer.gov.bc.ca/ExchangeLab-Course:-Openshift-101) This course covers a number of options, including how to deploy a basic application with high availability.
+If you're looking for some general guidance on what high availability options exist in OpenShift, attend our [OpenShift 101 training](/training-from-the-platform-services-team/). This course covers a number of options, including how to deploy a basic application with high availability.
 
 This is where the community comes in. If you have a highly available application, please feel free to fork this document and add links to examples from your application (along with information about your stack and any explanations you feel might be necessary). The more you reach out to help your fellow developers, the stronger a community we will be.
 
@@ -157,16 +157,12 @@ Related links:
 * [OpenShift: Compute Resources](https://docs.openshift.com/container-platform/3.11/dev_guide/compute_resources.html#dev-compute-resources)
 * [Horizontal Pod Autoscaler](https://docs.openshift.com/container-platform/3.11/dev_guide/pod_autoscaling.html)
 * [Quality of Service](https://docs.openshift.com/container-platform/3.11/dev_guide/compute_resources.html#quality-of-service-tiers)
-
 * [Pod Terminations](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-termination)
-* [OpenShift 101](https://developer.gov.bc.ca/ExchangeLab-Course:-Openshift-101)
+* [Training from the Platform Services team](/training-from-the-platform-services-team/)
 * [PodDisruptionBudgets](https://kubernetes.io/docs/tasks/run-application/configure-pdb/)
 * [Tools: BCDevOps Backup Container](https://github.com/BCDevOps/backup-container)
 * [Tools: Patroni](https://github.com/BCDevOps/platform-services/tree/master/apps/pgsql/patroni)
 * [Example: Rocketchat](https://github.com/BCDevOps/platform-services/tree/master/apps/rocketchat) - Platform Team
 * [Example: Keycloak](https://github.com/bcgov/ocp-sso) - Platform Team
 * [Example: Devhub](https://github.com/bcgov/devhub-app-web) - Developer Experience
-
-Rewrite sources:
-* https://developer.gov.bc.ca/Developer-Tools/Resiliency-Guidelines
 ---
