@@ -134,7 +134,4 @@ Related resources:
 - [Sysdig User Management Docs](https://docs.sysdig.com/en/manage-teams-and-roles.html)
 - [Sysdig User Roles](https://docs.sysdig.com/en/user-and-team-administration.html)
 
-Rewrite sources:
-* https://developer.gov.bc.ca/Developer-Tools/OpenShift-User-Guide-to-Creating-and-Using-a-Sysdig-Team-for-Monitoring
-
 ---
