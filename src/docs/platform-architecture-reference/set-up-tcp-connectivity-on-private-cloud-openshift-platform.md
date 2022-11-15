@@ -26,6 +26,7 @@ Use this page to learn how to configure direct [transmission control protocol (T
 - [Set up TCP connectivity in the Silver Cluster](#set-up-tcp-connectivity-in-the-silver-cluster)
 - [Set up TCP connectivity on the Gold Kamloops/Gold Calgary Cross-Cluster](#set-up-tcp-connectivity-on-the-gold-kamloopsgold-calgary-cross-cluster)
 - [Troubleshooting](#troubleshooting)
+- [Related links](#related-links)
 
 ## Direct TCP access
 Product teams may enable direct non-HTTPS TCP access to services within their namespaces by creating a TransportServerClaim resource.
@@ -112,6 +113,8 @@ spec:
 Create the `NetworkPolicy` in your namespace:
 
 `$ oc -n yourlicenceplate-dev apply -f allow-from-f5-ingress.yaml`
+
+For more details about how `NetworkPolicy` works in OpenShift, refer to our in-depth [OpenShift network policies](/openshift-network-policies/) page.
 
 ### Test access
 After you create the `TransportServerClaim`, the Porter Operator creates a `TransportServer` in your namespace.
@@ -244,7 +247,5 @@ status:
   port: "65555"
 ```
 
----
-Rewrite sources:
-- new page
----
+## Related links
+- [OpenShift network policies](/openshift-network-policies/)
