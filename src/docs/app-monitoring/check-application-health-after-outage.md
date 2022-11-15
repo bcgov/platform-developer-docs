@@ -25,11 +25,12 @@ The OpenShift platform provides a reduced chance of significant unexpected outag
 Still, it's always possible that an outage affects the platform and brings down the applications hosted there. If this happens, speedy recovery is important. Use these guidelines to ensure your application recovers quickly and effectively.
 
 ## On this page
+
 - [Check reporting channels](#check-reporting-channels)
 - [Check your application](#check-your-application)
 - [Keep track of recovery steps](#keep-track-of-recovery-steps)
 
-These guidelines assume that you built your application in a cloud-native, highly resilient manner that makes effective use of the strengths of the OpenShift platform. Make sure you follow our [application resiliency guidelines](https://developer.gov.bc.ca/Developer-Tools/Resiliency-Guidelines). If your application is not cloud-native in its design, it won't benefit from the higher adaptability and recoverability of the platform and may need additional work to recover from a large outage.
+These guidelines assume that you built your application in a cloud-native, highly resilient manner that makes effective use of the strengths of the OpenShift platform. Make sure you follow our [application resiliency guidelines](/app-resiliency-guidelines/). If your application is not cloud-native in its design, it won't benefit from the higher adaptability and recoverability of the platform and may need additional work to recover from a large outage.
 
 ## Check reporting channels
 
@@ -58,11 +59,13 @@ Your pods will likely scale back up on their own. However, it's still a good ide
 - If you're having problems connecting to your application and your pods look healthy, restart them. If that works, that indicates that you may need to build a more complex and robust health check for those pods.
 
 #### Crash Loop Backoff
+
 This error usually indicates a problem with your application: it's repeatedly attempting to boot and failing.
 
 Your application logs should have more information and may provide further information about how to fix this issue. If your application enters CrashLoopBackoff during recovery from an outage, this may indicate that your application is not designed to be fully resilient.
 
 #### Image Pull Backoff
+
 This error generally indicates that the pod is having trouble getting to the image it needs to spin up.
 
 This is usually an indication that there is still a problem with the cluster (check Rocket.Chat or the status page) or with your image (check that it still exists and hasn't been corrupted).
@@ -117,10 +120,14 @@ assignees: caggles, ShellyXueHan
 ```
 
 ---
+
 Related links:
-* [Resiliency Guidelines](https://developer.gov.bc.ca/Developer-Tools/Resiliency-Guidelines)
-* [BCGov Platform Services Status Page](https://status.developer.gov.bc.ca)
+
+- [Application resiliency guidelines](/app-resiliency-guidelines/)
+- [BCGov Platform Services Status Page](https://status.developer.gov.bc.ca)
 
 Rewrite sources:
-* https://github.com/BCDevOps/developer-experience/blob/master/docs/post-outage-checklist.md
+
+- https://github.com/BCDevOps/developer-experience/blob/master/docs/post-outage-checklist.md
+
 ---
