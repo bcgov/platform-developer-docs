@@ -77,6 +77,4 @@ Related links:
 * [BC Government Organizations in GitHub](/bc-government-organizations-in-github/)
 * [Pricing](https://github.com/pricing)
 
-Rewrite sources:
-* https://github.com/BCDevOps/openshift-wiki/blob/master/docs/HowTo/RequestGitHubEnterpriseUserLicense.md?plain=1
 ---

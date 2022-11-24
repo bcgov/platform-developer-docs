@@ -90,7 +90,4 @@ Related links:
 * [Required pages for a GitHub repository](/required-pages-for-github-repository/)
 * [License your GitHub repository](/license-your-github-repository/)
 
-Rewrite sources:
-* https://developer.gov.bc.ca/Code-Management/Approaches-to-CollaboratingContributing
-* https://developer.gov.bc.ca/Code-Management/Github-Practices-in-Gov
 ---

@@ -113,6 +113,4 @@ Related links:
 - [patroni-postgres-container](https://github.com/bcgov/patroni-postgres-container.git)
 - [Patroni/Postgres image](https://artifacts.developer.gov.bc.ca/ui/repos/tree/General/bcgov-docker-local/patroni-postgres)
 
-Rewrite sources:
-* https://github.com/BCDevOps/openshift-wiki/blob/master/docs/Artifactory/common_images.md
 ---

@@ -118,7 +118,4 @@ Related links:
 * [Setup an Artifactory service account](/setup-artifactory-service-account/)
 * [Setup an Artifactory project and repository](/setup-artifactory-project-repository/)
 
-Rewrite sources:
-* https://github.com/BCDevOps/openshift-wiki/blob/master/docs/Artifactory/ServiceDefinition.md
-* https://github.com/BCDevOps/developer-experience/blob/master/apps/artifactory/DEVHUB-README.md
 ---

@@ -96,7 +96,4 @@ Related links:
 * [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/)
 * [Setup an Artifactory project and repository](/setup-artifactory-project-repository/)
 
-Rewrite sources:
-* https://github.com/BCDevOps/openshift-wiki/blob/master/docs/Artifactory/ServiceDefinition.md
-* https://github.com/BCDevOps/developer-experience/blob/master/apps/artifactory/DEVHUB-README.md
 ---

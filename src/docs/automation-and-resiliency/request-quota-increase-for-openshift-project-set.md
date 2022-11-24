@@ -94,6 +94,4 @@ Related links:
 * [OpenShift project resource quotas](/openshift-project-resource-quotas/)
 * [S3 Object Storage Service](https://github.com/BCDevOps/OpenShift4-Migration/issues/59)
 
-Rewrite sources:
-* https://github.com/BCDevOps/developer-experience/blob/master/docs/resourceTuning/request-for-quota-increase.md
 ---

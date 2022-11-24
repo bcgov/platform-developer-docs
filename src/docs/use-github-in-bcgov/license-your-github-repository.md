@@ -111,6 +111,4 @@ Related links:
 - [Open Government Licence - BC (OGL-BC)](https://www2.gov.bc.ca/gov/content/data/open-data/open-government-licence-bc)
 - [Affero General Public Licence (AGPL)](https://www.gnu.org/licenses/agpl-3.0.en.html)
 
-Rewrite sources:
-* https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Open-Source-Development-Employee-Guide/Licenses.md
 ---

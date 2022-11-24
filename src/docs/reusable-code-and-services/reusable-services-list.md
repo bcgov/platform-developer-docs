@@ -50,7 +50,6 @@ You can use the following databases:
 You can run Backup Container for supported databases separately or in a mixed environment.
 
 For more information on Backup Container, see the following pages:
-* [Backup Container](https://developer.gov.bc.ca/Community-Contributed-Content/Backup-Container)
 * [backup-container repository](https://github.com/BCDevOps/backup-container)
 * [jag-cullencommission repository](https://github.com/bcgov/jag-cullencommission/tree/master/openshift)
 
@@ -212,7 +211,4 @@ Related links:
 * [docker-weasyprint](https://github.com/BCDevOps/docker-weasyprint)
 * [WeasyPrint](https://weasyprint.org/)
 
-
-Rewrite sources:
-* (this list in incredibly long)
 ---

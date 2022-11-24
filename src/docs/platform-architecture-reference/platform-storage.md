@@ -43,7 +43,7 @@ All NetApp storage classes support resizing (bigger only). You can start with a 
 
 * **NetApp File**: `netapp-file-standard` is the default storage class for the platform and the type of storage you get if you don't specify a specific `storageClass`.
 
-  `netapp-file-backup` is the same as `netapp-file-standard` but the contents are backed up daily by the OCIO backup infrastructure. For more information, see [Backup and Restore](https://developer.gov.bc.ca/OCP4-Backup-and-Restore).
+  `netapp-file-backup` is the same as `netapp-file-standard` but the contents are backed up daily by the OCIO backup infrastructure. For more information, see [Backup Container](https://github.com/BCDevOps/backup-container).
 
 * **NetApp Block**: `netapp-block-standard` is the current block `storageClass` target and the `storageClass` you should use for your block storage needs.
 
@@ -129,14 +129,10 @@ The speed of each storage solution depends on your workload. ElasticSearch speci
 ---
 Related links:
 * [OpenShift project resource quotas](/openshift-project-resource-quotas/)
-* [Backup and Restore](https://developer.gov.bc.ca/OCP4-Backup-and-Restore)
+* [Backup Container](https://github.com/BCDevOps/backup-container)
 * [Red Hat documentation](https://access.redhat.com/documentation/en-us/red_hat_openshift_container_storage/4.7/html/deploying_and_managing_openshift_container_storage_using_red_hat_openstack_platform/volume-snapshots_osp)
 * [BCDevOps/Backup-Container](https://github.com/bcdevops/backup-container)
 * [BCDevOps/StorageMigration](https://github.com/BCDevOps/StorageMigration)
 * [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing)
 
-Rewrite sources:
-* https://github.com/BCDevOps/openshift-wiki/blob/master/docs/OCP/OCPStorageServices.md
-* https://github.com/BCDevOps/OpenShift4-Migration/issues/59
-* https://ssbc-client.gov.bc.ca/services/ObjectStorage/overview.htm
 ---

@@ -37,6 +37,5 @@ Applications can be removed from the private cloud platform using the product re
 ---
 Related links:
 * 
-Rewrite sources:
-* 
+
 ---

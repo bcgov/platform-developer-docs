@@ -87,11 +87,4 @@ Related links:
 * [Remove a user's BCGov GitHub access](/remove-user-bcgov-github-access/)
 * [Common platform requests in the BC Gov Private Cloud PaaS](%WORDPRESS_BASE_URL%/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/)
 
-Rewrite sources:
-* https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/github/README.md
-* https://developer.gov.bc.ca/Getting-Started-on-the-DevOps-Platform/How-to-request-new-GitHub-user-access-or-repository-creation
-* https://developer.gov.bc.ca/Getting-Started-on-the-DevOps-Platform/Granting-a-user-access-to-a-project
-* https://developer.gov.bc.ca/Getting-Started-on-the-DevOps-Platform/How-to-request-new-GitHub-user-access-or-repository-creation
-* https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/
-* https://www.youtube.com/watch?v=IvdPyx2-qm0
 ---

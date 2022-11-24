@@ -193,6 +193,4 @@ Related links:
 * [NPM repository](https://registry.npmjs.org)
 * [repo-mountie assemble file](https://github.com/bcgov/repomountie/blob/master/.s2i/bin/assemble)
 
-Rewrite sources:
-* https://github.com/BCDevOps/developer-experience/blob/master/apps/artifactory/DEVHUB-README.md
 ---

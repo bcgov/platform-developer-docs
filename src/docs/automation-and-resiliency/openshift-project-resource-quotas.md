@@ -80,6 +80,4 @@ Related links:
 * [Request a quota increase for an OpenShift project set](/openshift-project-resource-quotas/)
 * [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing)
 
-Rewrite sources:
-* https://github.com/BCDevOps/developer-experience/blob/master/docs/resourceTuning/project-resource-quotas.md
 ---

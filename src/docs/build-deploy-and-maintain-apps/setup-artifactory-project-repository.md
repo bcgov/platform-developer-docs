@@ -125,7 +125,4 @@ Related links:
 * [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/)
 * [Setup an Artifactory service account](/setup-artifactory-service-account/)
 
-Rewrite sources:
-* https://github.com/BCDevOps/openshift-wiki/blob/master/docs/Artifactory/ServiceDefinition.md
-* https://github.com/BCDevOps/developer-experience/blob/master/apps/artifactory/DEVHUB-README.md
 ---
