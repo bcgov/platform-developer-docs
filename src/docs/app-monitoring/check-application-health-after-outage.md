@@ -126,8 +126,4 @@ Related links:
 - [Application resiliency guidelines](/app-resiliency-guidelines/)
 - [BCGov Platform Services Status Page](https://status.developer.gov.bc.ca)
 
-Rewrite sources:
-
-- https://github.com/BCDevOps/developer-experience/blob/master/docs/post-outage-checklist.md
-
 ---

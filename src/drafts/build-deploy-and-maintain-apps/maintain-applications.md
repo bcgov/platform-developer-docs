@@ -42,6 +42,5 @@ sort_order:
 ---
 Related links:
 * 
-Rewrite sources:
-* 
+
 ---

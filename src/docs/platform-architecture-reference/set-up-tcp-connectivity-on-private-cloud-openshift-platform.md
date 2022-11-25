@@ -245,6 +245,3 @@ status:
 ```
 
 ---
-Rewrite sources:
-- new page
----

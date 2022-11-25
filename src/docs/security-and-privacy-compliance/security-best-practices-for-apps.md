@@ -192,10 +192,4 @@ Related links:
 - [Node.js](http://blog.risingstack.com/node-js-security-tips/)
 - [Drupal](https://www.drupal.org/writing-secure-code)
 
-
-Rewrite sources:
-* https://developer.gov.bc.ca/Platform-Services-Security/BC-Government-Vault-Secrets-Management
-* https://wehackpurple.com/pushing-left-like-a-boss-part-5-14-secure-coding-summary/
-* https://developer.gov.bc.ca/Information-and-Application-Security/Application-Security-Self-Assessment
-
 ---

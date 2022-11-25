@@ -102,7 +102,5 @@ Redhat's Advanced Cluster Security (ACS) application can be used to visualise an
 ---
 Related links:
 * https://docs.openshift.com/container-platform/3.11/dev_guide/deployments/how_deployments_work.html
-*
-Rewrite sources:
-* 
+
 ---

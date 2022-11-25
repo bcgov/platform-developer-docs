@@ -64,6 +64,4 @@ Related links:
 * [Joint Working Group](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/digital-delivery/web-property-process/web-property-applications)
 * [Propose a New Component](https://developer.gov.bc.ca/Design-System/Propose-a-New-Component)
 
-Rewrite sources:
-* https://github.com/bcgov/design-system/blob/master/components/about/about.md?plain=1
 ---

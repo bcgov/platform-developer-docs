@@ -89,7 +89,4 @@ Related links:
 * [Add someone to the BC Government GitHub Org](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/)
 * [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.9/authentication/using-rbac.html)
 
-Rewrite sources:
-* https://developer.gov.bc.ca/Getting-Started-on-the-DevOps-Platform/How-to-Request-New-User-Access-to-OpenShift
-* https://developer.gov.bc.ca/Getting-Started-on-the-DevOps-Platform/Granting-a-user-access-to-a-project
 ---

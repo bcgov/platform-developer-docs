@@ -79,6 +79,4 @@ Related links:
 * [Pipeline template workflows](https://github.com/bcgov/pipeline-templates/tree/main/.github/workflows)
 * [Tekton templates](https://github.com/bcgov/pipeline-templates/tree/main/tekton)
 
-Rewrite sources:
-* https://github.com/BCDevOps/openshift-wiki/blob/master/docs/HowTo/PipelineAutomation.md
 ---
