@@ -35,7 +35,7 @@ There are a number of tools available to developers working on the OpenShift pla
 - [Access Management](#access-management)
 - [Kubernetes Network Policies](#kubernetes-network-policies)
 - [Pipeline Templates (includes static and dynamic analysis)](#pipeline-templates)
-- [Container image scanning (Aqua, Xray)](#container-image-scanning)
+- [Container image scanning (ACS, Xray)](#container-image-scanning)
 - [Container runtime security](#container-runtime-security)
 - [TLS Certificates](#tls-certificates)
 - [Secrets Management](#secrets-management)
@@ -162,7 +162,7 @@ Platform Services Roles and Responsibilities can be found here:
 - https://cloud.gov.bc.ca/private-cloud/your-product-team-in-the-private-cloud-paas/our-shared-responsibilities/
 
 The Platform Services team maintains an Access Control Policy for all platform tools.  
-- https://docs.developer.gov.bc.ca/s/bk07fg8i4dscrcq7posg/devops-platform-services/d/c1ma8i4adqrdud0ff650/access-control-policy-openshift-and-platform-tools-public. **Need to update location**
+- https://cloud.gov.bc.ca/private-cloud/access-control-policy-openshift-and-platform-tools/
 
 ------
 ### <a name="kubernetes-network-policies"></a>Kubernetes Network Policies (KNPs)
@@ -376,7 +376,7 @@ We are currently piloting the use of GitHub Enterprise.
 ### <a name="other-considerations"></a><u>Other considerations</u>
 **Payment Card Industry Compliance (PCI-DSS)**
 
-Our OpenShift implementation is **NOT** PCI-DSS compliant.  If you wish to host an application on OpenShift that needs to perform financial transactions, please refer to the following:  https://developer.gov.bc.ca/Payment-Card-Processing-for-OpenShift-Applications. **Need to update**
+Our OpenShift implementation is **NOT** PCI-DSS compliant.  If you wish to host an application on OpenShift that needs to perform financial transactions, please refer to the following:  https://docs.developer.gov.bc.ca/payment-card-processing/. 
 Some teams have decided to host PCI-scoped applications on-prem (non-OpenShift) or on a cloud based service (AWS, Azure, etc) to avoid linkages with government systems not under their control.
 
 **Training/Support**
