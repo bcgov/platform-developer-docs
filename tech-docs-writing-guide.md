@@ -1,13 +1,13 @@
-
 # Writing guide for Platform Services technical documentation
 
 Use this guide to reference the approach taken to rewrite the Platform Services technical documentation. While this document is a good place to start, it's still alive and breathing and can be modified and improved upon as needed. Don't be shy. Documentation should evolve and improve!
 
-This is the paragraph I'm changing.
-
 Also, reference the [style and terminology guide](https://docs.google.com/spreadsheets/d/1uNueaRQSQ7ssrMF8zo9YQUJeHj7dL307rLww2hzGuiE/edit#gid=0) that's still in development for more specific rules. Keep in mind that the style guide tracks rules for granular usage of terms or formatting and is built around decisions made during the writing process by writers and stakeholders.
 
+When you're ready to start a new document, copy the [new Markdown document template](./new-markdown-document-template.md).
+
 ## On this page
+
 - [Formatting](#formatting)
 - [Tone and voice](#tone-and-voice)
 - [Audience](#audience-and-perspective)
@@ -54,9 +54,11 @@ The [Grammar, spelling and tone](https://www2.gov.bc.ca/gov/content/governments/
 - [Don't use Latin abbreviations](https://insidegovuk.blog.gov.uk/2016/07/20/changes-to-the-style-guide-no-more-eg-and-ie-etc/) (e.g., i.e., etc.). They're not always familiar to non-native English speakers, they don't always get read correctly by screen readers, and people don't speak Latin. Write around them or use the full term.
 
 ## Audience and perspective
+
 The audience for the technical documentation generally has a high-level of devops knowledge and there are also other avenues for assistance (for example, Rocket.Chat).
 
 ### Duplicate content
+
 Don't duplicate content across pages. Remember the principle of **one topic = one page**. Rather than duplicating content, link to content that's needed. There's a couple solid reasons for this:
 
 - **Maintenance:** If documentation, information, or processes change, it only needs to be updated in one place. Do your future self a favour.
@@ -79,20 +81,23 @@ The resources below have more information. They are concerned largely with forms
 - [One thing per page principle](https://mgearon.com/ux/one-thing-per-page-principle/)
 
 ### Linking strategy
+
 [The Nielsen Norman Group has extensive and thorough guidance on writing excellent hyperlinks](https://www.nngroup.com/articles/writing-links/).
 
 Make sure that the link to an external page is descriptive. The user should know (or have a good idea) where the link is going to take them before they click it.
 
 When linking from one Markdown page in the `./src/docs/` folder to another, write the link in the form `/<slug of the target page>/`. While these links won't work when viewing the page on GitHub, they will work on the Gatsby site.
 
-When linking from Markdown pages in `./src/docs/` to the Cloud WordPress site, use the token `%WORDPRESS_BASE_URL%` in place of the site address and before the path of the document being linked to, in the form `%WORDPRESS_BASE_URL%/path-to-page/`. This is to allow for different WordPress URLs to be injected depending on the environment. 
+When linking from Markdown pages in `./src/docs/` to the Cloud WordPress site, use the token `%WORDPRESS_BASE_URL%` in place of the site address and before the path of the document being linked to, in the form `%WORDPRESS_BASE_URL%/path-to-page/`. This is to allow for different WordPress URLs to be injected depending on the environment.
 
 ### FAQs
+
 [Don't write FAQs](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/web-content-development-guides/web-style-guide/writing-guide/faqs) or format sections as a question and answer. Just tell the reader what they need to know.
 
 ## Page structure and elements
 
 ### Titles
+
 Use a descriptive and specific title. What does the reader do with the page? What specific information do they gain?
 
 Good titles help with findability and usability.
@@ -100,6 +105,7 @@ Good titles help with findability and usability.
 [Use sentence case](https://www2.gov.bc.ca/gov/content?id=8E987979EA6842D7BDE3EDEEA9331787#case) for titles and headings.
 
 ### Images
+
 Use images sparingly. If you need to use images, make sure they are supplementary to the writing. Don't rely on them to explain a process.
 
 Consider the following before using an image:
@@ -139,6 +145,7 @@ You get the idea. Essentially, when you avoid using their name, it means you avo
 Use the [BC Government's guidelines and tools](https://www2.gov.bc.ca/gov/content/home/accessible-government/toolkit) to ensure your work is accessible and inclusive.
 
 ## Writing step-by-step instructions
+
 Occasionally, you'll have to write procedures. Find some of the most useful tips below but also check out [Microsoft's best practices for instructions](https://docs.microsoft.com/en-us/style-guide/procedures-instructions/). It's a great crash course.
 
 - Use numbered and bullet lists but not multi-level lists. Don't write single-item lists.
