@@ -3,11 +3,11 @@ title: Vault secrets management
 
 slug: vault-secrets-management-service
 
-description: describes the vault secrets management service and how it is used in the BC Government
+description: HashiCorp Vault is available for secrets management in the BC Government's OpenShift private cloud platform.
 
 keywords: 
 
-page_purpose: provides infomration relevant to vault sercrets management service to product teams, including description of functions and how to work with this service 
+page_purpose: Provides information relevant to the Vault secrets management service to product teams, including description of functions and how to work with this service.
 
 audience: developer, technical lead
 
