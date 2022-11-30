@@ -35,7 +35,7 @@ For more information on Sysdig Monitor, see [Monitoring with Sysdig](%WORDPRESS_
 
 
 ## Sign in to Sysdig
-You and your team must sign in to Sysdig to create the user account. The B.C. government Sysdig uses OpenID Connect and requires a GitHub account.
+You and your team must sign in to Sysdig to create the user account. The B.C. government Sysdig uses OpenID Connect and requires either an IDIR account or a GitHub account.
 
 - Go to the [BCDevOps Sysdig Monitor](https://app.sysdigcloud.com/api/oauth/openid/bcdevops).
 
