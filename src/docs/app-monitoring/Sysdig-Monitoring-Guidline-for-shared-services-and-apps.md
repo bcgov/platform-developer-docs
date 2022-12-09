@@ -54,7 +54,7 @@ The client should be at the center of every aspect of your customer agreement. A
 
 #### SLO 
 The definition of s SLO is a service level objective: a target value or range of values for a service level that is measured by an SLI. Google has a really [good doc](https://sre.google/workbook/implementing-slos/#:~:text=For%20example%2C%20if%20you%20have,50%25%20of%20the%20error%20budget.) for how to gets the start.
-what you want to promise your customers is deciding how reliable you want your service to depend on what your customers expect. For example, if your SLA states that your customers will receive a response to each request they make in 300 milliseconds, then perhaps your SLO should state that the response will be returned in 200 milliseconds. Choosing an appropriate SLO is hard. Once we have SLA that we know can make our users happy, SLO is like the bottom line of our promise. Therefore, it is in our best interest to catch an issue before it breaches our SLA so that you have time to fix it. And this promise often comes up with consequences if we break it. Again, I will use the Registry as an example and the period is for each month:
+what you want to promise your customers is deciding how reliable you want your service to depend on what your customers expect. For example, if your SLA states that your customers will receive a response to each request they make in 300 milliseconds, then perhaps your SLO should state that the response will be returned in 200 milliseconds. Choosing an appropriate SLO is hard. Once we have SLA that we know can make our users happy, SLO is like the bottom line of our promise. Therefore, it is in our best interest to catch an issue before it beaches our SLA so that you have time to fix it. And this promise often comes up with consequences if we break it. Again, I will use the Registry as an example and the period is for each month:
 
 
 * Retrieving all product information from DB should be less than 8 sec. 
@@ -195,6 +195,13 @@ If we see a high error number, we would be expecting that there may exist a logi
 
  It’s also important to define which errors are critical and which ones are less dangerous. This can help teams identify the true health of service in the eyes of a customer and take rapid action to fix frequent errors.
 
+### Sysdig dashboard
+One thing that I recommended to start with, is to leverage what someone has already built. We can always use dashboard template that been pre-build by Sysdig dashboard team. 
+![Markdown Flow Chart](../../images/Sysdig-built-in-dashboard.png)
+
+In the dashboard library, you can find dashboard for different purpose. If you like to edit the dashboard: After select a dashboard, on the top right, you can select button __Copy to My Dashboards__ to make it your own, and update the query there. You can also click the __Star__ button on the top right corner, and next time you can find this dashboard under your faviorites dashboard.
+
+![Markdown Flow Chart](../../images/favorite-dashboard.png)
 
 ### Uptime.com
 
