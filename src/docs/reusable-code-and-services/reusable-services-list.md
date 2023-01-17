@@ -105,9 +105,8 @@ For more information, see the following pages:
 
 ## go-crond
 
-[go-crond](https://github.com/BCDevOps/go-crond) is a cron daemon written in Go for use in Docker images. For more information, see the following pages:
-* [go-crond](https://developer.gov.bc.ca/Community-Contributed-Content/go-crond)
-* [go-crond repository](https://github.com/BCDevOps/go-crond)
+[go-crond](https://github.com/webdevops/go-crond#readme) is a cron daemon written in Go for use in Docker images. For more information, see the following pages:
+* [go-crond repository](https://github.com/webdevops/go-crond)
 
 ## Matomo OpenShift
 
@@ -193,8 +192,7 @@ Related links:
 * [Common Services showcase](https://bcgov.github.io/common-service-showcase/)
 * [Fathom](https://developer.gov.bc.ca/Community-Contributed-Content/Fathom)
 * [fathom-openshift](https://github.com/BCDevOps/fathom-openshift)
-* [go-crond](https://developer.gov.bc.ca/Community-Contributed-Content/go-crond)
-* [go-crond repository](https://github.com/BCDevOps/go-crond)
+* [go-crond repository](https://github.com/webdevops/go-crond)
 * [Matomo OpenShift](https://developer.gov.bc.ca/Community-Contributed-Content/Matomo-OpenShift)
 * [Matomo](https://matomo.org/)
 * [OWASP ZAP Security Vulnerability Scanning](https://developer.gov.bc.ca/Developer-Toy-Box/OWASP-ZAP-Security-Vulnerability-Scanning)
