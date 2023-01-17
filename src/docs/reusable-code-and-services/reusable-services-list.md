@@ -105,7 +105,7 @@ For more information, see the following pages:
 
 ## go-crond
 
-[go-crond](https://github.com/webdevops/go-crond) is a cron daemon written in Go for use in Docker images. For more information, see the following pages:
+[go-crond](https://github.com/webdevops/go-crond#readme) is a cron daemon written in Go for use in Docker images. For more information, see the following pages:
 * [go-crond repository](https://github.com/webdevops/go-crond)
 
 ## Matomo OpenShift
