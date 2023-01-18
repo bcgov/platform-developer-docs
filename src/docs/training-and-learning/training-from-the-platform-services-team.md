@@ -85,6 +85,9 @@ The videos below can also be found on this [YouTube playlist](https://www.youtub
 - [Infrascructure as Code, Manifests & Templates Demo](https://youtu.be/GMuRFx1bHuw)
 
 - [Postgres Runaway Storage Problem and Recovery](https://youtu.be/M0dhHEKyj4Q)
+
+- [Sysdig Dashboard Template](https://youtu.be/K4rkSCSq3C4)
+
 ---
 Related links:
 - [External training resources](/training-external-resources/)
