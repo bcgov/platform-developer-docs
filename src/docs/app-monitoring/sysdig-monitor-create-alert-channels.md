@@ -46,7 +46,6 @@ Rocket.Chat requires an incoming webhook and a script to parse the data from Sys
 ```js
 class Script {
   process_incoming_request({ request }) {
-    console.log(request.content);
     var date = new Date(request.content.timestamp);
 
     var alertColor = "warning";
