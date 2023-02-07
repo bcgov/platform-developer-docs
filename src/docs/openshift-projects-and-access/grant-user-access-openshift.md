@@ -77,7 +77,8 @@ The product owner or a project administrator associated with namespace provision
 Technical leads grant namespace access. For more information, see [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.9/authentication/using-rbac.html).
 
 Follow these best practices when you grant namespace access to a user:
-- Include the `@github` or `@idir` suffixes on the usernames when you grant access
+- For GitHub IDs, enter the username as `mygithubid@github`
+- For IDIR IDs, enter just the government email address that is associated with the IDIR account, such as `john.doe@gov.bc.ca`
 - All usernames on our platform are lowercase. For example, the username `TheBestDev@github` won't work, but `thebestdev@github` does work
 - Grant the least privileges needed to do the work. Keep the number of users with administrator access low. Edit is sufficient for most developers
 
