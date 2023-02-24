@@ -21,20 +21,23 @@ sort_order: 2
 Find details on the following services or tools you can use as part of your project in `bcgov`.
 
 ## On this page
-- [Backup Container](#backup-container)
-- [BC Address Geocoder](#bc-address-geocoder)
-- [Common Document Generation Service](#common-document-generation-service)
-- [Common Hosted Email Service](#common-hosted-email-service)
-- [Common Object Management Service](#common-object-management-service)
-- [Common Services Get Token](#common-services-get-token)
-- [Fathom](#fathom)
-- [go-crond](#go-crond)
-- [Matomo OpenShift](#matomo-openshift)
-- [OWASP ZAP Security Vulnerability Scanning](#owasp-zap-security-vulnerability-scanning)
-- [Pathfinder Single Sign-On (SSO) Keycloak](#pathfinder-single-sign-on-keycloak)
-- [SonarQube in Private Cloud PaaS](#sonarqube-in-the-bc-gov-private-cloud-paas)
-- [SonarQube on OpenShift](#sonarqube-on-openshift)
-- [WeasyPrint HTML to PDF/PNG](#weasyprint-html-to-pdfpng-microservice)
+- [Reusable services list](#reusable-services-list)
+  - [On this page](#on-this-page)
+  - [Backup Container](#backup-container)
+    - [Features](#features)
+  - [BC Address Geocoder](#bc-address-geocoder)
+  - [Common Document Generation Service](#common-document-generation-service)
+  - [Common Hosted Email Service](#common-hosted-email-service)
+  - [Common Object Management Service](#common-object-management-service)
+  - [Get Token](#get-token)
+  - [Fathom](#fathom)
+  - [go-crond](#go-crond)
+  - [Matomo OpenShift](#matomo-openshift)
+  - [OWASP ZAP Security Vulnerability Scanning](#owasp-zap-security-vulnerability-scanning)
+  - [Pathfinder Single Sign-On Keycloak](#pathfinder-single-sign-on-keycloak)
+  - [SonarQube in the BC Gov Private Cloud PaaS](#sonarqube-in-the-bc-gov-private-cloud-paas)
+  - [SonarQube on OpenShift](#sonarqube-on-openshift)
+  - [WeasyPrint HTML to PDF/PNG Microservice](#weasyprint-html-to-pdfpng-microservice)
 
 ## Backup Container
 
@@ -87,13 +90,13 @@ For more information on COMS, see the following pages:
 * [Common Object Management Service (COMS) product overview](https://digital.gov.bc.ca/common-components/common-object-management-service)
 * [Common Object Management Service (COMS) documentation](https://bcgov.github.io/common-service-showcase/services/coms.html)
 
-## Common Services Get Token
+## Get Token
 
-The Common Services Get Token (also known as GETOK) is a web-based tool for development teams to manage their application's secure access to Common Services. Users can create and deploy service clients instantly to gain access to common service APIs like email notifications, document management or document generation.
+Get Token (also known as GETOK) is a self-serve web interface that provides onboarding and access management of API services using OAuth client credentials.
 
-For more information, see the following pages:
-* [nr-get-token repository](https://github.com/bcgov/nr-get-token)
-* [Common Services showcase](https://bcgov.github.io/common-service-showcase/)
+For more information, visit:
+
+[nr-get-token repository](https://github.com/bcgov/nr-get-token)
 
 ## Fathom
 
