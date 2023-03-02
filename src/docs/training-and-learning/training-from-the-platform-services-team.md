@@ -30,6 +30,8 @@ If the courses fill up, email PlatformServicesTeam@gov.bc.ca - preference is giv
 
 [Register for an OpenShift course](%WORDPRESS_BASE_URL%/private-cloud/support-and-community/platform-training-and-resources/).
 
+You can review the materials for the OpenShift 101 and OpenShift 201 training [here.](https://github.com/BCDevOps/devops-platform-workshops/blob/master/README.md) 
+
 ## How-to-workshops
 
 The [how to workshops](https://github.com/bcgov/how-to-workshops) page hosts some demo projects and quick start guides that may assist you in getting stared with network policies and Crunchy DB databases.  
