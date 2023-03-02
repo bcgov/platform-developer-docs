@@ -90,6 +90,10 @@ The videos below can also be found on this [YouTube playlist](https://www.youtub
 
 - [Sysdig Dashboard Template](https://youtu.be/K4rkSCSq3C4)
 
+- [Quarkus Demo](https://youtu.be/1M4XBWawfaE)
+
+- [BCGovPubCode](https://youtu.be/KMmN5E4-tw4)
+
 ---
 Related links:
 - [External training resources](/training-external-resources/)
