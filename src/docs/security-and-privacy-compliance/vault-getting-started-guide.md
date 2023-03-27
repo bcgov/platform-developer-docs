@@ -63,7 +63,7 @@ For each OpenShift Project Set ($LICENSE_PLATE-dev/test/prod/tools - eg: abc123-
 
 4. Enter your `LICENSE_PLATE` for the **Role** (example uses `abc123` as the `LICENSE_PLATE`)
 
-5. Click **Sign In** and login with GitHub through SSO
+5. Click **Sign In** and login with IDIR or GitHub through SSO (this depends on which information is entered in Registry service by your team lead)
 
 ![vault-login.gif](../../images/vault-login.gif)
 
