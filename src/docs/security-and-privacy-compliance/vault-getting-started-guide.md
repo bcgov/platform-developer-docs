@@ -168,24 +168,24 @@ We organized our secrets as follows:
 
 ```
 $LICENSE_PLATE-nonprod                  #secret engine
-- |---microservices-secret-dev          #secret name
+- |---myapp-secret-dev                  #secret name
 -     |---dev_database_host             #secret data
 -     |---dev_database_name             #secret data
 -     |---dev_service_account           #secret data
 -     |---dev_service_account_pass      #secret data
 
-- |---microservices-secret-debug        #secret name
+- |---myapp-secret-debug                #secret name
 -     |---dev_hostname                  #secret data
 -     |---dev_toolbox                   #secret data
 
-- |---microservices-secret-test         #secret name
+- |---myapp-secret-test                 #secret name
 -     |---test_database_host            #secret data
 -     |---test_database_name            #secret data
 -     |---test_service_account          #secret data
 -     |---test_service_account_pass     #secret data
 
 $LICENSE_PLATE-prod                     #secret engine
-- |---microservices-secret-prod         #secret name
+- |---myapp-secret-prod                 #secret name
 -     |---prod_database_host            #secret data
 -     |---prod_database_name            #secret data
 -     |---prod_service_account          #secret data
@@ -238,18 +238,18 @@ spec:
         # Configure how to retrieve and populate the secrets from Vault:
         # - The name of the secret is any unique string after vault.hashicorp.com/agent-inject-secret-<name>
         # - The value is the path in Vault where the secret is located.
-        vault.hashicorp.com/agent-inject-secret-microservices-secret-dev: abc123-nonprod/microservices-secret-dev
+        vault.hashicorp.com/agent-inject-secret-myapp-secret-dev: abc123-nonprod/myapp-secret-dev
         # - The template Vault Agent should use for rendering a secret:
-        vault.hashicorp.com/agent-inject-template-microservices-secret-dev: |
-          {{- with secret "abc123-nonprod/microservices-secret-dev" }}
+        vault.hashicorp.com/agent-inject-template-myapp-secret-dev: |
+          {{- with secret "abc123-nonprod/myapp-secret-dev" }}
           export dev_database_host="{{ .Data.data.dev_database_host }}"
           export dev_database_name="{{ .Data.data.dev_database_name }}"
           {{- end `}} }}
 
         # - This is another sample. This set uses some HELM chart variable replacements. There's a bit of magic with the ` symbol in the agent-inject-template section. It also required some additional braces {}. You can use this as an example of what worked for me.
-        vault.hashicorp.com/agent-inject-secret-microservices-secret-debug: {{ .Values.global.licenseplate }}-{{ .Values.global.vault_engine }}/microservices-secret-debug
-        vault.hashicorp.com/agent-inject-template-microservices-secret-debug: |
-          {{`{{- with secret `}}"{{ .Values.global.licenseplate }}-{{ .Values.global.vault_engine }}/microservices-secret-debug"{{` }}
+        vault.hashicorp.com/agent-inject-secret-myapp-secret-debug: {{ .Values.global.licenseplate }}-{{ .Values.global.vault_engine }}/myapp-secret-debug
+        vault.hashicorp.com/agent-inject-template-myapp-secret-debug: |
+          {{`{{- with secret `}}"{{ .Values.global.licenseplate }}-{{ .Values.global.vault_engine }}/myapp-secret-debug"{{` }}
           export dev_hostname="{{ .Data.data.dev_hostname }}"
           export dev_toolbox="{{ .Data.data.dev_toolbox }}"
           {{- end `}} }}
@@ -263,10 +263,13 @@ spec:
       containers:
         - name: app
           args:
-          ['sh', '-c', 'source /vault/secrets/microservices-secret-dev && <entrypoint_script>']
+          ['sh', '-c', 'source /vault/secrets/myapp-secret-dev && <entrypoint_script>']
           ...
           ...
 ```
+
+Looking for a simplified way to setup the secret environment variables? Take a look [at this example](https://stackoverflow.developer.gov.bc.ca/questions/1060/1061#1061).
+
 
 **Part 2 - Vault Service Account**
 
