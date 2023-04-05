@@ -377,7 +377,9 @@ We currently use of GitHub Enterprise.  Contact the Developer Experience team fo
 ------
 ### <a name="protected-c-use"></a>DevOps Team recommendations for Protected C data creation/storage/use
 
-This is a list of specific considerations for teams creating/storing/using Protected C data:
+This is a list of specific considerations for teams creating/storing/using Protected C data.  
+
+Product teams should be aware that any creation/storage/use of Protected C data in any system should only be considered after discussion with Ministry Security Officer (MISO) and Ministry Privacy Officer (MPO).  They may require additional controls to those listed below.
  
 Protected C data should be encrypted at rest. 
 - The NetApp storage appliance used is NOT encrypted at its core, so this means that associate provisioned volume claims (PVCs) are not encrypted by default.  However, it is possible to request an encrypted volume claim. 
@@ -391,12 +393,14 @@ Access Management
 - A third-party gateway (3PG) may be used in some cases to proctor access to VMs.  While this will not be required for Emerald cluster access, it could be used if desired.  This provides an addition layer of security/auditing, but also more administration.
 - Depending on risk - data creation, changes, and potentially even (read) access should be audited. 
   - This may be done via an audit table as part of an application, but direct access to data (if permitted) should also be considered for this requirement.
-- Network Security Policies and Workload labelling
+
+Network Security Policies and Workload labelling
   - These should be reviewed and vetted before any actual Protected C data is used in the system (i.e., designed, implemented, and tested in Dev/Test environments).
 
 Vulnerability Scanning (Static and Dynamic)
 - These functions are built into pipeline templates that we provide (using SonarCloud and OWASP ZAP).  These should be mandatory for any system that uses Protected C data.
-  - Image scanning (Advanced Cluster Security- https://acs.developer.gov.bc.ca)
+
+Image scanning (Advanced Cluster Security- https://acs.developer.gov.bc.ca)
   - All active deployments are scanned by Advanced Cluster Security and all DevOps Product Owners and Technical Leads listed in the Platform Registry have access by default.   
   - Any High/Critical vulnerabilities should be reviewed and validated prior to Production release.  This doesn’t mean there can’t be any vulnerabilities, only that we are sure the risky ones are not applicable to the functioning of our system.
 
