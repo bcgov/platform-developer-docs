@@ -101,12 +101,10 @@ Many of the platform tools have ***completed*** security assessments.  These inc
 - OCP Application Resource Tuning Advisor
 - Uptime.com
 - Stack Overflow
+- Platform Product Registry (v2)
+- GitHub Enterprise
 
 - 1Password (SoAR complete, Cloud security schedule review complete) - not to be used corporately due to no background checks for staff/contractors
-
-The following security assessments are ***underway***:
-- Platform Product Registry
-- GitHub Enterprise (Cloud security schedule review underway)
 
 The following security assessments are ***planned***:
 - Cert Manager for OpenShift
@@ -183,7 +181,7 @@ In order to reduce effort in implementing secure tools into a build pipeline, we
 - https://github.com/bcgov/Security-pipeline-templates/
 
 Here is a representation of what an application build pipeline should look like:
-![Application build pipeline example diagram](../../images/application-build-pipeline-example.png)
+![Application build pipeline example diagram](../../images/PipelineSecurity.png)
 
 The pipeline templates above make it easier to include the tools described below:
   - [SonarQube in the BC Gov Private Cloud PaaS](/reusable-services-list/#sonarqube-in-the-bc-gov-private-cloud-paas)
