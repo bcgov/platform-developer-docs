@@ -86,6 +86,7 @@ Documentation is in final stages of review for submission.
 ### <a name="platform-tools-security-assessments"></a>Platform Tools Security Assessments
 
 Many of the platform tools have ***completed*** security assessments.  These include:
+- OpenShift v4.10 and VMWare NSX-T
 - OpenShift v4.x and GitHub (Public)
 - KeyCloak
 - KeyCloak Realm Registry
@@ -100,12 +101,10 @@ Many of the platform tools have ***completed*** security assessments.  These inc
 - OCP Application Resource Tuning Advisor
 - Uptime.com
 - Stack Overflow
+- Platform Product Registry (v2)
+- GitHub Enterprise
 
 - 1Password (SoAR complete, Cloud security schedule review complete) - not to be used corporately due to no background checks for staff/contractors
-
-The following security assessments are ***underway***:
-- Platform Product Registry
-- GitHub Enterprise (Cloud security schedule review underway)
 
 The following security assessments are ***planned***:
 - Cert Manager for OpenShift
@@ -149,8 +148,8 @@ Access to OpenShift is brokered through our OpenShift SSO Service (currently lev
 
 
 GitHub has been the primary authentication to date on OpenShift, however we are in the process of introducing IDIR (via Azure AD).  Both of these options require an account with 2FA/MFA enabled.  
-GitHub - All clusters  
-IDIR - KLAB, Silver (Gold, GoldDR to come in early 2022)
+GitHub - KLAB, CLAB, Silver, Gold, GoldDR  
+IDIR - All clusters (above + KLAB2, Emerald)
 
 - GitHub 2FA - https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication
 - IDIR MFA - https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security-mfa
@@ -167,11 +166,13 @@ The Platform Services team maintains an Access Control Policy for all platform t
 ------
 ### <a name="kubernetes-network-policies"></a>Kubernetes Network Policies (KNPs)
 
-Network policies help the platform and project teams to better control communications between components.  While KNPs only apply as INGRESS rules (not egress), they help to improve our overall security posture.  KNPs only apply to on-cluster communications (i.e. between pods in a namespace, or between namespaces).  For off-cluster communications, hosting is investigating a VMWare tool called NSX-T.  NSX-T governs network policies for our Emerald cluster.
+Network policies help the platform and project teams to better control communications between components.  While KNPs only apply as INGRESS rules (not egress), they help to improve our overall security posture.  KNPs only apply to on-cluster communications (i.e. between pods in a namespace, or between namespaces).  
 
 Find our more about using KNPs to control network security for an application hosted on the Private Cloud Openshift Platform in the [OpenShift network policies](/openshift-network-policies/) document. 
 
 More details on KNPs can be found here: https://kubernetes.io/docs/concepts/services-networking/network-policies/
+
+For products requiring policies that reach off-cluster, the Emerald cluster is the best choice.  This provides a way to communicate with VMs in the SDN zone, and more isolated communications to legacy network zones (B/C).  This capability is provided through the use of VMWare NSX.
 
 ------
 ### <a name="pipeline-templates"></a>Pipeline Templates (includes static and dynamic analysis)
@@ -180,7 +181,7 @@ In order to reduce effort in implementing secure tools into a build pipeline, we
 - https://github.com/bcgov/Security-pipeline-templates/
 
 Here is a representation of what an application build pipeline should look like:
-![Application build pipeline example diagram](../../images/application-build-pipeline-example.png)
+![Application build pipeline example diagram](../../images/PipelineSecurity.png)
 
 The pipeline templates above make it easier to include the tools described below:
   - [SonarQube in the BC Gov Private Cloud PaaS](/reusable-services-list/#sonarqube-in-the-bc-gov-private-cloud-paas)
@@ -219,7 +220,7 @@ Links:
 
 **XRay:**
 
-An add-on capability to Artifactory, XRay scans images and other artifacts for component vulnerabilities.  Anyone with access to an image or artifact within Artifactory can see the XRay tab as part of the image/artifact details, and see what vulnerable components lie within, and what version will correct that deficiency.
+An add-on capability to Artifactory, XRay scans images and other artifacts for component vulnerabilities.  Anyone with access to an image or artifact within Artifactory can see the XRay tab as part of the image/artifact details, and see what vulnerable components lie within, and what version will correct that deficiency. 
 - https://artifacts.developer.gov.bc.ca/ui/login/
 
 ------
@@ -246,12 +247,11 @@ Generate a .csr for each site:
 - https://github.com/BCDevOps/openshift-wiki/blob/master/docs/SSLCerts/GenerateCertificateSigningRequest.md
 
 **Ordering Process:**
--  Business area creates/submits order
--  Ministry Service Desk reviews order, creates iStore Number, sends to EA for Approval
+-  Business area creates/submits order via MyServiceCentre
+-  Ministry Service Desk reviews order, sends to EA for Approval
 -  EA Approves
 -  Order is sent to DXC for fulfillment
 -  Once order is fulfilled/shipped by DXC, Ministry Service Desk sends 'Completed Order' notification to business area
--  *Note:* This process may be slightly different using MyServiceCentre.
 
 ![TLS certificate order lifecycle diagram](../../images/tls-certificate-order-lifecycle.png)
 
@@ -368,9 +368,57 @@ Teams may request GitHub apps to be associated with their own or all projects in
 
 **GitHub Enterprise**
 
-We are currently piloting the use of GitHub Enterprise.  
+We currently use of GitHub Enterprise.  Contact the Developer Experience team for license information.
 - [GitHub Enterprise user licences in the BC government](/github-enterprise-user-licenses-bc-government/)
 - https://github.com/enterprises/bcgov-ent/sso
+
+------
+### <a name="protected-c-use"></a>DevOps Team recommendations for Protected C data creation/storage/use
+
+This is a list of specific considerations for teams creating/storing/using Protected C data.  
+
+Product teams should be aware that any creation/storage/use of Protected C data in any system should only be considered after discussion with Ministry Security Officer (MISO) and Ministry Privacy Officer (MPO).  They may require additional controls to those listed below.
+ 
+Protected C data should be encrypted at rest. 
+- The NetApp storage appliance used is NOT encrypted at its core, so this means that associate provisioned volume claims (PVCs) are not encrypted by default.  However, it is possible to request an encrypted volume claim. 
+  - This is done at pvc creation time using the following https://netapp-trident.readthedocs.io/en/stable-v21.07/kubernetes/operations/tasks/backends/ontap/ontap-san/configuration.html?highlight=encryption#configuration-options-for-provisioning-volumes.  
+  - If data is to be stored in a database, that database should have encryption enabled and keys managed.  
+  - NetApp storage for Emerald is on its own VIP segment – this means it is NOT accessible from other clusters (this is a good thing).
+- Object Storage used CAN be encrypted as part of initial setup.  
+ 
+Access Management
+- Ensure team members with privileged access only have what they need to do their jobs, and that access is regularly reviewed, and permissions removed when no longer required.
+- A third-party gateway (3PG) may be used in some cases to proctor access to VMs.  While this will not be required for Emerald cluster access, it could be used if desired.  This provides an addition layer of security/auditing, but also more administration.
+- Depending on risk - data creation, changes, and potentially even (read) access should be audited. 
+  - This may be done via an audit table as part of an application, but direct access to data (if permitted) should also be considered for this requirement.
+
+Network Security Policies and Workload labelling
+  - These should be reviewed and vetted before any actual Protected C data is used in the system (i.e., designed, implemented, and tested in Dev/Test environments).
+
+Vulnerability Scanning (Static and Dynamic)
+- These functions are built into pipeline templates that we provide (using SonarCloud and OWASP ZAP).  These should be mandatory for any system that uses Protected C data.
+
+Image scanning (Advanced Cluster Security- https://acs.developer.gov.bc.ca)
+  - All active deployments are scanned by Advanced Cluster Security and all DevOps Product Owners and Technical Leads listed in the Platform Registry have access by default.   
+  - Any High/Critical vulnerabilities should be reviewed and validated prior to Production release.  This doesn’t mean there can’t be any vulnerabilities, only that we are sure the risky ones are not applicable to the functioning of our system.
+
+Secrets Management
+- Use Vault.  OpenShift secrets does NOT protect secrets enough to be compliant with an audit as they are only base64 encoded.
+
+TLS certificate
+- Any production workload requires a dedicated TLS certificate (obtained from ADMS).
+
+Backups
+- For sensitive data backup, ensure they are encrypted.
+
+Logging/Monitoring
+- Ensure that you have adequate log retention to meet requirements based on your business/data needs.  On-cluster retention is 14 days.  All logs are shipped to the OCIO SIEM and retained as follows (OpenShift System – 2 months, OpenShift Audit – 13 months, App/container – 2 months).  Product teams can work with SecOps if their retention needs exceed this.
+
+A recognized gap for some ministries with Protected C data in Zone A is the utilization of a Secure Access Gateway (SAG).  This, combined with the use of a physical token, gives the ministry a greater assurance level over users connecting through the SAG to access Protected C data sources.  It also provides an extra layer in reducing opportunity, but not eliminating, for data exfiltration.  It does not, however, protect against Ministry or DXC system administrators from directly accessing those same data sources.
+
+A design pattern maintaining the use of a SAG has been used to restrict developer access to VMs in the Cloud Zone.
+
+Further investigation is required to provided further enhanced cluster access protections for namespaces that hold Protected C data.  Some initial ideas include the use of BC Verifiable Credential, or policy-based access control (vs authentication re-direct from the console).
 
 ------
 ### <a name="other-considerations"></a><u>Other considerations</u>
