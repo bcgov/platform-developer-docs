@@ -46,6 +46,7 @@ There are a number of tools available to developers working on the OpenShift pla
 - [Backups](#backups)
 - [Change Management](#change-management)
 - [GitHub](#github)
+- [Protected C data use - Emerald Cluster Only](#protected-c-use)
 - [Other considerations](#other-considerations)
 
 ## Tools & Capabilities
@@ -375,7 +376,7 @@ We currently use of GitHub Enterprise.  Contact the Developer Experience team fo
 ------
 ### <a name="protected-c-use"></a>DevOps Team recommendations for Protected C data creation/storage/use
 
-This is a list of specific considerations for teams creating/storing/using Protected C data.  
+This is a list of specific considerations for teams creating/storing/using Protected C data.  **This only applies to data on the Emerald Cluster.**
 
 Product teams should be aware that any creation/storage/use of Protected C data in any system should only be considered after discussion with Ministry Security Officer (MISO) and Ministry Privacy Officer (MPO).  They may require additional controls to those listed below.
  
