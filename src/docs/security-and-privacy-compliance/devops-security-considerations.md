@@ -389,7 +389,10 @@ Protected C data should be encrypted at rest.
  
 Access Management
 - Ensure team members with privileged access only have what they need to do their jobs, and that access is regularly reviewed, and permissions removed when no longer required.
-- A third-party gateway (3PG) may be used in some cases to proctor access to VMs.  While this will not be required for Emerald cluster access, it could be used if desired.  This provides an addition layer of security/auditing, but also more administration.
+
+- A recognized design pattern for some ministries with Protected C data in Zone A is the utilization of a Secure Access Gateway (SAG).  This, combined with the use of a physical token, gives the ministry a greater assurance level over users connecting through the SAG to access Protected C data sources.  It also provides an extra layer in reducing opportunity, but not eliminating, for data exfiltration.  It does not, however, protect against some Ministry or DXC system administrators from directly accessing those same data sources.
+  - A design pattern maintaining the use of a SAG has been used to restrict developer access to VMs in the Cloud Zone.  This is not done for access to the Emerald cluster.
+
 - Depending on risk - data creation, changes, and potentially even (read) access should be audited. 
   - This may be done via an audit table as part of an application, but direct access to data (if permitted) should also be considered for this requirement.
 
@@ -415,11 +418,7 @@ Backups
 Logging/Monitoring
 - Ensure that you have adequate log retention to meet requirements based on your business/data needs.  On-cluster retention is 14 days.  All logs are shipped to the OCIO SIEM and retained as follows (OpenShift System – 2 months, OpenShift Audit – 13 months, App/container – 2 months).  Product teams can work with SecOps if their retention needs exceed this.
 
-A recognized gap for some ministries with Protected C data in Zone A is the utilization of a Secure Access Gateway (SAG).  This, combined with the use of a physical token, gives the ministry a greater assurance level over users connecting through the SAG to access Protected C data sources.  It also provides an extra layer in reducing opportunity, but not eliminating, for data exfiltration.  It does not, however, protect against Ministry or DXC system administrators from directly accessing those same data sources.
-
-A design pattern maintaining the use of a SAG has been used to restrict developer access to VMs in the Cloud Zone.
-
-Further investigation is required to provided further enhanced cluster access protections for namespaces that hold Protected C data.  Some initial ideas include the use of BC Verifiable Credential, or policy-based access control (vs authentication re-direct from the console).
+*Note: Further investigation is required to provided further enhanced cluster access protections for namespaces that hold Protected C data.  Some initial ideas include the use of BC Verifiable Credential, or policy-based access control (vs authentication re-direct from the console).
 
 ------
 ### <a name="other-considerations"></a><u>Other considerations</u>
