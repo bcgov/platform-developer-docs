@@ -388,13 +388,15 @@ Protected C data should be encrypted at rest.
 - Object Storage used CAN be encrypted as part of initial setup.  
  
 Access Management
+- Depending on risk - data creation, changes, and potentially even (read) access should be audited. 
+  - This may be done via an audit table as part of an application, but direct access to data (if permitted) should also be considered for this requirement.
+  
 - Ensure team members with privileged access only have what they need to do their jobs, and that access is regularly reviewed, and permissions removed when no longer required.
 
 - A recognized design pattern for some ministries with Protected C data in Zone A is the utilization of a Secure Access Gateway (SAG).  This, combined with the use of a physical token, gives the ministry a greater assurance level over users connecting through the SAG to access Protected C data sources.  It also provides an extra layer in reducing opportunity, but not eliminating, for data exfiltration.  It does not, however, protect against some Ministry or DXC system administrators from directly accessing those same data sources.
   - A design pattern maintaining the use of a SAG has been used to restrict developer access to VMs in the Cloud Zone.  This is not done for access to the Emerald cluster.
 
-- Depending on risk - data creation, changes, and potentially even (read) access should be audited. 
-  - This may be done via an audit table as part of an application, but direct access to data (if permitted) should also be considered for this requirement.
+- A design pattern using a [Secure Access Service Edge (SASE)](https://en.wikipedia.org/wiki/Secure_access_service_edge) is also being tested by a client Ministry.
 
 Network Security Policies and Workload labelling
   - These should be reviewed and vetted before any actual Protected C data is used in the system (i.e., designed, implemented, and tested in Dev/Test environments).
