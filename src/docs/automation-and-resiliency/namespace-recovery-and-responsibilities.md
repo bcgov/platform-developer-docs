@@ -46,7 +46,7 @@ What if your new hire makes a mistake on their first day and deletes an importan
 
 Teams should be able to recover their applications gracefully from unforeseen issues and mistakes like this. It's not always possible to cover every possible issue, but the risks can be mitigated if you follow best practices on what to backup and how to recover those objects.
 
-## Recovering Different Tpes of Objects
+## Recovering Different Types of Objects
 
 ### General Deployment Objects
 
