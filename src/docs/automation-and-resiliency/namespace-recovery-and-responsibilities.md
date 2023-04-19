@@ -76,7 +76,7 @@ ConfigMaps are less likely to contain stateful data of this type - however, if t
 
 ### Images
 
-Images built and pushed to the Openshift internal registry are unlikely candidates for backup. Most teams should be able to rebuild images identical to any they might have lost. 
+Images built and pushed to the OpenShift internal registry are unlikely candidates for backup. Most teams should be able to rebuild images identical to any they might have lost. 
 
 However, if your team has images that would be difficult to rebuild for any reason, backing them up would be a wise choice. Artifactory is backed up and would be recovered in the event of a large cluster issue. It would be a good choice for storing images that would be difficult to rebuild.
 
