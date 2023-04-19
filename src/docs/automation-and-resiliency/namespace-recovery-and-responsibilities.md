@@ -86,6 +86,6 @@ If your route contains TLS certificate information, be sure that the certificate
 
 ### Persistent Volumes
 
-Persistent volumes on the OpenShift platforms are not backed up by the Platform Team, with the exception of the `nfs-backup` PVC type. Please ensure that all important persistent data is backed up regularly to either an `nfs-backup` volume, or to another safe place off-cluster (such as the OCIO Object Storage Service).
+Persistent volumes on the OpenShift platforms are not backed up by the Platform Team, with the exception of the `netapp-file-backup` PVC type. Please ensure that all important persistent data is backed up regularly to either an `netapp-file-backup` volume, or to another safe place off-cluster (such as the OCIO Object Storage Service).
 
 For more information on persistent volumes, see our [Platform Storage](/platform-storage/) documentation.
