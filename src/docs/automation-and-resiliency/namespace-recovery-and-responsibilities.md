@@ -68,7 +68,7 @@ For example, if you store your database password in a secret, delete the secret,
 
 If any of your ConfigMaps or Secrets contain stateful data like this, your team should back up this data somewhere off-cluster. 
 
-The Platform Team prefers to use our Vault instance for keeping backups of our passwords - even if those passwords aren't actually being pulled from Vault. Vault is a service that is backed up regularly, and would be restored in the event of some major cluster failure. The passwords would be recoverable and safe, and we could recreate any Openshift Secrets from those, if necessary. 
+The Platform Team prefers to use our Vault instance for keeping backups of our passwords - even if those passwords aren't actually being pulled from Vault. Vault is a service that is backed up regularly, and would be restored in the event of some major cluster failure. The passwords would be recoverable and safe, and we could recreate any OpenShift Secrets from those, if necessary. 
 
 If your team prefers to use some other service for backing up your Secrets, please feel free to do so (as long as you have spoken to your ministry security team about the security of your chosen tool, first)! The important part is just making sure that your Secrets and ConfigMaps are stored somewhere off-cluster.
 
