@@ -106,7 +106,7 @@ Ensure that your pods are not in a `CrashLoopBackOff` state for too long. If the
 
 You may note that this document is pretty vague about the "hows" of these principles. This is because it can vary from application to application, and technology stack to technology stack. The design needs for a highly available chat application are very different from those of a highly available static website.
 
-If you're looking for some general guidance on what high availability options exist in OpenShift, attend our [OpenShift 101 training](/training-from-the-platform-services-team/). This course covers a number of options, including how to deploy a basic application with high availability.
+If you're looking for some general guidance on what high availability options exist in OpenShift, attend our [OpenShift 101 & 201 training](/training-from-the-platform-services-team/). This course covers a number of options, including how to deploy a basic application with high availability.
 
 This is where the community comes in. If you have a highly available application, please feel free to fork this document and add links to examples from your application (along with information about your stack and any explanations you feel might be necessary). The more you reach out to help your fellow developers, the stronger a community we will be.
 
