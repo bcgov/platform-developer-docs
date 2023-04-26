@@ -64,13 +64,13 @@ To get a list of the users who have access to a namespace, and in what role, a p
 ```
 oc get rolebindings
 ```
-For more information on adding users, you can watch [Using Just Ask! to gain access into the BCGov or BCDevops GitHub Organizations](https://www.youtube.com/watch?v=IvdPyx2-qm0) or use [the Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/).
+For more information on adding users, you can watch [Using Just Ask! to gain access into the BCGov or BCDevops GitHub Organizations](https://www.youtube.com/watch?v=IvdPyx2-qm0) or use [the Just Ask! tool](https://just-ask.developer.gov.bc.ca/).
 
 ## Request platform access
 
 **Note**: This process only gives you platform access, not namespace access.
 
-The product owner or a project administrator associated with namespace provisioning makes a request through the [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/).
+The product owner or a project administrator associated with namespace provisioning makes a request through the [Just Ask! tool](https://just-ask.developer.gov.bc.ca/).
 
 ## Grant namespace access
 
@@ -87,7 +87,7 @@ Related links:
 * [BC Government organizations in GitHub](/bc-government-organizations-in-github/)
 * [Provision a new project set](/provision-new-openshift-project/)
 * [Using Just Ask! to gain access into the BCGov or BCDevops GitHub Organizations](https://www.youtube.com/watch?v=IvdPyx2-qm0)
-* [Add someone to the BC Government GitHub Org](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/)
+* [Add someone to the BC Government GitHub Org](https://just-ask.developer.gov.bc.ca/)
 * [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.9/authentication/using-rbac.html)
 
 ---

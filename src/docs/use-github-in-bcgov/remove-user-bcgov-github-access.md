@@ -39,7 +39,7 @@ GitHub User Access Removal Request:
 ---
 Related links:
 * [DevOps-Requests Repo](https://github.com/BCDevOps/devops-requests)
-* [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/)
+* [Just Ask! tool](https://just-ask.developer.gov.bc.ca/)
 * [BC Government organizations in GitHub](/bc-government-organizations-in-github/)
 * [Common platform requests in the BC Gov Private Cloud PaaS](%WORDPRESS_BASE_URL%/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/)
 
