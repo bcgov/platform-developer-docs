@@ -93,7 +93,7 @@ If you've accidentally deleted secrets for a different Artifactory service accou
 Related links:
 * [Archeobot](https://github.com/bcgov/platform-services-archeobot)
 * [Artifactory](https://artifacts.developer.gov.bc.ca)
-* [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/)
+* [Just Ask! tool](https://just-ask.developer.gov.bc.ca/)
 * [Setup an Artifactory project and repository](/setup-artifactory-project-repository/)
 
 ---

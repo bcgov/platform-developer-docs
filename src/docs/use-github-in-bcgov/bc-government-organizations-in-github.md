@@ -46,7 +46,7 @@ The Province owns several GitHub organizations, which are described below.
 
 The `bcgov` organization contains all public code repositories that hold open-source code or public documents for all B.C. government teams working on the platform, including Platform Services. This organization is **public**.
 * Most product teams working in the BC Gov Private Cloud PaaS OpenShift platform should use this organization.
-* Any member of the `bcgov` organization can create repositories and any existing member can [invite other users](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/) to join the organization.
+* Any member of the `bcgov` organization can create repositories and any existing member can [invite other users](https://just-ask.developer.gov.bc.ca/) to join the organization.
 
 ### `bcgov-c`
 
@@ -82,7 +82,7 @@ Related links:
 * [GitHub](https://github.com)
 * [bcgov](https://github.com/bcgov)
 * [Digital Principles for BC Government](https://digital.gov.bc.ca/resources/digital-principles)
-* [Just Ask! tool](https://just-ask-web-bdec76-prod.apps.silver.devops.gov.bc.ca/)
+* [Just Ask! tool](https://just-ask.developer.gov.bc.ca/)
 * [GitHub Enterprise user licences in the BC government](/github-enterprise-user-licenses-bc-government/)
 * [Remove a user's BCGov GitHub access](/remove-user-bcgov-github-access/)
 * [Common platform requests in the BC Gov Private Cloud PaaS](%WORDPRESS_BASE_URL%/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/)
