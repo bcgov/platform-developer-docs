@@ -25,14 +25,18 @@ You can create alerts based on monitoring dashboards in Sysdig Monitor, that not
 Here are some steps on how to setup the Sysdig alerts with [Rocket.Chat](https://chat.developer.gov.bc.ca/).
 
 ## On this page
-- [Create a Rocket.Chat chat channel and webhook for alert messages](#create-a-rocketchat-chat-channel-and-webhook-for-alert-messages)
-- [Create a Sysdig team notification channel](#create-a-sysdig-team-notification-channel)
-- [Creating an alert](#creating-an-alert)
+- [Create alerts and notifications in Sysdig Monitor](#create-alerts-and-notifications-in-sysdig-monitor)
+  - [On this page](#on-this-page)
+  - [Create a Rocket.Chat chat channel and  webhook for alert messages](#create-a-rocketchat-chat-channel-and--webhook-for-alert-messages)
+  - [Create a Sysdig team notification channel](#create-a-sysdig-team-notification-channel)
+  - [Creating an Alert](#creating-an-alert)
 
 
-## Create a Rocket.Chat chat channel and webhook for alert messages
 
-Rocket.Chat requires an incoming webhook and a script to parse the data from Sysdig. Do the following:
+
+## Create a Rocket.Chat chat channel and  webhook for alert messages
+
+Rocket.Chat requires an incoming webhook to parse the data from Sysdig. Do the following:
 - Create a RC chat channel for the alert messages to arrive if there isn't one.
 
 - Create an incoming webhook to the chat channel:
@@ -41,41 +45,6 @@ Rocket.Chat requires an incoming webhook and a script to parse the data from Sys
 
   - Name the webhook in the format of `sysdig-alert-webhook-<APP_TEAM_NAME>`
 
-  - Use the following sample script for basic alert message creation:
-
-```js
-class Script {
-  process_incoming_request({ request }) {
-    var date = new Date(request.content.timestamp);
-
-    var alertColor = "warning";
-    if(request.content.resolved === "true"){ alertColor = "good"; }
-    else if (request.content.status === "ACTIVE") { alertColor = "danger"; }
-    return {
-      content: {
-        icon_url: "https://pbs.twimg.com/profile_images/1033062307352338432/AAPSOLRs_400x400.jpg",
-        text: "Sysdig Notification",
-        attachments: [{
-          title: request.content.alert.name,
-          pretext: request.content.alert.description,
-          title_link: request.content.event.url,
-          color: alertColor,
-          fields: [
-            {
-              title: "State",
-              value: request.content.state
-            },
-            {
-              title: "Condition",
-              value: request.content.condition
-            }
-          ]
-      }]
-      }
-    };
-  }
-}
-```
 
 Here's how the webhook should look like:
 ![RC webhook config](../../images/sysdig-team-rc-alert-webhook-config.png)
@@ -87,11 +56,41 @@ To create a Sysdig team notification channel, do the following:
 
 1. In Sysdig Monitor, go to your user account and click `Settings`.
 
-1. Click `Notification Channels` and `Add Notification Channel`. Choose `Webhook` as the type.
+2. Click `Notification Channels` and `Add Notification Channel`. Choose `Custom Webhook` as the type.
+   
 
-1. Use the webhook URL generated from Rocket.Chat and configure the notification channel. Name the channel in the formate of `Rocketchat-alert-channel-<APP_TEAM_NAME>`.
+3. Use the webhook URL generated from Rocket.Chat and configure the notification channel. Name the channel in the formate of `Rocketchat-alert-channel-<APP_TEAM_NAME>`.
 
-1. Click `Save` and now you should be able to test it by clicking on the kebab menu icon and `Test Channel`.
+
+4. Attatch the following script into Editor:
+```
+{
+        "text": "Sysdig Notification",
+        "attachments": [{
+          "title": "123",
+          "pretext": "345",
+          "color": "#f9108f",
+           "fields": [
+            {
+              "title": "State",
+              "value": "{{@event_labels.kube_cluster_name}}"
+            },
+            {
+              "title": "Test",
+              {{#if_resolved_event}}
+                "value": "Test for yes, {{@alert_description}}"
+              {{#else}}
+                "value": "Test for No, {{@alert_description}}"
+              {{/if}}
+            }
+          ]
+      }]
+}
+```
+
+
+
+5. Click `Save` and now you should be able to test it by clicking on the kebab menu icon and `Test Channel`.
 
 
 ## Creating an Alert
