@@ -19,55 +19,82 @@ sort_order: 4
 ---
 
 # Install the oc command line tool
-Last updated: **May 29, 2023**
+Last updated: **May 30, 2023**
 
 Users can interact with OpenShift via the `oc` command line tool. This can be installed on your local machine, or accessed via the web console. It is important to keep your version of `oc` up to date to match the version of `oc` on the cluster. 
 
-## Install oc on a mac
+## On this page
+* <a href="section-1">**Install oc on a mac**</a>  
+    * Install homebrew 
+    * Install openshift-cli (oc) 
+    * Test oc login 
+    * Update oc 
+<br><br> 
+* <a href="section-2">**Install oc on windows**</a> 
+    * Install wsl
+    * Install homebrew
+    * Install openshift-cli (oc)
+    * Test oc login
+    * Update oc
+<br><br>  
+* <a href="section-3">**Use web terminal**</a>  
+* <a href="section-4">**Related pages**</a>
 
-### Install homebrew
+<!-- ### End of On this page -->
 
-Install [homebrew](https://brew.sh/) by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` in your terminal. 
+ <h2 id="section-1">Install oc on a mac</h2> 
+ 
+ ### Install homebrew
+1. Open Terminal 
+2. Install [homebrew](https://brew.sh/) by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` in your terminal. 
 
 Be sure to follow the steps in the output to add homebrew to your PATH. 
 
 ### Install openshift-cli (oc)
 
-Now that you have homebrew installed, use the command `brew install openshift-cli` to install the `oc` command line tool. When installation is complete, run `oc version` to confirm successful installation. A successful installation should return the version number of `oc`. Please note, `oc version` will also return an error `'error: You must be logged in to the server (Unauthorized)` until you complete the next step. 
+1. After installing homebrew, use the command `brew install openshift-cli` to install the `oc` command line tool. 
+2. When installation is complete, run `oc version` to confirm successful installation. A successful installation should return the version number of `oc`. 
+
+Please note, `oc version` will also return an error `'error: You must be logged in to the server (Unauthorized)` until you complete the next step. 
 
 ### Test oc login
 
-In order to login with the `oc` command line tool, first login to the [OpenShift Web Console](https://console.apps.silver.devops.gov.bc.ca/). For instructions, see the [Login to OpensShift Web Console](/login-to-openshift) page. 
+1. In order to login with the `oc` command line tool, first login to the [OpenShift Web Console](https://console.apps.silver.devops.gov.bc.ca/). For instructions, see the [Login to OpensShift Web Console](/login-to-openshift) page 
 
-Next, click onto your name in the top-right corner of the screen, and choose 'copy log in command'. 
+2. Click on your name at the top-right corner of the screen, and choose: Copy login command
 
-![Copy login command in menu OpenShift Web Console ](../../images/copy-login-command.png)
+   ![Copy login command in menu OpenShift Web Console ](../../images/copy-login-command.png)<rb>
 
-You'll need to login again when prompted.
+<!-- ### Unsure if we should use screenshots only for one step, recommending to remove it or adding more for the next steps: would like to avoid a long scrolling page -->
 
-Next, you'll be directed to a page with a link to **Display Token**. Please do not share your tokens capture them on screen recordings as these grant access to OpenShift on your behalf. Click the link to reveal your tokens.
+3. A new tab will open in your browser. You'll need to login again by clicking the button: **Developer Log In** 
 
-Copy the entire line of text under 'Log in with this token'.
+4. Next, you'll be directed to a page with a link to **Display Token**. Please do not share your tokens capture them on screen recordings as these grant access to OpenShift on your behalf. Click the link to reveal your tokens
 
-Paste this command into your terminal and run it.
+5. Copy the entire line of text under: Log in with this token
+
+6. Paste this command into your terminal and run it. 
 
 If successful, you should see an indication of which cluster you've logged in to, along with the number of projects you have access to and the project you are currently working in.
 
 ### Update oc
 
-To ensure compatibility as features change, please update your `oc` command line tool regularly. You can use `brew upgrade openshift-cli` to achieve this if you installed `oc` using [homebrew](https://brew.sh/) as descrbed above. 
+To ensure compatibility as features change, please update your `oc` command line tool regularly. You can use `brew upgrade openshift-cli` to achieve this if you installed `oc` using [homebrew](https://brew.sh/) as described above. 
 
 <!-- ### Video demo  I'll comment this out until the video is ready-->
 
-## Install oc on windows
+<h2 id="section-2"> Install oc on windows</h2>
 
 ### Install wsl 
 
 In the OpenShift 101 training, we suggest that new users install Windows Subsystem for Linux (WSL) first, and then install `oc` within `WSL` using [homebrew](https://brew.sh/). This is to maintain direct compatibility between the commands used across operating systems. 
 
-First, open PowerShell or Windows Command Prompt in administrator mode by right-clicking and selecting "Run as administrator".
+1. Open PowerShell or Windows Command Prompt in administrator mode by right-clicking and selecting "Run as administrator"
 
-Next, run the command `wsl --install`. 
+2. Run the command `wsl --install`
+
+3. You'll be prompted to setup a new username and password for the Ubuntu installation 
+
 
 After completion of this command, you'll need to restart your computer to continue installing Ubuntu in WSL. 
 
@@ -80,43 +107,51 @@ From within your WSL terminal, install homebrew.
 Install [homebrew](https://brew.sh/) by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` in your WSL terminal. You'll be prompted for the sudo password that you created earlier. 
 
 Be sure to follow the steps in the output to add homebrew to your PATH. 
+1. Install [homebrew](https://brew.sh/) by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` in your terminal 
+2. Be sure to follow the steps in the output to add homebrew to your PATH. 
 
 ### Install openshift-cli (oc)
 
-Now that you have homebrew installed, use the command `brew install openshift-cli` to install the `oc` command line tool. When installation is complete, run `oc version` to confirm successful installation. A successful installation should return the version number of `oc`. Please note, `oc version` will also return an error `'error: You must be logged in to the server (Unauthorized)` until you complete the next step. 
+Once homebrew is installed:
 
+1. Use the command `brew install openshift-cli` to install the `oc` command line tool 
+2. When installation is complete, run `oc version` to confirm successful installation. A successful installation should return the version number of `oc`
+
+Please note, `oc version` will also return an error `'error: You must be logged in to the server (Unauthorized)` until you complete the next step. 
 
 ### Test oc login
 
-In order to login with the `oc` command line tool, first login to the [OpenShift Web Console](https://console.apps.silver.devops.gov.bc.ca/). For instructions, see the [Login to OpensShift Web Console](/login-to-openshift) page. 
+1. In order to login with the `oc` command line tool, first login to the [OpenShift Web Console](https://console.apps.silver.devops.gov.bc.ca/). For instructions, see the [Login to OpensShift Web Console](/login-to-openshift) page 
 
-Next, click onto your name in the top-right corner of the screen, and choose 'copy log in command'. 
+2. Click on your name at the top-right corner of the screen, and choose: Copy login command
 
-![Copy login command in menu OpenShift Web Console ](../../images/copy-login-command.png)
+   ![Copy login command in menu OpenShift Web Console ](../../images/copy-login-command.png)<rb>
 
-You'll need to login again when prompted.
+<!-- ### Unsure if we should use screenshots only for one step, recommending to remove it or adding more for the next steps: would like to avoid a long scrolling page -->
 
-Next, you'll be directed to a page with a link to **Display Token**. Please do not share your tokens capture them on screen recordings as these grant access to OpenShift on your behalf. Click the link to reveal your tokens.
+3. A new tab will open in your browser. You'll need to login again by clicking the button: **Developer Log In** 
 
-Copy the entire line of text under 'Log in with this token'.
+4. Next, you'll be directed to a page with a link to **Display Token**. Please do not share your tokens capture them on screen recordings as these grant access to OpenShift on your behalf. Click the link to reveal your tokens
 
-Paste this command into your terminal and run it.
+5. Copy the entire line of text under: Log in with this token
+
+6. Paste this command into your terminal and run it 
 
 If successful, you should see an indication of which cluster you've logged in to, along with the number of projects you have access to and the project you are currently working in.
 
 ### Update oc
-
-To ensure compatibility as features change, please update your `oc` command line tool regularly. You can use `brew upgrade openshift-cli` to achieve this if you installed `oc` using [homebrew](https://brew.sh/) as descrbed above. 
+To ensure compatibility as features change, please update your `oc` command line tool regularly. You can use `brew upgrade openshift-cli` to achieve this if you installed `oc` using [homebrew](https://brew.sh/) as described above. 
 
 <!-- ### Video demo  I'll comment this out until the video is ready-->
 
-## Use the web terminal
+<h2 id="section-3"> Use the web terminal</h2>
 
 If you can't install `oc` locally, you may wish to use the OpenShift web terminal for some purposes. More information is [available from Redhat](https://docs.openshift.com/container-platform/4.8/web_console/odc-about-web-terminal.html#odc-using-web-terminal_odc-about-web-terminal). 
 
+<br> 
 ---
 
-Related links:
+<h2 id="section-4"> Related pages</h2>
 
 - [Homebrew](https://brew.sh/)
 - [Login to OpensShift Web Console](/login-to-openshift) 
