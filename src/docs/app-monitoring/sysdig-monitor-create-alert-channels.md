@@ -62,36 +62,48 @@ To create a Sysdig team notification channel, do the following:
 3. Use the webhook URL generated from Rocket.Chat and configure the notification channel. Name the channel in the formate of `Rocketchat-alert-channel-<APP_TEAM_NAME>`.
 
 
-4. Attatch the following script into Editor:
+4. Attatch the following script into Editor, **NOTE** This is just an example, please update accordingly based on your use case:
 ```
 {
         "text": "Sysdig Notification",
         "attachments": [{
-          "title": "123",
-          "pretext": "345",
-          "color": "#f9108f",
+          "title": " {{@event_title}}",
+          "title_link": "{{@alert_url}}",
+          "pretext": " {{@alert_description}}",
+          "color": "#f93b10",
            "fields": [
             {
               "title": "State",
-              "value": "{{@event_labels.kube_cluster_name}}"
+              "short": true,
+              "value": "{{@event_state}}"
             },
             {
-              "title": "Test",
-              {{#if_resolved_event}}
-                "value": "Test for yes, {{@alert_description}}"
-              {{#else}}
-                "value": "Test for No, {{@alert_description}}"
-              {{/if}}
+              "title": "Alert level",
+              "short": true,
+              {{#if_severity_high}}
+             	 "value": "incident"
+               {{#else}}
+               	"value": "warning"
+               {{/if}}
+            },
+            {
+              "title": "Condition",
+              "short": false,
+              "value": "{{@alert_warning_condition}}"
+            },
+            {
+              "title": "Link to the Alert",
+              "short": false,
+              "value": "{{@alert_url}}"
             }
           ]
       }]
 }
 ```
 
+5. To test this notification, you have to pick one of the  **Select Alert Type** before you can **Send Test Notification**. 
 
-
-5. Click `Save` and now you should be able to test it by clicking on the kebab menu icon and `Test Channel`.
-
+6. After tested, Click `Save` and now you should be able to see this notification option available in alert. 
 
 ## Creating an Alert
 
