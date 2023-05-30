@@ -69,12 +69,15 @@ First, open PowerShell or Windows Command Prompt in administrator mode by right-
 
 Next, run the command `wsl --install`. 
 
-You'll be prompted to setup a new username and password for the Ubuntu installation. 
+After completion of this command, you'll need to restart your computer to continue installing Ubuntu in WSL. 
+
+During the Ubuntu install process, you'll be prompted to setup a new username and password for the Ubuntu installation. 
+
 ### Install homebrew
 
 From within your WSL terminal, install homebrew. 
 
-Install [homebrew](https://brew.sh/) by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` in your terminal. 
+Install [homebrew](https://brew.sh/) by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` in your WSL terminal. You'll be prompted for the sudo password that you created earlier. 
 
 Be sure to follow the steps in the output to add homebrew to your PATH. 
 
