@@ -11,9 +11,11 @@ page_purpose: Describes the installation of the oc command line tool for users p
 
 audience: technical lead, openshift 101 students, developers
 
-author: Pilar Solares 
+author: Matt Spencer  
 
-content_owner: Matt Spencer 
+editor: Pilar Solares
+
+content_owner: Faisal Hamood
 
 sort_order: 4
 ---
@@ -25,18 +27,7 @@ Users can interact with OpenShift via the `oc` command line tool. This can be in
 
 ## On this page
 * <a href="section-1">**Install oc on a mac**</a>  
-    * Install homebrew 
-    * Install openshift-cli (oc) 
-    * Test oc login 
-    * Update oc 
-<br><br> 
-* <a href="section-2">**Install oc on windows**</a> 
-    * Install wsl
-    * Install homebrew
-    * Install openshift-cli (oc)
-    * Test oc login
-    * Update oc
-<br><br>  
+* <a href="section-2">**Install oc on windows**</a>   
 * <a href="section-3">**Use web terminal**</a>  
 * <a href="section-4">**Related pages**</a>
 
@@ -46,9 +37,11 @@ Users can interact with OpenShift via the `oc` command line tool. This can be in
  
  ### Install homebrew
 1. Open Terminal 
-2. Install [homebrew](https://brew.sh/) by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` in your terminal. 
-
-Be sure to follow the steps in the output to add homebrew to your PATH. 
+2. Install [homebrew](https://brew.sh/) by running this statement in your terminal: 
+ 
+     `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"`
+ 
+3. Be sure to follow 'the next steps' in the output to add homebrew to your PATH. 
 
 ### Install openshift-cli (oc)
 
@@ -63,19 +56,13 @@ Please note, `oc version` will also return an error `'error: You must be logged 
 
 2. Click on your name at the top-right corner of the screen, and choose: Copy login command
 
-   ![Copy login command in menu OpenShift Web Console ](../../images/copy-login-command.png)<rb>
-
-<!-- ### Unsure if we should use screenshots only for one step, recommending to remove it or adding more for the next steps: would like to avoid a long scrolling page -->
-
 3. A new tab will open in your browser. You'll need to login again by clicking the button: **Developer Log In** 
 
 4. Next, you'll be directed to a page with a link to **Display Token**. Please do not share your tokens capture them on screen recordings as these grant access to OpenShift on your behalf. Click the link to reveal your tokens
 
 5. Copy the entire line of text under: Log in with this token
 
-6. Paste this command into your terminal and run it. 
-
-If successful, you should see an indication of which cluster you've logged in to, along with the number of projects you have access to and the project you are currently working in.
+6. Paste this command into your terminal and run it. If successful, you should see an indication of which cluster you've logged in to, along with the number of projects you have access to and the project you are currently working in.
 
 ### Update oc
 
@@ -93,21 +80,17 @@ In the OpenShift 101 training, we suggest that new users install Windows Subsyst
 
 2. Run the command `wsl --install`
 
-3. You'll be prompted to setup a new username and password for the Ubuntu installation 
+3. After completion of this command, you'll need to restart your computer to continue installing Ubuntu in WSL. 
 
+4. During the Ubuntu install process, you'll be prompted to setup a new username and password for the Ubuntu installation 
 
-After completion of this command, you'll need to restart your computer to continue installing Ubuntu in WSL. 
-
-During the Ubuntu install process, you'll be prompted to setup a new username and password for the Ubuntu installation. 
+Please make sure to remember this new username and password as you will need it later. 
 
 ### Install homebrew
 
 From within your WSL terminal, install homebrew. 
 
-Install [homebrew](https://brew.sh/) by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` in your WSL terminal. You'll be prompted for the sudo password that you created earlier. 
-
-Be sure to follow the steps in the output to add homebrew to your PATH. 
-1. Install [homebrew](https://brew.sh/) by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` in your terminal 
+1. Install [homebrew](https://brew.sh/) by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` in your WSL terminal. You'll be prompted for the sudo password that you created earlier. 
 2. Be sure to follow the steps in the output to add homebrew to your PATH. 
 
 ### Install openshift-cli (oc)
@@ -124,10 +107,6 @@ Please note, `oc version` will also return an error `'error: You must be logged 
 1. In order to login with the `oc` command line tool, first login to the [OpenShift Web Console](https://console.apps.silver.devops.gov.bc.ca/). For instructions, see the [Login to OpensShift Web Console](/login-to-openshift) page 
 
 2. Click on your name at the top-right corner of the screen, and choose: Copy login command
-
-   ![Copy login command in menu OpenShift Web Console ](../../images/copy-login-command.png)<rb>
-
-<!-- ### Unsure if we should use screenshots only for one step, recommending to remove it or adding more for the next steps: would like to avoid a long scrolling page -->
 
 3. A new tab will open in your browser. You'll need to login again by clicking the button: **Developer Log In** 
 
