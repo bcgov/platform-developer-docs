@@ -26,7 +26,6 @@ Here are some steps on how to setup the Sysdig alerts with [Rocket.Chat](https:/
 
 ## On this page
 - [Create alerts and notifications in Sysdig Monitor](#create-alerts-and-notifications-in-sysdig-monitor)
-  - [On this page](#on-this-page)
   - [Create a Rocket.Chat chat channel and  webhook for alert messages](#create-a-rocketchat-chat-channel-and--webhook-for-alert-messages)
   - [Create a Sysdig team notification channel](#create-a-sysdig-team-notification-channel)
   - [Creating an Alert](#creating-an-alert)
