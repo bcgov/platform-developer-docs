@@ -28,7 +28,7 @@ Users can interact with OpenShift via the `oc` command line tool. This can be in
 ## On this page
 * [**Install oc on a mac**](#install-oc-on-a-mac) 
 * [**Install oc on windows**](#install-oc-on-windows)
-* [**Use web terminal**](#use-web-terminal)
+* [**Use the web terminal**](#use-the-web-terminal)
 * [**Related pages**](#related-pages)
 
 <!-- ### End of On this page -->
