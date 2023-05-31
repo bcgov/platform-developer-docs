@@ -134,6 +134,6 @@ If you can't install `oc` locally, you may wish to use the OpenShift web termina
 
 - [Homebrew](https://brew.sh/)
 - [Login to OpensShift Web Console](/login-to-openshift) 
-- [OpenShift Web Terminal - Redhat](https://docs.openshift.com/container-platform/4.8/web_console/odc-about-web-terminal.html#odc-using-web-terminal_odc-about-web-terminal)
+- [OpenShift Web Terminal - Redhat](https://docs.openshift.com/container-platform/4.12/web_console/odc-using-web-terminal.html#odc-access-web-terminal_odc-using-web-terminal)
 
 ---
