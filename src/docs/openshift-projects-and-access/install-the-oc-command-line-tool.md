@@ -74,7 +74,7 @@ To ensure compatibility as features change, please update your `oc` command line
 
 ### Install wsl 
 
-In the OpenShift 101 training, we suggest that new users install Windows Subsystem for Linux (WSL) first, and then install `oc` within `WSL` using [homebrew](https://brew.sh/). This is to maintain direct compatibility between the commands used across operating systems. 
+In the [OpenShift 101 training](/training-from-the-platform-services-team/), we suggest that new users install Windows Subsystem for Linux (WSL) first, and then install `oc` within `WSL` using [homebrew](https://brew.sh/). This is to maintain direct compatibility between the commands used across operating systems. 
 
 1. Open PowerShell or Windows Command Prompt in administrator mode by right-clicking and selecting "Run as administrator"
 
