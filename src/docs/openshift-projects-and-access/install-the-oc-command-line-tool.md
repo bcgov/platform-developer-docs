@@ -21,15 +21,15 @@ sort_order: 4
 ---
 
 # Install the oc command line tool
-Last updated: **May 30, 2023**
+Last updated: **May 31, 2023**
 
 Users can interact with OpenShift via the `oc` command line tool. This can be installed on your local machine, or accessed via the web console. It is important to keep your version of `oc` up to date to match the version of `oc` on the cluster. 
 
 ## On this page
-* <a href="section-1">**Install oc on a mac**</a>  
-* <a href="section-2">**Install oc on windows**</a>   
-* <a href="section-3">**Use web terminal**</a>  
-* <a href="section-4">**Related pages**</a>
+* [**Install oc on a mac**](#install-oc-on-a-mac) 
+* [**Install oc on windows**](#install-oc-on-windows)
+* [**Use web terminal**](#use-web-terminal)
+* [**Related pages**](#related-pages)
 
 <!-- ### End of On this page -->
 
@@ -70,7 +70,7 @@ To ensure compatibility as features change, please update your `oc` command line
 
 <!-- ### Video demo  I'll comment this out until the video is ready-->
 
-<h2 id="section-2"> Install oc on windows</h2>
+##  Install oc on windows
 
 ### Install wsl 
 
@@ -123,14 +123,14 @@ To ensure compatibility as features change, please update your `oc` command line
 
 <!-- ### Video demo  I'll comment this out until the video is ready-->
 
-<h2 id="section-3"> Use the web terminal</h2>
+## Use the web terminal
 
 If you can't install `oc` locally, you may wish to use the OpenShift web terminal for some purposes. More information is [available from Redhat](https://docs.openshift.com/container-platform/4.12/web_console/odc-using-web-terminal.html#odc-access-web-terminal_odc-using-web-terminal). 
 
-<br> 
----
+<br>
 
-<h2 id="section-4"> Related pages</h2>
+---
+## Related pages
 
 - [Homebrew](https://brew.sh/)
 - [Login to OpensShift Web Console](/login-to-openshift) 
