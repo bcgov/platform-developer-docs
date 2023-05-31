@@ -33,7 +33,7 @@ Users can interact with OpenShift via the `oc` command line tool. This can be in
 
 <!-- ### End of On this page -->
 
- <h2 id="section-1">Install oc on a mac</h2> 
+## Install oc on a mac
  
  ### Install homebrew
 1. Open Terminal 
