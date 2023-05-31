@@ -125,7 +125,7 @@ To ensure compatibility as features change, please update your `oc` command line
 
 <h2 id="section-3"> Use the web terminal</h2>
 
-If you can't install `oc` locally, you may wish to use the OpenShift web terminal for some purposes. More information is [available from Redhat](https://docs.openshift.com/container-platform/4.8/web_console/odc-about-web-terminal.html#odc-using-web-terminal_odc-about-web-terminal). 
+If you can't install `oc` locally, you may wish to use the OpenShift web terminal for some purposes. More information is [available from Redhat](https://docs.openshift.com/container-platform/4.12/web_console/odc-using-web-terminal.html#odc-access-web-terminal_odc-using-web-terminal). 
 
 <br> 
 ---
