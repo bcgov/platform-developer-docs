@@ -82,9 +82,9 @@ In the [OpenShift 101 training](/training-from-the-platform-services-team/), we 
 
 3. After completion of this command, you'll need to restart your computer to continue installing Ubuntu in WSL. 
 
-4. During the Ubuntu install process, you'll be prompted to setup a new username and password for the Ubuntu installation 
+4. During the Ubuntu install process, you'll be prompted to setup a new username and password for the Ubuntu installation. Please make sure to remember this new username and password as you will need it later. 
 
-Please make sure to remember this new username and password as you will need it later. 
+5. You may need to check and set up your connection to github in your new Ubuntu environment, you can follow [these instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys) to check, generate, add and test your github SSH key. 
 
 ### Install homebrew
 
