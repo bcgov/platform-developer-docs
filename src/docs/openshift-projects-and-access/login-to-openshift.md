@@ -1,11 +1,11 @@
 ---
-title: Log in to OpenShift
+title: Log in to OpenShift Web Console
 
 slug: login-to-openshift
 
 description: Describes how to login to the OpenShift console with your IDIR
 
-keywords: security, privacy, IDIR, STRA, access, login, OpenShift
+keywords: security, privacy, IDIR, STRA, access, login, OpenShift, web console
 
 page_purpose: Gives background and information on logging into the OpenShift console with your IDIR and the background on how it was set up.
 
@@ -18,7 +18,7 @@ content_owner: Cailey Jones
 sort_order: 3
 ---
 
-# Log in to OpenShift
+# Log in to OpenShift Web Console
 
 Teams can log in to OpenShift with either a GitHub ID or IDIR. IDIR authentication is enabled in the Silver cluster of the OpenShift platform. You must have multi-factor authentication (MFA) enabled to log in with either GitHub or your IDIR. This access mechanism links to Azure Active Directory (AD). You get instructions on how to enable MFA for your IDIR account during onboarding.
 
@@ -35,9 +35,9 @@ We will update the [Platform Project Registry](https://registry.developer.gov.bc
 
 Some teams may choose to have all team members migrated to IDIR account use for OpenShift platform access. This isn't required.
 
-We want teams to migrate their role bindings from their GitHub accounts to IDIR on their own, and deprovision the GitHub accounts, if necessary.
+We want teams to migrate their role bindings from their GitHub accounts to IDIR on their own, and de-provision the GitHub accounts, if necessary.
 
-We're investigating IDIR security groups integration, but it's not in place yet. This requires a synchronization between our datacentre active directory and the Azure Active Directory that is not fully in place yet.
+We're investigating IDIR security groups integration, but it's not in place yet. This requires a synchronization between our data centre active directory and the Azure Active Directory that is not fully in place yet.
 
 We don't intend to leverage SSO integration for IDIR onto GitHub at this time. You'll still use GitHub accounts to access GitHub content.
 
