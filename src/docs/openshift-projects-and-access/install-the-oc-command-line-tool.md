@@ -48,11 +48,11 @@ Users can interact with OpenShift via the `oc` command line tool. This can be in
 1. After installing homebrew, use the command `brew install openshift-cli` to install the `oc` command line tool. 
 2. When installation is complete, run `oc version` to confirm successful installation. A successful installation should return the version number of `oc`. 
 
-Please note, `oc version` will also return an error `'error: You must be logged in to the server (Unauthorized)` until you complete the next step. 
+Please note, `oc version` may also return an error `'error: You must be logged in to the server (Unauthorized)` until you complete the next step. 
 
 ### Test oc login
 
-1. In order to login with the `oc` command line tool, first login to the [OpenShift Web Console](https://console.apps.silver.devops.gov.bc.ca/). For instructions, see the [Login to OpensShift Web Console](/login-to-openshift) page 
+1. In order to login with the `oc` command line tool, first login to the [OpenShift Web Console](https://console.apps.silver.devops.gov.bc.ca/). For instructions, see the [Login to OpenShift Web Console](/login-to-openshift) page 
 
 2. Click on your name at the top-right corner of the screen, and choose: Copy login command
 
@@ -100,7 +100,7 @@ Once homebrew is installed:
 1. Use the command `brew install openshift-cli` to install the `oc` command line tool 
 2. When installation is complete, run `oc version` to confirm successful installation. A successful installation should return the version number of `oc`
 
-Please note, `oc version` will also return an error `'error: You must be logged in to the server (Unauthorized)` until you complete the next step. 
+Please note, `oc version` may also return an error `'error: You must be logged in to the server (Unauthorized)` until you complete the next step. 
 
 ### Test oc login
 
