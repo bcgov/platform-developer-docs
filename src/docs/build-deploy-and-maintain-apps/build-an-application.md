@@ -45,8 +45,6 @@ Purpose of page description goes here
 - Setting up a continuous integration (CI) environment
 - Configuring your CI tools and integrating with OpenShift 
 - Automating the build and deployment process
-- Implementing database scaling and replication (Patroni)
-- Working with MongoDB images and best practices 
 
 ## Database (link to DB Best Practices doc, mention Patroni and MongoDB images)
 - Choosing the right database for your application
