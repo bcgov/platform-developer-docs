@@ -104,7 +104,7 @@ Please note, `oc version` may also return an error `'error: You must be logged i
 
 ### Test oc login
 
-1. In order to login with the `oc` command line tool, first login to the [OpenShift Web Console](https://console.apps.silver.devops.gov.bc.ca/). For instructions, see the [Login to OpensShift Web Console](/login-to-openshift) page 
+1. In order to login with the `oc` command line tool, first login to the [OpenShift Web Console](https://console.apps.silver.devops.gov.bc.ca/). For instructions, see the [Login to OpenShift Web Console](/login-to-openshift) page 
 
 2. Click on your name at the top-right corner of the screen, and choose: Copy login command
 
