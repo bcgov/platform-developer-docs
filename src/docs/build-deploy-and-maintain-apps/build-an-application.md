@@ -51,7 +51,8 @@ Purpose of page description goes here
 - Setting up and configuring databases in OpenShift 
 - Handling data persistence and backups
 - Implementing database scaling and replication (Patroni) 
-- Working with MongoDB images ans best practices 
+- Working with MongoDB images and best practices
+
 ## Select a good base image from Artifactory
 (link to Artifactory doc for how to pull an image through Artifactory)
 - Pulling images from Artifactory
