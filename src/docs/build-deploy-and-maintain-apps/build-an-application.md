@@ -39,7 +39,8 @@ Purpose of page description goes here
 - Setting up your development environment 
 - Creating the basic structure of your application 
 - Implementing application logic and functionality
-- Testing and debugging your code 
+- Testing and debugging your code
+
 ## CI/CD Pipeline (link to pipeline templates)
 - Setting up a continuous integration (CI) environment
 - Configuring your CI tools and integrating with OpenShift 
