@@ -35,7 +35,7 @@ Purpose of page description goes here
 <!-- ### The following topics are listed as suggestions - still to be discussed with subject matter expert  -->
 
 ## Create the code for your application
--  Choosing the programming language and framework
+- Choosing the programming language and framework
 - Setting up your development environment 
 - Creating the basic structure of your application 
 - Implementing application logic and functionality
