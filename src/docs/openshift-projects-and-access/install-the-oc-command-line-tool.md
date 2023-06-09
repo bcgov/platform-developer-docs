@@ -34,6 +34,8 @@ Users can interact with OpenShift via the `oc` command line tool. This can be in
 <!-- ### End of On this page -->
 
 ## Install oc on a mac
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ylzpex7kbKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
  
  ### Install homebrew
 1. Open Terminal 
@@ -68,9 +70,9 @@ Please note, `oc version` may also return an error `'error: You must be logged i
 
 To ensure compatibility as features change, please update your `oc` command line tool regularly. You can use `brew upgrade openshift-cli` to achieve this if you installed `oc` using [homebrew](https://brew.sh/) as described above. 
 
-<!-- ### Video demo  I'll comment this out until the video is ready-->
-
 ##  Install oc on windows
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ylzpex7kbKs?start=132" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 ### Install wsl 
 
@@ -121,9 +123,9 @@ If successful, you should see an indication of which cluster you've logged in to
 ### Update oc
 To ensure compatibility as features change, please update your `oc` command line tool regularly. You can use `brew upgrade openshift-cli` to achieve this if you installed `oc` using [homebrew](https://brew.sh/) as described above. 
 
-<!-- ### Video demo  I'll comment this out until the video is ready-->
-
 ## Use the web terminal
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/ylzpex7kbKs?start=335" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
 If you can't install `oc` locally, you may wish to use the OpenShift web terminal for some purposes. More information is [available from Redhat](https://docs.openshift.com/container-platform/4.12/web_console/odc-using-web-terminal.html#odc-access-web-terminal_odc-using-web-terminal). 
 
