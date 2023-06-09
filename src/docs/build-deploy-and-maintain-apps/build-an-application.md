@@ -42,7 +42,7 @@ Purpose of page description goes here
 - Testing and debugging your code
 
 ## CI/CD Pipeline (link to pipeline templates)
-- Setting up a continuous integration (CI) environment
+- Setting up a continuous integration (CI) environment and [pipeline templates repo](https://github.com/bcgov/pipeline-templates/tree/main/tekton#tekton-pipelines)
 - Configuring your CI tools and integrating with OpenShift 
 - Automating the build and deployment process
 
@@ -53,10 +53,15 @@ Purpose of page description goes here
 - Implementing database scaling and replication (Patroni) 
 - Working with MongoDB images and best practices
 
+### Links 
+* [Mongo](https://github.com/bcgov/mongodb-replicaset-container)
+* [Patroni](https://github.com/bcgov/patroni-postgres-container)
+* [HA database doc](https://docs.developer.gov.bc.ca/high-availability-database-clusters/) 
+
 ## Select a good base image from Artifactory
-(link to Artifactory doc for how to pull an image through Artifactory)
-- Pulling images from Artifactory
-- Understanding the concept of Artifactory and its benefits
+- [Image and artifact management with Artifactory ](https://docs.developer.gov.bc.ca/image-artifact-management-with-artifactory/#image-and-artifact-management-with-artifactory)
+- Understanding the concept of Artifactory and its benefits 
+- Pulling images from Artifactory 
 - Configuring your OpenShift environment to pull images
 - Authenticating and accessing images from Artifactory
 - Handling versioning and dependency management 
@@ -67,8 +72,6 @@ Purpose of page description goes here
 - Utilizing OpenShift's Source-to-Image (S2I) feature for easy image creation
 - Building custom images with Dockerfiles for more control
 - Pushing and deploying custom images in OpenShift 
-
-
 
 
 ---
