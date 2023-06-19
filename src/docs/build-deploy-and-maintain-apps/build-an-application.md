@@ -51,12 +51,14 @@ Here are some common practices for building applications in a cloud native way t
 - Configuring your CI tools and integrating with OpenShift 
 - Automating the build and deployment process
 
-## Database (link to DB Best Practices doc, mention Patroni and MongoDB images)
-- Choosing the right database for your application
+## Database
+- Choosing the [right database](https://docs.developer.gov.bc.ca/opensource-database-technologies/) for your application
 - Setting up and configuring databases in OpenShift 
-- Handling data persistence and backups
-- Implementing database scaling and replication (Patroni) 
-- Working with MongoDB images and best practices
+- Handling data persistence and [backups](https://docs.developer.gov.bc.ca/database-backup-best-practices/)
+- Implementing database scaling and replication
+- Working with [High Availablity Databases](https://docs.developer.gov.bc.ca/high-availability-database-clusters/)
+  - MongoDB Replicaset: https://github.com/bcgov/mongodb-replicaset-container
+  - Patroni Postgres: https://github.com/bcgov/patroni-postgres-container
 
 ### Links 
 * [Mongo](https://github.com/bcgov/mongodb-replicaset-container)
