@@ -33,13 +33,17 @@ Purpose of page description goes here
 <!-- ### End of On this page -->
 
 <!-- ### The following topics are listed as suggestions - still to be discussed with subject matter expert  -->
+## Design and develop your application
+Here are some common practices for building applications in a cloud native way that we expect your team to have the skill and knowledge before starting on OpenShift:
 
-## Create the code for your application
-- Choosing the programming language and framework
-- Setting up your development environment 
-- Creating the basic structure of your application 
-- Implementing application logic and functionality
-- Testing and debugging your code
+- follow [12 Factor App Guidance](https://12factor.net/)
+- use Open Source, both building apps in the open, for example on a [public GitHub repo](https://docs.developer.gov.bc.ca/start-working-in-bcgov-github-organization/) and [using open source softwares](https://docs.developer.gov.bc.ca/evaluate-open-source-content/). 
+- pick modern cloud native tech stacks with community momentum, leverage the established tech community for suggestions and [reusable components](https://docs.developer.gov.bc.ca/reusable-services-list/)
+- build app according to the BCGov standards, such as [BCGov design guidance](https://docs.developer.gov.bc.ca/about-the-design-system/)
+- keep good coding practices, such as consistent readable code and comments, unit testing, standard linting format, PR review process with repo branch protection, etc.
+- apply [best security practices](https://docs.developer.gov.bc.ca/security-best-practices-for-apps/) while designing and building the app
+- use good software development methodology. For example, Agile and Scrum practice in combination with an effective development approach, such as Behavior-Driven Development (BDD), Test-Driven Development (TDD), etc.
+- document knowledge base related to the app and keep it up-to-date
 
 ## CI/CD Pipeline (link to pipeline templates)
 - Setting up a continuous integration (CI) environment and [pipeline templates repo](https://github.com/bcgov/pipeline-templates/tree/main/tekton#tekton-pipelines)
