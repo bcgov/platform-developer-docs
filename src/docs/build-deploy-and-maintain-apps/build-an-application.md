@@ -78,4 +78,5 @@ Here are some common practices for building applications in a cloud native way t
 
 
 ---
-## Related pages 
+## Related pages
+- [OpenShift Quick Start Demo](https://github.com/bcgov/quickstart-openshift)
