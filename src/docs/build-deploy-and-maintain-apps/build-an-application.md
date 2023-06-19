@@ -45,8 +45,9 @@ Here are some common practices for building applications in a cloud native way t
 - use good software development methodology. For example, Agile and Scrum practice in combination with an effective development approach, such as Behavior-Driven Development (BDD), Test-Driven Development (TDD), etc.
 - document knowledge base related to the app and keep it up-to-date
 
-## CI/CD Pipeline (link to pipeline templates)
-- Setting up a continuous integration (CI) environment and [pipeline templates repo](https://github.com/bcgov/pipeline-templates/tree/main/tekton#tekton-pipelines)
+## CI/CD Pipeline
+- Choosing a [cloud native CI/CD pipeline solutions](https://docs.developer.gov.bc.ca/ci-cd-pipeline-templates/)
+- Setting up a continuous integration (CI) environment and [pipeline templates repo](https://github.com/bcgov/pipeline-templates)
 - Configuring your CI tools and integrating with OpenShift 
 - Automating the build and deployment process
 
