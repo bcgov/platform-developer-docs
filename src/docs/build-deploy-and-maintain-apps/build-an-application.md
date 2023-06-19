@@ -73,6 +73,8 @@ Here are some common practices for building applications in a cloud native way t
 - Utilizing OpenShift's Source-to-Image (S2I) feature for easy image creation
 - Building custom images with Dockerfiles for more control
 - Pushing and deploying custom images in OpenShift 
+- [Using RHEL base images](https://docs.developer.gov.bc.ca/build-with-rhel-base-images/)
+- [Leveraging pre-built images from the platform](https://docs.developer.gov.bc.ca/prebuilt-images/)
 
 
 ---
