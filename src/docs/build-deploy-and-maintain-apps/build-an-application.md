@@ -60,11 +60,6 @@ Here are some common practices for building applications in a cloud native way t
   - MongoDB Replicaset: https://github.com/bcgov/mongodb-replicaset-container
   - Patroni Postgres: https://github.com/bcgov/patroni-postgres-container
 
-### Links 
-* [Mongo](https://github.com/bcgov/mongodb-replicaset-container)
-* [Patroni](https://github.com/bcgov/patroni-postgres-container)
-* [HA database doc](https://docs.developer.gov.bc.ca/high-availability-database-clusters/) 
-
 ## Select a good base image from Artifactory
 - [Image and artifact management with Artifactory ](https://docs.developer.gov.bc.ca/image-artifact-management-with-artifactory/#image-and-artifact-management-with-artifactory)
 - Understanding the concept of Artifactory and its benefits 
