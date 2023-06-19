@@ -61,12 +61,11 @@ Here are some common practices for building applications in a cloud native way t
   - Patroni Postgres: https://github.com/bcgov/patroni-postgres-container
 
 ## Select a good base image from Artifactory
-- [Image and artifact management with Artifactory ](https://docs.developer.gov.bc.ca/image-artifact-management-with-artifactory/#image-and-artifact-management-with-artifactory)
-- Understanding the concept of Artifactory and its benefits 
-- Pulling images from Artifactory 
-- Configuring your OpenShift environment to pull images
-- Authenticating and accessing images from Artifactory
-- Handling versioning and dependency management 
+- [Understanding the concept of Artifactory and its benefits](https://docs.developer.gov.bc.ca/image-artifact-management-with-artifactory/)
+- [Pulling images from Artifactory](https://docs.developer.gov.bc.ca/push-pull-artifacts-artifactory/)
+- [Configuring your OpenShift environment to pull images](https://docs.developer.gov.bc.ca/setup-artifactory-project-repository/)
+- [Authenticating and accessing images from Artifactory](https://docs.developer.gov.bc.ca/setup-artifactory-service-account/)
+- [Handling versioning and dependency management](https://docs.developer.gov.bc.ca/best-practices-for-managing-image-streams/)
 
 ## Creating your image 
 (recommend using S2I as an easier option, if you need more control then you can make a docker file - link to external docs on how to make a dockerfile)
