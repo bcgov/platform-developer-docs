@@ -24,13 +24,22 @@ sort_order: 1
 # Build an Application 
 Last updated: **DATE**
 
-Purpose of page description goes here 
+<!---Purpose of page description goes here--> 
 
 ## On this page
-* [**LINK**](#link) 
+* [**Requirements  to build your application**](#requirements-to-build-your-application) 
+*
+*
+*
+*
 * [**Related pages**](#related-pages)
 
 <!-- ### End of On this page -->
+
+## Requirements to build your application
+
+<!-- ### This content will explain requirements that all teams should have ready before starting to build their application -->
+---
 
 <!-- ### The following topics are listed as suggestions - still to be discussed with subject matter expert  -->
 ## Design and develop your application
