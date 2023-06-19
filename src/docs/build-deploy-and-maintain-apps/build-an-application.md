@@ -27,19 +27,14 @@ Last updated: **DATE**
 <!---Purpose of page description goes here--> 
 
 ## On this page
-* [**Requirements  to build your application**](#requirements-to-build-your-application) 
-*
-*
-*
-*
+* [**Design and develop your application**](#design-and-develop-your-application)
+* [**CI/CD Pipeline**](#cicd-pipeline)
+* [**Database**](#database)
+* [**Use Artifactory for Image Repository**](#use-artifactory-for-image-repository)
+* [**Creating your image**](#creating-your-image)
 * [**Related pages**](#related-pages)
 
 <!-- ### End of On this page -->
-
-## Requirements to build your application
-
-<!-- ### This content will explain requirements that all teams should have ready before starting to build their application -->
----
 
 <!-- ### The following topics are listed as suggestions - still to be discussed with subject matter expert  -->
 ## Design and develop your application
@@ -69,14 +64,14 @@ Here are some common practices for building applications in a cloud native way t
   - MongoDB Replicaset: https://github.com/bcgov/mongodb-replicaset-container
   - Patroni Postgres: https://github.com/bcgov/patroni-postgres-container
 
-## Select a good base image from Artifactory
+## Use Artifactory for Image Repository
 - [Understanding the concept of Artifactory and its benefits](https://docs.developer.gov.bc.ca/image-artifact-management-with-artifactory/)
 - [Pulling images from Artifactory](https://docs.developer.gov.bc.ca/push-pull-artifacts-artifactory/)
 - [Configuring your OpenShift environment to pull images](https://docs.developer.gov.bc.ca/setup-artifactory-project-repository/)
 - [Authenticating and accessing images from Artifactory](https://docs.developer.gov.bc.ca/setup-artifactory-service-account/)
 - [Handling versioning and dependency management](https://docs.developer.gov.bc.ca/best-practices-for-managing-image-streams/)
 
-## Creating your image 
+## Creating your image
 (recommend using S2I as an easier option, if you need more control then you can make a docker file - link to external docs on how to make a dockerfile)
 - Understanding the need for custom images
 - Utilizing OpenShift's Source-to-Image (S2I) feature for easy image creation
