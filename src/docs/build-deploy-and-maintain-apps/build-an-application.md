@@ -24,9 +24,10 @@ sort_order: 1
 # Build an Application 
 Last updated: **DATE**
 
-<!---Purpose of page description goes here--> 
+This document outlines the best practices for building applications on OpenShift.  It presents a step-by-step guide that will assist you in creating efficient applications. Overall, this page will provide a comprehensive resource to equip your team with the knowledge, resources  and techniques required to successfully develop applications on the OpenShift Platform.
 
 ## On this page
+* [ **Requirements to build your application**](#requirements-to-build-your-application)
 * [**Design and develop your application**](#design-and-develop-your-application)
 * [**CI/CD Pipeline**](#cicd-pipeline)
 * [**Database**](#database)
@@ -34,20 +35,32 @@ Last updated: **DATE**
 * [**Creating your image**](#creating-your-image)
 * [**Related pages**](#related-pages)
 
-<!-- ### End of On this page -->
+<!-- ### End of "On this page" -->
+## Requirements to build your application 
+Here are ten common practices for building applications in a cloud native way that we strongly suggest your team to have before building an application on OpenShift:
 
-<!-- ### The following topics are listed as suggestions - still to be discussed with subject matter expert  -->
+1. Learn OpenShift basics: Acquaint your team with OpenShift's core concepts including: projects, pods, services, routes and deployments. For more information we have OpenShift training available, make sure to [check them out](https://cloud.gov.bc.ca/private-cloud/support-and-community/platform-training-and-resources/)
+
+2. Understand application requirements: It is important that before you build  your application your team clearly defines its requirements, including dependencies, external services and resource needs.  This is particularly important in order to also  plan for scalability and high availability
+
+3. Understand containerization: Familiarize your team with containerization concepts and technologies like Docker.  Understand how containers work, benefits and the impact on application deployment and management
+
+4. Gain proficiency in Kubernetes: OpenShift is built in Kubernetes and having a fundamental understanding is crucial
+
+5. Get your team used to the command-line interface (CLI): OpenShift provides CLI tool (oc) to interact with the platform. Find out more on how to install it [here](https://docs.developer.gov.bc.ca/install-the-oc-command-line-tool/)
+
+6. Learn YAML syntax: YAML is used in OpenShift and it helps defining deployment, configurations, service definitions, etc.  Understanding YAML can propel your ability to write and modify configuration files effectively
+
+7. Use Open Source for building apps in the open for example [public GitHub repo](https://docs.developer.gov.bc.ca/start-working-in-bcgov-github-organization/) and [using open source softwares](https://docs.developer.gov.bc.ca/evaluate-open-source-content/)
+
+8. Knowledge is power: Pick modern cloud native tech stacks with community momentum, leverage the established tech community for suggestions and [reusable components](https://docs.developer.gov.bc.ca/reusable-services-list/).  Also documenting knowledge base related to the application and keeping it up to date
+
+9. Follow B.C. Government standards: Building an application requires a design system, you can find more information about it [here](https://docs.developer.gov.bc.ca/about-the-design-system/). Keeping with good coding practices such as consistent readable code and comments, unit testing, standard linting format, peer review process with repo branch protection among [Security best practices](https://docs.developer.gov.bc.ca/security-best-practices-for-apps/) is vital
+
+10. Make use of good software development methodology: For example, Agile and Scrum practice in combination with an effective development approach such as Behaviour-Driven Development (BDD), Test-Driven Development (TDD), etc. 
+
 ## Design and develop your application
-Here are some common practices for building applications in a cloud native way that we expect your team to have the skill and knowledge before starting on OpenShift:
 
-- follow [12 Factor App Guidance](https://12factor.net/)
-- use Open Source, both building apps in the open, for example on a [public GitHub repo](https://docs.developer.gov.bc.ca/start-working-in-bcgov-github-organization/) and [using open source softwares](https://docs.developer.gov.bc.ca/evaluate-open-source-content/). 
-- pick modern cloud native tech stacks with community momentum, leverage the established tech community for suggestions and [reusable components](https://docs.developer.gov.bc.ca/reusable-services-list/)
-- build app according to the BCGov standards, such as [BCGov design guidance](https://docs.developer.gov.bc.ca/about-the-design-system/)
-- keep good coding practices, such as consistent readable code and comments, unit testing, standard linting format, PR review process with repo branch protection, etc.
-- apply [best security practices](https://docs.developer.gov.bc.ca/security-best-practices-for-apps/) while designing and building the app
-- use good software development methodology. For example, Agile and Scrum practice in combination with an effective development approach, such as Behavior-Driven Development (BDD), Test-Driven Development (TDD), etc.
-- document knowledge base related to the app and keep it up-to-date
 
 ## CI/CD Pipeline
 - Choosing a [cloud native CI/CD pipeline solutions](https://docs.developer.gov.bc.ca/ci-cd-pipeline-templates/)
