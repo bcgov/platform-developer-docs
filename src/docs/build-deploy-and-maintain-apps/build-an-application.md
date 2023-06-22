@@ -31,7 +31,6 @@ This document outlines the best practices for building applications on OpenShift
 * [**Design and develop your application**](#design-and-develop-your-application)
 * [**CI/CD Pipeline**](#cicd-pipeline)
 * [**Database**](#database)
-* [**Use Artifactory for Image Repository**](#use-artifactory-for-image-repository)
 * [**Creating your image**](#creating-your-image)
 * [**Related pages**](#related-pages)
 
@@ -57,12 +56,43 @@ Here are ten common practices for building applications in a cloud native way th
 
 9. Follow B.C. Government standards: Building an application requires a design system, you can find more information about it [here](https://docs.developer.gov.bc.ca/about-the-design-system/). Keeping with good coding practices such as consistent readable code and comments, unit testing, standard linting format, peer review process with repo branch protection among [Security best practices](https://docs.developer.gov.bc.ca/security-best-practices-for-apps/) is vital
 
-10. Make use of good software development methodology: For example, Agile and Scrum practice in combination with an effective development approach such as Behaviour-Driven Development (BDD), Test-Driven Development (TDD), etc. 
+10. Make use of good software development methodology: For example, Agile and Scrum practice in combination with an effective development approach such as Behaviour-Driven Development (BDD) and Test-Driven Development (TDD)
 
 ## Design and develop your application
 
+<!-- ### specific differences for development in OpenShift vs legacy apps   -->
+When developing your application it is very important to have a team that is conscious about the differences when developing an application compared to traditional legacy applications.
+
+* Developing applications in OpenShift requires a different mindset as it leverages containerization concepts, understand how to define container images, and consider microservices architecture approach for building modular and scalable applications
+
+* When it comes to deploying your applications on OpenShift, they typically follow a review process before being made accessible. This  ensures the app meets certain standards, security requirements and of course follows  best practices.  Understand this process and factor it into your deployment timeline and expectations
+
+Don't assume that OpenShift will take care of all aspects of app maintenance and stability: 
+
+* While OpenShift provides a robust platform for deploying and managing applications, it's essential to remember that app maintenance and stability are still your responsibility as a development team. OpenShift handles the underlying infrastructure and orchestration, but you need to ensure your application code, dependencies, and configurations are properly maintained and updated to ensure stability and security.
+
+* When designing your application architecture on OpenShift, consider how different components and services connect with each other. For example, keep in mind that pods, which are the smallest unit of deployment, don't restart in a specific order if they go down. Plan your application's resilience and communication patterns accordingly, considering concepts like readiness and liveness probes to handle pod failures gracefully.
+
+Think about whether Single Sign-On (SSO) is necessary for your app and what it would look like if implemented:
+
+* Single Sign-On is a mechanism that allows users to authenticate once and access multiple applications seamlessly. Consider whether your application would benefit from SSO, especially if you have multiple applications within your OpenShift environment. 
+
+Explore the common components available and decide if you want to integrate any of them into your app:
+
+* OpenShift provides several common components, such as databases, message queues, and caching systems, that can be integrated into your application architecture. Evaluate these components based on your app's requirements and decide if incorporating them will enhance functionality, performance, or security. Consider how these components fit into your overall design and plan for their deployment and configuration.
+
+If you plan to use external tools or frameworks like WordPress, be mindful of their resource usage and compatibility with a container environment:
+
+* External tools and frameworks, such as WordPress, may offer specific functionalities that you want to leverage in your OpenShift application. However, ensure that these tools are compatible with container environments and won't cause resource usage issues. Consider their resource requirements and evaluate if they align with the resources available within your OpenShift cluster.
+
+* Make sure your app meets your high availability requirements:
+High availability ensures that your application remains accessible even during failures or high traffic situations. Evaluate your app's high availability needs and design your architecture accordingly. Consider strategies like replication, load balancing, and fault tolerance to ensure that your app remains accessible and resilient. Leverage OpenShift's capabilities, such as replica sets, deployments, and scaling mechanisms, to achieve the desired level of availability.
+
+By considering these points during the design and development phase, you can optimize your application for the OpenShift environment and ensure its stability, security, and scalability.
 
 ## CI/CD Pipeline
+<!-- ### Thinking about the build stage when writing this section because this area will also be used in the deployment, think of creating  awareness-  -->
+
 - Choosing a [cloud native CI/CD pipeline solutions](https://docs.developer.gov.bc.ca/ci-cd-pipeline-templates/)
 - Setting up a continuous integration (CI) environment and [pipeline templates repo](https://github.com/bcgov/pipeline-templates)
 - Configuring your CI tools and integrating with OpenShift 
@@ -77,12 +107,15 @@ Here are ten common practices for building applications in a cloud native way th
   - MongoDB Replicaset: https://github.com/bcgov/mongodb-replicaset-container
   - Patroni Postgres: https://github.com/bcgov/patroni-postgres-container
 
+<!-- ### Move section to Deployment   
 ## Use Artifactory for Image Repository
 - [Understanding the concept of Artifactory and its benefits](https://docs.developer.gov.bc.ca/image-artifact-management-with-artifactory/)
 - [Pulling images from Artifactory](https://docs.developer.gov.bc.ca/push-pull-artifacts-artifactory/)
 - [Configuring your OpenShift environment to pull images](https://docs.developer.gov.bc.ca/setup-artifactory-project-repository/)
 - [Authenticating and accessing images from Artifactory](https://docs.developer.gov.bc.ca/setup-artifactory-service-account/)
 - [Handling versioning and dependency management](https://docs.developer.gov.bc.ca/best-practices-for-managing-image-streams/)
+  -->
+
 
 ## Creating your image
 (recommend using S2I as an easier option, if you need more control then you can make a docker file - link to external docs on how to make a dockerfile)
