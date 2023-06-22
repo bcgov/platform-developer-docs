@@ -37,11 +37,11 @@ This document outlines the best practices for building applications on OpenShift
 
 <!-- ### End of "On this page" -->
 ## Requirements to build your application 
-Here are ten common practices for building applications in a cloud native way that we strongly suggest your team to have before building an application on OpenShift:
+Here are ten common practices for building applications in a cloud native way that we strongly suggest your team follow before building an application on OpenShift:
 
 1. Learn OpenShift basics: Acquaint your team with OpenShift's core concepts including: projects, pods, services, routes and deployments. For more information we have OpenShift training available, make sure to [check them out](https://cloud.gov.bc.ca/private-cloud/support-and-community/platform-training-and-resources/)
 
-2. Understand application requirements: It is important that before you build  your application your team clearly defines its requirements, including dependencies, external services and resource needs.  This is particularly important in order to also  plan for scalability and high availability
+2. Understand application requirements: It is important that before you build  your application your team clearly defines its requirements, including dependencies, external services and resource needs.  This is particularly important in order to plan for scalability and high availability of your application
 
 3. Understand containerization: Familiarize your team with containerization concepts and technologies like Docker.  Understand how containers work, benefits and the impact on application deployment and management
 
