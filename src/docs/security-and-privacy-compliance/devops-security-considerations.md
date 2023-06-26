@@ -54,13 +54,13 @@ There are a number of tools available to developers working on the OpenShift pla
 
 Service definition - Silver/Gold - https://cloud.gov.bc.ca/private-cloud/our-services-in-private-cloud-paas/get-started-with-the-private-cloud-paas/
 
-Our **_Silver Service_** is our standard DevOps platform offering, with on-cluster resiliencey based on application design.
+Our **_Silver Service_** is our standard DevOps platform offering, with on-cluster resiliency based on application design.
 
 Our **_Gold Service_** is our enhanced DevOps platform offering, with replication to a secondary cluster for disaster fail-over purposes.  
 
 Please take note of the [**_Shared Responsibility Model_**](https://cloud.gov.bc.ca/private-cloud/your-product-team-in-the-private-cloud-paas/our-shared-responsibilities/).  While the Platform Services Team manages infrastructure, OpenShift Container Platform and the Platform critical services as part of the Private Cloud PaaS, the Product Team bears the responsibility for the functionality and operations of their application(s) hosted on the Platform.  
 
-Specific details on OpenShift specific secuirty controls can be found here:
+Specific details on OpenShift specific security controls can be found here:
 
 https://www.redhat.com/rhdc/managed-files/cl-openshift-security-guide-ebook-us287757-202103.pdf
 
@@ -68,7 +68,7 @@ https://www.redhat.com/rhdc/managed-files/cl-openshift-security-guide-ebook-us28
 
 **_Penetration Tests_**
 
-The platform services team outsources for a penetration test annually to ensure the services we provide are configured to protect confidentiality, integrity and availability.  Peneteration tests are procured through the pre-qualified list of vendors (https://www2.gov.bc.ca/gov/content/governments/services-for-government/bc-bid-resources/goods-and-services-catalogue/im-it-security-services).
+The platform services team outsources for a penetration test annually to ensure the services we provide are configured to protect confidentiality, integrity and availability.  Penetration tests are procured through the pre-qualified list of vendors (https://www2.gov.bc.ca/gov/content/governments/services-for-government/bc-bid-resources/goods-and-services-catalogue/im-it-security-services).
 
 ------
 ### <a name="privacy"></a>Privacy
@@ -190,10 +190,10 @@ The pipeline templates above make it easier to include the tools described below
 
 **What do each of these types of scanning tools do for me?**
 
-Static Anaysis (i.e. SonarX, CodeQL) 
+Static Analysis (i.e. SonarX, CodeQL) 
 - identifies coding issues that could lead to compromise, back doors, secrets, etc
 
-Dynamic Anaysis (i.e. OWASP ZAP) 
+Dynamic Analysis (i.e. OWASP ZAP) 
 - testing against a live version of app for injection, Cross-site scripting (XSS), and other common web attacks (https://owasp.org/www-project-top-ten/)
 
 Image Analysis 
@@ -240,7 +240,7 @@ Additionally, OpenShift uses CoreOS and the CRI-O container engine.
 
 OpenShift uses a wildcard certificate for the majority of cluster communications security.  This should be sufficient for dev and test workloads, but for production workloads, each team is required to obtain a dedicated TLS certificate from the Access & Directory Management Services (ADMS) team.  
 
-***Note:*** by default, the wildcard will be used to protect project workloads.  The Platform Services team worked through the wildcard issuance requriements for use on the OpenShift clusters.  Obtaining a dedicated TLS cert is currently a manual process.  
+***Note:*** by default, the wildcard will be used to protect project workloads.  The Platform Services team worked through the wildcard issuance requirements for use on the OpenShift clusters.  Obtaining a dedicated TLS cert is currently a manual process.  
 Details on these processes can be found here: https://ssbc-client.gov.bc.ca/services/SSLCert/documents.htm
 
 **Pre-requisites:**
@@ -296,7 +296,7 @@ The Data BC team hosts an API Gateway for use by other government clients.  Deta
 ------
 ### <a name="logging-monitoring"></a>Logging/Monitoring (EKS, Kibana, Graphana, Sysdig Monitor, SIEM, Uptime, Status)
 
-The Platform Services team provides a number of tools to help ensure our platform and applications are behaving as expected, while allowing us to investigate anomolies.
+The Platform Services team provides a number of tools to help ensure our platform and applications are behaving as expected, while allowing us to investigate anomalies.
 
 **OpenShift UI:**
 
@@ -310,7 +310,7 @@ This tool provides a more wholistic view of logs for an application or at the pl
 
 **Sysdig Monitor:**
 
-This tool allows our platform admins and platfrom teams to build monitoring dashboards.
+This tool allows our platform admins and platform teams to build monitoring dashboards.
 - https://cloud.gov.bc.ca/private-cloud/our-products-in-the-private-cloud-paas/monitoring-with-sysdig/
 - [Onboarding to application monitoring with Sysdig](/sysdig-monitor-onboarding/)
 - https://app.sysdigcloud.com/#/login
@@ -370,7 +370,7 @@ Teams may request GitHub apps to be associated with their own or all projects in
 **GitHub Enterprise**
 
 We currently use of GitHub Enterprise.  Contact the Developer Experience team for license information.
-- [GitHub Enterprise user licences in the BC government](/github-enterprise-user-licenses-bc-government/)
+- [GitHub Enterprise user licenses in the BC government](/github-enterprise-user-licenses-bc-government/)
 - https://github.com/enterprises/bcgov-ent/sso
 
 ------
@@ -393,7 +393,7 @@ Access Management
   
 - Ensure team members with privileged access only have what they need to do their jobs, and that access is regularly reviewed, and permissions removed when no longer required.
 
-- A recognized design pattern for some ministries with Protected C data in Zone A is the utilization of a Secure Access Gateway (SAG).  This, combined with the use of a physical token, gives the ministry a greater assurance level over users connecting through the SAG to access Protected C data sources.  It also provides an extra layer in reducing opportunity, but not eliminating, for data exfiltration.  It does not, however, protect against some Ministry or DXC system administrators from directly accessing those same data sources.
+- A recognized design pattern for some ministries with Protected C data in Zone A is the utilization of a Secure Access Gateway (SAG).  This, combined with the use of a physical token, gives the ministry a greater assurance level over users connecting through the SAG to access Protected C data sources.  It also provides an extra layer in reducing opportunity, but not eliminating, for data exhilaration.  It does not, however, protect against some Ministry or DXC system administrators from directly accessing those same data sources.
   - A design pattern maintaining the use of a SAG has been used to restrict developer access to VMs in the Cloud Zone.  This is not done for access to the Emerald cluster.
 
 - A design pattern using a [Secure Access Service Edge (SASE)](https://en.wikipedia.org/wiki/Secure_access_service_edge) is also being tested by a client Ministry.
