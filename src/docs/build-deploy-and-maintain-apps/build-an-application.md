@@ -27,7 +27,7 @@ Last updated: **DATE**
 This document outlines the best practices for building applications on OpenShift.  It presents a step-by-step guide that will assist you in creating efficient applications. Overall, this page will provide a comprehensive resource to equip your team with the knowledge, resources  and techniques required to successfully develop applications on the OpenShift Platform.
 
 ## On this page
-* [ **Requirements to build your application**](#requirements-to-build-your-application)
+* [**Requirements to build your application**](#requirements-to-build-your-application)
 * [**Design and develop your application**](#design-and-develop-your-application)
 * [**CI/CD Pipeline**](#cicd-pipeline)
 * [**Database**](#database)
@@ -93,10 +93,14 @@ By considering these points during the design and development phase, you can opt
 ## CI/CD Pipeline
 <!-- ### Thinking about the build stage when writing this section because this area will also be used in the deployment, think of creating  awareness-  -->
 
-- Choosing a [cloud native CI/CD pipeline solutions](https://docs.developer.gov.bc.ca/ci-cd-pipeline-templates/)
-- Setting up a continuous integration (CI) environment and [pipeline templates repo](https://github.com/bcgov/pipeline-templates)
-- Configuring your CI tools and integrating with OpenShift 
-- Automating the build and deployment process
+Before building and deploying your application, it's highly recommended to setup an automated CI/CD pipeline as the foundation of building, testing and deploying application components on the OpenShift platform. It helps to establish good development practices, reduces the risk of errors, and streamlines the entire software development lifecycle. It fosters a culture of continuous improvement, collaboration, and reliable software delivery.
+
+As you develop your application for deployment to the BC Gov Private Cloud PaaS OpenShift platform, you should create a pipeline that automatically builds and tests your code so that your software delivery is efficient and secure. Use our pipeline templates to help you get started.
+
+There are many different CI/CD pipeline solution out there, in general you should pick a tech stack that is cloud native and works well with your team setup. If you are not sure what to choose or how to start, take a look at our recommended [cloud native CI/CD pipeline solutions](https://docs.developer.gov.bc.ca/ci-cd-pipeline-templates/).
+
+If you are looking for something that's more hands-on, try out some pipeline templates with demo app from [this repo](https://github.com/bcgov/pipeline-templates)!
+
 
 ## Database
 - Choosing the [right database](https://docs.developer.gov.bc.ca/opensource-database-technologies/) for your application
