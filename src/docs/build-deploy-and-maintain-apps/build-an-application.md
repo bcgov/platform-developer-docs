@@ -63,11 +63,15 @@ Here are ten common practices for building applications in a cloud native way th
 <!-- ### specific differences for development in OpenShift vs legacy apps   -->
 When developing your application it is very important to have a team that is conscious about the differences when developing an application compared to traditional legacy applications.
 
+![Container with a checklist and security icons to describe the two points below when developing applications ](../../images/container-checklist-and-security.png)
+
 * Developing applications in OpenShift requires a different mindset as it leverages containerization concepts, understand how to define container images, and consider microservices architecture approach for building modular and scalable applications
 
 * When it comes to deploying your applications on OpenShift, they typically follow a review process before being made accessible. This  ensures the app meets certain standards, security requirements and of course follows  best practices.  Understand this process and factor it into your deployment timeline and expectations
 
 Don't assume that OpenShift will take care of all aspects of app maintenance and stability: 
+
+![Application maintenance considerations shows an individual sitting by their desk thinking of them](../../images/app-maintenance-graphic.png)
 
 * While OpenShift provides a robust platform for deploying and managing applications, it's essential to remember that app maintenance and stability are still your responsibility as a development team. OpenShift handles the underlying infrastructure and orchestration, but you need to ensure your application code, dependencies, and configurations are properly maintained and updated to ensure stability and security.
 
@@ -75,9 +79,13 @@ Don't assume that OpenShift will take care of all aspects of app maintenance and
 
 Think about whether Single Sign-On (SSO) is necessary for your app and what it would look like if implemented:
 
+![Cloud with a key and below an individual to demonstrate Single Sign On](../../images/sso-graphic.png)
+
 * Single Sign-On is a mechanism that allows users to authenticate once and access multiple applications seamlessly. Consider whether your application would benefit from SSO, especially if you have multiple applications within your OpenShift environment. 
 
 Explore the common components available and decide if you want to integrate any of them into your app:
+
+![Team of developers exploring different components and external tools making sure they are compatible with a container environment](../../images/common-components-external-tools.png)
 
 * OpenShift provides several common components, such as databases, message queues, and caching systems, that can be integrated into your application architecture. Evaluate these components based on your app's requirements and decide if incorporating them will enhance functionality, performance, or security. Consider how these components fit into your overall design and plan for their deployment and configuration.
 
@@ -91,15 +99,14 @@ High availability ensures that your application remains accessible even during f
 By considering these points during the design and development phase, you can optimize your application for the OpenShift environment and ensure its stability, security, and scalability.
 
 ## CI/CD Pipeline
-<!-- ### Thinking about the build stage when writing this section because this area will also be used in the deployment, think of creating  awareness-  -->
 
 Before building and deploying your application, it's highly recommended to setup an automated CI/CD pipeline as the foundation of building, testing and deploying application components on the OpenShift platform. It helps to establish good development practices, reduces the risk of errors, and streamlines the entire software development lifecycle. It fosters a culture of continuous improvement, collaboration, and reliable software delivery.
 
-As you develop your application for deployment to the BC Gov Private Cloud PaaS OpenShift platform, you should create a pipeline that automatically builds and tests your code so that your software delivery is efficient and secure. Use our pipeline templates to help you get started.
+As you develop your application for deployment to the B.C. Gov Private Cloud PaaS OpenShift platform, you should create a pipeline that automatically builds and tests your code so that your software delivery is efficient and secure. Use our pipeline templates to help you get started.
 
-There are many different CI/CD pipeline solution out there, in general you should pick a tech stack that is cloud native and works well with your team setup. If you are not sure what to choose or how to start, take a look at our recommended [cloud native CI/CD pipeline solutions](https://docs.developer.gov.bc.ca/ci-cd-pipeline-templates/).
+There are many different CI/CD pipeline solutions, your team should pick a tech stack that is cloud native and works well with your team's setup. If you are not sure what to choose or how to start, take a look at our recommended [cloud native CI/CD pipeline solutions](https://docs.developer.gov.bc.ca/ci-cd-pipeline-templates/).
 
-If you are looking for something that's more hands-on, try out some pipeline templates with demo app from [this repo](https://github.com/bcgov/pipeline-templates)!
+If you are looking for something that's more hands-on, try out some pipeline templates with demo app from [this repo](https://github.com/bcgov/pipeline-templates).
 
 
 ## Database
