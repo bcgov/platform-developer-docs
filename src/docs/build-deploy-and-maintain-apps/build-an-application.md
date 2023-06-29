@@ -60,14 +60,13 @@ Here are ten common practices for building applications in a cloud native way th
 
 ## Design and develop your application
 
-<!-- ### specific differences for development in OpenShift vs legacy apps   -->
 When developing your application it is very important to have a team that is conscious about the differences when developing an application compared to traditional legacy applications.
 
-![Container with a checklist and security icons to describe the two points below when developing applications ](../../images/container-checklist-and-security.png)
+![Container with a checklist and security icons to describe the two points below when developing applications ](../../images/container-checklist-security.png)
 
 * Developing applications in OpenShift requires a different mindset as it leverages containerization concepts, understand how to define container images, and consider microservices architecture approach for building modular and scalable applications
 
-* When it comes to deploying your applications on OpenShift, they typically follow a review process before being made accessible. This  ensures the app meets certain standards, security requirements and of course follows  best practices.  Understand this process and factor it into your deployment timeline and expectations
+* When it comes to deploying your applications on OpenShift, they typically follow a review process before being made accessible. This  ensures the app meets certain standards, security requirements and of course follows  best practices.  Understand this process and factor it into your deployment timeline and expectations  
 
 Don't assume that OpenShift will take care of all aspects of app maintenance and stability: 
 
