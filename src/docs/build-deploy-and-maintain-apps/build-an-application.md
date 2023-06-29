@@ -73,28 +73,28 @@ Don't assume that OpenShift will take care of all aspects of app maintenance and
 
 ![Application maintenance considerations shows an individual sitting by their desk thinking of them](../../images/app-maintenance-graphic.png)
 
-* While OpenShift provides a robust platform for deploying and managing applications, it's essential to remember that app maintenance and stability are still your responsibility as a development team. OpenShift handles the underlying infrastructure and orchestration, but you need to ensure your application code, dependencies, and configurations are properly maintained and updated to ensure stability and security.
+* While OpenShift provides a robust platform for deploying and managing applications, it's essential to remember that app maintenance and stability are still your responsibility as a development team. OpenShift handles the underlying infrastructure and orchestration, but you need to ensure your application code, dependencies, and configurations are properly maintained and updated to ensure stability and security
 
-* When designing your application architecture on OpenShift, consider how different components and services connect with each other. For example, keep in mind that pods, which are the smallest unit of deployment, don't restart in a specific order if they go down. Plan your application's resilience and communication patterns accordingly, considering concepts like readiness and liveness probes to handle pod failures gracefully.
+* When designing your application architecture on OpenShift, consider how different components and services connect with each other. For example, keep in mind that pods, which are the smallest unit of deployment, don't restart in a specific order if they go down. Plan your application's resilience and communication patterns accordingly, considering concepts like readiness and liveness probes to handle pod failures gracefully
 
 Think about whether Single Sign-On (SSO) is necessary for your app and what it would look like if implemented:
 
 ![Cloud with a key and below an individual to demonstrate Single Sign On](../../images/sso-graphic.png)
 
-* Single Sign-On is a mechanism that allows users to authenticate once and access multiple applications seamlessly. Consider whether your application would benefit from SSO, especially if you have multiple applications within your OpenShift environment. 
+* Single Sign-On is a mechanism that allows users to authenticate once and access multiple applications seamlessly. Consider whether your application would benefit from SSO, especially if you have multiple applications within your OpenShift environment
 
 Explore the common components available and decide if you want to integrate any of them into your app:
 
 ![Team of developers exploring different components and external tools making sure they are compatible with a container environment](../../images/common-components-external-tools.png)
 
-* OpenShift provides several common components, such as databases, message queues, and caching systems, that can be integrated into your application architecture. Evaluate these components based on your app's requirements and decide if incorporating them will enhance functionality, performance, or security. Consider how these components fit into your overall design and plan for their deployment and configuration.
+* OpenShift provides several common components, such as databases, message queues, and caching systems, that can be integrated into your application architecture. Evaluate these components based on your app's requirements and decide if incorporating them will enhance functionality, performance, or security. Consider how these components fit into your overall design and plan for their deployment and configuration
 
 If you plan to use external tools or frameworks like WordPress, be mindful of their resource usage and compatibility with a container environment:
 
-* External tools and frameworks, such as WordPress, may offer specific functionalities that you want to leverage in your OpenShift application. However, ensure that these tools are compatible with container environments and won't cause resource usage issues. Consider their resource requirements and evaluate if they align with the resources available within your OpenShift cluster.
+* External tools and frameworks, such as WordPress, may offer specific functionalities that you want to leverage in your OpenShift application. However, ensure that these tools are compatible with container environments and won't cause resource usage issues. Consider their resource requirements and evaluate if they align with the resources available within your OpenShift cluster
 
 * Make sure your app meets your high availability requirements:
-High availability ensures that your application remains accessible even during failures or high traffic situations. Evaluate your app's high availability needs and design your architecture accordingly. Consider strategies like replication, load balancing, and fault tolerance to ensure that your app remains accessible and resilient. Leverage OpenShift's capabilities, such as replica sets, deployments, and scaling mechanisms, to achieve the desired level of availability.
+High availability ensures that your application remains accessible even during failures or high traffic situations. Evaluate your app's high availability needs and design your architecture accordingly. Consider strategies like replication, load balancing, and fault tolerance to ensure that your app remains accessible and resilient. Leverage OpenShift's capabilities, such as replica sets, deployments, and scaling mechanisms, to achieve the desired level of availability
 
 By considering these points during the design and development phase, you can optimize your application for the OpenShift environment and ensure its stability, security, and scalability.
 
