@@ -108,14 +108,32 @@ There are many different CI/CD pipeline solutions, your team should pick a tech 
 If you are looking for something that's more hands-on, try out some pipeline templates with demo app from [this repo](https://github.com/bcgov/pipeline-templates).
 
 
-## Database
-- Choosing the [right database](https://docs.developer.gov.bc.ca/opensource-database-technologies/) for your application
-- Setting up and configuring databases in OpenShift 
-- Handling data persistence and [backups](https://docs.developer.gov.bc.ca/database-backup-best-practices/)
-- Implementing database scaling and replication
-- Working with [High Availablity Databases](https://docs.developer.gov.bc.ca/high-availability-database-clusters/)
-  - MongoDB Replicaset: https://github.com/bcgov/mongodb-replicaset-container
-  - Patroni Postgres: https://github.com/bcgov/patroni-postgres-container
+## Data Storage
+
+Most applications need some data to persist across different sessions or connections. You should consider how to store and secure this data as part of the architecture of your application.
+
+Your persistent data can generally be divided into two categories: files (such as images or PDFs) and database data.
+
+### Storing Files
+
+If your application uses a limited number of files (for example, image assets for a website), you should probably store them on an `netapp-file-standard` persistent volume on the OpenShift cluster. You can find out more about persistent volume claims in our [Platform Storage](https://docs.developer.gov.bc.ca/platform-storage) documentation.
+
+If your application uses a very large number of files (more than 10Gi) or if your application allows users to upload files, then you should consider using the OCIO Object Storage service. You can find out more about provisioning an object storage bucket from your ministry DevOps specialist, or from the #object-storage channel on RocketChat.
+
+It's also possible to store files inside a database, but it's bad practice to do so. It will slow down your database and uses up storage better suited for more typical database data. If your team has both files and database data, consider storing your files in an object storage bucket, and then including a link to the file in a database table. That way, you benefit from the powerful queries available in a database without bogging down your database storage with unsuitable data.
+
+### Database Storage and Software
+
+Most teams run their own databases on the OpenShift cluster, within the same namespace as their application. That means you'll need to make your own decisions about database architecture when designing your application.
+
+As a general rule, databases should make use of the `netapp-block-standard` persistent volume type. You can find out more about persistent volume claims in our [Platform Storage](https://docs.developer.gov.bc.ca/platform-storage) documentation.
+
+Like everything else, databases in OpenShift must be highly-available. That's why managing a database in Openshift is a little bit different from managing a database in other, more traditional architectures. You can find out more about what that means in our [High Availability Database](https://docs.developer.gov.bc.ca/high-availability-database-clusters/) documentation.
+
+Once you understand what makes a database work in OpenShift, your next step is to choose the [right database software](https://docs.developer.gov.bc.ca/opensource-database-technologies/) for your application.
+
+When deciding on your database software and architecture, remember that you should be able to easily backup and recover your database, if you need to. Our [Database Backup Best Practices](https://docs.developer.gov.bc.ca/database-backup-best-practices/) documentation will provide a good starting point for creating a backup and recovery plan. 
+
 
 <!-- ### Move section to Deployment   
 ## Use Artifactory for Image Repository
@@ -128,13 +146,34 @@ If you are looking for something that's more hands-on, try out some pipeline tem
 
 
 ## Creating your image
-(recommend using S2I as an easier option, if you need more control then you can make a docker file - link to external docs on how to make a dockerfile)
-- Understanding the need for custom images
-- Utilizing OpenShift's Source-to-Image (S2I) feature for easy image creation
-- Building custom images with Dockerfiles for more control
-- Pushing and deploying custom images in OpenShift 
-- [Using RHEL base images](https://docs.developer.gov.bc.ca/build-with-rhel-base-images/)
-- [Leveraging pre-built images from the platform](https://docs.developer.gov.bc.ca/prebuilt-images/)
+
+Once your application code is ready, you'll need to build a image in order to deploy it to a pod on the OpenShift cluster.
+
+The Platform Team's [OpenShift 101]((https://cloud.gov.bc.ca/private-cloud/support-and-community/platform-training-and-resources/)) training provides a step-by-step walkthrough to build an image. If you haven't taken it already, please do so! This section is going to focus primarily on best practices for building your image - "what you should do" rather than "how to do it"!
+
+### Using Prebuilt Images
+
+If you're deploying code, you'll need a custom image for that code. However, if you're deploying a pre-existing tool as part of your application (like a database or queuing system), you may be able to use a [pre-built images from the platform](https://docs.developer.gov.bc.ca/prebuilt-images/) instead of having to build and maintain the image yourself.
+
+### Building a Custom Image with Source-to-Image (S2I)
+
+In many cases, you can use OpenShift's Source-to-Image (S2I) method for building your image. This usually means picking a base image for your stack or language (like a python image if your application is built in python) that supports S2I and providing an entry-point script. OpenShift will then make a few standard assumptions about the needs of your application based on the language. 
+
+Using S2I means giving up fine control over the image configuration, leaving it up to OpenShift and the image's creators to create a suitable standard. Those standards are typically well-designed and will work for basic applications. So, if your image doesn't require any special configuration, then your team stands to benefit from an easier build process and less ongoing maintenance with S2I.
+
+### Building a Custom Image with a Dockerfile
+
+If your application requires more particular configuration, you should use the [Dockerfile](https://docs.docker.com/engine/reference/builder/) build method. You'll still need a base image, but you also have much more freedom in which base image to select, since S2I compatibility is no longer required. You'll also need to include a Dockerfile in your code respository, which must include a full set of instructions for installing all software and code on the image.
+
+It's quite a bit more work to create a Dockerfile, and it means your team is responsible for ensuring that everything your application needs is present on the image and remains up-to-date. But it also means that your team has full control over exactly what gets installed on the image, where, and how. If your application requires more specialized configuration, then the Dockerfile build method can provide that.
+
+### Base Images
+
+Whether you choose to use S2I or Dockerfile as your build method, you'll need a parent image. A parent image is a layer of basic configuration for the image, on which you can build and run your code. Sometimes, the parent image will just have basic operating system configuration. Other times, you'll use a parent image that comes pre-installed with the necessary software to run your code (such as an image that comes pre-installed with the python runtimes for your python application). 
+
+You'll usually find these images in container registries, like Dockerhub, GitHub Container Registry, Google Cloud Registry, etc. These are open communities where anyone can upload an image for others to use. You should only use images from trusted sources. In these public registries, there are usually platform-specific indicators of community trust that you can use as a guide. 
+
+We also have access to the RedHat container registry, which is a private and more curated registry. You can access it through Artifactory at `artifacts.developer.gov.bc.ca/redhat-docker-remote`. Teams are encourage to use images from the RedHat registry because they're more likely to be compatible with OpenShift. The RedHat registry also allows access to [RHEL base images](https://docs.developer.gov.bc.ca/build-with-rhel-base-images/).
 
 
 ---
