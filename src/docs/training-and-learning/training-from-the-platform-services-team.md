@@ -24,7 +24,7 @@ Learning how to build in OpenShift can be hard. We’ve put together a number of
 
 ## OpenShift 101 and 201
 
-The BC Gov Provate Cloud PaaS OpenShift 101 and 201 courses include a theory 'workshop' component, and a practical series of 'lab exercises'. OpenShift 101 is recommended for all new teams joining the platform. OpenShift 201 is a more advanced course for platform users who want to advance their skills in OpenShift.
+The BC Gov Private Cloud PaaS OpenShift 101 and 201 courses include a theory 'workshop' component, and a practical series of 'lab exercises'. OpenShift 101 is recomended for all new teams joining the platform. OpenShift 201 is a more advanced course for platform users who want to advance their skills in OpenShift.
 
 If the courses fill up, email PlatformServicesTeam@gov.bc.ca - preference is given to recently onboarded teams. If you’re unable to attend a training session, we will soon be offering recordings. 
 
@@ -82,9 +82,11 @@ The videos below can also be found on this [YouTube playlist](https://www.youtub
 
 - [Repomountie Demo](https://youtu.be/Jkbj9Jav7ss)
 
+- [Advanced Cluster Security (ACS) workshop - vulnerability management in DevOps](https://www.youtube.com/watch?v=RpRPPo29fww)
+
 - [ACS-Jira Integration Demo](https://www.youtube.com/watch?v=h5nNHvRhYcI)
 
-- [Infrascructure as Code, Manifests & Templates Demo](https://youtu.be/GMuRFx1bHuw)
+- [Infrastructure as Code, Manifests & Templates Demo](https://youtu.be/GMuRFx1bHuw)
 
 - [Postgres Runaway Storage Problem and Recovery](https://youtu.be/M0dhHEKyj4Q)
 
