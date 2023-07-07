@@ -73,7 +73,10 @@ const IndexPage = ({ location }) => {
             <h2>Build, deploy and maintain apps</h2>
             <p>Best practices on the platform.</p>
             <ul>
-              <li>Build an application (coming soon)</li>
+              <li>
+                <Link to={"/build-an-application/"}>
+                  Build and application
+              </li>  
               <li>Deploy an application (coming soon)</li>
               <li>Monitor an application (coming soon)</li>
               <li>Retire an application (coming soon)</li>
