@@ -108,3 +108,46 @@ Disaster recovery testing is crucial for ensuring your application can handle sy
 Read here for more [disaster recover plan](https://github.com/bcgov/platform-developer-docs/blob/main/src/docs/automation-and-resiliency/namespace-recovery-and-responsibilities.md).
 
 
+
+## Monitoring and Logging
+
+### A. Setting up Application Monitoring and Health Checks
+
+OpenShift provides robust monitoring capabilities to ensure your application is running as expected. You can utilize services like [Sysdig](https://docs.developer.gov.bc.ca/sysdig-monitor-onboarding/) for monitoring the health and performance of your application, and [Uptime.com](https://uptime.com/) for availability monitoring.
+
+- Alerts: Proactive alerting is crucial for maintaining system reliability. Alerts notify you of potential issues before they become critical problems. Sysdig provides features to create alerts based on certain conditions. Learn more about setting up alert channels in Sysdig from this [documentation](https://docs.developer.gov.bc.ca/sysdig-monitor-create-alert-channels/).
+- Monitoring Dashboard: Sysdig allows you to set up a monitoring dashboard for your application. Check out this [video tutorial](https://www.youtube.com/watch?v=K4rkSCSq3C4&list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg) on how to set up your Sysdig monitoring dashboard.
+
+### B. Configuring Application Logs with Kibana
+
+Logs are critical for debugging and understanding the behaviour of your application. OpenShift integrates with Kibana for log aggregation. This allows you to collect, index, and visualize logs in a centralized location. For a detailed guide on how to configure and use Kibana, refer to this [link](https://stackoverflow.developer.gov.bc.ca/questions/906).
+
+
+## Scaling and Managing the Application
+
+### A. Scaling the Application Horizontally and Vertically
+
+Scaling is a crucial part of managing your application in OpenShift. There are two ways to scale your application:
+
+- Horizontal Scaling: This involves adding or removing instances of your application to match demand. It is generally used when you expect your application to serve an increasing number of requests and need more instances to handle the load. This is beneficial for applications designed with a stateless architecture.
+
+- Vertical Scaling: This involves increasing or decreasing resources like CPU and memory available to your application's instances. It is used when your application needs more computational power or memory to handle tasks. This is particularly beneficial for data-intensive applications, such as databases or applications running complex computations.
+
+Choosing the appropriate scaling method depends on your application's architecture and the nature of the workloads it handles.
+
+
+Effective resource management ensures your application has the resources it needs without wasting any. This involves setting appropriate resource limits and requests, and adjusting these as necessary based on monitoring and performance testing.
+
+### B. Auto-scaling and Pod Disruption Budgets (PDB)
+
+OpenShift supports auto-scaling of applications, which allows the number of running instances to automatically adjust based on resource utilization or other metrics. This uses the Horizontal Pod Autoscaler (HPA) feature to automatically scale the number of pods based on CPU usage or other selected metric.
+
+In addition, OpenShift also supports Pod Disruption Budgets (PDB), a feature that limits the number of pods of an application that are down simultaneously from voluntary disruptions. This ensures that a certain number or percentage of pods will remain running, making your application more resilient to disruptions.
+
+### D. Rollback
+
+In case of a problematic deployment or other issues, you may need to rollback your application to a previous version. OpenShift provides features to rollback deployments to a previous state quickly.
+### E. Updating the Application
+
+When you need to update your application's code or configuration, Infrastructure as Code (IoC) can help ensure your changes are applied consistently and reliably across your environments. Always update your changes in the manifest code repository. This not only helps in tracking your application's update history but also serves as a basis for continuous delivery pipelines. Applying changes via IoC promotes consistency and reduces the likelihood of manual errors during the update process.
+
