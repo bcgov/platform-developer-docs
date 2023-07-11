@@ -233,3 +233,88 @@ In case of a problematic deployment or other issues, you may need to rollback yo
 
 When you need to update your application's code or configuration, Infrastructure as Code (IoC) can help ensure your changes are applied consistently and reliably across your environments. Always update your changes in the manifest code repository. This not only helps in tracking your application's update history but also serves as a basis for continuous delivery pipelines. Applying changes via IoC promotes consistency and reduces the likelihood of manual errors during the update process.
 
+
+## Continuous Deployment and Maintenance
+
+### 1. Integrating the Deployment Process into a CI/CD Pipeline
+
+Integrating your deployment process into a Continuous Integration/Continuous Deployment (CI/CD) pipeline streamlines your application updates, bug patches, and overall maintenance. This automated process ensures that every code change is automatically built, tested, and deployed, reducing manual errors and enhancing productivity. 
+
+OpenShift integrates with Tekton to create powerful CI/CD systems. Tekton introduces the concept of pipeline as code, where the pipeline workflows are defined in YAML format. It makes pipelines reusable, version controlled, and easy to manage. Check out the [Tekton pipeline templates](https://github.com/bcgov/pipeline-templates) for predefined pipeline configurations.
+
+For managing deployments across clusters, ArgoCD is provided as an operator. It follows the practice of using Git as a 'source of truth' for declarative infrastructure and applications. Learn more about ArgoCD from this [page](https://github.com/BCDevOps/openshift-wiki/blob/b1a4e6db91932fd3f29705a5c8ee44983abf8763/docs/ArgoCD/argocd_info.md).
+
+[Documentation](https://docs.developer.gov.bc.ca/ci-cd-pipeline-templates/).
+
+### 2. Version Management in CD
+
+Version control plays a crucial role in maintaining your applications within a CD context. It allows you to keep track of all changes, who made them, and when. 
+
+OpenShift integrates with popular version control systems (like Git) to track versions and trigger deployments when the codebase is updated. Additionally, OpenShift uses image tags for tracking different versions of container images. 
+
+Image tags provide a mutable reference to images that can change over time, offering an efficient way to implement versioning strategies, including semantic versioning. 
+
+However, mutable tags should be managed carefully. For a detailed understanding of best practices in managing image streams and tags in OpenShift, refer to this [documentation](https://docs.developer.gov.bc.ca/best-practices-for-managing-image-streams/).
+
+
+
+### 3. Backup and Restoration in a CD Context
+
+Regular backups are critical to safeguard your application data. In a CD context, backup processes can be automated and integrated into your deployment pipeline. This ensures your backups are regularly updated whenever changes are made. Restorations, in case of data loss or a disaster, can be carried out effectively using these backups. OpenShift provides various backup and restoration strategies.
+
+
+## Handling Data Storage in OpenShift
+
+### 1. Understanding Persistent Storage
+
+In OpenShift, applications are run inside ephemeral containers that do not maintain file state when restarted. For applications that need to store data or state across sessions or instances, OpenShift provides a feature called Persistent Storage. It allows you to allocate a specific portion of the storage infrastructure to your application.
+
+For a deep dive into persistent storage, check out the OpenShift [Persistent Storage documentation](https://docs.openshift.com/container-platform/4.12/storage/understanding-persistent-storage.html).
+
+### 2. Configuring Persistent Volume Claims (PVCs)
+
+Persistent Volume Claims (PVCs) are a method for a user to request a specific size and access mode for storage. These PVCs can then be used in your applications to maintain data between different deployments or instances of your app. 
+
+A comprehensive guide on how to use PVCs in your deployments can be found on the [platform storgae documentation](https://docs.developer.gov.bc.ca/platform-storage/).
+
+### 3. Backing Up and Restoring Data
+
+Data loss is a serious concern in any environment, and OpenShift is no different. For backing up and restoring data in OpenShift, the BC Gov has provided an application called `backup-container`. It's designed to provide a consistent way to back up the state of applications running in OpenShift. 
+
+You can learn more about this from the [backup-container GitHub page](https://github.com/bcgov/backup-container-compliance-enforcement). Also refer to the disastory recover documentation [Persistent volumes section](https://github.com/bcgov/platform-developer-docs/blob/main/src/docs/automation-and-resiliency/namespace-recovery-and-responsibilities.md#persistent-volumes) that we mentioned eariler. 
+
+
+
+## Securing the Deployed Application
+
+### 1. Implementing Security Measures for the Application
+
+
+Security should be a primary consideration in every phase of application deployment. This includes applying principles such as least privilege, securing sensitive data, and regularly scanning for vulnerabilities in the code and container images. [Advanced Cluster Security (ACS)](https://acs.developer.gov.bc.ca/) is a beneficial tool that provides extensive capabilities for image scanning, vulnerability management, and compliance checking.
+
+
+### 2. Configuring Access Controls and Permissions
+
+Managing who has access to what is a key part of securing your application. OpenShift provides robust access control features. You can manage permissions at the project level, allowing you to control who has access to specific resources in your environment. For more guidance, read this [OpenShift Access Control Guide](https://docs.developer.gov.bc.ca/grant-user-access-openshift/).
+
+The Registry app is a valuable tool that provides a UI for managing project access within our OpenShift Clusters. This app need IDIR authentification and can be access through [here](https://registry.developer.gov.bc.ca/).
+
+### 3. Appropriate Role, Service Account (SA), and Role Binding 
+
+For CI/CD or other automated tasks, it's a best practice to give the minimum necessary permissions. This is accomplished using a combination of roles, service accounts, and role bindings. Roles define a set of permissions, service accounts act as an identity for processes that run in a Pod, and role bindings bind a set of roles to a set of users. 
+
+Service Accounts are particularly important for security because they allow you to control the permissions for processes that run inside a Pod, separate from the user who created or manages the Pod. The use of Service Account tokens also ensures that non-human operators (like applications or CI/CD pipelines) can authenticate against the API without using a user's credentials, further enhancing security. This token won't expired unlike other token issued to human user, makes this auth process a lot easier too. More information on this can be found in the OpenShift [RBAC documentation](https://docs.openshift.com/container-platform/4.12/authentication/using-rbac.html).
+
+## Conclusion
+
+### A. Recap of the Key Points Discussed
+
+This guide has walked you through the best practices of deploying applications in OpenShift, a powerful and versatile platform. We covered everything from understanding OpenShift deployments, preparing for deployment, configuring and deploying your applications, setting up networking and routes, testing deployments, monitoring and logging, scaling and managing your applications, to implementing continuous deployment and maintaining it. 
+
+We delved into handling data storage in OpenShift and the importance of securing your deployed application. Each of these steps is crucial to ensure the efficient deployment and operation of your applications in the OpenShift environment.
+
+Remember, this guide just scratches the surface of what OpenShift can offer. There is always more to learn and explore. Also more feature will comes up with future openshift update(current version is 4.12). The more you use OpenShift, the more comfortable and innovative you'll become in deploying and managing your applications. 
+
+We encourage you to delve deeper, try new things, and continue exploring the capabilities of OpenShift. Always keep an eye on the official OpenShift and the BC Gov Developer [documentation](https://developer.gov.bc.ca/), as it is a great resource to expand your knowledge and stay up-to-date with the latest best practices and features.
+
+Happy deploying!
