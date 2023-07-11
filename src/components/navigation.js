@@ -256,6 +256,7 @@ export default function Navigation({ location }) {
               let securityAndPrivacyCompliance = [];
               let trainingAndLearning = [];
               let useGithubInBcgov = [];
+              let rocketchat =[];
               let noCategory = [];
 
               data.allMarkdownRemark.nodes.forEach(node => {
@@ -295,6 +296,9 @@ export default function Navigation({ location }) {
                   case "use-github-in-bcgov":
                     useGithubInBcgov.push(node);
                     break;
+                  case "rocketchat":
+                    rocketchat.push(node);
+                    break;
                   default:
                     noCategory.push(node);
                 }
@@ -321,6 +325,7 @@ export default function Navigation({ location }) {
               securityAndPrivacyCompliance.sort(sortPages);
               trainingAndLearning.sort(sortPages);
               useGithubInBcgov.sort(sortPages);
+              rocketchat.sort(sortPages);
               noCategory.sort(sortPages);
 
               return (
@@ -392,6 +397,12 @@ export default function Navigation({ location }) {
                       links={designSystem}
                       path={path}
                     />
+                    <NavListItem
+                      id="rocketchat"
+                      title="Rocket.Chat"
+                      links={rocketchat}
+                      path={path}
+                    />
                     {noCategory?.length > 0 && (
                       <NavListItem
                         id="uncategorized"
@@ -399,6 +410,7 @@ export default function Navigation({ location }) {
                         links={noCategory}
                         path={path}
                       />
+                  
                     )}
                   </ul>
                 </nav>
