@@ -60,7 +60,7 @@ In the landscape of container orchestration platforms, Red Hat's OpenShift is an
 
 Deploying applications in OpenShift involves orchestrating application images within Pods, providing network connectivity via Services, and exposing them to users through Routes, appropriate network policy. 
 
-This process works hand-in-hand with the build process, detailed in our [build an application] documentation (https://raw.githubusercontent.com/bcgov/platform-developer-docs/7b088a54b6b4d03176198bdcc90ce7361ca02201/src/docs/build-deploy-and-maintain-apps/build-an-application.md). Following sections will dive deeper into each deployment stage.
+This process works hand-in-hand with the build process, detailed in our [build an application documentation](https://raw.githubusercontent.com/bcgov/platform-developer-docs/7b088a54b6b4d03176198bdcc90ce7361ca02201/src/docs/build-deploy-and-maintain-apps/build-an-application.md). Following sections will dive deeper into each deployment stage.
 
 ---
 
