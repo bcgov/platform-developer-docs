@@ -172,8 +172,10 @@ We also have access to the RedHat container registry, which serves as a private 
 ---
 ---
 ## Related pages
+- [Deploy an application](https://docs.developer.gov.bc.ca/deploy-an-application/)
 - [B.C. Government DevOps OpenShift Quickstart demo](https://github.com/bcgov/quickstart-openshift)
 - [Training from the Platform Services team](https://docs.developer.gov.bc.ca/training-from-the-platform-services-team/)
 - [Template for building application: Quick start OpenShift ](https://github.com/bcgov/quickstart-openshift)
 - [Template for Tekton pipeline repo](https://github.com/bcgov/pipeline-templates/tree/main/tekton#tekton-pipelines)
 - [Image and artifact management with Artifactory](https://docs.developer.gov.bc.ca/image-artifact-management-with-artifactory/)
+
