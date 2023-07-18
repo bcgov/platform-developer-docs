@@ -77,8 +77,12 @@ const IndexPage = ({ location }) => {
                 <Link to={"/build-an-application/"}>
                   Build an application 
                 </Link>
-              </li>  
-              <li>Deploy an application (coming soon)</li>
+              </li>
+              <li>  
+                <Link to={"/deploy-an-application/"}>
+                  Deploy an application 
+                </Link>
+              </li> 
               <li>Monitor an application (coming soon)</li>
               <li>Retire an application (coming soon)</li>
             </ul>
