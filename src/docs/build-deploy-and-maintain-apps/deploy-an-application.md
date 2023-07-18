@@ -230,7 +230,7 @@ Effective resource management ensures your application has the resources it need
 
 OpenShift supports auto-scaling of applications, which allows the number of running instances to automatically adjust based on resource utilization or other metrics. This uses the Horizontal Pod Autoscaler (HPA) feature to automatically scale the number of pods based on CPU usage or other selected metric. It's important however to allow at least one pod in a group to be disrupted to allow for platform patching.
 
-In addition, OpenShift also supports Pod Disruption Budgets (PDB), a feature that limits the number of pods of an application that are down simultaneously from voluntary disruptions. This ensures that a certain number or percentage of pods will remain running, making your application more resilient to disruptions.
+In addition, OpenShift also supports Pod Disruption Budgets (PDB), a feature that limits the number of pods of an application that are down simultaneously from voluntary disruptions. This ensures that a certain number or percentage of pods will remain running, making your application more resilient to disruptions. 
 
 ### 3. Rollback
 
