@@ -9,3 +9,6 @@ public
 
 # Jest coverage directory
 coverage
+
+# mkdocs output directory
+site
