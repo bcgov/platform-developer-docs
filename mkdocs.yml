@@ -1,4 +1,28 @@
-site_name: Documentation Site
-docs_dir: src/docs
+site_name: BC Government Private Cloud Technical Documentation
+docs_dir: src
+
+nav:
+    -   'Build, deploy and maintain apps':
+            -   'Build an application': 'drafts/build-deploy-and-maintain-apps/build-an-application.md'
+            -   'Deploy an application': 'drafts/build-deploy-and-maintain-apps/deploy-an-application.md'
+            -   'Image and artifact management with Artifactory': 'docs/build-deploy-and-maintain-apps/image-artifact-management-with-artifactory.md'
+            -   'Push and pull artifacts in Artifactory': 'docs/build-deploy-and-maintain-apps/push-pull-artifacts-artifactory.md'
+            -   'Set up an Artifactory project and repository': 'docs/build-deploy-and-maintain-apps/setup-artifactory-project-repository.md'
+            -   'Set up an Artifactory service account': 'docs/build-deploy-and-maintain-apps/setup-artifactory-service-account.md'
+            -   'Build with RHEL base images': 'docs/build-deploy-and-maintain-apps/build-with-rhel-base-images.md'
+            -   'Best practices for managing image streams': 'docs/build-deploy-and-maintain-apps/imagestreams.md'
+            -   'Prebuilt images': 'docs/build-deploy-and-maintain-apps/prebuilt-images.md'
+#    -   OpenShift projects and access:
+#    -   Use GitHub in BC Gov:
+#    -   Automation and resiliency:
+#    -   App monitoring:
+#    -   Database and API management:
+#    -   Security and privacy compliance:
+#    -   Reusable code and services:
+#    -   Platform architecture reference:
+#    -   Training and learning:
+#    -   Design system:
+#    -   Rocket.Chat:
+
 plugins:
-  - techdocs-core
+    - techdocs-core
