@@ -69,6 +69,8 @@ This service replicates data between the two datacenters and the API endpoints a
 
 Object Storage Service is highly fault tolerant and uses erasure coding within the cluster, as well as asynchronous replication and automatic failover to the Calgary data center. The solution also offers configurable object versioning, allowing for file recovery. Due to the high fault tolerance, versioning and redundancy, most teams don't implement additional backups. A recommended design pattern would be to replace the application's Minio storage with the direct integration with the S3 API within the Object Storage Enterprise Services.
 
+There is also a microservice available called [Common Object Management Service (COMS)](https://digital.gov.bc.ca/bcgov-common-components/common-object-management-service/) that extends the S3 API with additional features that should be considered. 
+
 ## Tools
 
 You can use tools to manage your persistent storage beyond the features built into OpenShift.
@@ -134,5 +136,5 @@ Related links:
 * [BCDevOps/Backup-Container](https://github.com/bcdevops/backup-container)
 * [BCDevOps/StorageMigration](https://github.com/BCDevOps/StorageMigration)
 * [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing)
-
+* [Common Object Management Service (COMS)](https://digital.gov.bc.ca/bcgov-common-components/common-object-management-service/)
 ---
