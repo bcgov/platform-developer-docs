@@ -38,7 +38,7 @@ The project must meet the following requirements:
 - Administrative access to the namespaces
 - `oc` command line tool
 
-It's important to note this works similar to a Route, in that you can't control which IPs can connect to it with a Network Policy. The service will be exposed to all of SPAN-BC. The public internet won't have access, but the rest of the datacenter will. Be sure to secure the service with a strong username/password or mutual TLS config as appropraite for the service sensitivity.
+Please, keep in mind that this functions similarly to a Route, meaning you cannot manage the IPs allowed to connect with a Network Policy. The service will be available to all SPAN-BC users within the datacenter. It won't be accessible from the public internet, but it will be accessible within the datacenter. Make sure to secure the service appropriately based on its sensitivity, either by using a strong username/password authentication or a mutual TLS configuration.
 
 ## Set up TCP connectivity in the Silver Cluster
 Use the Porter Operator to enable direct TCP access to your services in the Silver cluster.
