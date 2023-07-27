@@ -30,13 +30,15 @@ Use this page to learn how to configure direct [transmission control protocol (T
 ## Direct TCP access
 Product teams may enable direct non-HTTPS TCP access to services within their namespaces by creating a TransportServerClaim resource.
 
-This feature is available in all production clusters, including Silver and Gold/GoldDR.
+This feature is available in the production clusters Silver and Gold/GoldDR.
 
 The project must meet the following requirements:
 - Project set in either the Silver cluster or Gold/GoldDR clusters
 - Initial application installation, including services
 - Administrative access to the namespaces
 - `oc` command line tool
+
+It's important to note this works similar to a Route, in that you can't control which IPs can connect to it with a Network Policy. The service will be exposed to all of SPAN-BC. The public internet won't have access, but the rest of the datacenter will. Be sure to secure the service with a strong username/password or mutual TLS config as appropraite for the service sensitivity.
 
 ## Set up TCP connectivity in the Silver Cluster
 Use the Porter Operator to enable direct TCP access to your services in the Silver cluster.
