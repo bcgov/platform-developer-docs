@@ -120,6 +120,7 @@ Your new repository is set up. If you would like your Artifactory Service Accoun
 
 ---
 Related links:
+
 * [Archeobot](https://github.com/bcgov/platform-services-archeobot)
 * [Artifactory](https://artifacts.developer.gov.bc.ca)
 * [Just Ask! tool](https://just-ask.developer.gov.bc.ca/)

@@ -109,6 +109,7 @@ To get started using Artifactory, see [Setup an Artifactory service account](/se
 
 ---
 Related links:
+
 * [JFROG documentation](https://www.jfrog.com/confluence/site/documentation)
 * [Privacy Impact Assessment (PIA)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/privacy/privacy-impact-assessments)
 * [Security Threat Risk Assessment (STRA)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/security-threat-and-risk-assessment)

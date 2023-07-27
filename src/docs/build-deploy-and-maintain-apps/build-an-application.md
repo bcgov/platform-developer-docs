@@ -59,6 +59,7 @@ Here are ten common practices for building applications in a cloud native way th
 9. **Follow B.C. Government standards**: Building an application requires a design system, you can find more information about it [here](https://docs.developer.gov.bc.ca/about-the-design-system/). Keeping with good coding practices such as consistent readable code and comments, unit testing, standard linting format, peer review process with repo branch protection among [Security best practices](https://docs.developer.gov.bc.ca/security-best-practices-for-apps/) is vital
 
 10. **Make use of good software development methodology**: For example, Agile and Scrum practice in combination with an effective development approach such as [Behaviour-Driven Development (BDD)](https://openpracticelibrary.com/practice/behavior-driven-development/) and [Test-Driven Development (TDD)](https://openpracticelibrary.com/practice/test-driven-development/)
+
 ---
 ## Design and develop your application
 

@@ -188,6 +188,7 @@ If your team uses a specific package type not shown here, consider creating a pu
 
 ---
 Related links:
+
 * [Set up an Artifactory service account](/setup-artifactory-service-account/)
 * [Set up an Artifactory project and repository](/setup-artifactory-project-repository/)
 * [NPM repository](https://registry.npmjs.org)
