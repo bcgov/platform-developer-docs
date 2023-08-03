@@ -122,6 +122,7 @@ An STRA for Vault has been completed by the Platform Services team.
 
 ---
 Related links:
+
 - [Vault getting started guide](/vault-getting-started-guide/)
 - [Security best practices for apps](/security-best-practices-for-apps/)
 ---

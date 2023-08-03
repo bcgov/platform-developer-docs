@@ -183,6 +183,7 @@ Understand:
 
 ---
 Related links:
+
 - [Vault Secrets Management Service](/vault-secrets-management-service/)
 - [Linux Foundation OSS Security Badges](https://github.com/linuxfoundation/cii-best-practices-badge)
 - [Unix, PHP, Python and general programming](http://www.dwheeler.com/secure-programs/Secure-Programs-HOWTO/index.html)

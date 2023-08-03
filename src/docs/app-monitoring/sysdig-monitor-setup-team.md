@@ -177,6 +177,7 @@ You should see the following dashboard templates from your Sysdig team:
 
 ---
 Related links:
+
 - [BCDevOps Sysdig Monitor Service](https://app.sysdigcloud.com/api/oauth/openid/bcdevops)
 - [Set up advanced functions in Sysdig Monitor](/sysdig-monitor-set-up-advanced-functions/)
 - [Create alert channels in Sysdig Monitor](/sysdig-monitor-create-alert-channels/)
@@ -188,6 +189,7 @@ Related links:
 - [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 
 Related resources:
+
 - [Sysdig Monitor](https://docs.sysdig.com/en/sysdig-monitor.html)
 - [Sysdig Monitor Dashboards](https://docs.sysdig.com/en/dashboards.html)
 - [Sysdig Alerts](https://docs.sysdig.com/en/alerts.html)

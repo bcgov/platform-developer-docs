@@ -2,27 +2,39 @@ site_name: BC Government Private Cloud Technical Documentation
 docs_dir: src
 
 nav:
-    -   'Build, deploy and maintain apps':
-            -   'Build an application': 'docs/build-deploy-and-maintain-apps/build-an-application.md'
-            -   'Deploy an application': 'docs/build-deploy-and-maintain-apps/deploy-an-application.md'
-            -   'Image and artifact management with Artifactory': 'docs/build-deploy-and-maintain-apps/image-artifact-management-with-artifactory.md'
-            -   'Push and pull artifacts in Artifactory': 'docs/build-deploy-and-maintain-apps/push-pull-artifacts-artifactory.md'
-            -   'Set up an Artifactory project and repository': 'docs/build-deploy-and-maintain-apps/setup-artifactory-project-repository.md'
-            -   'Set up an Artifactory service account': 'docs/build-deploy-and-maintain-apps/setup-artifactory-service-account.md'
-            -   'Build with RHEL base images': 'docs/build-deploy-and-maintain-apps/build-with-rhel-base-images.md'
-            -   'Best practices for managing image streams': 'docs/build-deploy-and-maintain-apps/imagestreams.md'
-            -   'Prebuilt images': 'docs/build-deploy-and-maintain-apps/prebuilt-images.md'
-#    -   OpenShift projects and access:
-#    -   Use GitHub in BC Gov:
-#    -   Automation and resiliency:
-#    -   App monitoring:
-#    -   Database and API management:
-#    -   Security and privacy compliance:
-#    -   Reusable code and services:
-#    -   Platform architecture reference:
-#    -   Training and learning:
-#    -   Design system:
-#    -   Rocket.Chat:
+    - 'Get Started':
+        - 'Provision a new OpenShift project': 'docs/openshift-projects-and-access/provision-new-openshift-project.md'
+        - 'Grant user access in OpenShift': 'docs/openshift-projects-and-access/grant-user-access-openshift.md'
+        - 'OpenShift project resource quotas': 'docs/automation-and-resiliency/openshift-project-resource-quotas.md'
+
+    - 'Build, deploy and maintain apps':
+        -   'Build an application': 'docs/build-deploy-and-maintain-apps/build-an-application.md'
+        -   'Deploy an application': 'docs/build-deploy-and-maintain-apps/deploy-an-application.md'
+    -  'Training and learning':
+        - 'External training resources': 'docs/training-and-learning/training-external-resources.md' 
+        - 'Training from the Platform Services Team': 'docs/training-and-learning/training-from-the-platform-services-team.md'
+    - 'Dive deeper':
+        - 'Security and privacy compliance':
+            - 'Vault secrets management': 'docs/security-and-privacy-compliance/vault-secrets-management-service.md'
+            - 'Image and artifact management with Artifactory': 'docs/build-deploy-and-maintain-apps/image-artifact-management-with-artifactory.md'
+            - 'Security best practices for apps': 'docs/security-and-privacy-compliance/security-best-practices-for-apps.md'
+        - 'Automation and resiliency':
+            - 'Application resiliency guidelines': 'docs/automation-and-resiliency/app-resiliency-guidelines.md'
+            - ' CI/CD pipeline templates for Private Cloud teams': 'docs/automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md'
+        - 'App Monitoring':
+            - 'Set up a team in Sysdig Monitor': 'docs/app-monitoring/sysdig-monitor-setup-team.md'
+            - 'Set up advanced metrics in Sysdig Monitor': 'docs/app-monitoring/sysdig-monitor-set-up-advanced-functions.md'
+        - 'Database and API management':
+            - 'Open-source database technologies': 'docs/database-and-api-management/opensource-database-technologies.md'   
+            - 'High availability database clusters': 'docs/database-and-api-management/high-availability-database-clusters.md'
+        - 'Reusable code and services':
+            - 'Reusable services list': 'docs/reusable-code-and-services/reusable-services-list.md'
+        - 'Platform architecture':
+            - 'Platform storage': 'docs/platform-architecture-reference/platform-storage.md'
+
+
+
+    
 
 plugins:
     - techdocs-core

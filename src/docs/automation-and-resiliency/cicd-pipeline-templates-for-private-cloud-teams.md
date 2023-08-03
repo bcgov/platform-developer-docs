@@ -71,6 +71,7 @@ The [OpenShift 201 training](/training-from-the-platform-services-team/) feature
 
 ---
 Related links:
+
 * [Security Pipeline Templates](https://github.com/bcgov/security-pipeline-templates)
 * [ArgoCD](https://github.com/BCDevOps/openshift-wiki/blob/b1a4e6db91932fd3f29705a5c8ee44983abf8763/docs/ArgoCD/argocd_info.md)
 * [GitHub Actions](https://github.com/bcgov/security-pipeline-templates/tree/main/.github/workflows)

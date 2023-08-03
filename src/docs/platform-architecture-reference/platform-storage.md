@@ -29,6 +29,7 @@ We use several different storage technologies in OpenShift. Currently, we have t
 * **S3 Object Storage**: Object-based storage that is available via a web-based API instead of through a mounted directory. A common implementation of this is the Amazon S3 API. This allows remote access storage over the internet that does not require directly attaching to a running system.
 
 ## On this page
+
 - [Storage services](#storage-services)
 - [Tools](#tools)
 - [Storage details](#storage-details)
@@ -130,6 +131,7 @@ The speed of each storage solution depends on your workload. ElasticSearch speci
 
 ---
 Related links:
+
 * [OpenShift project resource quotas](/openshift-project-resource-quotas/)
 * [Backup Container](https://github.com/BCDevOps/backup-container)
 * [Red Hat documentation](https://access.redhat.com/documentation/en-us/red_hat_openshift_container_storage/4.7/html/deploying_and_managing_openshift_container_storage_using_red_hat_openstack_platform/volume-snapshots_osp)

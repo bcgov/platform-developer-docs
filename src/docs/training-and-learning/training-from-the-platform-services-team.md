@@ -98,5 +98,7 @@ The videos below can also be found on this [YouTube playlist](https://www.youtub
 
 ---
 Related links:
+
 - [External training resources](/training-external-resources/)
+
 ---

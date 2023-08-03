@@ -153,6 +153,7 @@ The following are some fantastic examples of applications that operate on the pl
 
 ---
 Related links:
+
 * [12 Factor App](https://12factor.net/)
 * [OpenShift: Compute Resources](https://docs.openshift.com/container-platform/3.11/dev_guide/compute_resources.html#dev-compute-resources)
 * [Horizontal Pod Autoscaler](https://docs.openshift.com/container-platform/3.11/dev_guide/pod_autoscaling.html)

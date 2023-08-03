@@ -21,6 +21,7 @@ sort_order: 2
 Find details on the following services or tools you can use as part of your project in `bcgov`.
 
 ## On this page
+
 - [Reusable services list](#reusable-services-list)
   - [On this page](#on-this-page)
   - [Backup Container](#backup-container)
@@ -45,6 +46,7 @@ Find details on the following services or tools you can use as part of your proj
 
 ### Features
 You can use the following databases:
+
 * MongoDB
 * PostgresSQL
 * MSSQL (MSSQL requires the NFS DB volume is shared with the database for backups to function correctly)
@@ -53,6 +55,7 @@ You can use the following databases:
 You can run Backup Container for supported databases separately or in a mixed environment.
 
 For more information on Backup Container, see the following pages:
+
 * [backup-container repository](https://github.com/BCDevOps/backup-container)
 * [jag-cullencommission repository](https://github.com/bcgov/jag-cullencommission/tree/master/openshift)
 
@@ -65,6 +68,7 @@ The Geocoder helps you validate and geocode addresses (including public and rela
 The URL allows both public and gated access. Gated access requires an APIkey. To get a sandbox APIkey with a maximum rate of 1000 requests per minute, visit the [Geocoder API console](https://catalogue.data.gov.bc.ca/dataset/bc-address-geocoder-web-service/resource/40d6411e-ab98-4df9-a24e-67f81c45f6fa/view/1d3c42fc-53dc-4aab-ae3b-f4d056cb00e0). You can get an unrestricted APIkey for use in government applications by opening a ticket with the [Data Systems & Services request system](https://dpdd.atlassian.net/servicedesk/customer/portal/1/group/7/create/15).
 
 For more information on the BC Address Geocoder, see the following pages:
+
 * [BC Address Geocoder Developer Guide](https://developer.gov.bc.ca/Community-Contributed-Content/BC-Address-Geocoder-Developer-Guide)
 * [BC Address Geocoder repository](https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS)
 
@@ -73,12 +77,14 @@ For more information on the BC Address Geocoder, see the following pages:
 Use the Common Document Generation Service (CDOGS) to generate PDF or XML-based documents (ex: docx, xlsx, pptx, odt, ods, odp, and html). The CDOGS API can merge complex datasets into document templates. It supports any XML-based document templates including but not limited to Microsoft Office, LibreOffice, and OpenOffice.
 
 For more information on CDOGS, see the following pages:
+
 * [Common Document Generation Service (CDOGS) product overview](https://digital.gov.bc.ca/common-components/common-document-generation-service)
 * [Common Document Generation Service (CDOGS) documentation](https://bcgov.github.io/common-service-showcase/services/cdogs.html)
 
 ## Common Hosted Email Service
 
 Use the Common Hosted Email Service (CHES) to send emails programmatically. For more information on CHES, see the following pages:
+
 * [Common Hosted Email Service (CHES) product overview](https://digital.gov.bc.ca/common-components/common-hosted-email-service)
 * [Common Hosted Email Service (CHES) documentation](https://bcgov.github.io/common-service-showcase/services/ches.html)
 
@@ -87,6 +93,7 @@ Use the Common Hosted Email Service (CHES) to send emails programmatically. For 
 Using the Common Object Management Service (COMS), take advantage of more cost-effective storage solutions for your new or existing business applications with an authorization and authentication method that suits your application’s business requirements. COMS is a secure REST API that lets you connect your application to any S3 bucket.
 
 For more information on COMS, see the following pages:
+
 * [Common Object Management Service (COMS) product overview](https://digital.gov.bc.ca/common-components/common-object-management-service)
 * [Common Object Management Service (COMS) documentation](https://bcgov.github.io/common-service-showcase/services/coms.html)
 
@@ -103,12 +110,14 @@ For more information, visit:
 Fathom analytics provide simple website statistics without tracking or storing personal data. [fathom-openshift](https://github.com/BCDevOps/fathom-openshift) is a set of OpenShift configurations to set up an instance of the Fathom web analytics server.
 
 For more information, see the following pages:
+
 * [Fathom](https://developer.gov.bc.ca/Community-Contributed-Content/Fathom)
 * [fathom-openshift](https://github.com/BCDevOps/fathom-openshift)
 
 ## go-crond
 
 [go-crond](https://github.com/webdevops/go-crond#readme) is a cron daemon written in Go for use in Docker images. For more information, see the following pages:
+
 * [go-crond repository](https://github.com/webdevops/go-crond)
 
 ## Matomo OpenShift
@@ -116,12 +125,14 @@ For more information, see the following pages:
 Matomo is a comprehensive web analytics server and an alternative to Google Analytics when data ownership and privacy compliance are a concern.
 
 Matomo OpenShift provides a set of OpenShift configurations to set up an instance of the Matomo web analytics server. For more information, see the following pages:
+
 * [Matomo OpenShift](https://developer.gov.bc.ca/Community-Contributed-Content/Matomo-OpenShift)
 * [Matomo](https://matomo.org/)
 
 ## OWASP ZAP Security Vulnerability Scanning
 
 The OWASP Zed Attack Proxy (ZAP) automatically finds security vulnerabilities in web applications. For more information, see the following pages:
+
 * [OWASP ZAP Security Vulnerability Scanning](https://developer.gov.bc.ca/Developer-Toy-Box/OWASP-ZAP-Security-Vulnerability-Scanning)
 * [openshift-components](https://github.com/BCDevOps/openshift-components/tree/master/cicd/jenkins-slave-zap)
 
@@ -153,9 +164,11 @@ The [SonarQube repository](https://github.com/BCDevOps/sonarqube) contains all t
 This work was inspired by the [OpenShift Demos SonarQube for OpenShift](https://github.com/OpenShiftDemos/sonarqube-openshift-docker).
 
 For more information, see the following pages:
+
 * [SonarQube repository](https://github.com/BCDevOps/sonarqube)
 
 For information on upgrading plugins, see the following pages:
+
 * [Upgrading Plugins Manually](https://github.com/BCDevOps/sonarqube/blob/master/docs/upgrading-plugins-manually.md)
 * [Upgrading with Bundled Plugins](https://github.com/BCDevOps/sonarqube/blob/master/docs/upgrading-with-bundled-plugins.md)
 
@@ -166,12 +179,14 @@ You can also integrate a [ZAP plugin for SonarQube](https://github.com/OtherDevO
 The [docker-weasyprint](https://github.com/BCDevOps/docker-weasyprint) project bundles WeasyPrint into a simple, OpenShift-compatible, HTML to PDF/PNG microservice with a simple REST interface.
 
 For more information, see the following pages:
+
 * [WeasyPrint HTML to PDF/PNG Microservice](https://developer.gov.bc.ca/Community-Contributed-Content/WeasyPrint-HTML-to-PDFPNG-Microservice)
 * [docker-weasyprint](https://github.com/BCDevOps/docker-weasyprint)
 * [WeasyPrint](https://weasyprint.org/)
 
 ---
 Related links:
+
 * [nr-messaging-service-showcase repository](https://github.com/bcgov/nr-messaging-service-showcase).
 * [About the Messaging Common Service](https://developer.gov.bc.ca/Community-Contributed-Content/About-the-Messaging-Common-Service)
 * [Messaging Service Developer Guide](https://developer.gov.bc.ca/Community-Contributed-Content/Messaging-Service-Developer-Guide)

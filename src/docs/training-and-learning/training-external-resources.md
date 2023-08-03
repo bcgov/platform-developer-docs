@@ -52,5 +52,7 @@ The resources below are from sources outside of the B.C. government. They provid
 
 ---
 Related links:
+
 - [Training from the Platform Services team](/training-from-the-platform-services-team/)
+
 ---

@@ -75,8 +75,10 @@ storage-128 Overall Storage: 128 GiB, Backup Storage: 64 GiB
 storage-256 Overall Storage: 256 GiB, Backup Storage: 128 GiB
 storage-512 Overall Storage: 512 GiB, Backup Storage: 256 GiB
 ```
+
 ---
 Related links:
+
 * [Request a quota increase for an OpenShift project set](/openshift-project-resource-quotas/)
 * [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing)
 
