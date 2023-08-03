@@ -10,6 +10,7 @@ nav:
     - 'Build, deploy and maintain apps':
         -   'Build an application': 'docs/build-deploy-and-maintain-apps/build-an-application.md'
         -   'Deploy an application': 'docs/build-deploy-and-maintain-apps/deploy-an-application.md'
+        -   'Push and pull artifacts in Artifactory': 'docs/build-deploy-and-maintain-apps/push-pull-artifacts-artifactory.md'
     -  'Training and learning':
         - 'External training resources': 'docs/training-and-learning/training-external-resources.md' 
         - 'Training from the Platform Services Team': 'docs/training-and-learning/training-from-the-platform-services-team.md'
