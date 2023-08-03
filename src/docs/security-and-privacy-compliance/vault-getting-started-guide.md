@@ -63,7 +63,7 @@ For each OpenShift Project Set ($LICENSE_PLATE-dev/test/prod/tools - eg: abc123-
 
 4. Enter your `LICENSE_PLATE` for the **Role** (example uses `abc123` as the `LICENSE_PLATE`)
 
-5. Click **Sign In** and login with IDIR or GitHub through SSO (this depends on which information is entered in Registry service by your team lead)
+5. Click **Sign In** and login with AzureAD IDIR through SSO (Currently only Technical Leads entered in Product Registry service will have access)
 
 ![vault-login.gif](../../images/vault-login.gif)
 
@@ -108,7 +108,7 @@ For each OpenShift Project Set ($LICENSE_PLATE-dev/test/prod/tools - eg: abc123-
     policies               ["default" "abc123"] # 'abc123' == $LICENSE_PLATE
     token_meta_email       justin@**********
     token_meta_role        abc123 # 'abc123' == $LICENSE_PLATE
-    token_meta_username    j-pye@github
+    token_meta_username    shelly.han@gov.bc.ca
     ```
 
 #### Verify your Vault resources
