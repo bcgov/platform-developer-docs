@@ -47,6 +47,7 @@ If you have any questions or concerns about this change, post your question in [
 
 ---
 Related links:
+
 * [Platform Project Registry](https://registry.developer.gov.bc.ca/)
 * [#devops-security channel](https://chat.developer.gov.bc.ca/channel/devops-security)
 
