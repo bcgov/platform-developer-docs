@@ -75,6 +75,7 @@ The platform services team outsources for a penetration test annually to ensure 
 A Privacy Impact Assessment has been completed for the OpenShift Container Platform service.
 
 Personal Information upto and including Protected B Information Security Classification may be stored on OpenShift.   
+
 - https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification
 
 ------
@@ -87,6 +88,7 @@ Documentation is in final stages of review for submission.
 ### <a name="platform-tools-security-assessments"></a>Platform Tools Security Assessments
 
 Many of the platform tools have ***completed*** security assessments.  These include:
+
 - OpenShift v4.10 and VMWare NSX-T
 - OpenShift v4.x and GitHub (Public)
 - KeyCloak
@@ -108,6 +110,7 @@ Many of the platform tools have ***completed*** security assessments.  These inc
 - 1Password (SoAR complete, Cloud security schedule review complete) - not to be used corporately due to no background checks for staff/contractors
 
 The following security assessments are ***planned***:
+
 - Cert Manager for OpenShift
 - Kyverno
 - GitGuardian
@@ -129,12 +132,14 @@ While access to the registry is currently limited to the OpenShift Platform Serv
 ### <a name="communications"></a>Communications
 
 Community sharing, alerts and discussions take place on Rocket Chat, which we host as an app on OpenShift.  Authentication via IDIR or GitHub (in BCGov org or invited by an existing member).
+
 - https://cloud.gov.bc.ca/private-cloud/support-and-community/stay-connected/
 - https://just-ask.developer.gov.bc.ca/
 
 #### Mautic
 
 Mautic has been implemented to allow for subscription based communications for the DevOps community. 
+
 - https://github.com/bcgov/Mautic-Openshift
 - https://github.com/bcgov/Mautic-Subscription-App
 - https://subscribe.developer.gov.bc.ca/
@@ -159,9 +164,11 @@ Cluster roles are managed either in private GitHub repositories (in the bcgov-c 
 We are investigating third party tools to help improve the user management experience.
 
 Platform Services Roles and Responsibilities can be found here:
+
 - https://cloud.gov.bc.ca/private-cloud/your-product-team-in-the-private-cloud-paas/our-shared-responsibilities/
 
 The Platform Services team maintains an Access Control Policy for all platform tools.  
+
 - https://cloud.gov.bc.ca/private-cloud/access-control-policy-openshift-and-platform-tools/
 
 ------
@@ -179,24 +186,29 @@ For products requiring policies that reach off-cluster, the Emerald cluster is t
 ### <a name="pipeline-templates"></a>Pipeline Templates (includes static and dynamic analysis)
 
 In order to reduce effort in implementing secure tools into a build pipeline, we have developed pipeline templates that include components for build, aas well as static and dynamic vulnerability scanning.  
+
 - https://github.com/bcgov/Security-pipeline-templates/
 
 Here is a representation of what an application build pipeline should look like:
 ![Application build pipeline example diagram](../../images/PipelineSecurity.png)
 
 The pipeline templates above make it easier to include the tools described below:
-  - [SonarQube in the BC Gov Private Cloud PaaS](/reusable-services-list/#sonarqube-in-the-bc-gov-private-cloud-paas)
-  - [OWASP ZAP Security Vulnerability Scanning](/reusable-services-list/#owasp-zap-security-vulnerability-scanning)
+
+- [SonarQube in the BC Gov Private Cloud PaaS](/reusable-services-list/#sonarqube-in-the-bc-gov-private-cloud-paas)
+- [OWASP ZAP Security Vulnerability Scanning](/reusable-services-list/#owasp-zap-security-vulnerability-scanning)
 
 **What do each of these types of scanning tools do for me?**
 
 Static Analysis (i.e. SonarX, CodeQL) 
+
 - identifies coding issues that could lead to compromise, back doors, secrets, etc
 
 Dynamic Analysis (i.e. OWASP ZAP) 
+
 - testing against a live version of app for injection, Cross-site scripting (XSS), and other common web attacks (https://owasp.org/www-project-top-ten/)
 
 Image Analysis 
+
 - ensures image components are up-to-date and not vulnerable to known exploits (https://cve.mitre.org/, https://nvd.nist.gov/).
 
 ------
@@ -212,27 +224,32 @@ It can also help in defining network security policies for your application and 
 
 Scoped access is granted based on identification as a Product Owner or Technical Lead in the OpenShift Product Registry.  
 Developer access can be granted by request.  Requests must include the following:
+
 - Namespaces
 - Product Owner approval
 
 Links:
+
 - https://acs.developer.gov.bc.ca
 - https://www.redhat.com/en/technologies/cloud-computing/openshift/advanced-cluster-security-kubernetes
 
 **XRay:**
 
 An add-on capability to Artifactory, XRay scans images and other artifacts for component vulnerabilities.  Anyone with access to an image or artifact within Artifactory can see the XRay tab as part of the image/artifact details, and see what vulnerable components lie within, and what version will correct that deficiency. 
+
 - https://artifacts.developer.gov.bc.ca/ui/login/
 
 ------
 ### <a name="container-runtime-security"></a>Container runtime security
 
 We currently have runtime policies in place for the following using ACS.  These look for things like:
+
 - Cryto-mining
 - Integrity monitoring
 - https://docs.openshift.com/acs/3.66/operating/manage-security-policies.html
 
 Additionally, OpenShift uses CoreOS and the CRI-O container engine.
+
 - https://docs.openshift.com/container-platform/4.10/architecture/architecture-rhcos.html
 
 ------
@@ -248,6 +265,7 @@ Generate a .csr for each site:
 - https://github.com/BCDevOps/openshift-wiki/blob/master/docs/SSLCerts/GenerateCertificateSigningRequest.md
 
 **Ordering Process:**
+
 -  Business area creates/submits order via MyServiceCentre
 -  Ministry Service Desk reviews order, sends to EA for Approval
 -  EA Approves
@@ -265,6 +283,7 @@ This 'secrets' store should actually only be used for configurations.  Values ar
 **Vault:**
 
 The preferred secrets management tool for team use on OpenShift.
+
 - https://cloud.gov.bc.ca/private-cloud/our-products-in-the-private-cloud-paas/vault-secrets-management/
 - [Vault secrets management service](/vault-secrets-management-service/)
 - [Vault getting started guide](/vault-getting-started-guide/)
@@ -273,6 +292,7 @@ The preferred secrets management tool for team use on OpenShift.
 ### <a name="gitops-cluster-configuration-management"></a>GitOps/Cluster Configuration Management
 
 Argo CD provides a GitOps capability for sync'ing a Git repository with an OpenShift configuration (platform or application).
+
 - [Argo CD usage](/argo-cd-usage/)
 
 We are in the process of testing out the GitOps Operator, based on ArgoCD, that is integrated into OpenShift.  This may replace (partially or completely) our custom ArgoCD implementation.
@@ -281,6 +301,7 @@ We are in the process of testing out the GitOps Operator, based on ArgoCD, that 
 ### <a name="api-management"></a>Application Programmable Interface (API) Management
 
 The Data BC team hosts an API Gateway for use by other government clients.  Details can be found here:
+
 - https://developer.gov.bc.ca/API-Gateway-(powered-by-Kong-CE)
 - https://developer.gov.bc.ca/BC-Government-API-Guidelines
 - https://developer.gov.bc.ca/BC-Government-OpenAPI-Specifications
@@ -288,9 +309,11 @@ The Data BC team hosts an API Gateway for use by other government clients.  Deta
 ------
 ### <a name="application-resource-tuning"></a>Application Resource Tuning Advisor and App Assessment Tool
 **Resource Tuning Advisor**
+
 - https://github.com/BCDevOps/resource-tuning-advisor-app 
 
 **App Assessment Tool**
+
 - https://github.com/bcgov/AppAssessment
 
 ------
@@ -306,11 +329,13 @@ Within the OpenShift interface, project teams can view logs associated with a gi
 **Kibana:**
 
 This tool provides a more wholistic view of logs for an application or at the platform level, as well as providing visualization and alerting capability.
+
 - https://kibana-openshift-logging.apps.silver.devops.gov.bc.ca/
 
 **Sysdig Monitor:**
 
 This tool allows our platform admins and platform teams to build monitoring dashboards.
+
 - https://cloud.gov.bc.ca/private-cloud/our-products-in-the-private-cloud-paas/monitoring-with-sysdig/
 - [Onboarding to application monitoring with Sysdig](/sysdig-monitor-onboarding/)
 - https://app.sysdigcloud.com/#/login
@@ -319,6 +344,7 @@ This tool allows our platform admins and platform teams to build monitoring dash
 
 All cluster logs (system, audit, container) are regularly sent to the Security Operations SIEM environment.  
 Retention is set as follows:
+
 - System, Container logs - 2 months
 - Audit logs - 13 months
 
@@ -328,23 +354,28 @@ This activity has paused for the time being but will be re-started in the new ye
 **Uptime.com**
 
 This tools help us to observe platform service availability:
+
 - https://cloud.gov.bc.ca/private-cloud/our-services-in-private-cloud-paas/
 - https://status.developer.gov.bc.ca/
 
 ------
 ### <a name="backups"></a>Backups
 **OpenShift:**
+
 - [Backup Container](/reusable-services-list/#backup-container)
 - [Database backup best practices](/database-backup-best-practices/)
 
 **GitHub:**
+
 - https://github.com/bcgov-c/platform-services-docs/blob/main/github-backups.md
 
 ------
 ### <a name="change-management"></a>Change Management
 
 Planning for platform and service changes is documented on the Platform Services ZenHub board.  
+
 - https://app.zenhub.com/workspaces/platform-experience-5bb7c5ab4b5806bc2beb9d15/board?repos=220104031  
+
 Any service change will be communicated via the #devops-alerts RocketChat channel.
 
 Strategic level changes are communicated to the DevOps community at regular Community Meetups, as well as to executive groups across government.
@@ -355,6 +386,7 @@ Strategic level changes are communicated to the DevOps community at regular Comm
 GitHub is the primary git repository for platform application code.  There are some exceptions that use privately hosted GitLab or other source code repositories.  
 
 Here is a summary of the GitHub organizations we own and their purposes:
+
 - bcgov - main developer git repository for platform application code and/or public sharing.
 - bcgov-c - main private git repository used for cluster configuration management and non-public projects.
 - bcdevops - alternate git repository for platform application code.  Membership required for access to OpenShift.
@@ -370,6 +402,7 @@ Teams may request GitHub apps to be associated with their own or all projects in
 **GitHub Enterprise**
 
 We currently use of GitHub Enterprise.  Contact the Developer Experience team for license information.
+
 - [GitHub Enterprise user licenses in the BC government](/github-enterprise-user-licenses-bc-government/)
 - https://github.com/enterprises/bcgov-ent/sso
 
@@ -381,6 +414,7 @@ This is a list of specific considerations for teams creating/storing/using Prote
 Product teams should be aware that any creation/storage/use of Protected C data in any system should only be considered after discussion with Ministry Security Officer (MISO) and Ministry Privacy Officer (MPO).  They may require additional controls to those listed below.
  
 Protected C data should be encrypted at rest. 
+
 - The NetApp storage appliance used is NOT encrypted at its core, so this means that associate provisioned volume claims (PVCs) are not encrypted by default.  However, it is possible to request an encrypted volume claim. 
   - This is done at pvc creation time using the following https://netapp-trident.readthedocs.io/en/stable-v21.07/kubernetes/operations/tasks/backends/ontap/ontap-san/configuration.html?highlight=encryption#configuration-options-for-provisioning-volumes.  
   - If data is to be stored in a database, that database should have encryption enabled and keys managed.  
@@ -388,6 +422,7 @@ Protected C data should be encrypted at rest.
 - Object Storage used CAN be encrypted as part of initial setup.  
  
 Access Management
+
 - Depending on risk - data creation, changes, and potentially even (read) access should be audited. 
   - This may be done via an audit table as part of an application, but direct access to data (if permitted) should also be considered for this requirement.
   
@@ -399,25 +434,32 @@ Access Management
 - A design pattern using a [Secure Access Service Edge (SASE)](https://en.wikipedia.org/wiki/Secure_access_service_edge) is also being tested by a client Ministry.
 
 Network Security Policies and Workload labelling
-  - These should be reviewed and vetted before any actual Protected C data is used in the system (i.e., designed, implemented, and tested in Dev/Test environments).
+
+- These should be reviewed and vetted before any actual Protected C data is used in the system (i.e., designed, implemented, and tested in Dev/Test environments).
 
 Vulnerability Scanning (Static and Dynamic)
+
 - These functions are built into pipeline templates that we provide (using SonarCloud and OWASP ZAP).  These should be mandatory for any system that uses Protected C data.
 
 Image scanning (Advanced Cluster Security- https://acs.developer.gov.bc.ca)
-  - All active deployments are scanned by Advanced Cluster Security and all DevOps Product Owners and Technical Leads listed in the Platform Registry have access by default.   
-  - Any High/Critical vulnerabilities should be reviewed and validated prior to Production release.  This doesn’t mean there can’t be any vulnerabilities, only that we are sure the risky ones are not applicable to the functioning of our system.
+
+- All active deployments are scanned by Advanced Cluster Security and all DevOps Product Owners and Technical Leads listed in the Platform Registry have access by default.   
+- Any High/Critical vulnerabilities should be reviewed and validated prior to Production release.  This doesn’t mean there can’t be any vulnerabilities, only that we are sure the risky ones are not applicable to the functioning of our system.
 
 Secrets Management
+
 - Use Vault.  OpenShift secrets does NOT protect secrets enough to be compliant with an audit as they are only base64 encoded.
 
 TLS certificate
+
 - Any production workload requires a dedicated TLS certificate (obtained from ADMS).
 
 Backups
+
 - For sensitive data backup, ensure they are encrypted.
 
 Logging/Monitoring
+
 - Ensure that you have adequate log retention to meet requirements based on your business/data needs.  On-cluster retention is 14 days.  All logs are shipped to the OCIO SIEM and retained as follows (OpenShift System – 2 months, OpenShift Audit – 13 months, App/container – 2 months).  Product teams can work with SecOps if their retention needs exceed this.
 
 *Note: Further investigation is required to provided further enhanced cluster access protections for namespaces that hold Protected C data.  Some initial ideas include the use of BC Verifiable Credential, or policy-based access control (vs authentication re-direct from the console).
@@ -434,20 +476,24 @@ Some teams have decided to host PCI-scoped applications on-prem (non-OpenShift) 
 The platform services team provides training to onboarding teams, as well as support for issues experienced.  Ministry staff that work with devops teams are also encouraged to attend training.
 
 ***Training:***
+
 - https://cloud.gov.bc.ca/private-cloud/support-and-community/platform-training-and-resources/openshift-101/
 - https://cloud.gov.bc.ca/private-cloud/support-and-community/platform-training-and-resources/openshift-201/
 - https://github.com/bcdevops/devops-platform-workshops
 
 ***Support:***
+
 - https://cloud.gov.bc.ca/private-cloud/support-and-community/how-to-get-support-or-help/
 - https://cloud.gov.bc.ca/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/
 - https://cloud.gov.bc.ca/private-cloud/support-and-community/platform-training-and-resources/how-to-videos-and-demos/
 - Various Rocket Chat channels
 
 **App security self assessment:**
+
 - [Security best practices for apps](/security-best-practices-for-apps/)
 
 **Best practices for building apps on OpenShift:**
+
 - [Private Cloud as a Service Platform Technical Documentation](/)
 
 **Contact**

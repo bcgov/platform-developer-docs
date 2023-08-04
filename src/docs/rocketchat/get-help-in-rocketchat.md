@@ -88,6 +88,7 @@ Send your message in the appropriate Rocket.Chat channel and check back often to
 ---
 ---
 ## Related pages
+
 - [Steps to join Rocket.Chat](https://docs.developer.gov.bc.ca/steps-to-join-rocketchat/)
 - [Rocket.Chat etiquette](https://docs.developer.gov.bc.ca/rocketchat-etiquette/)
 - [Rocket.Chat channel descriptions](https://docs.developer.gov.bc.ca/rocketchat-channel-descriptions/)

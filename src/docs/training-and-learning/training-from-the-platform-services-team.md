@@ -36,7 +36,7 @@ You can review the materials for the OpenShift 101 and OpenShift 201 training [h
 
 The [how to workshops](https://github.com/bcgov/how-to-workshops) page hosts some demo projects and quick start guides that may assist you in getting stared with network policies and Crunchy DB databases.  
  
- ## Video resources
+## Video resources
 
 The videos below can also be found on this [YouTube playlist](https://www.youtube.com/playlist?list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg).
 

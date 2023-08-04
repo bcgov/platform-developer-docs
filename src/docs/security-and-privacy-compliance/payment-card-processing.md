@@ -28,6 +28,7 @@ Below, we describe how credit card payments should be processed by OpenShift hos
 Alternatively, Ministries may host their own PCI-DSS proxy service for connection to the credit card processor.
 
 ## On this page
+
 - [Direct sale with PayBC overview](#direct-sale-with-paybc-overview)
 - [Context Diagram](#context-diagram)
 - [Technical Overview](#technical-overview)

@@ -292,5 +292,7 @@ The [OpenShift 101 & 201 training](/training-from-the-platform-services-team/) c
 
 ---
 Related links:
+
 * [Autoscaling with HPA and VPA presentation](https://bcgov-my.sharepoint.com/:p:/g/personal/olena_mitovska_gov_bc_ca/EXNhWAvKZA5OiR1eMKaug7QBMI-tGiK2FZ_c04p8JI0RGw) (IDIR required)
+
 ---

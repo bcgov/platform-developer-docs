@@ -32,6 +32,7 @@ If you have any questions about Sysdig or application monitoring, please contact
 
 ---
 Related links:
+
 - [BCDevOps Sysdig Monitor Service](https://app.sysdigcloud.com/api/oauth/openid/bcdevops)
 - [Sysdig Monitor](https://sysdig.com/products/monitor/)
 - [OpenShift project resource quotas](/openshift-project-resource-quotas/)
@@ -41,6 +42,7 @@ Related links:
 - [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 
 Related resources:
+
 - [Sysdig Monitor](https://docs.sysdig.com/en/sysdig-monitor.html)
 - [Sysdig Monitor Dashboards](https://docs.sysdig.com/en/dashboards.html)
 - [Sysdig Alerts](https://docs.sysdig.com/en/alerts.html)

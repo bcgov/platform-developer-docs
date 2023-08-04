@@ -61,6 +61,7 @@ Check Rocket.Chat often to keep up with discussions and see new posts. We do our
 ---
 ---
 ## Related pages
+
 - [Steps to join Rocket.Chat](https://docs.developer.gov.bc.ca/steps-to-join-rocketchat/)
 - [Rocket.Chat channel descriptions](https://docs.developer.gov.bc.ca/rocketchat-channel-descriptions/)
 - [Get help in Rocket.Chat](https://docs.developer.gov.bc.ca/get-help-in-rocketchat/)

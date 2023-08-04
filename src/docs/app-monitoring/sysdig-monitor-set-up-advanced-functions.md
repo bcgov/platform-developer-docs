@@ -51,14 +51,17 @@ PromQL can be used in Alerts as well. The following example shows an alert for t
 Sysdig has a lightweight Prometheus server (Promscrape) that can [import your application metrics endpoint into Sysdig metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/monitoring-integrations/custom-integrations/collect-prometheus-metrics/migrating-from-promscrape-v1-to-v2/#migrate-using-default-configuration).
 
 To enable Promscrape to find your application metrics, do the following:
+
 1. Make sure the application metrics endpoint is returning Prometheus metrics. To test this, you can expose the service and curl on the URL.
 1. Add the following annotations to the application pods:
+
   ```yaml
   prometheus.io/scrape: true
   prometheus.io/port: <metrics_port>
   prometheus.io/path: <metrics_path>
   # the path is usually at /metrics
   ```
+
   Don't add the annotations to the pods directly. This should be part of the infrastructure code and added in the templates. For example, if the application is using an OpenShift deployment, the annotation should be added at `deployment.spec.template.metadata.annotations`.
 
 3. Once the annotation is in place, Sysdig can scrape them. On the **Sysdig Explore** tab, look for the sysdig metrics there (Sysdig does relabeling of the metrics, so they will appear as native sysdig metrics now instead of coming from promQL Query)

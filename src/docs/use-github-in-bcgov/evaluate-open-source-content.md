@@ -31,6 +31,7 @@ For more information on approval requirements, see [Start working in the BC Gov 
 - [Security](#security)
 
 These guidelines help you make sure that there are no restrictions to using the material publicly. Restrictions may be due to one of the following concerns:
+
 - Privacy
 - Copyright
 - Legal, contractual or policy
@@ -46,6 +47,7 @@ Ministries may contact Knowledge and Information Services to assist in privacy a
 
 ## Copyright
 Make sure to meet the following requirements:
+
 - Content is created solely by B.C. government employees
 - Content is fully owned by the B.C. government and doesn't contain any third-party content. Collect copies of any contracts related to the content for review with the [Intellectual Property Program (IPP)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/intellectual-property/intellectual-property-program)
 - Content has no terms of use or exclusive licences that prohibit the Province from licensing the content on GitHub. Collect information concerning any terms of use or licences related to the content for review with the IPP
@@ -67,6 +69,7 @@ Make sure that the material has been labelled **Public**, using the [Information
 
 ---
 Related links:
+
 - [Start working in the BCGov GitHub organization](/start-working-in-bcgov-github-organization/)
 - [Intellectual Property Program (IPP)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/intellectual-property/intellectual-property-program)
 - [License your GitHub repository](/license-your-github-repository/)

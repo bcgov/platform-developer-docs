@@ -22,6 +22,7 @@ sort_order: 9
 Licences help you manage and share intellectual property for code and materials on GitHub. If you want to consume, share or contribute to anything in GitHub, you have to understand requirements associated with the relevant licence.
 
 ## On this page
+
 - [Licence guidelines](#licence-guidelines)
 - [Authority to license](#authority-to-license)
 - [Choose a licence](#choose-a-licence)
@@ -106,6 +107,7 @@ The code for the Creative Commons 4.0 footer looks like this:
     Creative Commons Attribution 4.0 International License</a>.
 ---
 Related links:
+
 - [Apache 2](https://www.apache.org/licenses/LICENSE-2.0)
 - [Creative Commons International 4.0 (CC BY)](https://creativecommons.org/licenses/by/4.0/)
 - [Open Government Licence - BC (OGL-BC)](https://www2.gov.bc.ca/gov/content/data/open-data/open-government-licence-bc)

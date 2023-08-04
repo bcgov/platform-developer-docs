@@ -25,6 +25,7 @@ All code by B.C. government teams should be open source by default. If you have 
 For more information on our GitHub organizations and their uses, see [B.C. government organizations in GitHub](/bc-government-organizations-in-github/).
 
 ## On this page
+
 - [Benefits of a GitHub Enterprise user licence](#benefits-of-a-github-enterprise-user-licence)
 - [Enterprise account ownership](#enterprise-account-ownership)
 - [Request GitHub Enterprise user licences](#request-github-enterprise-user-licences)
@@ -42,6 +43,7 @@ The GitHub Enterprise account is owned by OCIO and managed by the Platform Servi
 User licenses for accessing the private repositories come from a central pool under the GitHub Enterprise account and must be purchased for each user that needs access to the private repositories in the ministry’s private organizations.  Management of this pool of seats is done in partnership with each sector or ministry purchasing their own allocated seat count.
 
 When your private organization is linked to the GitHub Enterprise account certain settings are automatically enabled or disabled. For example, the ability to create public repositories within this private organization is removed to fall in line with all Provincial open-source code remaining in `bcgov`. Other features include the following:
+
 * Two-factor authentication is mandatory
 * GitHub Actions is enabled for all
 * Code Dependency Insights is enabled for all organizations linked to the GitHub Enterprise account
@@ -74,6 +76,7 @@ Software Central Management handles your purchase order, with billing back to yo
 
 ---
 Related links:
+
 * [BC Government Organizations in GitHub](/bc-government-organizations-in-github/)
 * [Pricing](https://github.com/pricing)
 

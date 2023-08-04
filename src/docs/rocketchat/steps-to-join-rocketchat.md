@@ -109,6 +109,7 @@ Include answers to the following questions in your email:
 ---
 ---
 ## Related pages
+
 - [Rocket.Chat etiquette](https://docs.developer.gov.bc.ca/rocketchat-etiquette/)
 - [Rocket.Chat channel descriptions](https://docs.developer.gov.bc.ca/rocketchat-channel-descriptions/)
 - [Get help in Rocket.Chat](https://docs.developer.gov.bc.ca/get-help-in-rocketchat/)

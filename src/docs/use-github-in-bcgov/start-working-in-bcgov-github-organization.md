@@ -23,11 +23,13 @@ sort_order: 8
 If you plan to share code developed by or for the B.C. government, [evaluate the content](/evaluate-open-source-content/) and get approval from your deputy minister. Deputy ministers may choose to delegate this authority to ministry chief information officers (CIOs).
 
 ## On this page
+
 - [Post existing code or projects](#post-existing-code-or-projects)
 - [Initiate new code or projects](#initiate-new-code-or-projects)
 - [Contribute to outside code or projects](#contribute-to-outside-code-or-projects)
 
 The B.C. government follows the Open Development Standard, which outlines the following:
+
 * [Minimum content requirements](/required-pages-for-github-repository/): README, contributing file, code of conduct and license
 * Roles and responsibilities
 * Basic mechanics of working in GitHub
@@ -86,6 +88,7 @@ Employees can also contribute to non-B.C. government owned intellectual property
 
 ---
 Related links:
+
 * [Evaluate the content](/evaluate-open-source-content/)
 * [Required pages for a GitHub repository](/required-pages-for-github-repository/)
 * [License your GitHub repository](/license-your-github-repository/)

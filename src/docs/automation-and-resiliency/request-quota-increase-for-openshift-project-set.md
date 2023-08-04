@@ -51,6 +51,7 @@ If you need more resources for CPU, RAM or storage in any of the four namespaces
 The Platform Services team needs to know if your application is using the current quotas efficiently. If you're running out of quota, the team wants to review resource-consumption statistics. If you're preparing for an application load increase, the team wants to know the expected increase and how much growth room you still have.
 
 Use the following process:
+
 1. Collect details on what you've already tried to reduce the current resource consumption and the use cases for the quota increase.
 2. Show the Platform Services team the resource monitors you have in the namespace. The team wants to know what level the resource consumption is in your application and how efficiently it's using resources.
 
@@ -86,6 +87,7 @@ Once the quota increase request is approved, the specified namespaces are upgrad
 
 ---
 Related links:
+
 * [Resource Management Guidelines](https://github.com/BCDevOps/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
 * [Application Resource Tuning](https://github.com/BCDevOps/developer-experience/blob/master/docs/resource-tuning-recommendations.md)
 * [Get Started with Sysdig Monitoring](/sysdig-monitor-onboarding/)
