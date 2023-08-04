@@ -73,9 +73,9 @@ nav:
 plugins: 
 - techdocs-core
 
-exclude_docs:
-- drafts/
-- components/
-- hooks/
-- pages/
-- utils/
+exclude_docs: |
+  drafts/
+  components/
+  hooks/
+  pages/
+  utils/
