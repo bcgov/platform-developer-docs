@@ -60,7 +60,7 @@ You should perform the following image maintenance tasks regularly throughout th
 
 **Redeploy any externally-sourced images**, such as database images. Your pod will only pull an image once, when the pod starts. It will not be automatically updated if the pod runs uninterrupted for weeks or months. To handle this, you can use ImageSteams to automate and control the redeployment of these images. 
 
-These routine tasks are essential to ensure that you benefit from the latest security patches and bug-fixes in your images. By automating these processes, you can keep your application running smoothly and security without imposing regular toil on your team.
+These routine tasks are essential to ensure that you benefit from the latest security patches and bug-fixes in your images. By automating these processes, you can keep your application running smoothly and securely without imposing regular toil on your team.
 
 ### Quarterly and yearly updates
 Performing these tasks generally involves some manual intervention to test changes. While automation can simplify the process, you'll need to strike a balance between performing these tasks more frequently and the time required from your team members.
@@ -82,7 +82,7 @@ To assist you in this aspect, there are two scanning tools available on the plat
 
 **[RedHat Advanced Cluster Security](https://acs.developer.gov.bc.ca/login) (ACS)**: This tool allows your team to scan the running pods in your system for security vulnerabilities. By using ACS, you can receive alerts about potential security concerns as they are detected, enabling you to take prompt action to address them. 
 
-**JFrog Xray**: Built into Artifactory, this scanning tool has the capability to scan all images and other development artifacts within Artifactory, including artifacts pulled through caching repositories. Xray can identify securities issues and alert your team to these concerns, ensuring you can swiftly implement the necessary changes to mitigate any risks
+**JFrog Xray**: Built into Artifactory, this scanning tool has the capability to scan all images and other development artifacts within Artifactory, including artifacts pulled through caching repositories. Xray can identify security issues and alert your team to these concerns, ensuring you can swiftly implement the necessary changes to mitigate any risks.
 
 By utilizing these scanning tools effectively, your team can proactively address security vulnerabilities and ensure the overall security and integrity of your application and development environment. 
 
@@ -215,7 +215,7 @@ Conditions:
 Events:           <none>
 ```
 
-For more information please read the [Automatically scaling pods with the horizontal pod autoscaler](https://docs.openshift.com/container-platform/latest/nodes/pods/nodes-pods-autoscaling.html) on Red Hat's tech docs.
+For more information please read [Automatically scaling pods with the horizontal pod autoscaler](https://docs.openshift.com/container-platform/latest/nodes/pods/nodes-pods-autoscaling.html) on Red Hat's tech docs.
 
 
 ### PDBs - Pod Disruption Budgets
@@ -264,7 +264,7 @@ Events:                   <none>
 ### Databases
 Setting up databases in OpenShift requires careful consideration. They need to be configured for high availability and replication. 
 
-Refer to the provided documentation for detailed instructions on how to properly manage and maintain HA databases with these requirementsL
+Refer to the provided documentation for detailed instructions on how to properly manage and maintain HA databases with these requirements.
 * [High availability database clusters](https://docs.developer.gov.bc.ca/high-availability-database-clusters/)
 * [Open-source database technologies](https://docs.developer.gov.bc.ca/opensource-database-technologies/)
 * [Database backup best practices](https://docs.developer.gov.bc.ca/database-backup-best-practices/)
