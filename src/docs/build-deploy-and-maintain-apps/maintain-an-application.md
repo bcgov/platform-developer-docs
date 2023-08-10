@@ -80,7 +80,7 @@ In addition to the regular updates mentioned earlier, it's crucial for your team
 
 To assist you in this aspect, there are two scanning tools available on the platform:
 
-**RedHat Advanced Cluster Security (ACS)**: This tool allows your team to scan the running pods in your system for security vulnerabilities. By using ACS, you can receive alerts about potential security concerns as they are detected, enabling you to take prompt action to address them. 
+**[RedHat Advanced Cluster Security](https://acs.developer.gov.bc.ca/login) (ACS)**: This tool allows your team to scan the running pods in your system for security vulnerabilities. By using ACS, you can receive alerts about potential security concerns as they are detected, enabling you to take prompt action to address them. 
 
 **JFrog Xray**: Built into Artifactory, this scanning tool has the capability to scan all images and other development artifacts within Artifactory, including artifacts pulled through caching repositories. Xray can identify securities issues and alert your team to these concerns, ensuring you can swiftly implement the necessary changes to mitigate any risks
 
