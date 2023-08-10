@@ -21,7 +21,7 @@ sort_order: 3
 ---
 
 # Maintain an application
-Last updated: **August 8, 2023**
+Last updated: **August 10, 2023**
 
 We've covered the best practices for [building](https://docs.developer.gov.bc.ca/build-an-application/) and [deploying](https://docs.developer.gov.bc.ca/deploy-an-application/) applications. Now, let's focus on essential steps for ongoing application management in the OpenShift environment.
 
@@ -455,10 +455,10 @@ The changes and the resulting loss of expertise have a significant impact on the
 
 When a new member joins your team, they should go through a similar onboarding process as any other person joining the OpenShift platform. Along with getting familiar with the specific application(s) supported by their new team, they should also:
 
-* Attend OpenShift 101 and 201 training
-* Go through the onboarding process which can be done with your team's Product owner or by scheduling a meeting with a member of the Platform team. 
-* Join the community on Rocket.Chat, Stack Overflow and our Platform Community Meetups
-* Be granted access to all relevant namespaces, repositories and other services Remember to also update the Registry, if needed. 
+* Attend [OpenShift 101](https://cloud.gov.bc.ca/private-cloud/support-and-community/platform-training-and-resources/openshift-101/) and [OpenShift 201](https://cloud.gov.bc.ca/private-cloud/support-and-community/platform-training-and-resources/openshift-201/) training
+* Go through the [onboarding process](https://cloud.gov.bc.ca/private-cloud/our-services-in-private-cloud-paas/get-started-with-the-private-cloud-paas/) which can be done with your team's Product owner or by scheduling a meeting with a member of the Platform team. 
+* Join the community on [Rocket.Chat](https://docs.developer.gov.bc.ca/join-bc-rocket-chat/), [Stack Overflow](https://cloud.gov.bc.ca/private-cloud/join-stack-overflow-in-the-government-of-b-c/) and our [Platform Community Meetups](https://cloud.gov.bc.ca/private-cloud/support-and-community/events-in-the-bc-gov-private-cloud-paas/#platform-community-meetups-virtual)
+* [Obtain access](https://cloud.gov.bc.ca/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/) to all relevant namespaces, repositories and other services. Remember to also update the [Product Registry](https://registry.developer.gov.bc.ca/login), if needed. 
 
 ### Managing team member departures 
 
@@ -472,7 +472,7 @@ When a team member will no longer support your application, they should teach th
 
 It's important to remember that the application itself is not the only technical element of supporting the application. Consider expertise and impact your departing team member possesses about pipelines, automation or other maintenance tasks like database backups. All of these should be passed along and documented as well. 
 
-It is also important to keep the Platform Services [Product Registry](https://registry.developer.gov.bc.ca/) up to date if your product owner or technical leads change. This registry is the primary means for the Platform Services Team to find the contact details for your team when needed.```
+It is also important to keep the Platform Services [Product Registry](https://registry.developer.gov.bc.ca/) up to date if your product owner or technical leads change. This registry is the primary means for the Platform Services Team to find the contact details for your team when needed.
 
 
 ---
@@ -492,5 +492,7 @@ It is also important to keep the Platform Services [Product Registry](https://re
 - [Vault secrets management](https://docs.developer.gov.bc.ca/vault-secrets-management-service/)
 - [Kibana training application loggin](https://github.com/bcgov/devops-platform-workshops/blob/master/openshift-201/logging.md)
 - [Check application health after outage](https://docs.developer.gov.bc.ca/check-application-health-after-outage/)
+-[Building secure and reliable systems e-book](https://static.googleusercontent.com/media/sre.google/en//static/pdf/building_secure_and_reliable_systems.pdf)
+- [Deploying to OpenShift e-book](https://cloud.redhat.com/hubfs/pdfs/Deploying_to_OpenShift.pdf)
 
 
