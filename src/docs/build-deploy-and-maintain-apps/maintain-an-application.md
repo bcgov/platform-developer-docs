@@ -89,7 +89,7 @@ By utilizing these scanning tools effectively, your team can proactively address
 ### Image Backups
 In most cases, it is typically not necessary to backup images since your team should be able to rebuild any required image whenever needed.
 
-However, achieving perfection isn't always feasible, and there can be various reasons why rebuilding images at a moment's notice might not be possible.If your team hasn't been regularly rebuilding and updating images, you might encounter compatibility issues that could break your application when attempting to rebuild now.
+However, achieving perfection isn't always feasible, and there can be various reasons why rebuilding images at a moment's notice might not be possible. If your team hasn't been regularly rebuilding and updating images, you might encounter compatibility issues that could break your application when attempting to rebuild now.
 
 Additionally, certain older versions of images might no longer be available from vendors. Moreover, there could be other tasks or dependencies that prevent you from upgrading to a more recent version.
 In such situations, it becomes crucial to backup all of your required images. Storing these backups in Artifactory is appropriate because Artifactory is backed up and doesn't have automated pruning tasks that could unexpectedly remove images. 
