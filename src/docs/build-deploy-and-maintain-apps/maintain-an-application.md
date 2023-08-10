@@ -472,6 +472,7 @@ When a team member will no longer support your application, they should teach th
 
 It's important to remember that the application itself is not the only technical element of supporting the application. Consider expertise and impact your departing team member possesses about pipelines, automation or other maintenance tasks like database backups. All of these should be passed along and documented as well. 
 
+It is also important to keep the Platform Services [Product Registry](https://registry.developer.gov.bc.ca/) up to date if your product owner or technical leads change. This registry is the primary means for the Platform Services Team to find the contact details for your team when needed.```
 
 
 ---
