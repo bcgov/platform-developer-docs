@@ -104,7 +104,7 @@ OpenShift and Kubernetes, in general, are dynamic systems. They aren't suited fo
 
 Your application's ecosystem should be able to handle unexpected loss of running pods, and therefore strategies need to be in place to continuously check deployment processes and fault tolerance.
 
-Through this reliability  and resiliency section you will find: 
+Through this reliability and resiliency section you will find: 
 
 * [Horizontal Pod Autoscalers (HPA)](#horizontal-pod-autoscalers-hpa)
 * [PDBs - Pod Disruption Budgets](#pdbs---pod-disruption-budgets)
