@@ -406,6 +406,7 @@ Similar to network policies, keep your RoleBindings within namespaces as streaml
     * For special cases, like ServiceAccounts, create a Role and RoleBinding to grant it only the permissions that it needs to fulfill its function
 * Create separate RoleBindings for users with differing access needs.  That is, if 'User A' requires edit access and 'User B' requires only view access, create separate RoleBindings rather than give edit access to both.
 * Periodically review the RoleBindings in your namespaces.  As your team changes, remove access for those that leave.
+* Store your Roles and RoleBindings as YAML along with your other objects in your source code repo so that they can be easily re-created
 
 For service accounts, be sure to grant access only to accounts in your own namespace.  It is possible to mistakenly grant access to all accounts in the cluster!
 
