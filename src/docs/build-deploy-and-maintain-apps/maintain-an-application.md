@@ -219,9 +219,9 @@ For more information please read [Automatically scaling pods with the horizontal
 
 
 ### PDBs - Pod Disruption Budgets
-The maintenance of clusters occurs within regular business hours. It's important to note that the applications on the platform should be able to handle the sequential rotation of worker nodes.
+The maintenance of clusters occurs within regular business hours. It's important to note that the applications on the platform should be able to handle the termination of pods as worker nodes are taken offline for updates.
 
-Occasionally, this rotation might happen rapidly. If your application takes time to start up and pass all readiness and liveness probes, then a relocated pod may still be starting up and not ready for service when another of your deployment's pods is terminated, which could cause an outage of your application.  
+Occasionally, this update cycle happens rapidly. If your application takes time to start up and pass all readiness and liveness probes, then a relocated pod may still be starting up and not ready for service when another of your deployment's pods is terminated, which could cause an outage of your application.  
 
 To avoid this situation, a concept known as a "pod disruption budget" (PDB) comes into play. A pod disruption budget enables you to define the maximum number of pods that are allowed to be offline simultaneously. This ensures that the scenario described above is prevented, safeguarding the availability of your application.
 
@@ -338,6 +338,8 @@ After configuring HPAs and PDBs for your applications, test them periodically to
 **Load testing**
 
 If you need to run a load test against your application, first check with the Platform Services team to ensure that the timing and scope of the test will not impact other users of the platform.
+
+[Prepare to load test an application on OpenShift](https://docs.developer.gov.bc.ca/prepare-to-load-test-application-on-openshift/)
 
 ### CI/CD Pipeline
 Users of the platform have CI/CD pipelines using [Tekton](https://docs.developer.gov.bc.ca/deploy-an-application/#continuous-deployment-and-maintenance) (OpenShift Pipelines), [GitHub Actions](https://docs.github.com/en/actions), and [ArgoCD](https://github.com/BCDevOps/openshift-wiki/tree/master/docs/ArgoCD).
