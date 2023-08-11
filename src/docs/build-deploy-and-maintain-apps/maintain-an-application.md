@@ -223,7 +223,7 @@ The maintenance of clusters occurs within regular business hours. It's important
 
 Occasionally, this rotation might happen rapidly. If your application takes time to start up and pass all readiness and liveness probes, then a relocated pod may still be starting up and not ready for service when another of your deployment's pods is terminated, which could cause an outage of your application.  
 
-To avoid this situation, a concept known as a "pod disruption budget" (PDB) comes into play. A pod disruption budget enables you to define the minimum number of pods that are allowed to be offline simultaneously. This ensures that the scenario described above is prevented, safeguarding the availability of your application.
+To avoid this situation, a concept known as a "pod disruption budget" (PDB) comes into play. A pod disruption budget enables you to define the maximum number of pods that are allowed to be offline simultaneously. This ensures that the scenario described above is prevented, safeguarding the availability of your application.
 
 **Caution:** An improperly set up PDB has the potential to disrupt cluster maintenance operations. To support both the individuals responsible for platform maintenance and the users relying on it, it's crucial to meticulously configure your PDB. Your attention to PDB configuration is highly appreciated in order to maintain the platform's smooth functioning and user experience.
 
