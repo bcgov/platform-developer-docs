@@ -221,7 +221,7 @@ For more information please read the [Automatically scaling pods with the horizo
 ### PDBs - Pod Disruption Budgets
 The maintenance of clusters occurs within regular business hours. It's important to note that the applications on the platform should be able to handle the sequential rotation of worker nodes.
 
-Occasionally, this rotation might happen rapidly.  if your application takes time to start up and pass all readiness and liveness probes, then a relocated pod may still be starting up and not ready for service when another of your deployment's pods is terminated, which could cause an outage of your application.  
+Occasionally, this rotation might happen rapidly. If your application takes time to start up and pass all readiness and liveness probes, then a relocated pod may still be starting up and not ready for service when another of your deployment's pods is terminated, which could cause an outage of your application.  
 
 To avoid this situation, a concept known as a "pod disruption budget" (PDB) comes into play. A pod disruption budget enables you to define the minimum number of pods that are allowed to be offline simultaneously. This ensures that the scenario described above is prevented, safeguarding the availability of your application.
 
