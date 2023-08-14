@@ -315,7 +315,7 @@ In this case, you would store the volume name `pvc-02e9d855-cd63-480d-a1d7-9b638
 
 **For extra protection, copy your DB backups to an S3 bucket**
 
-For more details, see the [Restoring Backup Volumes on OpenShift](/automation-and-resiliency/netapp-backup-restore).
+For more details, see the [Restoring Backup Volumes on OpenShift](/netapp-backup-restore/).
 
 **Images**
 
