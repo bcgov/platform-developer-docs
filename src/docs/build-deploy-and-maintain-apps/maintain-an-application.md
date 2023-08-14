@@ -23,7 +23,7 @@ sort_order: 3
 # Maintain an application
 Last updated: **August 14, 2023**
 
-We've covered the best practices for [building](/src/docs/build-deploy-and-maintain-apps/build-an-application.md) and [deploying](/src/docs/build-deploy-and-maintain-apps/deploy-an-application.md) applications. Now, let's focus on essential steps for ongoing application management in the OpenShift environment.
+We've covered the best practices for [building](/build-an-application/) and [deploying](/deploy-an-application/) applications. Now, let's focus on essential steps for ongoing application management in the OpenShift environment.
 
 Here, we emphasize the importance of application maintenance to ensure smooth operations and the long-term success of your app. We'll also outline your team's responsibilities in this regard among effective communication. 
 
@@ -265,9 +265,9 @@ Events:                   <none>
 Setting up databases in OpenShift requires careful consideration. They need to be configured for high availability and replication. 
 
 Refer to the provided documentation for detailed instructions on how to properly manage and maintain HA databases with these requirements.
-* [High availability database clusters](/src/docs/database-and-api-management/high-availability-database-clusters.md)
-* [Open-source database technologies](/src/docs/database-and-api-management/opensource-database-technologies.md)
-* [Database backup best practices](/src/docs/database-and-api-management/database-backup-best-practices.md)
+* [High availability database clusters](/database-and-api-management/high-availability-database-clusters)
+* [Open-source database technologies](/database-and-api-management/opensource-database-technologies)
+* [Database backup best practices](/database-and-api-management/database-backup-best-practices)
 
 ### Recoverability
 
@@ -315,7 +315,7 @@ In this case, you would store the volume name `pvc-02e9d855-cd63-480d-a1d7-9b638
 
 **For extra protection, copy your DB backups to an S3 bucket**
 
-For more details, see the [Restoring Backup Volumes on OpenShift](https://docs.developer.gov.bc.ca/netapp-backup-restore/).
+For more details, see the [Restoring Backup Volumes on OpenShift](/automation-and-resiliency/netapp-backup-restore).
 
 **Images**
 
@@ -339,10 +339,10 @@ After configuring HPAs and PDBs for your applications, test them periodically to
 
 If you need to run a load test against your application, first check with the Platform Services team to ensure that the timing and scope of the test will not impact other users of the platform.
 
-[Prepare to load test an application on OpenShift](https://docs.developer.gov.bc.ca/prepare-to-load-test-application-on-openshift/)
+[Prepare to load test an application on OpenShift](/automation-and-resiliency/prepare-to-load-test-application-on-openshift)
 
 ### CI/CD Pipeline
-Users of the platform have CI/CD pipelines using [Tekton](https://docs.developer.gov.bc.ca/deploy-an-application/#continuous-deployment-and-maintenance) (OpenShift Pipelines), [GitHub Actions](https://docs.github.com/en/actions), and [ArgoCD](https://github.com/BCDevOps/openshift-wiki/tree/master/docs/ArgoCD).
+Users of the platform have CI/CD pipelines using [Tekton](/deploy-an-application/#continuous-deployment-and-maintenance) (OpenShift Pipelines), [GitHub Actions](https://docs.github.com/en/actions), and [ArgoCD](https://github.com/BCDevOps/openshift-wiki/tree/master/docs/ArgoCD).
 
 Review your pipelines from time to time.
 * Are there any resources that were manually created that should be added to your pipeline?
@@ -356,16 +356,16 @@ Application monitoring is a critical aspect of maintaining a healthy and efficie
 
 Once your application is running in OpenShift, you can use [Sysdig](https://digital.gov.bc.ca/cloud/private/products-tools/sysdig/) to monitor application healthiness and performance via Kubernetes metrics. Here are a list of steps to follow:
 
-1.  [Onboard to Sysdig](/src/docs/app-monitoring/sysdig-monitor-onboarding.md) and setup the OpenShift project set access to monitor your applications
+1.  [Onboard to Sysdig](/app-monitoring/sysdig-monitor-onboarding) and setup the OpenShift project set access to monitor your applications
 2. [Create Sysdig monitoring dashboards](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/) to gather important application metrics such as resource utilization and service Golden Signals
-3. Merely having a monitoring dashboard isn't sufficient since you won't be actively checking it throughout the day. Instead, it's advisable to establish alerts for monitoring metrics. This approach ensures that you receive notifications when potential issues arise, allowing you to address problems in their early stages. Follow the guide on [how to setup Sysdig alerts via Rocket.Chat](/src/docs/app-monitoring/sysdig-monitor-create-alert-channels.md)
-4. You can setup comprehensive service monitoring with [PromQL in Sysdig](/src/docs/app-monitoring/sysdig-monitor-set-up-advanced-functions.md) that includes multiple metrics and complex logics for alerting. If you'd like to expose application specific metrics, here are steps on how to create [custom/user defined monitoring](/src/docs/app-monitoring/user-defined-monitoring.md)
+3. Merely having a monitoring dashboard isn't sufficient since you won't be actively checking it throughout the day. Instead, it's advisable to establish alerts for monitoring metrics. This approach ensures that you receive notifications when potential issues arise, allowing you to address problems in their early stages. Follow the guide on [how to setup Sysdig alerts via Rocket.Chat](/app-monitoring/sysdig-monitor-create-alert-channels)
+4. You can setup comprehensive service monitoring with [PromQL in Sysdig](/app-monitoring/sysdig-monitor-set-up-advanced-functions) that includes multiple metrics and complex logics for alerting. If you'd like to expose application specific metrics, here are steps on how to create [custom/user defined monitoring](/app-monitoring/user-defined-monitoring)
 
 If service availability is important to you, leverage [Uptime.com](https://uptime.com/) for uptime monitoring and public service status pages. The Platform Services Team uses it to share [the status of OpenShift clusters as well as shared services](https://status.developer.gov.bc.ca/). You can check out [the SaaS service catalog](https://digital.gov.bc.ca/cloud/saas/directory/how-to/) to explore more about Uptime.com.
 
 By setting up comprehensive monitoring and alert systems for your application, you can greatly reduce the occurrence of service downtime or disasters. Nevertheless, it's essential to understand that these measures cannot guarantee a flawless, 100% issue-free operation of the application. In the event of any problems or downtime, you have the following options:
 
-1. Refer to [this guide](/src/docs/app-monitoring/check-application-health-after-outage.md) to identify the cause of the outage,  whether it's a platform-wide problem or specific to your application.  This guide will also provide guidance on initiating the troubleshooting process for your application's issues. Moreover, consider creating a checklist for your application. This checklist should outline the essential items to review in order to confirm that everything is functioning properly following an outage.
+1. Refer to [this guide](/app-monitoring/check-application-health-after-outage/) to identify the cause of the outage,  whether it's a platform-wide problem or specific to your application.  This guide will also provide guidance on initiating the troubleshooting process for your application's issues. Moreover, consider creating a checklist for your application. This checklist should outline the essential items to review in order to confirm that everything is functioning properly following an outage.
 
 2. Utilize application logs as a valuable resource for troubleshooting. OpenShift is seamlessly integrated with Kibana, which facilitates log aggregation. Through this integration, you can gather, categorize, and visualize container logs in a centralized hub. For comprehensive training on application logging with Kibana refer to the [provided training materials](https://github.com/bcgov/devops-platform-workshops/blob/master/openshift-201/logging.md)
 
@@ -388,7 +388,7 @@ Upon creation, your namespaces are equipped with a **"deny all"** NetworkPolicy 
 
 * When creating network policies, **do not create an "allow all" policy.**
 * Allow only specific traffic that is needed.
-* For more information, see [OpenShift network policies](/src/docs/platform-architecture-reference/openshift-network-policies.md)
+* For more information, see [OpenShift network policies](/platform-architecture-reference/openshift-network-policies)
 
 Review your network policies:
 
@@ -421,14 +421,14 @@ subjects:
 ```
 If the `name` line included only `system:serviceaccounts`, then all service accounts on cluster would be given access!
 
-For more information, see [Grant user access in OpenShift](/src/docs/openshift-projects-and-access/grant-user-access-openshift.md).
+For more information, see [Grant user access in OpenShift](/openshift-projects-and-access/grant-user-access-openshift).
 
 ### Vault
 Vault employs on-disk encryption. This means that even if a malicious actor managed to obtain a copy of the filesystem contents utilized by Vault, they wouldn't be able to access any secrets unless they also possessed the master key.
 
 This provides a higher level of security compared to OpenShift secrets, which are **only encoded, not encrypted**, on disk. Additionally, secrets are encrypted during transit between Vault and your pods as they are being loaded.
 
-To learn of the other advantages of Vault and to get started with it, see [Vault secrets management](/src/docs/security-and-privacy-compliance/vault-secrets-management-service.md)
+To learn of the other advantages of Vault and to get started with it, see [Vault secrets management](/security-and-privacy-compliance/vault-secrets-management-service)
 
 ---
 ## Effective communication in application maintenance
@@ -460,7 +460,7 @@ When a new member joins your team, they should go through a similar onboarding p
 
 * Attend [OpenShift 101](https://digital.gov.bc.ca/cloud/private/support/openshift-101/) and [OpenShift 201](https://digital.gov.bc.ca/cloud/private/support/openshift-201/) training
 * Go through the [onboarding process](https://digital.gov.bc.ca/cloud/public/onboard/) which can be done with your team's Product owner or by scheduling a meeting with a member of the Platform team. 
-* Join the community on [Rocket.Chat](/src/docs/rocketchat/steps-to-join-rocketchat.md), [Stack Overflow](https://digital.gov.bc.ca/cloud/private/support/#platform) and our [Platform Community Meetups](https://digital.gov.bc.ca/cloud/private/about-us/#stay)
+* Join the community on [Rocket.Chat](/rocketchat/steps-to-join-rocketchat/), [Stack Overflow](https://digital.gov.bc.ca/cloud/private/support/#platform) and our [Platform Community Meetups](https://digital.gov.bc.ca/cloud/private/about-us/#stay)
 * [Obtain access](https://digital.gov.bc.ca/cloud/private/support/) to all relevant namespaces, repositories and other services. Please go to the section: Report and incident > Common platform requests section.  Remember to also update the [Product Registry](https://registry.developer.gov.bc.ca/login), if needed. 
 
 ### Managing team member departures 
@@ -482,20 +482,20 @@ It is also important to keep the Platform Services [Product Registry](https://re
 ---
 
 ## Related pages
-- [Build an application](/src/docs/build-deploy-and-maintain-apps/build-an-application.md)
-- [Deploy an application](/src/docs/build-deploy-and-maintain-apps/deploy-an-application.md)
-- [Rocket.Chat channel descriptions](/src/docs/rocketchat/rocketchat-channel-descriptions.md) 
+- [Build an application](/build-an-application/)
+- [Deploy an application](/deploy-an-application/)
+- [Rocket.Chat channel descriptions](/rocketchat/rocketchat-channel-descriptions) 
 - [Automatically scaling pods with the horizontal pod autoscaler](https://docs.openshift.com/container-platform/latest/nodes/pods/nodes-pods-autoscaling.html)
--  [High availability database clusters](/src/docs/database-and-api-management/high-availability-database-clusters.md)
-- [Open-source database technologies](/src/docs/database-and-api-management/opensource-database-technologies.md)
-- [Database backup best practices](/src/docs/database-and-api-management/database-backup-best-practices.md)
+-  [High availability database clusters](/database-and-api-management/high-availability-database-clusters)
+- [Open-source database technologies](/database-and-api-management/opensource-database-technologies)
+- [Database backup best practices](/database-and-api-management/database-backup-best-practices)
 - [Backup-container on GitHub](https://github.com/bcgov/backup-container)
-- [Restoring Backup Volumes on OpenShift](/src/docs/automation-and-resiliency/netapp-backup-restore.md)
-- [Grant user access in OpenShift](/src/docs/openshift-projects-and-access/grant-user-access-openshift.md)
-- [Vault secrets management](/src/docs/security-and-privacy-compliance/vault-secrets-management-service.md)
+- [Restoring Backup Volumes on OpenShift](/automation-and-resiliency/netapp-backup-restore)
+- [Grant user access in OpenShift](/openshift-projects-and-access/grant-user-access-openshift)
+- [Vault secrets management](/security-and-privacy-compliance/vault-secrets-management-service)
 - [Kibana training application loggin](https://github.com/bcgov/devops-platform-workshops/blob/master/openshift-201/logging.md)
-- [Check application health after outage](/src/docs/app-monitoring/check-application-health-after-outage.md)
--[Building secure and reliable systems e-book](https://static.googleusercontent.com/media/sre.google/en//static/pdf/building_secure_and_reliable_systems.pdf)
+- [Check application health after outage](/app-monitoring/check-application-health-after-outage)
+- [Building secure and reliable systems e-book](https://static.googleusercontent.com/media/sre.google/en//static/pdf/building_secure_and_reliable_systems.pdf)
 - [Deploying to OpenShift e-book](https://cloud.redhat.com/hubfs/pdfs/Deploying_to_OpenShift.pdf)
 
 
