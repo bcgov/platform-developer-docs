@@ -30,7 +30,6 @@ For more information on Sysdig Monitor, see [Monitoring with Sysdig](%WORDPRESS_
 - [Sign in to Sysdig](#sign-in-to-sysdig)
 - [Create Sysdig team access](#create-sysdig-team-access)
 - [Verify Sysdig team creation](#verify-sysdig-team-creation)
-- [Review your monitoring dashboards](#review-your-monitoring-dashboards)
 - [Troubleshooting](#troubleshooting)
 
 
@@ -149,19 +148,6 @@ To access them:
 - You may need to wait some time between the creation of the team and resources to display.
 
 ![Switch to the new sysdig team](../../images/sysdig-team-switch.png)
-
-
-## Review your monitoring dashboards
-
-You should see the following dashboard templates from your Sysdig team:
-- A resource dashboard template provides an overview of resource allocation for production namespace. You can make copies of it for different environments.
-
-- A series of Sysdig predefined dashboards exist for general use or to help teams create custom dashboards. Click `Dashboards`, then click `Add Dashboard` and `Create from Template` to pick a template to use.
-
-![List of default dashboard templates](../../images/sysdig-team-dashboard-templates.png)
-
-> **Note:** The Platform Services team recommends that you use the [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/) to keep your dashboards as code. Each dashboard is assigned to an account on Sysdig for ownership. If you delete the user (whether from the console or custom resource), all of the dashboards are deleted. Sysdig Cloud (SaaS) does not provide a service to retain the deleted dashboards for a user.
-
 
 ## Troubleshooting
 
