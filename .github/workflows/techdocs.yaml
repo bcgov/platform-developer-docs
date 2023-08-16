@@ -8,13 +8,9 @@ on:
       - "src/images/**"
       - "mkdocs.yml"
       - "catalog-info.yaml"
-  pull_request:
-    branches: [main]
-    paths:
-      - "src/docs/**"
-      - "src/images/**"
-      - "mkdocs.yml"
-      - "catalog-info.yaml"
+  release:
+    types: [published]
+
 jobs:
   publish-techdocs-site:
     runs-on: ubuntu-latest
@@ -64,9 +60,8 @@ jobs:
             --awsBucketRootPath $TECHDOCS_S3_DEV_ROOT_PATH
       
       - name: Publish docs to prod bucket
-        # Only publish to prod bucket on a push to main
-        # This could be changed to some other mechanism (ex: when a release is published)
-        if: ${{ github.ref == 'refs/heads/main' }}
+        # Only publish to prod bucket on a release
+        if: ${{ github.event_name == 'release' }}
         run: |
           techdocs-cli publish --publisher-type awsS3 \
             --storage-name $TECHDOCS_S3_BUCKET_NAME \
