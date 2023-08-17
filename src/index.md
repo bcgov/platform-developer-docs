@@ -15,9 +15,9 @@ Build, deploy and maintain apps
 
 Best practices on the platform.
 
-* Build an application (coming soon)
-* Deploy an application (coming soon)
-* Monitor an application (coming soon)
+* [Build an application](docs/build-deploy-and-maintain-apps/build-an-application.md)
+* [Deploy an application](docs/build-deploy-and-maintain-apps/deploy-an-application.md)
+* [Maintain an application](docs/build-deploy-and-maintain-apps/maintain-an-application.md)
 * Retire an application (coming soon)
 
 Training and learning
