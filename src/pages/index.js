@@ -259,7 +259,15 @@ const IndexPage = ({ location }) => {
               <li>
                 <Link to={"/platform-storage/"}>Platform storage</Link>
               </li>
-              <li>Platform architecture (coming soon)</li>
+              <li>
+                <Link to={"/platform-architecture-diagram/"}>Platform architecture diagram</Link>
+              </li>
+              <li>
+                <Link to={"/openshift-network-policies/"}>OpenShift network policies</Link>
+              </li>
+              <li>
+                <Link to={"/set-up-tcp-connectivity-on-private-cloud-openshift-platform/"}>Set up TCP connectivity on the Private cloud Openshift platform</Link>
+              </li>
             </ul>
           </Card>
           <Card>
