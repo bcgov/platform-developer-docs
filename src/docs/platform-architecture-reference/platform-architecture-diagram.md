@@ -41,6 +41,7 @@ This diagram serves as a valuable tool for understanding how the datacenter's re
 
  ## Related pages 
 
--  [Plaform storage](/platform-storage/)
- - [OpenShift network policies](openshift-network-policies/)
- - [Set up TCP connectivity on the Private cloud Openshift Platform](/set-up-tcp-connectivity-on-private-cloud-openshift-platform/)
+- [Plaform storage](/platform-storage/)
+- [Platform network topology](/platform-network-topology)
+- [OpenShift network policies](openshift-network-policies/)
+- [Set up TCP connectivity on the Private cloud Openshift Platform](/set-up-tcp-connectivity-on-private-cloud-openshift-platform/)

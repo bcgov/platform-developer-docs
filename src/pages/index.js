@@ -266,6 +266,9 @@ const IndexPage = ({ location }) => {
                 <Link to={"/openshift-network-policies/"}>OpenShift network policies</Link>
               </li>
               <li>
+                <Link to={"/platform-network-topology/"}>Platform network topology</Link>
+              </li>
+              <li>
                 <Link to={"/set-up-tcp-connectivity-on-private-cloud-openshift-platform/"}>Set up TCP connectivity on the Private cloud Openshift platform</Link>
               </li>
             </ul>
