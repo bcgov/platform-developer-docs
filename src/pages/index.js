@@ -182,7 +182,11 @@ const IndexPage = ({ location }) => {
                   Common platform requests in the BC Gov Private Cloud PaaS
                 </a>
               </li>
-              <li>Best practices for working in GitHub (coming soon)</li>
+              <li>
+                <Link to={"/start-working-in-bcgov-github-organization/"}>
+                  Start working in BCGov GitHub organization
+                </Link>
+              </li>
             </ul>
           </Card>
           <Card>
@@ -266,16 +270,11 @@ const IndexPage = ({ location }) => {
                 <Link to={"/openshift-network-policies/"}>OpenShift network policies</Link>
               </li>
               <li>
+                <Link to={"/platform-network-topology/"}>Platform network topology</Link>
+              </li>
+              <li>
                 <Link to={"/set-up-tcp-connectivity-on-private-cloud-openshift-platform/"}>Set up TCP connectivity on the Private cloud Openshift platform</Link>
               </li>
-            </ul>
-          </Card>
-          <Card>
-            <h3>Troubleshooting</h3>
-            <ul>
-              <li>Database issues (coming soon)</li>
-              <li>Application issues (coming soon)</li>
-              <li>Network connectivity issues (coming soon)</li>
             </ul>
           </Card>
         </Grid>
