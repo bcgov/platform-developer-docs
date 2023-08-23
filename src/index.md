@@ -6,9 +6,9 @@ Get started
 
 Start here for the first steps on working in our OpenShift environment.
 
-* [Provision a new project in OpenShift](/provision-new-openshift-project/)
-* [User access in OpenShift](/grant-user-access-openshift/)
-* [Project resource quotas](/openshift-project-resource-quotas/)
+* [Provision a new project in OpenShift](docs/openshift-projects-and-access/provision-new-openshift-project.md)
+* [User access in OpenShift](docs/openshift-projects-and-access/grant-user-access-openshift.md)
+* [Project resource quotas](docs/automation-and-resiliency/openshift-project-resource-quotas.md)
 
 Build, deploy and maintain apps
 -------------------------------
@@ -50,43 +50,43 @@ Dive deeper
 ### Security and privacy compliance
 
 * STRA and PIA for Private Cloud Platform (coming soon)
-* [Vault secrets management service](/vault-secrets-management-service/)
-* [Artifactory trusted repository service](/image-artifact-management-with-artifactory/)
-* [Security best practices for apps](/security-best-practices-for-apps/)
+* [Vault secrets management service](docs/security-and-privacy-compliance/vault-secrets-management-service.md)
+* [Artifactory trusted repository service](docs/build-deploy-and-maintain-apps/image-artifact-management-with-artifactory.md)
+* [Security best practices for apps](docs/security-and-privacy-compliance/security-best-practices-for-apps.md)
 
 ### Use GitHub in BC Gov
 
-* [BC Government organizations in GitHub](/bc-government-organizations-in-github/)
+* [BC Government organizations in GitHub](docs/use-github-in-bcgov/bc-government-organizations-in-github.md)
 * [Common platform requests in the BC Gov Private Cloud PaaS](https://cloud.gov.bc.ca/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/)
 * Best practices for working in GitHub (coming soon)
 
 ### Automation and resiliency
 
-* [App resiliency guidelines](/app-resiliency-guidelines/)
-* [CI/CD pipeline automation](/ci-cd-pipeline-templates/)
+* [App resiliency guidelines](docs/automation-and-resiliency/app-resiliency-guidelines.md)
+* [CI/CD pipeline automation](docs/automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md)
 
 ### App monitoring
 
-* [Set up a team in Sysdig Monitor](/sysdig-monitor-setup-team/)
-* [Set up advance functions in Sysdig Monitor](/sysdig-monitor-set-up-advanced-functions/)
+* [Set up a team in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-setup-team.md)
+* [Set up advance functions in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
 * Four gold signals for app monitoring (coming soon)
 * App logging (coming soon)
 
 ### Database and API management
 
-* [Open source database technologies](/opensource-database-technologies/)
-* [High availability database clusters](/high-availability-database-clusters/)
+* [Open source database technologies](docs/database-and-api-management/opensource-database-technologies.md)
+* [High availability database clusters](docs/database-and-api-management/high-availability-database-clusters.md)
 * API guidelines (coming soon)
 
 ### Reusable code and services
 
-* [Pathfinder SSO Keycloak](/reusable-services-list/#pathfinder-single-sign-on-keycloak)
-* [Reusable services list](/reusable-services-list/)
+* [Pathfinder SSO Keycloak](docs/reusable-code-and-services/reusable-services-list.md#pathfinder-single-sign-on-keycloak)
+* [Reusable services list](docs/reusable-code-and-services/reusable-services-list.md)
 * Project examples (coming soon)
 
 ### Platform architecture reference
 
-* [Platform storage](/platform-storage/)
+* [Platform storage](docs/platform-architecture-reference/platform-storage.md)
 * Platform architecture (coming soon)
 
 ### Troubleshooting
