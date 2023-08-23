@@ -125,7 +125,7 @@ When naming a team channel, make sure you include your team’s name and the top
 ---
 ## Related pages
 
-- [Steps to join Rocket.Chat](https://docs.developer.gov.bc.ca/steps-to-join-rocketchat/)
-- [Rocket.Chat etiquette](https://docs.developer.gov.bc.ca/rocketchat-etiquette/)
-- [Get help in Rocket.Chat](https://docs.developer.gov.bc.ca/get-help-in-rocketchat/)
+- [Steps to join Rocket.Chat](../rocketchat/steps-to-join-rocketchat.md)
+- [Rocket.Chat etiquette](../rocketchat/rocketchat-etiquette.md)
+- [Get help in Rocket.Chat](../rocketchat/get-help-in-rocketchat.md)
 - [Official Rocket.Chat documentation](https://docs.rocket.chat/)

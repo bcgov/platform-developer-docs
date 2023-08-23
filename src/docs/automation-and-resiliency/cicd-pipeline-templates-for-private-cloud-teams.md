@@ -67,7 +67,7 @@ If you want to contribute to a pipeline template, you can fork a repository and 
 
 ## Related training content
 
-The [OpenShift 201 training](/training-from-the-platform-services-team/) features content related to using pipelines. There is a related lab exercise and video demonstration [here](https://github.com/BCDevOps/devops-platform-workshops/blob/master/openshift-201/pipelines.md)
+The [OpenShift 201 training](../training-and-learning/training-from-the-platform-services-team.md) features content related to using pipelines. There is a related lab exercise and video demonstration [here](https://github.com/BCDevOps/devops-platform-workshops/blob/master/openshift-201/pipelines.md)
 
 ---
 Related links:

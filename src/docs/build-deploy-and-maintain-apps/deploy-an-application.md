@@ -24,7 +24,7 @@ Last updated: **July 17, 2023**
 
 Welcome to the OpenShift Application Deployment site! This page is dedicated to providing you with comprehensive insights and best practices on effectively deploying your team's application in the OpenShift platform. 
 
-We assume you already know the best practices mentioned in [Build your application](https://docs.developer.gov.bc.ca/build-an-application/) if not, make sure to check it out before continuing with this part of the guide. 
+We assume you already know the best practices mentioned in [Build your application](../build-deploy-and-maintain-apps/build-an-application.md) if not, make sure to check it out before continuing with this part of the guide. 
 
 We will cover deployment strategies, configuring resources, scaling options and important assets. 
 
@@ -65,7 +65,7 @@ In the landscape of container orchestration platforms, Red Hat's OpenShift is an
 
 Deploying applications in OpenShift involves orchestrating application images within Pods, providing network connectivity via Services, and exposing them to users through Routes, appropriate network policy. 
 
-This process works hand-in-hand with the build process, detailed in our [build an application](https://docs.developer.gov.bc.ca/build-an-application/) documentation . Following sections will dive deeper into each deployment stage.
+This process works hand-in-hand with the build process, detailed in our [build an application](../build-deploy-and-maintain-apps/build-an-application.md) documentation . Following sections will dive deeper into each deployment stage.
 
 ---
 
@@ -75,7 +75,7 @@ This process works hand-in-hand with the build process, detailed in our [build a
 
 Before deploying your application on OpenShift, it's crucial to verify a successful build of your application. A successful build will push the application's image to an image registry. 
 
-OpenShift can pull images from various sources, including [Artifactory](https://docs.developer.gov.bc.ca/image-artifact-management-with-artifactory/), [Docker.io](http://docker.io/) (Docker Hub), [Quay.io](http://quay.io/), OpenShift's integrated registry, and the RedHat image repository. 
+OpenShift can pull images from various sources, including [Artifactory](../build-deploy-and-maintain-apps/image-artifact-management-with-artifactory.md), [Docker.io](http://docker.io/) (Docker Hub), [Quay.io](http://quay.io/), OpenShift's integrated registry, and the RedHat image repository. 
 
 Ensure that you have access to the registry where your image resides. If you encounter any issues, review the build logs to diagnose the problem, make sure that the credential you have for image registry is correct or make sure the service account `image-puller` has enough access.
 
@@ -83,13 +83,13 @@ Ensure that you have access to the registry where your image resides. If you enc
 
 Every application has unique requirements for deployment. These may include environment variables, application secrets, configuration data, and database connectivity, among others. Review all these required parameters and ensure they works fine before deployment. 
 
-**Remember** that sensitive data like API keys or credentials should be stored in [vault](https://docs.developer.gov.bc.ca/vault-getting-started-guide/) in OpenShift.
+**Remember** that sensitive data like API keys or credentials should be stored in [vault](../security-and-privacy-compliance/vault-getting-started-guide.md) in OpenShift.
 
 ### 3. Ensuring the Availability of Necessary Resources in OpenShift
 
 OpenShift allows you to fine-tune resources like CPU, memory, and storage for your application's pods. Before deploying, ensure that the necessary resources are available in OpenShift. Your application should have enough resources to perform efficiently but not too much, which can be wasteful. 
 
-For guidance on resource tuning, refer to this [documentation](https://docs.developer.gov.bc.ca/application-resource-tuning/). You can also watch this [video](https://www.youtube.com/watch?v=rkxVZgn9icU&t=14s) for more explanation. Understanding and adjusting these resources according to your application's needs is a critical aspect of deployment preparation.
+For guidance on resource tuning, refer to this [documentation](../automation-and-resiliency/application-resource-tuning.md). You can also watch this [video](https://www.youtube.com/watch?v=rkxVZgn9icU&t=14s) for more explanation. Understanding and adjusting these resources according to your application's needs is a critical aspect of deployment preparation.
 
 ---
 
@@ -143,7 +143,7 @@ Choose the strategy that best meets your application's needs and expectations, c
 
 ### 3. Setting up environment variables for the application
 
-Environment variables can be defined in the `env` field of the Pod specification and can reference secrets, ConfigMaps, or just be plain text. For sensitive information, it is best to use Vault services. OpenShift can integrate with Vault to inject secrets directly into pods at runtime. This provides an extra layer of security for sensitive data. Find more information on [using Vault](https://docs.developer.gov.bc.ca/vault-secrets-management-service/).
+Environment variables can be defined in the `env` field of the Pod specification and can reference secrets, ConfigMaps, or just be plain text. For sensitive information, it is best to use Vault services. OpenShift can integrate with Vault to inject secrets directly into pods at runtime. This provides an extra layer of security for sensitive data. Find more information on [using Vault](../security-and-privacy-compliance/vault-secrets-management-service.md).
 
 ---
 
@@ -153,7 +153,7 @@ Environment variables can be defined in the `env` field of the Pod specification
 
 Network policies (NetworkPolicies) are Kubernetes resources that control the traffic between pods and networks. They use labels to select pods and define rules which specify what traffic is allowed. The aim is to provide a secure network for your applications running on OpenShift. 
 
-To give a deployment a very specific network policy is always the best practice to keep your application safe. For a detailed guide, read the [network policies](https://docs.developer.gov.bc.ca/openshift-network-policies/) documentation.
+To give a deployment a very specific network policy is always the best practice to keep your application safe. For a detailed guide, read the [network policies](../platform-architecture-reference/openshift-network-policies.md) documentation.
 
 ### 2. Exposing services using routes
 
@@ -200,9 +200,9 @@ Read here for more [disaster recover plan](https://github.com/bcgov/platform-dev
 
 ### 1. Setting up application monitoring and health checks
 
-OpenShift provides robust monitoring capabilities to ensure your application is running as expected. You can utilize services like [Sysdig](https://docs.developer.gov.bc.ca/sysdig-monitor-onboarding/) for monitoring the health and performance of your application, and [Uptime.com](https://uptime.com/) for availability monitoring.
+OpenShift provides robust monitoring capabilities to ensure your application is running as expected. You can utilize services like [Sysdig](../app-monitoring/sysdig-monitor-onboarding.md) for monitoring the health and performance of your application, and [Uptime.com](https://uptime.com/) for availability monitoring.
 
-- **Alerts**: Proactive alerting is crucial for maintaining system reliability. Alerts notify you of potential issues before they become critical problems. Sysdig provides features to create alerts based on certain conditions. Learn more about [setting up alert channels in Sysdig](https://docs.developer.gov.bc.ca/sysdig-monitor-create-alert-channels/)
+- **Alerts**: Proactive alerting is crucial for maintaining system reliability. Alerts notify you of potential issues before they become critical problems. Sysdig provides features to create alerts based on certain conditions. Learn more about [setting up alert channels in Sysdig](../app-monitoring/sysdig-monitor-create-alert-channels.md)
 
 - **Monitoring Dashboard**: Sysdig allows you to set up a monitoring dashboard for your application. Check out this [video tutorial](https://www.youtube.com/watch?v=K4rkSCSq3C4&list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg) on how to set up your Sysdig monitoring dashboard
 
@@ -252,7 +252,7 @@ OpenShift seamlessly integrates with Tekton, empowering you to create robust CI/
 
 To efficiently manage deployments across clusters, OpenShift provides ArgoCD as an operator. It follows the practice of using Git as a 'source of truth' for declarative infrastructure and applications. ArgoCD follows the best practice of using Git as the "source of truth" for declarative infrastructure and applications.
 
-Explore more about [ArgoCD](https://github.com/BCDevOps/openshift-wiki/blob/b1a4e6db91932fd3f29705a5c8ee44983abf8763/docs/ArgoCD/argocd_info.md)  along with [CI/CD pipeline templates](https://docs.developer.gov.bc.ca/ci-cd-pipeline-templates/).
+Explore more about [ArgoCD](https://github.com/BCDevOps/openshift-wiki/blob/b1a4e6db91932fd3f29705a5c8ee44983abf8763/docs/ArgoCD/argocd_info.md)  along with [CI/CD pipeline templates](../automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md).
 
 ### 2. Version Management in CD
 
@@ -262,11 +262,11 @@ OpenShift seamlessly integrates with popular version control systems, such as Gi
 
 Image tags offer a flexible reference to images that can be modified over time, facilitating efficient implementation of versioning strategies, including semantic versioning.
 
-Nevertheless, it is crucial to exercise caution when managing mutable tags. For detailed insights into best practices for image stream and tag management in OpenShift, please refer to the documentation on [best practices for manageing image streams](https://docs.developer.gov.bc.ca/best-practices-for-managing-image-streams/) .
+Nevertheless, it is crucial to exercise caution when managing mutable tags. For detailed insights into best practices for image stream and tag management in OpenShift, please refer to the documentation on [best practices for manageing image streams](../build-deploy-and-maintain-apps/imagestreams.md) .
 
 ### 3. Backup and Restoration in a CD Context
 
-Regularly [backing up your application data](https://docs.developer.gov.bc.ca/recovery-responsibilities/) is crucial for safeguarding against potential risks. In a CD context, you can automate and integrate backup processes into your deployment pipeline, ensuring that backups stay up to date with any changes made. 
+Regularly [backing up your application data](../automation-and-resiliency/namespace-recovery-and-responsibilities.md) is crucial for safeguarding against potential risks. In a CD context, you can automate and integrate backup processes into your deployment pipeline, ensuring that backups stay up to date with any changes made. 
 
 These backups serve as reliable resources for effective restoration in the event of data loss or a disaster. OpenShift offers diverse strategies for backup and restoration to cater to your specific requirements.
 
@@ -284,13 +284,13 @@ For a deep dive into persistent storage, we recommend referring to the OpenShift
 
 Persistent Volume Claims (PVCs) empower users to request storage with specific size and access mode requirements. By utilizing PVCs within your applications, you can ensure data persistence across different deployments or instances of your application. PVCs serve as a reliable mechanism for maintaining data continuity and integrity in OpenShift.
 
-A comprehensive guide on how to use PVCs in your deployments can be found on the [platform storage documentation](https://docs.developer.gov.bc.ca/platform-storage/).
+A comprehensive guide on how to use PVCs in your deployments can be found on the [platform storage documentation](../platform-architecture-reference/platform-storage.md).
 
 ### 3. Backing Up and Restoring Data
 
 Data loss is a critical issue that needs attention in any environment, including OpenShift. To address this concern, the B.C. government has developed the  `backup-container` application specifically for backing up and restoring data within OpenShift.   It's designed to provide a consistent way to back up the state of applications running in OpenShift. 
 
-You can learn more about this from the [backup-container GitHub page](https://github.com/bcgov/backup-container-compliance-enforcement). Also refer to the disastory recover documentation [Persistent volumes section](https://docs.developer.gov.bc.ca/recovery-responsibilities/#persistent-volumes) that we mentioned eariler. 
+You can learn more about this from the [backup-container GitHub page](https://github.com/bcgov/backup-container-compliance-enforcement). Also refer to the disastory recover documentation [Persistent volumes section](../automation-and-resiliency/namespace-recovery-and-responsibilities.md#persistent-volumes) that we mentioned eariler. 
 
 ---
 ## Securing the deployed application
@@ -308,7 +308,7 @@ Effective access management is a crucial aspect of securing your application, an
 
 This granular control empowers you to define and regulate who has access to what, enhancing the overall security of your application deployment in OpenShift. 
 
-For more guidance, please read this [OpenShift Access Control Guide](https://docs.developer.gov.bc.ca/grant-user-access-openshift/).
+For more guidance, please read this [OpenShift Access Control Guide](../openshift-projects-and-access/grant-user-access-openshift.md).
 
 The Registry app is a valuable tool that provides a UI for managing project access within our OpenShift Clusters. This app need IDIR authentification and can be access through [here](https://registry.developer.gov.bc.ca/).
 
@@ -341,4 +341,4 @@ Happy deploying!
 
 ## Related pages
 
-- [Build an application](https://docs.developer.gov.bc.ca/build-an-application/)
+- [Build an application](../build-deploy-and-maintain-apps/build-an-application.md)

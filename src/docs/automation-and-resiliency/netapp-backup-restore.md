@@ -30,7 +30,7 @@ It's the **only** storage class that is backed up - `netapp-file-standard` and `
 
 Don't mount the `netapp-file-backup` storage class to any production workloads. It's less stable than the other two storage classes and may cause outages. You should only use `netapp-file-backup` to store backup data, preferably by mounting it to a pod controlled by a cronjob.
 
-For more information on the storage classes, see our [Platform Storage](/platform-storage/) documentation.
+For more information on the storage classes, see our [Platform Storage](../platform-architecture-reference/platform-storage.md) documentation.
 
 ## Preparing to Restore
 

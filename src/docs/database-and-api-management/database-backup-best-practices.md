@@ -36,7 +36,7 @@ Once you've set up your recovery plan, you can apply it using one of the many [a
 
 Before we dig into the details of how to create and implement your data recovery plan, we should discuss a few terms and basics.
 
-For a quick introduction to databases in general, check out our [Open-Source Database Technologies](/opensource-database-technologies/) document. This is a great spot to get a more detailed introduction to some database-specific terminology.
+For a quick introduction to databases in general, check out our [Open-Source Database Technologies](../database-and-api-management/opensource-database-technologies.md) document. This is a great spot to get a more detailed introduction to some database-specific terminology.
 
 ### Database dumps
 
@@ -84,7 +84,7 @@ It might seem like a good idea to just skip delta backups entirely, and to run o
 
 [ ] **Where will the backups be stored?**
 
-Most teams on the OpenShift platform choose between two common defaults: an `nfs-file-backup` PVC (persistent volume claim), or an S3 bucket. You can find out more in [our Platform Storage documentation](/platform-storage/).
+Most teams on the OpenShift platform choose between two common defaults: an `nfs-file-backup` PVC (persistent volume claim), or an S3 bucket. You can find out more in [our Platform Storage documentation](../platform-architecture-reference/platform-storage.md).
 
 You should always store backup files in multiple physical locations. If some major catastrophe were to impact the physical space that houses the OpenShift cluster (like a fire or flood), you will still be able to recover your data because you have made sure to store copies of your backups in another location.
 
@@ -161,7 +161,7 @@ Your team should schedule regular tests for each of the recovery procedures you 
 
 The best way to ensure the integrity of your data is to prevent problems from occurring in the first place. Monitoring your database status can help you to prevent issues that might otherwise require database recovery.
 
-Most teams use [Sysdig](/sysdig-monitor-onboarding/) for monitoring many parts of their applications, including their databases. Full documentation on monitoring is out of the scope of this particular document, but you'll be able to find more on that in our Sysdig documentation!
+Most teams use [Sysdig](../app-monitoring/sysdig-monitor-onboarding.md) for monitoring many parts of their applications, including their databases. Full documentation on monitoring is out of the scope of this particular document, but you'll be able to find more on that in our Sysdig documentation!
 
 When setting up monitoring for your database, you should pay special attention to:
 

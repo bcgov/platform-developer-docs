@@ -35,7 +35,7 @@ When you create a repository in the `bcgov` organization, add the following mark
 - [Contribution guidelines](#contribution-guidelines)
 
 ## Licence
-Choose a licence and place a licence file in your repository before you do anything else. For important information on licences, see [License your GitHub repository](/license-your-github-repository/).
+Choose a licence and place a licence file in your repository before you do anything else. For important information on licences, see [License your GitHub repository](../use-github-in-bcgov/license-your-github-repository.md).
 
 Depending on the licence you choose, add boilerplate text for the applicable licence to your README file.
 
@@ -48,7 +48,7 @@ Make sure to include the following:
 
 - A brief description of your project
 - An overview on how to contribute to the repository with a link to your contribution guidelines
-- Depending on your licence, boilerplate text for the applicable licence. For more information, see [License your GitHub repository](/license-your-github-repository/)
+- Depending on your licence, boilerplate text for the applicable licence. For more information, see [License your GitHub repository](../use-github-in-bcgov/license-your-github-repository.md)
 - A link to your code of conduct file
 
 See a [sample README file](https://github.com/bcgov/BC-Policy-Framework-For-GitHub/blob/master/BC-Gov-Org-HowTo/SAMPLE-README.md).
@@ -73,7 +73,7 @@ See a [sample contributing file](https://github.com/bcgov/BC-Policy-Framework-Fo
 Related links:
 
 * [About READMEs](https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-readmes)
-* [License your GitHub repository](/license-your-github-repository/)
+* [License your GitHub repository](../use-github-in-bcgov/license-your-github-repository.md)
 * [Contributor Covenant](https://www.contributor-covenant.org/version/1/4/code-of-conduct/)
 * [Healthy contributions](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions)
 * [Using pull requests](https://help.github.com/articles/using-pull-requests/)

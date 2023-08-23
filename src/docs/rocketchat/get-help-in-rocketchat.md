@@ -27,7 +27,7 @@ To get support on Rocket.Chat, you need to ask questions. Including the right in
 Below, we outline the information you should include when asking for help or support from the platform community on Rocket.Chat.
 
 ## On this page
-* [**Where has the issue ocurred?**](where-has-the-issue-ocurred#)
+* [**Where has the issue ocurred?**](#where-has-the-issue-ocurred)
 * [**What are you trying to do?**](#what-are-you-trying-to-do)
 * [**What is the problem?**](#what-is-the-problem)
 * [**What have you done to fix the problem?**](#what-have-you-done-to-fix-the-problem)
@@ -82,14 +82,14 @@ If you’ve been following instructions on a StackOverflow thread, provide a lin
 What are you asking the community for? Do you want a solution to the problem? A link to documentation you can use? An alternative way to complete a task? Let the community know what kind of support you’re looking for.
 
 ## Posting a question
-Send your message in the appropriate Rocket.Chat channel and check back often to see if you’ve gotten a reply. Read the [Rocket.Chat etiquette page](https://docs.developer.gov.bc.ca/rocketchat-etiquette/) for more information on how to use Rocket.Chat, and what to do if you don’t get a satisfactory answer.
+Send your message in the appropriate Rocket.Chat channel and check back often to see if you’ve gotten a reply. Read the [Rocket.Chat etiquette page](../rocketchat/rocketchat-etiquette.md) for more information on how to use Rocket.Chat, and what to do if you don’t get a satisfactory answer.
 
 
 ---
 ---
 ## Related pages
 
-- [Steps to join Rocket.Chat](https://docs.developer.gov.bc.ca/steps-to-join-rocketchat/)
-- [Rocket.Chat etiquette](https://docs.developer.gov.bc.ca/rocketchat-etiquette/)
-- [Rocket.Chat channel descriptions](https://docs.developer.gov.bc.ca/rocketchat-channel-descriptions/)
+- [Steps to join Rocket.Chat](../rocketchat/steps-to-join-rocketchat.md)
+- [Rocket.Chat etiquette](../rocketchat/rocketchat-etiquette.md)
+- [Rocket.Chat channel descriptions](../rocketchat/rocketchat-channel-descriptions.md)
 - [Official Rocket.Chat documentation](https://docs.rocket.chat/)

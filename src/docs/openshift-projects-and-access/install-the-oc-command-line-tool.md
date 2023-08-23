@@ -38,6 +38,7 @@ Users can interact with OpenShift via the `oc` command line tool. This can be in
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ylzpex7kbKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
  
  ### Install homebrew
+ 
 1. Open Terminal 
 2. Install [homebrew](https://brew.sh/) by running this statement in your terminal: 
  
@@ -54,7 +55,7 @@ Please note, `oc version` may also return an error `'error: You must be logged i
 
 ### Test oc login
 
-1. In order to login with the `oc` command line tool, first login to the [OpenShift Web Console](https://console.apps.silver.devops.gov.bc.ca/). For instructions, see the [Login to OpenShift Web Console](/login-to-openshift) page 
+1. In order to login with the `oc` command line tool, first login to the [OpenShift Web Console](https://console.apps.silver.devops.gov.bc.ca/). For instructions, see the [Login to OpenShift Web Console](../openshift-projects-and-access/login-to-openshift.md) page 
 
 2. Click on your name at the top-right corner of the screen, and choose: Copy login command
 
@@ -76,7 +77,7 @@ To ensure compatibility as features change, please update your `oc` command line
 
 ### Install wsl 
 
-In the [OpenShift 101 training](/training-from-the-platform-services-team/), we suggest that new users install Windows Subsystem for Linux (WSL) first, and then install `oc` within `WSL` using [homebrew](https://brew.sh/). This is to maintain direct compatibility between the commands used across operating systems. 
+In the [OpenShift 101 training](../training-and-learning/training-from-the-platform-services-team.md), we suggest that new users install Windows Subsystem for Linux (WSL) first, and then install `oc` within `WSL` using [homebrew](https://brew.sh/). This is to maintain direct compatibility between the commands used across operating systems. 
 
 1. Open PowerShell or Windows Command Prompt in administrator mode by right-clicking and selecting "Run as administrator"
 
@@ -106,7 +107,7 @@ Please note, `oc version` may also return an error `'error: You must be logged i
 
 ### Test oc login
 
-1. In order to login with the `oc` command line tool, first login to the [OpenShift Web Console](https://console.apps.silver.devops.gov.bc.ca/). For instructions, see the [Login to OpenShift Web Console](/login-to-openshift) page 
+1. In order to login with the `oc` command line tool, first login to the [OpenShift Web Console](https://console.apps.silver.devops.gov.bc.ca/). For instructions, see the [Login to OpenShift Web Console](../openshift-projects-and-access/login-to-openshift.md) page 
 
 2. Click on your name at the top-right corner of the screen, and choose: Copy login command
 
@@ -135,7 +136,7 @@ If you can't install `oc` locally, you may wish to use the OpenShift web termina
 ## Related pages
 
 - [Homebrew](https://brew.sh/)
-- [Login to OpensShift Web Console](/login-to-openshift/) 
+- [Login to OpensShift Web Console](../openshift-projects-and-access/login-to-openshift.md) 
 - [OpenShift Web Terminal - Redhat](https://docs.openshift.com/container-platform/4.13/web_console/web_terminal/odc-using-web-terminal.html)
 - [Installing the OpenShift CLI by using the web console](https://docs.openshift.com/container-platform/4.12/cli_reference/openshift_cli/getting-started-cli.html#cli-installing-cli-web-console_cli-developer-commands)
 

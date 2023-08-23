@@ -30,7 +30,7 @@ Still, it's always possible that an outage affects the platform and brings down 
 - [Check your application](#check-your-application)
 - [Keep track of recovery steps](#keep-track-of-recovery-steps)
 
-These guidelines assume that you built your application in a cloud-native, highly resilient manner that makes effective use of the strengths of the OpenShift platform. Make sure you follow our [application resiliency guidelines](/app-resiliency-guidelines/). If your application is not cloud-native in its design, it won't benefit from the higher adaptability and recoverability of the platform and may need additional work to recover from a large outage.
+These guidelines assume that you built your application in a cloud-native, highly resilient manner that makes effective use of the strengths of the OpenShift platform. Make sure you follow our [application resiliency guidelines](../automation-and-resiliency/app-resiliency-guidelines.md). If your application is not cloud-native in its design, it won't benefit from the higher adaptability and recoverability of the platform and may need additional work to recover from a large outage.
 
 ## Check reporting channels
 
@@ -123,7 +123,7 @@ assignees: caggles, ShellyXueHan
 
 Related links:
 
-- [Application resiliency guidelines](/app-resiliency-guidelines/)
+- [Application resiliency guidelines](../automation-and-resiliency/app-resiliency-guidelines.md)
 - [BCGov Platform Services Status Page](https://status.developer.gov.bc.ca)
 
 ---

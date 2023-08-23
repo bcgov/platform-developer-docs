@@ -95,6 +95,6 @@ Related links:
 * [Archeobot](https://github.com/bcgov/platform-services-archeobot)
 * [Artifactory](https://artifacts.developer.gov.bc.ca)
 * [Just Ask! tool](https://just-ask.developer.gov.bc.ca/)
-* [Setup an Artifactory project and repository](/setup-artifactory-project-repository/)
+* [Setup an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md)
 
 ---

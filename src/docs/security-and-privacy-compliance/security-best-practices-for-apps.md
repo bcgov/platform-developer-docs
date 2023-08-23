@@ -184,7 +184,7 @@ Understand:
 ---
 Related links:
 
-- [Vault Secrets Management Service](/vault-secrets-management-service/)
+- [Vault Secrets Management Service](../security-and-privacy-compliance/vault-secrets-management-service.md)
 - [Linux Foundation OSS Security Badges](https://github.com/linuxfoundation/cii-best-practices-badge)
 - [Unix, PHP, Python and general programming](http://www.dwheeler.com/secure-programs/Secure-Programs-HOWTO/index.html)
 - [Java](https://www.java.com/en/security/developer-info.jsp)

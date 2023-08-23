@@ -60,8 +60,8 @@ Each dashboard is assigned to a user account on Sysdig for ownership. If the Sys
 
 ---
 ## Related pages:
-- [Set up a team in Sysdig Monitor](/sysdig-monitor-setup-team/)
-- [Set up advanced functions in Sysdig Monitor](/sysdig-monitor-set-up-advanced-functions/)
+- [Set up a team in Sysdig Monitor](../app-monitoring/sysdig-monitor-setup-team.md)
+- [Set up advanced functions in Sysdig Monitor](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
 
 ## Related resources:
 - [Sysdig Monitor](https://docs.sysdig.com/en/sysdig-monitor.html)

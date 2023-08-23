@@ -124,6 +124,6 @@ Related links:
 * [Archeobot](https://github.com/bcgov/platform-services-archeobot)
 * [Artifactory](https://artifacts.developer.gov.bc.ca)
 * [Just Ask! tool](https://just-ask.developer.gov.bc.ca/)
-* [Setup an Artifactory service account](/setup-artifactory-service-account/)
+* [Setup an Artifactory service account](../build-deploy-and-maintain-apps/setup-artifactory-service-account.md)
 
 ---

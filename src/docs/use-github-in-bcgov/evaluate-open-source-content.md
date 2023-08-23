@@ -22,7 +22,7 @@ sort_order: 5
 
 Use the following guidelines to make sure that you are able to use existing, open-source content on GitHub.
 
-For more information on approval requirements, see [Start working in the BC Gov GitHub organization](/start-working-in-bcgov-github-organization/).
+For more information on approval requirements, see [Start working in the BC Gov GitHub organization](../use-github-in-bcgov/start-working-in-bcgov-github-organization.md).
 
 ## On this page
 - [Privacy](#privacy)
@@ -51,7 +51,7 @@ Make sure to meet the following requirements:
 - Content is created solely by B.C. government employees
 - Content is fully owned by the B.C. government and doesn't contain any third-party content. Collect copies of any contracts related to the content for review with the [Intellectual Property Program (IPP)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/intellectual-property/intellectual-property-program)
 - Content has no terms of use or exclusive licences that prohibit the Province from licensing the content on GitHub. Collect information concerning any terms of use or licences related to the content for review with the IPP
-- You have [authority to license the content](/license-your-github-repository/)
+- You have [authority to license the content](../use-github-in-bcgov/license-your-github-repository.md)
 
 Ministries  **must**  contact the IPP to assist in this assessment. Any legal review or legal advice is provided by the Legal Services Branch.
 
@@ -70,9 +70,9 @@ Make sure that the material has been labelled **Public**, using the [Information
 ---
 Related links:
 
-- [Start working in the BCGov GitHub organization](/start-working-in-bcgov-github-organization/)
+- [Start working in the BCGov GitHub organization](../use-github-in-bcgov/start-working-in-bcgov-github-organization.md)
 - [Intellectual Property Program (IPP)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/intellectual-property/intellectual-property-program)
-- [License your GitHub repository](/license-your-github-repository/)
+- [License your GitHub repository](../use-github-in-bcgov/license-your-github-repository.md)
 - [Ministry Information Security Officer (MISO)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/information-security-policy-and-guidelines/role-of-miso)
 - [Information Security Classification Framework](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification)
 

@@ -26,7 +26,7 @@ There are three different resource types on the platform:
 
 Before asking for more quota for your project set, check if the application is fully using the resources and confirm that the usage is expected. Use the following information to help determine the level of resource the application needs:
 - [Resource management guidelines](https://github.com/BCDevOps/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
-- [Application resource tuning](/application-resource-tuning/)
+- [Application resource tuning](../automation-and-resiliency/application-resource-tuning.md)
 
 ## On this page
 - [Set up resource monitoring with Sysdig Monitor](#set-up-resource-monitoring-with-sysdig-monitor)
@@ -37,14 +37,14 @@ Before asking for more quota for your project set, check if the application is f
 
 Use Sysdig to monitor your application. You can access dashboards that show your application memory, CPU and storage usage.
 
-Before you ask for a quota increase, the Platform Services team wants you to monitor and collect metrics to show how much resource your application uses. For more information, see [Onboarding to application monitoring with Sysdig](/sysdig-monitor-onboarding/). The documentation has all you need to onboard onto Sysdig and use the default dashboards. If you have any issues onboarding to Sysdig, contact the Platform Services team on the applicable [Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig).
+Before you ask for a quota increase, the Platform Services team wants you to monitor and collect metrics to show how much resource your application uses. For more information, see [Onboarding to application monitoring with Sysdig](../app-monitoring/sysdig-monitor-onboarding.md). The documentation has all you need to onboard onto Sysdig and use the default dashboards. If you have any issues onboarding to Sysdig, contact the Platform Services team on the applicable [Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig).
 
 ## Request a quota increase
 **Note**: Before you request a quota increase, make sure that your project is using its resources efficiently. The Platform Services team wants to be very confident your project needs more quota before they grant an increase.
 
 If you determine that your application needs a quota increase, you can have a product owner or technical lead on your project make the request on the **Project Edit** page on the [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing). The Platform Services team must approve the request before it's processed.
 
-If you need more resources for CPU, RAM or storage in any of the four namespaces (`dev`, `test`, `tool` or `prod`), you must submit a standard quota increase request through the Platform Project Registry. For more information on quotas, see [OpenShift project resource quotas](/openshift-project-resource-quotas/).
+If you need more resources for CPU, RAM or storage in any of the four namespaces (`dev`, `test`, `tool` or `prod`), you must submit a standard quota increase request through the Platform Project Registry. For more information on quotas, see [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md).
 
 ## Collect application metrics
 
@@ -90,10 +90,10 @@ Related links:
 
 * [Resource Management Guidelines](https://github.com/BCDevOps/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
 * [Application Resource Tuning](https://github.com/BCDevOps/developer-experience/blob/master/docs/resource-tuning-recommendations.md)
-* [Get Started with Sysdig Monitoring](/sysdig-monitor-onboarding/)
+* [Get Started with Sysdig Monitoring](../app-monitoring/sysdig-monitor-onboarding.md)
 * [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 * [OpenShift 4 Project Registry](https://registry.developer.gov.bc.ca/public-landing)
-* [OpenShift project resource quotas](/openshift-project-resource-quotas/)
+* [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md)
 * [S3 Object Storage Service](https://github.com/BCDevOps/OpenShift4-Migration/issues/59)
 
 ---

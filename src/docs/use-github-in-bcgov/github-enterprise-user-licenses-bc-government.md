@@ -22,7 +22,7 @@ sort_order: 4
 
 All code by B.C. government teams should be open source by default. If you have closed-source code and still want to use GitHub, you can work temporarily in a private repository under the GitHub Enterprise licence.
 
-For more information on our GitHub organizations and their uses, see [B.C. government organizations in GitHub](/bc-government-organizations-in-github/).
+For more information on our GitHub organizations and their uses, see [B.C. government organizations in GitHub](../use-github-in-bcgov/bc-government-organizations-in-github.md).
 
 ## On this page
 
@@ -77,7 +77,7 @@ Software Central Management handles your purchase order, with billing back to yo
 ---
 Related links:
 
-* [BC Government Organizations in GitHub](/bc-government-organizations-in-github/)
+* [BC Government Organizations in GitHub](../use-github-in-bcgov/bc-government-organizations-in-github.md)
 * [Pricing](https://github.com/pricing)
 
 ---

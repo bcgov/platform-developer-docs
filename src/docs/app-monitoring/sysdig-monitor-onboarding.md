@@ -24,10 +24,10 @@ sort_order: 1
 
 ## Documents in this onboarding guide
 
-1. [Set up a team in Sysdig Monitor](/sysdig-monitor-setup-team/)
-1. [Create monitoring dashboards in Sysdig Monitor](/sysdig-monitor-create-monitoring-dashboards/)
-1. [Create alerts and notifications in Sysdig Monitor](/sysdig-monitor-create-alert-channels/)
-1. [Set up advanced metrics in Sysdig Monitor](/sysdig-monitor-set-up-advanced-functions/)
+1. [Set up a team in Sysdig Monitor](../app-monitoring/sysdig-monitor-setup-team.md)
+1. [Create monitoring dashboards in Sysdig Monitor](../app-monitoring/sysdig-monitor-create-monitoring-dashboards.md)
+1. [Create alerts and notifications in Sysdig Monitor](../app-monitoring/sysdig-monitor-create-alert-channels.md)
+1. [Set up advanced metrics in Sysdig Monitor](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
 
 If you have any questions about Sysdig or application monitoring, please contact the Platform Services team on the [#devops-sysdig Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig).
 
@@ -36,7 +36,7 @@ Related links:
 
 - [BCDevOps Sysdig Monitor Service](https://app.sysdigcloud.com/api/oauth/openid/bcdevops)
 - [Sysdig Monitor](https://sysdig.com/products/monitor/)
-- [OpenShift project resource quotas](/openshift-project-resource-quotas/)
+- [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md)
 - [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/)
 - [Monitoring with Sysdig](%WORDPRESS_BASE_URL%/private-cloud/our-products-in-the-private-cloud-paas/monitoring-with-sysdig/)
 - [Sydig User Profile](https://app.sysdigcloud.com/#/settings/user)

@@ -38,7 +38,7 @@ We follow a community-based support model, and all members of the platform commu
 
 If you need help or have a question about working on the platform, you can post a question in Rocket.Chat. Then, it can be answered by another member on the platform.
 
-If you aren’t sure what channel you should use to ask a question or share information, you can review the [channel descriptions](https://docs.developer.gov.bc.ca/rocketchat-channel-descriptions/) to find out what each channel is for. Choose the best channel for your message. If none of the channels seem suitable, you can use the #general channel to post your message.
+If you aren’t sure what channel you should use to ask a question or share information, you can review the [channel descriptions](../rocketchat/rocketchat-channel-descriptions.md) to find out what each channel is for. Choose the best channel for your message. If none of the channels seem suitable, you can use the #general channel to post your message.
 
 Typical response times in Rocket.Chat are:
 
@@ -62,7 +62,7 @@ Check Rocket.Chat often to keep up with discussions and see new posts. We do our
 ---
 ## Related pages
 
-- [Steps to join Rocket.Chat](https://docs.developer.gov.bc.ca/steps-to-join-rocketchat/)
-- [Rocket.Chat channel descriptions](https://docs.developer.gov.bc.ca/rocketchat-channel-descriptions/)
-- [Get help in Rocket.Chat](https://docs.developer.gov.bc.ca/get-help-in-rocketchat/)
+- [Steps to join Rocket.Chat](../rocketchat/steps-to-join-rocketchat.md)
+- [Rocket.Chat channel descriptions](../rocketchat/rocketchat-channel-descriptions.md)
+- [Get help in Rocket.Chat](../rocketchat/get-help-in-rocketchat.md)
 - [Official Rocket.Chat documentation](https://docs.rocket.chat/)
