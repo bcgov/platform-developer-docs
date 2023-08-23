@@ -122,6 +122,7 @@ Your applications may experience varying levels of traffic load. To handle sudde
 With HPA, you'll define the minimum number of pods (replicas) required to run and specify conditions for automatically adding more pods when needed. Keep in mind that the additional pods must still fit within your namespace's resource quotas. To ensure this, review the normal resource consumption of your Deployment or StatefulSet, and make sure that adding X number of pods won't lead to pod startup failures due to resource quotas.
 
 Requirements:
+
 * `resources` block
 * Readiness probe
 
@@ -228,6 +229,7 @@ To avoid this situation, a concept known as a "pod disruption budget" (PDB) come
 **Caution:** An improperly set up PDB has the potential to disrupt cluster maintenance operations. To support both the individuals responsible for platform maintenance and the users relying on it, it's crucial to meticulously configure your PDB. Your attention to PDB configuration is highly appreciated in order to maintain the platform's smooth functioning and user experience.
 
 A minimal PDB contains:
+
 * A selector that designates the pods requiring protection
 * The specification of the minimum count of pods that must remain available 
 
@@ -265,6 +267,7 @@ Events:                   <none>
 Setting up databases in OpenShift requires careful consideration. They need to be configured for high availability and replication. 
 
 Refer to the provided documentation for detailed instructions on how to properly manage and maintain HA databases with these requirements.
+
 * [High availability database clusters](../database-and-api-management/high-availability-database-clusters.md)
 * [Open-source database technologies](../database-and-api-management/opensource-database-technologies.md)
 * [Database backup best practices](../database-and-api-management/database-backup-best-practices.md)
@@ -329,10 +332,11 @@ Reconsider the section:  [**Maintain images**](#image-maintenance) on this docum
 
 ### Periodic HA Testing
 After configuring HPAs and PDBs for your applications, test them periodically to make sure that they work the way that you expect and that your application remains available.  If you're testing in your Test or Dev environment, make sure they're configured the same as Prod so that you can test your Prod configuration.
+
 * Delete a pod in a Deployment or StatefulSet
 * In a DB replica set, delete a secondary member
 * Delete the primary member of a DB replica set
-    * Does the application or DB remain available?
+  * Does the application or DB remain available?
 * Test your PDB by trying to delete more pods than allowed.  Does it work as expected?
 
 **Load testing**
@@ -345,6 +349,7 @@ If you need to run a load test against your application, first check with the Pl
 Users of the platform have CI/CD pipelines using [Tekton](../build-deploy-and-maintain-apps/deploy-an-application.md#continuous-deployment-and-maintenance) (OpenShift Pipelines), [GitHub Actions](https://docs.github.com/en/actions), and [ArgoCD](https://github.com/BCDevOps/openshift-wiki/tree/master/docs/ArgoCD).
 
 Review your pipelines from time to time.
+
 * Are there any resources that were manually created that should be added to your pipeline?
 * Are there Secrets that could be pulled from Vault instead of your OpenShift namespace?
 * Aside from storage recovery processes, could your entire application be restored using the pipeline?
@@ -375,9 +380,10 @@ By setting up comprehensive monitoring and alert systems for your application, y
 ## Maintain security 
 
 The OpenShift platform boasts numerous features that enhance security compared to many traditional hosting environments. Nonetheless, certain areas demand additional focus to guarantee the security of your application.  These include:
+
 * [Network Policies](#network-policies)
 * [RoleBindings](#rolebindings)
-* [Vault](#Vault)
+* [Vault](#vault)
 
 ### Network Policies
 Upon creation, your namespaces are equipped with a **"deny all"** NetworkPolicy called 'platform-services-controlled-default' by default. 
@@ -446,6 +452,7 @@ Moreover, it's advisable for all team members to remain engaged with the communi
 - Monitor [Rocket.Chat #devops-alerts channel](https://chat.developer.gov.bc.ca/channel/devops-alerts) for service alerts and status updates. Rocket.Chat serves as the main communication method for teams on the platform to get help, share knowledge and information, and build up the community. 
 
 - Take a look at [additional Platform activities and resources](https://digital.gov.bc.ca/cloud/private/about-us/) . Look under the section for StackOverflow knowledge base, and more.
+
 ---
 ## Managing impacts of personnel changes
 
@@ -482,6 +489,7 @@ It is also important to keep the Platform Services [Product Registry](https://re
 ---
 
 ## Related pages
+
 - [Build an application](../build-deploy-and-maintain-apps/build-an-application.md)
 - [Deploy an application](../build-deploy-and-maintain-apps/deploy-an-application.md)
 - [Rocket.Chat channel descriptions](../rocketchat/rocketchat-channel-descriptions.md) 
