@@ -56,7 +56,7 @@ The `bcgov` organization contains all public code repositories that hold open-so
 The `bcgov-c` organization stores temporary (up to 12 months), private repositories with closed-source code and private documents. Closed-source projects must be moved to the `bcgov` organization at the end of the 12 months. This repository is **private**.
 
 * Use this repository if you need a temporary location for code while you collect approvals to make the code public. You must commit to making the code public in the future in order to use this repository.
-* Only the Platform Services team can create repositories in this organization. You can ask them to create a repository by [submitting a request to Platform Services Team](%WORDPRESS_BASE_URL%/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/#request-a-new-github-user-access-for-bcgovc-private-org-or-to-create-a-private-repository/).
+* Only the Platform Services team can create repositories in this organization. You can ask them to create a repository by [submitting a request to Platform Services Team](https://cloud.gov.bc.ca/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/#request-a-new-github-user-access-for-bcgovc-private-org-or-to-create-a-private-repository/).
 
 Your product team can only have a **permanent**, private repository in `bcgov-c` if it is a GitOps repository with ArgoCD manifests. We strongly discourage creating permanent, private repositories in this organization.
 
@@ -90,6 +90,6 @@ Related links:
 * [Just Ask! tool](https://just-ask.developer.gov.bc.ca/)
 * [GitHub Enterprise user licences in the BC government](../use-github-in-bcgov/github-enterprise-user-licenses-bc-government.md)
 * [Remove a user's BCGov GitHub access](../use-github-in-bcgov/remove-user-bcgov-github-access.md)
-* [Common platform requests in the BC Gov Private Cloud PaaS](%WORDPRESS_BASE_URL%/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/)
+* [Common platform requests in the BC Gov Private Cloud PaaS](https://cloud.gov.bc.ca/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/)
 
 ---
