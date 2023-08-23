@@ -26,7 +26,7 @@ The platform architecture diagram provides a clear visual representation of the 
 
 This diagram serves as a valuable tool for understanding how the datacenter's resources are organized and how various services are distributed across the infrastructure:
 
-1. Head on over to the [Private cloud](//https://digital.gov.bc.ca/cloud/private/) main page
+1. Head on over to the [Private cloud](https://digital.gov.bc.ca/cloud/private/) main page
 
 2. Find the section: **Internal resources**. Please note that this section is password-restricted for private cloud resources (IDIR protected)
 
