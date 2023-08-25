@@ -52,11 +52,11 @@ Here are ten common practices for building applications in a cloud native way th
 
 6. **Learn YAML syntax**: YAML is used in OpenShift and it helps defining deployment, configurations, service definitions, etc.  Understanding YAML can propel your ability to write and modify configuration files effectively
 
-7. **Use Open Source**: Build apps in the open for example [public GitHub repo](../use-github-in-bcgov/start-working-in-bcgov-github-organization.md) and [using open source softwares](../use-github-in-bcgov/evaluate-open-source-content.md)
+7. **Use Open Source**: Build apps in the open for example [public GitHub repo](https://mvp.developer.gov.bc.ca/docs/default/component/bcdg/use-github-in-bcgov/start-working-in-bcgov-github-organization/) and [using open source softwares](https://mvp.developer.gov.bc.ca/docs/default/component/bcdg/use-github-in-bcgov/evaluate-open-source-content/)
 
 8. **Knowledge is power**: Pick modern cloud native tech stacks with community momentum, leverage the established tech community for suggestions and [reusable components](../reusable-code-and-services/reusable-services-list.md).  Also documenting knowledge base related to the application and keeping it up to date
 
-9. **Follow B.C. Government standards**: Building an application requires a design system, you can find more information about it [here](../design-system/about-the-design-system.md). Keeping with good coding practices such as consistent readable code and comments, unit testing, standard linting format, peer review process with repo branch protection among [Security best practices](../security-and-privacy-compliance/security-best-practices-for-apps.md) is vital
+9. **Follow B.C. Government standards**: Building an application requires a design system, you can find more information about it [here](https://mvp.developer.gov.bc.ca/docs/default/component/bcdg/design-system/about-the-design-system/). Keeping with good coding practices such as consistent readable code and comments, unit testing, standard linting format, peer review process with repo branch protection among [Security best practices](../security-and-privacy-compliance/security-best-practices-for-apps.md) is vital
 
 10. **Make use of good software development methodology**: For example, Agile and Scrum practice in combination with an effective development approach such as [Behaviour-Driven Development (BDD)](https://openpracticelibrary.com/practice/behavior-driven-development/) and [Test-Driven Development (TDD)](https://openpracticelibrary.com/practice/test-driven-development/)
 
