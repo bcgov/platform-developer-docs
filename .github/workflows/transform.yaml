@@ -1,0 +1,67 @@
+# This action transforms links from react/gatsby to mkdocs format
+# It uses a python script to perform the transformation.
+
+name: Update links
+
+on:
+  # Only running on pull requests, because gatsby style links should only be present when synching with fork
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  update-links:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+
+      - name: Setup python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+
+      - name: Cached pip dependencies
+        uses: actions/cache@v3
+        id: pip-cache
+        with:
+            path: ~/.cache/pip
+            key: ${{ runner.os }}-pip
+            restore-keys: |
+              ${{ runner.os }}-pip-
+        
+      - name: Install dependencies   
+        working-directory: ./.github/scripts/
+        run: |
+            python -m pip install pip-tools
+            python -m pip install -r requirements.txt
+  
+      - name: 'Configure git'
+        # From https://github.com/orgs/community/discussions/26560#discussioncomment-3531273
+        run: |
+          git config --global user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git config --global user.name "github-actions[bot]"
+
+      - name: 'Update links'    
+        run: python ./.github/scripts/link_converter ./src/docs/
+
+      - name: 'Check for changes'
+        id: check_for_changes
+        run: |
+          CHANGES=$(git status --porcelain)
+          if [ -z "$CHANGES" ]; then
+              echo "No changes"
+              echo "HAS_CHANGES=0" >> $GITHUB_OUTPUT
+          else
+              echo "Has changes"
+              echo "HAS_CHANGES=1" >> $GITHUB_OUTPUT
+          fi
+      - name: 'Commit changes'
+        if: ${{ steps.check_for_changes.outputs.HAS_CHANGES == 1 }}
+        run: |
+          git status
+          git add -A 
+          git commit -m "Updated links"
+          git push origin HEAD:${{  github.head_ref }}

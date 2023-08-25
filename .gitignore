@@ -12,3 +12,8 @@ coverage
 
 # mkdocs output directory
 site
+
+.vscode
+.pytest_cache
+.venv
+__pycache__
