@@ -393,7 +393,7 @@ Here is a summary of the GitHub organizations we own and their purposes:
 - bcgov-platform-services - git repository for platform services team
 
 These resources are available:
-- [BC Government organizations in GitHub](../use-github-in-bcgov/bc-government-organizations-in-github.md)
+- [BC Government organizations in GitHub](https://mvp.developer.gov.bc.ca/docs/default/component/bcdg/use-github-in-bcgov/bc-government-organizations-in-github/)
 
 **GitHub Apps**
 
@@ -403,7 +403,7 @@ Teams may request GitHub apps to be associated with their own or all projects in
 
 We currently use of GitHub Enterprise.  Contact the Developer Experience team for license information.
 
-- [GitHub Enterprise user licenses in the BC government](../use-github-in-bcgov/github-enterprise-user-licenses-bc-government.md)
+- [GitHub Enterprise user licenses in the BC government](https://mvp.developer.gov.bc.ca/docs/default/component/bcdg/use-github-in-bcgov/github-enterprise-user-licenses-bc-government/)
 - https://github.com/enterprises/bcgov-ent/sso
 
 ------

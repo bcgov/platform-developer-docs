@@ -18,14 +18,6 @@ nav:
   - Grant user access in OpenShift: docs/openshift-projects-and-access/grant-user-access-openshift.md
   - Log in to OpenShift Web Console: docs/openshift-projects-and-access/login-to-openshift.md
   - Install the oc command line tool: docs/openshift-projects-and-access/install-the-oc-command-line-tool.md
-- Use GitHub in BC Gov:
-  - BC Government organizations in GitHub: docs/use-github-in-bcgov/bc-government-organizations-in-github.md
-  - Remove a user's BCGov GitHub access: docs/use-github-in-bcgov/remove-user-bcgov-github-access.md
-  - GitHub Enterprise user licences in the BC government: docs/use-github-in-bcgov/github-enterprise-user-licenses-bc-government.md
-  - Evaluate open-source content: docs/use-github-in-bcgov/evaluate-open-source-content.md
-  - Required pages for a GitHub repository: docs/use-github-in-bcgov/required-pages-for-github-repository.md
-  - Start working in the BCGov GitHub organization: docs/use-github-in-bcgov/start-working-in-bcgov-github-organization.md
-  - License your GitHub repository: docs/use-github-in-bcgov/license-your-github-repository.md
 - Automation and resiliency:
   - CI/CD pipeline templates for Private Cloud teams: docs/automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md
   - Application resiliency guidelines: docs/automation-and-resiliency/app-resiliency-guidelines.md
@@ -64,13 +56,6 @@ nav:
 - Training and learning:
   - Training from the Platform Services Team: docs/training-and-learning/training-from-the-platform-services-team.md
   - External training resources: docs/training-and-learning/training-external-resources.md
-- Design system:
-  - About the design system: docs/design-system/about-the-design-system.md
-- Rocketchat:
-  - Join the B.C. Government Rocket.Chat: docs/rocketchat/steps-to-join-rocketchat.md
-  - Rocket.Chat etiquette: docs/rocketchat/rocketchat-etiquette.md
-  - Rocket.Chat channel descriptions: docs/rocketchat/rocketchat-channel-descriptions.md
-  - Get help in Rocket.Chat: docs/rocketchat/get-help-in-rocketchat.md
 
 plugins: 
 - techdocs-core

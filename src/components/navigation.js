@@ -275,9 +275,6 @@ export default function Navigation({ location }) {
                   case "database-and-api-management":
                     databaseAndApiManagement.push(node);
                     break;
-                  case "design-system":
-                    designSystem.push(node);
-                    break;
                   case "openshift-projects-and-access":
                     openshiftProjectsAndAccess.push(node);
                     break;
@@ -292,12 +289,6 @@ export default function Navigation({ location }) {
                     break;
                   case "training-and-learning":
                     trainingAndLearning.push(node);
-                    break;
-                  case "use-github-in-bcgov":
-                    useGithubInBcgov.push(node);
-                    break;
-                  case "rocketchat":
-                    rocketchat.push(node);
                     break;
                   default:
                     noCategory.push(node);
@@ -344,12 +335,6 @@ export default function Navigation({ location }) {
                       path={path}
                     />
                     <NavListItem
-                      id="use-github-in-bc-gov"
-                      title="Use GitHub in BC Gov"
-                      links={useGithubInBcgov}
-                      path={path}
-                    />
-                    <NavListItem
                       id="automation-and-resiliency"
                       title="Automation and resiliency"
                       links={automationAndResiliency}
@@ -389,18 +374,6 @@ export default function Navigation({ location }) {
                       id="training-and-learning"
                       title="Training and learning"
                       links={trainingAndLearning}
-                      path={path}
-                    />
-                    <NavListItem
-                      id="design-system"
-                      title="Design system"
-                      links={designSystem}
-                      path={path}
-                    />
-                    <NavListItem
-                      id="rocketchat"
-                      title="Rocket.Chat"
-                      links={rocketchat}
                       path={path}
                     />
                     {noCategory?.length > 0 && (

@@ -467,7 +467,7 @@ When a new member joins your team, they should go through a similar onboarding p
 
 * Attend [OpenShift 101](https://digital.gov.bc.ca/cloud/private/support/openshift-101/) and [OpenShift 201](https://digital.gov.bc.ca/cloud/private/support/openshift-201/) training
 * Go through the [onboarding process](https://digital.gov.bc.ca/cloud/public/onboard/) which can be done with your team's Product owner or by scheduling a meeting with a member of the Platform team. 
-* Join the community on [Rocket.Chat](../rocketchat/steps-to-join-rocketchat.md), [Stack Overflow](https://digital.gov.bc.ca/cloud/private/support/#platform) and our [Platform Community Meetups](https://digital.gov.bc.ca/cloud/private/about-us/#stay)
+* Join the community on [Rocket.Chat](https://mvp.developer.gov.bc.ca/docs/default/component/bcdg/rocketchat/steps-to-join-rocketchat/), [Stack Overflow](https://digital.gov.bc.ca/cloud/private/support/#platform) and our [Platform Community Meetups](https://digital.gov.bc.ca/cloud/private/about-us/#stay)
 * [Obtain access](https://digital.gov.bc.ca/cloud/private/support/) to all relevant namespaces, repositories and other services. Please go to the section: Report and incident > Common platform requests section.  Remember to also update the [Product Registry](https://registry.developer.gov.bc.ca/login), if needed. 
 
 ### Managing team member departures 
@@ -492,7 +492,7 @@ It is also important to keep the Platform Services [Product Registry](https://re
 
 - [Build an application](../build-deploy-and-maintain-apps/build-an-application.md)
 - [Deploy an application](../build-deploy-and-maintain-apps/deploy-an-application.md)
-- [Rocket.Chat channel descriptions](../rocketchat/rocketchat-channel-descriptions.md) 
+- [Rocket.Chat channel descriptions](https://mvp.developer.gov.bc.ca/docs/default/component/bcdg/rocketchat/rocketchat-channel-descriptions/) 
 - [Automatically scaling pods with the horizontal pod autoscaler](https://docs.openshift.com/container-platform/latest/nodes/pods/nodes-pods-autoscaling.html)
 -  [High availability database clusters](../database-and-api-management/high-availability-database-clusters.md)
 - [Open-source database technologies](../database-and-api-management/opensource-database-technologies.md)

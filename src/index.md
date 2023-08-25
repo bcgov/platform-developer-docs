@@ -56,7 +56,7 @@ Dive deeper
 
 ### Use GitHub in BC Gov
 
-* [BC Government organizations in GitHub](docs/use-github-in-bcgov/bc-government-organizations-in-github.md)
+* [BC Government organizations in GitHub](https://mvp.developer.gov.bc.ca/docs/default/component/bcdg/use-github-in-bcgov/bc-government-organizations-in-github/)
 * [Common platform requests in the BC Gov Private Cloud PaaS](https://cloud.gov.bc.ca/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/)
 * Best practices for working in GitHub (coming soon)
 
