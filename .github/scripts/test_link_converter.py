@@ -130,17 +130,11 @@ def test_get_filename_from_link_with_no_trailing_slash_and_anchor(slug_dict):
    assert result == "../app-monitoring/check-application-health-after-outage.md" 
 
 def test_getfilename_from_link_not_in_dict(slug_dict):
-   with pytest.raises(SystemExit) as error:
-      get_filename_from_link("/unknown-link/", slug_dict)
-   assert error.type == SystemExit
-   assert error.value.code == 1   
-
+   assert get_filename_from_link("/unknown-link/", slug_dict) is None
+   
 def test_getfilename_from_link_malformed_link(slug_dict):
-   with pytest.raises(SystemExit) as error:
-      get_filename_from_link("whatever", slug_dict)
-   assert error.type == SystemExit
-   assert error.value.code == 1   
-
+   assert get_filename_from_link("whatever", slug_dict) is None
+   
 def test_get_relative_file_path():
    with pytest.raises(SystemExit) as error:
             get_relative_file_path("") 
@@ -205,11 +199,8 @@ def test_find_and_replace_relative_links(long_content, expected_long_content, sl
 
 def test_find_and_replace_relative_links_unkowns_link(slug_dict):
    content = f"Lorem [ipsum dolor](/unknown-link/) sit consectetur adipiscing elit. Proin ac urna nec metus"
-   with pytest.raises(SystemExit) as error:
-      find_and_replace_relative_links(content, slug_dict)
-   assert error.type == SystemExit
-   assert error.value.code == 1   
-
+   assert find_and_replace_relative_links(content, slug_dict) == content
+   
 def test_find_all_absolute_links():
    content = ""
    assert len(find_all_absolute_links(content)) == 0
@@ -289,10 +280,7 @@ def test_find_and_replace_absolute_links_one_link_with_anchor(slug_dict, slugs):
 
 def test_find_and_replace_absolute_links_unkowns_link(slug_dict):
    content = f"Lorem [ipsum dolor](https://docs.developer.gov.bc.ca/unknown-link/) sit consectetur adipiscing elit. Proin ac urna nec metus"
-   with pytest.raises(SystemExit) as error:
-      find_and_replace_absolute_links(content, slug_dict)
-   assert error.type == SystemExit
-   assert error.value.code == 1   
+   assert find_and_replace_absolute_links(content, slug_dict) == content
 
 def test_find_and_replace_absolute_links(absolute_long_content, expected_long_content, slug_dict):
    updated_content = find_and_replace_absolute_links(absolute_long_content, slug_dict)

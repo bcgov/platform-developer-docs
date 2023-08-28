@@ -1,8 +1,8 @@
 import os
 import re
-import yaml
 import logging
 import sys
+from common import get_front_matter
         
 
 def get_filename_from_link(link, slug_dict):
@@ -13,10 +13,10 @@ def get_filename_from_link(link, slug_dict):
       return slug_dict[norm_link]
     else:
       logging.error(f"Could not find file in dict for {norm_link} ")
-      sys.exit(1)
+      return None
   else:
     logging.error(f"Could not get link from {link}")
-    sys.exit(1)
+    return None
   
 def append_anchor(link, file_link):
   # append anchor to file_link if an anchor existed
@@ -34,7 +34,6 @@ def replace_links(content, links_to_replace, slug_dict):
       content = content.replace(f"]({link})", f"]({file_link})")
     else:
       logging.error(f"Could not get link path for {link}")
-      sys.exit(1)
   return content
 
 def find_all_relative_links(content):
@@ -78,22 +77,6 @@ def process_directory(directory, slug_dict):
 
 def is_markdown_file(file_name):
    return file_name.endswith('.md')
-
-def get_front_matter(file_path):
-  with open(file_path, 'r') as file:
-    front_matter = {}
-    lines = file.readlines()
-
-    if lines[0].strip() == '---':
-      front_matter_lines = []
-      for line in lines[1:]:
-        if line.strip() == '---':
-          break
-        front_matter_lines.append(line)
-
-      front_matter = yaml.safe_load(''.join(front_matter_lines))
-
-  return front_matter
 
 def format_relative_file_path(file_path):
   if file_path:

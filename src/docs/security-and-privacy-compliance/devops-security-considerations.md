@@ -494,7 +494,7 @@ The platform services team provides training to onboarding teams, as well as sup
 
 **Best practices for building apps on OpenShift:**
 
-- [Private Cloud as a Service Platform Technical Documentation](/)
+- [Private Cloud as a Service Platform Technical Documentation](../../index.md)
 
 **Contact**
 For all other matters concerning security on the OpenShift Container Platform, please contact PlatformServicesTeam@gov.bc.ca.
