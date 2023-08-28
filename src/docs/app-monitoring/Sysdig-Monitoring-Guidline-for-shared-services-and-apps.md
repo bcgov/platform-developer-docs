@@ -1,5 +1,5 @@
 ---
-title: title: SRE Guideline for Platform Shared Services
+title: SRE Guideline for Platform Shared Services
 
 slug: Sysdig-monitor-setup
 
@@ -20,27 +20,24 @@ sort_order: 2
 
 ## Intro
 
-SRE stands for Site Reliability Engineering, it becomes an important concept to ensure applications' reliability by getting the system back to a steady state as quickly. We can use the software as a tool to gain full visibility into the application/system's health and be able to identify and solve the issue before it affects the application's stakeholders. 
+SRE, which stands for Site Reliability Engineering, has become an important concept to ensure an application's reliability by quickly returning the system to a steady state. Software can be used as a tool to gain full visibility into the health of an application or system, allowing us to identify and resolve issues before they impact stakeholders.
 
-
-In this documentation, we will go through the basic concept of SRE and set up an SRE for Registry application as an example.
-
+In this document, we will explore the basic concept of SRE and demonstrate how to set it up using the Registry application as an example.
 
 
 #### Registry
-The registry is an application where teams can submit requests for provisioning namespaces in OpenShift 4 (OCP4) clusters, as well as perform other tasks such as:
+The registry is an application where teams can submit requests for provisioning namespaces in OpenShift 4 (OCP4) clusters. The registry allows teams to:
 
-* Update project contact details and other metadata;
-* Request their project namespace set be created additional clusters;
-* Request other resources be provisioned such as KeyCloak realms or Artifactory pull-through repositories.
- managed by the platform services team
+- Update project contact details and other metadata;
+- Request that their project namespace be created in additional clusters;
+- Request other resources such as KeyCloak realms or Artifactory pull-through repositories; and
+- Receive management from the platform services team.
 
-
-More details of what is Registry app and how it works can be found [here](https://github.com/bcgov/platform-services-registry/blob/master/docs/Whole-project-workflow.md).
+More details about the Registry app and its workings can be found [here](https://github.com/bcgov/platform-services-registry/blob/master/docs/Whole-project-workflow.md).
 
 ### Setting up SRE
-The scope of SRE includes the deployment, configuration, and monitoring of the app, as well as the availability, latency, change management, emergency response, and capacity management of services in production. We use several essential tools: `SLO, SLA, and SLI` in SRE planning and practice, you can find google's definition for those terms [here](https://cloud.google.com/blog/products/devops-sre/sre-fundamentals-slis-slas-and-slos). And to identify those is always the first step. 
-I will use the Registry as an example to walk through this process.
+The scope of SRE encompasses the deployment, configuration, and monitoring of the app. It also covers the availability, latency, change management, emergency response, and capacity management of services in production. To ensure optimal performance and reliability, we use several tools and methodologies that align with SRE principles.
+
 
 #### SLA
 The client should be at the center of every aspect of your customer agreement. An incident may need fixing ten different issues on the back end. But from the client's perspective, the only thing that matters is that the system works as it should, and facts should be reflected in your SLAs and SLOs. Be sure to limit your promises to high-level, user-facing functionality, and always use plain language in SLAs. Based on this, we can come up with some SLA for the Registry:
@@ -195,41 +192,85 @@ If we see a high error number, we would be expecting that there may exist a logi
 
  It’s also important to define which errors are critical and which ones are less dangerous. This can help teams identify the true health of service in the eyes of a customer and take rapid action to fix frequent errors.
 
+## Importance of Monitoring and Alerting in SRE
+
+Site Reliability Engineering (SRE) emphasizes the significance of maintaining and improving the reliability, availability, and performance of applications and systems. At the heart of this discipline lies a crucial component: **monitoring and alerting**.
+
+Monitoring provides a window into the health and performance of a system in real-time. By continuously observing system metrics and logs, we can gain insights into how the system behaves under various conditions and loads. This data is invaluable not just for identifying issues but also for proactive performance tuning and capacity planning.
+
+Alerting, on the other hand, is the mechanism that notifies relevant stakeholders when something goes awry. Effective alerting ensures that potential issues are flagged and addressed promptly, often before users even notice. In the SRE world, quick response times can make the difference between a minor hiccup and a major outage.
+
+Together, monitoring and alerting form a feedback loop, enabling teams to maintain high service levels and meet their Service Level Objectives (SLOs). As we delve deeper into tools like "Uptime.com" and concepts like "Runbook", it's essential to remember the foundational role that monitoring and alerting play in ensuring the reliability and resilience of our systems.
+
 ### Sysdig dashboard
-One thing that I recommended to start with, is to leverage what someone has already built. We can always use dashboard template that been pre-build by Sysdig dashboard team. 
+One thing that I recommended to start with, is to leverage what someone has already built. We can always use dashboard template that been pre-build by Sysdig dashboard team. And here is a [demo video](https://www.youtube.com/watch?v=K4rkSCSq3C4&list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg) for how to set it up.
 ![Markdown Flow Chart](../../images/Sysdig-built-in-dashboard.png)
 
-In the dashboard library, you can find dashboard for different purpose. If you like to edit the dashboard: After select a dashboard, on the top right, you can select button __Copy to My Dashboards__ to make it your own, and update the query there. You can also click the __Star__ button on the top right corner, and next time you can find this dashboard under your faviorites dashboard.
+In the dashboard library, you can find dashboards tailored for different purposes. If you wish to edit a dashboard, select it, then click on the __Copy to My Dashboards__ button at the top right to make it your own and modify the queries as needed. If you find a particular dashboard useful, you can click on the __Star__ button in the top right corner. This will save it to your favorites, allowing you to access it quickly in the future.
 
 ![Markdown Flow Chart](../../images/favorite-dashboard.png)
 
 ### Uptime.com
 
-I also set up a transactional test for the registry, this will keep loading the dashboard page and make sure components are successfully loaded. 
-Uptime.com is able to provide the uptime/downtime of your application and the percentage of the uptime for a period of time. And it can also send out a notification to us so we can take reactions.
+#### Uptime.com: A Brief Overview
+
+[Uptime.com](https://www.uptime.com/) is a comprehensive website monitoring platform. It provides real-time insights into your website's availability, performance, and functionality. By continuously checking websites from multiple locations around the globe, Uptime.com ensures that end-users have the best possible experience.
+
+Key features of Uptime.com include:
+
+- **Availability Monitoring**: Checks if your site is accessible and notifies you immediately if it detects any downtime.
+- **Performance Monitoring**: Measures site speed, helping identify bottlenecks that could impact user experience.
+- **Domain Health Check**: Monitors SSL certificates, domain expirations, and more to ensure the health and security of your domain.
+- **Transactional Tests**: Simulates user paths and interactions on your site, ensuring critical processes like logins or shopping cart checkouts work flawlessly.
+
+By integrating tools like Uptime.com into the SRE toolkit, teams can proactively address issues, ensuring optimal user experience and meeting established Service Level Objectives (SLOs).
+
+We can set up a transactional test for the registry. This test continually loads the dashboard page to ensure all components are successfully loaded. Uptime.com provides insights into the uptime and downtime of your application and can display the percentage of uptime over a specified period. Additionally, it can send out notifications, enabling us to respond promptly.
+
+
+
 
 #### Runbook
-To achieve 99.5% of the uptime means that we only allow 7m 12s of downtime per day. And this is where RunBooks come to help. 
-In SRE, we want to automate things as much as possible. Runbooks in the context of cloud operations are a list of actions executed by SREs to complete a particular task. These jobs could involve responding to incidents, managing costs, clearing performance obstacles, and more. 
 
+Achieving 99.5% uptime means we can only afford 7m 12s of downtime per day. This is where RunBooks come in handy. In SRE, the goal is to automate as many processes as possible. Within the context of cloud operations, Runbooks are lists of actions executed by SREs to fulfill specific tasks. These tasks can range from incident responses, cost management, clearing performance hurdles, and more.
 
 ##### Runbook for Incident Response
-One of the regular responsibilities of SREs is incident response. What steps might an SRE take to address the outage? 
+
+One of the primary responsibilities of SREs is incident response. What steps might an SRE take during an outage? Here's a typical sequence:
+
 1. Trigger
 2. Troubleshooting
 3. Root cause analysis
 4. Fix
 
-Runbooks can incorporate logic (such as if-else statements and loops) and other features in addition to being merely a list of actions (e.g. waiting for a resource). It is an instruction that tells us or the automation system when SLO gets broken, what should we do to bring the system back to normal so we don't break our SLA. 
+Runbooks can have embedded logic (like if-else statements and loops) and other functionalities apart from just being a list of actions. For instance, they can include features like waiting for a resource. Essentially, a Runbook provides instructions on the actions to take or the processes for an automated system to follow when an SLO is breached. This ensures we don't violate our SLA.
 
 For a simple example: 
-* When a couple of the requests to db failed/timeout happens one or two times: 
-  - we want to run a command in our backup-container to back up whatever we currently have in our db.
-  - give primary more quota
 
-*  when dashboard load time approach to our SLO
- - we want to scale up and kill the old pod.
- - report to the dev team to check the network status
+- When there are a few requests to the database that fail or timeout:
+  - Execute a command in our backup-container to save the current data in our database.
+  - Allocate more resources to the primary service.
 
-Here's some [reference](https://www.xenonstack.com/insights/automation-runbook-for-sre) for automation runbook. Also, we are introducing [runwhen](https://www.runwhen.com/) on our platform to help you automate this process. 
+- When the dashboard load time nears our SLO:
+  - Scale up and terminate the old pod.
+  - Notify the development team to assess the network status.
+
+For more insights on automation runbooks, refer to this [source](https://www.xenonstack.com/insights/automation-runbook-for-sre). We are also introducing [runwhen](https://www.runwhen.com/) on our platform to aid in this automation process.
+
+
+
+## Wrapping Up and What's Next
+
+We've gone through a bunch of important stuff about Site Reliability Engineering (SRE) in this doc. From diving deep into monitoring to setting up tools like Uptime.com and crafting those handy Runbooks, it's all geared towards making sure our systems stay up and running smoothly.
+
+**Quick Recap**:
+- **Monitoring**: It's not just about keeping an eye on things; it's our first line of defense against issues. The sooner we spot something, the quicker we can jump on it.
+- **Alerts**: When something does go sideways, getting a heads-up ASAP makes all the difference. That's where tools like Uptime.com come into play.
+- **Tools & Tricks**: Speaking of tools, they're not just fancy add-ons. They're essential pieces of the puzzle that help us get the job done right.
+
+**Moving Forward**:
+1. **Play Around with the Tools**: If you haven't yet, get your hands dirty with the tools we talked about. You'll get a better feel for how they fit into the bigger picture.
+2. **Feedback? Bring It On**: If you try something out and it works (or doesn't), let me know on Rocketchat and we can figure it out to. The more we share, the better we get.
+3. **Stay in the Loop**: SRE's a fast-moving field. Keep an eye out for updates, new tools, and fresh techniques.
+4. **Team Up**: Got a question? Stuck on something? Reach out. We're all in this together, and two heads are often better than one.
 
