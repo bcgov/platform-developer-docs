@@ -1,7 +1,7 @@
 ---
 name: Update homepage
 about: Used when the index.js file changed updstream
-title: Update homepage - index.md file
+title: Update homepage index.md file
 labels: ''
 assignees: MonicaG, oomIRL
 
