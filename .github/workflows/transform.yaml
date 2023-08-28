@@ -1,10 +1,11 @@
 # This action transforms links from react/gatsby to mkdocs format
-# It uses a python script to perform the transformation.
+# It also generates the mkdocs yaml file
+# It uses python scripts to perform these actions.
 
 name: Update links
 
 on:
-  # Only running on pull requests, because gatsby style links should only be present when synching with fork
+  # Only running on pull requests, because links and nav changes should only happend when synching from fork
   pull_request:
     branches: [ "main" ]
 
@@ -47,6 +48,9 @@ jobs:
       - name: 'Update links'    
         run: python ./.github/scripts/link_converter ./src/docs/
 
+      - name: 'Update mkdocs yaml file'
+        run: python ./.github/scripts/mkdocs.py  ./src/docs mkdocs.yml
+
       - name: 'Check for changes'
         id: check_for_changes
         run: |
@@ -63,5 +67,5 @@ jobs:
         run: |
           git status
           git add -A 
-          git commit -m "Updated links"
+          git commit -m "Updates for use in techdocs"
           git push origin HEAD:${{  github.head_ref }}
