@@ -2,6 +2,7 @@
 
 [![Lifecycle:Experimental](https://img.shields.io/badge/Lifecycle-Experimental-339999)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 [![Package Status](https://github.com/bcgov/private-cloud-techdocs/actions/workflows/techdocs.yaml/badge.svg)](https://github.com/bcgov/private-cloud-techdocs/actions/workflows/techdocs.yaml)
+[![Transform Status](https://github.com/bcgov/private-cloud-techdocs/actions/workflows/transform.yaml/badge.svg)](https://github.com/bcgov/private-cloud-techdocs/actions/workflows/transform.yaml)
 
 
 This is a single location for all technical/developer documentation for product teams working on the Private Cloud OpenShift Platform.

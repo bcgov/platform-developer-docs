@@ -2,7 +2,7 @@
 # It also generates the mkdocs yaml file
 # It uses python scripts to perform these actions.
 
-name: Update links
+name: Transform actions to work in techdocs
 
 on:
   # Only running on pull requests, because links and nav changes should only happend when synching from fork
@@ -10,7 +10,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  update-links:
+  update-files:
     runs-on: ubuntu-latest
 
     steps:
