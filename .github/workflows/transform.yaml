@@ -53,7 +53,7 @@ jobs:
           git checkout -b $BRANCH_NAME    
 
       - name: 'Update links'    
-        run: python ./.github/scripts/link_converter ./src/docs/
+        run: python ./.github/scripts/link_converter.py ./src/docs/
 
       - name: 'Update mkdocs yaml file'
         run: python ./.github/scripts/mkdocs.py  ./src/docs mkdocs.yml
