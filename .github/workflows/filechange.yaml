@@ -1,5 +1,7 @@
 name: Check if index file changed
 
+permissions: write-all
+  
 on:
   pull_request:
     branches: [ "main" ]
@@ -9,8 +11,6 @@ jobs:
   
   check-for-changed-file:
     runs-on: ubuntu-latest     
-    permissions:
-      issues: write
 
     steps:
       - name: Checkout code
@@ -33,4 +33,4 @@ jobs:
         if: steps.changed-index-file.outputs.any_changed == 'true'
         run: gh issue create --title "Update homepage index.md file" --body "The upstream index.js file changed with PR#$PR_NUMBER. Update the [index.md](../../src/index.md) file to reflect the changes." --assignee MonicaG
         env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN_FOR_CI}}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
