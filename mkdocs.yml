@@ -48,10 +48,11 @@ nav:
 - Reusable code and services:
   - Reusable services list: docs/reusable-code-and-services/reusable-services-list.md
 - Platform architecture reference:
-  - OpenShift network policies: docs/platform-architecture-reference/openshift-network-policies.md
   - Platform storage: docs/platform-architecture-reference/platform-storage.md
-  - Set up TCP connectivity on the Private Cloud OpenShift Platform: docs/platform-architecture-reference/set-up-tcp-connectivity-on-private-cloud-openshift-platform.md
   - Platform Architecture Diagram: docs/platform-architecture-reference/platform-architecture-diagram.md
+  - OpenShift network policies: docs/platform-architecture-reference/openshift-network-policies.md
+  - Platform network topology: docs/platform-architecture-reference/platform-network-topology.md
+  - Set up TCP connectivity on the Private Cloud OpenShift Platform: docs/platform-architecture-reference/set-up-tcp-connectivity-on-private-cloud-openshift-platform.md
 - Training and learning:
   - Training from the Platform Services Team: docs/training-and-learning/training-from-the-platform-services-team.md
   - External training resources: docs/training-and-learning/training-external-resources.md
