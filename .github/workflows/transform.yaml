@@ -37,7 +37,12 @@ jobs:
         run: |
             pwd
             ls -la
-            cd ./.github/scripts/
+            cd .github/
+            pwd
+            ls -la
+            cd scripts/
+            pwd 
+            ls -la
             python -m pip install pip-tools
             python -m pip install -r requirements.txt
   
