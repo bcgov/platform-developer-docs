@@ -35,6 +35,8 @@ jobs:
         
       - name: Install dependencies   
         run: |
+            pwd
+            ls -la
             cd ./.github/scripts/
             python -m pip install pip-tools
             python -m pip install -r requirements.txt
