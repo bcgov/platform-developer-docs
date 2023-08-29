@@ -82,4 +82,4 @@ jobs:
         run: |
           gh pr create -B main -H $BRANCH_NAME --title 'Automated file updates' --body 'Created by Github action' --assignee MonicaG
         env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN_FOR_CI }}
