@@ -30,6 +30,6 @@ jobs:
 
       - name: Create issue if changed file
         if: steps.changed-index-file.outputs.any_changed == 'true'
-        run: gh issue create --title "Update file" --body "The src/pages/index.js file changed with latest push $FILE_SHA. Update the src/docs/index.md to reflect the changes." --assignee MonicaG
+        run: gh issue create --title "Update file" --body "The src/pages/index.js file changed with latest push $FILE_SHA. Update the src/index.md to reflect the changes." --assignee MonicaG
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

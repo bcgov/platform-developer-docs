@@ -8,6 +8,7 @@ on:
       - "src/images/**"
       - "mkdocs.yml"
       - "catalog-info.yaml"
+      - "src/index.md"
   release:
     types: [published]
 
