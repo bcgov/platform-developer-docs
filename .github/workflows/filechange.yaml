@@ -27,10 +27,8 @@ jobs:
         id: pr_number
         run: echo "PR_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
 
-      - name: Create issue if index.md changed
+      - name: Create issue if changed file
         if: steps.changed-index-file.outputs.any_changed == 'true'
-        uses: JasonEtco/create-an-issue@v2
+        run: gh issue create --title "Update homepage index.md file" --body "The upstream index.js file changed with PR#$PR_NUMBER. Update the [index.md](../../src/index.md) file to reflect the changes." --assignee MonicaG,oomIRL
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          filename: .github/ISSUE_TEMPLATE/homepage_changed.md
