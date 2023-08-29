@@ -15,7 +15,7 @@ author: Jonathan Bond
 
 content_owner: Olena Mitovska
 
-sort_order: 3
+sort_order: 1
 ---
 
 # Platform storage
