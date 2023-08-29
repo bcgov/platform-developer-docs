@@ -3,9 +3,11 @@ name: Check if index file changed
 permissions: write-all
   
 on:
-  pull_request:
+  pull_request_target:
+    types:
+      - opened
     branches: [ "main" ]
-    types: [opened]
+
 
 jobs:
   
