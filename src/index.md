@@ -58,7 +58,7 @@ Dive deeper
 
 * [BC Government organizations in GitHub](https://mvp.developer.gov.bc.ca/docs/default/component/bcdg/use-github-in-bcgov/bc-government-organizations-in-github/)
 * [Common platform requests in the BC Gov Private Cloud PaaS](https://cloud.gov.bc.ca/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/)
-* Best practices for working in GitHub (coming soon)
+* [Start working in BCGov GitHub organization](https://mvp.developer.gov.bc.ca/docs/default/component/bcdg/use-github-in-bcgov/start-working-in-bcgov-github-organization/)
 
 ### Automation and resiliency
 
@@ -89,11 +89,6 @@ Dive deeper
 * [Platform storage](docs/platform-architecture-reference/platform-storage.md)
 * Platform architecture (coming soon)
 
-### Troubleshooting
-
-* Database issues (coming soon)
-* Application issues (coming soon)
-* Network connectivity issues (coming soon)
 
 Get support on the platform
 ---------------------------
