@@ -5,9 +5,10 @@
 name: Transform actions to work in techdocs
 
 on:
-  # Only running on pull requests, because links and nav changes should only happend when synching from fork
   push:
     branches: [ "main" ]
+    paths:
+      - "src/docs/**"
 
 jobs:
   update-files:
