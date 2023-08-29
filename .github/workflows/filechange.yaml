@@ -1,9 +1,8 @@
 name: Check if index file changed
 
 on:
-  pull_request:
+  push:
     branches: [ "main" ]
-    types: [opened]
 
 jobs:
   
@@ -22,22 +21,15 @@ jobs:
         with:
           files: src/pages/index.js
       
-      - name: Set PR Number
+      - name: Get commit
         if: steps.changed-index-file.outputs.any_changed == 'true'
-        id: pr_number
-        run: echo "PR_NUMBER=${{ github.event.pull_request.number }}" >> $GITHUB_ENV
+        id: commit_sha
+        run: |
+          LAST_COMMIT_SHA=$(git log -n 1 --pretty=format:%H -- src/pages/index.js)
+          echo "FILE_SHA=$LAST_COMMIT_SHA" >> $GITHUB_ENV
 
-      - name: 'Create Pull Request'
-        if: ${{ steps.changed-index-file.outputs.any_changed == 'true' }}
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.ACCESS_TOKEN_FOR_CI }}
-          script: |
-            const { PR_NUMBER } = process.env
-            await github.rest.issues.create({
-            owner: context.repo.owner,
-            repo: context.repo.repo,
-            assignee: 'MonicaG',
-            title: "File changed",
-            body: `The upstream index.js file changed with PR #${PR_NUMBER} Update the index.md file to reflect the changes`
-            });
+      - name: Create issue if changed file
+        if: steps.changed-index-file.outputs.any_changed == 'true'
+        run: gh issue create --title "Update file" --body "The file changed with latest push $FILE_SHA. Update the other file to reflect the changes." --assignee MonicaG
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
