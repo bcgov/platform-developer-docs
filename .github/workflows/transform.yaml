@@ -4,13 +4,13 @@
 
 name: Transform actions to work in techdocs
 
-permissions: write-all
-
 on:
   push:
     branches: [ "main" ]
     paths:
       - "src/docs/**"
+      
+permissions: write-all
 
 jobs:
   update-files:
