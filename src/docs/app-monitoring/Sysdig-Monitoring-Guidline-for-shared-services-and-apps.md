@@ -25,15 +25,16 @@ SRE, which stands for Site Reliability Engineering, has become an important conc
 In this document, we will explore the basic concept of SRE and demonstrate how to set it up using the Registry application as an example.
 
 
-#### Registry
+#### BC Platform Services Product Registry(Regsitry)
 The registry is an application where teams can submit requests for provisioning namespaces in OpenShift 4 (OCP4) clusters. The registry allows teams to:
 
-- Update project contact details and other metadata;
-- Request that their project namespace be created in additional clusters;
-- Request other resources such as KeyCloak realms or Artifactory pull-through repositories; and
-- Receive management from the platform services team.
+- Request the creation of a project namespace in disered clusters;
+- Update project contact details, resources quota and other metadata;
+- Request other resources access such as ACS, Vault, and Artifactory repositories; 
+- Have project sets managed and overseen by the platform services team and AG
 
-More details about the Registry app and its workings can be found [here](https://github.com/bcgov/platform-services-registry/blob/master/docs/Whole-project-workflow.md).
+The tech stack for the registry comprises a React front-end, a Node.js backend, a MongoDB database, and an automation tool named "Provisioner."
+![Registry Flow Chart](../../images/registry-app-structure.png) 
 
 ### Setting up SRE
 The scope of SRE encompasses the deployment, configuration, and monitoring of the app. It also covers the availability, latency, change management, emergency response, and capacity management of services in production. To ensure optimal performance and reliability, we use several tools and methodologies that align with SRE principles.
@@ -50,31 +51,62 @@ The client should be at the center of every aspect of your customer agreement. A
 
 
 #### SLO 
-The definition of s SLO is a service level objective: a target value or range of values for a service level that is measured by an SLI. Google has a really [good doc](https://sre.google/workbook/implementing-slos/#:~:text=For%20example%2C%20if%20you%20have,50%25%20of%20the%20error%20budget.) for how to gets the start.
+The definition of s SLO is a service level objective: a target value or range of values for a service level that is measured by an SLI. Google has a really [good doc](https://sre.google/workbook/implementing-slos/#:~:text=For%20example%2C%20if%20you%20have,50%25%20of%20the%20error%20budget.) for how to gets the start. I will also covers a bit more for how to calculate Error Budge in the End of this documentation.
+
 what you want to promise your customers is deciding how reliable you want your service to depend on what your customers expect. For example, if your SLA states that your customers will receive a response to each request they make in 300 milliseconds, then perhaps your SLO should state that the response will be returned in 200 milliseconds. Choosing an appropriate SLO is hard. Once we have SLA that we know can make our users happy, SLO is like the bottom line of our promise. Therefore, it is in our best interest to catch an issue before it beaches our SLA so that you have time to fix it. And this promise often comes up with consequences if we break it. Again, I will use the Registry as an example and the period is for each month:
 
 
-* Retrieving all product information from DB should be less than 8 sec. 
-* Retrieving 30 product information from DB should be less than 2 sec. 
+* Retrieving all products information on dashboard should be less than 5 sec. 
+* Retrieving 30 products information on dashboard should be less than 2 sec. 
 * Web, API, and DB should be up 99.5% of the time
-* DB should have a backup every 30 mins
-* Provisioner jobs can be completed within 40 mins
-
+* DB should have a backup every 30 min)
+* Automation jobs for OCP Project Set change requests jobs can be completed within 40 mins
 
 The reason for breaking those objects or booking maintenance windows needs to be announced in [#internal-devops-registry](https://chat.developer.gov.bc.ca/group/internal-devops-registry). 
 
+**The frequency of backups** (e.g., every 30 minutes) relates directly to a system's Recovery Point Objective (RPO), which is a key metric in disaster recovery and business continuity planning. **RPO** defines the maximum acceptable amount of data loss measured in time. It answers the question: "How much data can we afford to lose before it impacts business operations?". The reason that I setit up for 30 mins is becuase of the unique of Registry app. Registry will "Backup" most of its important data in github repos, and the time for provisioner to process each request is normally less than 30 minutes. 
+
+**Why is this Important?**
+Determining an appropriate RPO is crucial for business continuity planning. If data is lost:
+
+* *With a 30-minute RPO*: The team can restore data up to the point of the last backup, which would be a maximum of 30 minutes prior to the incident.
+* *Without a defined RPO (or with infrequent backups)*: The team risks significant data loss, which could have severe business implications, from financial losses to reputational damage.
+
+A backup every 30 minutes matches an RPO of 30 minutes. This would be suitable for systems where up to 30 minutes of data loss is acceptable in the event of a disaster. Determining the right RPO (and thus backup frequency) should be based on business needs and the potential impact of data loss.
+
 #### SLIs
 
-SLI golden signals include request latency, availability, error rate, and system throughput. Those matrices define what it means for the system to be “healthy”. 
+SLI golden signals include request latency, availability, error rate, and system throughput. Those matrices define what it means for the system to be “healthy”. and Understanding the relationship and distinction between SLIs,SLOs, and SLAs is crucial.
+
+While there are numerous methods to quantify an SLI, each offers its unique advantages and limitations. These methods are often referred to as SLI Implementations. To illustrate, let's consider the metric of page-loading time. This SLI could be implemented through various means, such as:
+
+* Utilizing the latency field within the application server's request log.
+* Leveraging metrics provided directly by the application server.
+* Extracting metrics from a load balancer positioned ahead of the application servers.
+* Deploying a black-box monitoring service that  tests how long our system takes to respond.
+* Using code in the user's web browser that tells us how fast the page loaded for them.
 
 The registry has the following monitoring standards built based on those four aspects.
 
-* Number of successful HTTP requests / total HTTP requests (success rate) should be greater than 99.99%
-* The response time per request should be less than 300ms
-* Web and API resources utilization (used/requested) should be less than 80%
+**1.Dashboard Load Time for Normal Users:**
+  * **SLI**: 99.8% of the product entries retrieved from the registry will be accurate and up-to-date.
+  * **Reason**: Accurate data is vital for users and systems relying on the registry. Ensuring the highest data accuracy minimizes errors and ensures trust in the system.
+**2.Response Time for Data Retrieval::**
+  * **SLI**: 99.5% of data retrieval requests from the registry will be completed in less than 500ms.
+  * **Reason**: Users expect a snappy response when querying the registry. A fast retrieval ensures user satisfaction and efficient downstream operations.
+**3.Dashboard Load Time for Normal Users:**
+  * **SLI**: 98% of approved product provisioning requests will be successfully processed without errors.
+  * **Reason**:  Users rely on the system to provision products seamlessly. A high success rate ensures the reliability of the registry's provisioning functionality.
 
+and etc.
 
-Sysdig and Uptime.com are some tools that I use to get SLI metrics for the Registry
+**Performance Monitoring Tools:** Tools like Prometheus, Grafana, or New Relic can be used to continuously monitor and visualize system performance metrics, including response times.
+
+**Logging**: Ensure that the Application system logs the time taken for each data retrieval request. Analyze these logs periodically or use log aggregation tools like ELK Stack (Kibana, Logstash, and etc) to get insights.
+
+**Threshold Alerts**: Set up alerts to notify system administrators or engineers when response times exceed the threshold.
+
+As for the Registry, Sysdig and Uptime.com are tools that I use to get SLI metrics and setup Alert.
 
 ### Resources monitoring with Sysdig (Saturation)
 
@@ -84,9 +116,8 @@ We monitor resources from CPU, ram, and storage.
 
 #### Using PromQL
 
-The Prometheus Query Language (PromQL) is the standard for querying Prometheus metric data. PromQL is designed to allow the user to select and aggregate time-series data. And building a dashboard in Sysdig is heavily reliant on PromQL. The PromQL language is documented at [Prometheus Query Basics](https://prometheus.io/docs/prometheus/latest/querying/basics/).
+The Prometheus Query Language (PromQL) is the standard for querying Prometheus metric data. PromQL is designed to allow the user to select and aggregate time-series data. And building a dashboard in Sysdig is heavily reliant on PromQL. The PromQL language is documented at [Prometheus Query Basics](https://prometheus.io/docs/prometheus/latest/querying/basics/). To start monitroing with Sysdig, please read [this documentation.](https://docs.developer.gov.bc.ca/sysdig-monitor-setup-team/)
 
-### Team Scope
 
 #### CPU:
 
@@ -204,7 +235,7 @@ Together, monitoring and alerting form a feedback loop, enabling teams to mainta
 
 ### Sysdig dashboard
 One thing that I recommended to start with, is to leverage what someone has already built. We can always use dashboard template that been pre-build by Sysdig dashboard team. And here is a [demo video](https://www.youtube.com/watch?v=K4rkSCSq3C4&list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg) for how to set it up.
-![Markdown Flow Chart](../../images/Sysdig-built-in-dashboard.png)
+![Sysdig dashboard Flow Chart](../../images/Sysdig-built-in-dashboard.png)
 
 In the dashboard library, you can find dashboards tailored for different purposes. If you wish to edit a dashboard, select it, then click on the __Copy to My Dashboards__ button at the top right to make it your own and modify the queries as needed. If you find a particular dashboard useful, you can click on the __Star__ button in the top right corner. This will save it to your favorites, allowing you to access it quickly in the future.
 
