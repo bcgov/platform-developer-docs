@@ -291,6 +291,18 @@ For a simple example:
 
 For more insights on automation runbooks, refer to this [source](https://www.xenonstack.com/insights/automation-runbook-for-sre). We are also introducing [runwhen](https://www.runwhen.com/) on our platform to aid in this automation process.
 
+### How to Calculate Error Budget
+**Calculate the Error Budget:**
+```
+Error Budget=1−SLO
+```
+For the example above where the SLO is 95%, the error budget would be:
+```
+Error Budget=1−0.95=0.05 or 5%
+```
+This means that the service can be "unreliable" or "down" for 5% of the time without violating the SLO.
+
+For more infomation, I highly recommend reading this [documentation](https://www.atlassian.com/incident-management/kpis/error-budget).
 
 
 ## Wrapping Up and What's Next
