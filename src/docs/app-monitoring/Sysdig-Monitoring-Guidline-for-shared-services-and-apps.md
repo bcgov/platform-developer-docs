@@ -91,9 +91,12 @@ The registry has the following monitoring standards built based on those four as
 **1.Dashboard Load Time for Normal Users:**
   * **SLI**: 99.8% of the product entries retrieved from the registry will be accurate and up-to-date.
   * **Reason**: Accurate data is vital for users and systems relying on the registry. Ensuring the highest data accuracy minimizes errors and ensures trust in the system.
+  
 **2.Response Time for Data Retrieval::**
   * **SLI**: 99.5% of data retrieval requests from the registry will be completed in less than 500ms.
   * **Reason**: Users expect a snappy response when querying the registry. A fast retrieval ensures user satisfaction and efficient downstream operations.
+
+
 **3.Dashboard Load Time for Normal Users:**
   * **SLI**: 98% of approved product provisioning requests will be successfully processed without errors.
   * **Reason**:  Users rely on the system to provision products seamlessly. A high success rate ensures the reliability of the registry's provisioning functionality.
