@@ -26,7 +26,7 @@ Without a network policy in place, all pods in a namespace are accessible from o
 
 - [About network policies](#about-network-policies)
 - [NetworkPolicy structure](#networkpolicy-structure)
-- [Deny by default policy](#deny-by-default-policy)
+- [Default policy](#default-policy)
 - [Allow from the same namespace](#allow-from-the-same-namespace)
 - [Allow from OpenShift router](#allow-from-openshift-router)
 - [Allow only from specific Pod & port](#allow-only-from-specific-pod--port)
@@ -154,15 +154,15 @@ contains **a single from element** allowing connections from Pods with the label
 
 contains **two elements in the from array**, and allows connections from Pods in the local Namespace with the label role=client, or from any Pod in any namespace with the label user=alice.
 
-## Deny by default policy
+## Default policy
 
-You'll notice that there is a `platform-services-controlled-deny-by-default` network policy in your namespace that will show up even if you delete it! This is controlled by the platform administrators.
+You'll notice that there is a `platform-services-controlled-default` network policy in your namespace that will show up even if you delete it! This is controlled by the platform administrators.
 
 ```yaml
 kind: NetworkPolicy
 apiVersion: networking.k8s.io/v1
 metadata:
-  name: platform-services-controlled-deny-by-default
+  name: platform-services-controlled-default
   namespace: ad204f-dev
   labels:
     devops.gov.bc.ca/argocd-app: ad204f
@@ -171,15 +171,24 @@ metadata:
     provisioned-by: argocd
 spec:
   podSelector: {}
+  ingress:
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              kubernetes.io/metadata.name: openshift-operators
+    - from:
+        - namespaceSelector:
+            matchLabels:
+              network.openshift.io/policy-group: console
   policyTypes:
   - Ingress
 ```
 
-The deny by default network policy is there to enforce the zero trust networking or walled garden pattern. So we start by denying all then build our allow list.
+The default network policy is there to enforce the zero trust networking or walled garden pattern. So we start by denying all then build our allow list.  It also allows for the use of the Web Terminal Operator by way of the two 'ingress from' rules listed above.
 
-To test the `deny-by-default` network policy and see if you can curl the http server running in one pod from another pod. Update the command below based on your pod name and pod ip address.
+To test the default-deny rule, see if you can curl the http server running in one pod from another pod. Update the command below based on your pod name and pod IP address.
 
-`oc -n [-dev] rsh [pod1 name] curl -v [pod2 ip]:8080`
+`oc -n [-dev] rsh [pod1 name] curl -v [pod2 IP]:8080`
 
 what it should look like:
 
@@ -191,7 +200,7 @@ You can also try to navigate to the route URL from your browser.
 
 `https://route-https-yourapp-dev.apps.silver.devops.gov.bc.ca/`
 
-This should also fail. If it does seem to be working try from a incognito window or clearing your browsers cache.
+This should also fail. If it does seem to be working, try from an incognito window or clear your browser's cache.
 
 ## Allow from the same namespace
 
@@ -213,7 +222,7 @@ spec:
 
 You can test out connectivity using a curl command :
 
-`oc -n [-dev] rsh [pod1 name] curl -v [pod2 ip]:8080`
+`oc -n [-dev] rsh [pod1 name] curl -v [pod2 IP]:8080`
 
 You should now receive a response returning from the curl command.
 
