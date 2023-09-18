@@ -30,3 +30,9 @@ sort_order: 4
 
 ## Patroni Architecture
 
+![Patroni Architecture Diagram](https://raw.githubusercontent.com/bcgov/platform-developer-docs/f7ea8af99fdd0b2d217a5ff14bc7dd9fa429950b/src/images/patroni.jpg)
+
+The diagram above shows the basic parts of a Patroni deployment. It includes:
+ - 3 database pods, each running an instance of a Postgres database and the Patroni management software
+ - 
+
