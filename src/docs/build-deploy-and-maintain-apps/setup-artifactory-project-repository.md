@@ -98,8 +98,8 @@ To add a new user account to your project, do the following:
 
 You can also select multiple users to add them all at once. Then, specify the role you want to grant them.
 * **Contributor**: Service accounts are commonly given this role.
-* **Developer**: Assign this role if you want a service account to manage artifacts.
-* **Administrator**: Assign this role if you want a service account to manage access to the project.
+* **Developer**: Assign this role if you want a user or service account to manage artifacts.
+* **Administrator**: Assign this role if you want a user to manage access to the project. This role is not recommended for service accounts.
 
 You can also add additional roles to the project, if you want more finely-tuned control over who gets access to what.
 
