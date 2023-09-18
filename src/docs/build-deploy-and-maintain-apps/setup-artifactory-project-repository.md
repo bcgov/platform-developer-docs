@@ -94,9 +94,9 @@ Once you've gotten your project, make sure to add your own service account to th
 To add a new user account to your project, do the following:
 1. Click the gear at the top of the menu on the left, then choose **Identity and Access Members**. Click **Add Member**.
 2. On the **Users** tab, search for a username.
-3. Add a user with their IDIR or GitHub ID. The user has to have already signed into Artifactory's GUI at least once. If the user hasn't done so yet, tell them to.
+3. Add a user with their IDIR or GitHub ID, or a service account with the name found in the generated secret (see our [Service Account documentation](/setup-artifactory-service-account/) for details). The user has to have already signed into Artifactory's GUI at least once. If the user hasn't done so yet, tell them to.
 
-You can also add any Artifactory service account and select multiple users to add them all at once. Then, specify the role you want to grant them.
+You can also select multiple users to add them all at once. Then, specify the role you want to grant them.
 * **Contributor**: Service accounts are commonly given this role.
 * **Developer**: Assign this role if you want a service account to manage artifacts.
 * **Administrator**: Assign this role if you want a service account to manage access to the project.
