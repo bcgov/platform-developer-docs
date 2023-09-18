@@ -79,7 +79,9 @@ Once you have your Artifactory project you can add repositories and users, adjus
 
 **Note**: To use an existing Artifactory service account with your new Artifactory project, you must add that service account to the project. If you created the `ArtifactoryProject` object in the same OpenShift namespace as an existing `ArtifactoryServiceAccount` object, the related service account isn't automatically given access to the project.
 
-To use these features, enter the project in the Artifactory UI. Log in and expand **All**. Choose your new project to go to that project space. If you don't see your new project, it may be because of one of the following:
+To use these features, go to `artifacts.developer.gov.bc.ca` and login using your IDIR or GitHub account. Select your project name from the dropdown found at the top of the page. 
+
+If you don't see your new project, it may be because of one of the following:
 * You may not be an administrator in the applicable OpenShift namespace. Ask one of the administrators to add you to the project.
 * You may not have logged in to Artifactory before creating the project. Contact the Platform Services team to fix the issue. You can reach out in the `#devops-artifactory` or `#devops-how-to` channels in Rocket.Chat.
 
