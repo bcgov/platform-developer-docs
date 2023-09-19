@@ -70,7 +70,7 @@ jobs:
       
       - name: Publish docs to prod bucket
         # Only publish to prod when triggered to do so
-        if: ${{ github.event_name == 'workflow_dispatch' }} && ${{ inputs.deploy_location == 'prod' }} 
+        if: github.event_name == 'workflow_dispatch' && inputs.deploy_location == 'prod'
         run: |
           techdocs-cli publish --publisher-type awsS3 \
             --storage-name $TECHDOCS_S3_BUCKET_NAME \
