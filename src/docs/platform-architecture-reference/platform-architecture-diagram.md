@@ -39,9 +39,9 @@ To view the diagram you will need to follow the directions below as it is conten
 ---
 ---
 
- ## Related pages 
+## Related pages 
 
-- [Platform storage](/platform-storage/)
-- [Platform network topology](/platform-network-topology/)
-- [OpenShift network policies](/openshift-network-policies/)
-- [Set up TCP connectivity on the Private cloud Openshift Platform](/set-up-tcp-connectivity-on-private-cloud-openshift-platform/)
+- [Platform storage](../platform-architecture-reference/platform-storage.md)
+- [Platform network topology](../platform-architecture-reference/platform-network-topology.md)
+- [OpenShift network policies](../platform-architecture-reference/openshift-network-policies.md)
+- [Set up TCP connectivity on the Private cloud Openshift Platform](../platform-architecture-reference/set-up-tcp-connectivity-on-private-cloud-openshift-platform.md)
