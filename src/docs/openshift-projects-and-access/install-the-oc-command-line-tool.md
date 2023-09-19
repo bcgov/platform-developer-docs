@@ -37,7 +37,7 @@ Users can interact with OpenShift via the `oc` command line tool. This can be in
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ylzpex7kbKs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
  
- ### Install homebrew
+### Install homebrew
  
 1. Open Terminal 
 2. Install [homebrew](https://brew.sh/) by running this statement in your terminal: 

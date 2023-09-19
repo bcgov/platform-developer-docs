@@ -9,8 +9,16 @@ on:
       - "mkdocs.yml"
       - "catalog-info.yaml"
       - "src/index.md"
-  release:
-    types: [published]
+  workflow_dispatch:
+    inputs:
+      deploy_location:
+        description: 'Deploy to'
+        required: true
+        default: dev
+        type: choice
+        options:
+        - dev
+        - prod
 
 jobs:
   publish-techdocs-site:
@@ -61,8 +69,8 @@ jobs:
             --awsBucketRootPath $TECHDOCS_S3_DEV_ROOT_PATH
       
       - name: Publish docs to prod bucket
-        # Only publish to prod bucket on a release
-        if: ${{ github.event_name == 'release' }}
+        # Only publish to prod when triggered to do so
+        if: ${{ github.event_name == 'workflow_dispatch' }} && ${{ inputs.deploy_location == 'prod' }} 
         run: |
           techdocs-cli publish --publisher-type awsS3 \
             --storage-name $TECHDOCS_S3_BUCKET_NAME \
