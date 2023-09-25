@@ -225,7 +225,7 @@ Consult the Kustomize documentation for more information, as this doc is meant t
 
 [https://kubectl.docs.kubernetes.io/guides/](https://kubectl.docs.kubernetes.io/guides/)
 
-[https://kustomize.io/tutorial](https://kustomize.io/tutorial)
+[https://kustomize.io/](https://kustomize.io/)
 
 ### Control the deployment sequence
 

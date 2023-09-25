@@ -48,7 +48,7 @@ PromQL can be used in Alerts as well. The following example shows an alert for t
 
 ## Use Service Discovery to import application metrics endpoints
 
-Sysdig has a lightweight Prometheus server (Promscrape) that can [import your application metrics endpoint into Sysdig metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/monitoring-integrations/custom-integrations/collect-prometheus-metrics/migrating-from-promscrape-v1-to-v2/#migrate-using-default-configuration).
+Sysdig has a lightweight Prometheus server (Promscrape) that can [import your application metrics endpoint into Sysdig metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations/working-with-integrations/custom-integrations/collect-prometheus-metrics/migrating-from-promscrape-v1-to-v2/#migrating-from-promscrape-v1-to-v2).
 
 To enable Promscrape to find your application metrics, do the following:
 1. Make sure the application metrics endpoint is returning Prometheus metrics. To test this, you can expose the service and curl on the URL.
@@ -69,7 +69,7 @@ Related links:
 - [Set up a team in Sysdig Monitor](/sysdig-monitor-setup-team/)
 - [Create alert channels in Sysdig Monitor](/sysdig-monitor-create-alert-channels/)
 - [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
-- [Migrate Using Default Configuration](https://docs.sysdig.com/en/docs/sysdig-monitor/monitoring-integrations/custom-integrations/collect-prometheus-metrics/migrating-from-promscrape-v1-to-v2/#migrate-using-default-configuration)
+- [Migrate Using Default Configuration](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations/working-with-integrations/custom-integrations/collect-prometheus-metrics/migrating-from-promscrape-v1-to-v2/#migrate-using-default-configuration)
 
 Related resources:
 - [Sysdig Monitor](https://docs.sysdig.com/en/sysdig-monitor.html)

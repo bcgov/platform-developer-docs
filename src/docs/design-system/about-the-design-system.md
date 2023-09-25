@@ -30,7 +30,7 @@ The [BC Government Design System for Digital Services](https://developer.gov.bc.
 
 Components are collectively built by the government community, meet accessibility standards and are open for input and improvement.
 
-Use the design system to customize B.C. government sites and applications. For more information about applying for external URLs, contact the B.C. government [Joint Working Group](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/digital-delivery/web-property-process/web-property-applications).
+Use the design system to customize B.C. government sites and applications. For more information about applying for external URLs, contact the B.C. government [Joint Working Group](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/digital-delivery/web-property-process)
 
 ## Design system management
 
@@ -61,7 +61,7 @@ You can contribute to the design system by doing any of the following:
 ---
 Related links:
 * [BC Design System](https://developer.gov.bc.ca/Design-System/About-the-Design-System)
-* [Joint Working Group](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/digital-delivery/web-property-process/web-property-applications)
+* [Joint Working Group](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/digital-delivery/web-property-process)
 * [Propose a New Component](https://developer.gov.bc.ca/Design-System/Propose-a-New-Component)
 
 ---

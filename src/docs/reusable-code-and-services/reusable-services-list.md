@@ -66,7 +66,7 @@ The URL allows both public and gated access. Gated access requires an APIkey. To
 
 For more information on the BC Address Geocoder, see the following pages:
 * [BC Address Geocoder Developer Guide](https://developer.gov.bc.ca/Community-Contributed-Content/BC-Address-Geocoder-Developer-Guide)
-* [BC Address Geocoder repository](https://github.com/bcgov/api-specs/blob/master/geocoder/glossary.md#outputSRS)
+* [BC Address Geocoder repository](https://github.com/bcgov/api-specs/blob/master/geocoder)
 
 ## Common Document Generation Service
 
