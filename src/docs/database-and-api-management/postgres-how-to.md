@@ -1,5 +1,5 @@
 ---
-title: Using Postgres on OpenShift: Patroni and CrunchyDB
+title: Using Postgres on OpenShift with Patroni and CrunchyDB
 
 slug: postgres-how-to
 
@@ -18,7 +18,7 @@ content_owner: Cailey Jones
 sort_order: 4
 ---
 
-# Using Postgres on OpenShift: Patroni and CrunchyDB
+# Using Postgres on OpenShift with Patroni and CrunchyDB
 
 ## Before We Begin
 
