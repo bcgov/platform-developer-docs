@@ -342,3 +342,6 @@ Stay Informed: SRE is a rapidly evolving field. Keep an eye out for updates, new
 
 ## Related pages
 
+- [Monitoring and Alerting](https://docs.developer.gov.bc.ca/maintain-an-application/#monitoring-and-alerting)
+- [Set up advanced metrics in Sysdig Monitor](https://docs.developer.gov.bc.ca/sysdig-monitor-set-up-advanced-functions/)
+- [Sysdig - Use Service Discovery to import application metrics endpoints](https://docs.developer.gov.bc.ca/sysdig-monitor-set-up-advanced-functions/#use-service-discovery-to-import-application-metrics-endpoints)
