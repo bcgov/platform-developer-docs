@@ -97,7 +97,7 @@ For guidance on resource tuning, refer to this [documentation](https://docs.deve
 
 ### 1. Creating a deployment using OpenShift CLI or Web Console
 
-To deploy an application, you can use the OpenShift CLI (`oc new-app`) or the web console. Both offer the same capabilities and your choice will be dependent on personal preference. More information can be found in the [official OpenShift documentation](https://docs.openshift.com/container-platform/latest/applications/application_life_cycle_management/creating-applications-using-cli.html).
+To deploy an application, you can use the OpenShift CLI (`oc new-app`) or the web console. Both offer the same capabilities and your choice will be dependent on personal preference. More information can be found in the [official OpenShift documentation](https://docs.openshift.com/container-platform/4.13/applications/creating_applications/creating-applications-using-cli.html).
 
 ### 2. Configuring resource limits and scaling options
 

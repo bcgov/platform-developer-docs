@@ -213,7 +213,7 @@ Technical preview for our Openshift Clusters (OCP 4.10). It is possible to set u
 
 ## References
 
-- [Sysdig - Automatically scraping any Kubernetes pods](https://docs.sysdig.com/en/docs/sysdig-monitor/monitoring-integrations/custom-integrations/collect-prometheus-metrics/#agent-compatibility)
+- [Sysdig - Automatically scraping any Kubernetes pods](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations/working-with-integrations/custom-integrations/collect-prometheus-metrics/#agent-compatibility)
 - [Sysdig - Use Service Discovery to import application metrics endpoints](https://docs.developer.gov.bc.ca/sysdig-monitor-set-up-advanced-functions/#use-service-discovery-to-import-application-metrics-endpoints)
 - [Sysdig - Checking sysdig teams and dashboards](https://docs.developer.gov.bc.ca/sysdig-monitor-setup-team/#review-your-monitoring-dashboards)
 - [Sysdig - Creating sysdig alert](https://docs.developer.gov.bc.ca/sysdig-monitor-create-alert-channels/#creating-an-alert)

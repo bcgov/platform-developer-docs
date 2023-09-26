@@ -127,11 +127,13 @@ To ensure compatibility as features change, please update your `oc` command line
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/ylzpex7kbKs?start=335" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 
-If you can't install `oc` locally, you may wish to use the OpenShift web terminal for some purposes. More information is [available from Redhat](https://docs.openshift.com/container-platform/4.12/web_console/odc-using-web-terminal.html#odc-access-web-terminal_odc-using-web-terminal). 
+If you can't install `oc` locally, you may wish to use the OpenShift web terminal for some purposes. More information is [available from Redhat](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.13/html/web_console/web-terminal). 
 
 <br>
 
 ---
+---
+
 ## Related pages
 
 - [Homebrew](https://brew.sh/)

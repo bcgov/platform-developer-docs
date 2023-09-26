@@ -68,7 +68,7 @@ https://www.redhat.com/rhdc/managed-files/cl-openshift-security-guide-ebook-us28
 
 **_Penetration Tests_**
 
-The platform services team outsources for a penetration test annually to ensure the services we provide are configured to protect confidentiality, integrity and availability.  Penetration tests are procured through the pre-qualified list of vendors (https://www2.gov.bc.ca/gov/content/governments/services-for-government/bc-bid-resources/goods-and-services-catalogue/im-it-security-services).
+The platform services team outsources for a penetration test annually to ensure the services we provide are configured to protect confidentiality, integrity and availability.  Penetration tests are procured through the pre-qualified list of vendors (https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security).
 
 ------
 ### <a name="privacy"></a>Privacy
