@@ -1,9 +1,9 @@
 ---
-title: How To Deploy and Maintain a Postgres Database
+title: Using Postgres on OpenShift: Patroni and CrunchyDB
 
 slug: postgres-how-to
 
-description: Step-by-step guide for deploying and maintaining a high availability Postgres database in Openshift with Patroni and Crunchy
+description: Architecture and best practices for high availability Postgres databases in Openshift with Patroni and Crunchy
 
 keywords: database, data, OpenShift, high-availability, postgres, patroni, crunchydb, crunchy
 
@@ -18,7 +18,7 @@ content_owner: Cailey Jones
 sort_order: 4
 ---
 
-# How To Deploy and Maintain a Postgres Database in Openshift
+# Using Postgres on OpenShift: Patroni and CrunchyDB
 
 ## Before We Begin
 
