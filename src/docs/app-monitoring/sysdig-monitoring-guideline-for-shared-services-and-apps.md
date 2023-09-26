@@ -40,7 +40,7 @@ In this document, we'll look at the fundamental idea behind SRE and show you how
 * [**Errors**](#errors)
 * [**Importance of Monitoring and Alerting in SRE**](#importance-of-monitoring-and-alerting-in-sre)
 * [**Sysdig dashboard**](#sysdig-dashboard)
-* [**Uptime.com**](#uptime-com)
+* [**Uptime.com**](#uptimecom)
 * [**Runbook**](#runbook)
 * [**How to calculate error budget**](#how-to-calculate-error-budget)
 * [**Conclusion**](#conclusion)
