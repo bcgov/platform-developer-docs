@@ -42,7 +42,7 @@ The resources below are from sources outside of the B.C. government. They provid
 ## E-books: 
 [Deploying to OpenShift](https://cloud.redhat.com/hubfs/pdfs/Deploying_to_OpenShift.pdf) Red Hat / O'Reilly Publishing
 
-[Building Secure and Reliable Systems](https://static.googleusercontent.com/media/sre.google/en//static/pdf/building_secure_and_reliable_systems.pdf) by Google / O'Reilly Publishing
+[Building Secure and Reliable Systems](https://sre.google/books/building-secure-reliable-systems/#:~:text=Security%20is%20crucial%20to%20the,systems%20that%20are%20fundamentally%20secure) by Google / O'Reilly Publishing
 
 ### Free account required:
 [OpenShift for Developers, 2nd ed.](https://developers.redhat.com/e-books/openshift-for-developers) by Red Hat / O'Reilly Publishing
