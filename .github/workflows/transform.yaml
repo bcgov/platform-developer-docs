@@ -7,8 +7,6 @@ name: Transform actions to work in techdocs
 on:
   push:
     branches: [ "main" ]
-    paths:
-      - "src/docs/**"
       
 jobs:
   update-files:
