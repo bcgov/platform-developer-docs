@@ -8,6 +8,7 @@ from common import get_front_matter
 
 
 def get_categories():
+    # The order the categories are listed here are how they are listed in the navigation on the site
     categories = OrderedDict()
     categories["build-deploy-and-maintain-apps"] = "Build, deploy and maintain apps"
     categories["openshift-projects-and-access"] = "OpenShift projects and access"
@@ -18,6 +19,7 @@ def get_categories():
     categories["reusable-code-and-services"] = "Reusable code and services"
     categories["platform-architecture-reference"] = "Platform architecture reference"
     categories["training-and-learning"] = "Training and learning"
+    categories["design-system"] = "Design system"
     return categories
 
 def are_categories_valid(categories, root_path):
