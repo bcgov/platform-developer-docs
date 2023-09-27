@@ -22,10 +22,10 @@ sort_order: 4
 
 ## Before We Begin
 
-- Read our [High Availability Database Clusters](/high-availability-database-clusters/) documentation. You need to know what makes a database "high availability" in an OpenShift cluster, and why that's important. 
-- Read our [Open-Source Database Technologies](/opensource-database-technologies/) documentation to check out the alternatives to Patroni/Postgres. Make sure that Patroni is the right technology for your needs!
+- Read our [High Availability Database Clusters](../database-and-api-management/high-availability-database-clusters.md) documentation. You need to know what makes a database "high availability" in an OpenShift cluster, and why that's important. 
+- Read our [Open-Source Database Technologies](../database-and-api-management/opensource-database-technologies.md) documentation to check out the alternatives to Patroni/Postgres. Make sure that Patroni is the right technology for your needs!
 - Join the [#patroni](https://chat.developer.gov.bc.ca/patroni) and [#crunchydb](https://chat.developer.gov.bc.ca/crunchydb) channels on RocketChat for a place to ask questions and find community support.
-- Have a working knowledge of the OpenShift CLI. Check out our [OC CLI](/install-the-oc-command-line-tool/) documentation for an introduction, and sign up for OpenShift 101 to learn more.
+- Have a working knowledge of the OpenShift CLI. Check out our [OC CLI](../openshift-projects-and-access/install-the-oc-command-line-tool.md) documentation for an introduction, and sign up for OpenShift 101 to learn more.
 - Install the `helm` command line tool.
 
 ### What's a Cluster?
@@ -101,7 +101,7 @@ A typical deployment of Patroni includes the following objects:
 - 1 Role and Rolebinding associated with the ServiceAccount, granting the necessary permissions to manage these objects.
 
 In addition to these objects, you'll need to create a few objects that aren't included in a typical Patroni deployment:
-- 1 NetworkPolicy allowing your Patroni pods to communicate with each other and with other application pods as appropriate. See our [Network Policies](/openshift-network-policies/) documentation.
+- 1 NetworkPolicy allowing your Patroni pods to communicate with each other and with other application pods as appropriate. See our [Network Policies](../platform-architecture-reference/openshift-network-policies.md) documentation.
 - 1 PodDisruptionBudget, which should be set to allow a minimum number of pods equal to 2. If your Patroni StatefulSet does not include a minimum of 3 pods, it should. But if your team has chosen to run your database with 1 or 2 pods against recommendations, please do not create a PodDisruptionBudget for it. Learn more about [PodDisruptionBudgets](https://kubernetes.io/docs/tasks/run-application/configure-pdb/).
 
 Note that standalone Patroni does not include any backup management, so you should also make use of [https://github.com/bcgov/backup-container].
@@ -177,7 +177,7 @@ CrunchyDB can set up point-in-time recovery, which allows you to restore your da
 
 There are two kinds of database backup (and they're the same for both Patroni and Crunchy): full and incremental. A full backup is just what it sounds like - it backs up all the data in the database. These are typically pretty large, so you don't want to keep a lot of them at the same time. An incremental backup is a compressed record of all the changes that have occurred since the last time a backup was taken. They're much more compressed than WAL files or WAL archives, but take a lot longer to recover from. They're much smaller than a full backup, so taking incremental backups allows you to keep many recovery points for your database without having to store a full backup for each one.
 
-Head over to our documentation on [Database Backup Best Practices](/database-backup-best-practices/) to get some recommendations on when to take full backups vs incremental, and how many to keep. 
+Head over to our documentation on [Database Backup Best Practices](../database-and-api-management/database-backup-best-practices.md) to get some recommendations on when to take full backups vs incremental, and how many to keep. 
 
 You'll find the options for changing your Crunchy backup schedule in your PostgresCluster objects, in the `backups` section. If you've implemented the community `backup-container`, you'll find some documentation on their repo regarding how to change the schedule and retainment settings!
 

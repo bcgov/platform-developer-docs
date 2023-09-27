@@ -502,7 +502,7 @@ It is also important to keep the Platform Services [Product Registry](https://re
 - [Grant user access in OpenShift](../openshift-projects-and-access/grant-user-access-openshift.md)
 - [Vault secrets management](../security-and-privacy-compliance/vault-secrets-management-service.md)
 - [Kibana training application loggin](https://github.com/bcgov/devops-platform-workshops/blob/master/openshift-201/logging.md)
-- [Check application health after outage](/check-application-health-after-outage/)
+- [Check application health after outage](../app-monitoring/check-application-health-after-outage.md)
 - [Building secure and reliable systems e-book](https://sre.google/books/building-secure-reliable-systems/)
 - [Deploying to OpenShift e-book](https://cloud.redhat.com/hubfs/pdfs/Deploying_to_OpenShift.pdf)
 
