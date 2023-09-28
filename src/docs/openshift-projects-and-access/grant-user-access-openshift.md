@@ -85,7 +85,7 @@ Follow these best practices when you grant namespace access to a user:
 ---
 Related links:
 
-* [BC Government organizations in GitHub](../use-github-in-bcgov/bc-government-organizations-in-github.md)
+* [BC Government organizations in GitHub](https://mvp.developer.gov.bc.ca/docs/default/component/bcdg/use-github-in-bcgov/bc-government-organizations-in-github/)
 * [Provision a new project set](../openshift-projects-and-access/provision-new-openshift-project.md)
 * [Using Just Ask! to gain access into the BCGov or BCDevops GitHub Organizations](https://www.youtube.com/watch?v=IvdPyx2-qm0)
 * [Add someone to the BC Government GitHub Org](https://just-ask.developer.gov.bc.ca/)

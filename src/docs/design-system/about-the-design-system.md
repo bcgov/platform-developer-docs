@@ -60,6 +60,7 @@ You can contribute to the design system by doing any of the following:
 
 ---
 Related links:
+
 * [BC Design System](https://developer.gov.bc.ca/Design-System/About-the-Design-System)
 * [Joint Working Group](https://www2.gov.bc.ca/gov/content/governments/services-for-government/service-experience-digital-delivery/digital-delivery/web-property-process)
 * [Propose a New Component](https://developer.gov.bc.ca/Design-System/Propose-a-New-Component)
