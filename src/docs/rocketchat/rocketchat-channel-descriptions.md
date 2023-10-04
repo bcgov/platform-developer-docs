@@ -41,7 +41,7 @@ Rocket.Chat is the main communication channel for platform support. Learn about 
 
 Platform service channels are used for questions, updates and information about working in the B.C. Government Private Cloud PaaS and using OpenShift. 
 
-**#devops-sos**
+### **#devops-sos**
 We monitor the #devops-sos channel during regular business hours.
 
 Only use the #devops-sos channel for urgent or time-sensitive questions. For example, if you have:
