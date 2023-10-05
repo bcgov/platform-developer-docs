@@ -99,7 +99,7 @@ const IndexPage = ({ location }) => {
             <p>
               Read about{" "}
               <a
-                href={`${WORDPRESS_BASE_URL}/private-cloud/support-and-community/platform-training-and-resources/`}
+                href="https://digital.gov.bc.ca/cloud/services/private/support/#platform"
               >
                 the free training
               </a>{" "}
@@ -111,20 +111,16 @@ const IndexPage = ({ location }) => {
             <h3>Rocket.Chat</h3>
             <p>
               Rocket.Chat will be your main communication channel for platform
-              updates and support while you work in the BC Gov Private Cloud
-              PaaS. Read about{" "}
-              <a
-                href={`${WORDPRESS_BASE_URL}/private-cloud/support-and-community/stay-connected/`}
-              >
-                how to stay connected in Rocket.Chat
-              </a>
-              .
+              updates and support while you work in the B.C. Government Private Cloud
+              PaaS. Read about 
+               <Link to={"/join-bc-rocket-chat/"}> the steps to join Rocket.Chat
+              </Link>
             </p>
             <p>
               <a href="https://chat.developer.gov.bc.ca">
                 Log in to Rocket.Chat
               </a>
-              .
+              
             </p>
           </Card>
           <Card>
@@ -136,7 +132,7 @@ const IndexPage = ({ location }) => {
             </p>
             <p>
               <a
-                href={`${WORDPRESS_BASE_URL}/private-cloud/support-and-community/events-in-the-bc-gov-private-cloud-paas/`}
+                href="https://digital.gov.bc.ca/cloud/services/private/about-us/#stay"
               >
                 Learn how to register for this and other events
               </a>
@@ -172,14 +168,14 @@ const IndexPage = ({ location }) => {
             <ul>
               <li>
                 <Link to={"/bc-government-organizations-in-github/"}>
-                  BC Government organizations in GitHub
+                  B.C. government organizations in GitHub
                 </Link>
               </li>
               <li>
                 <a
-                  href={`${WORDPRESS_BASE_URL}/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/`}
+                  href="https://digital.gov.bc.ca/cloud/services/private/support/#common"
                 >
-                  Common platform requests in the BC Gov Private Cloud PaaS
+                  Common platform requests in the B.C. Government Private Cloud PaaS
                 </a>
               </li>
               <li>
@@ -284,12 +280,11 @@ const IndexPage = ({ location }) => {
             <h3>Report a platform incident</h3>
             <p>
               If you think an incident has occurred with our services, you can
-              report it by{" "}
-              <a
-                href={`${WORDPRESS_BASE_URL}/private-cloud/support-and-community/support-incident-response-flow/`}
-              >
-                following these steps
-              </a>
+              report it by
+               <a
+                  href="https://digital.gov.bc.ca/cloud/services/private/support/#report"
+               > following these steps
+                </a>
               .
             </p>
           </Card>
@@ -299,7 +294,7 @@ const IndexPage = ({ location }) => {
               We follow a community-based support model. You can use our
               self-serve resources or ask for help from the platform community.{" "}
               <a
-                href={`${WORDPRESS_BASE_URL}/private-cloud/support-and-community/how-to-get-support-or-help/`}
+                href="https://digital.gov.bc.ca/cloud/services/private/support/"
               >
                 Learn how to get help on the Platform
               </a>
@@ -313,7 +308,7 @@ const IndexPage = ({ location }) => {
               outlined common platform tasks and links to additional
               instructions.{" "}
               <a
-                href={`${WORDPRESS_BASE_URL}/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/`}
+                href="https://digital.gov.bc.ca/cloud/services/private/support/#common"
               >
                 Learn how to get help with some of the most commonly
                 searched-for tasks

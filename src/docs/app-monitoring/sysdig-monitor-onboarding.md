@@ -37,7 +37,7 @@ Related links:
 - [Sysdig Monitor](https://sysdig.com/products/monitor/)
 - [OpenShift project resource quotas](/openshift-project-resource-quotas/)
 - [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/)
-- [Monitoring with Sysdig](%WORDPRESS_BASE_URL%/private-cloud/our-products-in-the-private-cloud-paas/monitoring-with-sysdig/)
+- [Monitoring with Sysdig](https://digital.gov.bc.ca/cloud/services/private/products-tools/sysdig/)
 - [Sydig User Profile](https://app.sysdigcloud.com/#/settings/user)
 - [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 
