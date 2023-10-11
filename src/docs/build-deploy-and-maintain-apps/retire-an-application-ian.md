@@ -92,9 +92,10 @@ You may have resources that are indirectly connected to your application, such a
 * Documentation in public or private-facing websites
 
 **Rocketchat**
+
 To delete an **integration** (webhook), click the Administration link that is above the left navigation bar (it looks like three vertical dots), then Workspace, then Integrations.  Select the integration and scroll to the bottom of the form.  Click the 'Delete' button.
 
-To delete a Rocketchat room or channel, as above, click the Administration link that is above the left navigation bar, then click 'Rooms'.  Select the room.  In the right navigation, scroll to the bottom of the form and click 'Delete'.  Only a room owner can delete a room.  This operation cannot be undone.
+To delete a Rocketchat room or channel, as above, click the Administration link that is above the left navigation bar, then Workspace, then 'Rooms'.  Select the room.  In the right navigation, scroll to the bottom of the form and click 'Delete'.  Only a room owner can delete a room.  This operation cannot be undone.
 
 For other services, consult their documentation for the removal process.
 
@@ -102,7 +103,7 @@ For other services, consult their documentation for the removal process.
 Once you have completed the preparatory tasks described above, you can proceed with the deletion of the project's namespaces in OpenShift, but there are a few more steps to take.
 
 ### Delete persistent volumes
-In order to protect users against accidental deletion of data, PersistentVolumes must be removed by the user prior to the final, automated deletion process.  In each of the project's namespaces, check for the presence of any PVCs.  Consider what data might be in the storage and if it is properly backed up if needed.  You may need to check with colleagues to be sure that the data can be safely removed.
+In order to protect users against accidental deletion of data, PersistentVolumes must be removed by the user prior to the final, automated deletion process.  In each of the project's namespaces, check for the presence of any PVCs.  Consider what data might be in the storage and if it is properly backed up, if needed.  You may need to check with colleagues to be sure that the data can be safely removed.
 
 If you need to copy data from a PVC, one option is to start a pod that mounts the PVC, then copy it to your workstation using the `oc rsync` command.
 
