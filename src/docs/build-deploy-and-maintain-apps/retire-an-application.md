@@ -63,7 +63,7 @@ If you make use of any licensed products for your application (such as Enterpris
 
 If you need to keep backups of any data once your application is offline, you'll need to find somewhere to store there data. You won't be able to store your data on the OpenShift cluster or within any of the services offered by the Platform Team once you've deleted your project set from the Product Registry.
 
-The OCIO's S3-compatible object-storage service is a good option for storing data after your application has been shut down. 
+The OCIO's S3-compatible object-storage service is a good option for storing data after your application has been shut down. If you're retaining data in the form of database dump files, remember that you'll need a way to recover that data into a running database in order to access it again. Make sure you have a plan for doing so, once you no longer have access to your project set in OpenShift.
 
 Note that all of your OpenShift secrets and your Vault folder will be deleted once you delete your project set from the Product Registry. Make absolutely certain that you have saved any necessary passwords somewhere safe. If you're planning to retain any database data, remember that you'll need to keep the login credentials for your database users in order to access your backups. You'll also want to keep the access credentials for your S3 bucket (or wherever else you plan to store your data off-cluster). 
 
