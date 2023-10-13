@@ -39,26 +39,35 @@ This document outlines the best practices for retiring applications on OpenShift
 ---
 ## Preparing to retire your application
 
-This section is about the tasks your team should take before you actually shut down your application.
-
 ### Policy Requirements
 
-- Are there any legal requirements related to the shutdown of your app?
-- Data retention?
-- Do you need to keep your PIA/STRA or whatever?
+Before you begin planning the technical steps of shutting down your app, you should make sure you're aware of any laws or policies that you could be required to follow.
+
+For example, make sure your team is aware of data retention policies for your application. Do you need to keep your app's data for a certain amount of time? If so, where do you intend to store it? If the data needs to be accessed after the application is shut down, how do you plan to do that? You should consider these sorts of questions for any policy or law that might apply to your application after it's been shut down.
+
+Contact your ministry IMB if you're not sure what policies or legislation might apply to your application.
 
 ### Communication
 
-- Communicate with your team about the schedule/policy stuff
-- Document any policy-related requirements about data retention or whatever
-- Communicate with users
-- Tell the TLS people that you won't need another cert
-- Discuss the termination of any licenses (for EDB or whatever)
+Before shutting down your application, you should communicate the shut-down plans to any stakeholders and users.
+
+Make sure you have clearly documented the answers to any of the policy-related questions from the previous step, and ensure that your team (or whoever might be responsible for adhering to those laws and policies in the future) knows where to find that documentation.
+
+Communicate the schedule for shutting down your application clearly with any users of your application, any relevant stakeholders like executives, as well as your own team and division. It's a good idea to communicate this schedule more than once. At least one communication should be done early in the process, to give as much notice as possible. Then, you should send out reminders of the upcoming shutdown closer to the date, and a final communication once the application is offline.
+
+You'll also want to update any ServiceNow or iStore orders for TLS certificates, to let them know that you won't be renewing the certificate.
+
+If you make use of any licensed products for your application (such as Enterprise DB or any licensed libraries), you should reach out to the vendor to discuss terminating the license.
 
 ### Backups
 
-- Need to backup data? Where? Not on the cluster!
-- Remember to back-up secrets, especially if you're backing up data. Your vault will get deleted, so don't use that.
+If you need to keep backups of any data once your application is offline, you'll need to find somewhere to store there data. You won't be able to store your data on the OpenShift cluster or within any of the services offered by the Platform Team once you've deleted your project set from the Product Registry.
+
+The OCIO's S3-compatible object-storage service is a good option for storing data after your application has been shut down. 
+
+Note that all of your OpenShift secrets and your Vault folder will be deleted once you delete your project set from the Product Registry. Make absolutely certain that you have saved any necessary passwords somewhere safe. If you're planning to retain any database data, remember that you'll need to keep the login credentials for your database users in order to access your backups. You'll also want to keep the access credentials for your S3 bucket (or wherever else you plan to store your data off-cluster). 
+
+If your team has development artifacts that you've shared with the community and you're concerned that others will lose access to those objects when you delete your project set (like, for example, any images you've stored in your Artifactory Project but have shared with others), then please speak to the Platform Team about options for ensuring that these objects remain accessible. And we thank you for sharing your hard work with others!
 
 ## Shut down your application and related services
 
