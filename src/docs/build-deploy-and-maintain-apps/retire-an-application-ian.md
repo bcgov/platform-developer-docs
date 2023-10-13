@@ -60,47 +60,56 @@ This section is about the tasks your team should take before you actually shut d
 - Need to backup data? Where? Not on the cluster!
 - Remember to back-up secrets, especially if you're backing up data. Your vault will get deleted, so don't use that.
 
-## Shut down your application and related services
+## Shut down and delete your application and related services
+Once you have completed the preparatory tasks described above, you can proceed to shutdown the application workloads. With no workloads running anymore, you can safely proceed with deletion of the project set namespaces from Registry. Here are the recommended orders of shutting down things.
 
-### Turn off CI/CD pipeline
+### Turn off your automation
+In order to successfully shutdown the application in the namespace, you'll need to first turn off anything that might interfere with the deletion of the pods:
 
-- Turn off anything that might try to redeploy your app after you shut it down like Argo syncs or scheduled deployments.
-- Delete any cronjobs, PDBs, or anything that might interfere with the shutdown of the pods and stuff.
+**CI/CD pipeline**
+In general, a CI/CD pipeline is in charge of automatically building and deployment your application, some of them will also ensure your application components are in specified state. For example, when ArgoCD detects a deployment is missing pods compared to the desired state, it will immediately recreate it in the namespace. Thus, it's important to first turn off anything that might try to redeploy your app.
+
+**PodDisruptionBudget (PDB)**
+A PDB will ensure that there are a certain number of pods running for your workload. Before scaling down your app, make sure you have deleted all the PDBs in the namespaces.
+
+**AutoScaler**
+If you have setup HorizontalAutoScalers (HPA) or VerticalAutoScalers (VPA), it's a good idea to also remove them before scaling the app in case they consider your application need more replicas during the shutdown.
+
+**Cronjobs**
+Cronjobs are another object that might be used to interact with or create objects in the namespace, make sure those are removed as well.
+
 
 ### Shutting down the app
+Scale down all the running pods. You can run `oc get pods` to make sure the all the application workloads have been shutdown.
 
-- Scale down your pods, but don't delete stuff (yet)
+### Prepare dependent platform services for deletion
+Most likely you've leveraged some of the Platform services or BCGov common components while running the application. It's important to properly offboard from those services as part of the application retirement, otherwise they will block the Product Registry when you request to remove the project set there.
 
-### Prepare dependent services for deletion
+- If you have an [Artifactory project](https://artifacts.developer.gov.bc.ca), you need to delete all the **repos** in Artifactory.
+- If you have setup any notification alerts from Sysdig Monitoring, make sure to delete the [Sysdig notification channels](https://app.sysdigcloud.com/#/settings/notifications) from your Sysdig team.
+- If you have used [Vault](https://vault.developer.gov.bc.ca/) to store secrets, there's nothing you need to delete. But please take a copy of the secret values that you need.
+- If you have team members (other than Product Owners and Technical Leads) onboarded to [ACS](https://acs.developer.gov.bc.ca/), please email PlatformServicesTeam@gov.bc.ca to request access removal.
 
-- If you have an Artifactory project, you need to delete all the repos in it, or else you can't delete the project later
-- Any similar requirements for Sysdig? Vault? ACS?
-- Request the deletion of your S3 bucket, if applicable
-- Request deletion of SSO stuff
-- Anything you need to do to prep for the deletion of common components?
 
 ### Github
-
-- Edit your main Github READMEs with a note about how the app is no longer active
-- Archive all your Github repos
-- Remove github org access for team members as appropriate (but make sure they're not on other teams, first)
+Don't forget your application source code and relevant resources from BCGov GitHub organizations.
+- Edit your main Github README files with a note to indicate the retirement of your application service.
+- Archive all your Github repos from the following GitHub Organizations:
+    - [bcgov](https://github.com/bcgov)
+    - [bcgov-c](https://github.com/bcgov-c)
+    - [enterprise GitHub](https://github.com/enterprises/bcgov-ent)
+    - [BCDevOps](https://github.com/bcdevops)
+- If you have any GitHub Actions or Webhook setup, make sure to disable them. Archiving a repo does NOT stop or disable the existing GitHub Actions workflows.
+- Delete GitHub Teams if you have created any. Also request to [remove GitHub Organization access](https://github.com/BCDevOps/devops-requests) for team members that do not need access to the OpenShift platform.
 
 ### Delete any objects remaining in related services
 You may have resources that are indirectly connected to your application, such as:
-* Rocketchat channels and integrations (webhooks)
-* Accounts in Common Components, like the Common Hosted Email Service (CHES) or the Common Hosted Form Service (CHEFS)
-* Documentation in public or private-facing websites
+- Rocketchat channels and integrations (webhooks)
+    - To delete an **integration** (webhook), click the Administration link that is above the left navigation bar (it looks like three vertical dots), then Workspace, then Integrations.  Select the integration and scroll to the bottom of the form.  Click the 'Delete' button.
+    - To delete a Rocketchat room or channel, as above, click the Administration link that is above the left navigation bar, then Workspace, then 'Rooms'.  Select the room.  In the right navigation, scroll to the bottom of the form and click 'Delete'.  Only a room owner can delete a room.  This operation cannot be undone.
+- Remove or update documentation in public or private-facing websites.
+- If you've requested for other BCGov resources or Common Components, please also request for resource and access remove with the corresponding teams. Some of the common ones are Single Sign-On (SSO), S3 storage, Common Hosted Email Service (CHES) or the Common Hosted Form Service (CHEFS), etc. You can find a list of them for reference from the [Saas Directory](https://digital.gov.bc.ca/cloud/services/saas/directory/).
 
-**Rocketchat**
-
-To delete an **integration** (webhook), click the Administration link that is above the left navigation bar (it looks like three vertical dots), then Workspace, then Integrations.  Select the integration and scroll to the bottom of the form.  Click the 'Delete' button.
-
-To delete a Rocketchat room or channel, as above, click the Administration link that is above the left navigation bar, then Workspace, then 'Rooms'.  Select the room.  In the right navigation, scroll to the bottom of the form and click 'Delete'.  Only a room owner can delete a room.  This operation cannot be undone.
-
-For other services, consult their documentation for the removal process.
-
-## Delete application
-Once you have completed the preparatory tasks described above, you can proceed with the deletion of the project's namespaces in OpenShift, but there are a few more steps to take.
 
 ### Delete persistent volumes
 In order to protect users against accidental deletion of data, PersistentVolumes must be removed by the user prior to the final, automated deletion process.  In each of the project's namespaces, check for the presence of any PVCs.  Consider what data might be in the storage and if it is properly backed up, if needed.  You may need to check with colleagues to be sure that the data can be safely removed.
