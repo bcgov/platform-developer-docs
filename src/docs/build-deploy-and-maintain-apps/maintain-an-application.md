@@ -21,7 +21,7 @@ sort_order: 3
 ---
 
 # Maintain an application
-Last updated: **August 14, 2023**
+Last updated: **October 17, 2023**
 
 We've covered the best practices for [building](/build-an-application/) and [deploying](/deploy-an-application/) applications. Now, let's focus on essential steps for ongoing application management in the OpenShift environment.
 
@@ -458,9 +458,9 @@ The changes and the resulting loss of expertise have a significant impact on the
 
 When a new member joins your team, they should go through a similar onboarding process as any other person joining the OpenShift platform. Along with getting familiar with the specific application(s) supported by their new team, they should also:
 
-* Attend [OpenShift 101](https://digital.gov.bc.ca/cloud/private/support/openshift-101/) and [OpenShift 201](https://digital.gov.bc.ca/cloud/private/support/openshift-201/) training
-* Go through the [onboarding process](https://digital.gov.bc.ca/cloud/public/onboard/) which can be done with your team's Product owner or by scheduling a meeting with a member of the Platform team. 
-* Join the community on [Rocket.Chat](/steps-to-join-rocketchat/), [Stack Overflow](https://digital.gov.bc.ca/cloud/private/support/#platform) and our [Platform Community Meetups](https://digital.gov.bc.ca/cloud/private/about-us/#stay)
+* Attend [OpenShift 101](https://digital.gov.bc.ca/cloud/services/private/support/openshift-101/) and [OpenShift 201](https://digital.gov.bc.ca/cloud/services/private/support/openshift-201/) training
+* Go through the [onboarding process](https://digital.gov.bc.ca/cloud/services/private/onboard/) which can be done with your team's Product owner or by scheduling a meeting with a member of the Platform team. 
+* Join the community on [Rocket.Chat](/steps-to-join-rocketchat/), [Stack Overflow](https://digital.gov.bc.ca/cloud/services/private/support/#community) and our [Platform Community Meetups](https://digital.gov.bc.ca/cloud/services/private/about-us/#stay)
 * [Obtain access](https://digital.gov.bc.ca/cloud/private/support/) to all relevant namespaces, repositories and other services. Please go to the section: Report and incident > Common platform requests section.  Remember to also update the [Product Registry](https://registry.developer.gov.bc.ca/login), if needed. 
 
 ### Managing team member departures 
@@ -484,6 +484,7 @@ It is also important to keep the Platform Services [Product Registry](https://re
 ## Related pages
 - [Build an application](/build-an-application/)
 - [Deploy an application](/deploy-an-application/)
+- [Retire an application](/retire-an-application/)
 - [Rocket.Chat channel descriptions](/rocketchat-channel-descriptions/) 
 - [Automatically scaling pods with the horizontal pod autoscaler](https://docs.openshift.com/container-platform/latest/nodes/pods/nodes-pods-autoscaling.html)
 -  [High availability database clusters](/high-availability-database-clusters/)
