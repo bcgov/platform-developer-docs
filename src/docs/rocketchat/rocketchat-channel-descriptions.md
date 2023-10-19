@@ -21,7 +21,7 @@ sort_order: 3
 ---
 
 # Rocket.Chat channel descriptions
-Last updated: **July 10, 2023**
+Last updated: **October 19, 2023**
 
 Rocket.Chat is the main communication channel for platform support. Learn about some of the Rocket.Chat channels you have access to, and what they’re used for. 
 
@@ -124,7 +124,7 @@ When naming a team channel, make sure you include your team’s name and the top
 ---
 ---
 ## Related pages
-- [Steps to join Rocket.Chat](https://docs.developer.gov.bc.ca/steps-to-join-rocketchat/)
-- [Rocket.Chat etiquette](https://docs.developer.gov.bc.ca/rocketchat-etiquette/)
-- [Get help in Rocket.Chat](https://docs.developer.gov.bc.ca/get-help-in-rocketchat/)
+- [Steps to join Rocket.Chat](/join-bc-rocket-chat/)
+- [Rocket.Chat etiquette](/rocketchat-etiquette/)
+- [Get help in Rocket.Chat](/get-help-in-rocketchat/)
 - [Official Rocket.Chat documentation](https://docs.rocket.chat/)
