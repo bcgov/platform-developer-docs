@@ -45,7 +45,7 @@ For instance, ensure your team knows about data retention policies for your appl
 * Do you have to keep your app's data for a specific time? If yes, where do you plan to store it? 
 * If the data needs to be accessed post-application shutdown, how do you intend to do that? 
 
-Consider these questions for any policy or law that might apply to your application after it's shut down. If you're uncertain about applicable policies or legislation, please be sure to contact your ministry IMB.
+Consider these questions for any policy or law that might apply to your application after it's shut down. If you're uncertain about applicable policies or legislation, please be sure to contact your ministry IMB.  Some key contacts for this purpose are your [Ministry Information Security Officer (MISO)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/information-security-policy-and-guidelines/role-of-miso), [Ministry Privacy Officer (MPO)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/privacy/resources/privacy-officers) and [Ministry Records Officer (MRO)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/records-management/records-contacts/ministries).
 
 ### Communication
 Before shutting down your application, inform stakeholders and users about the shutdown plans.
