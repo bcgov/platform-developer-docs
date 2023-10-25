@@ -133,7 +133,7 @@ Please connect with your ministry security and privacy specialists to complete t
 Here, we maintain a listing of all products with deployments on each OpenShift cluster. 
 ![Platform Product Registry example view](../../images/platform-product-registry-example-view.jpg)
 
-https://registry.developer.gov.bc.ca/public-landing?redirect=/dashboard
+https://registry.developer.gov.bc.ca/
 
 While access to the registry is currently limited to the OpenShift Platform Services team (full view) and Product Owners/Technical Leads (limited view), we are working on creating roles for Ministry security staff to consume as well.  Until then, you can contact PlatformServicesTeam@gov.bc.ca for details.
 
