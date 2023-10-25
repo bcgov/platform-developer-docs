@@ -26,10 +26,11 @@ There are a number of tools available to developers working on the OpenShift pla
 
 ## On this page
 
-- [OpenShift Platforrm Security](#openshift-platform-security)
+- [OpenShift Platform Security](#openshift-platform-security)
 - [Privacy](#privacy)
 - [Critical Systems Standard](#critical-systems-standard)
 - [Platform Tools Security Assessments](#platform-tools-security-assessments)
+- [STRA and PIA Requirements for Apps](#app-stra-pia)
 - [Platform Product Registry](#platform-product-registry)
 - [Communications](#communications)
 - [Access Management](#access-management)
@@ -114,6 +115,15 @@ The following security assessments are ***planned***:
 - Platform Security Dashboard
 
 For specifics, please contact the platform services team at PlatformServicesTeam@gov.bc.ca.
+
+------
+### <a name="app-stra-pia"></a>STRA and PIA Requirements for Apps
+
+Product teams are responsible for completing a [Security Threat and Risk Assessment (STRA)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/privacy/privacy-impact-assessments) and [Privacy Impact Assessment (PIA)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/privacy/privacy-impact-assessments) for their apps developed and/or hosted on the OpenShift platform.  This requirement is highlighted as part of the [Memorandum of Understanding](https://digital.gov.bc.ca/cloud/services/private/onboard/) agreed to as part of onboarding to the platform, under the **Product Team Responsibilites** section.
+
+Please connect with your ministry security and privacy specialists to complete the STRA and PIA for your product.
+- [Ministry Information Security Officer (MISO)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/information-security-policy-and-guidelines/role-of-miso)
+- [Ministry Privacy Officer (MPO)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/privacy/resources/privacy-officers) 
 
 ------
 ### <a name="platform-product-registry"></a>Platform Product Registry
@@ -218,6 +228,7 @@ Developer access can be granted by request.  Requests must include the following
 Links:
 - https://acs.developer.gov.bc.ca
 - https://www.redhat.com/en/technologies/cloud-computing/openshift/advanced-cluster-security-kubernetes
+- https://redhat-scholars.github.io/acs-workshop/acs-workshop/index.html (workshop)
 
 **XRay:**
 
@@ -322,8 +333,7 @@ Retention is set as follows:
 - System, Container logs - 2 months
 - Audit logs - 13 months
 
-We are currently working on Azure AD integration (via KeyCloak) and user role mapping based on OpenShift namespace access.
-This activity has paused for the time being but will be re-started in the new year.
+Please connect with Security Operations if you wish to have access to your product's logs through the SIEM.  If you need contact information, please request through PlatformServicesTeam@gov.bc.ca.
 
 **Uptime.com**
 
@@ -365,7 +375,7 @@ These resources are available:
 
 **GitHub Apps**
 
-Teams may request GitHub apps to be associated with their own or all projects in a GitHub organization.  These requests are reviewed by a platform administrator for validity and scope.  These are also shared with Ministry security staff to ensure they are acceptable for connection.
+Teams may request GitHub apps to be associated with their own or all projects in a GitHub organization.  These requests are reviewed by a the Developer Experience team for validity and scope.  These are also shared with Ministry security staff to ensure they are acceptable for connection.
 
 **GitHub Enterprise**
 
