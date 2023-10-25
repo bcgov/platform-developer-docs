@@ -53,13 +53,15 @@ There are a number of tools available to developers working on the OpenShift pla
 ## Tools & Capabilities
 ### <a name="openshift-platform-security"></a>OpenShift Platform Security
 
-Service definition - Silver/Gold - https://cloud.gov.bc.ca/private-cloud/our-services-in-private-cloud-paas/get-started-with-the-private-cloud-paas/
+[What is the Private Cloud OpenShift Platform?](https://digital.gov.bc.ca/cloud/services/private/intro/)
 
 Our **_Silver Service_** is our standard DevOps platform offering, with on-cluster resiliency based on application design.
 
-Our **_Gold Service_** is our enhanced DevOps platform offering, with replication to a secondary cluster for disaster fail-over purposes.  
+Our **_Gold Service_** is an enhanced DevOps platform offering, with replication to a secondary cluster for disaster fail-over purposes.  
 
-Please take note of the [**_Shared Responsibility Model_**](https://cloud.gov.bc.ca/private-cloud/your-product-team-in-the-private-cloud-paas/our-shared-responsibilities/).  While the Platform Services Team manages infrastructure, OpenShift Container Platform and the Platform critical services as part of the Private Cloud PaaS, the Product Team bears the responsibility for the functionality and operations of their application(s) hosted on the Platform.  
+Our **_Emerald Service_** is an enhanced DevOps platform offering, with strict software defined networking (SDN) based on workload security labeling.  This services allows for easier integration with legacy systems and virtual machines (VMs).
+
+Please take note of the [**_Shared Responsibility Model_**](https://digital.gov.bc.ca/cloud/services/private/onboard/) breakdown within the Memorandum of Understanding (MoU).  While the Platform Services Team manages infrastructure, OpenShift Container Platform and the Platform critical services as part of the Private Cloud PaaS, the Product Team bears the responsibility for the functionality and operations of their application(s) hosted on the Platform.  
 
 Specific details on OpenShift specific security controls can be found here:
 
@@ -106,7 +108,7 @@ Many of the platform tools have ***completed*** security assessments.  These inc
 - Platform Product Registry (v2)
 - GitHub Enterprise
 
-- 1Password (SoAR complete, Cloud security schedule review complete) - not to be used corporately due to no background checks for staff/contractors
+- 1Password (SoAR complete, Cloud security schedule review complete) - was previously discouraged corporately due to no background checks for staff/contractors, but this has since changed.  Further review required to support use.
 
 The following security assessments are ***planned***:
 - Cert Manager for OpenShift
@@ -139,7 +141,7 @@ While access to the registry is currently limited to the OpenShift Platform Serv
 ### <a name="communications"></a>Communications
 
 Community sharing, alerts and discussions take place on Rocket Chat, which we host as an app on OpenShift.  Authentication via IDIR or GitHub (in BCGov org or invited by an existing member).
-- https://cloud.gov.bc.ca/private-cloud/support-and-community/stay-connected/
+- https://docs.developer.gov.bc.ca/join-bc-rocket-chat/
 - https://just-ask.developer.gov.bc.ca/
 
 #### Mautic
@@ -169,10 +171,10 @@ Cluster roles are managed either in private GitHub repositories (in the bcgov-c 
 We are investigating third party tools to help improve the user management experience.
 
 Platform Services Roles and Responsibilities can be found here:
-- https://cloud.gov.bc.ca/private-cloud/your-product-team-in-the-private-cloud-paas/our-shared-responsibilities/
+- https://digital.gov.bc.ca/cloud/services/private/onboard/
 
 The Platform Services team maintains an Access Control Policy for all platform tools.  
-- https://cloud.gov.bc.ca/private-cloud/access-control-policy-openshift-and-platform-tools/
+- https://digital.gov.bc.ca/cloud/services/private/internal-resources/policy/
 
 ------
 ### <a name="kubernetes-network-policies"></a>Kubernetes Network Policies (KNPs)
@@ -227,6 +229,7 @@ Developer access can be granted by request.  Requests must include the following
 
 Links:
 - https://acs.developer.gov.bc.ca
+- https://digital.gov.bc.ca/cloud/services/private/products-tools/cluster-security/
 - https://www.redhat.com/en/technologies/cloud-computing/openshift/advanced-cluster-security-kubernetes
 - https://redhat-scholars.github.io/acs-workshop/acs-workshop/index.html (workshop)
 
@@ -276,7 +279,7 @@ This 'secrets' store should actually only be used for configurations.  Values ar
 **Vault:**
 
 The preferred secrets management tool for team use on OpenShift.
-- https://cloud.gov.bc.ca/private-cloud/our-products-in-the-private-cloud-paas/vault-secrets-management/
+- https://digital.gov.bc.ca/cloud/services/private/products-tools/vault/
 - [Vault secrets management service](/vault-secrets-management-service/)
 - [Vault getting started guide](/vault-getting-started-guide/)
 
@@ -322,7 +325,7 @@ This tool provides a more wholistic view of logs for an application or at the pl
 **Sysdig Monitor:**
 
 This tool allows our platform admins and platform teams to build monitoring dashboards.
-- https://cloud.gov.bc.ca/private-cloud/our-products-in-the-private-cloud-paas/monitoring-with-sysdig/
+- https://digital.gov.bc.ca/cloud/services/private/products-tools/sysdig/
 - [Onboarding to application monitoring with Sysdig](/sysdig-monitor-onboarding/)
 - https://app.sysdigcloud.com/#/login
 
@@ -338,7 +341,6 @@ Please connect with Security Operations if you wish to have access to your produ
 **Uptime.com**
 
 This tools help us to observe platform service availability:
-- https://cloud.gov.bc.ca/private-cloud/our-services-in-private-cloud-paas/
 - https://status.developer.gov.bc.ca/
 
 ------
@@ -444,14 +446,13 @@ Some teams have decided to host PCI-scoped applications on-prem (non-OpenShift) 
 The platform services team provides training to onboarding teams, as well as support for issues experienced.  Ministry staff that work with devops teams are also encouraged to attend training.
 
 ***Training:***
-- https://cloud.gov.bc.ca/private-cloud/support-and-community/platform-training-and-resources/openshift-101/
-- https://cloud.gov.bc.ca/private-cloud/support-and-community/platform-training-and-resources/openshift-201/
+- https://digital.gov.bc.ca/cloud/services/private/support/#platform
+- https://digital.gov.bc.ca/cloud/services/private/support/openshift-101/
+- https://digital.gov.bc.ca/cloud/services/private/support/openshift-201/
 - https://github.com/bcdevops/devops-platform-workshops
 
 ***Support:***
-- https://cloud.gov.bc.ca/private-cloud/support-and-community/how-to-get-support-or-help/
-- https://cloud.gov.bc.ca/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/
-- https://cloud.gov.bc.ca/private-cloud/support-and-community/platform-training-and-resources/how-to-videos-and-demos/
+- https://digital.gov.bc.ca/cloud/services/private/support/
 - Various Rocket Chat channels
 
 **App security self assessment:**
