@@ -22,7 +22,7 @@ sort_order: 1
 
 
 # Build an application 
-Last updated: **July 7, 2023**
+Last updated: **October 17, 2023**
 
 This document outlines the best practices for building applications on OpenShift.  It presents a step-by-step guide that will assist you in creating efficient applications. Overall, this page will provide a comprehensive resource to equip your team with the knowledge, resources  and techniques required to successfully develop applications on the OpenShift Platform.
 
@@ -172,10 +172,12 @@ We also have access to the RedHat container registry, which serves as a private 
 ---
 ---
 ## Related pages
-- [Deploy an application](https://docs.developer.gov.bc.ca/deploy-an-application/)
+- [Deploy an application](/deploy-an-application/)
+- [Maintain an application](/maintain-an-application/)
+- [Retire an application](/retire-an-application/)
 - [B.C. Government DevOps OpenShift Quickstart demo](https://github.com/bcgov/quickstart-openshift)
-- [Training from the Platform Services team](https://docs.developer.gov.bc.ca/training-from-the-platform-services-team/)
+- [Training from the Platform Services team](/training-from-the-platform-services-team/)
 - [Template for building application: Quick start OpenShift ](https://github.com/bcgov/quickstart-openshift)
 - [Template for Tekton pipeline repo](https://github.com/bcgov/pipeline-templates/tree/main/tekton#tekton-pipelines)
-- [Image and artifact management with Artifactory](https://docs.developer.gov.bc.ca/image-artifact-management-with-artifactory/)
+- [Image and artifact management with Artifactory](/image-artifact-management-with-artifactory/)
 

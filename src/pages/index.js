@@ -88,7 +88,11 @@ const IndexPage = ({ location }) => {
                   Maintain an application 
                 </Link>
               </li>
-              <li>Retire an application (coming soon)</li>
+              <li>
+              <Link to={"retire-an-application/"}>
+              Retire an application
+              </Link>  
+              </li>
             </ul>
           </Card>
         </Grid>
