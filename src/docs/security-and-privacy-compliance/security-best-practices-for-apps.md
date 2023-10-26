@@ -15,7 +15,7 @@ author: Matt Spencer
 
 content_owner: Nick Corcoran
 
-sort_order: 1
+sort_order: 2
 ---
 
 # Security best practices for apps
