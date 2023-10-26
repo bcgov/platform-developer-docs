@@ -270,6 +270,15 @@ spec:
 
 Looking for a simplified way to setup the secret environment variables? Take a look [at this example](https://stackoverflow.developer.gov.bc.ca/questions/1060/1061#1061).
 
+Do you reach a resource quota limit? Configure the Vault Agent container's requests and limits in the [annotations](https://developer.hashicorp.com/vault/docs/platform/k8s/injector/annotations).
+
+```yaml
+vault.hashicorp.com/agent-requests-cpu: '10m'
+vault.hashicorp.com/agent-limits-cpu: '50m'
+vault.hashicorp.com/agent-requests-mem: '25Mi'
+vault.hashicorp.com/agent-limits-mem: '100Mi'
+```
+
 
 **Part 2 - Vault Service Account**
 
