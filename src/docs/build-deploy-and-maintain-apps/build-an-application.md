@@ -22,7 +22,7 @@ sort_order: 1
 
 
 # Build an application 
-Last updated: **July 7, 2023**
+Last updated: **October 17, 2023**
 
 This document outlines the best practices for building applications on OpenShift.  It presents a step-by-step guide that will assist you in creating efficient applications. Overall, this page will provide a comprehensive resource to equip your team with the knowledge, resources  and techniques required to successfully develop applications on the OpenShift Platform.
 
@@ -173,7 +173,9 @@ We also have access to the RedHat container registry, which serves as a private 
 ---
 ---
 ## Related pages
-- [Deploy an application](../build-deploy-and-maintain-apps/deploy-an-application.md)
+- [Deploy an application](/deploy-an-application/)
+- [Maintain an application](/maintain-an-application/)
+- [Retire an application](/retire-an-application/)
 - [B.C. Government DevOps OpenShift Quickstart demo](https://github.com/bcgov/quickstart-openshift)
 - [Training from the Platform Services team](../training-and-learning/training-from-the-platform-services-team.md)
 - [Template for building application: Quick start OpenShift ](https://github.com/bcgov/quickstart-openshift)
