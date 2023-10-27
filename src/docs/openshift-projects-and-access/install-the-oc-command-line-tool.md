@@ -21,7 +21,7 @@ sort_order: 4
 ---
 
 # Install the oc command line tool
-Last updated: **May 31, 2023**
+Last updated: **Oct 5, 2023**
 
 Users can interact with OpenShift via the `oc` command line tool. This can be installed on your local machine, or accessed via the web console. It is important to keep your version of `oc` up to date to match the version of `oc` on the cluster. 
 
@@ -87,11 +87,9 @@ In the [OpenShift 101 training](../training-and-learning/training-from-the-platf
 
 4. During the Ubuntu install process, you'll be prompted to setup a new username and password for the Ubuntu installation. Please make sure to remember this new username and password as you will need it later. 
 
-5. You may need to check and set up your connection to github in your new Ubuntu environment, you can follow [these instructions](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/checking-for-existing-ssh-keys) to check, generate, add and test your github SSH key. 
-
 ### Install homebrew
 
-From within your WSL terminal, install homebrew. 
+From within your WSL terminal, install homebrew. You may need to disconnect from the VPN/BC Gov network in order to complete these steps:
 
 1. Install [homebrew](https://brew.sh/) by running `/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"` in your WSL terminal. You'll be prompted for the sudo password that you created earlier. 
 2. Be sure to follow the steps in the output to add homebrew to your PATH. 
