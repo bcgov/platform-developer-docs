@@ -229,7 +229,7 @@ spec:
       annotations:
         # 1. Vault injector configuration goes here, inside the template.
         vault.hashicorp.com/agent-inject: 'true'
-        vault.hashicorp.com/agent-inject-token: 'true'
+        vault.hashicorp.com/agent-inject-token: 'false' # set to 'true' if you are going to connect and query vault from your application
         vault.hashicorp.com/agent-pre-populate-only: 'true' # this makes sure the secret vault will only change during pod restart
         vault.hashicorp.com/auth-path: auth/k8s-silver  # This was tricky.  Be sure to use k8s-silver, k8s-gold, or k8s-golddr
         vault.hashicorp.com/namespace: platform-services
