@@ -5,6 +5,7 @@ nav:
   - Build an application: docs/build-deploy-and-maintain-apps/build-an-application.md
   - Deploy an application: docs/build-deploy-and-maintain-apps/deploy-an-application.md
   - Maintain an application: docs/build-deploy-and-maintain-apps/maintain-an-application.md
+  - Retire an application: docs/build-deploy-and-maintain-apps/retire-an-application.md
   - Image and artifact management with Artifactory: docs/build-deploy-and-maintain-apps/image-artifact-management-with-artifactory.md
   - Push and pull artifacts in Artifactory: docs/build-deploy-and-maintain-apps/push-pull-artifacts-artifactory.md
   - Set up an Artifactory project and repository: docs/build-deploy-and-maintain-apps/setup-artifactory-project-repository.md

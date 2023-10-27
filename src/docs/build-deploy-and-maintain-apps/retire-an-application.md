@@ -159,6 +159,6 @@ You may have resources that are indirectly connected to your application, such a
 ---
 ---
 ## Related pages 
-- [Build an application](/build-an-application/)
-- [Deploy an application](/deploy-an-application/)
-- [Maintain an application](/maintain-an-application/)
+- [Build an application](../build-deploy-and-maintain-apps/build-an-application.md)
+- [Deploy an application](../build-deploy-and-maintain-apps/deploy-an-application.md)
+- [Maintain an application](../build-deploy-and-maintain-apps/maintain-an-application.md)

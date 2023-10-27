@@ -252,7 +252,7 @@ OpenShift seamlessly integrates with Tekton, empowering you to create robust CI/
 
 To efficiently manage deployments across clusters, OpenShift provides ArgoCD as an operator. It follows the practice of using Git as a 'source of truth' for declarative infrastructure and applications. ArgoCD follows the best practice of using Git as the "source of truth" for declarative infrastructure and applications.
 
-Explore more about [ArgoCD](https://github.com/BCDevOps/openshift-wiki/blob/b1a4e6db91932fd3f29705a5c8ee44983abf8763/docs/ArgoCD/argocd_info.md)  along with [CI/CD pipeline templates](/ci-cd-pipeline-templates/).
+Explore more about [ArgoCD](https://github.com/BCDevOps/openshift-wiki/blob/b1a4e6db91932fd3f29705a5c8ee44983abf8763/docs/ArgoCD/argocd_info.md)  along with [CI/CD pipeline templates](../automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md).
 
 ### 2. Version Management in CD
 
@@ -262,11 +262,11 @@ OpenShift seamlessly integrates with popular version control systems, such as Gi
 
 Image tags offer a flexible reference to images that can be modified over time, facilitating efficient implementation of versioning strategies, including semantic versioning.
 
-Nevertheless, it is crucial to exercise caution when managing mutable tags. For detailed insights into best practices for image stream and tag management in OpenShift, please refer to the documentation on [best practices for managing image streams](/best-practices-for-managing-image-streams/).
+Nevertheless, it is crucial to exercise caution when managing mutable tags. For detailed insights into best practices for image stream and tag management in OpenShift, please refer to the documentation on [best practices for managing image streams](../build-deploy-and-maintain-apps/imagestreams.md).
 
 ### 3. Backup and Restoration in a CD Context
 
-Regularly [backing up your application data](/recovery-responsibilities/) is crucial for safeguarding against potential risks. In a CD context, you can automate and integrate backup processes into your deployment pipeline, ensuring that backups stay up to date with any changes made. 
+Regularly [backing up your application data](../automation-and-resiliency/namespace-recovery-and-responsibilities.md) is crucial for safeguarding against potential risks. In a CD context, you can automate and integrate backup processes into your deployment pipeline, ensuring that backups stay up to date with any changes made. 
 
 These backups serve as reliable resources for effective restoration in the event of data loss or a disaster. OpenShift offers diverse strategies for backup and restoration to cater to your specific requirements.
 
@@ -284,13 +284,13 @@ For a deep dive into persistent storage, we recommend referring to the OpenShift
 
 Persistent Volume Claims (PVCs) empower users to request storage with specific size and access mode requirements. By utilizing PVCs within your applications, you can ensure data persistence across different deployments or instances of your application. PVCs serve as a reliable mechanism for maintaining data continuity and integrity in OpenShift.
 
-A comprehensive guide on how to use PVCs in your deployments can be found on the [platform storage documentation](/platform-storage/).
+A comprehensive guide on how to use PVCs in your deployments can be found on the [platform storage documentation](../platform-architecture-reference/platform-storage.md).
 
 ### 3. Backing Up and Restoring Data
 
 Data loss is a critical issue that needs attention in any environment, including OpenShift. To address this concern, the B.C. government has developed the  `backup-container` application specifically for backing up and restoring data within OpenShift.   It's designed to provide a consistent way to back up the state of applications running in OpenShift. 
 
-You can learn more about this from the [backup-container GitHub page](https://github.com/bcgov/backup-container-compliance-enforcement). Also refer to the disaster recovery documentation [Persistent volumes section](/recovery-responsibilities/#persistent-volumes) that we mentioned eariler. 
+You can learn more about this from the [backup-container GitHub page](https://github.com/bcgov/backup-container-compliance-enforcement). Also refer to the disaster recovery documentation [Persistent volumes section](../automation-and-resiliency/namespace-recovery-and-responsibilities.md#persistent-volumes) that we mentioned eariler. 
 
 ---
 ## Securing the deployed application
@@ -308,7 +308,7 @@ Effective access management is a crucial aspect of securing your application, an
 
 This granular control empowers you to define and regulate who has access to what, enhancing the overall security of your application deployment in OpenShift. 
 
-For more guidance, please read this [OpenShift Access Control Guide](/grant-user-access-openshift/).
+For more guidance, please read this [OpenShift Access Control Guide](../openshift-projects-and-access/grant-user-access-openshift.md).
 
 The Registry app is a valuable self-service tool that provides a UI for managing project access within our OpenShift Clusters. This app need IDIR authentification and can be access through [here](https://registry.developer.gov.bc.ca/).
 
@@ -340,6 +340,6 @@ Happy deploying!
 ---
 
 ## Related pages
-- [Build an application](/build-an-application/)
-- [Maintain an application](/maintain-an-application/)
-- [Retire an application](/retire-an-application/)
+- [Build an application](../build-deploy-and-maintain-apps/build-an-application.md)
+- [Maintain an application](../build-deploy-and-maintain-apps/maintain-an-application.md)
+- [Retire an application](../build-deploy-and-maintain-apps/retire-an-application.md)
