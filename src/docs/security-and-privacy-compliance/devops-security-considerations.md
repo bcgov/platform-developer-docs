@@ -86,9 +86,10 @@ Have a look at the [B.C. government information security classification](https:/
 ### Critical Systems Standard
 
 <!-- ### Nick, can you write more about this? if we have not obtained it, I recommend removing it as we do not have a real clarification of time for readers when it comes to understanding what are the final stages and how long they will be that way for  -->
+<!-- ### Pilar, I updated w/ some details on what the standard is and removed the timeline.  We recently shared all docs w/ the CITZ security team for review. -->
+Any IM/IT service, system, or infrastructure component that is deemed necessary by the SYSTEM OWNER to deliver a MISSION CRITICAL FUNCTION, is a critical system for the purposes of this standard. 
 
-We are very close to obtaining critical systems standard compliance.  
-Documentation is in final stages of review for submission. 
+We have completed all required documentation for the Critical Systems Standard, which are currently under review with the CITZ Security team.
 
 ## Platform tools security assessments
 
@@ -114,13 +115,7 @@ Many of the platform tools have **completed** security assessments.  These inclu
 * 1Password (SoAR complete, Cloud security schedule review complete) - was previously discouraged corporately due to no background checks for staff/contractors, but this has since changed.  Further review required to support use.
 
 <!-- ### Nick, same example do we need to provide **planned** options here with no direct timeline? If useful, let's keep it, if not how do we ensure is updated?  -->
-
-The following security assessments are **planned**, including: 
-
-- Cert Manager for OpenShift
-- Kyverno
-- GitGuardian
-- Platform Security Dashboard
+<!-- ### Pilar, I have removed the 'planned' STRA items -->
 
 If you cannot find a tool from the above list and/or require specific information please contact the [platform services team](mailto:PlatformServicesTeam@gov.bc.ca).
 
@@ -165,7 +160,8 @@ Our OpenShift access is managed through the OpenShift SSO Service, currently usi
 * More information on using the self-service app to integrate with B.C. government approved login services. [Request SSO Integration](https://bcgov.github.io/sso-requests)
 
 <!-- ### Nick, below, "we are in the process" (via Azure AD) has this been updated? If not, it is best to remove something that may or may not happen in the future  -->
-GitHub has been the primary authentication to date on OpenShift, however we are in the process of introducing IDIR (via Azure AD).  Both of these options require an account with 2FA/MFA enabled.  
+<!-- ### Pilar, updated to indicate current state -->
+Government users and contractors may login to OpenShift clusters with a GitHub or IDIR account (depending on which cluster they choose).  Both of these options require an account with 2FA/MFA enabled.  
 
 * GitHub - KLAB, CLAB, Silver, Gold, GoldDR  
 * IDIR - All clusters (above + KLAB2, Emerald)
@@ -271,29 +267,25 @@ Vault is the preferred secrets management tool to use on OpenShift.
 
 ## GitOps/Cluster configuration management
 
-Argo CD provides a GitOps capability for sync'ing a Git repository with an OpenShift configuration (platform or application).
-- [Argo CD usage](/argo-cd-usage/)
+Argo CD (integrated into OpenShift as the GitOps Operator) provides a GitOps capability for sync'ing a Git repository with an OpenShift configuration (platform or application).
+<!-- ### Pilar, removed link to Argo-cd-usage-->
 
 <!-- ### Nick, below, "we are in the process" has this been updated? If not, it is best to remove something that may or may not happen in the future  -->
-We are in the process of testing out the GitOps Operator, based on ArgoCD, that is integrated into OpenShift.  This may replace (partially or completely) our custom ArgoCD implementation.
+<!-- ### Pilar, comment on argoCD removed-->
 
 ## Application Programmable Interface (API) management
 
 The Data BC team hosts an API Gateway for use by other government clients. 
 
 <!-- ### Please review KONG CE - link does not exist-->
+<!-- ### KONG CE link replaced with link to API Program Services -->
 Details can be found here:
 
-* https://developer.gov.bc.ca/API-Gateway-(powered-by-Kong-CE)
+* [B.C. government API Program Services](https://www2.gov.bc.ca/gov/content/data/about-data-management/databc/databc-products-services/api-management)
 
 * [B.C. government API guidelines](https://developer.gov.bc.ca/BC-Government-API-Guidelines)
 
-## Application resource tuning advisor and app assessment tool
-<!-- ### Please provide more details on what these links are for or what they are used for-->
-
-* [Resource Tuning Advisor](https://github.com/BCDevOps/resource-tuning-advisor-app) 
-
-* [App Assessment Tool](https://github.com/bcgov/AppAssessment)
+<-- ### Removed Application resource tuning advisor and app assessment tool section as I believe these are no longer maintained -->
 
 ## Logging/Monitoring (EKS, Kibana, Graphana, Sysdig Monitor, SIEM, Uptime, Status)
 
@@ -323,17 +315,19 @@ Retention is set as follows:
 - System, Container logs - 2 months
 - Audit logs - 13 months
 
-Please connect with Security Operations if you wish to have access to your product's logs through the SIEM.  Contact the PlatformServicesTeam@gov.bc.ca.
+Please contact with Security Operations through your MISO if you wish to have access to your product's logs through the SIEM.  
 
 **Uptime.com**
 
-This tools help us to observe platform service availability:
+This tools help us to observe platform service availability.
 
 Check out the [status of the platform](https://status.developer.gov.bc.ca/)
 
 
 ## Backups
 <!-- ### Please provide more details on what these links are for or what they are used for-->
+<!-- ### Updated -->
+Backups help you to recover in the event of a failure or data corruption.  As part of your backup process, you should consider the retention period, and the schedule for testing backups. All backups should be tested regularly.
 
 **OpenShift**
 - [Backup Container](/reusable-services-list/#backup-container)
