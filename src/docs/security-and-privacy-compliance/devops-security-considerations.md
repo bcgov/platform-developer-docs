@@ -22,6 +22,9 @@ sort_order: 1
 Last updated: **October 25, 2023**
 
 <!-- ### Nick, can you please write a small paragraph to explain what this page is about to your readers a paragraph will suffice, thanks -->
+Paranoid that hackers are going to steal or change your stuff?  Me too, so this is what we're doing to help reduce their success rates.
+
+Below you'll find some details on our OpenShift service, compliance activites we have completed, as well as security controls we have in place on our OpenShift implementations.  You'll aso find details on tools to help you secure the products you develop/host on OpenShift.
 
 ## On this page
 * [**DevOps security tools and capabilities**](#devops-security-tools-and-capabilities)
