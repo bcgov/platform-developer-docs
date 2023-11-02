@@ -270,7 +270,7 @@ Details can be found here:
 * [B.C. government API Program Services](https://www2.gov.bc.ca/gov/content/data/about-data-management/databc/databc-products-services/api-management)
 * [B.C. government API guidelines](https://developer.gov.bc.ca/BC-Government-API-Guidelines)
 
-## Logging and monitoring (EKS, Kibana, Graphana, Sysdig Monitor, SIEM, Uptime, Status)
+## Logging and monitoring (ElasticSearch, Kibana, Graphana, Sysdig Monitor, SIEM, Uptime, Status)
 
 The Platform Services team provides a number of tools to help ensure our platform and applications are behaving as expected, while allowing us to investigate anomalies.
 
@@ -358,7 +358,7 @@ Protected C data should be encrypted at rest.
 
   - This is done at [pvc creation time](https://netapp-trident.readthedocs.io/en/stable-v21.07/kubernetes/operations/tasks/backends/ontap/ontap-san/configuration.html?highlight=encryption#configuration-options-for-provisioning-volumes)
   - If data is to be stored in a database, that database should have encryption enabled and keys managed.  
-  - NetApp storage for Emerald is on its own VIP segment – this means it is **not** accessible from other clusters (this is a good thing).
+  - Every cluster storage is on its own VLAN segment – this means they are **not** direclty accessible from other clusters (this is a good thing).
 - Object Storage used **can** be encrypted as part of initial setup.  
  
 **Access Management**
