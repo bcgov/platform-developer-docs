@@ -1,13 +1,13 @@
 ---
-title: B.C. Government OpenShift DevOps Security Considerations
+title: B.C. Government OpenShift DevOps security considerations
 
 slug: devops-security-considerations
 
-description: Learn about DevOps security considerations and tools on the BC Government OpenShift Private Cloud Platform as a Service.
+description: Learn about DevOps security considerations and tools on the B.C. Government OpenShift Private Cloud Platform as a Service.
 
 keywords: security, privacy, secrets, tls, ssl, pipeline, templates, container scanning, STRA, network policies, vault
 
-page_purpose: This page describes the various security tools available on the platform.
+page_purpose: This page describes the various security tools available on the platform helps inform developers and technical leads 
 
 audience: developer, technical lead
 
@@ -18,13 +18,10 @@ content_owner: Nick Corcoran
 sort_order: 1
 ---
 
-# B.C. Government OpenShift DevOps Security Considerations
-Last updated: **October 25, 2023**
+# B.C. Government OpenShift DevOps security considerations
+Last updated: **November 2, 2023**
 
-<!-- ### Nick, can you please write a small paragraph to explain what this page is about to your readers a paragraph will suffice, thanks -->
-Paranoid that hackers are going to steal or change your stuff?  Me too, so this is what we're doing to help reduce their success rates.
-
-Below you'll find some details on our OpenShift service, compliance activites we have completed, as well as security controls we have in place on our OpenShift implementations.  You'll aso find details on tools to help you secure the products you develop/host on OpenShift.
+Through this document you'll find some details on our OpenShift service, completed compliance activities and security controls we have in place on our OpenShift implementations.  You'll aso find details on tools to help you secure the products you develop and/or host on OpenShift.
 
 ## On this page
 * [**DevOps security tools and capabilities**](#devops-security-tools-and-capabilities)
@@ -41,8 +38,7 @@ Below you'll find some details on our OpenShift service, compliance activites we
 * [**Secrets management**](#secrets-management)
 * [**GitOps/Cluster configuration management**](#gitopscluster-configuration-management)
 * [**Application Programmable Interface (API) management**](#application-programmable-interface-api-management)
-* [**Application resource tuning advisor and app assessment tool**](#application-resource-tuning-advisor-and-app-assessment-tool)
-* [**Logging/Monitoring (EKS, Kibana, Graphana, Sysdig Monitor, SIEM, Uptime, Status)**](#loggingmonitoring-eks-kibana-graphana-sysdig-monitor-siem-uptime-status)
+* [**Logging and monitoring (EKS, Kibana, Graphana, Sysdig Monitor, SIEM, Uptime, Status)**](#logging-and-monitoring-eks-kibana-graphana-sysdig-monitor-siem-uptime-status)
 * [**Backups**](#backups)
 * [**Change management**](#change-management)
 * [**DevOps Team recommendations for Protected C data creation, storage and use**](#devops-team-recommendations-for-protected-c-data-creation-storage-and-use)
@@ -85,11 +81,11 @@ Have a look at the [B.C. government information security classification](https:/
 
 ### Critical Systems Standard
 
-<!-- ### Nick, can you write more about this? if we have not obtained it, I recommend removing it as we do not have a real clarification of time for readers when it comes to understanding what are the final stages and how long they will be that way for  -->
-<!-- ### Pilar, I updated w/ some details on what the standard is and removed the timeline.  We recently shared all docs w/ the CITZ security team for review. -->
+<!-- ###  FYI In the future this area may need to be updated and find out if CITZ Security team has reviewed the documentation  -->
+
 Any IM/IT service, system, or infrastructure component that is deemed necessary by the SYSTEM OWNER to deliver a MISSION CRITICAL FUNCTION, is a critical system for the purposes of this standard. 
 
-We have completed all required documentation for the Critical Systems Standard, which are currently under review with the CITZ Security team.
+We have completed all required documentation for the Critical Systems Standard, and currently under review by the  CITZ Security team.
 
 ## Platform tools security assessments
 
@@ -114,9 +110,6 @@ Many of the platform tools have **completed** security assessments.  These inclu
 * GitHub Enterprise
 * 1Password (SoAR complete, Cloud security schedule review complete) - was previously discouraged corporately due to no background checks for staff/contractors, but this has since changed.  Further review required to support use.
 
-<!-- ### Nick, same example do we need to provide **planned** options here with no direct timeline? If useful, let's keep it, if not how do we ensure is updated?  -->
-<!-- ### Pilar, I have removed the 'planned' STRA items -->
-
 If you cannot find a tool from the above list and/or require specific information please contact the [platform services team](mailto:PlatformServicesTeam@gov.bc.ca).
 
 ## STRA and PIA requirements for applications
@@ -127,14 +120,15 @@ This requirement is highlighted as part of the [Memorandum of Understanding](htt
 
 Please connect with your ministry security and privacy specialists to complete the STRA and PIA for your product:
 
-- [Ministry Information Security Officer (MISO)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/information-security-policy-and-guidelines/role-of-miso)
-- [Ministry Privacy Officer (MPO)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/privacy/resources/privacy-officers) 
+* [Ministry Information Security Officer (MISO)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/information-security-policy-and-guidelines/role-of-miso)
+* [Ministry Privacy Officer (MPO)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/privacy/resources/privacy-officers) 
 
 ## Platform Product Registry
 
 The [Platform Product Registry](https://registry.developer.gov.bc.ca/) is a self-serve online tool that allows you to request new products in the B.C. Government Private Cloud PaaS.
 
 Here, we maintain a listing of all products with deployments on each OpenShift cluster. 
+
 ![Platform Product Registry example view](../../images/platform-product-registry-example-view.jpg)
 
 Find out more about the benefits and its use in our [Platform Product Registry information page](https://digital.gov.bc.ca/cloud/services/private/products-tools/registry/)
@@ -159,18 +153,16 @@ Our OpenShift access is managed through the OpenShift SSO Service, currently usi
 * More information on [SSO-Onboarding with KeyCloa - GitHub](https://github.com/bcgov/sso-keycloak/wiki/SSO-Onboarding)
 * More information on using the self-service app to integrate with B.C. government approved login services. [Request SSO Integration](https://bcgov.github.io/sso-requests)
 
-<!-- ### Nick, below, "we are in the process" (via Azure AD) has this been updated? If not, it is best to remove something that may or may not happen in the future  -->
-<!-- ### Pilar, updated to indicate current state -->
 Government users and contractors may login to OpenShift clusters with a GitHub or IDIR account (depending on which cluster they choose).  Both of these options require an account with 2FA/MFA enabled.  
 
 * GitHub - KLAB, CLAB, Silver, Gold, GoldDR  
 * IDIR - All clusters (above + KLAB2, Emerald)
 * [GitHub 2 factor autenthication (2FA)](https://docs.github.com/en/authentication/securing-your-account-with-two-factor-authentication-2fa/configuring-two-factor-authentication) 
-- [IDIR MFA](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security-mfa)
+* [IDIR MFA](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security-mfa)
 
 Cluster roles are managed either in private GitHub repositories in the [bcgov-c org](https://github.com/bcgov) or through direct role bindings within a namespace.
 
-Read about the [Platform Services Roles and Responsibilities](https://digital.gov.bc.ca/cloud/services/private/onboard/)
+Read about the [Platform services roles and responsibilities](https://digital.gov.bc.ca/cloud/services/private/onboard/)
 
 The Platform Services team maintains an Access Control Policy for all platform tools and they can be found in the [internal resources section](https://digital.gov.bc.ca/cloud/services/private/internal-resources/). To access it select Login with Keycloak.
 
@@ -212,7 +204,7 @@ This tool allows us to scan image registries and running containers for image vu
 Scoped access is granted based on identification as a Product Owner or Technical Lead in the OpenShift Product Registry.  
 Developer access can be granted by request.  Requests must include the following:
 - Namespaces
-- Product Owner approval
+- Product owner approval
 
 For further information:
 * [Access ACS](https://acs.developer.gov.bc.ca)
@@ -229,8 +221,8 @@ An add-on capability to Artifactory, XRay scans images and other artifacts for c
 ## Container runtime security
 
 We currently have runtime policies in place for the following using ACS.  These look for things like:
-- Cryto-mining
-- [Integrity monitoring](https://docs.openshift.com/acs/3.66/operating/manage-security-policies.html)
+* Cryto-mining
+* [Integrity monitoring](https://docs.openshift.com/acs/3.66/operating/manage-security-policies.html)
 
 Additionally, OpenShift uses [CoreOS and the CRI-O container engine](https://docs.openshift.com/container-platform/4.10/architecture/architecture-rhcos.html)
 
@@ -267,27 +259,18 @@ Vault is the preferred secrets management tool to use on OpenShift.
 
 ## GitOps/Cluster configuration management
 
-Argo CD (integrated into OpenShift as the GitOps Operator) provides a GitOps capability for sync'ing a Git repository with an OpenShift configuration (platform or application).
-<!-- ### Pilar, removed link to Argo-cd-usage-->
-
-<!-- ### Nick, below, "we are in the process" has this been updated? If not, it is best to remove something that may or may not happen in the future  -->
-<!-- ### Pilar, comment on argoCD removed-->
+Argo CD (integrated into OpenShift as the GitOps Operator) provides a GitOps capability for sync'ing a Git repository with an OpenShift configuration (platform or application)
 
 ## Application Programmable Interface (API) management
 
 The Data BC team hosts an API Gateway for use by other government clients. 
 
-<!-- ### Please review KONG CE - link does not exist-->
-<!-- ### KONG CE link replaced with link to API Program Services -->
 Details can be found here:
 
 * [B.C. government API Program Services](https://www2.gov.bc.ca/gov/content/data/about-data-management/databc/databc-products-services/api-management)
-
 * [B.C. government API guidelines](https://developer.gov.bc.ca/BC-Government-API-Guidelines)
 
-<-- ### Removed Application resource tuning advisor and app assessment tool section as I believe these are no longer maintained -->
-
-## Logging/Monitoring (EKS, Kibana, Graphana, Sysdig Monitor, SIEM, Uptime, Status)
+## Logging and monitoring (EKS, Kibana, Graphana, Sysdig Monitor, SIEM, Uptime, Status)
 
 The Platform Services team provides a number of tools to help ensure our platform and applications are behaving as expected, while allowing us to investigate anomalies.
 
@@ -318,15 +301,12 @@ Retention is set as follows:
 Please contact with Security Operations through your MISO if you wish to have access to your product's logs through the SIEM.  
 
 **Uptime.com**
-
 This tools help us to observe platform service availability.
 
-Check out the [status of the platform](https://status.developer.gov.bc.ca/)
+Review the [status of the platform](https://status.developer.gov.bc.ca/)
 
 
 ## Backups
-<!-- ### Please provide more details on what these links are for or what they are used for-->
-<!-- ### Updated -->
 Backups help you to recover in the event of a failure or data corruption.  As part of your backup process, you should consider the retention period, and the schedule for testing backups. All backups should be tested regularly.
 
 **OpenShift**
@@ -417,9 +397,9 @@ Find more information about the [Advanced Cluster Security](https://acs.develope
 **Backups**
 - For sensitive data backup, ensure they are encrypted.
 
-**Logging and Monitoring**
+**Logging and monitoring**
 
-Ensure that you have adequate log retention to meet requirements based on your business/data needs.  On-cluster retention is 14 days.  
+Ensure that you have adequate log retention to meet requirements based on your business/data needs.  **On-cluster retention is 14 days**. 
 
 All logs are shipped to the OCIO SIEM and retained as follows (OpenShift System – 2 months, OpenShift Audit – 13 months, App/container – 2 months).  
 
@@ -441,7 +421,7 @@ The platform services team provides [training to onboarding teams](https://digit
 
 **Contact**
 
-For all other matters concerning security on the OpenShift Container Platform, please contact the [Platform Services team](mailto:PlatformServicesTeam@gov.bc.ca).
+For all other matters concerning security on the OpenShift Container Platform, please contact the [platform services team](mailto:PlatformServicesTeam@gov.bc.ca).
 
 ---
 ---
