@@ -354,12 +354,10 @@ This is a list of specific considerations for teams creating/storing/using Prote
 Product teams should be aware that any creation/storage/use of Protected C data in any system should only be considered after discussion with Ministry Security Officer (MISO) and Ministry Privacy Officer (MPO).  They may require additional controls to those listed below.
  
 Protected C data should be encrypted at rest. 
-- The NetApp storage appliance used is **not** encrypted at its core, so this means that associate provisioned volume claims (PVCs) are not encrypted by default.  However, it is possible to request an encrypted volume claim.
-
-  - This is done at [pvc creation time](https://netapp-trident.readthedocs.io/en/stable-v21.07/kubernetes/operations/tasks/backends/ontap/ontap-san/configuration.html?highlight=encryption#configuration-options-for-provisioning-volumes)
+- The NetApp storage appliance used is **not** encrypted at its core, so this means that associate provisioned volume claims (PVCs) are not encrypted either.
   - If data is to be stored in a database, that database should have encryption enabled and keys managed.  
   - Every cluster storage is on its own VLAN segment – this means they are **not** direclty accessible from other clusters (this is a good thing).
-- Object Storage used **can** be encrypted as part of initial setup.  
+- The Object Storage buckets **can** be encrypted as part of initial setup.  
  
 **Access Management**
 
