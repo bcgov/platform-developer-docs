@@ -149,7 +149,11 @@ const IndexPage = ({ location }) => {
           <Card>
             <h3>Security and privacy compliance</h3>
             <ul>
-              <li>STRA and PIA for Private Cloud Platform (coming soon)</li>
+              <li>
+                <Link to={"/devops-security-considerations/#stra-and-pia-requirements-for-applications/"}>
+                  STRA and PIA requirements for applications
+                </Link>
+              </li>
               <li>
                 <Link to={"/vault-secrets-management-service/"}>
                   Vault secrets management service
@@ -234,7 +238,6 @@ const IndexPage = ({ location }) => {
                   High availability database clusters
                 </Link>
               </li>
-              <li>API guidelines (coming soon)</li>
             </ul>
           </Card>
           <Card>

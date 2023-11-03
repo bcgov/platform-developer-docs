@@ -82,13 +82,13 @@ If you’ve been following instructions on a StackOverflow thread, provide a lin
 What are you asking the community for? Do you want a solution to the problem? A link to documentation you can use? An alternative way to complete a task? Let the community know what kind of support you’re looking for.
 
 ## Posting a question
-Send your message in the appropriate Rocket.Chat channel and check back often to see if you’ve gotten a reply. Read the [Rocket.Chat etiquette page](https://docs.developer.gov.bc.ca/rocketchat-etiquette/) for more information on how to use Rocket.Chat, and what to do if you don’t get a satisfactory answer.
+Send your message in the appropriate Rocket.Chat channel and check back often to see if you’ve gotten a reply. Read the [Rocket.Chat etiquette page](/rocketchat-etiquette/) for more information on how to use Rocket.Chat, and what to do if you don’t get a satisfactory answer.
 
 
 ---
 ---
 ## Related pages
-- [Steps to join Rocket.Chat](https://docs.developer.gov.bc.ca/steps-to-join-rocketchat/)
-- [Rocket.Chat etiquette](https://docs.developer.gov.bc.ca/rocketchat-etiquette/)
-- [Rocket.Chat channel descriptions](https://docs.developer.gov.bc.ca/rocketchat-channel-descriptions/)
+- [Join the B.C. Government Rocket.Chat](/join-bc-rocket-chat/)
+- [Rocket.Chat etiquette](/rocketchat-etiquette/)
+- [Rocket.Chat channel descriptions](/rocketchat-channel-descriptions/)
 - [Official Rocket.Chat documentation](https://docs.rocket.chat/)

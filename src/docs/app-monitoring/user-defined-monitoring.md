@@ -204,8 +204,8 @@ Sysdig alert example;
 
 For detail steps, please read the documents below:
 
-- [Checking sysdig teams and dashboards](https://docs.developer.gov.bc.ca/sysdig-monitor-setup-team/#review-your-monitoring-dashboards)
-- [Creating sysdig alert](https://docs.developer.gov.bc.ca/sysdig-monitor-create-alert-channels/#creating-an-alert)
+- [Checking sysdig teams and dashboards](/sysdig-monitor-setup-team/#review-your-monitoring-dashboards)
+- [Creating sysdig alert](/sysdig-monitor-create-alert-channels/#creating-an-alert)
 
 ## Monitor user-defined projects using Alertmanager
 
@@ -214,9 +214,9 @@ Technical preview for our Openshift Clusters (OCP 4.10). It is possible to set u
 ## References
 
 - [Sysdig - Automatically scraping any Kubernetes pods](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations/working-with-integrations/custom-integrations/collect-prometheus-metrics/#agent-compatibility)
-- [Sysdig - Use Service Discovery to import application metrics endpoints](https://docs.developer.gov.bc.ca/sysdig-monitor-set-up-advanced-functions/#use-service-discovery-to-import-application-metrics-endpoints)
-- [Sysdig - Checking sysdig teams and dashboards](https://docs.developer.gov.bc.ca/sysdig-monitor-setup-team/#review-your-monitoring-dashboards)
-- [Sysdig - Creating sysdig alert](https://docs.developer.gov.bc.ca/sysdig-monitor-create-alert-channels/#creating-an-alert)
+- [Sysdig - Use Service Discovery to import application metrics endpoints](/sysdig-monitor-set-up-advanced-functions/#use-service-discovery-to-import-application-metrics-endpoints)
+- [Sysdig - Checking sysdig teams and dashboards](/sysdig-monitor-setup-team/#review-your-monitoring-dashboards)
+- [Sysdig - Creating sysdig alert](/sysdig-monitor-create-alert-channels/#creating-an-alert)
 - [OCP - Granting users permission to monitor user-defined projects](https://docs.openshift.com/container-platform/4.10/monitoring/enabling-monitoring-for-user-defined-projects.html#granting-users-permission-to-monitor-user-defined-projects_enabling-monitoring-for-user-defined-projects)
 - [OCP - Enabling monitoring for user-defined projects](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.10/html/monitoring/enabling-monitoring-for-user-defined-projects)
 - [OCP - Enabling alert routing for user-defined projects](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.10/html/monitoring/enabling-alert-routing-for-user-defined-projects)
