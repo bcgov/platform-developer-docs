@@ -83,7 +83,7 @@ Have a look at the [B.C. government information security classification](https:/
 
 <!-- ###  FYI In the future this area may need to be updated and find out if CITZ Security team has reviewed the documentation  -->
 
-Any IM/IT service, system, or infrastructure component that is deemed necessary by the SYSTEM OWNER to deliver a MISSION CRITICAL FUNCTION, is a critical system for the purposes of this standard. 
+Any IM/IT service, system, or infrastructure component that is deemed necessary by the **system owner** to deliver a **mission critical function**, is a critical system for the purposes of this standard. 
 
 We have completed all required documentation for the Critical Systems Standard, and currently under review by the  CITZ Security team.
 
@@ -137,7 +137,7 @@ Find out more about the benefits and its use in our [Platform Product Registry i
 Subscribe to the [DevOps Platform Services communications](https://subscribe.developer.gov.bc.ca/) to  stay seamlessly connected, receiving  updates, insightful new, and platform content.
 
 ### Rocket.Chat
-Community sharing, alerts, and discussions occur on Rocket.Chat, hosted as an app on OpenShift. Authentication is done through IDIR or GitHub in the [BCGov](https://just-ask.developer.gov.bc.ca/) org or invited by an existing member. 
+Community sharing, alerts, and discussions occur on Rocket.Chat, hosted as an app on OpenShift. Authentication is done through IDIR or GitHub in the [BCGov org](https://just-ask.developer.gov.bc.ca/) or invited by an existing member. 
 
 Find more information about [joining Rocket.Chat](/join-bc-rocket-chat/).
 
@@ -233,7 +233,7 @@ OpenShift uses a wildcard certificate for the majority of cluster communications
 By default, the wildcard will be used to protect project workloads.  The Platform Services team worked through the wildcard issuance requirements for use on the OpenShift clusters.  Obtaining a dedicated TLS cert is currently a manual process.  Find out more about the details on [these processes](https://ssbc-client.gov.bc.ca/services/SSLCert/documents.htm). 
 
 **Pre-requisites:**
-Generate a .csr for [each site](https://github.com/BCDevOps/openshift-wiki/blob/master/docs/SSLCerts/GenerateCertificateSigningRequest.md)
+Generate a **.csr** for [each site](https://github.com/BCDevOps/openshift-wiki/blob/master/docs/SSLCerts/GenerateCertificateSigningRequest.md)
 
 **Ordering Process:**
 1. Business area creates/submits order via [MyServiceCentre](https://ociomysc.service-now.com/sp/)
@@ -248,7 +248,7 @@ Generate a .csr for [each site](https://github.com/BCDevOps/openshift-wiki/blob/
 ## Secrets management
 **OpenShift Secrets:**
 
-This 'secrets' store should actually only be used for configurations.  Values are encoded as base64 and NOT encrypted.  However, these 'secrets' can only be accessed with a role to a given namespace with permission to access them.  Additionally, the physical etcd volume, where OpenShift secrets are stored, is encrypted.
+This 'secrets' store should actually only be used for configurations.  Values are encoded as base64 and **not** encrypted.  However, these 'secrets' can only be accessed with a role to a given namespace with permission to access them.  Additionally, the physical etcd volume, where OpenShift secrets are stored, is encrypted.
 
 **Vault:**
 Vault is the preferred secrets management tool to use on OpenShift.
@@ -351,7 +351,8 @@ We currently use of GitHub Enterprise.  Contact the Developer Experience team fo
 
 This is a list of specific considerations for teams creating/storing/using Protected C data.  **This only applies to data on the Emerald Cluster.**
 
-Product teams should be aware that any creation/storage/use of Protected C data in any system should only be considered after discussion with Ministry Security Officer (MISO) and Ministry Privacy Officer (MPO).  They may require additional controls to those listed below.
+Product teams should be aware that any creation/storage/use of Protected C data in any system should only be considered after discussion with [Ministry Information Security Officer (MISO)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/information-security-policy-and-guidelines/role-of-miso)
+and [Ministry Privacy Officer (MPO)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/privacy/resources/privacy-officers). They may require additional controls to those listed below.
  
 Protected C data should be encrypted at rest. 
 - The NetApp storage appliance used is **not** encrypted at its core, so this means that associate provisioned volume claims (PVCs) are not encrypted either.
