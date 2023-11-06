@@ -215,7 +215,7 @@ For further information:
 ### XRay
 
 An add-on capability to Artifactory, XRay scans images and other artifacts for component vulnerabilities.  Anyone with access to an image or artifact within Artifactory can see the XRay tab as part of the image/artifact details, and see what vulnerable components lie within, and what version will correct that deficiency. 
- * Access [Artifacs](https://artifacts.developer.gov.bc.ca/ui/login/)
+ * Get access to [Artifactory](https://artifacts.developer.gov.bc.ca/ui/login/)
 
 
 ## Container runtime security
