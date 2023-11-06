@@ -20,7 +20,7 @@ sort_order: 8
 
 # Product Team Recovery Best Practices and Responsibilities
 
-If you haven't done so already, please take a look at our [Shared Responsibilities](https://cloud.gov.bc.ca/private-cloud/your-product-team-in-the-private-cloud-paas/our-shared-responsibilities/) documentation. This document covers the more technical side of *how* to follow through on the responsibilities outlined in that document.
+If you haven't done so already, please take a look at our [Memorandum of understanding (MoU)](https://digital.gov.bc.ca/cloud/services/private/onboard/#memorandum). This document covers the more technical side of *how* to follow through on the responsibilities outlined in that document.
 
 One of the benefits of working on the Private Cloud Platform is the freedom that DevOps teams enjoy. You are given complete control over your namespaces, letting you take direct control over the deployment of your application. That control comes with some responsibilities, and the Platform Team would like to help you understand and adjust to these responsibilities by providing some best practices for them!
 

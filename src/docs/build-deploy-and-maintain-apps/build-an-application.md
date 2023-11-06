@@ -40,7 +40,7 @@ This document outlines the best practices for building applications on OpenShift
 ## Requirements to build your application 
 Here are ten common practices for building applications in a cloud native way that we strongly suggest your team follow before building an application on OpenShift:
 
-1. **Learn OpenShift basics**: Acquaint your team with OpenShift's core concepts including projects, pods, services, routes and deployments. For more information we have OpenShift training available, make sure to [check it out](https://cloud.gov.bc.ca/private-cloud/support-and-community/platform-training-and-resources/)
+1. **Learn OpenShift basics**: Acquaint your team with OpenShift's core concepts including projects, pods, services, routes and deployments. Find out more information about [OpenShift training](https://digital.gov.bc.ca/cloud/services/private/support/#platform) 
 
 2. **Understand application requirements**: It is important that before you build  your application your team clearly defines its requirements, including dependencies, external services and resource needs.  This is particularly important in order to plan for scalability and high availability of your application
 
@@ -48,15 +48,15 @@ Here are ten common practices for building applications in a cloud native way th
 
 4. **Gain proficiency in Kubernetes**: OpenShift is built on Kubernetes and having a fundamental understanding of it is crucial
 
-5. **Get your team used to the command-line interface (CLI)**: OpenShift provides CLI tool (oc) to interact with the platform. Find out more on how to install it [here](https://docs.developer.gov.bc.ca/install-the-oc-command-line-tool/)
+5. **Get your team used to the command-line interface (CLI)**: OpenShift provides CLI tool (oc) to interact with the platform. Find out more on [how to install it](/install-the-oc-command-line-tool/)
 
 6. **Learn YAML syntax**: YAML is used in OpenShift and it helps defining deployment, configurations, service definitions, etc.  Understanding YAML can propel your ability to write and modify configuration files effectively
 
-7. **Use Open Source**: Build apps in the open for example [public GitHub repo](https://docs.developer.gov.bc.ca/start-working-in-bcgov-github-organization/) and [using open source softwares](https://docs.developer.gov.bc.ca/evaluate-open-source-content/)
+7. **Use Open Source**: Build apps in the open for example [public GitHub repo](/start-working-in-bcgov-github-organization/) and [using open source softwares](/evaluate-open-source-content/)
 
-8. **Knowledge is power**: Pick modern cloud native tech stacks with community momentum, leverage the established tech community for suggestions and [reusable components](https://docs.developer.gov.bc.ca/reusable-services-list/).  Also documenting knowledge base related to the application and keeping it up to date
+8. **Knowledge is power**: Pick modern cloud native tech stacks with community momentum, leverage the established tech community for suggestions and [reusable components](/reusable-services-list/).  Also documenting knowledge base related to the application and keeping it up to date
 
-9. **Follow B.C. Government standards**: Building an application requires a design system, you can find more information about it [here](https://docs.developer.gov.bc.ca/about-the-design-system/). Keeping with good coding practices such as consistent readable code and comments, unit testing, standard linting format, peer review process with repo branch protection among [Security best practices](https://docs.developer.gov.bc.ca/security-best-practices-for-apps/) is vital
+9. **Follow B.C. Government standards**: Building an application requires a design system, you can find more information about it [here](/about-the-design-system/). Keeping with good coding practices such as consistent readable code and comments, unit testing, standard linting format, peer review process with repo branch protection among [Security best practices](/security-best-practices-for-apps/) is vital
 
 10. **Make use of good software development methodology**: For example, Agile and Scrum practice in combination with an effective development approach such as [Behaviour-Driven Development (BDD)](https://openpracticelibrary.com/practice/behavior-driven-development/) and [Test-Driven Development (TDD)](https://openpracticelibrary.com/practice/test-driven-development/)
 ---
@@ -80,7 +80,7 @@ When developing your application it is very important to have a team that is **c
 <br>
 
 ![Cloud with a key and below an individual to demonstrate Single Sign On](../../images/sso-graphic.png)
-Think about whether **Single Sign-On (SSO) is necessary** for your app and what it would look like if implemented:
+Think whether **Single Sign-On (SSO) is necessary** for your app and what it would look like if implemented:
 
 * Single Sign-On is a mechanism that allows users to authenticate once and access multiple applications seamlessly. Consider whether your application would benefit from SSO, especially if you have multiple applications within your OpenShift environment
 <br> 
@@ -107,7 +107,7 @@ Before building and deploying your application, it's highly recommended to set u
 
 As you develop your application for deployment to the B.C. Gov Private Cloud PaaS OpenShift platform, you should create a pipeline that automatically builds and tests your code so that your software delivery is efficient and secure. Use our pipeline templates to help you get started.
 
-There are many different CI/CD pipeline solutions, your team should pick a tech stack that is cloud native and works well with your team's setup. If you are not sure what to choose or how to start, take a look at our recommended [cloud native CI/CD pipeline solutions](https://docs.developer.gov.bc.ca/ci-cd-pipeline-templates/).
+There are many different CI/CD pipeline solutions, your team should pick a tech stack that is cloud native and works well with your team's setup. If you are not sure what to choose or how to start, take a look at our recommended [cloud native CI/CD pipeline solutions](/ci-cd-pipeline-templates/).
 
 If you are looking for something that's more hands-on, try out some pipeline templates with a demo app from [this repo](https://github.com/bcgov/pipeline-templates).
 
@@ -120,7 +120,7 @@ Your persistent data can generally be divided into two categories: files (such a
 
 ### Storing files
 
-If your application uses a limited number of files, such as image assets for a website,  you should probably store them on a `netapp-file-standard` persistent volume on the OpenShift cluster. You can find out more about persistent volume claims in our [Platform Storage](https://docs.developer.gov.bc.ca/platform-storage) documentation.
+If your application uses a limited number of files, such as image assets for a website,  you should probably store them on a `netapp-file-standard` persistent volume on the OpenShift cluster. You can find out more about persistent volume claims in our [Platform Storage](/platform-storage) documentation.
 
 If your application uses a very large number of files (more than 10Gi) or if your application allows users to upload files, then you should consider using the OCIO Object Storage service. You can find out more about provisioning an object storage bucket from your ministry DevOps specialist, or from the [#object-storage](https://chat.developer.gov.bc.ca/channel/object-storage)  channel on RocketChat.
 
@@ -130,24 +130,24 @@ You can also store files inside a database, but it's generally considered bad pr
 
 Most teams run their own databases on the OpenShift cluster, within the same namespace as their application. That means you'll need to make your own decisions about database architecture when designing your application.
 
-As a general rule, databases should make use of the `netapp-block-standard` persistent volume type. You can find out more about persistent volume claims in our [Platform Storage](https://docs.developer.gov.bc.ca/platform-storage) documentation.
+As a general rule, databases should make use of the `netapp-block-standard` persistent volume type. You can find out more about persistent volume claims in our [Platform Storage](/platform-storage) documentation.
 
-Like everything else, databases in OpenShift must be highly-available. That's why managing a database in Openshift is slightly different from managing a database in other, more traditional architectures. You can find out more about what that means in our [High Availability Database](https://docs.developer.gov.bc.ca/high-availability-database-clusters/) documentation.
+Like everything else, databases in OpenShift must be highly-available. That's why managing a database in Openshift is slightly different from managing a database in other, more traditional architectures. You can find out more about what that means in our [High Availability Database](/high-availability-database-clusters/) documentation.
 
-Once you understand what makes a database work in OpenShift, your next step is to choose the [right database software](https://docs.developer.gov.bc.ca/opensource-database-technologies/) for your application.
+Once you understand what makes a database work in OpenShift, your next step is to choose the [right database software](/opensource-database-technologies/) for your application.
 
-When deciding on your database software and architecture, remember that you should be able to easily backup and recover your database, if needed. Our [Database Backup Best Practices](https://docs.developer.gov.bc.ca/database-backup-best-practices/) documentation will provide a good starting point for creating a backup and recovery plan. 
+When deciding on your database software and architecture, remember that you should be able to easily backup and recover your database, if needed. Our [Database Backup Best Practices](/database-backup-best-practices/) documentation will provide a good starting point for creating a backup and recovery plan. 
 
 ---
 ## Best practices for creating your image
 
 Once your application code is ready, you'll need to build an image in order to deploy it to a pod on the OpenShift cluster.
 
-The Platform Team's [OpenShift 101](https://cloud.gov.bc.ca/private-cloud/support-and-community/platform-training-and-resources/openshift-101/) training provides a step-by-step walkthrough to build an image. If you haven't taken it already, please do so! This section will primarily  focus  on best practices for building your image - 'what you should do' rather than 'how to do it'. 
+The Platform Team's [OpenShift 101](https://digital.gov.bc.ca/cloud/services/private/support/openshift-101/) training provides a step-by-step walkthrough to build an image. If you haven't taken it already, please do so! This section will primarily  focus  on best practices for building your image - 'what you should do' rather than 'how to do it'. 
 
 ### Using prebuilt images
 
-If you're deploying code, you'll need  a custom image for that code. However, if you're deploying a pre-existing tool as part of your application such as a database or queuing system, you may be able to use  [pre-built images from the platform](https://docs.developer.gov.bc.ca/prebuilt-images/) instead of needing to build and maintain the image yourself.
+If you're deploying code, you'll need  a custom image for that code. However, if you're deploying a pre-existing tool as part of your application such as a database or queuing system, you may be able to use  [pre-built images from the platform](/prebuilt-images/) instead of needing to build and maintain the image yourself.
 
 ### Building a custom image with Source-to-Image (S2I)
 
@@ -167,7 +167,7 @@ Whether you decide to use S2I or Dockerfile as your build method, you will need 
 
 You can typically find these images in container registries such as Dockerhub, GitHub Container Registry, Google Cloud Registry, and others. These registries are open communities where anyone can upload an image for others to utilize. However, it is crucial to use images from trusted sources. In these public registries, you will usually find platform-specific indicators of community trust that can serve as a guide for selecting reliable images.
 
-We also have access to the RedHat container registry, which serves as a private and carefully curated registry. You can access it through Artifactory at `artifacts.developer.gov.bc.ca/redhat-docker-remote`. Teams are encouraged to use images from the RedHat registry since they're more likely to be compatible with OpenShift.  Additionally, the RedHat registry provides access to [RHEL base images](https://docs.developer.gov.bc.ca/build-with-rhel-base-images/).
+We also have access to the RedHat container registry, which serves as a private and carefully curated registry. You can access it through Artifactory at `artifacts.developer.gov.bc.ca/redhat-docker-remote`. Teams are encouraged to use images from the RedHat registry since they're more likely to be compatible with OpenShift.  Additionally, the RedHat registry provides access to [RHEL base images](/build-with-rhel-base-images/).
 
 ---
 ---
