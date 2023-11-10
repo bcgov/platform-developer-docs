@@ -49,7 +49,7 @@ Dive deeper
 
 ### Security and privacy compliance
 
-* STRA and PIA for Private Cloud Platform (coming soon)
+* [STRA and PIA requirements for applications](docs/security-and-privacy-compliance/devops-security-considerations.md#stra-and-pia-requirements-for-applications)
 * [Vault secrets management service](docs/security-and-privacy-compliance/vault-secrets-management-service.md)
 * [Artifactory trusted repository service](docs/build-deploy-and-maintain-apps/image-artifact-management-with-artifactory.md)
 * [Security best practices for apps](docs/security-and-privacy-compliance/security-best-practices-for-apps.md)
@@ -76,7 +76,6 @@ Dive deeper
 
 * [Open source database technologies](docs/database-and-api-management/opensource-database-technologies.md)
 * [High availability database clusters](docs/database-and-api-management/high-availability-database-clusters.md)
-* API guidelines (coming soon)
 
 ### Reusable code and services
 

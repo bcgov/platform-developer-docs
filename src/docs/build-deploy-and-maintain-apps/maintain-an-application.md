@@ -112,7 +112,7 @@ Through this reliability and resiliency section you will find:
 * [Recoverability](#recoverability)
 * [Secrets](#secrets)
 * [Storage](#storage)
-* [Periodic HA Testing](periodic-ha-testing)
+* [Periodic HA Testing](#periodic-ha-testing)
 * [CI / CD Pipeline](#cicd-pipeline)
 
 ### Horizontal Pod Autoscalers (HPA)
@@ -492,7 +492,7 @@ It is also important to keep the Platform Services [Product Registry](https://re
 - [Build an application](../build-deploy-and-maintain-apps/build-an-application.md)
 - [Deploy an application](../build-deploy-and-maintain-apps/deploy-an-application.md)
 - [Retire an application](../build-deploy-and-maintain-apps/retire-an-application.md)
-- [Rocket.Chat channel descriptions](/rocketchat-channel-descriptions/) 
+- [Rocket.Chat channel descriptions](https://mvp.developer.gov.bc.ca/docs/default/component/bc-developer-guide/rocketchat/rocketchat-channel-descriptions/) 
 - [Automatically scaling pods with the horizontal pod autoscaler](https://docs.openshift.com/container-platform/latest/nodes/pods/nodes-pods-autoscaling.html)
 -  [High availability database clusters](../database-and-api-management/high-availability-database-clusters.md)
 - [Open-source database technologies](../database-and-api-management/opensource-database-technologies.md)

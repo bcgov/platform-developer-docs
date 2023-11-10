@@ -52,7 +52,7 @@ Here are ten common practices for building applications in a cloud native way th
 
 6. **Learn YAML syntax**: YAML is used in OpenShift and it helps defining deployment, configurations, service definitions, etc.  Understanding YAML can propel your ability to write and modify configuration files effectively
 
-7. **Use Open Source**: Build apps in the open for example [public GitHub repo](/start-working-in-bcgov-github-organization/) and [using open source softwares](/evaluate-open-source-content/)
+7. **Use Open Source**: Build apps in the open for example [public GitHub repo](https://mvp.developer.gov.bc.ca/docs/default/component/bc-developer-guide/use-github-in-bcgov/start-working-in-bcgov-github-organization/) and [using open source softwares](https://mvp.developer.gov.bc.ca/docs/default/component/bc-developer-guide/use-github-in-bcgov/evaluate-open-source-content/)
 
 8. **Knowledge is power**: Pick modern cloud native tech stacks with community momentum, leverage the established tech community for suggestions and [reusable components](../reusable-code-and-services/reusable-services-list.md).  Also documenting knowledge base related to the application and keeping it up to date
 
