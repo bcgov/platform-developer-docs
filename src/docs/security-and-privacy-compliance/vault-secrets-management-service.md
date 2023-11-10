@@ -15,7 +15,7 @@ author: Matt Spencer
 
 content_owner: Cailey Jones
 
-sort_order: 2
+sort_order: 4
 ---
 
 # Vault secrets management
