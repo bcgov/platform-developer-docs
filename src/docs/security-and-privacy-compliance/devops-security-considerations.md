@@ -170,7 +170,7 @@ The Platform Services team maintains an Access Control Policy for all platform t
 
 Network policies help the platform and project teams to better control communications between components.  While KNPs only apply as **ingress rules** (not egress), they help to improve our overall security posture.  KNPs only apply to on-cluster communications (i.e. between pods in a namespace, or between namespaces).  
 
-Find our more about using KNPs to control network security for an application hosted on the Private Cloud Openshift Platform in the [OpenShift network policies](/openshift-network-policies/) document. More details on [KPN's official site](https://kubernetes.io/docs/concepts/services-networking/network-policies/).
+Find our more about using KNPs to control network security for an application hosted on the Private Cloud Openshift Platform in the [OpenShift network policies](../platform-architecture-reference/openshift-network-policies.md) document. More details on [KPN's official site](https://kubernetes.io/docs/concepts/services-networking/network-policies/).
 
 For products requiring policies that reach off-cluster, the Emerald cluster is the best choice.  This provides a way to communicate with VMs in the SDN zone, and more isolated communications to legacy network zones (B/C).  This capability is provided through the use of VMWare NSX.
 
@@ -183,8 +183,8 @@ Here is a representation of what an application build pipeline should look like:
 ![Application build pipeline example diagram](../../images/PipelineSecurity.png)
 
 The pipeline templates above make it easier to include the tools described below:
-* [SonarQube in the BC Gov Private Cloud PaaS](/reusable-services-list/#sonarqube-in-the-bc-gov-private-cloud-paas)
-*  [OWASP ZAP Security Vulnerability Scanning](/reusable-services-list/#owasp-zap-security-vulnerability-scanning)
+* [SonarQube in the BC Gov Private Cloud PaaS](../reusable-code-and-services/reusable-services-list.md#sonarqube-in-the-bc-gov-private-cloud-paas)
+*  [OWASP ZAP Security Vulnerability Scanning](../reusable-code-and-services/reusable-services-list.md#owasp-zap-security-vulnerability-scanning)
 
 ### Scanning tools roles 
 
@@ -255,8 +255,8 @@ This 'secrets' store should actually only be used for configurations.  Values ar
 Vault is the preferred secrets management tool to use on OpenShift.
 
 * Find out more about the [benefits of using Vault](https://digital.gov.bc.ca/cloud/services/private/products-tools/vault/)
-* [Vault secrets management service](/vault-secrets-management-service/)
-* [Vault getting started guide](/vault-getting-started-guide/)
+* [Vault secrets management service](../security-and-privacy-compliance/vault-secrets-management-service.md)
+* [Vault getting started guide](../security-and-privacy-compliance/vault-getting-started-guide.md)
 
 ## GitOps/Cluster configuration management
 
@@ -289,7 +289,7 @@ This tool provides a more wholistic view of logs for an application or at the pl
 
 This tool allows our platform admins and platform teams to build monitoring dashboards.
 - Find out more about [Sysdig Monitor](https://digital.gov.bc.ca/cloud/services/private/products-tools/sysdig/)
-- [Onboarding to application monitoring with Sysdig](/sysdig-monitor-onboarding/)
+- [Onboarding to application monitoring with Sysdig](../app-monitoring/sysdig-monitor-onboarding.md)
 - [Login to Sysdig](https://app.sysdigcloud.com/#/login)
 
 **Security Information and Event Monitoring (SIEM):**
@@ -312,8 +312,8 @@ Review the [status of the platform](https://status.developer.gov.bc.ca/)
 Backups help you to recover in the event of a failure or data corruption.  As part of your backup process, you should consider the retention period, and the schedule for testing backups. All backups should be tested regularly.
 
 **OpenShift**
-- [Backup Container](/reusable-services-list/#backup-container)
-- [Database backup best practices](/database-backup-best-practices/)
+- [Backup Container](../reusable-code-and-services/reusable-services-list.md#backup-container)
+- [Database backup best practices](../database-and-api-management/database-backup-best-practices.md)
 
 **GitHub**
 - [GitHub backups](https://github.com/bcgov-c/platform-services-docs/blob/main/github-backups.md)
@@ -412,7 +412,7 @@ Further investigation is required to provided further enhanced cluster access pr
 
 **Payment Card Industry Compliance (PCI-DSS)**
 
-Our OpenShift implementation is **not** PCI-DSS compliant.  If you wish to host an application on OpenShift that needs to perform financial transactions, please find out more about [payment card processing for OpenShift applications](/payment-card-processing).
+Our OpenShift implementation is **not** PCI-DSS compliant.  If you wish to host an application on OpenShift that needs to perform financial transactions, please find out more about [payment card processing for OpenShift applications](../security-and-privacy-compliance/payment-card-processing.md).
 
 Some teams have decided to host PCI-scoped applications on-prem (non-OpenShift) or on a cloud based service (AWS, Azure, etc) to avoid linkages with government systems not under their control.
 
@@ -431,5 +431,5 @@ For all other matters concerning security on the OpenShift Container Platform, p
 * [OpenShift 101 training](https://digital.gov.bc.ca/cloud/services/private/support/openshift-101/)
 * [OpenShift 201 training](https://digital.gov.bc.ca/cloud/services/private/support/openshift-201/)
 * [DevOps platform workshops](https://github.com/bcdevops/devops-platform-workshops)
-* [Security best practices for apps](/security-best-practices-for-apps/)
+* [Security best practices for apps](../security-and-privacy-compliance/security-best-practices-for-apps.md)
 

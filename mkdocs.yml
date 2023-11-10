@@ -42,10 +42,10 @@ nav:
   - Database backup best practices: docs/database-and-api-management/database-backup-best-practices.md
   - Using Postgres on OpenShift with Patroni and CrunchyDB: docs/database-and-api-management/postgres-how-to.md
 - Security and privacy compliance:
+  - B.C. Government OpenShift DevOps security considerations: docs/security-and-privacy-compliance/devops-security-considerations.md
   - Security best practices for apps: docs/security-and-privacy-compliance/security-best-practices-for-apps.md
-  - Vault secrets management: docs/security-and-privacy-compliance/vault-secrets-management-service.md
   - Vault getting started guide: docs/security-and-privacy-compliance/vault-getting-started-guide.md
-  - DevOps security considerations: docs/security-and-privacy-compliance/devops-security-considerations.md
+  - Vault secrets management: docs/security-and-privacy-compliance/vault-secrets-management-service.md
   - Payment card processing for OpenShift applications: docs/security-and-privacy-compliance/payment-card-processing.md
 - Reusable code and services:
   - Reusable services list: docs/reusable-code-and-services/reusable-services-list.md

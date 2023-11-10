@@ -75,7 +75,7 @@ This process works hand-in-hand with the build process, detailed in our [build a
 
 Before deploying your application on OpenShift, it's crucial to verify a successful build of your application. A successful build will push the application's image to an image registry. 
 
-OpenShift can pull images from various sources, including [Artifactory](/image-artifact-management-with-artifactory/), [Docker.io](http://docker.io/) (Docker Hub), [Quay.io](http://quay.io/), OpenShift's integrated registry, and the RedHat image repository. 
+OpenShift can pull images from various sources, including [Artifactory](../build-deploy-and-maintain-apps/image-artifact-management-with-artifactory.md), [Docker.io](http://docker.io/) (Docker Hub), [Quay.io](http://quay.io/), OpenShift's integrated registry, and the RedHat image repository. 
 
 Ensure that you have access to the registry where your image resides. If you encounter any issues, review the build logs to diagnose the problem, make sure that the credential you have for image registry is correct or make sure the service account `image-puller` has enough access.
 
@@ -83,13 +83,13 @@ Ensure that you have access to the registry where your image resides. If you enc
 
 Every application has unique requirements for deployment. These may include environment variables, application secrets, configuration data, and database connectivity, among others. Review all these required parameters and ensure they works fine before deployment. 
 
-**Remember** that sensitive data like API keys or credentials should be stored in [vault](/vault-getting-started-guide/) in OpenShift.
+**Remember** that sensitive data like API keys or credentials should be stored in [vault](../security-and-privacy-compliance/vault-getting-started-guide.md) in OpenShift.
 
 ### 3. Ensuring the Availability of Necessary Resources in OpenShift
 
 OpenShift allows you to fine-tune resources like CPU, memory, and storage for your application's pods. Before deploying, ensure that the necessary resources are available in OpenShift. Your application should have enough resources to perform efficiently but not too much, which can be wasteful. 
 
-For guidance on resource tuning, refer to this [documentation](/application-resource-tuning/). You can also watch this [video](https://www.youtube.com/watch?v=rkxVZgn9icU&t=14s) for more explanation. Understanding and adjusting these resources according to your application's needs is a critical aspect of deployment preparation.
+For guidance on resource tuning, refer to this [documentation](../automation-and-resiliency/application-resource-tuning.md). You can also watch this [video](https://www.youtube.com/watch?v=rkxVZgn9icU&t=14s) for more explanation. Understanding and adjusting these resources according to your application's needs is a critical aspect of deployment preparation.
 
 ---
 
@@ -143,7 +143,7 @@ Choose the strategy that best meets your application's needs and expectations, c
 
 ### 3. Setting up environment variables for the application
 
-Environment variables can be defined in the `env` field of the Pod specification and can reference secrets, ConfigMaps, or just be plain text. For sensitive information, it is best to use Vault services. OpenShift can integrate with Vault to inject secrets directly into pods at runtime. This provides an extra layer of security for sensitive data. Find more information on [using Vault](/vault-secrets-management-service/).
+Environment variables can be defined in the `env` field of the Pod specification and can reference secrets, ConfigMaps, or just be plain text. For sensitive information, it is best to use Vault services. OpenShift can integrate with Vault to inject secrets directly into pods at runtime. This provides an extra layer of security for sensitive data. Find more information on [using Vault](../security-and-privacy-compliance/vault-secrets-management-service.md).
 
 ---
 
@@ -153,7 +153,7 @@ Environment variables can be defined in the `env` field of the Pod specification
 
 Network policies (NetworkPolicies) are Kubernetes resources that control the traffic between pods and networks. They use labels to select pods and define rules which specify what traffic is allowed. The aim is to provide a secure network for your applications running on OpenShift. 
 
-To give a deployment a very specific network policy is always the best practice to keep your application safe. For a detailed guide, read the [network policies](/openshift-network-policies/) documentation.
+To give a deployment a very specific network policy is always the best practice to keep your application safe. For a detailed guide, read the [network policies](../platform-architecture-reference/openshift-network-policies.md) documentation.
 
 ### 2. Exposing services using routes
 
