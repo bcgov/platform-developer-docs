@@ -314,7 +314,7 @@ Backups help you to recover in the event of a failure or data corruption.  As pa
 - [Database backup best practices](/database-backup-best-practices/)
 
 **GitHub**
-- [GitHub backups](https://github.com/bcgov-c/platform-services-docs/blob/main/github-backups.md)
+- [GitHub backups](https://github.com/bcgov-c/platform-services-docs/blob/main/github/github-backups.md)
 
 ## Change management
 

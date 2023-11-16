@@ -112,7 +112,7 @@ Through this reliability and resiliency section you will find:
 * [Recoverability](#recoverability)
 * [Secrets](#secrets)
 * [Storage](#storage)
-* [Periodic HA Testing](periodic-ha-testing)
+* [Periodic HA Testing](#periodic-ha-testing)
 * [CI / CD Pipeline](#cicd-pipeline)
 
 ### Horizontal Pod Autoscalers (HPA)
