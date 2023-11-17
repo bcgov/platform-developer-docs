@@ -18,26 +18,39 @@ content_owner: Olena Mitovska
 sort_order: 2
 ---
 # Reusable services list
+Last updated: **November 16, 2023**
+
+<!-- Could we have a few sentences about what this page is about? 
+Inspiration: 
+If someone landed in this page what would that visitor find? How could we help the visitor understand this page's purpose?  -->
+
 Find details on the following services or tools you can use as part of your project in `bcgov`.
 
 ## On this page
-- [Reusable services list](#reusable-services-list)
-  - [On this page](#on-this-page)
-  - [Backup Container](#backup-container)
-    - [Features](#features)
-  - [BC Address Geocoder](#bc-address-geocoder)
-  - [Common Document Generation Service](#common-document-generation-service)
-  - [Common Hosted Email Service](#common-hosted-email-service)
-  - [Common Object Management Service](#common-object-management-service)
-  - [Get Token](#get-token)
-  - [Fathom](#fathom)
-  - [go-crond](#go-crond)
-  - [Matomo OpenShift](#matomo-openshift)
-  - [OWASP ZAP Security Vulnerability Scanning](#owasp-zap-security-vulnerability-scanning)
-  - [Pathfinder Single Sign-On Keycloak](#pathfinder-single-sign-on-keycloak)
-  - [SonarQube in the BC Gov Private Cloud PaaS](#sonarqube-in-the-bc-gov-private-cloud-paas)
-  - [SonarQube on OpenShift](#sonarqube-on-openshift)
-  - [WeasyPrint HTML to PDF/PNG Microservice](#weasyprint-html-to-pdfpng-microservice)
+* **[Backup container](#backup-container)**
+* **[BC Address Geocoder](#bc-address-geocoder)**
+* **[Common Document Generation Service](#common-document-generation-service)**
+* **[Common Hosted Email Service](#common-hosted-email-service)**
+* **[Common Object Management Service](#common-object-management-service)**
+* **[Get Token](#get-token)**
+* **[Fathom](#fathom)**
+* **[go-crond](#go-crond)**
+* **[Matomo OpenShift](#matomo-openshift)**
+* **[OWASP ZAP security vulnerability scanning](#owasp-zap-security-vulnerability-scanning)**
+* **[Pathfinder Single Sign-On Keycloak](#pathfinder-single-sign-on-keycloak)**
+* **[SonarQube in the BC Gov Private Cloud PaaS](#sonarqube-in-the-bc-gov-private-cloud-paas)**
+* **[SonarQube on OpenShift](#sonarqube-on-openshift)**
+* **[WeasyPrint HTML to PDF/PNG microservice](#weasyprint-html-to-pdfpng-microservice)**
+
+
+<!-- 
+For each of the topics above, could we have a description and a features or benefits section if applicable? 
+
+Let's follow the format below:
+
+## Title
+### Features 
+-->
 
 ## Backup Container
 
@@ -119,7 +132,7 @@ Matomo OpenShift provides a set of OpenShift configurations to set up an instanc
 * [Matomo OpenShift](https://developer.gov.bc.ca/Community-Contributed-Content/Matomo-OpenShift)
 * [Matomo](https://matomo.org/)
 
-## OWASP ZAP Security Vulnerability Scanning
+## OWASP ZAP security vulnerability scanning
 
 The OWASP Zed Attack Proxy (ZAP) automatically finds security vulnerabilities in web applications. For more information, see the following pages:
 * [OWASP ZAP Security Vulnerability Scanning](https://developer.gov.bc.ca/Developer-Toy-Box/OWASP-ZAP-Security-Vulnerability-Scanning)
@@ -136,7 +149,7 @@ The Pathfinder SSO service is built on the foundations of Keycloak/Redhat SSO.
 * [What is Keycloak (our take)](https://github.com/bcgov/sso-keycloak/wiki/What-is-Keycloak-@-BC-Government%3F)
 * [Additional references](https://github.com/bcgov/sso-keycloak/wiki/Useful-References)
 
-## SonarQube in the BC Gov Private Cloud PaaS
+## SonarQube in the B.C. Government Private Cloud PaaS
 
 [SonarQube®](https://www.sonarqube.org/) is an automatic code review tool you can use to detect bugs, vulnerabilities and code smells in your code. It can integrate with your existing workflow to enable continuous code inspection across your project branches and pull requests.
 
@@ -170,8 +183,12 @@ For more information, see the following pages:
 * [docker-weasyprint](https://github.com/BCDevOps/docker-weasyprint)
 * [WeasyPrint](https://weasyprint.org/)
 
----
-Related links:
+
+<!-- 
+Are these related pages helpful?  Too many? Enough? Valid still? 
+-->
+
+## Related pages
 * [nr-messaging-service-showcase repository](https://github.com/bcgov/nr-messaging-service-showcase).
 * [About the Messaging Common Service](https://developer.gov.bc.ca/Community-Contributed-Content/About-the-Messaging-Common-Service)
 * [Messaging Service Developer Guide](https://developer.gov.bc.ca/Community-Contributed-Content/Messaging-Service-Developer-Guide)
