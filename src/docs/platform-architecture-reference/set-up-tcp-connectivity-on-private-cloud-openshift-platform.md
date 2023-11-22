@@ -210,6 +210,8 @@ Create the `NetworkPolicy` in your namespaces in both Gold and GoldDR:
 ### Check endpoints
 After you create the `TransportServerClaim`, the Porter Operator automatically creates new endpoints in your namespace in both Gold and GoldDR. The endpoint name is the Service name followed by either "-gold" or "-golddr".
 
+**Note:** If the target Service is configured for multiple ports, the new Service will be named as SERVICENAME-PORT-CLUSTER to allow for multiple TransportServerClaims to target the various ports in the target service.  **For backwards compatibility**, the older style service name will also be created: SERVICENAME-CLUSTER
+
 Verify the endpoints:
 ```
 (gold)$ oc -n yourlicenceplate-dev get endpoints | grep golddr
