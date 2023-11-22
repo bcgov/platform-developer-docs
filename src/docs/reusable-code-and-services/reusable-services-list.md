@@ -18,13 +18,12 @@ content_owner: Olena Mitovska
 sort_order: 2
 ---
 # Reusable services list
-Last updated: **November 16, 2023**
+Last updated: **November 22, 2023**
 
 <!-- Could we have a few sentences about what this page is about? 
 Inspiration: 
 If someone landed in this page what would that visitor find? How could we help the visitor understand this page's purpose?  -->
-
-Find details on the following services or tools you can use as part of your project in `bcgov`.
+This document covers some of the most popular reusable components designed to enhance the feature and infrastructure of your applications. You can find out more about the services and tools below, and guidance on how to integrate them into your application. This list crosses with the [BCGov Common Components](https://digital.gov.bc.ca/common-components/) as well as the [BCGov Software as a Service (SaaS) catalog](https://digital.gov.bc.ca/cloud/services/saas/), feel free to check out from all three places when looking for a component to use!
 
 ## On this page
 * **[Backup container](#backup-container)**
