@@ -37,8 +37,7 @@ This document covers some of the most popular reusable components designed to en
 * **[Matomo OpenShift](#matomo-openshift)**
 * **[OWASP ZAP security vulnerability scanning](#owasp-zap-security-vulnerability-scanning)**
 * **[Pathfinder Single Sign-On Keycloak](#pathfinder-single-sign-on-keycloak)**
-* **[SonarQube in the BC Gov Private Cloud PaaS](#sonarqube-in-the-bc-gov-private-cloud-paas)**
-* **[SonarQube on OpenShift](#sonarqube-on-openshift)**
+* **[SonarQube and SonarCloud](#sonarqube-and-sonarcloud)**
 * **[WeasyPrint HTML to PDF/PNG microservice](#weasyprint-html-to-pdfpng-microservice)**
 
 
@@ -53,44 +52,58 @@ Let's follow the format below:
 
 ## Backup Container
 
-[Backup Container](https://github.com/BCDevOps/backup-container) is a simple, containerized backup solution used to backup one or more supported databases to a secondary location. The code and documentation was originally pulled from [HETS Project](https://github.com/bcgov/hets).
+[Backup Container](https://github.com/bcgov/backup-container) is a simple, containerized backup solution used to backup one or more supported databases to a secondary location. In addition, Backup Container provides the capacity to test out the restoration of the DB backups to make sure the they are usable when needed. The code and documentation was originally pulled from [HETS Project](https://github.com/bcgov/hets).
 
 ### Features
-You can use the following databases:
-* MongoDB
-* PostgresSQL
-* MSSQL (MSSQL requires the NFS DB volume is shared with the database for backups to function correctly)
-* MariaDB
+Here are the supported databases:
+- MongoDB
+- PostgresSQL
+- MSSQL (MSSQL requires the NFS DB volume is shared with the database for backups to function correctly)
+- MariaDB
 
-You can run Backup Container for supported databases separately or in a mixed environment.
-
-For more information on Backup Container, see the following pages:
-* [backup-container repository](https://github.com/BCDevOps/backup-container)
-* [jag-cullencommission repository](https://github.com/bcgov/jag-cullencommission/tree/master/openshift)
+### How To
+You can run Backup Container for supported databases separately or in a mixed environment. The service can be hosted as either a deployment with scheduled DB tasks or as a Cronjob in OpenShift. For more details on how to set it up, refer to the [backup-container repository](https://github.com/bcgov/backup-container).
 
 ## BC Address Geocoder
 
-The BC Address Geocoder REST API lets you integrate real-time standardization, validation and geocoding of physical addresses into your applications. See [the Data Catalogue](https://catalogue.data.gov.bc.ca/dataset/bc-address-geocoder-web-service) for information on aspects of the REST API that aren't covered in the OpenAPI definition.
+The BC Address Geocoder REST API lets you integrate real-time standardization, validation and geocoding of physical addresses into your applications. The current baseUrl for the online geocoder is `https://geocoder.api.gov.bc.ca/`.
 
-The Geocoder helps you validate and geocode addresses (including public and related business occupants); find physical sites, intersections and occupants; and find sites, intersections and occupants near a point or within an area. The current baseUrl for the online geocoder is `https://geocoder.api.gov.bc.ca/`.
+### Features
+The Geocoder helps you:
+- validate and geocode addresses (including public and related business occupants)
+- find physical sites, intersections and occupants
+- find sites, intersections and occupants near a point or within an area
 
-The URL allows both public and gated access. Gated access requires an APIkey. To get a sandbox APIkey with a maximum rate of 1000 requests per minute, visit the [Geocoder API console](https://catalogue.data.gov.bc.ca/dataset/bc-address-geocoder-web-service/resource/40d6411e-ab98-4df9-a24e-67f81c45f6fa/view/1d3c42fc-53dc-4aab-ae3b-f4d056cb00e0). You can get an unrestricted APIkey for use in government applications by opening a ticket with the [Data Systems & Services request system](https://dpdd.atlassian.net/servicedesk/customer/portal/1/group/7/create/15).
-
-For more information on the BC Address Geocoder, see the following pages:
-* [BC Address Geocoder Developer Guide](https://developer.gov.bc.ca/Community-Contributed-Content/BC-Address-Geocoder-Developer-Guide)
-* [BC Address Geocoder repository](https://github.com/bcgov/api-specs/blob/master/geocoder)
+### How To
+Follow the [BC Address Geocoder Developer Guide](https://github.com/bcgov/api-specs/blob/master/geocoder/geocoder-developer-guide.md) to get started. Please note that the URL allows both public and gated access. Gated access requires an APIkey. To get a sandbox APIkey with a maximum rate of 1000 requests per minute, visit the [Geocoder API console](https://catalogue.data.gov.bc.ca/dataset/bc-address-geocoder-web-service). You can get an unrestricted APIkey for use in government applications by opening a ticket with the [Data Systems & Services request system](https://api.gov.bc.ca/).
 
 ## Common Document Generation Service
 
 Use the Common Document Generation Service (CDOGS) to generate PDF or XML-based documents (ex: docx, xlsx, pptx, odt, ods, odp, and html). The CDOGS API can merge complex datasets into document templates. It supports any XML-based document templates including but not limited to Microsoft Office, LibreOffice, and OpenOffice.
 
+### Features
+Use the Common Document Generation Service to:
+- Create custom letters to clients, including detailed information related to their files
+- Create requests for proposals and related standard-form contracts
+- Generate monthly reports by automatically inserting data into documents
+
+### How To
 For more information on CDOGS, see the following pages:
 * [Common Document Generation Service (CDOGS) product overview](https://digital.gov.bc.ca/common-components/common-document-generation-service)
 * [Common Document Generation Service (CDOGS) documentation](https://bcgov.github.io/common-service-showcase/services/cdogs.html)
 
 ## Common Hosted Email Service
 
-Use the Common Hosted Email Service (CHES) to send emails programmatically. For more information on CHES, see the following pages:
+Use the Common Hosted Email Service (CHES) to send emails programmatically.
+
+### Features
+Use the Common Hosted Email Service to:
+- Notify a list of clients of individual appointments or schedule changes
+- Request information regarding specific items
+- Advise contacts of process changes that apply to their cases
+
+### How To
+For more information on CHES, see the following pages:
 * [Common Hosted Email Service (CHES) product overview](https://digital.gov.bc.ca/common-components/common-hosted-email-service)
 * [Common Hosted Email Service (CHES) documentation](https://bcgov.github.io/common-service-showcase/services/ches.html)
 
@@ -98,90 +111,125 @@ Use the Common Hosted Email Service (CHES) to send emails programmatically. For 
 
 Using the Common Object Management Service (COMS), take advantage of more cost-effective storage solutions for your new or existing business applications with an authorization and authentication method that suits your application’s business requirements. COMS is a secure REST API that lets you connect your application to any S3 bucket.
 
+### Features
+Use COMS to:
+- Upload, download, manage and delete objects
+- Discover, update and manage object versions
+- Toggle general public access to objects
+- Grant and manage refined user object permissions
+- Flexible search and filter capabilities of metadata and tags based on user permissions
+
+### How To
 For more information on COMS, see the following pages:
 * [Common Object Management Service (COMS) product overview](https://digital.gov.bc.ca/common-components/common-object-management-service)
 * [Common Object Management Service (COMS) documentation](https://bcgov.github.io/common-service-showcase/services/coms.html)
 
 ## Get Token
 
-Get Token (also known as GETOK) is a self-serve web interface that provides onboarding and access management of API services using OAuth client credentials.
+Get Token (also known as GETOK) is a web-based tool for development teams to manage their application’s secure access to Common Services. Users can create and deploy service clients instantly to gain access to common service APIs like email notifications, document management, or document generation.
 
-For more information, visit:
+### Features
+- Communicate with Keycloak realms to generate service clients
+- Secure password generation and transmission via public/private key encryption
 
-[nr-get-token repository](https://github.com/bcgov/nr-get-token)
+### How To
+Refer to the [nr-get-token repository](https://github.com/bcgov/nr-get-token) to get started. You can leverage the [quick start guide](https://github.com/bcgov/nr-get-token/blob/master/app/README.md). To install the service on OpenShift, refer to [this guide](https://github.com/bcgov/nr-get-token/blob/master/openshift/README.md).
 
 ## Fathom
 
 Fathom analytics provide simple website statistics without tracking or storing personal data. [fathom-openshift](https://github.com/BCDevOps/fathom-openshift) is a set of OpenShift configurations to set up an instance of the Fathom web analytics server.
 
-For more information, see the following pages:
-* [Fathom](https://developer.gov.bc.ca/Community-Contributed-Content/Fathom)
-* [fathom-openshift](https://github.com/BCDevOps/fathom-openshift)
+### How To
+Refer to the [Fathom repository](https://github.com/BCDevOps/fathom-openshift) to get started. If you require more comprehensive analytics, a Google Analytics alternative, where data ownership and privacy compliance are still a concern check out [Matomo Openshift](https://github.com/BCDevOps/matomo-openshift).
 
 ## go-crond
+go-crond is a cron daemon written in Go for use in Docker images.
 
-[go-crond](https://github.com/webdevops/go-crond#readme) is a cron daemon written in Go for use in Docker images. For more information, see the following pages:
-* [go-crond repository](https://github.com/webdevops/go-crond)
+### Features
+- system crontab (with username inside)
+- user crontabs (without username inside)
+- run-parts support
+- Logging to STDOUT and STDERR (instead of sending mails)
+- Keep current environment (eg. for usage in Docker containers)
+- Supports Linux, MacOS, ARM/ARM64 (Rasbperry Pi and others)
+
+### How To
+Refer to the [go-crond repository](https://github.com/webdevops/go-crond) to get started. You can find the installation guidance and examples in the repo.
 
 ## Matomo OpenShift
 
 Matomo is a comprehensive web analytics server and an alternative to Google Analytics when data ownership and privacy compliance are a concern.
 
-Matomo OpenShift provides a set of OpenShift configurations to set up an instance of the Matomo web analytics server. For more information, see the following pages:
-* [Matomo OpenShift](https://developer.gov.bc.ca/Community-Contributed-Content/Matomo-OpenShift)
-* [Matomo](https://matomo.org/)
+### How To
+[Matomo OpenShift](https://github.com/BCDevOps/matomo-openshift) provides a set of OpenShift configurations to set up an instance of the Matomo web analytics server. You can also find out more about [Matomo](https://matomo.org/).
 
 ## OWASP ZAP security vulnerability scanning
 
-The OWASP Zed Attack Proxy (ZAP) automatically finds security vulnerabilities in web applications. For more information, see the following pages:
-* [OWASP ZAP Security Vulnerability Scanning](https://developer.gov.bc.ca/Developer-Toy-Box/OWASP-ZAP-Security-Vulnerability-Scanning)
-* [openshift-components](https://github.com/BCDevOps/openshift-components/tree/master/cicd/jenkins-slave-zap)
+The OWASP Zed Attack Proxy (ZAP) automatically finds security vulnerabilities in web applications.
+
+### Features
+- Active and Passive Scans
+- Running Scans: Desktop and API
+- Authenticated Security Scanning
+- WebSockets
+- OWASP ZAP Fuzzer
+- AJAX Spidering
+
+### How To
+The public docker registry version of OWASP's Zed Attack Proxy (ZAP) is not compatible with OpenShift without using privileged containers. Use [this Docker image](https://github.com/BCDevOps/owasp-zap-openshift) resolves that issue. You can also check out ZAP scanning integration with pipeline from the [pipeline-template repo](https://github.com/bcgov/pipeline-templates).
 
 ## Pathfinder Single Sign-On Keycloak
 
-The Pathfinder Single Sign-On (SSO) team provides the Common Hosted Single Sign-On (CSS) App. This is a self-service app that allows you to integrate with BC government approved login services (identity providers).
+The Pathfinder Single Sign-On (SSO) team provides the Common Hosted Single Sign-On (CSS) App. This is a self-service app that allows you to integrate with BC government approved login services (identity providers). The Pathfinder SSO service is built on the foundations of Keycloak/Redhat SSO.
 
-The Pathfinder SSO service is built on the foundations of Keycloak/Redhat SSO.
+### Features
+- Easy setup with integrations to the following identity providers:
+    - IDIR and AzureAD IDIR (BC Common Logon Page)
+    - BCeID Basic (BC Common Logon Page) -- Allows login only with BCeID Basic
+    - BCeID Business (BC Common Logon Page) -- Allows login only with BCeID Business
+    - BCeID Basic & Business(BC Common Logon Page) -- Allows login with BCeID Basic or BCeID Business
+    - GitHub associated with BC Gov Org -- Allows login of GitHub BC Gov Org members
+- OIDC protocol
+- Session Management
+- High Availability Requirements
 
-* [Request an integration](https://bcgov.github.io/sso-requests/)
-* [An overview of our CSS App](https://github.com/bcgov/sso-keycloak/wiki)
-* [What is Keycloak (our take)](https://github.com/bcgov/sso-keycloak/wiki/What-is-Keycloak-@-BC-Government%3F)
-* [Additional references](https://github.com/bcgov/sso-keycloak/wiki/Useful-References)
+### How To
+Start with a [Request a SSO integration](https://bcgov.github.io/sso-requests/). You can find out the steps in integrate SSO service to your application from the [wiki page](https://github.com/bcgov/sso-keycloak/wiki).
 
-## SonarQube in the B.C. Government Private Cloud PaaS
+## SonarQube and SonarCloud
 
-[SonarQube®](https://www.sonarqube.org/) is an automatic code review tool you can use to detect bugs, vulnerabilities and code smells in your code. It can integrate with your existing workflow to enable continuous code inspection across your project branches and pull requests.
+[SonarQube](https://www.sonarqube.org/) is an automatic code review tool you can use to detect bugs, vulnerabilities and code smells in your code. It can integrate with your existing workflow to enable continuous code inspection across your project branches and pull requests.
 
-When a piece of code does not comply with a rule, an issue is logged on the snapshot. An issue can be logged on a source file or a unit test file.
+[SonarCloud](https://www.sonarsource.com/products/sonarcloud/) is a cloud service offered by SonarSource and based on SonarQube. It has been enabled on BCGov github organizations.
 
-SonarQube is a community-supported service. We also encourage teams to switch to using the SonarQube SaaS service.
+### Features
 
-For more information, see the [SonarQube repository](https://github.com/BCDevOps/sonarqube).
+SonarQube:
+- Static Code Analysis for Over 17 Languages
+- Review Security Hotspots, Detect Bugs and Vulnerabilities
+- Track Code Smells and Fix Your Technical Debt
+- Code Quality Metrics, History, and CI/CD Integration
+- Extensible with More Than 50 Community Plugins
 
-## SonarQube on OpenShift
+SonarCloud (in addition to SonarQube advantages):
+- automatically analyzes and decorates pull requests on GitHub
+- can be invoked from your workstation, OpenShift pipeline and your GitHub actions on top of that it will run for every PR automatically
+- will save precious OpenShift resources
+- is free for Open Source projects (that's us!)
 
-The [SonarQube repository](https://github.com/BCDevOps/sonarqube) contains all the resources you might need to deploy a SonarQube server instance in a B.C. government OpenShift environment and integrate SonarQube scanning into your Jenkins pipeline.
-
-This work was inspired by the [OpenShift Demos SonarQube for OpenShift](https://github.com/OpenShiftDemos/sonarqube-openshift-docker).
-
-For more information, see the following pages:
-* [SonarQube repository](https://github.com/BCDevOps/sonarqube)
-
-For information on upgrading plugins, see the following pages:
-* [Upgrading Plugins Manually](https://github.com/BCDevOps/sonarqube/blob/master/docs/upgrading-plugins-manually.md)
-* [Upgrading with Bundled Plugins](https://github.com/BCDevOps/sonarqube/blob/master/docs/upgrading-with-bundled-plugins.md)
-
-You can also integrate a [ZAP plugin for SonarQube](https://github.com/OtherDevOpsGene/zap-sonar-plugin).
+### How To
+Refer to the [SonarQube repository](https://github.com/BCDevOps/sonarqube) to get started. The repo container instruction on how to install your own instance of SonarQube in OpenShift. If you are looking for SonarCloud, [here](https://github.com/BCDevOps/sonarqube#sonarcloud) are more details. To get started, you will need to submit a request for SonarCloud integration from [DevOps Requests](https://github.com/BCDevOps/devops-requests).
 
 ## WeasyPrint HTML to PDF/PNG Microservice
 
-The [docker-weasyprint](https://github.com/BCDevOps/docker-weasyprint) project bundles WeasyPrint into a simple, OpenShift-compatible, HTML to PDF/PNG microservice with a simple REST interface.
+The [docker-weasyprint](https://github.com/BCDevOps/docker-weasyprint) project bundles WeasyPrint into a simple, OpenShift-compatible, HTML to PDF/PNG microservice with a simple REST interface. [WeasyPrint](https://weasyprint.org/) is a open source solution that helps web developers to create PDF documents.
 
-For more information, see the following pages:
-* [WeasyPrint HTML to PDF/PNG Microservice](https://developer.gov.bc.ca/Community-Contributed-Content/WeasyPrint-HTML-to-PDFPNG-Microservice)
-* [docker-weasyprint](https://github.com/BCDevOps/docker-weasyprint)
-* [WeasyPrint](https://weasyprint.org/)
+### Features
+- support for modern CSS3 and HTML5 standards, pagination and page layout control
+- support for layout techniques like Flexbox and Grid, and handling of fonts, typography, MathML, and SVG
 
+### How To
+Refer to the [docker-weasyprint repository](https://github.com/BCDevOps/docker-weasyprint) to get started.
 
 <!-- 
 Are these related pages helpful?  Too many? Enough? Valid still? 
