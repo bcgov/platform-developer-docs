@@ -25,6 +25,7 @@ This document covers some of the most popular reusable components designed to en
 ## On this page
 * **[Backup container](#backup-container)**
 * **[BC Address Geocoder](#bc-address-geocoder)**
+* **[CICD Pipeline Templates](#cicd-pipeline-templates)**
 * **[Common Document Generation Service](#common-document-generation-service)**
 * **[Common Hosted Email Service](#common-hosted-email-service)**
 * **[Common Object Management Service](#common-object-management-service)**
@@ -75,6 +76,27 @@ Follow the [BC Address Geocoder Developer Guide](https://github.com/bcgov/api-sp
 To get a sandbox APIkey with a maximum rate of 1000 requests per minute, visit the [Geocoder API console](https://catalogue.data.gov.bc.ca/dataset/bc-address-geocoder-web-service). 
 
 You can get an unrestricted APIkey for use in government applications by opening a ticket with the [Data Systems & Services request system](https://api.gov.bc.ca/).
+
+## CICD Pipeline Templates
+
+[The Pipeline Templates repository](https://github.com/bcgov/pipeline-templates) provides different options to setup your CICD pipeline in OpenShift. You can find pipeline samples that contain common CICD pipeline stages to reuse for your project.
+
+### Features
+CICD Pipeline Templates including:
+- OpenShift Pipeline (aka Tekton) examples:
+    - installation guide on how to setup pipeline on either your local workspace or from a docker container
+    - example on a react app build and deploy
+    - example on using builda to build and push an image
+    - example on build and deploy application via helm
+    - example on maven build
+    - example on codeql scan
+    - example on sonar scan
+    - example on trivy scan
+    - example on owasp scan
+- GitHub Actions templates for the above examples
+
+### How To
+If you are looking to use OpenShift Pipeline, follow this [guide](https://github.com/bcgov/pipeline-templates/tree/main/tekton). You can also find a OCP 201 training video recorded about OpenShift Pipeline [here](https://github.com/bcgov/devops-platform-workshops/blob/master/openshift-201/pipelines.md). If you are looking to use Github Actions, refer to this [guide](https://github.com/bcgov/pipeline-templates/blob/main/docs/github.md).
 
 ## Common Document Generation Service
 Use the Common Document Generation Service (CDOGS) to generate PDF or XML-based documents (ex: docx, xlsx, pptx, odt, ods, odp, and html). The CDOGS API can merge complex datasets into document templates. It supports any XML-based document templates including but not limited to Microsoft Office, LibreOffice, and OpenOffice.
