@@ -18,14 +18,14 @@ content_owner: Olena Mitovska
 sort_order: 2
 ---
 # Reusable services list
-Last updated: **November 22, 2023**
+Last updated: **November 28, 2023**
 
 This document covers some of the most popular reusable components designed to enhance the feature and infrastructure of your applications. You can find out more about the services and tools below, and guidance on how to integrate them into your application. This list crosses with the [BCGov Common Components](https://digital.gov.bc.ca/common-components/) as well as the [BCGov Software as a Service (SaaS) catalog](https://digital.gov.bc.ca/cloud/services/saas/), feel free to check out from all three places when looking for a component to use!
 
 ## On this page
 * **[Backup container](#backup-container)**
 * **[BC Address Geocoder](#bc-address-geocoder)**
-* **[CICD Pipeline Templates](#cicd-pipeline-templates)**
+* **[CI/CD Pipeline templates](#cicd-pipeline-templates)**
 * **[Common Document Generation Service](#common-document-generation-service)**
 * **[Common Hosted Email Service](#common-hosted-email-service)**
 * **[Common Object Management Service](#common-object-management-service)**
@@ -77,26 +77,29 @@ To get a sandbox APIkey with a maximum rate of 1000 requests per minute, visit t
 
 You can get an unrestricted APIkey for use in government applications by opening a ticket with the [Data Systems & Services request system](https://api.gov.bc.ca/).
 
-## CICD Pipeline Templates
+## CI/CD Pipeline templates
 
-[The Pipeline Templates repository](https://github.com/bcgov/pipeline-templates) provides different options to setup your CICD pipeline in OpenShift. You can find pipeline samples that contain common CICD pipeline stages to reuse for your project.
+[The Pipeline templates repository](https://github.com/bcgov/pipeline-templates) provides different options to setup your CI/CD pipeline in OpenShift. You can find pipeline samples that contain common CI/CD pipeline stages to reuse for your project.
 
 ### Features
-CICD Pipeline Templates including:
-- OpenShift Pipeline (aka Tekton) examples:
-    - installation guide on how to setup pipeline on either your local workspace or from a docker container
-    - example on a react app build and deploy
-    - example on using builda to build and push an image
-    - example on build and deploy application via helm
-    - example on maven build
-    - example on codeql scan
-    - example on sonar scan
-    - example on trivy scan
-    - example on owasp scan
-- GitHub Actions templates for the above examples
+CI/CD Pipeline Templates and GitHub Actions templates.
 
-### How To
-If you are looking to use OpenShift Pipeline, follow this [guide](https://github.com/bcgov/pipeline-templates/tree/main/tekton). You can also find a OCP 201 training video recorded about OpenShift Pipeline [here](https://github.com/bcgov/devops-platform-workshops/blob/master/openshift-201/pipelines.md). If you are looking to use Github Actions, refer to this [guide](https://github.com/bcgov/pipeline-templates/blob/main/docs/github.md).
+- OpenShift Pipeline (aka Tekton) examples:
+    - Installation guide on how to setup pipeline on    either your local workspace or from a docker container
+    -  React app build and deploy
+    -  Using builda to build and push an image
+    -  Build and deploy application via helm
+    -  Maven build
+    -  Codeql scan
+    -  Sonar scan
+    -  Trivy scan
+    -  Owasp scan
+
+### How-to
+- Find out how to use OpenShift Pipeline with [this guide](https://github.com/bcgov/pipeline-templates/tree/main/tekton)
+- OpenShift 201 [training video](https://github.com/bcgov/devops-platform-workshops/blob/master/openshift-201/pipelines.md) about OpenShift Pipeline 
+
+- Use Github Actions [guide](https://github.com/bcgov/pipeline-templates/blob/main/docs/github.md)
 
 ## Common Document Generation Service
 Use the Common Document Generation Service (CDOGS) to generate PDF or XML-based documents (ex: docx, xlsx, pptx, odt, ods, odp, and html). The CDOGS API can merge complex datasets into document templates. It supports any XML-based document templates including but not limited to Microsoft Office, LibreOffice, and OpenOffice.
@@ -174,7 +177,7 @@ go-crond is a cron daemon crafted in Go, designed specifically for Docker images
 - Supports Linux, MacOS, ARM/ARM64 (Rasbperry Pi and others)
 
 ### How-to
-Refer to the [go-crond repository](https://github.com/webdevops/go-crond) to get started. You can find the installation guidance and examples in the repo.
+Refer to the [go-crond repository](https://github.com/webdevops/go-crond) to get started. You can find the installation guidance and n the repo.
 
 ## Matomo OpenShift
 Matomo is a full web analytics server. It's a choice to consider instead of Google Analytics if you're worried about owning your data and meeting privacy rules.
