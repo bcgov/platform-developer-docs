@@ -85,7 +85,7 @@ You can get an unrestricted APIkey for use in government applications by opening
 CI/CD Pipeline Templates and GitHub Actions templates.
 
 - OpenShift Pipeline (aka Tekton) examples:
-    - Installation guide on how to setup pipeline on    either your local workspace or from a docker container
+    - Installation guide on how to setup pipeline on either your local workspace or from a docker container
     -  React app build and deploy
     -  Using builda to build and push an image
     -  Build and deploy application via helm
