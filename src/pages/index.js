@@ -221,8 +221,12 @@ const IndexPage = ({ location }) => {
                   Set up advance functions in Sysdig Monitor
                 </Link>
               </li>
-              <li>Four gold signals for app monitoring (coming soon)</li>
-              <li>App logging (coming soon)</li>
+              <li>
+                <Link to={"/best-practices-for-application-logging-in-openshift"}>
+                  Best practices for application logging in OpenShift
+                </Link>
+                </li>
+                <li>Four gold signals for app monitoring (coming soon)</li>
             </ul>
           </Card>
           <Card>
