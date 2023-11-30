@@ -36,6 +36,7 @@ nav:
   - Set up advanced metrics in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-set-up-advanced-functions.md
   - Check application health after an outage: docs/app-monitoring/check-application-health-after-outage.md
   - User Defined Monitoring in OpenShift: docs/app-monitoring/user-defined-monitoring.md
+  - Best practices for application logging in OpenShift: docs/app-monitoring/best-pratices-for-application-logging-in-openshift.md
 - Database and API management:
   - High availability database clusters: docs/database-and-api-management/high-availability-database-clusters.md
   - Open-source database technologies: docs/database-and-api-management/opensource-database-technologies.md
