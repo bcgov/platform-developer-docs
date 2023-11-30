@@ -53,6 +53,7 @@ The [Backup Container](https://github.com/bcgov/backup-container) is an easy bac
 
 ### Features
 These are the supported databases:
+
 - MongoDB
 - PostgresSQL
 - MSSQL (MSSQL requires the NFS DB volume is shared with the database for backups to function correctly)
@@ -66,6 +67,7 @@ The BC Address Geocoder REST API lets you integrate real-time standardization, v
 
 ### Features
 The Geocoder helps you:
+
 - Validate and geocode addresses (including public and related business occupants)
 - Find physical sites, intersections and occupants
 - Find sites, intersections and occupants near a point or within an area
@@ -85,15 +87,15 @@ You can get an unrestricted APIkey for use in government applications by opening
 CI/CD Pipeline Templates and GitHub Actions templates.
 
 - OpenShift Pipeline (aka Tekton) examples:
-    - Installation guide on how to setup pipeline on either your local workspace or from a docker container
-    -  React app build and deploy
-    -  Using builda to build and push an image
-    -  Build and deploy application via helm
-    -  Maven build
-    -  Codeql scan
-    -  Sonar scan
-    -  Trivy scan
-    -  Owasp scan
+  - Installation guide on how to setup pipeline on either your local workspace or from a docker container
+  -  React app build and deploy
+  -  Using builda to build and push an image
+  -  Build and deploy application via helm
+  -  Maven build
+  -  Codeql scan
+  -  Sonar scan
+  -  Trivy scan
+  -  Owasp scan
 
 ### How-to
 - Find out how to use OpenShift Pipeline with [this guide](https://github.com/bcgov/pipeline-templates/tree/main/tekton)
@@ -106,6 +108,7 @@ Use the Common Document Generation Service (CDOGS) to generate PDF or XML-based 
 
 ### Features
 Use the Common Document Generation Service to:
+
 - Create custom letters to clients, including detailed information related to their files
 - Create requests for proposals and related standard-form contracts
 - Generate monthly reports by automatically inserting data into documents
@@ -121,12 +124,14 @@ Use the Common Hosted Email Service (CHES) to send emails programmatically.
 
 ### Features
 Use the Common Hosted Email Service to:
+
 - Notify a list of clients of individual appointments or schedule changes
 - Request information regarding specific items
 - Advise contacts of process changes that apply to their cases
 
 ### How-to
 For more information on CHES, see the following pages:
+
 * [Common Hosted Email Service (CHES) product overview](https://digital.gov.bc.ca/common-components/common-hosted-email-service)
 * [Common Hosted Email Service (CHES) documentation](https://bcgov.github.io/common-service-showcase/services/ches.html)
 
@@ -135,6 +140,7 @@ Use the Common Object Management Service (COMS) to cut costs on storage for your
 
 ### Features
 Use COMS to:
+
 - Upload, download, manage and delete objects
 - Discover, update and manage object versions
 - Toggle general public access to objects
@@ -151,6 +157,7 @@ For more information on COMS, see the following pages:
 Get Token (also known as GETOK) is a web-based tool for development teams to manage their application’s secure access to Common Services. Users can create and deploy service clients instantly to gain access to common service APIs like email notifications, document management, or document generation.
 
 ### Features
+
 - Communicate with Keycloak realms to generate service clients
 - Secure password generation and transmission via public/private key encryption
 
@@ -171,6 +178,7 @@ Refer to the [Fathom repository](https://github.com/BCDevOps/fathom-openshift) t
 go-crond is a cron daemon crafted in Go, designed specifically for Docker images.
 
 ### Features
+
 - system crontab (with username inside)
 - user crontabs (without username inside)
 - run-parts support
@@ -191,6 +199,7 @@ Matomo is a full web analytics server. It's a choice to consider instead of Goog
 The OWASP Zed Attack Proxy (ZAP) automatically finds security vulnerabilities in web applications.
 
 ### Features
+
 - Active and Passive Scans
 - Running Scans: Desktop and API
 - Authenticated Security Scanning
@@ -205,12 +214,13 @@ The public docker registry version of OWASP's Zed Attack Proxy (ZAP) is not comp
 The Pathfinder Single Sign-On (SSO) team provides the Common Hosted Single Sign-On (CSS) App. This is a self-service app that allows you to integrate with B.C. government approved login services (identity providers). The Pathfinder SSO service is built on the foundations of Keycloak/Redhat SSO.
 
 ### Features
+
 - Easy setup with integrations to the following identity providers:
-    - IDIR and AzureAD IDIR (BC Common Logon Page)
-    - BCeID Basic (BC Common Logon Page) -- Allows login only with BCeID Basic
-    - BCeID Business (BC Common Logon Page) -- Allows login only with BCeID Business
-    - BCeID Basic & Business(BC Common Logon Page) -- Allows login with BCeID Basic or BCeID Business
-    - GitHub associated with BC Gov Org -- Allows login of GitHub BC Gov Org members
+  - IDIR and AzureAD IDIR (BC Common Logon Page)
+  - BCeID Basic (BC Common Logon Page) -- Allows login only with BCeID Basic
+  - BCeID Business (BC Common Logon Page) -- Allows login only with BCeID Business
+  - BCeID Basic & Business(BC Common Logon Page) -- Allows login with BCeID Basic or BCeID Business
+  - GitHub associated with BC Gov Org -- Allows login of GitHub BC Gov Org members
 - OIDC protocol
 - Session Management
 - High Availability Requirements
@@ -225,6 +235,7 @@ Start with a [Request a SSO integration](https://bcgov.github.io/sso-requests/).
 
 ### Features
 SonarQube:
+
 - Static code analysis for over 17 languages
 - Review security hotspots, detect bugs and vulnerabilities
 - Track code smells and fix your technical debt
@@ -232,6 +243,7 @@ SonarQube:
 - Extensible with more than 50 community plugins
 
 SonarCloud (in addition to SonarQube advantages):
+
 - Automatically analyzes and decorates pull requests on GitHub
 - Can be invoked from your workstation, OpenShift pipeline and your GitHub actions on top of that it will run for every pull request automatically
 - Will save precious OpenShift resources
@@ -244,6 +256,7 @@ Refer to the [SonarQube repository](https://github.com/BCDevOps/sonarqube) to ge
 The [docker-weasyprint](https://github.com/BCDevOps/docker-weasyprint) project bundles WeasyPrint into a simple, OpenShift-compatible, HTML to PDF/PNG microservice with a simple REST interface. [WeasyPrint](https://weasyprint.org/) is a open source solution that helps web developers to create PDF documents.
 
 ### Features
+
 - Support for modern CSS3 and HTML5 standards, pagination and page layout control
 - Support for layout techniques like Flexbox and Grid, and handling of fonts, typography, MathML, and SVG
 
@@ -253,6 +266,7 @@ Refer to the [docker-weasyprint repository](https://github.com/BCDevOps/docker-w
 ---
 
 ## Related pages
+
 * [BCGov Common Components Website](https://digital.gov.bc.ca/common-components/)
 * [BCGov Saas Website](https://digital.gov.bc.ca/cloud/services/saas/)
 
