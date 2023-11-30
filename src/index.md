@@ -69,8 +69,8 @@ Dive deeper
 
 * [Set up a team in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-setup-team.md)
 * [Set up advance functions in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
+* [ Best practices for application logging in OpenShift](docs/app-monitoring/best-pratices-for-application-logging-in-openshift.md)
 * Four gold signals for app monitoring (coming soon)
-* App logging (coming soon)
 
 ### Database and API management
 
