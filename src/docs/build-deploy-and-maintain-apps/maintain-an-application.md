@@ -21,7 +21,7 @@ sort_order: 3
 ---
 
 # Maintain an application
-Last updated: **October 17, 2023**
+Last updated: **December 4, 2023**
 
 We've covered the best practices for [building](/build-an-application/) and [deploying](/deploy-an-application/) applications. Now, let's focus on essential steps for ongoing application management in the OpenShift environment.
 
@@ -441,11 +441,11 @@ Before scheduled changes to the platform and shared services occur, the Platform
 
 Moreover, it's advisable for all team members to remain engaged with the community through the following channels:
 
-- Subscribe to [Platform Services Newsletters](https://subscribe.developer.gov.bc.ca/) so that you will receive email notifications for upcoming changes, as well as [the Platform Community MeetUp Event](https://digital.gov.bc.ca/cloud/private/about-us/) every 3 weeks for platform updates and technical demos.
+- Subscribe to [Platform Services Newsletters](https://subscribe.developer.gov.bc.ca/) so that you will receive email notifications for upcoming changes, as well as [the Platform Community MeetUp Event](https://digital.gov.bc.ca/cloud/services/private/team/#stay) every 3 weeks for platform updates and technical demos.
 
 - Monitor [Rocket.Chat #devops-alerts channel](https://chat.developer.gov.bc.ca/channel/devops-alerts) for service alerts and status updates. Rocket.Chat serves as the main communication method for teams on the platform to get help, share knowledge and information, and build up the community. 
 
-- Take a look at [additional Platform activities and resources](https://digital.gov.bc.ca/cloud/private/about-us/) . Look under the section for StackOverflow knowledge base, and more.
+- Take a look at [common platform requests](https://digital.gov.bc.ca/cloud/services/private/support/#common) . This section can be helpful to your team to discover the most commonly searched-for tasks, with links to additional instructions.
 ---
 ## Managing impacts of personnel changes
 
@@ -494,7 +494,7 @@ It is also important to keep the Platform Services [Product Registry](https://re
 - [Restoring Backup Volumes on OpenShift](/netapp-backup-restore/)
 - [Grant user access in OpenShift](/grant-user-access-openshift/)
 - [Vault secrets management](/vault-secrets-management-service/)
-- [Kibana training application loggin](https://github.com/bcgov/devops-platform-workshops/blob/master/openshift-201/logging.md)
+- [Kibana training application logging](https://github.com/bcgov/devops-platform-workshops/blob/master/openshift-201/logging.md)
 - [Check application health after outage](/check-application-health-after-outage/)
 - [Building secure and reliable systems e-book](https://sre.google/books/building-secure-reliable-systems/)
 - [Deploying to OpenShift e-book](https://cloud.redhat.com/hubfs/pdfs/Deploying_to_OpenShift.pdf)
