@@ -29,15 +29,21 @@ Before asking for more quota for your project set, check if the application is f
 - [Application resource tuning](/application-resource-tuning/)
 
 ## On this page
-- [Set up resource monitoring with Sysdig Monitor](#set-up-resource-monitoring-with-sysdig-monitor)
-- [Request a quota increase](#request-a-quota-increase)
-- [Collect application metrics](#collect-application-metrics)
+- [Request a quota increase for an OpenShift project set](#request-a-quota-increase-for-an-openshift-project-set)
+  - [On this page](#on-this-page)
+  - [Set up resource monitoring with Sysdig Monitor](#set-up-resource-monitoring-with-sysdig-monitor)
+  - [Request a quota increase](#request-a-quota-increase)
+  - [Collect application metrics](#collect-application-metrics)
 
 ## Set up resource monitoring with Sysdig Monitor
 
 Use Sysdig to monitor your application. You can access dashboards that show your application memory, CPU and storage usage.
 
-Before you ask for a quota increase, the Platform Services team wants you to monitor and collect metrics to show how much resource your application uses. For more information, see [Onboarding to application monitoring with Sysdig](/sysdig-monitor-onboarding/). The documentation has all you need to onboard onto Sysdig and use the default dashboards. If you have any issues onboarding to Sysdig, contact the Platform Services team on the applicable [Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig).
+Before requesting a quota increase, it's crucial to monitor and collect metrics showcasing your application's resource utilization. If you haven't already, refer to the comprehensive guide on onboarding to application monitoring with Sysdig. see [Onboarding to application monitoring with Sysdig](/sysdig-monitor-onboarding/) for a step-by-step instructions for onboarding onto Sysdig and utilizing default dashboards to gain insights into your application's performance. For The documentation has all you need to onboard onto Sysdig and use the default dashboards.
+
+In the event that you have successfully onboarded to Sysdig, we have a dedicated document outlining the specific metrics and evidence required when applying for additional resources. This document serves as a guide to help you compile the necessary data effectively. Ensure that you gather comprehensive information on resource consumption, including CPU and memory usage, and any other relevant metrics specific to your application. For more details on the metrics and evidence required, refer to the documentation [here](/resource-monitroing-dashboard/).
+
+ If you have any issues onboarding to Sysdig, contact the Platform Services team on the applicable [Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig).
 
 ## Request a quota increase
 **Note**: Before you request a quota increase, make sure that your project is using its resources efficiently. The Platform Services team wants to be very confident your project needs more quota before they grant an increase.
@@ -53,10 +59,12 @@ The Platform Services team needs to know if your application is using the curren
 Use the following process:
 1. Collect details on what you've already tried to reduce the current resource consumption and the use cases for the quota increase.
 2. Show the Platform Services team the resource monitors you have in the namespace. The team wants to know what level the resource consumption is in your application and how efficiently it's using resources.
+3. Sysdig provides a pre-built dashboard template that can help visualize and analyze the metrics of your OpenShift project. To make the process of requesting a quota increase more straightforward, consider using the Sysdig dashboard template. Instruction can be found in [here](/sysdig-monitor-create-monitoring-dashboards/)
 
+  
   **Note**: You should collect data for at least a week or however long it takes to see a pattern. Consider each component in the namespace, whether it's a part of the application or DevOps tools.
 
-3. Use the following guidelines, depending on the resource type:
+1. Use the following guidelines, depending on the resource type:
 
   **CPU or RAM quota increase**
 

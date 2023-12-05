@@ -25,10 +25,15 @@ From the previous topic, you have successfully created a `sysdig-team` that gene
 
 ## On this page
 
-- [Monitoring dashboard templates](#sysdig-built-in-monitoring-dashboard-templates)
-- [Custom dashboard from templates](#create-custom-dashboard-from-templates)
-- [Recoverability of monitoring dashboards](#recoverability-of-monitoring-dashboards)
-- [Related pages](#related-pages)
+- [Create monitoring dashboards in Sysdig Monitor](#create-monitoring-dashboards-in-sysdig-monitor)
+  - [On this page](#on-this-page)
+  - [Sysdig built-in monitoring dashboard templates](#sysdig-built-in-monitoring-dashboard-templates)
+  - [Create custom dashboard from templates](#create-custom-dashboard-from-templates)
+  - [Sysdig Advisor Namespace Overview](#sysdig-advisor-namespace-overview)
+    - [Accessing Sysdig Advisor Namespace Overview](#accessing-sysdig-advisor-namespace-overview)
+  - [Recoverability of monitoring dashboards](#recoverability-of-monitoring-dashboards)
+  - [Related pages:](#related-pages)
+  - [Related resources:](#related-resources)
 
 ## Sysdig built-in monitoring dashboard templates
 
@@ -42,6 +47,7 @@ Here are some common ones to start with:
 - `Pod/Workload Status & Performance`: Understand the status of applications (workloads or pods) by monitoring status, health, resource usage and performance. Works great for service monitoring via Golden Signals.
 - `Application specific dashboards`: You can find them from the Application section of the templates. They are helpful if you are looking for metrics dedicated to your tech stack.
 
+Here's a quick [video](https://www.youtube.com/watch?v=K4rkSCSq3C4&list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg&index=24) on how this can be setup.
 
 ## Create custom dashboard from templates
 
@@ -53,7 +59,19 @@ You can create your own dashboards based on the templates, then adding in custom
 
 If you use more [advanced PromQL queries](./sysdig-monitor-set-up-advanced-functions.md), you can also add them to a dashboard. To do so, click on `Add Panel` from the top right corner of the dashboard, and fill in the metrics query there.
 
+## Sysdig Advisor Namespace Overview
 
+[Sysdig Advisor](https://docs.sysdig.com/en/docs/sysdig-monitor/advisor/overview/namespaces-data/) provides a comprehensive Namespace Overview feature, allowing you to quickly assess the resource utilization of your OpenShift namespaces. This overview is invaluable when you need a snapshot of your namespace(s) and want to make informed decisions about resource allocation. Below is a guide on how to access and utilize this feature.
+
+### Accessing Sysdig Advisor Namespace Overview
+
+
+1. **Select Namespace Overview:**
+   - In the Advisor section, find and click on "Namespace Overview." This will take you to the dedicated page for viewing information about your namespaces.
+
+   ![Accessing Sysdig Advisor Namespace Overview](../../images/sysdig-team-advisor.png)
+
+This feature enhances the overall observability of your OpenShift environment, allowing for timely responses to resource-related challenges. Leverage the insights gained from the Namespace Overview to make informed decisions about resource allocation and optimization strategies.
 ## Recoverability of monitoring dashboards
 
 Each dashboard is assigned to a user account on Sysdig for ownership. If the Sysdig user or team is deleted (whether from the Sysdig console or the `sysdig-team` custom resource), all of the dashboards will be deleted too. We do not have a way to retrieve deleted dashboards. Thus it is highly recommended to use the [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/) to keep your custom dashboards as code manifest. In the case of missing dashboards, you can then easily recover them from the manifest.
