@@ -1,5 +1,5 @@
 ---
-title: Resource Monitoring Dashboard
+title: Resource monitoring dashboard
 
 slug: resource-monitoring-dashboard
 
@@ -18,8 +18,21 @@ content_owner: Billy Li
 sort_order: 8
 ---
 
-# Resource Monitoring Dashboards
-## Prepare for Quota Increase request
+# Resource monitoring dashboards
+Last updated: **December 6, 2023**
+
+<!-- Billy please explain what this page is about, provide a description guiding your readers to know what this page's content is about, one paragraph is helpful.  -->
+
+
+## On this page
+
+* **[Prepare request for quota increase](#prepare-request-for-quota-increase)**
+* **[Open PromQL Query under Explore](#open-promql-query-under-explore)**
+* **[Creating dashboard panels](#creating-dashboard-panels)**
+* **[Dashboard overview](#dashboard-overview)**
+* **[Related pages](#related-pages)**
+
+## Prepare request for quota increase
 
 To effectively utilize Resource Monitoring Dashboards, ensure that you have your Sysdig team set up and are familiar with creating and using template dashboards. If you're not already familiar with these concepts, please refer to the [Sysdig documentation on creating monitoring dashboards](/sysdig-monitor-create-monitoring-dashboards/).
 
@@ -52,28 +65,29 @@ Sysdig Monitor allows you to leverage PromQL queries to collect resource utiliza
 
 Replace `$cluster` and `$namespace` in these queries with your specific values.
 
-## Creating Dashboard Panels
+## Creating dashboard panels
 
 Once you find these metrics useful, you can create dedicated panels for your dashboard:
 
-1. Click on the "Create" button on the page where the metric is displayed.
-2. Customize the panel according to your requirements.
-3. Add the panel to your dashboard.
+1. Click on the "Create" button on the page where the metric is displayed
+2. Customize the panel according to your requirements
+3. Add the panel to your dashboard
 
-## Dashboard Overview
+## Dashboard overview
 
-With the panels created, you can have an overview of the percentage of resources used in a particular namespace. This information is valuable when requesting a quota increase from the Platform Services team.
+With the created panels, you can gain an overview of the percentage of resources used in a specific namespace. This information becomes crucial when requesting a quota increase from the Platform Services team.
 
 Understanding your current resource usage and available quota in a namespace provides a clear picture of your application's demands. This knowledge empowers you to make informed requests for additional resources based on real-time data.
 
 Remember to regularly monitor and update your resource dashboards to ensure accurate and up-to-date information is available for decision-making.
-Here's a example of this dashboard:
-![Resources Monitroing pannel Example](../../images/sysdig-resources-monitoring-dahsboard-example.png)
 
-**NOTE** You can zoom out the time scope using the control located at the very bottom of the page, as shown in the image above. It would be more convincing to provide data from 2 weeks or at least 1 week.
+See the example below, you can zoom out the time scope using the control located at the very bottom of the page, as shown in the image. It would be more convincing to provide data from 2 weeks or at least 1 week:
+
+![Resources Monitoring panel example](../../images/sysdig-resources-monitoring-dahsboard-example.png)
+
 ---
 
 ## Related pages:
 [How to use Sysidg Explore](https://docs.sysdig.com/en/docs/sysdig-monitor/explore/using-explore/using-promql-query/)
 
----
+<!-- Billy do we need to add more pages here?  -->
