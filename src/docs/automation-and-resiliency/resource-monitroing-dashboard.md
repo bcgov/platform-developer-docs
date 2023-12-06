@@ -87,7 +87,7 @@ See the example below, you can zoom out the time scope using the control located
 ---
 
 ## Related pages:
-[How to use Sysdig Explore](https://docs.sysdig.com/en/docs/sysdig-monitor/explore/using-explore/using-promql-query/)
-[Using PromQL](https://docs.sysdig.com/en/docs/sysdig-monitor/using-monitor/using-promql)
-[Dashboard Templates](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/dashboard-templates/)
+* [How to use Sysdig Explore](https://docs.sysdig.com/en/docs/sysdig-monitor/explore/using-explore/using-promql-query/)
+* [Using PromQL](https://docs.sysdig.com/en/docs/sysdig-monitor/using-monitor/using-promql)
+* [Dashboard Templates](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/dashboard-templates/)
 
