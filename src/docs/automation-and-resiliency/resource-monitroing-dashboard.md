@@ -21,8 +21,7 @@ sort_order: 8
 # Resource monitoring dashboards
 Last updated: **December 6, 2023**
 
-<!-- Billy please explain what this page is about, provide a description guiding your readers to know what this page's content is about, one paragraph is helpful.  -->
-
+It is importance of regularly monitoring resource dashboards to understand how much resources your application actually need and get up-to-date information for decision-making while your application growth. This page concludes with a visual example and a suggestion to provide data in quota increase request process.
 
 ## On this page
 
@@ -88,6 +87,7 @@ See the example below, you can zoom out the time scope using the control located
 ---
 
 ## Related pages:
-[How to use Sysidg Explore](https://docs.sysdig.com/en/docs/sysdig-monitor/explore/using-explore/using-promql-query/)
+[How to use Sysdig Explore](https://docs.sysdig.com/en/docs/sysdig-monitor/explore/using-explore/using-promql-query/)
+[Using PromQL](https://docs.sysdig.com/en/docs/sysdig-monitor/using-monitor/using-promql)
+[Dashboard Templates](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/dashboard-templates/)
 
-<!-- Billy do we need to add more pages here?  -->
