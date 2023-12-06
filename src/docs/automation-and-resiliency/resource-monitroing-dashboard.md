@@ -21,7 +21,7 @@ sort_order: 8
 # Resource monitoring dashboards
 Last updated: **December 6, 2023**
 
-It is importance of regularly monitoring resource dashboards to understand how much resources your application actually need and get up-to-date information for decision-making while your application growth. This page concludes with a visual example and a suggestion to provide data in quota increase request process.
+It's crucial to regularly monitor resource dashboards to comprehend your application's actual resource needs and obtain up-to-date information for decision-making as your application grows. This page concludes with a visual example and a recommendation for including data in the quota increase request process.
 
 ## On this page
 
