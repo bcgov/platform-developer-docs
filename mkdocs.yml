@@ -28,6 +28,7 @@ nav:
   - Restoring Backup Volumes on OpenShift: docs/automation-and-resiliency/netapp-backup-restore.md
   - Prepare to load test an application on OpenShift: docs/automation-and-resiliency/prepare-to-load-test-application-on-openshift.md
   - Product Team Recovery Best Practices and Responsibilities: docs/automation-and-resiliency/namespace-recovery-and-responsibilities.md
+  - Resource monitoring dashboard: docs/automation-and-resiliency/resource-monitroing-dashboard.md
 - App monitoring:
   - Onboarding to application monitoring with Sysdig: docs/app-monitoring/sysdig-monitor-onboarding.md
   - Set up a team in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-setup-team.md
