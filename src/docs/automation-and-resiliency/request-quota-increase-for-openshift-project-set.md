@@ -43,7 +43,7 @@ Utilize Sysdig to monitor your application, accessing dashboards that display me
 
 Before requesting a quota increase, it's crucial to monitor and collect metrics illustrating your application's resource utilization. If you haven't already, check out the comprehensive guide on onboarding to application monitoring with Sysdig. Visit [Onboarding to application monitoring with Sysdig](../app-monitoring/sysdig-monitor-onboarding.md) for a step-by-step instructions for onboarding onto Sysdig and utilizing default dashboards to gain insights into your application's performance. For The documentation has all you need to onboard onto Sysdig and use the default dashboards.
 
-If you have successfully onboarded to Sysdig, we provide a dedicated document outlining the specific metrics and evidence needed when applying for additional resources. This document serves as a guide to assist you in compiling the necessary data effectively. Make sure to gather comprehensive information on resource consumption, covering CPU and memory usage, along with any other relevant metrics specific to your application. For more details on the required metrics and evidence, refer to the documentation  [here](/resource-monitoring-dashboard/).
+If you have successfully onboarded to Sysdig, we provide a dedicated document outlining the specific metrics and evidence needed when applying for additional resources. This document serves as a guide to assist you in compiling the necessary data effectively. Make sure to gather comprehensive information on resource consumption, covering CPU and memory usage, along with any other relevant metrics specific to your application. For more details on the required metrics and evidence, refer to the documentation  [here](../automation-and-resiliency/resource-monitroing-dashboard.md).
 
  If you have any issues onboarding to Sysdig, contact the Platform Services team on the applicable [Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig).
 
@@ -62,7 +62,7 @@ Follow this process:
 
 1. Document what you've attempted to reduce current resource consumption and outline the use cases for the quota increase
 2. Present the resource monitors within your namespace to the Platform Services team. They are interested in understanding the level of resource consumption in your application and how efficiently it utilizes resources
-3. Sysdig offers a pre-built dashboard template designed to visualize and analyze metrics in your OpenShift project. To simplify the process of requesting a quota increase, consider utilizing the Sysdig dashboard template. Instructions can be found in [here](/sysdig-monitor-create-monitoring-dashboards/)
+3. Sysdig offers a pre-built dashboard template designed to visualize and analyze metrics in your OpenShift project. To simplify the process of requesting a quota increase, consider utilizing the Sysdig dashboard template. Instructions can be found in [here](../app-monitoring/sysdig-monitor-create-monitoring-dashboards.md)
 
    You should collect data for at least a week or however long it takes to see a pattern. Consider each component in the namespace, whether it's a part of the application or DevOps tools.
 
