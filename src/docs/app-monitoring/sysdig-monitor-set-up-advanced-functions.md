@@ -21,13 +21,15 @@ sort_order: 4
 # Set up advanced metrics in Sysdig Monitor
 
 ## On this page
-- [Creating PromQL metrics](#creating-promql-metrics)
-- [Create a PromQL based alert](#create-a-promql-based-alert)
-- [Use Service Discovery to import application metrics endpoints](#use-service-discovery-to-import-application-metrics-endpoints)
+- [Set up advanced metrics in Sysdig Monitor](#set-up-advanced-metrics-in-sysdig-monitor)
+  - [On this page](#on-this-page)
+  - [Creating PromQL metrics](#creating-promql-metrics)
+  - [Create a PromQL based alert](#create-a-promql-based-alert)
+  - [Use Service Discovery to import application metrics endpoints](#use-service-discovery-to-import-application-metrics-endpoints)
 
 
 ## Creating PromQL metrics
-Sysdig scrapes Prometheus metrics, you can create custom queries using PromQL. Here is a great way to start exploring:
+Sysdig scrapes Prometheus metrics, and you can leverage PromQL to create custom queries. PromQL is particularly beneficial for advanced metric exploration and offers flexibility in obtaining specific insights from your data. To get started, consider the following example:
 
 ![Sysdig exploring](../../images/sysdig_team_promql_explore.png)
 

@@ -20,17 +20,28 @@ sort_order: 2
 
 # Set up a team in Sysdig Monitor
 
-[Sysdig Monitor](https://sysdig.com/products/monitor/) provides system-level monitoring of Kubernetes hosts and the ability to create custom dashboards, alerts and operational-level captures to diagnose application or platform-level issues.
+[Sysdig Monitor](https://sysdig.com/products/monitor/) provides system-level monitoring of Kubernetes hosts and the ability to create custom dashboards, alerts, and operational-level captures to diagnose application or platform-level issues.
 
-The Sysdig Teams Operator runs in the cluster and enables a team to create and manage access to a dedicated Sysdig Team account for BC Gov Private Cloud PaaS users. The team is scoped to the OpenShift namespaces that belong to the team. Sysdig also provides a default dashboard to identify system [resources, limits and actual usage](/openshift-project-resource-quotas/).
+**Introduction: Why Monitoring Matters**
+
+Effective monitoring and alerting are crucial components of maintaining a robust and reliable system. Monitoring allows your team to proactively identify potential issues before they impact your application, enabling timely responses and minimizing downtime. The platform services team strongly recommends that all teams implement the dashboards presented here as a minimum standard for ensuring the health and performance of their applications.
+
+The Sysdig Teams Operator runs in the cluster and enables a team to create and manage access to a dedicated Sysdig Team account for BC Gov Private Cloud PaaS users. The team is scoped to the OpenShift namespaces that belong to the team. Sysdig also provides a default dashboard to identify system [resources, limits, and actual usage](/openshift-project-resource-quotas/).
 
 For more information on Sysdig Monitor, see [Monitoring with Sysdig](%WORDPRESS_BASE_URL%/private-cloud/our-products-in-the-private-cloud-paas/monitoring-with-sysdig/).
 
 ## On this page
-- [Sign in to Sysdig](#sign-in-to-sysdig)
-- [Create Sysdig team access](#create-sysdig-team-access)
-- [Verify Sysdig team creation](#verify-sysdig-team-creation)
-- [Troubleshooting](#troubleshooting)
+- [Set up a team in Sysdig Monitor](#set-up-a-team-in-sysdig-monitor)
+  - [On this page](#on-this-page)
+  - [Sign in to Sysdig](#sign-in-to-sysdig)
+  - [Create Sysdig team access](#create-sysdig-team-access)
+    - [Part 1 - Compose the sysdig-team object manifest](#part-1---compose-the-sysdig-team-object-manifest)
+    - [Part 2 - Create the sysdig-team custom resource](#part-2---create-the-sysdig-team-custom-resource)
+  - [Verify Sysdig team creation](#verify-sysdig-team-creation)
+  - [Troubleshooting](#troubleshooting)
+
+...
+
 
 
 ## Sign in to Sysdig
@@ -111,9 +122,9 @@ Use `oc describe sysdig-team <PROJECT_SET_LICENSE_PLATE>-sysdigteam` to validate
     Team:
       Description:  The Sysdig Team for the Platform Services Documize
       Users:
-        Name:  shelly.han@gov.bc.ca
+        Name:  example.1@gov.bc.ca
         Role:  ROLE_TEAM_MANAGER
-        Name:  patricksimonian@gmail.com
+        Name:  example.2@gmail.com
         Role:  ROLE_TEAM_EDIT
         ...
   Status:
@@ -137,6 +148,8 @@ You should expect to see the following from the `sysdig-team` outcome:
 Message:               Awaiting next reconciliation
 Reason:                Successful
 ```
+**NOTE**: the custom resource kind is SysdigTeam, but when using the oc command, you need to use the pluralized form `sysdig-teams`. This behavior is due to the fact that OpenShift automatically generates the plural form for custom resources. So you will need to use `oc get sysdig-teams` to list all SysdigTeams
+
 
 If both of these show, the `sysdig-team` custom resource is processed successfully. You can go back to Sysdig to see the new team scope and default dashboards.
 
