@@ -137,7 +137,7 @@ It's recommended to create alerts from an application monitoring metrics, which 
 ---
 --- 
 
-## Related pages:
+## Related pages
 - [Set up advanced functions in Sysdig Monitor](/sysdig-monitor-set-up-advanced-functions/)
 - [Set up a team in Sysdig Monitor](/sysdig-monitor-setup-team/)
 - [Sysdig Monitor](https://docs.sysdig.com/en/sysdig-monitor.html)
