@@ -19,20 +19,18 @@ sort_order: 3
 ---
 
 # Create alerts and notifications in Sysdig Monitor
-Last updated: **May 31, 2023**
+Last updated: **December  18, 2023**
 
-You can create alerts based on monitoring dashboards in Sysdig Monitor that notify your team when something needs attention.
+This document helps you create alerts based on monitoring dashboards in Sysdig Monitor that help notify your team when something needs attention.
 
-Here are some steps on how to set up Sysdig alerts with [Rocket.Chat](https://chat.developer.gov.bc.ca/).
+Additionally, you can find steps on how to set up Sysdig alerts with [Rocket.Chat](https://chat.developer.gov.bc.ca/).
 
 ## On this page
 - [Create alerts and notifications in Sysdig Monitor](#create-alerts-and-notifications-in-sysdig-monitor)
-  - [On this page](#on-this-page)
-  - [Create a Rocket.Chat chat channel and webhook for alert messages](#create-a-rocketchat-chat-channel-and-webhook-for-alert-messages)
-  - [Create a Sysdig team notification channel](#create-a-sysdig-team-notification-channel)
-  - [Creating an Alert](#creating-an-alert)
-  - [Related pages:](#related-pages)
-  - [Related resources:](#related-resources)
+- [Create a Rocket.Chat chat channel and webhook for alert messages](#create-a-rocketchat-chat-channel-and-webhook-for-alert-messages)
+- [Create a Sysdig team notification channel](#create-a-sysdig-team-notification-channel)
+- [Creating an alert](#creating-an-alert)
+- [Related pages:](#related-pages)
 
 <!-- ### End of On this page -->
 
@@ -105,46 +103,43 @@ Create a Sysdig team notification channel(For Edit and Admin Role):
 
 5. To test this notification, you have to pick one of the  **Select Alert Types** before you can **Send Test Notification**. Send test notification should send you a notification example in your channel if everything configured correctlly
 
-6. After tested, Click `Save` and now you should be able to see this notification option available in alert
+6. After tested, Click `Save` and  you should be able to see this notification option available in alert
 
-## Creating an Alert
+## Creating an alert
 
 It's recommended to create alerts from an application monitoring metrics, which helps to define good alerting thresholds.
 
 1. Navigate to the `Alerts` section on the left hand navigation bar, you can see all the alerts within this Sysdig team scope
 
-2.  To create an alert from metrics, head over to the dashboard. Pick the metric panel and click on `Create Alert` from kebab menu icon.
+2.  To create an alert from metrics, head over to the dashboard. Pick the metric panel and click on `Create Alert` from kebab menu icon
 ![Create alert from metric](../../images/sysdig-team-alert-create.png)
    
-3. The `Alert Library` is also accessible [here](https://app.sysdigcloud.com/#/alerts/library/all), allowing us to select from pre-built templates.
+3. The `Alert Library` is also accessible [here](https://app.sysdigcloud.com/#/alerts/library/all), allowing us to select from pre-built templates
 
-4. It Also have some other available Alert for you to choose based on your use-case:
+4. It contains other available type of alert for you to choose based on your use-case:
     ![different alert type](../../images/sysdig-team-alert-type.png)
 
 - The alert contains:
 
-  - `Metric`: make sure if has the correct aggregation. **Note**: For PromQL based alerts, triggering threshold is defined as part of the metric query. See picture below!
+  - `Metric`: make sure if has the correct aggregation. **Note**: For PromQL based alerts, triggering threshold is defined as part of the metric query. See picture below:
   ![Configure PromQL alert](../../images/sysdig-team-alert-example-promql.png)
 
 
-  - `Scope`: the alert scope by default is set to `everywhere`, which means all namespaces from the cluster. Make sure you set the scope to your own namespaces if not specified. For example, you can use `kube_namespace_name` and `kube_cluster_name`.
+  - `Scope`: The alert scope by default is set to `everywhere`, which means all namespaces from the cluster. Make sure you set the scope to your own namespaces if not specified. For example, you can use `kube_namespace_name` and `kube_cluster_name`
 
-  - `Trigger`: the triggering threshold should be based on the statistic from past monitoring. You can also refer to the data from `Preview` section on the right.
+  - `Trigger`: The triggering threshold should be based on the statistic from past monitoring. You can also refer to the data from `Preview` section on the right
 
-  - `Notify`: pick the Sysdig notification channel to send alert messages to.
+  - `Notify`: Pick the Sysdig notification channel to send alert messages to
 
-  - `Others`: feel free to explore other features available for alerting!
-
-
-<!-- ### Can you describe what the picture below is about? This would be helpful for visitors to understand the images below  -->
+  - `Others`: Feel free to explore other features available for alerting!
 
 
 ---
+--- 
+
 ## Related pages:
 - [Set up advanced functions in Sysdig Monitor](/sysdig-monitor-set-up-advanced-functions/)
 - [Set up a team in Sysdig Monitor](/sysdig-monitor-setup-team/)
-
-## Related resources:
 - [Sysdig Monitor](https://docs.sysdig.com/en/sysdig-monitor.html)
 - [Sysdig Monitor Dashboards](https://docs.sysdig.com/en/dashboards.html)
 - [Sysdig Alerts](https://docs.sysdig.com/en/alerts.html)
