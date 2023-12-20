@@ -2,6 +2,7 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: "platform-developer-docs"
+  title: "Private cloud application deployment"
   description: "A guide to application development for the Government of the Province of British Columbia"
   annotations:
     github.com/project-slug: bcgov/platform-developer-docs
