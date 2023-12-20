@@ -2,7 +2,8 @@ apiVersion: backstage.io/v1alpha1
 kind: Component
 metadata:
   name: "platform-developer-docs"
-  description: "A guide to application development for the Government of the Province of British Columbia"
+  title: "Private cloud development guide"
+  description: "Learn how to deploy applications on the private cloud OpenShift environment"
   annotations:
     github.com/project-slug: bcgov/platform-developer-docs
     backstage.io/techdocs-ref: dir:./src
