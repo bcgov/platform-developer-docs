@@ -43,11 +43,13 @@ When referring to service accounts, keep in mind the following differences:
 * `ArtifactoryServiceAccount` refers to an OpenShift object with type `ArtifactoryServiceAccount`. This is a custom resource that the Platform Services team created in OpenShift.
 * Artifactory "service account" refers to the actual account that exists inside the Artifactory software, which you can then use to interact with Artifactory's features. While closely related to each other, they're not the same.
 
-If you have a project set somewhere in the OpenShift 4 clusters, you already have a service account.
+If you have a project set somewhere in the Silver or Emerald clusters, you already have a service account.
 
 An `ArtifactoryServiceAccount` object is created in the appropriate `tools` namespace, which the Artifactory Operator then actions. One such `ArtifactoryServiceAccount` object is created automatically as part of namespace provisioning and has the name `default`.
 
 There's a random license plate assigned to the end of each object name, in order to ensure uniqueness. Collect this information by running `oc describe artsvcacct default`. This also provides some information about reconciliation status, as well as other details about the account. If you need support with the Artifactory service account object, include the spec and status information in your ticket.
+
+If you are working in Gold/Gold-DR, please follow the instructions below in order to set up a new Artifactory Service Account. The `default` account is not generated automatically in Gold.
 
 **Note**: `ArtifactoryServiceAccount` objects have two available short-names to make them easier to use in the CLI: `ArtSvcAcct` and `ArtSA`.
 
@@ -61,8 +63,11 @@ Users with edit and administrator access on the `tools` namespace can also creat
 
 If either of the secrets is deleted manually, the operator can act to change the password of the service account. Then it recreates one or both secrets with the new password. This is an easy method for teams to change their service account passwords.
 
-## Create multiple service accounts
+## Create a new service account
+
 You're able to make as many Artifactory service accounts as you need, in as many namespaces as required. Be aware that Archeobot needs to be able to keep up with the amount you're making.
+
+If you are working in Gold, you will need to create your own service account by following this process at least once.
 
 Run the following command to create a new service account:
 
@@ -71,6 +76,8 @@ Run the following command to create a new service account:
 The `ASAname` is the name of the ArtifactoryServiceAccount object. It's not the name of the actual account. Use a name that describes how you plan on using the account. After Archeobot reconciles your changes, you can use this account to access Artifactory.
 
 For example, if you make an account specifically for use in your Jenkins pipeline, you might want to use the name `jenkins` for the Artifactory Service Account object. This results in a secret called `artifacts-jenkins-[random]` and an account name called `jenkins-[namespace]-[random]`. Don't worry about name collisions with other teams, your account name has your namespace plate in it (the six alphanumeric characters that go before the `-tools`, `-dev`, `-test` or `-prod` in the namespace name), so even if there's another team who called their ArtifactoryServiceAccount `jenkins`, they have a different name.
+
+**Note**: For those working in Gold, please note that you will need to create this `ArtifactoryServiceAccount` object in the Gold cluster. Then, you will need to manually copy the generated secrets into your matching namespace in Gold-DR. This is to prevent edit conflicts between Gold and Gold-DR.
 
 ## Delete a service account
 You can delete a service account by deleting the ArtifactoryServiceAccount object through the OpenShift CLI. Use the following command:

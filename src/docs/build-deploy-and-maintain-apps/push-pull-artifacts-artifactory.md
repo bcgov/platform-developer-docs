@@ -34,13 +34,7 @@ To test your account and start to pull locally, do the following:
 1. On the command line, log in to the registry. Type the following:
 
 ```bash
-docker login -u <USER_NAME> -p <USER_PASSWORD> artifacts.developer.gov.bc.ca/<REPO_NAME>
-```
-
-For example, the DockerHub caching repository looks like this:
-
-```bash
-docker login -u <USER_NAME> -p <USER_PASSWORD> artifacts.developer.gov.bc.ca/docker-remote
+docker login -u <USER_NAME> -p <USER_PASSWORD> artifacts.developer.gov.bc.ca
 ```
 
 2. Pull from the registry on your local machine. Do this for local development and to test your account credentials. Type the following:
@@ -48,7 +42,11 @@ docker login -u <USER_NAME> -p <USER_PASSWORD> artifacts.developer.gov.bc.ca/doc
 ```bash
 docker pull artifacts.developer.gov.bc.ca/<REPO_NAME>/<IMAGE>:<TAG>
 ```
-**Note**: The `REPO_NAME` is unique to each docker repository and must be a part of the URL to pull or push from docker registries hosted in Artifactory.
+**Note**: The `REPO_NAME` is unique to each docker repository and must be a part of the URL to pull or push from docker registries hosted in Artifactory. For example, if you were to pull an image from the DockerHub registry through Artifactory, the command would look like this:
+
+```bash
+docker pull artifacts.developer.gov.bc.ca/docker-remote/<IMAGE>:<TAG>
+```
 
 ### Pull from Artifactory in OpenShift
 

@@ -79,7 +79,9 @@ Once you have your Artifactory project you can add repositories and users, adjus
 
 **Note**: To use an existing Artifactory service account with your new Artifactory project, you must add that service account to the project. If you created the `ArtifactoryProject` object in the same OpenShift namespace as an existing `ArtifactoryServiceAccount` object, the related service account isn't automatically given access to the project.
 
-To use these features, enter the project in the Artifactory UI. Log in and expand **All**. Choose your new project to go to that project space. If you don't see your new project, it may be because of one of the following:
+To use these features, go to `artifacts.developer.gov.bc.ca` and login using your IDIR or GitHub account. Select your project name from the dropdown found at the top of the page. 
+
+If you don't see your new project, it may be because of one of the following:
 * You may not be an administrator in the applicable OpenShift namespace. Ask one of the administrators to add you to the project.
 * You may not have logged in to Artifactory before creating the project. Contact the Platform Services team to fix the issue. You can reach out in the `#devops-artifactory` or `#devops-how-to` channels in Rocket.Chat.
 
@@ -92,12 +94,12 @@ Once you've gotten your project, make sure to add your own service account to th
 To add a new user account to your project, do the following:
 1. Click the gear at the top of the menu on the left, then choose **Identity and Access Members**. Click **Add Member**.
 2. On the **Users** tab, search for a username.
-3. Add a user with their IDIR or GitHub ID. The user has to have already signed into Artifactory's GUI at least once. If the user hasn't done so yet, tell them to.
+3. Add a user with their IDIR or GitHub ID, or a service account with the name found in the generated secret (see our [Service Account documentation](/setup-artifactory-service-account/) for details). The user has to have already signed into Artifactory's GUI at least once. If the user hasn't done so yet, tell them to.
 
-You can also add any Artifactory service account and select multiple users to add them all at once. Then, specify the role you want to grant them.
+You can also select multiple users to add them all at once. Then, specify the role you want to grant them.
 * **Contributor**: Service accounts are commonly given this role.
-* **Developer**: Assign this role if you want a service account to manage artifacts.
-* **Administrator**: Assign this role if you want a service account to manage access to the project.
+* **Developer**: Assign this role if you want a user or service account to manage artifacts.
+* **Administrator**: Assign this role if you want a user to manage access to the project. This role is not recommended for service accounts.
 
 You can also add additional roles to the project, if you want more finely-tuned control over who gets access to what.
 
