@@ -1,5 +1,5 @@
 # Build stage
-FROM node:lts-alpine as build-stage
+FROM node:lts-alpine3.18 as build-stage
 
 # Install node-gyp dependencies that aren't present in node:lts-alpine
 ENV PYTHONUNBUFFERED=1
