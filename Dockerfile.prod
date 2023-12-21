@@ -5,6 +5,7 @@ FROM node:lts-alpine as build-stage
 ENV PYTHONUNBUFFERED=1
 RUN apk add --update --no-cache g++ make python3 && ln -sf python3 /usr/bin/python
 # RUN python3 -m ensurepip
+RUN apk add py3-pip
 RUN pip3 install --no-cache --upgrade pip setuptools
 
 # Copy package.json and package-lock.json, install dependencies
