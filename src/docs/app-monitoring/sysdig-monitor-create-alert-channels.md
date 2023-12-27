@@ -45,7 +45,7 @@ Rocket.Chat requires an incoming webhook to parse the data from Sysdig.
 
 2. Create an incoming webhook for the chat channel:
 
-   - Click on ellipsis menu icon-> Workspace -> Integrations -> New (on the right top corner). or at https://chat.developer.gov.bc.ca/admin/integrations -> New
+   - In the left navigation pane of Rocketchat, click on the ellipsis menu icon-> Workspace -> Integrations -> New (on the right top corner). or at https://chat.developer.gov.bc.ca/admin/integrations -> New
    - Name the webhook in the format of `sysdig-alert-webhook-<APP_TEAM_NAME>`.
 
    This is how the webhook should look:
