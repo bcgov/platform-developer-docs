@@ -23,7 +23,7 @@ Last updated: **December  18, 2023**
 
 This document helps you create alerts based on monitoring dashboards in Sysdig Monitor that help notify your team when something needs attention.
 
-Additionally, you can find steps on how to set up Sysdig alerts with [Rocket.Chat](https://chat.developer.gov.bc.ca/).
+These steps guide you through setting up Sysdig to post alerts via [Rocket.Chat](https://chat.developer.gov.bc.ca/).
 
 ## On this page
 - [Create alerts and notifications in Sysdig Monitor](#create-alerts-and-notifications-in-sysdig-monitor)
