@@ -148,7 +148,7 @@ You should expect to see the following from the `sysdig-team` outcome:
 Message:               Awaiting next reconciliation
 Reason:                Successful
 ```
-**NOTE**: the custom resource kind is SysdigTeam, but when using the oc command, you need to use the pluralized form `sysdig-teams`. This behavior is due to the fact that OpenShift automatically generates the plural form for custom resources. So you will need to use `oc get sysdig-teams` to list all SysdigTeams
+**NOTE**: the custom resource kind is SysdigTeam, but when using the oc command, you need to use the hyphenated form `sysdig-teams`. For example, you will need to use `oc get sysdig-teams` to list all SysdigTeams exist in this namespace.
 
 
 If both of these show, the `sysdig-team` custom resource is processed successfully. You can go back to Sysdig to see the new team scope and default dashboards.

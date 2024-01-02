@@ -43,7 +43,7 @@ Building a dashboard from scratch can be tough, so we suggest starting with some
 Here are some common ones to start with:
 
 - `Pod Rightsizing & Workload Capacity Optimization` and `Template - Resource Allocation Dashboard`: Optimize your infrastructure by ensuring pods are sized correctly. Identify opportunities to free up resources by adjusting memory and/or CPU requests. This dashboard is especially useful if you're reaching resource quota limits in a namespace.
-- `Pod/Workload Status & Performance`: Monitor the status, health, resource usage, and performance of applications (workloads or pods). Ideal for service monitoring using Golden Signals.
+- `Pod/Workload Status & Performance`: Monitor the status, health, resource usage, and performance of applications (workloads or pods). Ideal for service monitoring using Golden Signals. Read more about Four Golden Signal Monitoring concept [here](https://sysdig.com/blog/golden-signals-kubernetes/)
 - `Application specific dashboards`: Access them in the Application section of the templates. Useful for obtaining metrics tailored to your tech stack.
 
 Here's a quick [video](https://www.youtube.com/watch?v=K4rkSCSq3C4&list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg&index=24) on how this can be set up.
@@ -88,4 +88,5 @@ Retrieving deleted dashboards is not possible.  Therefore, it is strongly recomm
 - [Set up advanced functions in Sysdig Monitor](/sysdig-monitor-set-up-advanced-functions/)
 - [Sysdig Monitor](https://docs.sysdig.com/en/sysdig-monitor.html)
 - [Sysdig Monitor Dashboards](https://docs.sysdig.com/en/dashboards.html)
+- [The four Golden Signals of Monitoring](https://sysdig.com/blog/golden-signals-kubernetes)
 

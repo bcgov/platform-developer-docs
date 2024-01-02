@@ -27,10 +27,11 @@ Additionally, you can find steps on how to set up Sysdig alerts with [Rocket.Cha
 
 ## On this page
 - [Create alerts and notifications in Sysdig Monitor](#create-alerts-and-notifications-in-sysdig-monitor)
-- [Create a Rocket.Chat chat channel and webhook for alert messages](#create-a-rocketchat-chat-channel-and-webhook-for-alert-messages)
-- [Create a Sysdig team notification channel](#create-a-sysdig-team-notification-channel)
-- [Creating an alert](#creating-an-alert)
-- [Related pages:](#related-pages)
+  - [On this page](#on-this-page)
+  - [Create a Rocket.Chat chat channel and webhook for alert messages](#create-a-rocketchat-chat-channel-and-webhook-for-alert-messages)
+  - [Create a Sysdig team notification channel](#create-a-sysdig-team-notification-channel)
+  - [Creating an alert](#creating-an-alert)
+  - [Related pages](#related-pages)
 
 <!-- ### End of On this page -->
 
@@ -47,6 +48,7 @@ Rocket.Chat requires an incoming webhook to parse the data from Sysdig.
 
    - Click on ellipsis menu icon-> Workspace -> Integrations -> New (on the right top corner). or at https://chat.developer.gov.bc.ca/admin/integrations -> New
    - Name the webhook in the format of `sysdig-alert-webhook-<APP_TEAM_NAME>`.
+   - **REMEMBER** to toggle the `Enable` button to ON in our Rocketchat Webhook integration
 
    This is how the webhook should look:
 
