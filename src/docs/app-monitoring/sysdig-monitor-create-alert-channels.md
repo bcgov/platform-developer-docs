@@ -13,13 +13,13 @@ audience: developer, technical lead
 
 author: Jonathan Bond
 
-content_owner: Shelly Han
+content_owner: Shelly Han, Billy Li
 
-sort_order: 3
+sort_order: 4
 ---
 
 # Create alerts and notifications in Sysdig Monitor
-Last updated: **December  18, 2023**
+Last updated: **January 2, 2024**
 
 This document helps you create alerts based on monitoring dashboards in Sysdig Monitor that help notify your team when something needs attention.
 
@@ -27,11 +27,10 @@ These steps guide you through setting up Sysdig to post alerts via [Rocket.Chat]
 
 ## On this page
 - [Create alerts and notifications in Sysdig Monitor](#create-alerts-and-notifications-in-sysdig-monitor)
-  - [On this page](#on-this-page)
-  - [Create a Rocket.Chat chat channel and webhook for alert messages](#create-a-rocketchat-chat-channel-and-webhook-for-alert-messages)
-  - [Create a Sysdig team notification channel](#create-a-sysdig-team-notification-channel)
-  - [Creating an alert](#creating-an-alert)
-  - [Related pages](#related-pages)
+- [Create a Rocket.Chat chat channel and webhook for alert messages](#create-a-rocketchat-chat-channel-and-webhook-for-alert-messages)
+- [Create a Sysdig team notification channel](#create-a-sysdig-team-notification-channel)
+- [Creating an alert](#creating-an-alert)
+- [Related pages](#related-pages)
 
 <!-- ### End of On this page -->
 

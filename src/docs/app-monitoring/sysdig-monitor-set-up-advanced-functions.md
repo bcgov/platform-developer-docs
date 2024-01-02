@@ -19,13 +19,16 @@ sort_order: 4
 ---
 
 # Set up advanced metrics in Sysdig Monitor
+Last updated: **January 2, 2024**
+
+<!-- What is this page about? Please include a small paragraph introducing the subject and what the reader can find through this page -->
 
 ## On this page
 - [Set up advanced metrics in Sysdig Monitor](#set-up-advanced-metrics-in-sysdig-monitor)
-  - [On this page](#on-this-page)
-  - [Creating PromQL metrics](#creating-promql-metrics)
-  - [Create a PromQL based alert](#create-a-promql-based-alert)
-  - [Use Service Discovery to import application metrics endpoints](#use-service-discovery-to-import-application-metrics-endpoints)
+- [Creating PromQL metrics](#creating-promql-metrics)
+- [Create a PromQL based alert](#create-a-promql-based-alert)
+- [Use Service Discovery to import application metrics endpoints](#use-service-discovery-to-import-application-metrics-endpoints)
+- [Related pages](#related-pages)
 
 
 ## Creating PromQL metrics
@@ -67,13 +70,13 @@ To enable Promscrape to find your application metrics, do the following:
 
 
 ---
-Related links:
+---
+
+## Related pages
 - [Set up a team in Sysdig Monitor](/sysdig-monitor-setup-team/)
 - [Create alert channels in Sysdig Monitor](/sysdig-monitor-create-alert-channels/)
 - [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 - [Migrate Using Default Configuration](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations/working-with-integrations/custom-integrations/collect-prometheus-metrics/migrating-from-promscrape-v1-to-v2/#migrate-using-default-configuration)
-
-Related resources:
 - [Sysdig Monitor](https://docs.sysdig.com/en/sysdig-monitor.html)
 - [Sysdig Monitor Dashboards](https://docs.sysdig.com/en/dashboards.html)
 - [Sysdig Alerts](https://docs.sysdig.com/en/alerts.html)
@@ -83,4 +86,4 @@ Related resources:
 - [Sysdig User Management Docs](https://docs.sysdig.com/en/manage-teams-and-roles.html)
 - [Sysdig User Roles](https://docs.sysdig.com/en/user-and-team-administration.html)
 
----
+
