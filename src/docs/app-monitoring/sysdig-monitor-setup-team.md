@@ -11,7 +11,7 @@ page_purpose: Details the steps for setting up a team and reviewing the capabili
 
 audience: developer, technical lead
 
-author: Jonathan Bond
+author: Jonathan Bond, Billy Li
 
 content_owner: Shelly Han
 
@@ -19,19 +19,24 @@ sort_order: 2
 ---
 
 # Set up a team in Sysdig Monitor
+Last updated: **January 2, 2024**
 
-[Sysdig Monitor](https://sysdig.com/products/monitor/) provides system-level monitoring of Kubernetes hosts and the ability to create custom dashboards, alerts and operational-level captures to diagnose application or platform-level issues.
+[Sysdig Monitor](https://sysdig.com/products/monitor/) provides system-level monitoring of Kubernetes hosts and the ability to create custom dashboards, alerts, and operational-level captures to diagnose application or platform-level issues.
 
-The Sysdig Teams Operator runs in the cluster and enables a team to create and manage access to a dedicated Sysdig Team account for BC Gov Private Cloud PaaS users. The team is scoped to the OpenShift namespaces that belong to the team. Sysdig also provides a default dashboard to identify system [resources, limits and actual usage](/openshift-project-resource-quotas/).
+Effective monitoring and alerting are crucial components of maintaining a robust and reliable system. Monitoring allows your team to proactively identify potential issues before they impact your application, enabling timely responses and minimizing downtime. The platform services team strongly recommends that all teams implement the dashboards presented here as a minimum standard for ensuring the health and performance of their applications.
 
-For more information on Sysdig Monitor, see [Monitoring with Sysdig](%WORDPRESS_BASE_URL%/private-cloud/our-products-in-the-private-cloud-paas/monitoring-with-sysdig/).
+The Sysdig Teams Operator runs in the cluster and enables a team to create and manage access to a dedicated Sysdig Team account for BC Gov Private Cloud PaaS users. The team is scoped to the OpenShift namespaces that belong to the team. Sysdig also provides a default dashboard to identify system [resources, limits, and actual usage](/openshift-project-resource-quotas/).
+
+For more information on Sysdig Monitor, see [Monitoring with Sysdig](https://digital.gov.bc.ca/cloud/services/private/products-tools/sysdig/)
 
 ## On this page
 - [Sign in to Sysdig](#sign-in-to-sysdig)
 - [Create Sysdig team access](#create-sysdig-team-access)
+ - [Part 1 - Compose the sysdig-team object manifest](#part-1---compose-the-sysdig-team-object-manifest)
+ - [Part 2 - Create the sysdig-team custom resource](#part-2---create-the-sysdig-team-custom-resource)
 - [Verify Sysdig team creation](#verify-sysdig-team-creation)
 - [Troubleshooting](#troubleshooting)
-
+- [Related pages](#related-pages)
 
 ## Sign in to Sysdig
 You and your team must sign in to Sysdig to create the user account. The B.C. government Sysdig uses OpenID Connect and requires either an IDIR account or a GitHub account.
@@ -44,12 +49,10 @@ You and your team must sign in to Sysdig to create the user account. The B.C. go
 
 - At the bottom left corner of the default page, you can find the initial icon for your account and the email address associated with it.
 
-  - **Note:** Sysdig identifies users by the email, so it's important to use the correct email address for yourself as well as your team members.
-
+Sysdig identifies users by the email, so it's important to use the correct email address for yourself as well as your team members.
 
 ## Create Sysdig team access
 The OpenShift Operator runs in the background and creates a Sysdig team RBAC and dashboard for you. The operator looks for a `sysdig-team` custom resource from your `*-tools` namespace. There are two parts of work to create Sysdig team access.
-
 
 ### Part 1 - Compose the sysdig-team object manifest
 
@@ -67,7 +70,7 @@ Add a description for the sysdig team.
 **Team Users:**
 A list of users to be added to this team.
 
-  - `User Name` - Sysdig identifies users by ***the email address***, so make sure everyone on your team logs in to Sysdig and obtains the correct email from their [Sysdig User Profile](https://app.sysdigcloud.com/#/settings/user).
+  - `User Name` - Sysdig identifies users by **the email address**, so make sure everyone on your team logs in to Sysdig and obtains the correct email from their [Sysdig User Profile](https://app.sysdigcloud.com/#/settings/user).
 
   - `User Role` - These are the available roles to assign to different team members:
 
@@ -111,9 +114,9 @@ Use `oc describe sysdig-team <PROJECT_SET_LICENSE_PLATE>-sysdigteam` to validate
     Team:
       Description:  The Sysdig Team for the Platform Services Documize
       Users:
-        Name:  shelly.han@gov.bc.ca
+        Name:  example.1@gov.bc.ca
         Role:  ROLE_TEAM_MANAGER
-        Name:  patricksimonian@gmail.com
+        Name:  example.2@gmail.com
         Role:  ROLE_TEAM_EDIT
         ...
   Status:
@@ -138,6 +141,8 @@ Message:               Awaiting next reconciliation
 Reason:                Successful
 ```
 
+The custom resource kind is SysdigTeam, but when using the oc command, you need to use the hyphenated form `sysdig-teams`. For example, you will need to use `oc get sysdig-teams` to list all SysdigTeams exist in this namespace.
+
 If both of these show, the `sysdig-team` custom resource is processed successfully. You can go back to Sysdig to see the new team scope and default dashboards.
 
 To access them: 
@@ -153,7 +158,8 @@ To access them:
 
 - Error from `sysdig-team` custom resource: if you don't see `Awaiting next reconciliation` after waiting for 5 minutes, contact the Platform Services team on the [#devops-sysdig Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig). Make sure to include the OpenShift cluster and namespace information.
 
-- If you don't see the Sysdig team created, please double check that:
+- If you don't see the Sysdig team created, double check that:
+
   -`sysdig-team` custom resource is created in `tools` namespace
   - There are no duplicated `sysdig-team` custom resources in dev/test/prod namespaces. Please run `oc -n <NAMESPACE> delete sysdig-team <SYSDIG-TEAM-NAME>` to delete the extra custom resource.
   - Your Sysdig account profile matches the email address that you have provided in the `sysdig-team` custom resource. If there is a mismatch, reapply the custom resource.
@@ -162,7 +168,10 @@ To access them:
 
 
 ---
-Related links:
+--- 
+
+## Related pages
+
 - [BCDevOps Sysdig Monitor Service](https://app.sysdigcloud.com/api/oauth/openid/bcdevops)
 - [Set up advanced functions in Sysdig Monitor](/sysdig-monitor-set-up-advanced-functions/)
 - [Create alert channels in Sysdig Monitor](/sysdig-monitor-create-alert-channels/)
@@ -172,9 +181,6 @@ Related links:
 - [Monitoring with Sysdig](%WORDPRESS_BASE_URL%/private-cloud/our-products-in-the-private-cloud-paas/monitoring-with-sysdig/)
 - [Sydig User Profile](https://app.sysdigcloud.com/#/settings/user)
 - [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
-
-Related resources:
-- [Sysdig Monitor](https://docs.sysdig.com/en/sysdig-monitor.html)
 - [Sysdig Monitor Dashboards](https://docs.sysdig.com/en/dashboards.html)
 - [Sysdig Alerts](https://docs.sysdig.com/en/alerts.html)
 - [Sysdig Alerts with Kubernetes and PromQL](https://sysdig.com/blog/alerting-kubernetes/)
@@ -182,4 +188,4 @@ Related resources:
 - [Sysdig User Management Docs](https://docs.sysdig.com/en/manage-teams-and-roles.html)
 - [Sysdig User Roles](https://docs.sysdig.com/en/user-and-team-administration.html)
 
----
+
