@@ -212,9 +212,11 @@ const IndexPage = ({ location }) => {
             <h3>App monitoring</h3>
             <ul>
               <li>
-                <Link to={"/sysdig-monitor-setup-team/"}>
-                  Set up a team in Sysdig Monitor
-                </Link>
+                <Link to={"/sysdig-monitor-onboarding/"}>
+                    Onboarding to application monitoring with Sysdig
+                </Link> 
+                <p></p>
+                <p>Includes: Team setup, dashboards, alerts, advanced metrics and resourcing.</p>
               </li>
               <li>
                 <Link to={"/sysdig-monitor-set-up-advanced-functions/"}>
@@ -226,7 +228,11 @@ const IndexPage = ({ location }) => {
                   Best practices for application logging in OpenShift
                 </Link>
                 </li>
-                <li>Four gold signals for app monitoring (coming soon)</li>
+                <li>
+                <Link to={"/check-application-health-after-outage/"}>
+                Check application health after an outage
+                </Link>
+                </li>
             </ul>
           </Card>
           <Card>

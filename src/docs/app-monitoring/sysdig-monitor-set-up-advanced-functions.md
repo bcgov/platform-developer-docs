@@ -15,7 +15,7 @@ author: Jonathan Bond
 
 content_owner: Shelly Han
 
-sort_order: 4
+sort_order: 5
 ---
 
 # Set up advanced metrics in Sysdig Monitor
@@ -25,11 +25,10 @@ This page is a comprehensive guide to setting up advanced metrics in Sysdig Moni
 
 ## On this page
 - [Set up advanced metrics in Sysdig Monitor](#set-up-advanced-metrics-in-sysdig-monitor)
-  - [On this page](#on-this-page)
   - [Creating PromQL metrics](#creating-promql-metrics)
   - [Create a PromQL based alert](#create-a-promql-based-alert)
   - [Use Service Discovery to import application metrics endpoints](#use-service-discovery-to-import-application-metrics-endpoints)
-  - [Related pages](#related-pages)
+- [Related pages](#related-pages)
 
 
 ## Creating PromQL metrics
