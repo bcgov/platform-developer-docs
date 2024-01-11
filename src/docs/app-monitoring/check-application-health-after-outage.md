@@ -25,7 +25,7 @@ The OpenShift platform reduces the likelihood of unexpected outages and nearly e
 
 However, there's always a chance of an outage impacting the platform and your hosted applications. In such cases, swift recovery is crucial. Follow these guidelines to ensure your application bounces back quickly and effectively.
 
-Assuming your application is built in a cloud-native, highly resilient manner that leverages the strengths of OpenShift, use our [application resiliency guidelines](/app-resiliency-guidelines/).
+Assuming your application is built in a cloud-native, highly resilient manner that leverages the strengths of OpenShift, use our [application resiliency guidelines](../automation-and-resiliency/app-resiliency-guidelines.md).
 
  If your application isn't cloud-native, it might not fully benefit from the platform's adaptability and recoverability, potentially requiring additional work to recover from a major outage.
 
@@ -131,7 +131,7 @@ assignees: caggles, ShellyXueHan
 
 ## Related pages:
 
-- [Application resiliency guidelines](/app-resiliency-guidelines/)
+- [Application resiliency guidelines](../automation-and-resiliency/app-resiliency-guidelines.md)
 - [BCGov Platform Services Status Page](https://status.developer.gov.bc.ca)
 
 ---

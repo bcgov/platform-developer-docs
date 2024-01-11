@@ -29,7 +29,7 @@ Monitor your Kubernetes hosts with [Sysdig Monitor](https://sysdig.com/products/
 2. [Create monitoring dashboards in Sysdig Monitor](../app-monitoring/sysdig-monitor-create-monitoring-dashboards.md)
 3. [Create alerts and notifications in Sysdig Monitor](../app-monitoring/sysdig-monitor-create-alert-channels.md)
 4. [Set up advanced metrics in Sysdig Monitor](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
-5. [Resource monitoring dashboards](/resource-monitoring-dashboards/)
+5. [Resource monitoring dashboards](../app-monitoring/resource-monitoring-dashboards.md)
 
 If you have any questions about Sysdig or application monitoring, please contact the Platform Services team on the [#devops-sysdig ](https://chat.developer.gov.bc.ca/channel/devops-sysdig) channel in Rocket.Chat.
 
