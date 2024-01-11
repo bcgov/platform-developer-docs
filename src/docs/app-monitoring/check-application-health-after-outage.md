@@ -15,22 +15,26 @@ author: Jonathan Bond
 
 content_owner: Cailey Jones
 
-sort_order: 5
+sort_order: 7
 ---
 
 # Check application health after an outage
+Last updated: **January 5, 2024**
 
-The OpenShift platform provides a reduced chance of significant unexpected outages and near-elimination of scheduled outages. The platform is adaptable and recoverable in a way that legacy architecture is not and this lets the platform recover from hardware issues invisibly in many cases.
+The OpenShift platform reduces the likelihood of unexpected outages and nearly eliminates scheduled ones. It adapts and recovers better than legacy architecture, often resolving hardware issues seamlessly.
 
-Still, it's always possible that an outage affects the platform and brings down the applications hosted there. If this happens, speedy recovery is important. Use these guidelines to ensure your application recovers quickly and effectively.
+However, there's always a chance of an outage impacting the platform and your hosted applications. In such cases, swift recovery is crucial. Follow these guidelines to ensure your application bounces back quickly and effectively.
+
+Assuming your application is built in a cloud-native, highly resilient manner that leverages the strengths of OpenShift, use our [application resiliency guidelines](/app-resiliency-guidelines/).
+
+ If your application isn't cloud-native, it might not fully benefit from the platform's adaptability and recoverability, potentially requiring additional work to recover from a major outage.
 
 ## On this page
 
-- [Check reporting channels](#check-reporting-channels)
-- [Check your application](#check-your-application)
-- [Keep track of recovery steps](#keep-track-of-recovery-steps)
+- **[Check reporting channels](#check-reporting-channels)**
+- **[Check your application](#check-your-application)**
+- **[Keep track of recovery steps](#keep-track-of-recovery-steps)**
 
-These guidelines assume that you built your application in a cloud-native, highly resilient manner that makes effective use of the strengths of the OpenShift platform. Make sure you follow our [application resiliency guidelines](../automation-and-resiliency/app-resiliency-guidelines.md). If your application is not cloud-native in its design, it won't benefit from the higher adaptability and recoverability of the platform and may need additional work to recover from a large outage.
 
 ## Check reporting channels
 
@@ -68,7 +72,11 @@ Your application logs should have more information and may provide further infor
 
 This error generally indicates that the pod is having trouble getting to the image it needs to spin up.
 
-This is usually an indication that there is still a problem with the cluster (check Rocket.Chat or the status page) or with your image (check that it still exists and hasn't been corrupted).
+This is usually an indication that there is still a problem with the cluster. 
+
+* Check [Rocket.Chat](https://chat.developer.gov.bc.ca/home)
+* Check the[ BCGov Platform Services status page](https://status.developer.gov.bc.ca/)  
+* Check if your image still exists and hasn't been corrupted.
 
 You can start by trying to rebuild your image.
 
@@ -76,9 +84,9 @@ You can start by trying to rebuild your image.
 
 Routes are static and it's not easy to check their status since they don't come up or go down.
 
-However, you should check that they're working and connecting to your pods after an outage to make sure there are no residual network issues.
+However, it is crucial to verify their functionality and connection to your pods after an outage to rule out any lingering network issues.
 
-If your route exists but can't connect to a container, even though the container is present and working, you can try to delete the pod and force it to recover.
+If your route exists but can't establish a connection to a container, even when the container is present and working, you can consider deleting the pod and force recovering to address the issue.
 
 ### Pipeline
 
@@ -121,9 +129,9 @@ assignees: caggles, ShellyXueHan
 
 ---
 
-Related links:
+## Related pages:
 
-- [Application resiliency guidelines](../automation-and-resiliency/app-resiliency-guidelines.md)
+- [Application resiliency guidelines](/app-resiliency-guidelines/)
 - [BCGov Platform Services Status Page](https://status.developer.gov.bc.ca)
 
 ---

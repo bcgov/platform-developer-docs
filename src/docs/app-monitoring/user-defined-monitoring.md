@@ -15,29 +15,29 @@ author: Tatsuya Morikawa
 
 content_owner: Steven Barre
 
-sort_order: 7
+sort_order: 8
 ---
 
-<!-- omit in toc -->
+
 # Set up a User Defined Monitoring in OpenShift
+Last updated: **January 5, 2023**
 
-Utilizing Prometheus client libraries, You can push your app's metrics to Prometheus. This document explain how to set up a `User Defined Monitoring in OpenShift`.
+Use Prometheus client libraries to push your app's metrics to Prometheus. 
 
-<!-- omit in toc -->
 ## On this page
 
-- [Instrument your application with custom metrics](#instrument-your-application-with-custom-metrics)
-- [Metric Types](#metric-types)
+- **[Instrument your application with custom metrics](#instrument-your-application-with-custom-metrics)**
+- **[Metric Types](#metric-types)**
   - [Counter](#counter)
   - [Gauge](#gauge)
   - [Histogram and Summaries](#histogram-and-summaries)
-- [Expose the metrics from your app](#expose-the-metrics-from-your-app)
-- [Create a ServiceMonitor](#create-a-servicemonitor)
-- [Querying Prometheus](#querying-prometheus)
-- [Sysdig Monitor](#sysdig-monitor)
-- [Sysdig Monitor Alert](#sysdig-monitor-alert)
-- [Monitor user-defined projects using Alertmanager](#monitor-user-defined-projects-using-alertmanager)
-- [References](#references)
+- **[Expose the metrics from your app](#expose-the-metrics-from-your-app)**
+- **[Create a ServiceMonitor](#create-a-servicemonitor)**
+- **[Querying Prometheus](#querying-prometheus)**
+- **[Sysdig Monitor](#sysdig-monitor)**
+- **[Sysdig Monitor Alert](#sysdig-monitor-alert)**
+- **[Monitor user-defined projects using Alertmanager](#monitor-user-defined-projects-using-alertmanager)**
+- **[Related pages](#related-pages)**
 
 ## Instrument your application with custom metrics
 
@@ -64,13 +64,13 @@ response_time_seconds{url="http://myapp.com"} 1.2
 
 ## Metric Types
 
-The Prometheus client libraries offer four core metric types, `Counter`, `Gauge`, `Histgram` and `Summary`. These are currently only differentiated in the client libraries (to enable APIs tailored to the usage of the specific types) and in the wire protocol. The Prometheus server does not yet make use of the type information and flattens all data into untyped time series. This may change in the future.
+The Prometheus client libraries provide four core metric types: `Counter`, `Gauge`, `Histogram` , and `Summary`. Currently, these types are only distinguished in the client libraries (to facilitate APIs tailored to each type) and in the wire protocol. The Prometheus server currently doesn't utilize the type information and consolidates all data into untyped time series. This might change in the future.
 
 ### Counter
 
 A counter is a cumulative metric that represents a single monotonically increasing counter whose value can only increase or be reset to zero on restart. For example, you can use a counter to represent the number of requests served, tasks completed, or errors.​
 
-https://prometheus.io/docs/concepts/metric_types/#counter
+[More on Prometheus counter](https://prometheus.io/docs/concepts/metric_types/#counter).
 
 ### Gauge
 
@@ -78,9 +78,10 @@ A gauge is a metric that represents a single numerical value that can arbitraril
 
 Gauges are typically used for measured values like temperatures or current memory usage, but also "counts" that can go up and down, like the number of concurrent requests.​
 
-https://prometheus.io/docs/concepts/metric_types/#gauge
+[More on Prometheus gauge](
+https://prometheus.io/docs/concepts/metric_types/#gauge).
 
-### Histogram and Summaries
+### Histogram and summaries
 
 **Histograms** and **summaries** both sample observations, typically request durations or response sizes. They track the number of observations and the sum of the observed values, allowing you to calculate the average of the observed values.​
 
@@ -93,7 +94,9 @@ Examples for φ-quantiles:
 
 The essential difference between summaries and histograms is that summaries calculate streaming `φ-quantiles` on the client side and expose them directly, while histograms expose bucketed observation counts and the calculation of quantiles from the buckets of a histogram happens on the server side using the `histogram_quantile()` function.​
 
-https://prometheus.io/docs/practices/histograms/
+[More on Prometheus histogram and summaries](
+https://prometheus.io/docs/practices/histograms/).
+
 
 ## Expose the metrics from your app
 
@@ -145,9 +148,9 @@ spec:​
 
 PromQL is a rich language​ and there’s a lot you can do with PromQL to manipulate your metrics and make useful graphs. The docs are quite extensive.​
 
-- https://prometheus.io/docs/prometheus/latest/querying/basics/
+Learn more about the querying basics on [Prometheus documentation](https://prometheus.io/docs/prometheus/latest/querying/basics/).
 
-Note: Data is stored for 15 days currently.​
+**Data is currently stored for 15 days.**
 
 ## Sysdig Monitor
 
@@ -211,7 +214,9 @@ For detail steps, please read the documents below:
 
 Technical preview for our Openshift Clusters (OCP 4.10). It is possible to set up Alertmanager rule for a user-defined projects so that the granted user(s) by the monitoring-rules-edit role can create, modify, and deleting PrometheusRule custom resources for their project. It's coming with OCP 4.11.
 
-## References
+---
+
+## Related pages
 
 - [Sysdig - Automatically scraping any Kubernetes pods](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations/working-with-integrations/custom-integrations/collect-prometheus-metrics/#agent-compatibility)
 - [Sysdig - Use Service Discovery to import application metrics endpoints](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md#use-service-discovery-to-import-application-metrics-endpoints)

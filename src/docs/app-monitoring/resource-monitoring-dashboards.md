@@ -1,7 +1,7 @@
 ---
-title: Resource monitoring dashboard
+title: Resource monitoring dashboards
 
-slug: resource-monitoring-dashboard
+slug: resource-monitoring-dashboards
 
 description: The specific metrics and evidence required when applying for additional resources.
 
@@ -15,7 +15,7 @@ author: Billy Li
 
 content_owner: Billy Li
 
-sort_order: 8
+sort_order: 6
 ---
 
 # Resource monitoring dashboards
@@ -86,7 +86,7 @@ See the example below, you can zoom out the time scope using the control located
 
 ---
 
-## Related pages:
+## Related pages
 * [How to use Sysdig Explore](https://docs.sysdig.com/en/docs/sysdig-monitor/explore/using-explore/using-promql-query/)
 * [Using PromQL](https://docs.sysdig.com/en/docs/sysdig-monitor/using-monitor/using-promql)
 * [Dashboard Templates](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/dashboard-templates/)

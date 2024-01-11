@@ -1,11 +1,12 @@
 # Build stage
-FROM node:lts-alpine as build-stage
+FROM node:lts-alpine3.18 as build-stage
 
 # Install node-gyp dependencies that aren't present in node:lts-alpine
 ENV PYTHONUNBUFFERED=1
 RUN apk add --update --no-cache g++ make python3 && ln -sf python3 /usr/bin/python
-RUN python3 -m ensurepip
-RUN pip3 install --no-cache --upgrade pip setuptools
+# RUN python3 -m ensurepip
+RUN apk add py3-pip
+RUN pip3 install --break-system-packages --no-cache --upgrade pip setuptools
 
 # Copy package.json and package-lock.json, install dependencies
 WORKDIR /app
