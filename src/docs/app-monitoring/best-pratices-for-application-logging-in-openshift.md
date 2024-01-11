@@ -15,7 +15,7 @@ author: Cailey Jones, Steven Barre
 
 content_owner: Olena Mitovska
 
-sort_order: 8
+sort_order: 9
 ---
 # Best practices for application logging in OpenShift 
 Last updated: **November 28, 2023**
