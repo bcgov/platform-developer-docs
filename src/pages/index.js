@@ -136,7 +136,7 @@ const IndexPage = ({ location }) => {
             </p>
             <p>
               <a
-                href="https://digital.gov.bc.ca/cloud/services/private/about-us/#stay"
+                href="https://digital.gov.bc.ca/cloud/services/private/team/#stay"
               >
                 Learn how to register for this and other events
               </a>
@@ -211,16 +211,34 @@ const IndexPage = ({ location }) => {
           <Card>
             <h3>App monitoring</h3>
             <ul>
-              <li>
-                <Link to={"/sysdig-monitor-onboarding/"}>
-                    Onboarding to application monitoring with Sysdig
+               <li>
+                <Link to={"/sysdig-monitor-setup-team/"}>
+                    Set up a team in Sysdig Monitor
                 </Link> 
-                <p></p>
-                <p>Includes: Team setup, dashboards, alerts, advanced metrics and resourcing.</p>
-              </li>
+                </li>
+                <li>
+                <Link to={"/sysdig-monitor-create-monitoring-dashboards/"}>
+                    Create monitoring dashboards in Sysdig Monitor
+                </Link> 
+                </li>
               <li>
                 <Link to={"/sysdig-monitor-set-up-advanced-functions/"}>
                   Set up advance functions in Sysdig Monitor
+                </Link>
+              </li>
+              <li>
+                <Link to={"/sysdig-monitor-create-alert-channels/"}>
+                Create alerts and notifications in Sysdig Monitor
+                </Link>
+              </li>
+              <li>
+                <Link to={"/sysdig-monitor-set-up-advanced-functions/"}>
+                Set up advanced metrics in Sysdig Monitor
+                </Link>
+              </li>
+              <li>
+                <Link to={"/resource-monitoring-dashboards/"}>
+                Resource monitoring dashboards
                 </Link>
               </li>
               <li>
