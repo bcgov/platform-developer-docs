@@ -67,10 +67,10 @@ Dive deeper
 
 ### App monitoring
 
-* [Set up a team in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-setup-team.md)
+* [Onboarding to application monitoring with Sysdig](docs/app-monitoring/sysdig-monitor-setup-team.md)
 * [Set up advance functions in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
-* [ Best practices for application logging in OpenShift](docs/app-monitoring/best-pratices-for-application-logging-in-openshift.md)
-* Four gold signals for app monitoring (coming soon)
+* [Best practices for application logging in OpenShift](docs/app-monitoring/best-pratices-for-application-logging-in-openshift.md)
+* [Check application health after an outage](docs/app-monitoring/check-application-health-after-outage.md)
 
 ### Database and API management
 
