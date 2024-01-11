@@ -28,13 +28,13 @@ nav:
   - Restoring Backup Volumes on OpenShift: docs/automation-and-resiliency/netapp-backup-restore.md
   - Prepare to load test an application on OpenShift: docs/automation-and-resiliency/prepare-to-load-test-application-on-openshift.md
   - Product Team Recovery Best Practices and Responsibilities: docs/automation-and-resiliency/namespace-recovery-and-responsibilities.md
-  - Resource monitoring dashboard: docs/automation-and-resiliency/resource-monitroing-dashboard.md
 - App monitoring:
   - Onboarding to application monitoring with Sysdig: docs/app-monitoring/sysdig-monitor-onboarding.md
   - Set up a team in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-setup-team.md
-  - Create alerts and notifications in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-create-alert-channels.md
   - Create monitoring dashboards in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-create-monitoring-dashboards.md
+  - Create alerts and notifications in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-create-alert-channels.md
   - Set up advanced metrics in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-set-up-advanced-functions.md
+  - Resource monitoring dashboards: docs/app-monitoring/resource-monitoring-dashboards.md
   - Check application health after an outage: docs/app-monitoring/check-application-health-after-outage.md
   - User Defined Monitoring in OpenShift: docs/app-monitoring/user-defined-monitoring.md
   - Best practices for application logging in OpenShift: docs/app-monitoring/best-pratices-for-application-logging-in-openshift.md
