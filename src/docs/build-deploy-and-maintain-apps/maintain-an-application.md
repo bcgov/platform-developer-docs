@@ -358,7 +358,7 @@ Once your application is running in OpenShift, you can use [Sysdig](https://digi
 
 1.  [Onboard to Sysdig](/sysdig-monitor-onboarding/) and setup the OpenShift project set access to monitor your applications
 2. [Create Sysdig monitoring dashboards](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/) to gather important application metrics such as resource utilization and service Golden Signals
-3. Merely having a monitoring dashboard isn't sufficient since you won't be actively checking it throughout the day. Instead, it's advisable to establish alerts for monitoring metrics. This approach ensures that you receive notifications when potential issues arise, allowing you to address problems in their early stages. Follow the guide on [how to setup Sysdig alerts via Rocket.Chat](/app-monitoring/sysdig-monitor-create-alert-channels/)
+3. Merely having a monitoring dashboard isn't sufficient since you won't be actively checking it throughout the day. Instead, it's advisable to establish alerts for monitoring metrics. This approach ensures that you receive notifications when potential issues arise, allowing you to address problems in their early stages. Follow the guide on [how to setup Sysdig alerts via Rocket.Chat](/sysdig-monitor-create-alert-channels/)
 4. You can setup comprehensive service monitoring with [PromQL in Sysdig](/sysdig-monitor-set-up-advanced-functions/) that includes multiple metrics and complex logics for alerting. If you'd like to expose application specific metrics, here are steps on how to create [custom/user defined monitoring](/user-defined-monitoring)
 
 If service availability is important to you, leverage [Uptime.com](https://uptime.com/) for uptime monitoring and public service status pages. The Platform Services Team uses it to share [the status of OpenShift clusters as well as shared services](https://status.developer.gov.bc.ca/). You can check out [the SaaS service catalog](https://digital.gov.bc.ca/cloud/saas/directory/how-to/) to explore more about Uptime.com.
@@ -460,7 +460,7 @@ When a new member joins your team, they should go through a similar onboarding p
 
 * Attend [OpenShift 101](https://digital.gov.bc.ca/cloud/services/private/support/openshift-101/) and [OpenShift 201](https://digital.gov.bc.ca/cloud/services/private/support/openshift-201/) training
 * Go through the [onboarding process](https://digital.gov.bc.ca/cloud/services/private/onboard/) which can be done with your team's Product owner or by scheduling a meeting with a member of the Platform team. 
-* Join the community on [Rocket.Chat](/steps-to-join-rocketchat/), [Stack Overflow](https://digital.gov.bc.ca/cloud/services/private/support/#community) and our [Platform Community Meetups](https://digital.gov.bc.ca/cloud/services/private/about-us/#stay)
+* Join the community on [Rocket.Chat](/join-bc-rocket-chat/), [Stack Overflow](https://digital.gov.bc.ca/cloud/services/private/support/#community) and our [Platform Community Meetups](https://digital.gov.bc.ca/cloud/services/private/team/#stay)
 * [Obtain access](https://digital.gov.bc.ca/cloud/private/support/) to all relevant namespaces, repositories and other services. Please go to the section: Report and incident > Common platform requests section.  Remember to also update the [Product Registry](https://registry.developer.gov.bc.ca/login), if needed. 
 
 ### Managing team member departures 

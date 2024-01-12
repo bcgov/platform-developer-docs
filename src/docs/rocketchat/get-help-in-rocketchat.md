@@ -27,7 +27,7 @@ To get support on Rocket.Chat, you need to ask questions. Including the right in
 Below, we outline the information you should include when asking for help or support from the platform community on Rocket.Chat.
 
 ## On this page
-* [**Where has the issue ocurred?**](where-has-the-issue-ocurred#)
+* [**Where has the issue ocurred?**](#where-has-the-issue-ocurred)
 * [**What are you trying to do?**](#what-are-you-trying-to-do)
 * [**What is the problem?**](#what-is-the-problem)
 * [**What have you done to fix the problem?**](#what-have-you-done-to-fix-the-problem)
