@@ -348,7 +348,7 @@ Here is a summary of the GitHub organizations we own and their purposes:
 
 These resources are available:
 
-- [BC Government organizations in GitHub](https://mvp.developer.gov.bc.ca/docs/default/component/bcdg/use-github-in-bcgov/bc-government-organizations-in-github/)
+- [BC Government organizations in GitHub](https://mvp.developer.gov.bc.ca/docs/default/component/bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/)
 
 **GitHub Apps**
 
