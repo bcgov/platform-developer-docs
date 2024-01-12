@@ -42,7 +42,7 @@ about [how to stay connected in Rocket.Chat](https://cloud.gov.bc.ca/private-clo
 Every 3 weeks, we host a platform community MeetUp where product teams from across the B.C. government give technical
 demos of their application.
 
-[Learn how to register for this and other events](https://cloud.gov.bc.ca/private-cloud/support-and-community/events-in-the-bc-gov-private-cloud-paas/).
+[Learn how to register for this and other events](https://digital.gov.bc.ca/cloud/services/private/team/#stay).
 
 Dive deeper
 -----------
@@ -67,8 +67,12 @@ Dive deeper
 
 ### App monitoring
 
-* [Onboarding to application monitoring with Sysdig](docs/app-monitoring/sysdig-monitor-setup-team.md)
+* [Set up a team in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-setup-team.md)
+* [Create monitoring dashboards in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-create-monitoring-dashboards.md)
 * [Set up advance functions in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
+* [Create alerts and notifications in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-create-alert-channels.md)
+* [Set up advanced metrics in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
+* [Resource monitoring dashboards](docs/app-monitoring/resource-monitoring-dashboards.md)
 * [Best practices for application logging in OpenShift](docs/app-monitoring/best-pratices-for-application-logging-in-openshift.md)
 * [Check application health after an outage](docs/app-monitoring/check-application-health-after-outage.md)
 
