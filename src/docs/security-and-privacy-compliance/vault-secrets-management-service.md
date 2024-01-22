@@ -59,7 +59,7 @@ Vault has built-in support for secret revocation. Vault can revoke not only sing
 
 ## Eligibility and prerequisites
 
-Your team is provisioned a Vault service account for each environment (dev, test, prod, and tools) through the automation backing the [Platform Services Registry](https://registry.developer.gov.bc.ca/public-landing). Each ProjectSet created in the registry can have up to two technical contacts associated with it. These technical contacts are given write access to Vault and can manage secrets within a ProjectSet's two mount points (nonprod, prod).
+Your team is provisioned a Vault service account for each environment (dev, test, prod, and tools) through the automation backing the [Platform Product  Registry](https://registry.developer.gov.bc.ca/login). Each ProjectSet created in the registry can have up to two technical contacts associated with it. These technical contacts are given write access to Vault and can manage secrets within a ProjectSet's two mount points (nonprod, prod).
 
 ## How to request access
 You don’t need to request access to Vault. If you have a project set, you have at least one technical contact who can access Vault through the CLI or UI, and you have a Kubernetes Service Account associated with your project set's Vault Mount Points in each namespace environment. (dev, test, prod, and tools).
