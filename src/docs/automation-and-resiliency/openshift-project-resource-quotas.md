@@ -82,6 +82,6 @@ storage-512 Overall Storage: 512 GiB, Backup Storage: 256 GiB
 
 ## Related pages
 * [Request a quota increase for an OpenShift project set](/request-quota-increase-for-openshift-project-set/)
-* [Platform Product Registry](https://registry.developer.gov.bc.ca/login)
+* [Platform Product Registry](https://registry.developer.gov.bc.ca/)
 
 
