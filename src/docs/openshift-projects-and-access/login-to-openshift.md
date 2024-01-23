@@ -31,7 +31,7 @@ When you log in to the Silver cluster OpenShift console, you have the option of 
 ## Information for developers
 GitHub accounts are still the default authentication mechanism for our developers.
 
-We will update the [Platform Product Registry](https://registry.developer.gov.bc.ca/login) to use IDIR user accounts and B.C. government email identifiers for product owners and technical leads to ensure that namespace administrative-level controls are tied to an account that we have more control over. There is not yet a target date for this change. Make sure all contractors listed as technical leads for projects on the platform have active IDIR accounts.
+We will update the [Platform Product Registry](https://registry.developer.gov.bc.ca/) to use IDIR user accounts and B.C. government email identifiers for product owners and technical leads to ensure that namespace administrative-level controls are tied to an account that we have more control over. There is not yet a target date for this change. Make sure all contractors listed as technical leads for projects on the platform have active IDIR accounts.
 
 Some teams may choose to have all team members migrated to IDIR account use for OpenShift platform access. This isn't required.
 
@@ -47,7 +47,7 @@ If you have any questions or concerns about this change, post your question in [
 
 ---
 Related links:
-* [Platform Product Registry](https://registry.developer.gov.bc.ca/login)
+* [Platform Product Registry](https://registry.developer.gov.bc.ca/)
 * [#devops-security channel](https://chat.developer.gov.bc.ca/channel/devops-security)
 
 ---
