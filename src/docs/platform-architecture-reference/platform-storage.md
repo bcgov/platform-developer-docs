@@ -82,7 +82,7 @@ You can use tools to manage your persistent storage beyond the features built in
 ## Storage details
 
 ### Quotas
-All storage sizes are in GiB and backup quotas default to half the storage size. These quotas can be requested in the [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing) by a project's product owner or technical lead.
+All storage sizes are in GiB and backup quotas default to half the storage size. These quotas can be requested in the [Platform Product Registry](https://registry.developer.gov.bc.ca/) by a project's product owner or technical lead.
 
 **Note**: You must provide proof of increased storage needs to the platform product director before the request can be approved and more storage is allocated to a namespace.
 
@@ -135,6 +135,6 @@ Related links:
 * [Red Hat documentation](https://access.redhat.com/documentation/en-us/red_hat_openshift_container_storage/4.7/html/deploying_and_managing_openshift_container_storage_using_red_hat_openstack_platform/volume-snapshots_osp)
 * [BCDevOps/Backup-Container](https://github.com/bcdevops/backup-container)
 * [BCDevOps/StorageMigration](https://github.com/BCDevOps/StorageMigration)
-* [Platform Project Registry](https://registry.developer.gov.bc.ca/public-landing)
+* [Platform Product Registry](https://registry.developer.gov.bc.ca/)
 * [Common Object Management Service (COMS)](https://digital.gov.bc.ca/bcgov-common-components/common-object-management-service/)
 ---

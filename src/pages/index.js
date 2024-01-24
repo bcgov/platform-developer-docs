@@ -222,11 +222,6 @@ const IndexPage = ({ location }) => {
                 </Link> 
                 </li>
               <li>
-                <Link to={"/sysdig-monitor-set-up-advanced-functions/"}>
-                  Set up advance functions in Sysdig Monitor
-                </Link>
-              </li>
-              <li>
                 <Link to={"/sysdig-monitor-create-alert-channels/"}>
                 Create alerts and notifications in Sysdig Monitor
                 </Link>
