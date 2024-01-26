@@ -1,13 +1,13 @@
 ---
-title: Push and pull artifacts in Artifactory
+title: Pull artifacts from Artifactory
 
 slug: push-pull-artifacts-artifactory
 
-description: Describes how to push and pull artifacts in Artifactory for Docker-type repositories
+description: Describes how to pull artifacts from Artifactory
 
-keywords: push, pull, Artifactory, docker, artifact, repositories, projects
+keywords: pull, Artifactory, docker, artifact, repositories, projects
 
-page_purpose: Describes how to test your account and pull locally and push and pull artifacts.
+page_purpose: Describes how to pull artifacts to your local machine, or to a container running on OpenShift.
 
 audience: technical lead, developer
 
@@ -17,38 +17,49 @@ content_owner: Cailey Jones
 
 sort_order: 7
 ---
-# Push and pull artifacts in Artifactory
-After you've [set up your Artifactory service account](/setup-artifactory-service-account/), you can pull artifacts from the platform's caching repositories. If you wish to push to Artifactory, you will need an [Artifactory project and private repository first](/setup-artifactory-project-repository/). After your set up your private repository, follow these instructions to pull from them.
+# Pull artifacts from Artifactory
+
+This page contains information on how to pull different artifact types from Artifactory.
 
 ## On this page
-- [Pull Docker images from Artifactory](#pull-docker-images-from-artifactory)
+- [Pulling container images using a cluster-wide pull secret](#pulling-container-images-using-a-cluster-wide-pull-secret)
+- [Pulling container images using an Artifactory service account](#pulling-container-images-using-an-artifactory-service-account)
 - [Node Package Manager (NPM)](#node-package-manager-npm)
 - [Maven](#maven)
 
-## Pull Docker images from Artifactory
+## Pulling container images using a cluster-wide pull secret
 
-These steps apply to all Docker-type repositories, not just DockerHub. These steps work for any private docker registry, not just Artifactory. Change out the Artifactory URL for the URL of your preferred registry.
+In order to pull a container image into your OpenShift container using Artifactory's remote (caching) repositories, all you have to do is update the `image` field in your deployment yaml like so:
+```yaml
+spec:
+  containers:
+  - name: <container-name>
+    image: artifacts.developer.gov.bc.ca/<repo-name>/<image>:<tag>
+```
+
+That's it! The next time you restart your pod, it will pull the image through Artifactory. Head over to [the Artifactory Web Console](https://artifacts.developer.gov.bc.ca) to find a complete list of repositories/registries available. 
+
+## Pulling container images using an Artifactory service account
+
+This is the process you would use to pull images from a private repository in your Artifactory project. If you are trying to pull images from one of Artifactory's remote (caching) repositories, use the instructions for [Pulling container images using a cluster-wide pull secret](#pulling-container-images-using-a-cluster-wide-pull-secret) instead.
+
+Make sure you've added your Artifactory service account to your Artifactory project already. You can find instructions for this in our [Setup an Artifactory project and repository](/setup-artifactory-project-repository/) documentation.
+
+You'll need your Artifactory service account's username and password. Instructions on how to find this information are in our [Set up an Artifactory service account](/setup-artifactory-service-account/) documentation.
 
 ### Test your account and pull locally
-To test your account and start to pull locally, do the following:
-1. On the command line, log in to the registry. Type the following:
+
+On the command line, log in Artifactory with your Artifactory service account's username and password:
 
 ```bash
-docker login -u <USER_NAME> -p <USER_PASSWORD> artifacts.developer.gov.bc.ca/<REPO_NAME>
+docker login -u <USERNAME> -p <PASSWORD> artifacts.developer.gov.bc.ca
 ```
 
-For example, the DockerHub caching repository looks like this:
-
-```bash
-docker login -u <USER_NAME> -p <USER_PASSWORD> artifacts.developer.gov.bc.ca/docker-remote
-```
-
-2. Pull from the registry on your local machine. Do this for local development and to test your account credentials. Type the following:
+Test your service account's access to your private repository by trying to pull an image to your local machine:
 
 ```bash
 docker pull artifacts.developer.gov.bc.ca/<REPO_NAME>/<IMAGE>:<TAG>
 ```
-**Note**: The `REPO_NAME` is unique to each docker repository and must be a part of the URL to pull or push from docker registries hosted in Artifactory.
 
 ### Pull from Artifactory in OpenShift
 
@@ -57,9 +68,9 @@ To pull from Artifactory in OpenShift, you need the following:
 2. A reference to that pull secret in your build/deployment configuration.
 3. A reference to the Artifactory URL wherever you reference your image.
 
-Make your pull secret.
+Archeobot (the operator that runs the management of `ArtifactoryServiceAccount` and `ArtifactoryProject` objects in OpenShift) automatically creates a pull secret for you in whatever namespace contains the relevant `ArtifactoryServiceAccount` object. Simply find the name of this pull secret (you'll find instructions in our [Set up an Artifactory service account](/setup-artifactory-service-account/) documentation) if you only need to use this pull secret in the same namespace. 
 
-1. Use the following command:
+If you need to re-create that pull secret in a different namespace, you can either copy-paste the yaml from the existing secret, or you can create a new one like this:
 
 ```bash
 oc create secret docker-registry <pull-secret-name> \
@@ -69,9 +80,7 @@ oc create secret docker-registry <pull-secret-name> \
     --docker-email=<username>@<namespace>.local
 ```
 
-Make sure you have the correct username and password from the `artifacts-[ASAname]-[random]` secret.
-
-2. Add the secret to the `default` and `builder` OpenShift service account to allow the account to use this pull secret:
+Add the secret to the `default` and `builder` OpenShift service account to allow the account to use this pull secret:
 
 ```
 oc secrets link default <pull_secret_name>
@@ -79,9 +88,9 @@ oc secrets link builder <pull_secret_name>
 ```
 
 **Note**: Some OpenShift documentation implies that linking the secrets in this way is the only necessary step,
-without having to add the pull secret to your deployment/build configurations as below. You can try this method, but we've found that users often run into problems. We recommend you specify the pull secret in your configurations to avoid problems.
+without having to add the pull secret to your deployment/build configurations as below. You can try this method, but we've found that users often run into problems. We recommend you do both in order to avoid potential issues.
 
-3. Add your pull secret to your deployment configuration. Do the following:
+Finally, add your pull secret to your deployment configuration:
 
 ```yaml
 apiVersion: v1
@@ -96,7 +105,7 @@ spec:
   - name: <pull-secret-name>
 ```
 
-You can also use the following:
+Or to your build configuration:
 
 ```yaml
 apiVersion: v1
@@ -112,11 +121,10 @@ spec:
           kind: DockerImage
           name: artifacts.developer.gov.bc.ca/<repo-name>/<image>:<tag>
 ```
-You don't need to use dockerStrategy here. It works the same way under other types of strategy as well.
+Note: you don't need to use dockerStrategy in your BuildConfig. It works the same way under other types of strategy as well. This is simply the example we have used.
 
-Don't forget that you need to update the image URL to point explicitly at Artifactory. If there's no URL, it will default to DockerHub.
+You can also point an ImageSteam object at Artifactory using this same process. However, be aware that your `ReferencePolicy` must be `source` - if you use `local`, OpenShift will try to log into its internal registry with the Artifactory pull secret, which will fail. 
 
-You can now use this image in your build or deployment.
 
 ## Node Package Manager (NPM)
 The `npm-remote` repository in Artifactory points to the [public default NPM repository](https://registry.npmjs.org). If you wish to pull from a different repository, such as a private one, replace all references to `npm-remote` below with your repository's name.
