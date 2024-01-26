@@ -22,18 +22,19 @@ sort_order: 9
 
 If you want to push artifacts to Artifactory, you'll need a private repository. This feature is provided via Artifactory Projects. Artifactory Projects are logical spaces of quota-based storage which teams can administer themselves. Within an Artifactory Project, a team can create their own private repositories - any number and any type that suits their needs, so long as the storage space required for these repositories remains within the provided quota.
 
+A team can request more quota if required, but note that teams are expected to try to remain within the default quota as much as possible - so be sure to clean up your old artifacts and tags.
+
 ## On this page
 - [Create an Artifactory project](#create-an-artifactory-project)
 - [Request a larger quota for your Artifactory project](#request-a-larger-quota-for-your-artifactory-project)
-- [Accessing your Artifactory project](#accessing-your-artifactory-project)
+- [Access your Artifactory project](#access-your-artifactory-project)
 - [Add users and service accounts to a project](#add-users-and-service-accounts-to-a-project)
 - [Add a repository to your project](#add-a-repository-to-your-project)
 
-A team can request more quota if required, but note that teams are expected to try to remain within the default quota as much as possible - so be sure to clean up your old artifacts and tags.
 
 ## Create an Artifactory project
 
-**HEY WAIT! BEFORE YOU START!!** Please make sure that someone with admin privileges in your OpenShift namespace has signed into the [Artifactory Web Console](https://artifacts.developer.gov.bc.ca) at least once. When an Artifactory Project is created, the initial project admin privileges are granted to those with admin privileges in the related OpenShift namespace, but _only if the account already exists in Artifactory_. You'll need to sign in at least once to make sure your account exists, otherwise you risk creating a project with no admins! And make sure you're signing in with the same account that has admin privileges in OpenShift, whether that be your GitHub account or your IDIR.
+**HEY WAIT! BEFORE YOU START!!** Please make sure that someone with admin privileges in your OpenShift namespace has signed into the [Artifactory Web Console](https://artifacts.developer.gov.bc.ca) at least once. When an Artifactory Project is created, the initial project admin privileges are granted to those with admin privileges in the related OpenShift namespace, but _only if the account already exists in Artifactory_. You'll need to sign in at least once to make sure your account exists. Otherwise you risk creating a project with no admins! And make sure you're signing in with the same account that has admin privileges in OpenShift, whether that be your GitHub account or your IDIR.
 
 You can create an `ArtifactoryProject` object in your OpenShift namespace with the following command:
 
@@ -75,18 +76,18 @@ If the team maintains the rejection, make sure you acknowledge the rejection. If
 
 After you've made the change, Archeobot reconciles once more and you'll see that your `approval_status` changes back to `nothing-to-approve` (or you will have deleted the ArtifactoryProject object, in which case you won't see anything at all). This means your rejection has been acknowledged and you can make further change requests.
 
-## Accessing your Artifactory project
+## Access your Artifactory project
 
 Once you have your Artifactory project you can add repositories and users, adjust roles and check the results of Xray scans on artifacts.
 
 **Note**: To use an Artifactory service account with your new Artifactory project, you must add that service account to the project. You can follow the process outlined in [Add users and service accounts to a project](#add-users-and-service-accounts-to-a-project).
 
-To use these features, log into the [Artifactory Web Console](https://artifacts.developer.gov.bc.ca). Near the top of the page, you'll see a drop-down that will probably say **All**. Click on this dropdown and select your new project. If you don't see your new project, it may be because of one of the following:
+Log into the [Artifactory Web Console](https://artifacts.developer.gov.bc.ca). Near the top of the page, you'll see a drop-down that will probably say **All**. Click on this dropdown and select your new project. If you don't see your new project, it may be because of one of the following:
 * You may not be an administrator in the applicable OpenShift namespace. Ask one of the administrators to add you to the project.
 * You may not have logged in to Artifactory before creating the project. Contact the Platform Services team to fix the issue. You can reach out in the `#devops-artifactory` channel in Rocket.Chat.
 
 The menu on the left of the screen is divided into two sections: one marked with four little boxes, and one marked with two gears. 
-* The "boxes" tab contains the navigation of the various artifacts and objects in your Artifactory Project. Initially, you won't see anything here and you may see an "error" on the main page; that's normal, and just indicates that you haven't created any repositories or artifacts in your project yet.
+* The "boxes" tab contains the navigation of the various artifacts and objects in your Artifactory Project. Initially, you won't see anything here and you may see an "error" on the main page. That's normal - it just indicates that you haven't created any repositories or artifacts in your project yet.
 * The "gears" tab is for the administration of the project. This is where you will find the tools to add or remove users, or create new repositories. 
 
 ## Add users and service accounts to a project
@@ -97,7 +98,7 @@ Once you've gotten your project, make sure to add your Artifactory service accou
 
 To add a new user or service account: 
 1. Click the gear at the top of the menu on the left, then choose **Identity and Access Members**. 
-1. Click **Add Member** button on the top-right. This will open a little pop-up window in the middle of the page.
+1. Click the **Add Member** button on the top-right. This will open a little pop-up window in the middle of the page.
 1. Move to the the **Users** tab and then search for a username.
     - if you're adding a real person, search for either their GitHub username or their government email address. If you can't find either, it's probably because they haven't logged into the Artifactory Web Console before. They'll need to do that at least once before you can add them to your project.
     - if you're adding a service account, searching for the OpenShift namespace name (the 6-character code that comes before `-dev`, `-test`, `-prod` or `-tools`) is probably the easiest way to find the correct service account! If you can't find one, make sure a service account actually exists in the namespace you're searching for. Check out our [Artifactory service account](/setup-artifactory-service-account/) documentation for details.
@@ -113,13 +114,9 @@ To add a new user or service account:
 To add a repository to your project:
 1. Click the gear icon and then choose **Repositories**. 
 1. Click the **Add Repositories** button in the top right corner and select "Local Repositories"
-3. Choose a package type.
-4. Create a name for your new repository. All repositories in projects have the project key prefixed automatically. Use the following naming convention:
-
-  `[desc]-[pkgtype]-[location]`
-
-  For example, if you want to make a general-use docker repository for your team to push images to Artifactory, you could call your repository `gen-docker-local`, which would produce a repository with the name `[projectkey]-gen-docker-local`.
-
+3. Choose a package type from the pop-up.
+4. Create a name for your new repository. All repositories in projects have the project key prefixed automatically. Use the naming convention `[desc]-[pkgtype]-[location]`. 
+    - For example, if you want to make a general-use docker repository for your team to push images to Artifactory, you could call your repository `gen-docker-local`, which would produce a repository with the name `[projkey]-gen-docker-local`.
 5. Choose your environments. These tags affect user access. For example, you can allow a user to pull from all repositories with the `dev` tag but not the `prod` tag. Make sure you grant the appropriate level of access to the users who need the artifacts in the repository.
 6. Enable Xray indexing. Enable other options, if needed. Most of them can be left as their defaults.
 8. Save the changes.
