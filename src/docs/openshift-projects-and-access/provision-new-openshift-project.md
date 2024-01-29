@@ -24,13 +24,13 @@ On the OpenShift platform, different teams organize their work in isolated proje
 
 Each new request must be reviewed and approved, including requests for additional projects from teams that already have one or more projects on the platform.
 
-[Read more about project provisioning and the prerequisites](https://cloud.gov.bc.ca/private-cloud/our-products-in-the-private-cloud-paas/project-registry/) or submit a project provisioning request through [Platform Project Registry](https://registry.developer.gov.bc.ca/login).
+[Read more about project provisioning and the prerequisites](https://cloud.gov.bc.ca/private-cloud/our-products-in-the-private-cloud-paas/project-registry/) or submit a project provisioning request through [Platform Product Registry](https://registry.developer.gov.bc.ca/).
 
 ---
 
 Related links:
 
-- [Platform Project Registry](https://registry.developer.gov.bc.ca/login)
+- [Platform Product Registry](https://registry.developer.gov.bc.ca/)
 - [OnBoarding Guide for BC Gov DevOps Platform](https://docs.google.com/presentation/d/1UcT0b2YTPki_o0et9ZCLKv8vF19eYakJQitU85TAeD4/edit?usp=sharing)
 
 ---
