@@ -468,7 +468,7 @@ When a new member joins your team, they should go through a similar onboarding p
 * Attend [OpenShift 101](https://digital.gov.bc.ca/cloud/services/private/support/openshift-101/) and [OpenShift 201](https://digital.gov.bc.ca/cloud/services/private/support/openshift-201/) training
 * Go through the [onboarding process](https://digital.gov.bc.ca/cloud/services/private/onboard/) which can be done with your team's Product owner or by scheduling a meeting with a member of the Platform team. 
 * Join the community on [Rocket.Chat](https://mvp.developer.gov.bc.ca/docs/default/component/bc-developer-guide/rocketchat/steps-to-join-rocketchat/), [Stack Overflow](https://digital.gov.bc.ca/cloud/services/private/support/#community) and our [Platform Community Meetups](https://digital.gov.bc.ca/cloud/services/private/team/#stay)
-* [Obtain access](https://digital.gov.bc.ca/cloud/private/support/) to all relevant namespaces, repositories and other services. Please go to the section: Report and incident > Common platform requests section.  Remember to also update the [Product Registry](https://registry.developer.gov.bc.ca/login), if needed. 
+* [Obtain access](https://digital.gov.bc.ca/cloud/private/support/) to all relevant namespaces, repositories and other services. Please go to the section: Report and incident > Common platform requests section.  Remember to also update the [Platform Product Registry](https://registry.developer.gov.bc.ca/), if needed. 
 
 ### Managing team member departures 
 
