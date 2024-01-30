@@ -18,18 +18,20 @@ content_owner: Cailey Jones
 sort_order: 7
 ---
 # Pull artifacts from Artifactory
+Last updated: **January 29, 2024**
 
 This page contains information on how to pull different artifact types from Artifactory.
 
 ## On this page
-- [Pulling container images using a cluster-wide pull secret](#pulling-container-images-using-a-cluster-wide-pull-secret)
-- [Pulling container images using an Artifactory service account](#pulling-container-images-using-an-artifactory-service-account)
-- [Node Package Manager (NPM)](#node-package-manager-npm)
-- [Maven](#maven)
+- **[Pulling container images using a cluster-wide pull secret](#pulling-container-images-using-a-cluster-wide-pull-secret)**
+- **[Pulling container images using an Artifactory service account](#pulling-container-images-using-an-artifactory-service-account)**
+- **[Node Package Manager (NPM)](#node-package-manager-npm)**
+- **[Maven](#maven)**
 
 ## Pulling container images using a cluster-wide pull secret
 
 In order to pull a container image into your OpenShift container using Artifactory's remote (caching) repositories, all you have to do is update the `image` field in your deployment yaml like so:
+
 ```yaml
 spec:
   containers:
@@ -121,7 +123,7 @@ spec:
           kind: DockerImage
           name: artifacts.developer.gov.bc.ca/<repo-name>/<image>:<tag>
 ```
-Note: you don't need to use dockerStrategy in your BuildConfig. It works the same way under other types of strategy as well. This is simply the example we have used.
+**Note**: you don't need to use dockerStrategy in your BuildConfig. It works the same way under other types of strategy as well. This is simply the example we have used.
 
 You can also point an ImageSteam object at Artifactory using this same process. However, be aware that your `ReferencePolicy` must be `source` - if you use `local`, OpenShift will try to log into its internal registry with the Artifactory pull secret, which will fail. 
 
@@ -195,10 +197,12 @@ There are many different repository types in Artifactory. This documentation cov
 If your team uses a specific package type not shown here, consider creating a pull request for this document to share your knowledge.
 
 ---
-Related links:
+
+## Related pages
+
 * [Set up an Artifactory service account](/setup-artifactory-service-account/)
 * [Set up an Artifactory project and repository](/setup-artifactory-project-repository/)
 * [NPM repository](https://registry.npmjs.org)
 * [repo-mountie assemble file](https://github.com/bcgov/repomountie/blob/master/.s2i/bin/assemble)
 
----
+

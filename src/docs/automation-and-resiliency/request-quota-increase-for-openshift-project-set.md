@@ -50,7 +50,7 @@ If you have successfully onboarded to Sysdig, we provide a dedicated document ou
 ## Request a quota increase
 Before you request a quota increase, make sure that your project is using its resources efficiently. The Platform Services team wants to be very confident your project needs more quota before they grant an increase.
 
-If you determine that your application needs a quota increase, you can have a product owner or technical lead on your project make the request on the **Project Edit** page on the [Platform Projduct Registry](https://registry.developer.gov.bc.ca/). The Platform Services team must approve the request before it's processed.
+If you determine that your application needs a quota increase, you can have a product owner or technical lead on your project make the request on the **Project Edit** page on the [Platform Product Registry](https://registry.developer.gov.bc.ca/). The Platform Services team must approve the request before it's processed.
 
 If you need more resources for CPU, RAM or storage in any of the four namespaces (`dev`, `test`, `tool` or `prod`), you must submit a standard quota increase request through the Platform Product Registry. For more information on quotas, see [OpenShift project resource quotas](/openshift-project-resource-quotas/).
 

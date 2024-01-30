@@ -19,13 +19,9 @@ sort_order: 8
 ---
 
 # Set up an Artifactory service account
+Last updated: **January 30, 2024**
 
 Artifactory access is controlled through Artifactory service accounts. Service accounts are meant to be shared by teams and used by automation tools like pipelines.
-
-## On this page
-- [Create a service account](#create-a-service-account)
-- [Access a service account](#access-a-service-account)
-- [Delete a service account](#delete-a-service-account)
 
 When referring to service accounts, keep in mind the following differences:
 * `ArtifactoryServiceAccount` refers to an OpenShift object with type `ArtifactoryServiceAccount`. This is a custom resource that the Platform Services team created in OpenShift.
@@ -33,23 +29,32 @@ When referring to service accounts, keep in mind the following differences:
 
 An Artifactory service account is not required to make use of the remote (caching) Docker repositories or the Platform Team's images in `bcgov-docker-local`. There are cluster-wide pull secrets that allow you to make use of these Docker repos without any additional effort. You can learn how to do this in our [Pull artifacts from Artifactory](/push-pull-artifacts-artifactory/) documentation. A separate Artifactory service account is only required for pulling Docker images from private repositories, or artifacts other than Docker images. 
 
+
+## On this page
+- **[Create a service account](#create-a-service-account)**
+- **[Access a service account](#access-a-service-account)**
+- **[Delete a service account](#delete-a-service-account)**
+- **[Related pages](#related-pages)**
+
+---
+
 ## Create a service account
 
-If you have a project set in either the Silver or Emerald clusters, you already have an Artifactory service account: an `ArtifactoryServiceAccount` object is created in the appropriate `tools` namespace, which the Artifactory Operator then actions. One such `ArtifactoryServiceAccount` object is created automatically as part of namespace provisioning and has the name `default`. You are welcome to create a more Artifactory service accounts if you wish.
+If you have a project established in either the Silver or Emerald clusters, an Artifactory service account is already available. An `ArtifactoryServiceAccount` object is generated in the corresponding `tools` namespace, and the Artifactory Operator handles its configuration. A default `ArtifactoryServiceAccount` object is automatically created during namespace provisioning, identified by the name `default`. You are also free to create additional Artifactory service accounts if needed.
 
-If you have a project set in the Gold clusters, you will need to create your own Artifactory service account - no default one has been created. This is because you must manage the synchronization of any necessary secrets between the Gold and Gold DR clusters. Archeobot, the operator which controls the creation and maintenance of `ArtifactoryServiceAccount` objects, only runs in Gold, not Gold DR. You must create the `ArtifactoryServiceAccount` object in the Gold cluster, and Archeobot will only create the related objects (like your pull secrets) in your Gold namespace. It's up to your team to sync these secrets with Gold DR. 
+If your project is established in the Gold clusters, you will need to create your own Artifactory service account as no default one is provided. This is because you are responsible for managing the synchronization of any necessary secrets between the Gold and Gold DR clusters. Archeobot, the operator overseeing the creation and maintenance of `ArtifactoryServiceAccount` objects, operates solely in Gold and not in Gold DR. You must initiate the creation of the `ArtifactoryServiceAccount` object in the Gold cluster, and Archeobot will generate the associated objects (such as your pull secrets) in your Gold namespace. The responsibility lies with your team to synchronize these secrets with Gold DR.
 
 Run the following command to create a new service account:
 
 `oc process -f https://raw.githubusercontent.com/bcgov/platform-services-archeobot/master/archeobot/config/samples/tmpl-artifactoryserviceaccount.yaml -p NAME="[ASAname]" -p DESCRIPTOR="[Description of Service Account]" | oc create -f -`
 
-The `ASAname` is the name of the ArtifactoryServiceAccount object. It's not the name of the actual account. The Platform Team recommends using a name that describes how you intend to use the account. For example, if you make an account specifically for use in your Tekton pipeline, you might want to use the name `tekton` for the Artifactory Service Account object. This results in a secret called `artifacts-tekton-[random]` and an account name called `jenkins-[namespace]-[random]`. Don't worry about name collisions with other teams, your account name has your namespace plate in it (the six alphanumeric characters that go before the `-tools`, `-dev`, `-test` or `-prod` in the namespace name), so even if there's another team who called their ArtifactoryServiceAccount `jenkins`, they have a different name.
+The `ASAname` refers to the name of the ArtifactoryServiceAccount object, not the actual account. The Platform Team recommends choosing a name that reflects how you plan to use the account. For instance, if you're creating an account specifically for your Tekton pipeline, a suitable name could be `tekton` for the Artifactory Service Account object. This results in a secret named `artifacts-tekton-[random]` and an account named `jenkins-[namespace]-[random]`. There's no need to worry about name collisions with other teams; your account name incorporates your namespace plate (the six alphanumeric characters preceding `-tools`, `-dev`, `-test`, or `-prod` in the namespace name). Even if another team named their ArtifactoryServiceAccount `jenkins`, they have a distinct name.
 
-After Archeobot reconciles your changes, you can use this account to access Artifactory.
+Once Archeobot reconciles your changes, you can utilize this account to access Artifactory.
 
 ## Access a service account
 
-There's a random license plate assigned to the end of each `ArtifactoryServiceAccount` name, in order to ensure uniqueness. Collect this information by running `oc describe artsvcacct default`. This also provides some information about reconciliation status, as well as other details about the account. If you need support with the Artifactory service account object, include the spec and status information in your ticket.
+To gather the random license plate assigned to the end of each `ArtifactoryServiceAccount` name and obtain additional details, execute `oc describe artsvcacct default`. This command provides information about the reconciliation status and other account details. If you require assistance with the Artifactory service account object, make sure to include both the spec and status information in your support ticket.
 
 **Note**: `ArtifactoryServiceAccount` objects have two available short-names to make them easier to use in the CLI: `ArtSvcAcct` and `ArtSA`.
 
@@ -62,24 +67,26 @@ oc get secret/artifacts-default-[random] -o json | jq '.data.password' | tr -d "
 
 ## Delete a service account
 
-You can delete a service account by deleting the ArtifactoryServiceAccount object through the OpenShift CLI. Use the following command:
+You can delete a service account by deleting the ArtifactoryServiceAccount object through the OpenShift CLI. 
+
+You can use the following command to accomplish it:
 `oc delete ArtifactoryServiceAccount [ASAname]` or `oc delete artsvcacct [ASAname]`.
 
-After you've done this, Archeobot cleans up anything relevant, including secrets generated for you. If you try to delete the default service account, a new one is recreated. Please note that Archeobot only cleans up secrets that it has generated _for_ you; if you have created any secrets of your own using this account's information (such as a secret in Gold DR), you will need to delete this secret on your own.
+After completing this process, Archeobot takes care of relevant cleanup tasks, including secrets generated for you. If you attempt to delete the default service account, a new one will be recreated. It's important to note that Archeobot only manages the cleanup of secrets it has generated specifically for you. If you have created any secrets independently using this account's information, such as a secret in Gold DR, you will need to delete that secret manually.
 
-### My ArtifactoryServiceAccount secret is missing! Help!
+### Missing ArtifactoryServiceAccount Secret: How to resolve the issue
 
-If you accidentally deleted the secret for your Artifactory service account, delete the ArtifactoryServiceAccount object using the commands above. Archeobot detects that the object has been deleted and removes the service account from Artifactory.
+If you have unintentionally deleted the secret for your Artifactory service account, follow the commands above to delete the ArtifactoryServiceAccount object. Archeobot will detect the deletion of the object and subsequently remove the service account from Artifactory.
 
 If you delete the default service account this way, a new one will automatically be created for you. Otherwise, you're free to create a new service account using the steps outlined in [Create a service account](#create-a-service-account). This will create for you a new service account with new secrets that you can use.
 
 Keep in mind that this is a _new_ account, and that you will need to re-add this account to your Artifactory Project(s), if necessary. Instructions for this can be found in our [Setup an Artifactory project and repository](/setup-artifactory-project-repository/) documentation.
 
 ---
-Related links:
+## Related pages
 * [Archeobot](https://github.com/bcgov/platform-services-archeobot)
 * [Artifactory](https://artifacts.developer.gov.bc.ca)
 * [Just Ask! tool](https://just-ask.developer.gov.bc.ca/)
 * [Setup an Artifactory project and repository](/setup-artifactory-project-repository/)
 
----
+
