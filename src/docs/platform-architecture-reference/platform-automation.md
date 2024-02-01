@@ -30,7 +30,7 @@ To address this, we’ve developed an automated tool that monitors apps on the p
 
 ### Targets of this tool
  
-The tool only monitors deployments in non-production namespaces (dev, test and tools) and there is no impact to production deployments (prod). 
+The tool only monitors `deployments` and `deploymentconfigs` in non-production namespaces (dev, test and tools) and there is no impact to production deployments (prod). This tool does not target databases in `statefulsets`.
 
 The tool looks for two types of deployments: 
 - Deployments that are crashing consistently 
