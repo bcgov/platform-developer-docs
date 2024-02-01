@@ -40,7 +40,7 @@ The tool looks for two types of deployments:
 
 Before you simply scale your pods back up, you should consider fixing the underlying issues that placed your application in one of these two groups in the first place.
 
- If your application is crashing regularly, your technical team should investigate and fix the cause of these crashes. 
+ If your application is crashing regularly, your technical team should investigate and fix the cause of these crashes. You can see the number of times your pod has restarted in the web console or via `oc get pods` to get an idea of if it is crashing a lot.
  
  If your application has not changed in over a year, your technical team should build a new image, which ensures that your application is able to take advantage of any security patches from the past year. 
  
