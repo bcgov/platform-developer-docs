@@ -53,7 +53,7 @@ Please be aware that if you scale your deployment back up without fixing the und
 ### Timeline 
 
 **Silver cluster timeline**
-- Starting December 5, the automation tool will run weekly on Tuesday mornings
+- Starting January 23, the automation tool will run weekly on Tuesday mornings
 
 **Gold and Emerald cluster timeline** 
 - Implementation is planned for early 2024 
