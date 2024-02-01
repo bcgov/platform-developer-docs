@@ -44,7 +44,7 @@ Before you simply scale your pods back up, you should consider fixing the underl
  
  If your application has not changed in over a year, your technical team should build a new image, which ensures that your application is able to take advantage of any security patches from the past year. 
  
- Maintaining your application is part of the [Memorandum of Understanding](https://digital.gov.bc.ca/cloud/services/private/onboard/#memorandum) that teams working on the platform agree to. 
+ Maintaining your application is part of the [Memorandum of Understanding](https://digital.gov.bc.ca/cloud/services/private/onboard/#memorandum) that teams working on the platform agree to. More detailed docs on [maintaining an image](https://docs.developer.gov.bc.ca/maintain-an-application/#maintain-images) are also available.
 
 Once you have fixed these issues, you can follow the instructions in [RedHat’s documentation on editing deployments](https://docs.openshift.com/container-platform/4.12/applications/deployments/deployment-strategies.html#odc-editing-deployments_rolling-strategy) to scale your applications back up again. 
  
