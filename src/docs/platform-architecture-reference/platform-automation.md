@@ -36,6 +36,22 @@ The tool looks for two types of deployments:
 - Deployments that are crashing consistently 
 - Deployments that have not changed in over a year
 
+### How it works
+
+Emails are sent to the Product Owner and Technical Leads registered for the Product in the [Registry](https://registry.developer.gov.bc.ca/). If you want to change who gets the emails, go update the contacts in the Registry.
+
+The first tool checks the `lastUpdateTime` of the `Progressing` block in the `status` field of the Deployment or DeploymentConfig. If it is close to a year old, but not over, a warning email will be sent. If the deployment is managed by ArgoCD then a warning email is sent asking for action to be taken. This is because ArgoCD will just scale it back up after the tool scaled it down. If not managed by ArgoCD and the timestamp is over a year then the deployment is scaled to zero replicas and an email is sent.
+
+You can check the timestamp on your deployment in the YAML under `status`.
+ 
+ ```yaml
+   conditions:
+  - lastTransitionTime: "2021-11-25T17:04:01Z"
+    lastUpdateTime: "2021-11-25T17:04:11Z"
+    message: replication controller "backup-postgresql-1" successfully rolled out
+    reason: NewReplicationControllerAvailable
+    status: "True"
+    type: Progressing
 ### Responding when deployments are scaled down by this tool
 
 Before you simply scale your pods back up, you should consider fixing the underlying issues that placed your application in one of these two groups in the first place.
