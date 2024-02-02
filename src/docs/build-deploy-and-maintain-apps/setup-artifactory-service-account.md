@@ -16,6 +16,7 @@ author: Jonathan Bond
 content_owner: Cailey Jones
 
 sort_order: 8
+sort_order: 8
 ---
 
 # Set up an Artifactory service account
