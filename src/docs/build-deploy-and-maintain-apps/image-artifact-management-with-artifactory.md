@@ -45,7 +45,7 @@ There is no cost associated with using Artifactory.
 
 Remote repositories serve as caches/proxies for all major public artifact repositories/registries and several private repositories/registries where B.C. government owns licensed access. These repositories cache artifacts that are pulled through them, reducing build time and network traffic. The Platform Team encourages any team on the OpenShift platform to make use of these remote repositories for pulling artifacts from public registries such as DockerHub, NPM and PyPi. Artifactory also provides easy access to RedHat's private image registries.
 
-Access to remote (caching) repositories is available by default to anyone in the Silver, Gold or Emerald clusters. You can learn more about how to make use of these remote repositories in our [Pull artifacts from Artifactory](/push-pull-artifacts-artifactory/) documentation.
+Access to remote (caching) repositories is available by default to anyone in the Silver, Gold or Emerald clusters. You can learn more about how to make use of these remote repositories in our [Pull artifacts from Artifactory](../build-deploy-and-maintain-apps/push-pull-artifacts-artifactory.md) documentation.
 
 ### Which remote registries are available through Artifactory?
 

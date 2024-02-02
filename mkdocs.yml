@@ -7,9 +7,9 @@ nav:
   - Maintain an application: docs/build-deploy-and-maintain-apps/maintain-an-application.md
   - Retire an application: docs/build-deploy-and-maintain-apps/retire-an-application.md
   - Image and artifact management with Artifactory: docs/build-deploy-and-maintain-apps/image-artifact-management-with-artifactory.md
-  - Push and pull artifacts in Artifactory: docs/build-deploy-and-maintain-apps/push-pull-artifacts-artifactory.md
-  - Set up an Artifactory project and repository: docs/build-deploy-and-maintain-apps/setup-artifactory-project-repository.md
+  - Pull artifacts from Artifactory: docs/build-deploy-and-maintain-apps/push-pull-artifacts-artifactory.md
   - Set up an Artifactory service account: docs/build-deploy-and-maintain-apps/setup-artifactory-service-account.md
+  - Set up an Artifactory project and repository: docs/build-deploy-and-maintain-apps/setup-artifactory-project-repository.md
   - Build with RHEL base images: docs/build-deploy-and-maintain-apps/build-with-rhel-base-images.md
   - Best practices for managing image streams: docs/build-deploy-and-maintain-apps/imagestreams.md
   - Prebuilt images: docs/build-deploy-and-maintain-apps/prebuilt-images.md
