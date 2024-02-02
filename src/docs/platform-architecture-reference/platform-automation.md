@@ -49,7 +49,7 @@ You can check the timestamp on your deployment in the YAML under `status`.
   ```
 ## Deployments, deploymentconfigs and statefulsets that are crashing constantly
 
-This tool looks at the restart count of pods. If a pod has more than 100 restarts it looks for the controlling object of the pod, be it aDeployment, DeploymentConfig, or StatefulSet. If the object is managed by ArgoCD then a warning email is sent asking for action to be taken. This is because ArgoCD will just scale it back up after the tool scaled it down. If not managed by ArgoCD, the object is scaled to zero replicas and an email is sent.
+This tool looks at the restart count of pods. If a pod has more than 100 restarts it looks for the controlling object of the pod, be it a Deployment, DeploymentConfig, or StatefulSet. If the object is managed by ArgoCD then a warning email is sent asking for action to be taken. This is because ArgoCD will just scale it back up after the tool scaled it down. If not managed by ArgoCD, the object is scaled to zero replicas and an email is sent.
 
 ## Responding when deployments are scaled down by these tools
 
