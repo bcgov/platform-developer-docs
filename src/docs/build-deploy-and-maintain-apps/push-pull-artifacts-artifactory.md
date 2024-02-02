@@ -1,5 +1,6 @@
 ---
 title: Pull artifacts from Artifactory
+title: Pull artifacts from Artifactory
 
 slug: push-pull-artifacts-artifactory
 
