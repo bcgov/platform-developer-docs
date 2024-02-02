@@ -19,79 +19,67 @@ sort_order: 5
 ---
 
 # Image and artifact management with Artifactory
+Last updated: **January 29, 2024**
 
-Artifactory is an artifact repository system by JFrog. This service is available to B.C. government development teams who build cloud-native applications on the OpenShift platform.
+JFrog's Artifactory, a system for storing artifacts, is now accessible to B.C. government development teams constructing cloud-native applications on the OpenShift platform.
 
 For more information on Artifactory from JFrog, see the [Artifactory documentation](https://www.jfrog.com/confluence/site/documentation).
 
+Use Artifactory to retrieve artifacts for your application. It supports all major package types, including Docker images, Helm charts, NPM packages, and more. Explore [Package Management](https://www.jfrog.com/confluence/display/JFROG/Package+Management) for further insights.
+
+We've deployed Artifactory in a highly available configuration within the B.C. government OpenShift cluster. The service operates 24/7, with a commitment to restarting failed systems. Requests for Artifactory project requests are addressed during standard business hours.
+
+There is no cost associated with using Artifactory.
+
 ## On this page
-- [Remote (caching/proxy) repository access](#remote-cachingproxy-repository-access)
-- [Local private repositories](#local-private-repositories)
-- [Xray artifact scanning](#xray-artifact-scanning)
-- [Security reviews](#security-reviews)
-- [Artifactory support, processes, and communications](#artifactory-support-processes-and-communications)
-- [Service improvements and disruptions](#service-improvements-and-disruptions)
-- [Set up Artifactory](#set-up-artifactory)
-
-Use Artifactory to access artifacts for your application. It's compatible with all major package types, including Docker images, Helm charts, NPM packages and more. For more information on package management, see [Package Management](https://www.jfrog.com/confluence/display/JFROG/Package+Management).
-
-The Platform Services team uses Artifactory to provide the following services:
-
-* Remote repositories serve as caches/proxies for all major public artifact repositories/registries and several private repositories/registries where BC Government owns licensed access. These repositories cache artifacts that are pulled through them, reducing build time and network traffic. The list of remote repositories include DockerHub, NPM, PyPi, RedHat's private image registry and more.
-
-* Artifactory Projects are spaces of quota-limited storage where teams have full control. This lets teams create their own private repositories in Artifactory where they can push and pull their own artifacts of any type. It also allows teams to control access to these repositories, similar to the way teams control access to their own OpenShift namespaces. For more information on requesting an Artifactory Project, see [Setup an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md).
-
-* Xray is an add-on service to Artifactory that provides security scanning for all objects in Artifactory. This includes any objects that have been cached in Artifactory through the remote repositories and all artifacts pushed to any private repositories created by individual teams. Teams are able to create and review security reports on artifacts in their private repositories.
-
-We deployed Artifactory in a highly available configuration in the B.C. government OpenShift cluster. The service is available 24/7 with best effort to restart failed systems. Private repository requests are reviewed and handled during normal business hours.
-
-There is no charge to use Artifactory.
+- **[Remote (caching/proxy) repository access](#remote-cachingproxy-repository-access)**
+- **[Private repositories](#local-private-repositories)**
+- **[Xray artifact scanning](#xray-artifact-scanning)**
+- **[Security reviews](#security-reviews)**
+- **[Artifactory support, processes, and communications](#artifactory-support-processes-and-communications)**
+- **[Service improvements and disruptions](#service-improvements-and-disruptions)**
+- **[Related pages](#related-pages)**
+---
 
 ## Remote (caching/proxy) repository access
 
-Access to remote (caching) repositories is available by default to anyone in the Silver or Gold clusters. When a project set is provisioned, an Artifactory service account is created at the same time, with a secret in the tools namespace available to use.
+Remote repositories serve as caches/proxies for all major public artifact repositories/registries and several private repositories/registries where B.C. government owns licensed access. These repositories cache artifacts that are pulled through them, reducing build time and network traffic. The Platform Team encourages any team on the OpenShift platform to make use of these remote repositories for pulling artifacts from public registries such as DockerHub, NPM and PyPi. Artifactory also provides easy access to RedHat's private image registries.
 
-### Find available repositories
-Use your service account and username to run the following curl command to get an updated list of caching repositories available from Artifactory:
+Access to remote (caching) repositories is available by default to anyone in the Silver, Gold or Emerald clusters. You can learn more about how to make use of these remote repositories in our [Pull artifacts from Artifactory](/push-pull-artifacts-artifactory/) documentation.
 
-`curl -u username:password -X GET "https://artifacts.developer.gov.bc.ca/artifactory/api/repositories?type=remote" | \
-jq -r '(["ARTIFACTORYKEY","SOURCEURL"] | (., map(length*"-"))), (.[] | [.key, .url]) | @tsv' | column -t`
+### Which remote registries are available through Artifactory?
 
-If there is a specific public repository you want to see cached through Artifactory, reach out to the Platform Services team to ask about adding it.
+Head over to [the Artifactory Web Console](https://artifacts.developer.gov.bc.ca) and log in with your GitHub or IDIR account. Once you're logged in, navigate to the "Artifactory" section on the left menu, and select "Artifacts" to see a complete list of all repositories available to you. This list will include all remote repositories, as well as a federated repository called `bcgov-docker-local`, which contains images provided by the Platform Team for your use. 
 
-## Local private repositories
-You can use a local private repository to push your own artifacts and images, with control over access. The benefits include the following:
+Feel free to explore the contents of each repository by opening them to browse the stored artifacts. Keep in mind that the remote repositories will show only the artifacts/tags currently cached in Artifactory. It's important to note that you can pull any artifact directly from the source registry, even if it doesn't currently show up in Artifactory. The displayed artifacts are limited to those that have been previously pulled through Artifactory at least once.
 
-* You'll have a common space to store sensitive artifacts and images.
+If there's a particular public repository you'd like to be cached through Artifactory but don't currently see it, reach out to the Platform Services team. They can provide information on adding the specific repository to Artifactory.
 
-* You can share artifacts with other teams working in OpenShift.
+## Artifactory Projects and private repositories
 
-* You have flexible control over who and how your team accesses the artifacts.
+Artifactory Projects are spaces of quota-limited storage where teams have full control. This lets teams create their own private repositories in Artifactory where they can push and pull their own artifacts of any type. It also allows teams to control access to these repositories, similar to the way teams control access to their own OpenShift namespaces.
 
-* You can use the same pull secrets you use to access the remote repositories.
-
-You need to set up an Artifactory project before you can get a local private repository. For more information, see [Setup an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md).
+Once your team has an Artifactory Project, you can create your own local repositories as you require. For more information, see [Setup an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md).
 
 ## Xray artifact scanning
-The Xray tool scans all artifacts for security issues and lets you know about potential issues. This gives you an opportunity to deal with issues before they become a problem. The benefits include the following:
 
-* Getting images scanned is easy. You only need a private repository in Artifactory.
+Xray is an add-on service to Artifactory that provides security scanning for all objects in Artifactory. This includes any objects that have been cached in Artifactory through the remote repositories and all artifacts pushed to any private repositories created by individual teams. Teams are able to create and review security reports on artifacts in their private repositories.
 
-* Our amazing resident security expert can easily have access to the scan reports for your artifacts if you need help with them.
-
-* You can ensure all of your images - especially your production images - are secure without placing additional load on your developers.
+* Scanning artifacts is easy – just set up a private repository in Artifactory
+* Our amazing resident security expert can easily have access to the scan reports for your artifacts if you need help with them
+* Secure all your images, especially those intended for production, without imposing extra burden on your developers
 
 ## Security reviews
 
-Privacy Impact Assessment (PIA) and Security Threat Risk Assessment (STRA) have been completed for Sysdig Monitor. These assessments are available by request only, the request can be sent to PlatformServicesTeam@gov.bc.ca.
+The Privacy Impact Assessment (PIA) and Security Threat Risk Assessment (STRA) for Sysdig Monitor have been finalized. To obtain these assessments, please send a request to PlatformServicesTeam@gov.bc.ca.
 
 ## Artifactory support, processes, and communications
 
-The team supporting this service administers the Artifactory application, its supporting database and the S3 storage system that contains the packages uploaded to Artifactory.
+The team responsible for this service manages the Artifactory application, its associated database, and the S3 storage system housing the packages uploaded to Artifactory.
 
 Your best source for support, configuration and best practices is the developer community that uses Artifactory for their projects. Check out the [`#devops-artifactory` channel on Rocket.Chat](https://chat.developer.gov.bc.ca/channel/devops-artifactory). Service changes are also posted here.
 
-For further support in the event of an emergency or outage, contact one of the Artifactory administrators on the [`#devops-sos` channel on Rocket.Chat](https://chat.developer.gov.bc.ca/channel/devops-sos).
+In case of an emergency or outage, reach out to one of the Artifactory administrators through the [`#devops-sos` channel on Rocket.Chat](https://chat.developer.gov.bc.ca/channel/devops-sos).
 
 For cluster-wide service notifications that could impact Artifactory, monitor the [`#devops-alerts` channel in Rocket.Chat](https://chat.developer.gov.bc.ca/channel/devops-alerts).
 
@@ -103,12 +91,9 @@ These operations don't result in expected disruptions for users. If the Platform
 
 Other operations require turning Artifactory to read-only mode. In read-only mode you'll still be able to pull from Artifactory, but not push. If the team expects a disruption, they'll notify everyone about the planned read-only window at least a day before in the `#devops-artifactory` and `#devops-alerts`channels.
 
-## Set up Artifactory
-
-To get started using Artifactory, see [Setup an Artifactory service account](../build-deploy-and-maintain-apps/setup-artifactory-service-account.md).
-
 ---
-Related links:
+## Related pages
+
 
 * [JFROG documentation](https://www.jfrog.com/confluence/site/documentation)
 * [Privacy Impact Assessment (PIA)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/privacy/privacy-impact-assessments)
