@@ -24,6 +24,7 @@ Last updated: **January 30, 2024**
 Artifactory access is controlled through Artifactory service accounts. Service accounts are meant to be shared by teams and used by automation tools like pipelines.
 
 When referring to service accounts, keep in mind the following differences:
+
 * `ArtifactoryServiceAccount` refers to an OpenShift object with type `ArtifactoryServiceAccount`. This is a custom resource that the Platform Services team created in OpenShift.
 * Artifactory "service account" refers to the actual account that exists inside the Artifactory software, which you can then use to interact with Artifactory's features. While closely related to each other, they're not the same.
 
@@ -46,7 +47,9 @@ If your project is established in the Gold clusters, you will need to create you
 
 Run the following command to create a new service account:
 
-`oc process -f https://raw.githubusercontent.com/bcgov/platform-services-archeobot/master/archeobot/config/samples/tmpl-artifactoryserviceaccount.yaml -p NAME="[ASAname]" -p DESCRIPTOR="[Description of Service Account]" | oc create -f -`
+```bash
+oc process -f https://raw.githubusercontent.com/bcgov/platform-services-archeobot/master/archeobot/config/samples/tmpl-artifactoryserviceaccount.yaml -p NAME="[ASAname]" -p DESCRIPTOR="[Description of Service Account]" | oc create -f -
+```
 
 The `ASAname` refers to the name of the ArtifactoryServiceAccount object, not the actual account. The Platform Team recommends choosing a name that reflects how you plan to use the account. For instance, if you're creating an account specifically for your Tekton pipeline, a suitable name could be `tekton` for the Artifactory Service Account object. This results in a secret named `artifacts-tekton-[random]` and an account named `jenkins-[namespace]-[random]`. There's no need to worry about name collisions with other teams; your account name incorporates your namespace plate (the six alphanumeric characters preceding `-tools`, `-dev`, `-test`, or `-prod` in the namespace name). Even if another team named their ArtifactoryServiceAccount `jenkins`, they have a distinct name.
 
