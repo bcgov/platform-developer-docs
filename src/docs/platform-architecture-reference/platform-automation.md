@@ -22,25 +22,19 @@ sort_order: 6
 
 We use some automation on the platform to help manage resource usage, alert about misconfigured objects and to encourage teams to use images that are secure and up to date. 
 
-## Resource reclamation tool
-
-To date, resource utilization (the use of CPU and RAM) on our platforms has not been efficient. For example, almost 50% of CPU capacity on the Silver cluster is reserved by apps, but not actually used. This unused utilization increases costs and impacts our ability to onboard new teams.  
+To date, resource utilization (the use of CPU and RAM) on our platforms has not been efficient. For example, almost 50% of CPU capacity on the Silver cluster is reserved by apps, but not actually used. This unused utilization increases costs and impacts our ability to onboard new teams.  Sometimes teams do not maintain and update the images that their deployments are based on. This can lead to security vulnerabilities, incompatibilities and other problems  
  
-To address this, we’ve developed an automated tool that monitors apps on the platform, looking for inactive or broken deployments. 
-
-### Targets of this tool
+To address this, we’ve developed automated tools that monitor apps on the platform. 
  
-The tool only monitors `deployments` and `deploymentconfigs` in non-production namespaces (dev, test and tools) and there is no impact to production deployments (prod). This tool does not target databases in `statefulsets`.
-
-The tool looks for two types of deployments: 
-- Deployments that are crashing consistently 
-- Deployments that have not changed in over a year
-
-### How it works
+These tools looks for these types of objects: 
+- `Deployments` and `deploymentconfigs` that are based on images have not changed in over a year
+- `Deployments`, `deploymentconfigs` and `statefulsets` that are crashing constantly 
 
 Emails are sent to the Product Owner and Technical Leads registered for the Product in the [Registry](https://registry.developer.gov.bc.ca/). If you want to change who gets the emails, go update the contacts in the Registry.
 
-The first tool checks the `lastUpdateTime` of the `Progressing` block in the `status` field of the Deployment or DeploymentConfig. If it is close to a year old, but not over, a warning email will be sent. If the deployment is managed by ArgoCD then a warning email is sent asking for action to be taken. This is because ArgoCD will just scale it back up after the tool scaled it down. If not managed by ArgoCD and the timestamp is over a year then the deployment is scaled to zero replicas and an email is sent.
+## Deployments and deploymentconfigs that have not changed in a year 
+
+This tool checks the `lastUpdateTime` of the `Progressing` block in the `status` field of the Deployment or DeploymentConfig. If it is close to a year old, but not over, a warning email will be sent. If the deployment is managed by ArgoCD then a warning email is sent asking for action to be taken. This is because ArgoCD will just scale it back up after the tool scaled it down. If not managed by ArgoCD and the timestamp is over a year then the deployment is scaled to zero replicas and an email is sent.
 
 You can check the timestamp on your deployment in the YAML under `status`.
  
@@ -52,7 +46,12 @@ You can check the timestamp on your deployment in the YAML under `status`.
     reason: NewReplicationControllerAvailable
     status: "True"
     type: Progressing
-### Responding when deployments are scaled down by this tool
+  ```
+## Deployments, deploymentconfigs and statefulsets that are crashing constantly
+
+This tool looks at the restart count of pods. If a pod has more than 100 restarts it looks for the controlling object of the pod, be it aDeployment, DeploymentConfig, or StatefulSet. If the object is managed by ArgoCD then a warning email is sent asking for action to be taken. This is because ArgoCD will just scale it back up after the tool scaled it down. If not managed by ArgoCD, the object is scaled to zero replicas and an email is sent.
+
+## Responding when deployments are scaled down by these tools
 
 Before you simply scale your pods back up, you should consider fixing the underlying issues that placed your application in one of these two groups in the first place.
 
@@ -66,10 +65,10 @@ Once you have fixed these issues, you can follow the instructions in [RedHat’s
  
 Please be aware that if you scale your deployment back up without fixing the underlying issues, our automated process will scale the application back down again the following week.  
 
-### Timeline 
+## Timeline 
 
 **Silver cluster timeline**
-- Starting January 23, the automation tool will run weekly on Tuesday mornings
+- Starting January 23, these automated tools will run weekly on Tuesday mornings
 
 **Gold and Emerald cluster timeline** 
 - Implementation is planned for early 2024 
@@ -77,4 +76,6 @@ Please be aware that if you scale your deployment back up without fixing the und
 ---
 Related links:
 - [RedHat’s documentation on editing deployments](https://docs.openshift.com/container-platform/4.12/applications/deployments/deployment-strategies.html#odc-editing-deployments_rolling-strategy)
+- [Memorandum of Understanding](https://digital.gov.bc.ca/cloud/services/private/onboard/#memorandum)
+- [Maintaining an image](https://docs.developer.gov.bc.ca/maintain-an-application/#maintain-images)
 ---
