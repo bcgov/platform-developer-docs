@@ -35,7 +35,7 @@ Emails are sent to the Product Owner and Technical Leads registered for the Prod
 ## Deployments and deploymentconfigs that have not changed in a year 
 The tool monitors the `lastUpdateTime` of the `Progressing` block within the `status` field of the Deployment or DeploymentConfig. If this timestamp is approaching one year but has not yet exceeded it, a warning email is triggered. In the case of deployments managed by ArgoCD, an email requests action since ArgoCD may scale it back up after the tool has scaled it down. For deployments not managed by ArgoCD and with a timestamp surpassing one year, the tool scales down the replicas to zero and sends an email notification.
 
-You can check the timestamp on your deployment in the YAML under `status`.
+You can check the timestamp on your deployment in the YAML under `status`. Note that the type of the condition the tool checks against is `Processing`. You might find other conditions such as `Available`, which does not represent updates in the pods but simply tracks the last time pods were restarted.
  
  ```yaml
    conditions:
