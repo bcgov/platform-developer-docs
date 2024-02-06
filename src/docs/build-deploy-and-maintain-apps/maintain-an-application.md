@@ -62,7 +62,7 @@ You should perform the following image maintenance tasks regularly throughout th
 
 These routine tasks are essential to ensure that you benefit from the latest security patches and bug-fixes in your images. By automating these processes, you can keep your application running smoothly and securely without imposing regular toil on your team.
 
-The platform services team runs some weekly [automation](/platform-automation/) that scales down `deployments` and `deploymentconfigs` in non-production environments if they have not been updated in over a year, or if they're crashing continuously.
+The platform services team runs weekly [automation](/platform-automation/) that scales down `deployments` and `deploymentconfigs` in non-production environments if they have not been updated in over a year, or if they're crashing continuously.
 
 ### Quarterly and yearly updates
 Performing these tasks generally involves some manual intervention to test changes. While automation can simplify the process, you'll need to strike a balance between performing these tasks more frequently and the time required from your team members.
