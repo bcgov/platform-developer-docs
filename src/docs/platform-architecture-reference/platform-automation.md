@@ -64,7 +64,7 @@ Before you simply scale your pods back up, you should consider fixing the underl
 
 Once you have fixed these issues, you can follow the instructions in [RedHat’s documentation on editing deployments](https://docs.openshift.com/container-platform/4.12/applications/deployments/deployment-strategies.html#odc-editing-deployments_rolling-strategy) to scale your applications back up again. 
  
-Please be aware that if you scale your deployment back up without fixing the underlying issues, our automated process will scale the application back down again the following week.  
+Be aware that if you scale your deployment back up without addressing the underlying issues, our automated process will scale the application back down again the following week.
 
 ## Timeline 
 
