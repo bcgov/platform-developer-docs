@@ -19,7 +19,7 @@ sort_order: 6
 ---
 
 # Platform Automation
-
+Last updated: **February 5, 2024**
 We use some automation on the platform to help manage resource usage, alert about misconfigured objects and to encourage teams to use images that are secure and up to date. 
 
 To date, resource utilization (the use of CPU and RAM) on our platforms has not been efficient. For example, almost 50% of CPU capacity on the Silver cluster is reserved by apps, but not actually used. This unused utilization increases costs and impacts our ability to onboard new teams.  Sometimes teams do not maintain and update the images that their deployments are based on. This can lead to security vulnerabilities, incompatibilities and other problems  
