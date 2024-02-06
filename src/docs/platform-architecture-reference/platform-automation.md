@@ -30,7 +30,7 @@ These tools looks for these types of objects:
 - `Deployments` and `deploymentconfigs` that are based on images have not changed in over a year
 - `Deployments`, `deploymentconfigs` and `statefulsets` that are crashing constantly 
 
-Emails are sent to the Product Owner and Technical Leads registered for the Product in the [Registry](https://registry.developer.gov.bc.ca/). If you want to change who gets the emails, go update the contacts in the Registry.
+Emails are sent to the Product Owner and Technical Leads registered for the Product in the [Product Registry](https://registry.developer.gov.bc.ca/). To modify the recipients of the emails, please update the contact information in the Registry.
 
 ## Deployments and deploymentconfigs that have not changed in a year 
 
