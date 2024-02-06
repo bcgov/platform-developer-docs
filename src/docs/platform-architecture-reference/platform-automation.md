@@ -19,7 +19,7 @@ sort_order: 6
 ---
 
 # Platform Automation
-Last updated: **February 5, 2024**
+Last updated: **February 6, 2024**
 We use some automation on the platform to help manage resource usage, alert about misconfigured objects and to encourage teams to use images that are secure and up to date. 
 
 Historically, application teams working on our platform have not efficiently utilized resources such as CPU and RAM. For instance, apps reserve almost 50% of CPU capacity on the Silver cluster without actually using it. This unused utilization increases costs and impacts our ability to onboard new teams. Additionally, some teams neglect to maintain and update their deployment images, leading to security vulnerabilities, incompatibilities, and other problems.
@@ -71,7 +71,7 @@ Be aware that if you scale your deployment back up without addressing the underl
 - Beginning January 23, 2024 these automated tools will run every Tuesday morning
 
 **Gold and Emerald cluster timeline** 
-- Implementation is planned for early 2024 
+- As of February 6, 2024 these scripts have not been implemented in the Gold and Emerald clusters. Implementation is planned for early 2024, and will be announced in the [devops-alerts rocketchat channel](https://chat.developer.gov.bc.ca/channel/devops-alerts).
 
 ---
 ## Related pages
