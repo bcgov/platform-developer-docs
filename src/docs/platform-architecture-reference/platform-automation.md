@@ -68,7 +68,7 @@ Be aware that if you scale your deployment back up without addressing the underl
 ## Timeline 
 
 **Silver cluster timeline**
-- Beginning January 23, 2024 these automated tools will run every Tuesday morning
+- Beginning January 23, 2024 these automated tools will run every Tuesday morning.
 
 **Gold and Emerald cluster timeline** 
 - As of February 6, 2024 these scripts have not been implemented in the Gold and Emerald clusters. Implementation is planned for early 2024, and will be announced in the [devops-alerts rocketchat channel](https://chat.developer.gov.bc.ca/channel/devops-alerts).
