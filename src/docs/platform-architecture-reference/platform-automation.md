@@ -22,8 +22,8 @@ sort_order: 6
 Last updated: **February 5, 2024**
 We use some automation on the platform to help manage resource usage, alert about misconfigured objects and to encourage teams to use images that are secure and up to date. 
 
-To date, resource utilization (the use of CPU and RAM) on our platforms has not been efficient. For example, almost 50% of CPU capacity on the Silver cluster is reserved by apps, but not actually used. This unused utilization increases costs and impacts our ability to onboard new teams.  Sometimes teams do not maintain and update the images that their deployments are based on. This can lead to security vulnerabilities, incompatibilities and other problems  
- 
+Historically, application teams working on our platform have not efficiently utilized resources such as CPU and RAM. For instance, apps reserve almost 50% of CPU capacity on the Silver cluster without actually using it. This unused utilization increases costs and impacts our ability to onboard new teams. Additionally, some teams neglect to maintain and update their deployment images, leading to security vulnerabilities, incompatibilities, and other problems.
+
 To address this, we’ve developed automated tools that monitor apps on the platform. 
  
 These tools looks for these types of objects: 
@@ -33,8 +33,7 @@ These tools looks for these types of objects:
 Emails are sent to the Product Owner and Technical Leads registered for the Product in the [Product Registry](https://registry.developer.gov.bc.ca/). To modify the recipients of the emails, please update the contact information in the Registry.
 
 ## Deployments and deploymentconfigs that have not changed in a year 
-
-This tool checks the `lastUpdateTime` of the `Progressing` block in the `status` field of the Deployment or DeploymentConfig. If it is close to a year old, but not over, a warning email will be sent. If the deployment is managed by ArgoCD then a warning email is sent asking for action to be taken. This is because ArgoCD will just scale it back up after the tool scaled it down. If not managed by ArgoCD and the timestamp is over a year then the deployment is scaled to zero replicas and an email is sent.
+The tool monitors the `lastUpdateTime` of the `Progressing` block within the `status` field of the Deployment or DeploymentConfig. If this timestamp is approaching one year but has not yet exceeded it, a warning email is triggered. In the case of deployments managed by ArgoCD, an email requests action since ArgoCD may scale it back up after the tool has scaled it down. For deployments not managed by ArgoCD and with a timestamp surpassing one year, the tool scales down the replicas to zero and sends an email notification.
 
 You can check the timestamp on your deployment in the YAML under `status`.
  
@@ -50,15 +49,15 @@ You can check the timestamp on your deployment in the YAML under `status`.
 
 ## Deployments, deploymentconfigs and statefulsets that are crashing constantly
 
-This tool looks at the restart count of pods. If a pod has more than 100 restarts it looks for the controlling object of the pod, be it a Deployment, DeploymentConfig, or StatefulSet. If the object is managed by ArgoCD then a warning email is sent asking for action to be taken. This is because ArgoCD will just scale it back up after the tool scaled it down. If not managed by ArgoCD, the object is scaled to zero replicas and an email is sent.
+The tool examines the restart count of pods, triggering a response if a pod has surpassed 100 restarts. It then identifies the controlling object of the pod, whether it's a Deployment, DeploymentConfig, or StatefulSet. In cases where the object is managed by ArgoCD, a warning email is generated, prompting necessary action, as ArgoCD may scale it back up after the tool has scaled it down. If the object is not managed by ArgoCD and the restart count exceeds 100, the tool scales down the replicas to zero and sends an email notification.
 
 ## Responding when deployments are scaled down by these tools
 
-Before you simply scale your pods back up, you should consider fixing the underlying issues that placed your application in one of these two groups in the first place.
+Before you scale your pods back up, make sure to fix the underlying issues that caused your application to end up in one of these two groups initially.
 
  If your application is crashing regularly, your technical team should investigate and fix the cause of these crashes. You can see the number of times your pod has restarted in the web console or via `oc get pods` to get an idea of if it is crashing a lot.
  
- If your application has not changed in over a year, your technical team should build a new image, which ensures that your application is able to take advantage of any security patches from the past year. It is highly likely your image contains Critical security vulnerabilities if it has not been updated in over a year.
+If your application hasn't been updated in over a year, your technical team should create a new image. This ensures that your application can benefit from any security patches released in the past year. It's highly probable that your image has critical security vulnerabilities if it hasn't been updated for more than a year.
  
  Maintaining your application is part of the [Memorandum of Understanding](https://digital.gov.bc.ca/cloud/services/private/onboard/#memorandum) that teams working on the platform agree to. More detailed docs on [maintaining an image](https://docs.developer.gov.bc.ca/maintain-an-application/#maintain-images) are also available.
 
@@ -69,7 +68,7 @@ Be aware that if you scale your deployment back up without addressing the underl
 ## Timeline 
 
 **Silver cluster timeline**
-- Starting January 23, these automated tools will run weekly on Tuesday mornings
+- Beginning January 23, 2024 these automated tools will run every Tuesday morning
 
 **Gold and Emerald cluster timeline** 
 - Implementation is planned for early 2024 
