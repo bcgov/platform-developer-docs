@@ -75,7 +75,7 @@ Please be aware that if you scale your deployment back up without fixing the und
 - Implementation is planned for early 2024 
 
 ---
-Related links:
+## Related pages
 - [RedHat’s documentation on editing deployments](https://docs.openshift.com/container-platform/4.12/applications/deployments/deployment-strategies.html#odc-editing-deployments_rolling-strategy)
 - [Memorandum of Understanding](https://digital.gov.bc.ca/cloud/services/private/onboard/#memorandum)
 - [Maintaining an image](https://docs.developer.gov.bc.ca/maintain-an-application/#maintain-images)
