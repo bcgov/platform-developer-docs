@@ -25,7 +25,7 @@ Through this document you'll find some details on our OpenShift service, complet
 
 ## On this page
 * [**Platform tools security assessments**](#platform-tools-security-assessments)
-* [**STRA and PIA requirements for applications**](#stra-and-pia-requirements-for-applications)
+* [**Security Assessment requirements for applications**](#stra-and-pia-requirements-for-applications)
 * [**Platform Product Registry**](#platform-product-registry)
 * [**Access management**](#access-management)
 * [**GitOps/Cluster configuration management**](#gitopscluster-configuration-management)
@@ -97,7 +97,7 @@ Many of the platform tools have **completed** security assessments.  These inclu
 
 If you cannot find a tool from the above list and/or require specific information please contact the [platform services team](mailto:PlatformServicesTeam@gov.bc.ca).
 
-## Security and Privacy Impact Assessment requirements for applications
+## Security Assessment requirements for applications
 ........
 
 ## Platform Product Registry
