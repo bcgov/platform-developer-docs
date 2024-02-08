@@ -17,6 +17,8 @@ content_owner: Nick Corcoran
 
 sort_order: 1
 ---
+* [**Pipeline templates (includes static and dynamic analysis)**](#pipeline-templates-includes-static-and-dynamic-analysis)
+* [**Container image scanning (ACS, Xray)**](#container-image-scanning-acs-xray)
 * [**Container runtime security**](#container-runtime-security)
 * [**Secrets management**](#secrets-management)
 * [**Logging and monitoring (EKS, Kibana, Graphana, Sysdig Monitor, SIEM, Uptime, Status)**](#logging-and-monitoring-eks-kibana-graphana-sysdig-monitor-siem-uptime-status)
