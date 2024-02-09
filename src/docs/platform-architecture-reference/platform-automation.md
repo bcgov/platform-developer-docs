@@ -28,6 +28,7 @@ Historically, application teams working on our platform have not efficiently uti
 To address this, we’ve developed automated tools that monitor apps on the platform. 
  
 These tools looks for these types of objects: 
+
 - `Deployments` and `deploymentconfigs` that are based on images have not changed in over a year
 - `Deployments`, `deploymentconfigs` and `statefulsets` that are crashing constantly 
 
@@ -38,15 +39,15 @@ The tool monitors the `lastUpdateTime` of the `Progressing` block within the `st
 
 You can check the timestamp on your deployment in the YAML under `status`. Note that the type of the condition the tool checks against is `Processing`. You might find other conditions such as `Available`, which does not represent updates in the pods but simply tracks the last time pods were restarted.
  
- ```yaml
-   conditions:
+```yaml
+conditions:
   - lastTransitionTime: "2021-11-25T17:04:01Z"
     lastUpdateTime: "2021-11-25T17:04:11Z"
     message: replication controller "backup-postgresql-1" successfully rolled out
     reason: NewReplicationControllerAvailable
     status: "True"
     type: Progressing
-  ```
+```
 
 ## Deployments, deploymentconfigs and statefulsets that are crashing constantly
 
@@ -69,13 +70,16 @@ Be aware that if you scale your deployment back up without addressing the underl
 ## Timeline 
 
 **Silver cluster timeline**
+
 - Beginning January 23, 2024 these automated tools will run every Tuesday morning.
 
 **Gold and Emerald cluster timeline** 
+
 - As of February 6, 2024 these scripts have not been implemented in the Gold and Emerald clusters. Implementation is planned for early 2024, and will be announced in the [devops-alerts rocketchat channel](https://chat.developer.gov.bc.ca/channel/devops-alerts).
 
 ---
 ## Related pages
+
 - [RedHat’s documentation on editing deployments](https://docs.openshift.com/container-platform/4.12/applications/deployments/deployment-strategies.html#odc-editing-deployments_rolling-strategy)
 - [Memorandum of Understanding](https://digital.gov.bc.ca/cloud/services/private/onboard/#memorandum)
 - [Maintaining an image](../build-deploy-and-maintain-apps/maintain-an-application.md#maintain-images)
