@@ -57,6 +57,7 @@ nav:
   - OpenShift network policies: docs/platform-architecture-reference/openshift-network-policies.md
   - Platform network topology: docs/platform-architecture-reference/platform-network-topology.md
   - Set up TCP connectivity on the Private Cloud OpenShift Platform: docs/platform-architecture-reference/set-up-tcp-connectivity-on-private-cloud-openshift-platform.md
+  - Platform automation: docs/platform-architecture-reference/platform-automation.md
 - Training and learning:
   - Training from the Platform Services Team: docs/training-and-learning/training-from-the-platform-services-team.md
   - External training resources: docs/training-and-learning/training-external-resources.md
