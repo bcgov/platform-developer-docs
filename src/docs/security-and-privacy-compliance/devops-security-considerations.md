@@ -139,7 +139,7 @@ Subscribe to the [DevOps Platform Services communications](https://subscribe.dev
 ### Rocket.Chat
 Community sharing, alerts, and discussions occur on Rocket.Chat, hosted as an app on OpenShift. Authentication is done through IDIR or GitHub in the [BCGov org](https://just-ask.developer.gov.bc.ca/) or invited by an existing member. 
 
-Find more information about [joining Rocket.Chat](https://mvp.developer.gov.bc.ca/docs/default/component/bc-developer-guide/rocketchat/steps-to-join-rocketchat/).
+Find more information about [joining Rocket.Chat](../../bc-developer-guide/rocketchat/steps-to-join-rocketchat/).
 
 ### Mautic
 Mautic has been implemented to allow for subscription based communications for the DevOps community. 
@@ -348,7 +348,7 @@ Here is a summary of the GitHub organizations we own and their purposes:
 
 These resources are available:
 
-- [BC Government organizations in GitHub](https://mvp.developer.gov.bc.ca/docs/default/component/bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/)
+- [BC Government organizations in GitHub](../../bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/)
 
 **GitHub Apps**
 
@@ -358,7 +358,7 @@ Teams may request GitHub apps to be associated with their own or all projects in
 
 We currently use of GitHub Enterprise.  Contact the Developer Experience team for license information.
 
-* [GitHub Enterprise user licenses in the BC government](https://mvp.developer.gov.bc.ca/docs/default/component/bc-developer-guide/use-github-in-bcgov/github-enterprise-user-licenses-bc-government/)
+* [GitHub Enterprise user licenses in the BC government](../../bc-developer-guide/use-github-in-bcgov/github-enterprise-user-licenses-bc-government/)
 - [Province of British Columbia Enterprise’s single sign-on provider](https://github.com/enterprises/bcgov-ent/sso)
 
 ## DevOps Team recommendations for Protected C data creation, storage and use
