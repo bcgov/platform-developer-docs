@@ -1,8 +1,8 @@
-name: Publish TechDocs
+name: Build TechDocs with DevHub TechDocs Publish Action
 
 on:
-  push: 
-    branches: [main] 
+  push:
+    branches: [main]
     paths:
       - "src/docs/**"
       - "src/images/**"
@@ -12,16 +12,15 @@ on:
   workflow_dispatch:
     inputs:
       deploy_location:
-        description: 'Deploy to'
+        description: "Deploy to"
         required: true
         default: dev
         type: choice
         options:
-        - dev
-        - prod
+          - dev
+          - prod
 
 jobs:
-
   techdocs_build_job:
     runs-on: ubuntu-latest
 
@@ -29,13 +28,12 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-
       - name: Build TechDocs
-        uses: bcgov/devhub-techdocs-publish@stable  
+        uses: bcgov/devhub-techdocs-publish@stable
         id: build_and_publish
         with:
-          publish: 'true'
-          production:  ${{  github.event_name == 'workflow_dispatch' && inputs.deploy_location == 'prod' }} 
+          publish: "true"
+          production: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy_location == 'prod' }}
           bucket_name: ${{ secrets.TECHDOCS_S3_BUCKET_NAME }}
           s3_access_key_id: ${{ secrets.TECHDOCS_AWS_ACCESS_KEY_ID }}
           s3_secret_access_key: ${{ secrets.TECHDOCS_AWS_SECRET_ACCESS_KEY }}
