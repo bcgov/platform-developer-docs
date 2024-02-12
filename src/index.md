@@ -33,7 +33,7 @@ that is offered on the Platform and get access to other learning resources.
 
 Rocket.Chat will be your main communication channel for platform updates and support while you work in the BC Gov
 Private Cloud PaaS. Read
-about [how to stay connected in Rocket.Chat](https://mvp.developer.gov.bc.ca/docs/default/component/bc-developer-guide/rocketchat/steps-to-join-rocketchat/).
+about [how to stay connected in Rocket.Chat](../bc-developer-guide/rocketchat/steps-to-join-rocketchat/).
 
 [Log in to Rocket.Chat](https://chat.developer.gov.bc.ca).
 
@@ -56,9 +56,9 @@ Dive deeper
 
 ### Use GitHub in BC Gov
 
-* [BC Government organizations in GitHub](https://mvp.developer.gov.bc.ca/docs/default/component/bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/)
+* [BC Government organizations in GitHub](../bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/)
 * [Common platform requests in the BC Gov Private Cloud PaaS](https://cloud.gov.bc.ca/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/)
-* [Start working in BCGov GitHub organization](https://mvp.developer.gov.bc.ca/docs/default/component/bc-developer-guide/use-github-in-bcgov/start-working-in-bcgov-github-organization/)
+* [Start working in BCGov GitHub organization](../bc-developer-guide/use-github-in-bcgov/start-working-in-bcgov-github-organization/)
 
 ### Automation and resiliency
 
