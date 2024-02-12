@@ -90,7 +90,8 @@ def create_yaml_structure(nav_entries):
     'site_name':'BC Government Private Cloud Technical Documentation',
     'docs_dir':'src',
     'nav': nav_entries,
-    'plugins': ['techdocs-core'],
+    'plugins': ['techdocs-core', 'ezlinks'],
+    'markdown_extensions': ['md_in_html', {'mkpatcher': {'location': 'patcher.py'}}],
     'exclude_docs': 'drafts/\ncomponents/\nhooks/\npages/\nutils/\n'
   }
 

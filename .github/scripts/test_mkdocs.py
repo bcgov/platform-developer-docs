@@ -11,6 +11,7 @@ def test_happy_path(tmp_path):
       "automation-and-resiliency",
       "build-deploy-and-maintain-apps", 
       "database-and-api-management",
+      "design-system",
       "openshift-projects-and-access",
       "platform-architecture-reference",
       "reusable-code-and-services",
@@ -60,7 +61,8 @@ def test_create_yaml_structure():
   expected_mkdocs = {'site_name': 'BC Government Private Cloud Technical Documentation', 
           'docs_dir': 'src', 
           'nav': nav_entries,
-          'plugins': ['techdocs-core'],
+          'plugins': ['techdocs-core', 'ezlinks'],
+           'markdown_extensions': ['md_in_html', {'mkpatcher': {'location': 'patcher.py'}}],
           'exclude_docs': 'drafts/\ncomponents/\nhooks/\npages/\nutils/\n'}
   
   mkdocs = create_yaml_structure(nav_entries)
