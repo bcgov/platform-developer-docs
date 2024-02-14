@@ -68,8 +68,6 @@ plugins:
 - ezlinks
 markdown_extensions:
 - md_in_html
-- mkpatcher:
-    location: patcher.py
 exclude_docs: |
   drafts/
   components/
