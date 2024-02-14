@@ -19,13 +19,17 @@ sort_order: 1
 ---
 
 # B.C. Government OpenShift Platform Security Compliance
-Last updated: **January 25, 2024**
+Last updated: **February 13, 2024**
 
 Through this document you'll find some details on our OpenShift service, completed compliance activities and security controls we have in place on our OpenShift implementations.
 
 ## On this page
+* [**OpenShift Platform Service**]
+* [**Penetration Tests**]
+* [**Critical Systems Standard**]
+* [**IMIT Standards**]
 * [**Platform tools security assessments**](#platform-tools-security-assessments)
-* [**Security Assessment requirements for applications**](#stra-and-pia-requirements-for-applications)
+* [**Security Assessment requirements for applications**](#stra-requirements-for-applications)
 * [**Platform Product Registry**](#platform-product-registry)
 * [**Access management**](#access-management)
 * [**GitOps/Cluster configuration management**](#gitopscluster-configuration-management)
@@ -35,10 +39,11 @@ Through this document you'll find some details on our OpenShift service, complet
 * [**Other important considerations**](#other-important-considerations)
 * [**Related pages**](#other-important-considerations)
 
+<!-- I wasn't sure how to make links to the headings properly -->
 <!-- ### End of "On this page" --> 
 ---
 
-### OpenShift Platform security 
+### OpenShift Platform Service 
 The OpenShift platform security actively protects your applications and data, keeping them safe from unauthorized access and potential threats. OpenShift consistently updates and patches to address vulnerabilities, ensuring a robust defense against evolving security risks. 
 
 If you'd like to find more details about its capabilities, check the our useful [guide for the private cloud hosting 101](https://digital.gov.bc.ca/cloud/services/private/intro/).
@@ -61,8 +66,14 @@ You can also find specific details on OpenShift's security controls under [Red H
 
 The platform services team outsources for a penetration test annually to ensure the services we provide are configured to protect confidentiality, integrity and availability.  Penetration tests are procured through the [pre-qualified list of vendors](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security).
 
-### Privacy
-<!-- **link to privacy-compliance-and-guidance.md** -->
+Penetration tests help to identify platform misconfigurations and security vulnerabiliites.  Run annually, we try to change vendors regularly to get a different persepective/assessment toolkit to ensure our service matures to meet client needs and address potential weaknesses.
+
+What we cover:
+- Black box testing
+- Authenticated testing
+- Developer (namespace admin) testing
+
+Testers run a suite of automated tools and use manual techniques to validate potential exploits and provide recommondentations on controls to mitigate.
 
 ### Critical Systems Standard
 
@@ -72,7 +83,25 @@ Any IM/IT service, system, or infrastructure component that is deemed necessary 
 
 We have completed all required documentation for the Critical Systems Standard, and currently under review by the  CITZ Security team.
 
-## Platform tools security assessments
+### IMIT Standards
+
+The following services were designed with the associated [IMIT standards](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/im-it-standards/find-a-standard#id_mgt) in mind.  The platform team works regularly with the standards owners to review and update to meet current day needs.
+
+| Service                                  | Standard |
+| ------------------------------------     | ------------------------------------------------------------------------------------------------------------------------------------ |
+| Critical System (Gold Tier Service)      | [5.10 Critical Systems Standard](https://www2.gov.bc.ca/assets/download/D6CF2EBB6E094EB5A43B4B427F43ADBC) |     
+|                                          | [6.23 Information Security Aspects of Business Continuity Management Security Standard](https://www2.gov.bc.ca/assets/download/B15B08B6DB5347DABA99945EBC888668) |
+| Single Sign-On (KeyCloak)                | [4.06 Electronic Credential & Authentication Standard](https://www2.gov.bc.ca/assets/download/5F3B13D5550E4F97B241456F12F9BD31) |
+|                                          | [6.24 Access Control Security Standard](https://www2.gov.bc.ca/assets/download/CCD14B680FEC4054BE88ECCB8B176D22) |
+| Secrets Management (Vault)               | [4.06 Electronic Credential & Authentication Standard](https://www2.gov.bc.ca/assets/download/5F3B13D5550E4F97B241456F12F9BD31) |
+|                                          | [6.10 Cryptographic Standard](https://www2.gov.bc.ca/assets/download/A834831A594245CD81D9BF99DDF39FCD) |
+| Asset Management (Artifactory, Registry)        | [6.23 Asset Management Security Standard](https://www2.gov.bc.ca/assets/download/F9BA3AFD52B34727BA261F052ADEAA0B) |
+| Networking (SDN, KNPs)                   | 6.13 Network Security Zone Standard - available by request to CITZAS@gov.bc.ca |
+| Logging/Monitoring (Kibana, SIEM)        | [6.27 Operations Security Standard](https://www2.gov.bc.ca/assets/download/0F4DF4FAC5214C6387B6B51DD538FF6E) |
+| App Security (SAST,DAST,SCA)             | [6.14 Application & Web Development & Deployment Standard](https://www2.gov.bc.ca/assets/download/29237A3033824CCBAC0465939BFB2CEF) |
+|                                          | [6.34 Vulnerability Management Scanning Standrard](https://www2.gov.bc.ca/assets/download/3DFC2361BC334BFDBDF907B6B16C5358) |
+
+### Platform tools security assessments
 
 Many of the platform tools have **completed** security assessments.  These include:
 
@@ -97,8 +126,9 @@ Many of the platform tools have **completed** security assessments.  These inclu
 
 If you cannot find a tool from the above list and/or require specific information please contact the [platform services team](mailto:PlatformServicesTeam@gov.bc.ca).
 
-## Security Assessment requirements for applications
-........
+## Security Assessment Requirements for Product Teams
+
+Each product team is responsible for developing a security assessment for their service.  It is recommonended that teams connect with their Ministry Information Security Officer (MISO), or Ministry securty team, to complete this assessment.  Some common questions to ask can be found [here](/security-best-practices-for-apps.md).
 
 ## Platform Product Registry
 
@@ -110,10 +140,10 @@ Here, we maintain a listing of all products with deployments on each OpenShift c
 
 Find out more about the benefits and its use in our [Platform Product Registry information page](https://digital.gov.bc.ca/cloud/services/private/products-tools/registry/)
 
-## Access management
+### Access management
 Our OpenShift access is managed through the OpenShift SSO Service, currently using KeyCloak.
 
-* More information on [SSO-Onboarding with KeyCloa - GitHub](https://github.com/bcgov/sso-keycloak/wiki/SSO-Onboarding)
+* More information on [SSO-Onboarding with KeyCloak - GitHub](https://github.com/bcgov/sso-keycloak/wiki/SSO-Onboarding)
 * More information on using the self-service app to integrate with B.C. government approved login services. [Request SSO Integration](https://bcgov.github.io/sso-requests)
 
 Government users and contractors may login to OpenShift clusters with a GitHub or IDIR account (depending on which cluster they choose).  Both of these options require an account with 2FA/MFA enabled.  
@@ -129,7 +159,7 @@ Read about the [Platform services roles and responsibilities](https://digital.go
 
 The Platform Services team maintains an Access Control Policy for all platform tools and they can be found in the [internal resources section](https://digital.gov.bc.ca/cloud/services/private/internal-resources/). To access it select Login with Keycloak.
 
-## Kubernetes Network Policies (KNPs)
+### Kubernetes Network Policies (KNPs)
 
 Network policies help the platform and project teams to better control communications between components.  While KNPs only apply as **ingress rules** (not egress), they help to improve our overall security posture.  KNPs only apply to on-cluster communications (i.e. between pods in a namespace, or between namespaces).  
 
@@ -137,7 +167,7 @@ Find our more about using KNPs to control network security for an application ho
 
 For products requiring policies that reach off-cluster, the Emerald cluster is the best choice.  This provides a way to communicate with VMs in the SDN zone, and more isolated communications to legacy network zones (B/C).  This capability is provided through the use of VMWare NSX.
 
-## TLS certificates
+### TLS certificates
 
 OpenShift uses a wildcard certificate for the majority of cluster communications security.  This should be sufficient for dev and test workloads, but for production workloads, each team is required to obtain a dedicated TLS certificate from the Access & Directory Management Services (ADMS) team.  
 
@@ -155,11 +185,11 @@ Generate a **.csr** for [each site](https://github.com/BCDevOps/openshift-wiki/b
 
 ![TLS certificate order lifecycle diagram](../../images/tls-certificate-order-lifecycle.png)
 
-## GitOps/Cluster configuration management
+### GitOps/Cluster configuration management
 
 Argo CD (integrated into OpenShift as the GitOps Operator) provides a GitOps capability for sync'ing a Git repository with an OpenShift configuration (platform or application)
 
-## Application Programmable Interface (API) management
+### Application Programmable Interface (API) management
 
 The Data BC team hosts an API Gateway for use by other government clients. 
 
@@ -168,13 +198,14 @@ Details can be found here:
 * [B.C. government API Program Services](https://www2.gov.bc.ca/gov/content/data/about-data-management/databc/databc-products-services/api-management)
 * [B.C. government API guidelines](https://developer.gov.bc.ca/BC-Government-API-Guidelines)
 
-**Uptime.com**
+### Uptime.com
+
 This tools help us to observe platform service availability.
 
 Review the [status of the platform](https://status.developer.gov.bc.ca/)
 
 
-## Backups
+### Backups
 Backups help you to recover in the event of a failure or data corruption.  As part of your backup process, you should consider the retention period, and the schedule for testing backups. All backups should be tested regularly.
 
 **OpenShift**
@@ -184,7 +215,7 @@ Backups help you to recover in the event of a failure or data corruption.  As pa
 **GitHub**
 - [GitHub backups](https://github.com/bcgov-c/platform-services-docs/blob/main/github/github-backups.md)
 
-## Change management
+### Change management
 
 Planning for platform and service changes is documented on the [Platform Services ZenHub board](https://app.zenhub.com/workspaces/platform-experience-5bb7c5ab4b5806bc2beb9d15/board?repos=220104031)   
 
