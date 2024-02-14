@@ -15,7 +15,7 @@ author: Nick Corcoran
 
 content_owner: Nick Corcoran
 
-sort_order: 1
+sort_order: 2
 ---
 
 # B.C. Government OpenShift Platform Security Compliance
