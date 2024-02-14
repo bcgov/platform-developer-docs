@@ -1,7 +1,7 @@
 ---
-title: B.C. Government OpenShift DevOps security considerations
+title: B.C. Government OpenShift DevOps Securitiy Compliance
 
-slug: devops-security-considerations
+slug: devops-security-compliance
 
 description: Learn about compliance assessment and controls on the B.C. Government OpenShift Private Cloud Platform as a Service.
 
