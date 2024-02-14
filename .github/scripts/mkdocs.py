@@ -91,7 +91,7 @@ def create_yaml_structure(nav_entries):
     'docs_dir':'src',
     'nav': nav_entries,
     'plugins': ['techdocs-core', 'ezlinks'],
-    'markdown_extensions': ['md_in_html', {'mkpatcher': {'location': 'patcher.py'}}],
+    'markdown_extensions': ['md_in_html'],
     'exclude_docs': 'drafts/\ncomponents/\nhooks/\npages/\nutils/\n'
   }
 
