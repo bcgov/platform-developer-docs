@@ -17,6 +17,9 @@ content_owner: Nick Corcoran
 
 sort_order: 1
 ---
+# Platform Secuirty Tools
+Here you will find details on security tooling used by platform administrations and available to product teams.
+
 * [**Pipeline templates (includes static and dynamic analysis)**](#pipeline-templates-includes-static-and-dynamic-analysis)
 * [**Container image scanning (ACS, Xray)**](#container-image-scanning-acs-xray)
 * [**Container runtime security**](#container-runtime-security)
