@@ -15,7 +15,7 @@ author: Nick Corcoran
 
 content_owner: Nick Corcoran
 
-sort_order: 1
+sort_order: 3
 ---
 # Platform Secuirty Tools
 Here you will find details on security tooling used by platform administrations and available to product teams.
