@@ -17,7 +17,7 @@ content_owner: Nick Corcoran
 
 sort_order: 1
 ---
-
+<
 # B.C. Government OpenShift DevOps security considerations
 Last updated: **November 2, 2023**
 
