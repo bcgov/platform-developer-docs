@@ -67,8 +67,9 @@ plugins:
 - techdocs-core
 - ezlinks
 markdown_extensions:
+- md_in_html
 - pymdownx.highlight:
-    linenums: false
+    linenums: 'false'
 exclude_docs: |
   drafts/
   components/
