@@ -62,7 +62,7 @@ def test_create_yaml_structure():
           'docs_dir': 'src', 
           'nav': nav_entries,
           'plugins': ['techdocs-core', 'ezlinks'],
-           'markdown_extensions': ['md_in_html'],
+           'markdown_extensions': ['md_in_html', {'pymdownx.highlight': {'linenums': 'false'}}],
           'exclude_docs': 'drafts/\ncomponents/\nhooks/\npages/\nutils/\n'}
   
   mkdocs = create_yaml_structure(nav_entries)
