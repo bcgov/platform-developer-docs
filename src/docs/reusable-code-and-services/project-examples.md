@@ -20,25 +20,30 @@ sort_order: 1
 # Project examples
 Last updated: **February 14, 2024**
 
-<!-- Document description goes here and answers: why this document is helpful, what it is and how to use it -->
+This is a dedicated space where we showcase the innovative projects crafted with OpenShift and various tools within the Platform Services ecosystem. Here, we invite you to explore the projects  and learn about the key technologies employed and the invaluable lessons learned during their development.
+
+We believe in the community of shared knowledge, where developers can not only celebrate successes but also learn from setbacks and obstacles.
+
+By sharing these examples, we aim to contribute to the growth and learning of fellow developers. We believe that collaboration and knowledge-sharing are essential pillars for the advancement of technology!
+
+Your experiences and contributions matter, and by sharing them, you not only showcase your team's achievements but also inspire and empower others in the ever-evolving landscape of technology. 
+
+If you would like to showcase your project as well, contact us a [PlatformServicesTeam@gov.bc.ca](mailto:platformservicesteam@gov.bc.ca)
 
 ## On this page
 * **[Platform Services Product Registry](#platform-services-product-registry)**
 * **[SSO Service](#project-b---single-sign-on-sso-service)**
-* **[Title](#link)**
-* **[Title](#link)**
 * **[Related pages](#related-pages)**
 
 ---
-
+---
 ## Platform Services Product Registry
-
+---
 ### Project overview
-<!-- A brief description of the project, its purpose, and the problems it aims to solve. -->
  This application helps allocate OpenShift namespace environments in BC Gov. It responds to project team requests, it simplifies the handling of new and update requests, and it also ensures scalability and flexibility. Key features include a user-friendly request management system, automated provisioning, and comprehensive notification and monitoring capabilities.
 
 ### Key technologies used
-<!-- Highlight the main technologies, frameworks, or programming languages that powered your project. -->
+
 #### Applications
  
 - [Next.js](https://nextjs.org/): Utilized for crafting full-stack web applications, Next.js extends React capabilities and integrates powerful Rust-based JavaScript tools, heightening performance by delivering fully-rendered HTML to the client.
@@ -90,7 +95,7 @@ These technologies foster rapid iterative development, polished user interfaces,
 - [Terraform](https://www.terraform.io/): An open-source IaC tool automating provisioning and management of infrastructure resources across various cloud providers, ensuring standardized and efficient deployment with seamless peer review processes and change history tracking within the source control platform.
 
 ### Lessons Learned: Challenges and solutions
-<!-- Share any hurdles your team faced during development and how you overcame them. Alternatively, if there are valuable lessons learned in the process, those would be fantastic to include. -->
+
 #### Peer review optimization
  
 The team faced a big challenge in improving the process of reviewing and adding new changes to the main branch. 
@@ -142,12 +147,9 @@ Without team conventions, the codebase can become inconsistent and cause delays 
  
 ---
 --- 
-
 ## Single Sign On (SSO) Service
-
+--- 
 ### Project overview
-<!-- A brief description of the project, its purpose, and the problems it aims to solve. -->
-
 The Pathfinder Single Sign On (SSO) team builds products and services that enable government digital delivery teams to get single sign-on login options for their applications. These are applications for businesses and residents of British Columbia.
 
 The Pathfinder SSO team uses a DevOps continuous improvement approach towards its [Common Hosted Single Sign On Application](https://bcgov.github.io/sso-requests) and support its custom realm clients. The agile team uses the agile methodology, human-centred design, open source languages and frameworks, and RedHat Keycloak Single Sign On (standard protocols like OAuth 2.0, OpenID Connect, SAML 2.0.)
@@ -197,8 +199,6 @@ The Pathfinder Single Sign On Services uses:
   - Uptime.com and  OpsGenie
 
 ### Lessons Learned: Challenges and solutions
-<!-- Share any hurdles your team faced during development and how you overcame them. Alternatively, if there are valuable lessons learned in the process, those would be fantastic to include. -->
-
 We strive to deliver value for our customers. We've focused the last few years on system stability and reliability. We offer business continuity aka disaster recovery for our service. Learn more about our [service levels](https://github.com/bcgov/sso-keycloak/wiki/Alerts-and-Us#service-levels).
 
 ### Our useful references
