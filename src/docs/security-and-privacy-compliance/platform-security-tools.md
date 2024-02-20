@@ -1,5 +1,5 @@
 ---
-title: B.C. Government OpenShift Platform Security Tools
+title: B.C. government OpenShift Platform Security Tools
 
 slug: platform-security-tools
 
@@ -17,8 +17,10 @@ content_owner: Nick Corcoran
 
 sort_order: 3
 ---
-# Platform Secuirty Tools
-Here you will find details on security tooling used by platform administrations and available to product teams.
+# OpenShift platform security tools
+Last updated: **February 20, 2024**
+
+Here you will find details on security tooling used by platform administrators and available to product teams.
 
 * [**Pipeline templates (includes static and dynamic analysis)**](#pipeline-templates-includes-static-and-dynamic-analysis)
 * [**Container image scanning (ACS, Xray)**](#container-image-scanning-acs-xray)
@@ -30,10 +32,10 @@ Here you will find details on security tooling used by platform administrations 
 <!-- ### End of "On this page" --> 
 ---
 
-
 ## Pipeline templates (includes static and dynamic analysis)
 
-In order to reduce effort in implementing secure tools into a build pipeline, we have developed pipeline templates that include components for build, aas well as static and dynamic vulnerability scanning.  
+To streamline the integration of secure tools into your build pipeline, we've created pipeline templates. These templates encompass build components, along with static and dynamic vulnerability scanning, making it easier for you to implement security measures.
+
 * [Access Pipeline templates](https://github.com/bcgov/Security-pipeline-templates/)
 
 Here is a representation of what an application build pipeline should look like:
@@ -45,21 +47,22 @@ The pipeline templates above make it easier to include the tools described below
 
 ### Scanning tools roles 
 
-* **Static Analysis (i.e. SonarX, CodeQL)** identifies coding issues that could lead to compromise, back doors, secrets, etc
-* **Dynamic Analysis (i.e. OWASP ZAP)** tests against a live version of app for injection, Cross-site scripting (XSS), and other [common web attacks](https://owasp.org/www-project-top-ten/)
-* **Image Analysis** ensures image components are up-to-date and not vulnerable to [known exploits](https://cve.mitre.org/) and through the  [national vulnerability database](https://nvd.nist.gov/).
+* **Static analysis (i.e. SonarX, CodeQL)** identifies coding issues that could lead to compromise, back doors, secrets, etc.
+* **Dynamic analysis (i.e. OWASP ZAP)** tests against a live version of app for injection, Cross-site scripting (XSS), and other [common web attacks](https://owasp.org/www-project-top-ten/)
+* **Image analysis** ensures image components are up-to-date and not vulnerable to [known exploits](https://cve.mitre.org/) and through the  [national vulnerability database](https://nvd.nist.gov/)
 
 ## Container image scanning (ACS, Xray)
 Image scanning/analysis comes in 2 forms - 1 active (RedHat Advanced Cluster Security - ACS), 1 passive (XRay).
 
 ### ACS
 
-This tool allows us to scan image registries and running containers for image vulnerabilities.  
-* It allows us to create policies at build, deploy, and runtime.  
-* It can also help in defining network security policies for your application and visualizing component communications.
+This tool scans image registries and running containers for image vulnerabilities.
+* It enables the creation of policies at build, deploy, and runtime
+* Additionally, it aids in defining network security policies for your application and visualizing component communications
 
 Scoped access is granted based on identification as a Product Owner or Technical Lead in the OpenShift Product Registry.  
-Developer access can be granted by request.  Requests must include the following:
+
+Developer access can be granted by request and these must include the following:
 - Namespaces
 - Product owner approval
 
@@ -71,12 +74,14 @@ For further information:
 
 ### XRay
 
-An add-on capability to Artifactory, XRay scans images and other artifacts for component vulnerabilities.  Anyone with access to an image or artifact within Artifactory can see the XRay tab as part of the image/artifact details, and see what vulnerable components lie within, and what version will correct that deficiency. 
+As an add-on feature to Artifactory, XRay performs scans on images and other artifacts to identify component vulnerabilities. Any user with access to an image or artifact within Artifactory can view the XRay tab within the image/artifact details. This tab provides information on the identified vulnerable components and suggests the appropriate version to address those deficiencies.
+
  * Get access to [Artifactory](https://artifacts.developer.gov.bc.ca/ui/login/)
 
 ## Container runtime security
 
 We currently have runtime policies in place for the following using ACS.  These look for things like:
+
 * Cryto-mining
 * [Integrity monitoring](https://docs.openshift.com/acs/3.66/operating/manage-security-policies.html)
 
@@ -85,7 +90,7 @@ Additionally, OpenShift uses [CoreOS and the CRI-O container engine](https://doc
 ## Secrets management
 **OpenShift Secrets:**
 
-This 'secrets' store should actually only be used for configurations.  Values are encoded as base64 and **not** encrypted.  However, these 'secrets' can only be accessed with a role to a given namespace with permission to access them.  Additionally, the physical etcd volume, where OpenShift secrets are stored, is encrypted.
+The 'secrets' store is exclusively intended for configurations, utilizing base64 encoding for values instead of encryption. Access to these 'secrets' requires a specific role within a designated namespace, granting permission to retrieve them. It's important to note that while the values are base64 encoded, they are not encrypted. Moreover, the physical etcd volume housing OpenShift secrets is encrypted to enhance overall security.
 
 **Vault:**
 Vault is the preferred secrets management tool to use on OpenShift.
@@ -96,11 +101,11 @@ Vault is the preferred secrets management tool to use on OpenShift.
 
 ## GitOps/Cluster configuration management
 
-Argo CD (integrated into OpenShift as the GitOps Operator) provides a GitOps capability for sync'ing a Git repository with an OpenShift configuration (platform or application)
+Integrated as the GitOps Operator within OpenShift, Argo CD empowers a GitOps capability to synchronize a Git repository with OpenShift configurations, whether they pertain to the platform or specific applications. 
 
 ## Logging and monitoring (ElasticSearch, Kibana, Graphana, Sysdig Monitor, SIEM, Uptime, Status)
 
-The Platform Services team provides a number of tools to help ensure our platform and applications are behaving as expected, while allowing us to investigate anomalies.
+The Platform Services team offers a range of tools designed to ensure the expected behavior of our platform and applications. These tools not only help in monitoring normal operations but also enable thorough investigations into any anomalies that may arise.
 
 **OpenShift UI:**
 
@@ -135,7 +140,7 @@ Review the [status of the platform](https://status.developer.gov.bc.ca/)
 
 **Contact**
 
-For all other matters concerning security on the OpenShift Container Platform, please contact the [platform services team](mailto:PlatformServicesTeam@gov.bc.ca).
+For all other matters concerning security on the OpenShift Container Platform, please contact the [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca).
 
 ---
 ---

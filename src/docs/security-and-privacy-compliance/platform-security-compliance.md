@@ -1,5 +1,5 @@
 ---
-title: B.C. Government OpenShift DevOps Securitiy Compliance
+title: B.C. Government OpenShift DevOps Security Compliance
 
 slug: devops-security-compliance
 
@@ -18,32 +18,32 @@ content_owner: Nick Corcoran
 sort_order: 2
 ---
 
-# B.C. Government OpenShift Platform Security Compliance
-Last updated: **February 13, 2024**
+# B.C. Government OpenShift DevOps security compliance
+Last updated: **February 20, 2024**
 
 Through this document you'll find some details on our OpenShift service, completed compliance activities and security controls we have in place on our OpenShift implementations.
 
 ## On this page
-* [**OpenShift Platform Service**]
-* [**Penetration Tests**]
-* [**Critical Systems Standard**]
-* [**IMIT Standards**]
+* [**OpenShift platform services**](#openshift-platform-services)
+* [**Penetration tests**](#penetration-tests)
+* [**Critical Systems Standard**](#critical-systems-standard)
+* [**IMIT Standards**](#imit-standards)
 * [**Platform tools security assessments**](#platform-tools-security-assessments)
-* [**Security Assessment requirements for applications**](#stra-requirements-for-applications)
+* [**Security assessment requirements for Product Teams**](#security-assessment-requirements-for-product-teams)
 * [**Platform Product Registry**](#platform-product-registry)
 * [**Access management**](#access-management)
 * [**GitOps/Cluster configuration management**](#gitopscluster-configuration-management)
 * [**Application Programmable Interface (API) management**](#application-programmable-interface-api-management)
 * [**Backups**](#backups)
 * [**Change management**](#change-management)
+* [**GitHub**](#github)
 * [**Other important considerations**](#other-important-considerations)
-* [**Related pages**](#other-important-considerations)
+* [**Related pages**](#related-pages)
 
-<!-- I wasn't sure how to make links to the headings properly -->
 <!-- ### End of "On this page" --> 
 ---
 
-### OpenShift Platform Service 
+## OpenShift platform services
 The OpenShift platform security actively protects your applications and data, keeping them safe from unauthorized access and potential threats. OpenShift consistently updates and patches to address vulnerabilities, ensuring a robust defense against evolving security risks. 
 
 If you'd like to find more details about its capabilities, check the our useful [guide for the private cloud hosting 101](https://digital.gov.bc.ca/cloud/services/private/intro/).
@@ -62,20 +62,20 @@ Take note of the [**Shared Responsibility Model**](https://digital.gov.bc.ca/clo
 
 You can also find specific details on OpenShift's security controls under [Red Hat's OpenShift security guide](https://www.redhat.com/rhdc/managed-files/cl-openshift-security-guide-ebook-us287757-202103.pdf) which  are also highlighted as part of the OpenShift STRA.
 
-### Penetration tests
+## Penetration tests
 
 The platform services team outsources for a penetration test annually to ensure the services we provide are configured to protect confidentiality, integrity and availability.  Penetration tests are procured through the [pre-qualified list of vendors](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security).
 
-Penetration tests help to identify platform misconfigurations and security vulnerabiliites.  Run annually, we try to change vendors regularly to get a different persepective/assessment toolkit to ensure our service matures to meet client needs and address potential weaknesses.
+Penetration tests help to identify platform misconfigurations and security vulnerabilities.  Run annually, we try to change vendors regularly to get a different perspective/assessment toolkit to ensure our service matures to meet client needs and address potential weaknesses.
 
 What we cover:
 - Black box testing
 - Authenticated testing
 - Developer (namespace admin) testing
 
-Testers run a suite of automated tools and use manual techniques to validate potential exploits and provide recommondentations on controls to mitigate.
+Testers run a suite of automated tools and use manual techniques to validate potential exploits and provide recommendations on controls to mitigate.
 
-### Critical Systems Standard
+## Critical Systems Standard
 
 <!-- ###  FYI In the future this area may need to be updated and find out if CITZ Security team has reviewed the documentation  -->
 
@@ -83,7 +83,7 @@ Any IM/IT service, system, or infrastructure component that is deemed necessary 
 
 We have completed all required documentation for the Critical Systems Standard, and currently under review by the  CITZ Security team.
 
-### IMIT Standards
+## IMIT Standards
 
 The following services were designed with the associated [IMIT standards](https://www2.gov.bc.ca/gov/content/governments/services-for-government/policies-procedures/im-it-standards/find-a-standard#id_mgt) in mind.  The platform team works regularly with the standards owners to review and update to meet current day needs.
 
@@ -101,7 +101,7 @@ The following services were designed with the associated [IMIT standards](https:
 | App Security (SAST,DAST,SCA)             | [6.14 Application & Web Development & Deployment Standard](https://www2.gov.bc.ca/assets/download/29237A3033824CCBAC0465939BFB2CEF) |
 |                                          | [6.34 Vulnerability Management Scanning Standrard](https://www2.gov.bc.ca/assets/download/3DFC2361BC334BFDBDF907B6B16C5358) |
 
-### Platform tools security assessments
+## Platform tools security assessments
 
 Many of the platform tools have **completed** security assessments.  These include:
 
@@ -124,11 +124,11 @@ Many of the platform tools have **completed** security assessments.  These inclu
 * GitHub Enterprise
 * 1Password (SoAR complete, Cloud security schedule review complete) - was previously discouraged corporately due to no background checks for staff/contractors, but this has since changed.  Further review required to support use.
 
-If you cannot find a tool from the above list and/or require specific information please contact the [platform services team](mailto:PlatformServicesTeam@gov.bc.ca).
+If you cannot find a tool from the above list and/or require specific information please contact the [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca).
 
-## Security Assessment Requirements for Product Teams
+## Security assessment requirements for Product Teams
 
-Each product team is responsible for developing a security assessment for their service.  It is recommonended that teams connect with their Ministry Information Security Officer (MISO), or Ministry securty team, to complete this assessment.  Some common questions to ask can be found [here](/security-best-practices-for-apps.md).
+Each product team is responsible for developing a security assessment for their service.  It is recommended that teams connect with their Ministry Information Security Officer (MISO), or ministry security team, to complete this assessment.  Some [common questions](/security-best-practices-for-apps.md) to ask them.
 
 ## Platform Product Registry
 
@@ -140,7 +140,7 @@ Here, we maintain a listing of all products with deployments on each OpenShift c
 
 Find out more about the benefits and its use in our [Platform Product Registry information page](https://digital.gov.bc.ca/cloud/services/private/products-tools/registry/)
 
-### Access management
+## Access management
 Our OpenShift access is managed through the OpenShift SSO Service, currently using KeyCloak.
 
 * More information on [SSO-Onboarding with KeyCloak - GitHub](https://github.com/bcgov/sso-keycloak/wiki/SSO-Onboarding)
@@ -176,7 +176,7 @@ By default, the wildcard will be used to protect project workloads.  The Platfor
 **Pre-requisites:**
 Generate a **.csr** for [each site](https://github.com/BCDevOps/openshift-wiki/blob/master/docs/SSLCerts/GenerateCertificateSigningRequest.md)
 
-**Ordering Process:**
+**Ordering process:**
 1. Business area creates/submits order via [MyServiceCentre](https://ociomysc.service-now.com/sp/)
 2. Ministry Service Desk reviews order, sends to EA for Approval
 3. EA Approves
@@ -185,11 +185,11 @@ Generate a **.csr** for [each site](https://github.com/BCDevOps/openshift-wiki/b
 
 ![TLS certificate order lifecycle diagram](../../images/tls-certificate-order-lifecycle.png)
 
-### GitOps/Cluster configuration management
+## GitOps/Cluster configuration management
 
 Argo CD (integrated into OpenShift as the GitOps Operator) provides a GitOps capability for sync'ing a Git repository with an OpenShift configuration (platform or application)
 
-### Application Programmable Interface (API) management
+## Application Programmable Interface (API) management
 
 The Data BC team hosts an API Gateway for use by other government clients. 
 
@@ -205,7 +205,7 @@ This tools help us to observe platform service availability.
 Review the [status of the platform](https://status.developer.gov.bc.ca/)
 
 
-### Backups
+## Backups
 Backups help you to recover in the event of a failure or data corruption.  As part of your backup process, you should consider the retention period, and the schedule for testing backups. All backups should be tested regularly.
 
 **OpenShift**
@@ -215,7 +215,7 @@ Backups help you to recover in the event of a failure or data corruption.  As pa
 **GitHub**
 - [GitHub backups](https://github.com/bcgov-c/platform-services-docs/blob/main/github/github-backups.md)
 
-### Change management
+## Change management
 
 Planning for platform and service changes is documented on the [Platform Services ZenHub board](https://app.zenhub.com/workspaces/platform-experience-5bb7c5ab4b5806bc2beb9d15/board?repos=220104031)   
 
@@ -253,20 +253,22 @@ Our OpenShift implementation is **not** PCI-DSS compliant.  If you wish to host 
 
 Some teams have decided to host PCI-scoped applications on-prem (non-OpenShift) or on a cloud based service (AWS, Azure, etc) to avoid linkages with government systems not under their control.
 
-**Training and Support**
+**Training and support**
 
 The platform services team provides [training to onboarding teams](https://digital.gov.bc.ca/cloud/services/private/support/#platform), as well as [support](https://digital.gov.bc.ca/cloud/services/private/support/#how) for issues experienced.  Ministry staff that work with devops teams are also encouraged to attend training.
 
 **Contact**
 
-For all other matters concerning security on the OpenShift Container Platform, please contact the [platform services team](mailto:PlatformServicesTeam@gov.bc.ca).
+For all other matters concerning security on the OpenShift Container Platform, please contact the [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca).
 
 ---
 ---
+
 ## Related pages
 
 * [OpenShift 101 training](https://digital.gov.bc.ca/cloud/services/private/support/openshift-101/)
 * [OpenShift 201 training](https://digital.gov.bc.ca/cloud/services/private/support/openshift-201/)
 * [DevOps platform workshops](https://github.com/bcdevops/devops-platform-workshops)
 * [Security best practices for apps](/security-best-practices-for-apps/)
+* [OpenShift platform security tools](/platform-security-tools/)
 
