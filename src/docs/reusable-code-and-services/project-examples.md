@@ -66,7 +66,7 @@ These technologies foster rapid iterative development, polished user interfaces,
  
 - [asdf](https://asdf-vm.com/): Employed for managing multiple runtime versions, simplifying dependency management, and ensuring consistency across development environments.
  
-#### Linters & Formatters
+#### Linters and formatters
  
 - [pre-commit](https://pre-commit.com/): Employed for managing and maintaining multi-language pre-commit hooks to enforce project standards and best practices, reducing the likelihood of bugs or inconsistencies.
  
