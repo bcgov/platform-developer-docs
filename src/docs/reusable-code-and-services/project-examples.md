@@ -32,7 +32,7 @@ If you would like to showcase your project as well, contact us a [PlatformServic
 
 ## On this page
 * **[Platform Services Product Registry](#platform-services-product-registry)**
-* **[SSO Service](#project-b---single-sign-on-sso-service)**
+* **[Single Sign On (SSO) Service](#single-sign-on-sso-service)**
 * **[Related pages](#related-pages)**
 
 ---
