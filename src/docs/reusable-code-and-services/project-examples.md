@@ -56,7 +56,7 @@ If you would like to showcase your project as well, contact us a [PlatformServic
  
 These technologies foster rapid iterative development, polished user interfaces, and a user-centric experience for application development.
  
-#### Database & ORM
+#### Database and ORM
  
 - [MongoDB](https://www.mongodb.com/): Selected for its flexible schema, scalability, high performance, rich querying, automatic failover, and robust community support, making it an ideal choice for diverse applications.
  
