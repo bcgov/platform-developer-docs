@@ -252,6 +252,7 @@ export default function Navigation({ location }) {
               let designSystem = [];
               let openshiftProjectsAndAccess = [];
               let platformArchitectureReference = [];
+              let platformAutomation = [];
               let reusableCodeAndServices = [];
               let securityAndPrivacyCompliance = [];
               let trainingAndLearning = [];
@@ -284,6 +285,9 @@ export default function Navigation({ location }) {
                     break;
                   case "platform-architecture-reference":
                     platformArchitectureReference.push(node);
+                    break;
+                  case "platform-automation":
+                    platformAutomation.push(node);
                     break;
                   case "reusable-code-and-services":
                     reusableCodeAndServices.push(node);
@@ -325,6 +329,7 @@ export default function Navigation({ location }) {
               designSystem.sort(sortPages);
               openshiftProjectsAndAccess.sort(sortPages);
               platformArchitectureReference.sort(sortPages);
+              platformAutomation.sort(sortPages);
               reusableCodeAndServices.sort(sortPages);
               securityAndPrivacyCompliance.sort(sortPages);
               trainingAndLearning.sort(sortPages);
@@ -375,6 +380,12 @@ export default function Navigation({ location }) {
                       id="platform-architecture-reference"
                       title="Platform architecture reference"
                       links={platformArchitectureReference}
+                      path={path}
+                    />
+                    <NavListItem
+                      id="platform-automation"
+                      title="Platform automation"
+                      links={platformAutomation}
                       path={path}
                     />
                      <NavListItem

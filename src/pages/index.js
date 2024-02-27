@@ -237,6 +237,20 @@ const IndexPage = ({ location }) => {
             </ul>
           </Card>
           <Card>
+            <h3>Platform automation</h3>
+            <ul>
+              <li>
+              <Link to={"/platform-automation/"}>Platform automation</Link>  
+              </li>
+              <li>
+              <Link to={"/alertmanager/"}>AlertManager</Link>
+              </li>
+              <li>
+               <Link to={"/automated-scaling/"}>Automated scale-down</Link> 
+              </li>
+            </ul>
+          </Card>
+          <Card>
             <h3>Reusable code and services</h3>
             <ul>
               <li>
