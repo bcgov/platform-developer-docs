@@ -1,5 +1,5 @@
 ---
-title: Privacy Compliance and Guidance
+title: Privacy compliance and guidance
 
 slug: privacy-compliance-and-guidance
 

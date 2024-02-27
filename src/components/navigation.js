@@ -257,6 +257,7 @@ export default function Navigation({ location }) {
               let trainingAndLearning = [];
               let useGithubInBcgov = [];
               let rocketchat =[];
+              let secretsManagement =[];
               let noCategory = [];
 
               data.allMarkdownRemark.nodes.forEach(node => {
@@ -299,6 +300,9 @@ export default function Navigation({ location }) {
                   case "rocketchat":
                     rocketchat.push(node);
                     break;
+                  case "secrets-management":
+                    secretsManagement.push(node);
+                    break;
                   default:
                     noCategory.push(node);
                 }
@@ -331,64 +335,28 @@ export default function Navigation({ location }) {
               return (
                 <nav id="nav-menu">
                   <ul>
-                    <NavListItem
-                      id="build-deploy-and-maintain-apps"
-                      title="Build, deploy and maintain apps"
-                      links={buildDeployAndMaintainApps}
+                  <NavListItem
+                      id="app-monitoring"
+                      title="App monitoring"
+                      links={appMonitoring}
                       path={path}
                     />
-                    <NavListItem
-                      id="openshift-projects-and-access"
-                      title="OpenShift projects and access"
-                      links={openshiftProjectsAndAccess}
-                      path={path}
-                    />
-                    <NavListItem
-                      id="use-github-in-bc-gov"
-                      title="Use GitHub in BC Gov"
-                      links={useGithubInBcgov}
-                      path={path}
-                    />
-                    <NavListItem
+                       <NavListItem
                       id="automation-and-resiliency"
                       title="Automation and resiliency"
                       links={automationAndResiliency}
                       path={path}
                     />
                     <NavListItem
-                      id="app-monitoring"
-                      title="App monitoring"
-                      links={appMonitoring}
+                      id="build-deploy-and-maintain-apps"
+                      title="Build, deploy and maintain apps"
+                      links={buildDeployAndMaintainApps}
                       path={path}
                     />
-                    <NavListItem
+                      <NavListItem
                       id="database-and-api-management"
                       title="Database and API management"
                       links={databaseAndApiManagement}
-                      path={path}
-                    />
-                    <NavListItem
-                      id="security-and-privacy-compliance"
-                      title="Security and privacy compliance"
-                      links={securityAndPrivacyCompliance}
-                      path={path}
-                    />
-                    <NavListItem
-                      id="reusable-code-and-services"
-                      title="Reusable code and services"
-                      links={reusableCodeAndServices}
-                      path={path}
-                    />
-                    <NavListItem
-                      id="platform-architecture-reference"
-                      title="Platform architecture reference"
-                      links={platformArchitectureReference}
-                      path={path}
-                    />
-                    <NavListItem
-                      id="training-and-learning"
-                      title="Training and learning"
-                      links={trainingAndLearning}
                       path={path}
                     />
                     <NavListItem
@@ -398,11 +366,53 @@ export default function Navigation({ location }) {
                       path={path}
                     />
                     <NavListItem
+                      id="openshift-projects-and-access"
+                      title="OpenShift projects and access"
+                      links={openshiftProjectsAndAccess}
+                      path={path}
+                    />
+                     <NavListItem
+                      id="platform-architecture-reference"
+                      title="Platform architecture reference"
+                      links={platformArchitectureReference}
+                      path={path}
+                    />
+                     <NavListItem
+                      id="reusable-code-and-services"
+                      title="Reusable code and services"
+                      links={reusableCodeAndServices}
+                      path={path}
+                    />
+                    <NavListItem
                       id="rocketchat"
                       title="Rocket.Chat"
                       links={rocketchat}
                       path={path}
                     />
+                     <NavListItem
+                      id="security-and-privacy-compliance"
+                      title="Security and privacy compliance"
+                      links={securityAndPrivacyCompliance}
+                      path={path}
+                    />
+                     <NavListItem
+                      id="secrets-management"
+                      title="Secrets management"
+                      links={secretsManagement}
+                      path={path}
+                    />
+                    <NavListItem
+                      id="training-and-learning"
+                      title="Training and learning"
+                      links={trainingAndLearning}
+                      path={path}
+                    />
+                    <NavListItem
+                      id="use-github-in-bc-gov"
+                      title="Use GitHub in BC Gov"
+                      links={useGithubInBcgov}
+                      path={path}
+                    />     
                     {noCategory?.length > 0 && (
                       <NavListItem
                         id="uncategorized"
