@@ -1,5 +1,5 @@
 ---
-title: B.C. government OpenShift Platform Security Tools
+title: B.C. government OpenShift platform security tools
 
 slug: platform-security-tools
 

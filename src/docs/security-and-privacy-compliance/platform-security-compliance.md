@@ -1,5 +1,5 @@
 ---
-title: B.C. Government OpenShift DevOps Security Compliance
+title: B.C. Government OpenShift DevOps security compliance
 
 slug: devops-security-compliance
 

@@ -146,69 +146,7 @@ const IndexPage = ({ location }) => {
         </Grid>
         <h2>Dive deeper</h2>
         <Grid className="col-3">
-          <Card>
-            <h3>Security and privacy compliance</h3>
-            <ul>
-              <li>
-                <Link to={"/devops-security-considerations/#stra-and-pia-requirements-for-applications/"}>
-                  STRA and PIA requirements for applications
-                </Link>
-              </li>
-              <li>
-                <Link to={"/vault-secrets-management-service/"}>
-                  Vault secrets management service
-                </Link>
-              </li>
-              <li>
-                <Link to={"/image-artifact-management-with-artifactory/"}>
-                  Artifactory trusted repository service
-                </Link>
-              </li>
-              <li>
-                <Link to={"/security-best-practices-for-apps/"}>
-                  Security best practices for apps
-                </Link>
-              </li>
-            </ul>
-          </Card>
-          <Card>
-            <h3>Use GitHub in BC Gov</h3>
-            <ul>
-              <li>
-                <Link to={"/bc-government-organizations-in-github/"}>
-                  B.C. government organizations in GitHub
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="https://digital.gov.bc.ca/cloud/services/private/support/#common"
-                >
-                  Common platform requests in the B.C. Government Private Cloud PaaS
-                </a>
-              </li>
-              <li>
-                <Link to={"/start-working-in-bcgov-github-organization/"}>
-                  Start working in BCGov GitHub organization
-                </Link>
-              </li>
-            </ul>
-          </Card>
-          <Card>
-            <h3>Automation and resiliency</h3>
-            <ul>
-              <li>
-                <Link to={"/app-resiliency-guidelines/"}>
-                  App resiliency guidelines
-                </Link>
-              </li>
-              <li>
-                <Link to={"/ci-cd-pipeline-templates/"}>
-                  CI/CD pipeline automation
-                </Link>
-              </li>
-            </ul>
-          </Card>
-          <Card>
+        <Card>
             <h3>App monitoring</h3>
             <ul>
                <li>
@@ -249,6 +187,21 @@ const IndexPage = ({ location }) => {
             </ul>
           </Card>
           <Card>
+            <h3>Automation and resiliency</h3>
+            <ul>
+              <li>
+                <Link to={"/app-resiliency-guidelines/"}>
+                  App resiliency guidelines
+                </Link>
+              </li>
+              <li>
+                <Link to={"/ci-cd-pipeline-templates/"}>
+                  CI/CD pipeline automation
+                </Link>
+              </li>
+            </ul>
+          </Card>
+          <Card>
             <h3>Database and API management</h3>
             <ul>
               <li>
@@ -260,6 +213,26 @@ const IndexPage = ({ location }) => {
                 <Link to={"/high-availability-database-clusters/"}>
                   High availability database clusters
                 </Link>
+              </li>
+            </ul>
+          </Card>
+          <Card>
+            <h3>Platform architecture reference</h3>
+            <ul>
+              <li>
+                <Link to={"/platform-storage/"}>Platform storage</Link>
+              </li>
+              <li>
+                <Link to={"/platform-architecture-diagram/"}>Platform architecture diagram</Link>
+              </li>
+              <li>
+                <Link to={"/openshift-network-policies/"}>OpenShift network policies</Link>
+              </li>
+              <li>
+                <Link to={"/platform-network-topology/"}>Platform network topology</Link>
+              </li>
+              <li>
+                <Link to={"/set-up-tcp-connectivity-on-private-cloud-openshift-platform/"}>Set up TCP connectivity on the Private cloud Openshift platform</Link>
               </li>
             </ul>
           </Card>
@@ -280,26 +253,77 @@ const IndexPage = ({ location }) => {
                   Reusable services list
                 </Link>
               </li>
-              <li>Project examples (coming soon)</li>
+              <li>
+               <Link to={"/project-examples/"}>
+                Project examples
+               </Link>
+               </li>
             </ul>
           </Card>
           <Card>
-            <h3>Platform architecture reference</h3>
+                <h3>Secrets management</h3>
+              <ul>
+              <li>
+                <Link to={"/vault-getting-started-guide/"}>
+                Vault getting started guide
+                </Link>
+              </li>
+              <li>
+                <Link to={"/vault-secrets-management-service/"}>
+                Vault secrets management
+                </Link>
+              </li>
+            </ul>
+          </Card>
+          <Card>
+            <h3>Security and privacy compliance</h3>
             <ul>
               <li>
-                <Link to={"/platform-storage/"}>Platform storage</Link>
+                <Link to={"/privacy-compliance-and-guidance/"}>
+                Privacy compliance and guidance
+                </Link>
               </li>
               <li>
-                <Link to={"/platform-architecture-diagram/"}>Platform architecture diagram</Link>
+                <Link to={"/platform-security-compliance/"}>
+                B.C. Government OpenShift DevOps security compliance
+                </Link>
               </li>
               <li>
-                <Link to={"/openshift-network-policies/"}>OpenShift network policies</Link>
+                <Link to={"/platform-security-tools/"}>
+                B.C. government OpenShift platform security tools
+                </Link>
               </li>
               <li>
-                <Link to={"/platform-network-topology/"}>Platform network topology</Link>
+                <Link to={"/security-best-practices-for-apps/"}>
+                  Security best practices for apps
+                </Link>
               </li>
               <li>
-                <Link to={"/set-up-tcp-connectivity-on-private-cloud-openshift-platform/"}>Set up TCP connectivity on the Private cloud Openshift platform</Link>
+                <Link to={"/payment-card-processing/"}>
+                Payment card processing for OpenShift applications
+                </Link>
+              </li>
+              </ul>
+              </Card>
+          <Card>
+            <h3>Use GitHub in BC Gov</h3>
+            <ul>
+              <li>
+                <Link to={"/bc-government-organizations-in-github/"}>
+                  B.C. government organizations in GitHub
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://digital.gov.bc.ca/cloud/services/private/support/#common"
+                >
+                  Common platform requests in the B.C. Government Private Cloud PaaS
+                </a>
+              </li>
+              <li>
+                <Link to={"/start-working-in-bcgov-github-organization/"}>
+                  Start working in BCGov GitHub organization
+                </Link>
               </li>
             </ul>
           </Card>
