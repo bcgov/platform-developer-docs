@@ -246,7 +246,7 @@ const IndexPage = ({ location }) => {
               <Link to={"/alertmanager/"}>AlertManager</Link>
               </li>
               <li>
-               <Link to={"/automated-scaling/"}>Automated scale-down</Link> 
+               <Link to={"/automated-scaling/"}>Automated Scale-Down</Link> 
               </li>
             </ul>
           </Card>

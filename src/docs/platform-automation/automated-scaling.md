@@ -1,5 +1,5 @@
 ---
-title: Automated Scale-down
+title: Automated Scale-Down
 
 slug: automated-scaling
 
@@ -18,26 +18,35 @@ content_owner: Olena Mitovska
 sort_order: 2
 ---
 
-# Automated Scale Down
+# Automated Scale-Down
+Last updated: **February 28, 2024**
 
-Last updated: **February 26, 2024**
+In the past, teams using our platform haven't used CPU and RAM efficiently. For example, apps on the Silver cluster reserve nearly 50% of CPU capacity without using it. This unused capacity raises costs and hampers our ability to bring in new teams. Also, some teams forget to upkeep and update their deployment images, causing security issues, incompatibilities, and other issues.
 
-Historically, application teams working on our platform have not efficiently utilized resources such as CPU and RAM. For instance, apps reserve almost 50% of CPU capacity on the Silver cluster without actually using it. This unused utilization increases costs and impacts our ability to onboard new teams. Additionally, some teams neglect to maintain and update their deployment images, leading to security vulnerabilities, incompatibilities, and other problems.
+To tackle this, we've created automated tools to keep an eye on apps on the platform.
 
-To address this, we’ve developed automated tools that monitor apps on the platform.
+Our tools specifically check for:
 
-These tools looks for these types of objects:
-
-- `Deployments` and `deploymentconfigs` that are based on images have not changed in over a year
-- `Deployments`, `deploymentconfigs` and `statefulsets` that are crashing constantly
+- `Deployments` and `deploymentconfigs` relying on images that haven't been updated in more than a year
+- Constantly crashing `Deployments`, `deploymentconfigs`, and `statefulsets`
 
 Emails are sent to the Product Owner and Technical Leads registered for the Product in the [Product Registry](https://registry.developer.gov.bc.ca/). To modify the recipients of the emails, please update the contact information in the Registry.
 
+
+## On this page
+* **[Deployments and deploymentconfigs that have not changed in a year](#deployments-and-deploymentconfigs-that-have-not-changed-in-a-year)**
+* **[Deployments, deploymentconfigs and statefulsets that are crashing constantly](#deployments-deploymentconfigs-and-statefulsets-that-are-crashing-constantly)**
+* **[Responding when deployments are scaled down by these tools](#responding-when-deployments-are-scaled-down-by-these-tools)**
+* **[Timeline](#timeline)**
+* **[Related pages](#related-pages)**
+
+---
+
 ## Deployments and deploymentconfigs that have not changed in a year
 
-The tool monitors the `lastUpdateTime` of the `Progressing` block within the `status` field of the Deployment or DeploymentConfig. If this timestamp is approaching one year but has not yet exceeded it, a warning email is triggered. In the case of deployments managed by ArgoCD, an email requests action since ArgoCD may scale it back up after the tool has scaled it down. For deployments not managed by ArgoCD and with a timestamp surpassing one year, the tool scales down the replicas to zero and sends an email notification.
+The tool monitors the `lastUpdateTime` in the `Progressing` section of the `status` field in Deployment or DeploymentConfig. If this timestamp is nearing one year but hasn't crossed that threshold, it triggers a warning email. For deployments handled by ArgoCD, an email prompts action since ArgoCD might scale it back up after the tool has scaled it down. For deployments not managed by ArgoCD and with a timestamp exceeding one year, the tool scales down the replicas to zero and sends an email notification.
 
-You can check the timestamp on your deployment in the YAML under `status`. Note that the type of the condition the tool checks against is `Processing`. You might find other conditions such as `Available`, which does not represent updates in the pods but simply tracks the last time pods were restarted.
+You can verify the timestamp on your deployment in the YAML under `status`. It's essential to note that the tool specifically checks the `Processing` type condition. Other conditions, such as `Available`, don't indicate updates in the pods but merely track the last time pods were restarted.
 
  ```yaml
    conditions:
@@ -51,7 +60,9 @@ You can check the timestamp on your deployment in the YAML under `status`. Note 
 
 ## Deployments, deploymentconfigs and statefulsets that are crashing constantly
 
-The tool examines the restart count of pods, triggering a response if a pod has surpassed 100 restarts. It then identifies the controlling object of the pod, whether it's a Deployment, DeploymentConfig, or StatefulSet. In cases where the object is managed by ArgoCD, a warning email is generated, prompting necessary action, as ArgoCD may scale it back up after the tool has scaled it down. If the object is not managed by ArgoCD and the restart count exceeds 100, the tool scales down the replicas to zero and sends an email notification.
+The tool reviews the restart count of pods and initiates a response if a pod has exceeded 100 restarts. It identifies the controlling object, whether it's a Deployment, DeploymentConfig, or StatefulSet. If the object is managed by ArgoCD, a warning email is generated, urging necessary action since ArgoCD might scale it back up after the tool has scaled it down. 
+
+In cases where the object is not managed by ArgoCD and the restart count surpasses 100, the tool scales down the replicas to zero and sends an email notification.
 
 ## Responding when deployments are scaled down by these tools
 
@@ -75,14 +86,14 @@ Be aware that if you scale your deployment back up without addressing the underl
 
 **Gold and Emerald cluster timeline**
 
-- As of February 6, 2024 these scripts have not been implemented in the Gold and Emerald clusters. Implementation is planned for early 2024, and will be announced in the [devops-alerts rocketchat channel](https://chat.developer.gov.bc.ca/channel/devops-alerts).
+- As of February 6, 2024 these scripts have not been implemented in the Gold and Emerald clusters. Implementation is planned for early 2024, and will be announced in the [devops-alerts Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-alerts).
 
+---
 ---
 
 ## Related pages
 
 - [RedHat’s documentation on editing deployments](https://docs.openshift.com/container-platform/4.12/applications/deployments/deployment-strategies.html#odc-editing-deployments_rolling-strategy)
 - [Memorandum of Understanding](https://digital.gov.bc.ca/cloud/services/private/onboard/#memorandum)
-- [Maintaining an image](https://docs.developer.gov.bc.ca/maintain-an-application/#maintain-images)
+- [Maintaining an image](/maintain-an-application/#maintain-images)
 
----

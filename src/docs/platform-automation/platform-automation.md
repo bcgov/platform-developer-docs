@@ -24,5 +24,5 @@ Last updated: **February 26, 2024**
 
 We use some automation on the platform to help manage resource usage, alert about misconfigured objects and to encourage teams to use images that are secure and up to date. This section has pages to cover each of those automation tools and scheduled jobs.
 
-- [Automated Scale Down](/automated-scaling/) covers a tool that scales down deployments that have not been updated in a year, or are in a crashloop state
+- [Automated Scale-Down](/automated-scaling/) covers a tool that scales down deployments that have not been updated in a year, or are in a crashloop state
 - [AlertManager](/alertmanager/) covers some basic monitoring and alerting config added to every namespace

@@ -19,22 +19,30 @@ sort_order: 3
 ---
 
 # AlertManager
+Last updated: **February 28, 2024**
 
-Last updated: **February 26, 2024**
+We've enhanced OpenShift clusters with basic monitoring and alerting features to keep product teams informed about their applications' health. These features send alerts to the contacts specified in the [Product Registry](https://registry.developer.gov.bc.ca/), notifying them of any common issues their apps might face.
 
-To help product teams be more aware about the health of their applications some basic monitoring and alerting has been added to the OpenShift clusters. This will send alerts to the contacts listed in the Product Registry to alert them to a few common issues their apps may experience.
+## On this page
+* **[Alert contacts](#alert-contacts)**
+* **[Frequency](#frequency)**
+* **[Alerts](#alerts)**
+* **[View in web console](#view-in-web-console)**
+* **[Objects](#objects)**
+* **[Timeline](#timeline)**
+* **[Related pages](#related-pages)**
 
-## Alert Contacts
+## Alert contacts
 
-Alert emails come from `CLUSTER AlertManager <PlatformServicesTeam@gov.bc.ca>` where CLUSTER is the name of the cluster generating the alert; eg: `GOLD`.
+Alert emails come from `CLUSTER AlertManager <PlatformServicesTeam@gov.bc.ca>` where CLUSTER is the name of the cluster generating the alert for example: `GOLD`.
 
-All alerts are sent to the Tech Leads for the Product. Critical level alerts in the `-prod` namespace are also sent to the Product Owner.
+Technical Leads for the Product receive all alerts. Additionally, critical level alerts in the `-prod` namespace are forwarded to the Product Owner.
 
 ## Frequency
 
-Critical level alerts are re-sent every 48 hours if they remain unresolved. Warning and Info level alerts are re-sent every 5 days if they remain unresolved.
+Unresolved Critical level alerts are re-sent every 48 hours. Similarly, warning and info level alerts are re-sent every 5 days if they remain unresolved.
 
-Alerts are only fired after 1 hour of the condition existing to reduce sending alerts while changes are being made.
+Alerts are triggered only if the condition persists for 1 hour, minimizing unnecessary alerts during ongoing changes.
 
 ## Alerts
 
@@ -70,26 +78,27 @@ In the **Developer** perspective, select **Observe** -> **<project_name>** -> **
 
 ## Objects
 
-There is a `AlertManagerConfig` object named `platform-services-controlled-alert-routing` that controls who the emails are sent to. No changes to this are possible.
+The `platform-services-controlled-alert-routing` configuration in the `AlertManagerConfig` object determines the recipients of the emails, and it doesn't allow any changes.
 
-There is a `PrometheusRule` object named `platform-services-controlled-alert-rules` that specifies each of the alert rules and their conditions. No changes to this are possible.
+The `PrometheusRule` object named `platform-services-controlled-alert-rules` outlines the alert rules and their conditions. It's important to note that modifications to this are not allowed.
 
-If you wish, you can create additional `PrometheusRule` objects that will be sent to the existing contacts.
+Feel free to make new `PrometheusRule` objects. They'll be sent to the existing contacts already in place. 
 
 ## Timeline
 
 **Gold and Gold DR cluster timeline**
 
-- Beginning August 28, 2023 these alerts are sent out to Product Owners and Tech Leads.
+- Beginning August 28, 2023 these alerts are sent out to Product Owners and Technical Leads.
 
 **Silver and Emerald cluster timeline**
 
 - Implementation is planned for early 2024, and will be announced in the [devops-alerts rocketchat channel](https://chat.developer.gov.bc.ca/channel/devops-alerts).
 
 ---
+---
 
 ## Related pages
 
-- [RedHat’s documentation on Managing Alerts](https://docs.openshift.com/container-platform/4.13/monitoring/managing-alerts.html)
+- [RedHat’s documentation on managing alerts](https://docs.openshift.com/container-platform/4.13/monitoring/managing-alerts.html)
 
----
+
