@@ -1,5 +1,5 @@
 ---
-title: Automated scale-down
+title: Automated Scale-down
 
 slug: automated-scaling
 
@@ -18,7 +18,7 @@ content_owner: Olena Mitovska
 sort_order: 2
 ---
 
-# Automated scale-down
+# Automated Scale Down
 
 Last updated: **February 26, 2024**
 
@@ -42,7 +42,19 @@ You can check the timestamp on your deployment in the YAML under `status`. Note 
  ```yaml
    conditions:
   - lastTransitionTime: "2021-11-25T17:04:01Z"
-	@@ -57,26 +58,31 @@ The tool examines the restart count of pods, triggering a response if a pod has
+    lastUpdateTime: "2021-11-25T17:04:11Z"
+    message: replication controller "backup-postgresql-1" successfully rolled out
+    reason: NewReplicationControllerAvailable
+    status: "True"
+    type: Progressing
+  ```
+
+## Deployments, deploymentconfigs and statefulsets that are crashing constantly
+
+The tool examines the restart count of pods, triggering a response if a pod has surpassed 100 restarts. It then identifies the controlling object of the pod, whether it's a Deployment, DeploymentConfig, or StatefulSet. In cases where the object is managed by ArgoCD, a warning email is generated, prompting necessary action, as ArgoCD may scale it back up after the tool has scaled it down. If the object is not managed by ArgoCD and the restart count exceeds 100, the tool scales down the replicas to zero and sends an email notification.
+
+## Responding when deployments are scaled down by these tools
+
 Before you scale your pods back up, make sure to fix the underlying issues that caused your application to end up in one of these two groups initially.
 
  If your application is crashing regularly, your technical team should investigate and fix the cause of these crashes. You can see the number of times your pod has restarted in the web console or via `oc get pods` to get an idea of if it is crashing a lot.
