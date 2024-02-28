@@ -240,13 +240,13 @@ const IndexPage = ({ location }) => {
             <h3>Platform automation</h3>
             <ul>
               <li>
-              <Link to={"/platform-automation/"}>Platform automation</Link>  
+              <Link to={"/platform-automation/"}>Platform automation</Link>
+              </li>
+              <li>
+               <Link to={"/automated-scaling/"}>Automated Scale-Down</Link>
               </li>
               <li>
               <Link to={"/alertmanager/"}>AlertManager</Link>
-              </li>
-              <li>
-               <Link to={"/automated-scaling/"}>Automated Scale-Down</Link> 
               </li>
             </ul>
           </Card>
