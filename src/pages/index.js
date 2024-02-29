@@ -75,23 +75,23 @@ const IndexPage = ({ location }) => {
             <ul>
               <li>
                 <Link to={"/build-an-application/"}>
-                  Build an application 
+                  Build an application
                 </Link>
               </li>
-              <li>  
+              <li>
                 <Link to={"/deploy-an-application/"}>
-                  Deploy an application 
+                  Deploy an application
                 </Link>
                 </li>
-                <li>  
+                <li>
                 <Link to={"/maintain-an-application/"}>
-                  Maintain an application 
+                  Maintain an application
                 </Link>
               </li>
               <li>
               <Link to={"retire-an-application/"}>
               Retire an application
-              </Link>  
+              </Link>
               </li>
             </ul>
           </Card>
@@ -116,7 +116,7 @@ const IndexPage = ({ location }) => {
             <p>
               Rocket.Chat will be your main communication channel for platform
               updates and support while you work in the B.C. Government Private Cloud
-              PaaS. Read about 
+              PaaS. Read about
                <Link to={"/join-bc-rocket-chat/"}> the steps to join Rocket.Chat
               </Link>
             </p>
@@ -124,7 +124,7 @@ const IndexPage = ({ location }) => {
               <a href="https://chat.developer.gov.bc.ca">
                 Log in to Rocket.Chat
               </a>
-              
+
             </p>
           </Card>
           <Card>
@@ -152,12 +152,12 @@ const IndexPage = ({ location }) => {
                <li>
                 <Link to={"/sysdig-monitor-setup-team/"}>
                     Set up a team in Sysdig Monitor
-                </Link> 
+                </Link>
                 </li>
                 <li>
                 <Link to={"/sysdig-monitor-create-monitoring-dashboards/"}>
                     Create monitoring dashboards in Sysdig Monitor
-                </Link> 
+                </Link>
                 </li>
               <li>
                 <Link to={"/sysdig-monitor-create-alert-channels/"}>
@@ -233,6 +233,20 @@ const IndexPage = ({ location }) => {
               </li>
               <li>
                 <Link to={"/set-up-tcp-connectivity-on-private-cloud-openshift-platform/"}>Set up TCP connectivity on the Private cloud Openshift platform</Link>
+              </li>
+            </ul>
+          </Card>
+          <Card>
+            <h3>Platform automation</h3>
+            <ul>
+              <li>
+              <Link to={"/platform-automation/"}>Platform automation</Link>
+              </li>
+              <li>
+               <Link to={"/automated-scaling/"}>Automated Scale-Down</Link>
+              </li>
+              <li>
+              <Link to={"/alertmanager/"}>AlertManager</Link>
               </li>
             </ul>
           </Card>
