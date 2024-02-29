@@ -40,7 +40,7 @@ The aim is to provide a clear and easily understandable overview of each OCP edi
 | [**Maximum data sensitivity**](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification) | - Protected B: Stored at rest (in a database or file storage)<br> - Protected C: Processing only (must be stored elsewhere) |
 | **Integrated HA, DR options**| TransportServerClaims|
 | **Underlying release plan** | Aim for N minus 1 tracking Red Hat point releases|                  
-| **Slate of supported operators**| - Free Horizontal Pod Autoscaler<br> - Vertical Pod Autoscaler<br> - Custom Metrics Autoscaler<br> - Pipelines: Tekton<br> - CrunchyDB<br> - ArgoCD<br> - Kyverno <br>- License required Red Hat integration<br> - Enterprise DB <br> - JBoss EAP |
+| **Slate of supported operators**| - Horizontal Pod Autoscaler<br> - Vertical Pod Autoscaler<br> - Custom Metrics Autoscaler<br> - Pipelines: Tekton<br> - CrunchyDB<br> - ArgoCD<br> - Kyverno <br>- License required Red Hat integration<br> - Enterprise DB <br> - JBoss EAP |
 | **Upper limit of scalability** | - 1500 CPU Cores<br> - 30TB Storage <br> - 10G Networking
 | **Options for security interoperability with other hosting services** | -  Shared Egress IP for the cluster can be used in firewall rules with STMS-Classic<br> - Cluster can directly egress to the public internet<br> - Public internet can connect to cluster API and hosted apps |
 
@@ -55,7 +55,7 @@ The aim is to provide a clear and easily understandable overview of each OCP edi
 | [**Maximum data sensitivity**](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification) | - Protected B: Stored at rest (in a database or file storage)<br> - Protected C: Processing only (must be stored elsewhere) |
 | **Integrated HA, DR options**| - TransportServerClaims to connect between Gold and Gold DR<br> -Global Load Balancing between clusters for Active/Passive DR|
 | **Underlying release plan** | Aim for N minus 1 tracking Red Hat point releases|
-| **Slate of supported operators**| - Free Horizontal Pod Autoscaler<br> - Vertical Pod Autoscaler<br> - Custom Metrics Autoscaler<br> - Pipelines: Tekton<br> - CrunchyDB<br> - ArgoCD<br> - Kyverno <br>- License required Red Hat integration<br> - Enterprise DB <br> - JBoss EAP |
+| **Slate of supported operators**| - Horizontal Pod Autoscaler<br> - Vertical Pod Autoscaler<br> - Custom Metrics Autoscaler<br> - Pipelines: Tekton<br> - CrunchyDB<br> - ArgoCD<br> - Kyverno <br>- License required Red Hat integration<br> - Enterprise DB <br> - JBoss EAP |
 | **Upper limit of scalability** | - 225 CPU Cores <br> - 16TB Storage <br> - 10G Networking |
 | **Options for security interoperability with other hosting services** | - Shared Egress IP for the cluster can be used in firewall rules with STMS-Classic<br> - Cluster can directly egress to the public internet<br> - Public internet can connect to cluster API and hosted apps |
 
@@ -69,7 +69,7 @@ The aim is to provide a clear and easily understandable overview of each OCP edi
 | [**Maximum data sensitivity**](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification) | Protected C - Storage and/or processing |
 | **Integrated HA, DR options**| None|
 | **Underlying release plan** | - Extended Update Support (EUS) <br> - Only updates to even numbered releases|
-| **Slate of supported operators**| - Free Horizontal Pod Autoscaler<br> - Vertical Pod Autoscaler<br> - Custom Metrics Autoscaler<br> - Pipelines: Tekton<br> - CrunchyDB<br> - ArgoCD<br> - Kyverno <br>- License required Red Hat integration<br> - Enterprise DB <br> - JBoss  EAP <br> - IMB MQ |
+| **Slate of supported operators**| - Horizontal Pod Autoscaler<br> - Vertical Pod Autoscaler<br> - Custom Metrics Autoscaler<br> - Pipelines: Tekton<br> - CrunchyDB<br> - ArgoCD<br> - Kyverno <br>- License required Red Hat integration<br> - Enterprise DB <br> - JBoss  EAP <br> - IMB MQ |
 | **Upper limit of scalability** | - 175 CPU Cores <br> - 16TB Storage <br> - 10G Networking |
 | **Options for security interoperability with other hosting services** | - Per Namespace Egress subnet can be used in firewall rules with STMS-Classic <br> - Only access for some workloads to the public internet and only via a proxy server <br> - API is only available inside SPANBC <br> - Hosted apps may be granted access from the public internet <br> - Access to VM-SDN workloads|
 
