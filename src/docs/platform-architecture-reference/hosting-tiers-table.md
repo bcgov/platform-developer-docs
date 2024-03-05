@@ -54,7 +54,7 @@ The aim is to provide a clear and easily understandable overview of each OCP edi
 | **Target up time (availability)** | Platform availability for the Gold hosting tier is 99.95%, specifically for applications with multi-node deployments that have a geographic failover to the Gold DR cluster in the Calgary data centre, minimizing disruption. <br><br>Without DR, Gold maintains the same availability as Silver |
 | [**Maximum data sensitivity**](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification) | - Protected B: Stored at rest (in a database or file storage)<br> - Protected C: Processing only (must be stored elsewhere) |
 | **Integrated HA, DR options**| - TransportServerClaims to connect between Gold and Gold DR<br> -Global Load Balancing between clusters for Active/Passive DR|
-| **Underlying release plan** | Aim for N minus 1 tracking Red Hat point releases for OpenShift|
+| **Openshift upgrade plan** | Aim for N minus 1 tracking Red Hat point releases for OpenShift|
 | **Slate of supported operators**| - Horizontal Pod Autoscaler<br> - Vertical Pod Autoscaler<br> - Custom Metrics Autoscaler<br> - Pipelines: Tekton<br> - CrunchyDB<br> - ArgoCD<br> - Kyverno <br>- License required Red Hat integration<br> - Enterprise DB <br> - JBoss EAP |
 | **Upper limit of scalability** | - 225 CPU Cores <br> - 16TB Storage <br> - 10G Networking |
 | **Options for security interoperability with other hosting services** | - Shared Egress IP for the cluster can be used in firewall rules with STMS-Classic<br> - Cluster can directly egress to the public internet<br> - Public internet can connect to cluster API and hosted apps |
