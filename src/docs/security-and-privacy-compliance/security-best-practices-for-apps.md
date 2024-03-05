@@ -15,26 +15,28 @@ author: Matt Spencer
 
 content_owner: Nick Corcoran
 
-sort_order: 2
+sort_order: 4
 ---
 
 # Security best practices for apps
+Last updated: **February 20, 2024**
 
 You should take particular care to adhere to security and privacy requirements when working on content in an open environment such as GitHub. The Office of the Chief Information Officer (OCIO) provides the IM/IT Standards you are required to follow, and the content you work with on GitHub must conform with the requirements of being labeled as "Public" using the OCIO Information Security Classification Framework.
 
-
-
 ## On this page
-- [Open Development Basics](#open-development-basics)
-- [What does 'doing it right' mean?](#what-does-"doing-it-right"-mean)
-- [Secure Coding Guideline](#secure-coding-guideline)
-- [Application Security Self-Assessment](#application-security-self-assessment)
+* **[Open development basics](#open-development-basics)**
+* **[What does 'doing it right' mean?](#what-does-"doing-it-right"-mean)**
+* **[Secure coding guidelines](#secure-coding-guideline)**
+* **[Application security self-assessment](#application-security-self-assessment)**
+* **
 
 ## Open development basics
 
-There is a [healthy debate](http://www.dwheeler.com/secure-programs/Secure-Programs-HOWTO/open-source-security.html) in the security community around the use and development of operation support system (OSS) applications and the implications of exposing the code publicly versus keeping it behind closed doors. The debate boils down to the fact that there is no conclusive evidence that deems either open or closed source as inherently more secure. It all comes down to the people (the coders) and their willingness to build security into their code. The one thing that coding in the open does for security is that the public scrutiny of a coders work is proven as a motivating factor for "doing it right" from the start.
+There is a [healthy debate](http://www.dwheeler.com/secure-programs/Secure-Programs-HOWTO/open-source-security.html) in the security community around the use and development of operation support system (OSS) applications and the implications of exposing the code publicly versus keeping it behind closed doors. 
 
-## What does doing it right mean?
+The debate boils down to the fact that there is no conclusive evidence that deems either open or closed source as inherently more secure. It all comes down to the people (the coders) and their willingness to build security into their code. The one thing that coding in the open does for security is that the public scrutiny of a coders work is proven as a motivating factor for "doing it right" from the start.
+
+## What does 'doing it right' mean?
 
 ### Separate code from deployment
 
@@ -52,26 +54,26 @@ Sounds obvious but this step has been skipped by every developer in the world at
 
 Most languages, platforms and products have best practices for securing applications. Find them, follow them and keep current because security is a moving target.
 
-## Secure coding guideline
+## Secure coding guidelines
 
 This list of helpful [secure coding guidelines](https://wehackpurple.com/pushing-left-like-a-boss-part-5-14-secure-coding-summary/) for developers was published by We Hack Purple:
 
 1. [Input validation](https://wehackpurple.com/pushing-left-like-a-boss-part-5-1-input-validation-output-encoding-and-parameterized-queries/) should be used in every possible scenario. This includes [redirects and forwards](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-6%e2%80%8a-%e2%80%8aredirects-and-forwards/).
 2. [Output encoding](https://wehackpurple.com/pushing-left-like-a-boss-part-5-1-input-validation-output-encoding-and-parameterized-queries/) is required for all output.
 3. [Parameterized queries](https://wehackpurple.com/pushing-left-like-a-boss-part-5-1-input-validation-output-encoding-and-parameterized-queries/) are mandatory.
-4. All third-party code must be [verified not to contain known vulnerabilities](https://wehackpurple.com/5-2-safe-dependencies/).
-5. Every applicable [security header](https://medium.com/bugbountywriteup/security-headers-1c770105940b) should be used.
-6. All [client-side and browser hardening strategies](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-3%e2%80%8a-%e2%80%8abrowser-and-client-side-hardening/) available to you are required, as outlined here.
-7. Use the identity and [session management](https://wehackpurple.com/pushing-left-like-a-boss-part-5-4-session-management/) features available to you in your framework or from your cloud provider and follow this guidance.
-8. Take every possible precaution when performing [file uploads](https://wehackpurple.com/pushing-left-like-a-boss-part-5-5-file-uploads/), including scanning it for vulnerabilities such as [AssemblyLine](https://cyber.gc.ca/en/assemblyline).
-9. Nothing of any consequence should ever be stored in [URL parameters](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-7%e2%80%8a-%e2%80%8aurl-parameters/).
-10. Sensitive data should be stored in [secure cookies](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-8%e2%80%8a-%e2%80%8asecuring-your-cookies/), and all available security features for cookies should be used.
-11. All errors should be caught, handled and logged, as per [this article](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-9%e2%80%8a-%e2%80%8aerror-handling-and-logging/). Never log sensitive information.
-12. [Do not trust data, always verify](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-10%e2%80%8a-%e2%80%8auntrusted-data/).
-13. Use the [**Authorization** features in your framework](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-11%e2%80%8a-%e2%80%8aauthorization-authz/), do not write your own.
-14. Use the [**Authentication** features in your framework](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-12%e2%80%8a-%e2%80%8aauthentication-authn-identity-and-access-control/), do not write your own.
-15. [HTTPS only](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-13%e2%80%8a-%e2%80%8ahttps-only/). Use only unbroken and industry standard protocols (currents standard is 1.2 TLS).
-16. Always use the security features in your framework and never write your own. Always keep your framework up to date.
+4. All third-party code must be [verified not to contain known vulnerabilities](https://wehackpurple.com/5-2-safe-dependencies/)
+5. Every applicable [security header](https://medium.com/bugbountywriteup/security-headers-1c770105940b) should be used
+6. All [client-side and browser hardening strategies](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-3%e2%80%8a-%e2%80%8abrowser-and-client-side-hardening/) available to you are required, as outlined here
+7. Use the identity and [session management](https://wehackpurple.com/pushing-left-like-a-boss-part-5-4-session-management/) features available to you in your framework or from your cloud provider and follow this guidance
+8. Take every possible precaution when performing [file uploads](https://wehackpurple.com/pushing-left-like-a-boss-part-5-5-file-uploads/), including scanning it for vulnerabilities such as [AssemblyLine](https://cyber.gc.ca/en/assemblyline)
+9. Nothing of any consequence should ever be stored in [URL parameters](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-7%e2%80%8a-%e2%80%8aurl-parameters/)
+10. Sensitive data should be stored in [secure cookies](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-8%e2%80%8a-%e2%80%8asecuring-your-cookies/), and all available security features for cookies should be used
+11. All errors should be caught, handled and logged, as per [this article](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-9%e2%80%8a-%e2%80%8aerror-handling-and-logging/). Never log sensitive information
+12. [Do not trust data, always verify](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-10%e2%80%8a-%e2%80%8auntrusted-data/)
+13. Use the [**authorization** features in your framework](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-11%e2%80%8a-%e2%80%8aauthorization-authz/), do not write your own
+14. Use the [**authentication** features in your framework](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-12%e2%80%8a-%e2%80%8aauthentication-authn-identity-and-access-control/), do not write your own
+15. [HTTPS only](https://wehackpurple.com/pushing-left-like-a-boss%e2%80%8a-%e2%80%8apart-5-13%e2%80%8a-%e2%80%8ahttps-only/). Use only unbroken and industry standard protocols (currents standard is 1.2 TLS)
+16. Always use the security features in your framework and never write your own. Always keep your framework up to date
 
   `In order to ensure that your developers are following these guidelines, code review is recommended.`
 
@@ -79,7 +81,7 @@ This list of helpful [secure coding guidelines](https://wehackpurple.com/pushing
 
 This document contains a set of items to think about, questions to ask, tools, and references for conducting a STRA in a BCGov DevOps environment. Based on various Information Security frameworks, the focus is on the system and the practices of the team supporting it and avoids the enterprise policy questions.
 
-For further detail or questions/answsers please contact your ministry security team.
+For further detail or questions/answers please contact your ministry security team.
 
 ### Preparation
 
@@ -87,7 +89,7 @@ Understand:
 
 * Scope and timeline of the assessment
 * Criticality of the system:
-  * Consider Confidentiality, Integrity and Availability requirements
+  * Consider confidentiality, integrity and availability requirements
   * Consider whether the system is a [critical system](https://www2.gov.bc.ca/assets/gov/british-columbians-our-governments/services-policies-for-government/information-management-technology/information-security/defensible-security/critical_systems_standard.pdf)
 
 ### Asset management
@@ -182,7 +184,9 @@ Understand:
   * Have recovery plans been tested?
 
 ---
-Related links:
+--- 
+
+## Related pages
 
 - [Vault Secrets Management Service](../security-and-privacy-compliance/vault-secrets-management-service.md)
 - [Linux Foundation OSS Security Badges](https://github.com/linuxfoundation/cii-best-practices-badge)
@@ -193,4 +197,4 @@ Related links:
 - [Node.js](http://blog.risingstack.com/node-js-security-tips/)
 - [Drupal](https://www.drupal.org/writing-secure-code)
 
----
+

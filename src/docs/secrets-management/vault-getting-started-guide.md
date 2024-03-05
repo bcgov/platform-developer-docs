@@ -15,7 +15,7 @@ author: Shelly Han
 
 content_owner: Shelly Han
 
-sort_order: 3
+sort_order: 1
 ---
 
 # Vault getting started guide
