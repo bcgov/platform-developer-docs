@@ -75,23 +75,23 @@ const IndexPage = ({ location }) => {
             <ul>
               <li>
                 <Link to={"/build-an-application/"}>
-                  Build an application 
+                  Build an application
                 </Link>
               </li>
-              <li>  
+              <li>
                 <Link to={"/deploy-an-application/"}>
-                  Deploy an application 
+                  Deploy an application
                 </Link>
                 </li>
-                <li>  
+                <li>
                 <Link to={"/maintain-an-application/"}>
-                  Maintain an application 
+                  Maintain an application
                 </Link>
               </li>
               <li>
               <Link to={"retire-an-application/"}>
               Retire an application
-              </Link>  
+              </Link>
               </li>
             </ul>
           </Card>
@@ -116,7 +116,7 @@ const IndexPage = ({ location }) => {
             <p>
               Rocket.Chat will be your main communication channel for platform
               updates and support while you work in the B.C. Government Private Cloud
-              PaaS. Read about 
+              PaaS. Read about
                <Link to={"/join-bc-rocket-chat/"}> the steps to join Rocket.Chat
               </Link>
             </p>
@@ -124,7 +124,7 @@ const IndexPage = ({ location }) => {
               <a href="https://chat.developer.gov.bc.ca">
                 Log in to Rocket.Chat
               </a>
-              
+
             </p>
           </Card>
           <Card>
@@ -146,80 +146,18 @@ const IndexPage = ({ location }) => {
         </Grid>
         <h2>Dive deeper</h2>
         <Grid className="col-3">
-          <Card>
-            <h3>Security and privacy compliance</h3>
-            <ul>
-              <li>
-                <Link to={"/devops-security-considerations/#stra-and-pia-requirements-for-applications/"}>
-                  STRA and PIA requirements for applications
-                </Link>
-              </li>
-              <li>
-                <Link to={"/vault-secrets-management-service/"}>
-                  Vault secrets management service
-                </Link>
-              </li>
-              <li>
-                <Link to={"/image-artifact-management-with-artifactory/"}>
-                  Artifactory trusted repository service
-                </Link>
-              </li>
-              <li>
-                <Link to={"/security-best-practices-for-apps/"}>
-                  Security best practices for apps
-                </Link>
-              </li>
-            </ul>
-          </Card>
-          <Card>
-            <h3>Use GitHub in BC Gov</h3>
-            <ul>
-              <li>
-                <Link to={"/bc-government-organizations-in-github/"}>
-                  B.C. government organizations in GitHub
-                </Link>
-              </li>
-              <li>
-                <a
-                  href="https://digital.gov.bc.ca/cloud/services/private/support/#common"
-                >
-                  Common platform requests in the B.C. Government Private Cloud PaaS
-                </a>
-              </li>
-              <li>
-                <Link to={"/start-working-in-bcgov-github-organization/"}>
-                  Start working in BCGov GitHub organization
-                </Link>
-              </li>
-            </ul>
-          </Card>
-          <Card>
-            <h3>Automation and resiliency</h3>
-            <ul>
-              <li>
-                <Link to={"/app-resiliency-guidelines/"}>
-                  App resiliency guidelines
-                </Link>
-              </li>
-              <li>
-                <Link to={"/ci-cd-pipeline-templates/"}>
-                  CI/CD pipeline automation
-                </Link>
-              </li>
-            </ul>
-          </Card>
-          <Card>
+        <Card>
             <h3>App monitoring</h3>
             <ul>
                <li>
                 <Link to={"/sysdig-monitor-setup-team/"}>
                     Set up a team in Sysdig Monitor
-                </Link> 
+                </Link>
                 </li>
                 <li>
                 <Link to={"/sysdig-monitor-create-monitoring-dashboards/"}>
                     Create monitoring dashboards in Sysdig Monitor
-                </Link> 
+                </Link>
                 </li>
               <li>
                 <Link to={"/sysdig-monitor-create-alert-channels/"}>
@@ -249,6 +187,21 @@ const IndexPage = ({ location }) => {
             </ul>
           </Card>
           <Card>
+            <h3>Automation and resiliency</h3>
+            <ul>
+              <li>
+                <Link to={"/app-resiliency-guidelines/"}>
+                  App resiliency guidelines
+                </Link>
+              </li>
+              <li>
+                <Link to={"/ci-cd-pipeline-templates/"}>
+                  CI/CD pipeline automation
+                </Link>
+              </li>
+            </ul>
+          </Card>
+          <Card>
             <h3>Database and API management</h3>
             <ul>
               <li>
@@ -260,6 +213,43 @@ const IndexPage = ({ location }) => {
                 <Link to={"/high-availability-database-clusters/"}>
                   High availability database clusters
                 </Link>
+              </li>
+            </ul>
+          </Card>
+          <Card>
+            <h3>Platform architecture reference</h3>
+            <ul>
+              <li>
+                <Link to={"/platform-storage/"}>Platform storage</Link>
+              </li>
+              <li>
+                <Link to={"/platform-architecture-diagram/"}>Platform architecture diagram</Link>
+              </li>
+              <li>
+                <Link to={"/openshift-network-policies/"}>OpenShift network policies</Link>
+              </li>
+              <li>
+                <Link to={"/platform-network-topology/"}>Platform network topology</Link>
+              </li>
+              <li>
+                <Link to={"/set-up-tcp-connectivity-on-private-cloud-openshift-platform/"}>Set up TCP connectivity on the Private cloud Openshift platform</Link>
+              </li>
+              <li>
+                <Link to={"/hosting-tiers-table/"}>Hosting tiers table</Link>
+              </li>
+            </ul>
+          </Card>
+          <Card>
+            <h3>Platform automation</h3>
+            <ul>
+              <li>
+              <Link to={"/platform-automation/"}>Platform automation</Link>
+              </li>
+              <li>
+               <Link to={"/automated-scaling/"}>Automated Scale-Down</Link>
+              </li>
+              <li>
+              <Link to={"/alertmanager/"}>AlertManager</Link>
               </li>
             </ul>
           </Card>
@@ -280,26 +270,77 @@ const IndexPage = ({ location }) => {
                   Reusable services list
                 </Link>
               </li>
-              <li>Project examples (coming soon)</li>
+              <li>
+               <Link to={"/project-examples/"}>
+                Project examples
+               </Link>
+               </li>
             </ul>
           </Card>
           <Card>
-            <h3>Platform architecture reference</h3>
+                <h3>Secrets management</h3>
+              <ul>
+              <li>
+                <Link to={"/vault-getting-started-guide/"}>
+                Vault getting started guide
+                </Link>
+              </li>
+              <li>
+                <Link to={"/vault-secrets-management-service/"}>
+                Vault secrets management
+                </Link>
+              </li>
+            </ul>
+          </Card>
+          <Card>
+            <h3>Security and privacy compliance</h3>
             <ul>
               <li>
-                <Link to={"/platform-storage/"}>Platform storage</Link>
+                <Link to={"/privacy-compliance-and-guidance/"}>
+                Privacy compliance and guidance
+                </Link>
               </li>
               <li>
-                <Link to={"/platform-architecture-diagram/"}>Platform architecture diagram</Link>
+                <Link to={"/platform-security-compliance/"}>
+                B.C. Government OpenShift DevOps security compliance
+                </Link>
               </li>
               <li>
-                <Link to={"/openshift-network-policies/"}>OpenShift network policies</Link>
+                <Link to={"/platform-security-tools/"}>
+                B.C. government OpenShift platform security tools
+                </Link>
               </li>
               <li>
-                <Link to={"/platform-network-topology/"}>Platform network topology</Link>
+                <Link to={"/security-best-practices-for-apps/"}>
+                  Security best practices for apps
+                </Link>
               </li>
               <li>
-                <Link to={"/set-up-tcp-connectivity-on-private-cloud-openshift-platform/"}>Set up TCP connectivity on the Private cloud Openshift platform</Link>
+                <Link to={"/payment-card-processing/"}>
+                Payment card processing for OpenShift applications
+                </Link>
+              </li>
+              </ul>
+              </Card>
+          <Card>
+            <h3>Use GitHub in BC Gov</h3>
+            <ul>
+              <li>
+                <Link to={"/bc-government-organizations-in-github/"}>
+                  B.C. government organizations in GitHub
+                </Link>
+              </li>
+              <li>
+                <a
+                  href="https://digital.gov.bc.ca/cloud/services/private/support/#common"
+                >
+                  Common platform requests in the B.C. Government Private Cloud PaaS
+                </a>
+              </li>
+              <li>
+                <Link to={"/start-working-in-bcgov-github-organization/"}>
+                  Start working in BCGov GitHub organization
+                </Link>
               </li>
             </ul>
           </Card>
