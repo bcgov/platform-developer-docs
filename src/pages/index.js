@@ -234,6 +234,9 @@ const IndexPage = ({ location }) => {
               <li>
                 <Link to={"/set-up-tcp-connectivity-on-private-cloud-openshift-platform/"}>Set up TCP connectivity on the Private cloud Openshift platform</Link>
               </li>
+              <li>
+                <Link to={"/hosting-tiers-table/"}>Hosting tiers table</Link>
+              </li>
             </ul>
           </Card>
           <Card>
