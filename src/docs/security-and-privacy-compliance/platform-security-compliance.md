@@ -69,6 +69,7 @@ The platform services team outsources for a penetration test annually to ensure 
 Penetration tests help to identify platform misconfigurations and security vulnerabilities.  Run annually, we try to change vendors regularly to get a different perspective/assessment toolkit to ensure our service matures to meet client needs and address potential weaknesses.
 
 What we cover:
+
 - Black box testing
 - Authenticated testing
 - Developer (namespace admin) testing
@@ -177,6 +178,7 @@ By default, the wildcard will be used to protect project workloads.  The Platfor
 Generate a **.csr** for [each site](https://github.com/BCDevOps/openshift-wiki/blob/master/docs/SSLCerts/GenerateCertificateSigningRequest.md)
 
 **Ordering process:**
+
 1. Business area creates/submits order via [MyServiceCentre](https://ociomysc.service-now.com/sp/)
 2. Ministry Service Desk reviews order, sends to EA for Approval
 3. EA Approves
@@ -209,10 +211,12 @@ Review the [status of the platform](https://status.developer.gov.bc.ca/)
 Backups help you to recover in the event of a failure or data corruption.  As part of your backup process, you should consider the retention period, and the schedule for testing backups. All backups should be tested regularly.
 
 **OpenShift**
+
 - [Backup Container](/reusable-services-list/#backup-container)
 - [Database backup best practices](/database-backup-best-practices/)
 
 **GitHub**
+
 - [GitHub backups](https://github.com/bcgov-c/platform-services-docs/blob/main/github/github-backups.md)
 
 ## Change management
@@ -228,12 +232,14 @@ Strategic level changes are communicated to the DevOps community at regular Comm
 GitHub is the primary git repository for platform application code.  There are some exceptions that use privately hosted GitLab or other source code repositories.  
 
 Here is a summary of the GitHub organizations we own and their purposes:
+
 * bcgov - main developer git repository for platform application code and/or public sharing
 * bcgov-c - main private git repository used for cluster configuration management and non-public projects.
 * bcdevops - alternate git repository for platform application code.  Membership required for access to OpenShift.
 * bcgov-platform-services - git repository for platform services team
 
 These resources are available:
+
 * [BC Government organizations in GitHub](https://mvp.developer.gov.bc.ca/docs/default/component/bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/)
 
 **GitHub Apps**
@@ -243,6 +249,7 @@ Teams may request GitHub apps to be associated with their own or all projects in
 **GitHub Enterprise**
 
 We currently use of GitHub Enterprise.  Contact the Developer Experience team for license information.
+
 * [Province of British Columbia Enterprise’s single sign-on provider](https://github.com/enterprises/bcgov-ent/sso)
 
 ## Other important considerations 

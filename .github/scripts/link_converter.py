@@ -100,7 +100,7 @@ def get_slug_files(directory):
   slug_dict = {
      "cicd-pipeline-templates-for-private-cloud-teams" : format_relative_file_path("automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md"),
     "argo-cd-shared-instances" : format_relative_file_path("automation-and-resiliency/argo-cd-usage.md") ,
-    "steps-to-join-rocketchat" : format_relative_file_path("rocketchat/steps-to-join-rocketchat.md")
+    "devops-security-compliance": format_relative_file_path("security-and-privacy-compliance/platform-security-compliance.md")
   }
 
   for root, dirs, files in os.walk(directory):

@@ -42,6 +42,7 @@ Here is a representation of what an application build pipeline should look like:
 ![Application build pipeline example diagram](../../images/PipelineSecurity.png)
 
 The pipeline templates above make it easier to include the tools described below:
+
 * [SonarQube in the BC Gov Private Cloud PaaS](/reusable-services-list/#sonarqube-in-the-bc-gov-private-cloud-paas)
 * [OWASP ZAP Security Vulnerability Scanning](/reusable-services-list/#owasp-zap-security-vulnerability-scanning)
 
@@ -57,16 +58,19 @@ Image scanning/analysis comes in 2 forms - 1 active (RedHat Advanced Cluster Sec
 ### ACS
 
 This tool scans image registries and running containers for image vulnerabilities.
+
 * It enables the creation of policies at build, deploy, and runtime
 * Additionally, it aids in defining network security policies for your application and visualizing component communications
 
 Scoped access is granted based on identification as a Product Owner or Technical Lead in the OpenShift Product Registry.  
 
 Developer access can be granted by request and these must include the following:
+
 - Namespaces
 - Product owner approval
 
 For further information:
+
 * [Access ACS](https://acs.developer.gov.bc.ca)
 * Learn about our platform's [cluster security](https://digital.gov.bc.ca/cloud/services/private/products-tools/cluster-security/)
 * Learn about [advanced cluster security kubernetes](https://www.redhat.com/en/technologies/cloud-computing/openshift/advanced-cluster-security-kubernetes)
@@ -115,11 +119,13 @@ Within the OpenShift interface, project teams can view logs associated with a gi
 **Kibana:**
 
 This tool provides a more wholistic view of logs for an application or at the platform level, as well as providing visualization and alerting capability.
+
 * [More on Kibana](https://kibana-openshift-logging.apps.silver.devops.gov.bc.ca/)
 
 **Sysdig Monitor:**
 
 This tool allows our platform admins and platform teams to build monitoring dashboards.
+
 - Find out more about [Sysdig Monitor](https://digital.gov.bc.ca/cloud/services/private/products-tools/sysdig/)
 - [Onboarding to application monitoring with Sysdig](/sysdig-monitor-onboarding/)
 - [Login to Sysdig](https://app.sysdigcloud.com/#/login)
@@ -128,6 +134,7 @@ This tool allows our platform admins and platform teams to build monitoring dash
 
 All cluster logs (system, audit, container) are regularly sent to the Security Operations SIEM environment.  
 Retention is set as follows:
+
 - System, Container logs - 2 months
 - Audit logs - 13 months
 

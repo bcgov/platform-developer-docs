@@ -10,16 +10,18 @@ from common import get_front_matter
 def get_categories():
     # The order the categories are listed here are how they are listed in the navigation on the site
     categories = OrderedDict()
-    categories["build-deploy-and-maintain-apps"] = "Build, deploy and maintain apps"
-    categories["openshift-projects-and-access"] = "OpenShift projects and access"
-    categories["automation-and-resiliency"] = "Automation and resiliency"
     categories["app-monitoring"] = "App monitoring"
+    categories["automation-and-resiliency"] = "Automation and resiliency"
+    categories["build-deploy-and-maintain-apps"] = "Build, deploy and maintain apps"
     categories["database-and-api-management"] = "Database and API management"                     
-    categories["security-and-privacy-compliance"] = "Security and privacy compliance"
-    categories["reusable-code-and-services"] = "Reusable code and services"
-    categories["platform-architecture-reference"] = "Platform architecture reference"
-    categories["training-and-learning"] = "Training and learning"
     categories["design-system"] = "Design system"
+    categories["openshift-projects-and-access"] = "OpenShift projects and access"
+    categories["platform-architecture-reference"] = "Platform architecture reference"
+    categories["platform-automation"] = "Platform automation"
+    categories["reusable-code-and-services"] = "Reusable code and services"
+    categories["security-and-privacy-compliance"] = "Security and privacy compliance"
+    categories["secrets-management"] = "Secrets management"
+    categories["training-and-learning"] = "Training and learning"
     return categories
 
 def are_categories_valid(categories, root_path):
@@ -90,7 +92,7 @@ def create_yaml_structure(nav_entries):
     'site_name':'BC Government Private Cloud Technical Documentation',
     'docs_dir':'src',
     'nav': nav_entries,
-    'plugins': ['techdocs-core', 'ezlinks'],
+    'plugins': ['techdocs-core'],
     'markdown_extensions': ['md_in_html', {'pymdownx.highlight': {'linenums': 'false'}}],
     'exclude_docs': 'drafts/\ncomponents/\nhooks/\npages/\nutils/\n'
   }

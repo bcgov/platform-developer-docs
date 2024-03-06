@@ -47,50 +47,68 @@ demos of their application.
 Dive deeper
 -----------
 
-### Security and privacy compliance
-
-* [STRA and PIA requirements for applications](docs/security-and-privacy-compliance/devops-security-considerations.md#stra-and-pia-requirements-for-applications)
-* [Vault secrets management service](docs/security-and-privacy-compliance/vault-secrets-management-service.md)
-* [Artifactory trusted repository service](docs/build-deploy-and-maintain-apps/image-artifact-management-with-artifactory.md)
-* [Security best practices for apps](docs/security-and-privacy-compliance/security-best-practices-for-apps.md)
-
-### Use GitHub in BC Gov
-
-* [BC Government organizations in GitHub](../bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/)
-* [Common platform requests in the BC Gov Private Cloud PaaS](https://cloud.gov.bc.ca/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/)
-* [Start working in BCGov GitHub organization](../bc-developer-guide/use-github-in-bcgov/start-working-in-bcgov-github-organization/)
-
-### Automation and resiliency
-
-* [App resiliency guidelines](docs/automation-and-resiliency/app-resiliency-guidelines.md)
-* [CI/CD pipeline automation](docs/automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md)
-
 ### App monitoring
 
 * [Set up a team in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-setup-team.md)
 * [Create monitoring dashboards in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-create-monitoring-dashboards.md)
-* [Set up advance functions in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
 * [Create alerts and notifications in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-create-alert-channels.md)
 * [Set up advanced metrics in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
 * [Resource monitoring dashboards](docs/app-monitoring/resource-monitoring-dashboards.md)
 * [Best practices for application logging in OpenShift](docs/app-monitoring/best-pratices-for-application-logging-in-openshift.md)
 * [Check application health after an outage](docs/app-monitoring/check-application-health-after-outage.md)
 
+### Automation and resiliency
+
+* [App resiliency guidelines](docs/automation-and-resiliency/app-resiliency-guidelines.md)
+* [CI/CD pipeline automation](docs/automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md)
+
+
 ### Database and API management
 
 * [Open source database technologies](docs/database-and-api-management/opensource-database-technologies.md)
 * [High availability database clusters](docs/database-and-api-management/high-availability-database-clusters.md)
 
-### Reusable code and services
-
-* [Pathfinder SSO Keycloak](docs/reusable-code-and-services/reusable-services-list.md#pathfinder-single-sign-on-keycloak)
-* [Reusable services list](docs/reusable-code-and-services/reusable-services-list.md)
-* Project examples (coming soon)
 
 ### Platform architecture reference
 
 * [Platform storage](docs/platform-architecture-reference/platform-storage.md)
-* Platform architecture (coming soon)
+* [Platform architecture diagram](docs/platform-architecture-reference/platform-architecture-diagram.md)
+* [OpenShift network policies](docs/platform-architecture-reference/openshift-network-policies.md)
+* [Platform network topology](docs/platform-architecture-reference/platform-network-topology.md)
+* [Set up TCP connectivity on the Private cloud Openshift platform](docs/platform-architecture-reference/set-up-tcp-connectivity-on-private-cloud-openshift-platform.md)
+* [Hosting tiers table](docs/platform-architecture-reference/hosting-tiers-table.md)
+
+### Platform automation
+
+* [Platform automation](docs/platform-automation/platform-automation.md)
+* [Automated Scale-Down](docs/platform-automation/automated-scaling.md)
+* [AlertManager](docs/platform-automation/alertmanager.md)
+
+### Reusable code and services
+
+* [Pathfinder SSO Keycloak](docs/reusable-code-and-services/reusable-services-list.md#pathfinder-single-sign-on-keycloak)
+* [Reusable services list](docs/reusable-code-and-services/reusable-services-list.md)
+* [Project examples](docs/reusable-code-and-services/project-examples.md)
+
+
+### Secrets management
+
+* [Vault getting started guide](docs/secrets-management/vault-getting-started-guide.md)
+* [Vault secrets management](docs/secrets-management/vault-secrets-management-service.md)
+
+### Security and privacy compliance
+
+* [Privacy compliance and guidance](docs/security-and-privacy-compliance/privacy-compliance-and-guidance.md)
+* [B.C. Government OpenShift DevOps security compliance](docs/security-and-privacy-compliance/platform-security-compliance.md)
+* [B.C. government OpenShift platform security tools](docs/security-and-privacy-compliance/platform-security-tools.md)
+* [Security best practices for apps](docs/security-and-privacy-compliance/security-best-practices-for-apps.md)
+* [Payment card processing for OpenShift applications](docs/security-and-privacy-compliance/payment-card-processing.md)
+
+### Use GitHub in BC Gov
+
+* [BC Government organizations in GitHub](../bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/)
+* [Common platform requests in the BC Gov Private Cloud PaaS](https://cloud.gov.bc.ca/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/)
+* [Start working in BCGov GitHub organization](../bc-developer-guide/use-github-in-bcgov/start-working-in-bcgov-github-organization/)
 
 
 Get support on the platform
@@ -99,14 +117,14 @@ Get support on the platform
 ### Report a platform incident
 
 If you think an incident has occurred with our services, you can report it
-by [following these steps](https://cloud.gov.bc.ca/private-cloud/support-and-community/support-incident-response-flow/).
+by [following these steps](https://digital.gov.bc.ca/cloud/services/private/support/#report).
 
 ### Get help or support
 
 We follow a community-based support model. You can use our self-serve resources or ask for help from the platform
-community. [Learn how to get help on the Platform](https://cloud.gov.bc.ca/private-cloud/support-and-community/how-to-get-support-or-help/).
+community. [Learn how to get help on the Platform](https://digital.gov.bc.ca/cloud/services/private/support/).
 
 ### DevOps requests
 
 Not sure where to go to get things done on the platform? We've outlined common platform tasks and links to additional
-instructions. [Learn how to get help with some of the most commonly searched-for tasks](https://cloud.gov.bc.ca/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/).
+instructions. [Learn how to get help with some of the most commonly searched-for tasks](https://digital.gov.bc.ca/cloud/services/private/support/#common).

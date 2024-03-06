@@ -65,7 +65,6 @@ nav:
   - About the design system: docs/design-system/about-the-design-system.md
 plugins:
 - techdocs-core
-- ezlinks
 markdown_extensions:
 - md_in_html
 - pymdownx.highlight:

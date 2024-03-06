@@ -1,12 +1,9 @@
 from mkdocs import *
+import pytest
 
-def mkdirs(tmp_path, dir_names):
-  for dir in dir_names:      
-    d = tmp_path / dir
-    d.mkdir()
-
-def test_happy_path(tmp_path):
-  dir_names = [ 
+@pytest.fixture
+def happy_path_dir_names():
+  return[ 
       "app-monitoring",
       "automation-and-resiliency",
       "build-deploy-and-maintain-apps", 
@@ -14,27 +11,26 @@ def test_happy_path(tmp_path):
       "design-system",
       "openshift-projects-and-access",
       "platform-architecture-reference",
+      "platform-automation",
       "reusable-code-and-services",
+      "secrets-management",
       "security-and-privacy-compliance",
       "training-and-learning"
      ]
-  mkdirs(tmp_path, dir_names)
+
+def mkdirs(tmp_path, dir_names):
+  for dir in dir_names:      
+    d = tmp_path / dir
+    d.mkdir()
+
+def test_happy_path(tmp_path, happy_path_dir_names):
+  mkdirs(tmp_path, happy_path_dir_names)
   assert are_categories_valid(get_categories(), tmp_path) 
 
 
-def test_same_number_of_dirs_but_diff_names(tmp_path):
-  dir_names = [ 
-    "aaaa",
-    "automation-and-resiliency",
-    "build-deploy-and-maintain-apps", 
-    "database-and-api-management",
-    "openshift-projects-and-access",
-    "platform-architecture-reference",
-    "reusable-code-and-services",
-    "security-and-privacy-compliance",
-    "training-and-learning"
-    ]
-  mkdirs(tmp_path, dir_names)
+def test_same_number_of_dirs_but_diff_names(tmp_path, happy_path_dir_names):
+  happy_path_dir_names[0] = "aaaa"
+  mkdirs(tmp_path, happy_path_dir_names)
   assert are_categories_valid(get_categories(), tmp_path) == False
 
 def test_diff_num_of_dirs(tmp_path): 
@@ -61,7 +57,7 @@ def test_create_yaml_structure():
   expected_mkdocs = {'site_name': 'BC Government Private Cloud Technical Documentation', 
           'docs_dir': 'src', 
           'nav': nav_entries,
-          'plugins': ['techdocs-core', 'ezlinks'],
+          'plugins': ['techdocs-core'],
            'markdown_extensions': ['md_in_html', {'pymdownx.highlight': {'linenums': 'false'}}],
           'exclude_docs': 'drafts/\ncomponents/\nhooks/\npages/\nutils/\n'}
   

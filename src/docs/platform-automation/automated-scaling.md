@@ -48,15 +48,15 @@ The tool monitors the `lastUpdateTime` in the `Progressing` section of the `stat
 
 You can verify the timestamp on your deployment in the YAML under `status`. It's essential to note that the tool specifically checks the `Processing` type condition. Other conditions, such as `Available`, don't indicate updates in the pods but merely track the last time pods were restarted.
 
- ```yaml
-   conditions:
+```yaml
+conditions:
   - lastTransitionTime: "2021-11-25T17:04:01Z"
     lastUpdateTime: "2021-11-25T17:04:11Z"
     message: replication controller "backup-postgresql-1" successfully rolled out
     reason: NewReplicationControllerAvailable
     status: "True"
     type: Progressing
-  ```
+```
 
 ## Deployments, deploymentconfigs and statefulsets that are crashing constantly
 
