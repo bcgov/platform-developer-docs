@@ -107,7 +107,7 @@ Dive deeper
 ### Use GitHub in BC Gov
 
 * [BC Government organizations in GitHub](../bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/)
-* [Common platform requests in the BC Gov Private Cloud PaaS](https://cloud.gov.bc.ca/private-cloud/support-and-community/devops-requests-in-the-bc-gov-private-cloud-paas/)
+* [Common platform requests in the BC Gov Private Cloud PaaS](https://digital.gov.bc.ca/cloud/services/private/support/#common)
 * [Start working in BCGov GitHub organization](../bc-developer-guide/use-github-in-bcgov/start-working-in-bcgov-github-organization/)
 
 
