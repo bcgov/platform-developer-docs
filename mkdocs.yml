@@ -1,6 +1,26 @@
 site_name: BC Government Private Cloud Technical Documentation
 docs_dir: src
 nav:
+- App monitoring:
+  - Onboarding to application monitoring with Sysdig: docs/app-monitoring/sysdig-monitor-onboarding.md
+  - Set up a team in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-setup-team.md
+  - Create monitoring dashboards in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-create-monitoring-dashboards.md
+  - Create alerts and notifications in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-create-alert-channels.md
+  - Set up advanced metrics in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-set-up-advanced-functions.md
+  - Resource monitoring dashboards: docs/app-monitoring/resource-monitoring-dashboards.md
+  - Check application health after an outage: docs/app-monitoring/check-application-health-after-outage.md
+  - User Defined Monitoring in OpenShift: docs/app-monitoring/user-defined-monitoring.md
+  - Best practices for application logging in OpenShift: docs/app-monitoring/best-pratices-for-application-logging-in-openshift.md
+- Automation and resiliency:
+  - CI/CD pipeline templates for Private Cloud teams: docs/automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md
+  - Application resiliency guidelines: docs/automation-and-resiliency/app-resiliency-guidelines.md
+  - Application resource tuning: docs/automation-and-resiliency/application-resource-tuning.md
+  - OpenShift project resource quotas: docs/automation-and-resiliency/openshift-project-resource-quotas.md
+  - Request a quota increase for an OpenShift project set: docs/automation-and-resiliency/request-quota-increase-for-openshift-project-set.md
+  - Argo CD usage: docs/automation-and-resiliency/argo-cd-usage.md
+  - Restoring Backup Volumes on OpenShift: docs/automation-and-resiliency/netapp-backup-restore.md
+  - Prepare to load test an application on OpenShift: docs/automation-and-resiliency/prepare-to-load-test-application-on-openshift.md
+  - Product Team Recovery Best Practices and Responsibilities: docs/automation-and-resiliency/namespace-recovery-and-responsibilities.md
 - Build, deploy and maintain apps:
   - Build an application: docs/build-deploy-and-maintain-apps/build-an-application.md
   - Deploy an application: docs/build-deploy-and-maintain-apps/deploy-an-application.md
@@ -13,56 +33,45 @@ nav:
   - Build with RHEL base images: docs/build-deploy-and-maintain-apps/build-with-rhel-base-images.md
   - Best practices for managing image streams: docs/build-deploy-and-maintain-apps/imagestreams.md
   - Prebuilt images: docs/build-deploy-and-maintain-apps/prebuilt-images.md
-- OpenShift projects and access:
-  - Provision a new OpenShift project: docs/openshift-projects-and-access/provision-new-openshift-project.md
-  - Grant user access in OpenShift: docs/openshift-projects-and-access/grant-user-access-openshift.md
-  - Log in to OpenShift Web Console: docs/openshift-projects-and-access/login-to-openshift.md
-  - Install the oc command line tool: docs/openshift-projects-and-access/install-the-oc-command-line-tool.md
-- Automation and resiliency:
-  - CI/CD pipeline templates for Private Cloud teams: docs/automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md
-  - Application resiliency guidelines: docs/automation-and-resiliency/app-resiliency-guidelines.md
-  - Application resource tuning: docs/automation-and-resiliency/application-resource-tuning.md
-  - OpenShift project resource quotas: docs/automation-and-resiliency/openshift-project-resource-quotas.md
-  - Request a quota increase for an OpenShift project set: docs/automation-and-resiliency/request-quota-increase-for-openshift-project-set.md
-  - Argo CD usage: docs/automation-and-resiliency/argo-cd-usage.md
-  - Restoring Backup Volumes on OpenShift: docs/automation-and-resiliency/netapp-backup-restore.md
-  - Prepare to load test an application on OpenShift: docs/automation-and-resiliency/prepare-to-load-test-application-on-openshift.md
-  - Product Team Recovery Best Practices and Responsibilities: docs/automation-and-resiliency/namespace-recovery-and-responsibilities.md
-- App monitoring:
-  - Onboarding to application monitoring with Sysdig: docs/app-monitoring/sysdig-monitor-onboarding.md
-  - Set up a team in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-setup-team.md
-  - Create monitoring dashboards in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-create-monitoring-dashboards.md
-  - Create alerts and notifications in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-create-alert-channels.md
-  - Set up advanced metrics in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-set-up-advanced-functions.md
-  - Resource monitoring dashboards: docs/app-monitoring/resource-monitoring-dashboards.md
-  - Check application health after an outage: docs/app-monitoring/check-application-health-after-outage.md
-  - User Defined Monitoring in OpenShift: docs/app-monitoring/user-defined-monitoring.md
-  - Best practices for application logging in OpenShift: docs/app-monitoring/best-pratices-for-application-logging-in-openshift.md
 - Database and API management:
   - High availability database clusters: docs/database-and-api-management/high-availability-database-clusters.md
   - Open-source database technologies: docs/database-and-api-management/opensource-database-technologies.md
   - Database backup best practices: docs/database-and-api-management/database-backup-best-practices.md
   - Using Postgres on OpenShift with Patroni and CrunchyDB: docs/database-and-api-management/postgres-how-to.md
-- Security and privacy compliance:
-  - B.C. Government OpenShift DevOps security considerations: docs/security-and-privacy-compliance/devops-security-considerations.md
-  - Security best practices for apps: docs/security-and-privacy-compliance/security-best-practices-for-apps.md
-  - Vault getting started guide: docs/security-and-privacy-compliance/vault-getting-started-guide.md
-  - Vault secrets management: docs/security-and-privacy-compliance/vault-secrets-management-service.md
-  - Payment card processing for OpenShift applications: docs/security-and-privacy-compliance/payment-card-processing.md
-- Reusable code and services:
-  - Reusable services list: docs/reusable-code-and-services/reusable-services-list.md
+- Design system:
+  - About the design system: docs/design-system/about-the-design-system.md
+- OpenShift projects and access:
+  - Provision a new OpenShift project: docs/openshift-projects-and-access/provision-new-openshift-project.md
+  - Grant user access in OpenShift: docs/openshift-projects-and-access/grant-user-access-openshift.md
+  - Log in to OpenShift Web Console: docs/openshift-projects-and-access/login-to-openshift.md
+  - Install the oc command line tool: docs/openshift-projects-and-access/install-the-oc-command-line-tool.md
 - Platform architecture reference:
   - Platform storage: docs/platform-architecture-reference/platform-storage.md
   - Platform Architecture Diagram: docs/platform-architecture-reference/platform-architecture-diagram.md
   - OpenShift network policies: docs/platform-architecture-reference/openshift-network-policies.md
   - Platform network topology: docs/platform-architecture-reference/platform-network-topology.md
   - Set up TCP connectivity on the Private Cloud OpenShift Platform: docs/platform-architecture-reference/set-up-tcp-connectivity-on-private-cloud-openshift-platform.md
+  - Hosting tiers table: docs/platform-architecture-reference/hosting-tiers-table.md
   - Platform automation: docs/platform-architecture-reference/platform-automation.md
+- Platform automation:
+  - Platform automation: docs/platform-automation/platform-automation.md
+  - Automated Scale-Down: docs/platform-automation/automated-scaling.md
+  - AlertManager: docs/platform-automation/alertmanager.md
+- Reusable code and services:
+  - Project examples: docs/reusable-code-and-services/project-examples.md
+  - Reusable services list: docs/reusable-code-and-services/reusable-services-list.md
+- Security and privacy compliance:
+  - Privacy compliance and guidance: docs/security-and-privacy-compliance/privacy-compliance-and-guidance.md
+  - B.C. Government OpenShift DevOps security compliance: docs/security-and-privacy-compliance/platform-security-compliance.md
+  - B.C. government OpenShift platform security tools: docs/security-and-privacy-compliance/platform-security-tools.md
+  - Security best practices for apps: docs/security-and-privacy-compliance/security-best-practices-for-apps.md
+  - Payment card processing for OpenShift applications: docs/security-and-privacy-compliance/payment-card-processing.md
+- Secrets management:
+  - Vault getting started guide: docs/secrets-management/vault-getting-started-guide.md
+  - Vault secrets management: docs/secrets-management/vault-secrets-management-service.md
 - Training and learning:
   - Training from the Platform Services Team: docs/training-and-learning/training-from-the-platform-services-team.md
   - External training resources: docs/training-and-learning/training-external-resources.md
-- Design system:
-  - About the design system: docs/design-system/about-the-design-system.md
 plugins:
 - techdocs-core
 markdown_extensions:

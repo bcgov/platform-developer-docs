@@ -337,6 +337,6 @@ e.g `https://servername:port/ords/cas/paybc/payment/10006/EZ000101`
 
 ## Related pages
 
-* [Security best practices for apps](/security-best-practices-for-apps/)
-* [Platform security compliance](/devops-security-compliance/)
-* [OpenShift platform security tools](/platform-security-tools/)
+* [Security best practices for apps](../security-and-privacy-compliance/security-best-practices-for-apps.md)
+* [Platform security compliance](../security-and-privacy-compliance/platform-security-compliance.md)
+* [OpenShift platform security tools](../security-and-privacy-compliance/platform-security-tools.md)

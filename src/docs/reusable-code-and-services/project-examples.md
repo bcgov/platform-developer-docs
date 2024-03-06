@@ -240,5 +240,5 @@ Use templates below to continue adding projects:
 -->
  
 ## Related pages 
-* [Reusable services list](/reusable-services-list/)
+* [Reusable services list](../reusable-code-and-services/reusable-services-list.md)
 

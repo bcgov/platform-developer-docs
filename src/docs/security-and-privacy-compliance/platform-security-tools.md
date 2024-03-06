@@ -43,8 +43,8 @@ Here is a representation of what an application build pipeline should look like:
 
 The pipeline templates above make it easier to include the tools described below:
 
-* [SonarQube in the BC Gov Private Cloud PaaS](/reusable-services-list/#sonarqube-in-the-bc-gov-private-cloud-paas)
-* [OWASP ZAP Security Vulnerability Scanning](/reusable-services-list/#owasp-zap-security-vulnerability-scanning)
+* [SonarQube in the BC Gov Private Cloud PaaS](../reusable-code-and-services/reusable-services-list.md#sonarqube-in-the-bc-gov-private-cloud-paas)
+* [OWASP ZAP Security Vulnerability Scanning](../reusable-code-and-services/reusable-services-list.md#owasp-zap-security-vulnerability-scanning)
 
 ### Scanning tools roles 
 
@@ -100,8 +100,8 @@ The 'secrets' store is exclusively intended for configurations, utilizing base64
 Vault is the preferred secrets management tool to use on OpenShift.
 
 * Find out more about the [benefits of using Vault](https://digital.gov.bc.ca/cloud/services/private/products-tools/vault/)
-* [Vault secrets management service](/vault-secrets-management-service/)
-* [Vault getting started guide](/vault-getting-started-guide/)
+* [Vault secrets management service](../secrets-management/vault-secrets-management-service.md)
+* [Vault getting started guide](../secrets-management/vault-getting-started-guide.md)
 
 ## GitOps/Cluster configuration management
 
@@ -127,7 +127,7 @@ This tool provides a more wholistic view of logs for an application or at the pl
 This tool allows our platform admins and platform teams to build monitoring dashboards.
 
 - Find out more about [Sysdig Monitor](https://digital.gov.bc.ca/cloud/services/private/products-tools/sysdig/)
-- [Onboarding to application monitoring with Sysdig](/sysdig-monitor-onboarding/)
+- [Onboarding to application monitoring with Sysdig](../app-monitoring/sysdig-monitor-onboarding.md)
 - [Login to Sysdig](https://app.sysdigcloud.com/#/login)
 
 **Security Information and Event Monitoring (SIEM):**
@@ -156,6 +156,6 @@ For all other matters concerning security on the OpenShift Container Platform, p
 * [OpenShift 101 training](https://digital.gov.bc.ca/cloud/services/private/support/openshift-101/)
 * [OpenShift 201 training](https://digital.gov.bc.ca/cloud/services/private/support/openshift-201/)
 * [DevOps platform workshops](https://github.com/bcdevops/devops-platform-workshops)
-* [Security best practices for apps](/security-best-practices-for-apps/)
+* [Security best practices for apps](../security-and-privacy-compliance/security-best-practices-for-apps.md)
 
 
