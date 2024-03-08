@@ -75,7 +75,7 @@ You can delete a whole image stream with `oc delete imagestream <is_name>` or ju
 
 If you have any questions please reach out on [#devops-operations](https://chat.developer.gov.bc.ca/channel/devops-operations) and someone will be happy to help you clean up your projects image streams.
 
-The [OpenShift 201 training](/training-from-the-platform-services-team/) features content related to image stream tags. There is a related lab exercise and video demonstration [here](https://github.com/BCDevOps/devops-platform-workshops/blob/master/openshift-201/image-management.md)
+The [OpenShift 201 training](/training-from-the-platform-services-team/) features content related to image stream tags. View the [related lab exercise and video demonstration](https://github.com/BCDevOps/devops-platform-workshops/blob/master/openshift-201/image-management.md)
 
 ### Hard Prune
 
