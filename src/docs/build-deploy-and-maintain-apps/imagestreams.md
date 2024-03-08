@@ -23,11 +23,15 @@ sort_order: 10
 Image streams provide a means of creating and updating container images in an ongoing way. As improvements are made to an image, tags can be used to assign new version numbers and keep track of changes.
 
 ## On this page
-- [Component parts](#component-parts)
-- [Getting info](#getting-info)
-- [Make use of tags](#make-use-of-tags)
-- [Smaller is better](#smaller-is-better)
-- [Usage notifications](#usage-notifications)
+- [Best practices for managing image streams](#best-practices-for-managing-image-streams)
+  - [On this page](#on-this-page)
+  - [Component parts](#component-parts)
+    - [Image](#image)
+    - [Tag](#tag)
+    - [Image Stream](#image-stream)
+  - [Getting info](#getting-info)
+  - [Make use of tags](#make-use-of-tags)
+  - [Smaller is better](#smaller-is-better)
 
 ## Component parts
 
@@ -144,15 +148,3 @@ User:           1001
 Exposes Ports:  8080/tcp
 ...
 ```
-
-## Usage notifications
-
-The platform will now be sending a weekly email to teams that are using too much space on the registry. The image registry is a shared service and overuse of it can lead to other teams being unable to push their builds, or to the platform team having to buy more storage space.
-
-The emails will list all the image streams, their tags, and revisions. It will show the size used by each of these ensuring to not double-count layers that are reused. This should help provide info on where to focus efforts to reduce image registry usage.
-
-You can delete a whole image stream with `oc delete imagestream <is_name>` or just a tag with `oc tag -d <imagestream>:<tag>` . See [Managing Image Streams](https://docs.openshift.com/container-platform/4.8/openshift_images/image-streams-manage.html#images-imagestream-remove-tag_image-streams-managing) for more.
-
-If you have any questions please reach out on [#devops-operations](https://chat.developer.gov.bc.ca/channel/devops-operations) and someone will be happy to help you clean up your projects image streams.
-
-The [OpenShift 201 training](/training-from-the-platform-services-team/) features content related to image stream tags. There is a related lab exercise and video demonstration [here](https://github.com/BCDevOps/devops-platform-workshops/blob/master/openshift-201/image-management.md)
