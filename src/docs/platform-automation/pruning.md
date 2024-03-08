@@ -79,7 +79,7 @@ The [OpenShift 201 training](/training-from-the-platform-services-team/) feature
 
 ### Hard Prune
 
-The OpenShift Container Registry can accumulate blobs that are not referenced by the cluster’s ETCD database. The basic pruning images CronJob, therefore, is unable to operate on them. These are called orphaned blobs.
+The OpenShift Container Registry can accumulate blobs that aren't referenced by the cluster’s ETCD database. The basic pruning images CronJob, therefore, is unable to operate on them. These are called orphaned blobs.
 
 To address this a hard prune of the image registry is performed during OpenShift upgrades. We complete this Sunday morning at 6am before the upgrade is started on Monday. To perform a hard prune, the image registry must first be put into a Read-Only mode to ensure data consistency.
 
