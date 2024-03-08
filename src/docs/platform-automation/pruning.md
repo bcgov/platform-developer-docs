@@ -89,9 +89,7 @@ As the data removed by this isn't referenced by any ImageStream or Tag it should
 
 As you run Tekton Pipelines it will create `PipelineRun` and `TaskRun` objects. Over time, the accumulation of these objects can happen. Therefore, older ones are routinely removed on a daily basis through pruning as well.
 
-A few settings are passed to the pruner job:
-
-* Keep the 5 most recent of each object type in the namespace
+The pruner job will keep the 5 most recent of each object type in the namespace.
 
 ---
 ---
