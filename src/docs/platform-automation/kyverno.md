@@ -1,5 +1,5 @@
 ---
-title: Kyverno Cluster Policies
+title: Kyverno cluster policies
 
 slug: kyverno
 
