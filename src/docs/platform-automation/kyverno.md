@@ -18,7 +18,7 @@ content_owner: Olena Mitovska
 sort_order: 5
 ---
 
-# Kyverno Cluster Policies
+# Kyverno cluster policies
 Last updated: **March 6, 2024**
 
 Platform Services makes use of [Kyverno](https://kyverno.io/) ClusterPolicies to enforce some rules on the OpenShift clusters.
