@@ -59,7 +59,7 @@ validate-cron-schedule:
 
 ## DataClass Labels
 
-In the NSX clusters (Emerald) all pods need to have a DataClass label so that the guardrail rules can be correctly enforced by NSX. These guardrails include things like DataClass `Low` cannot connect to DataClass `High`. To help prevent unexpected edge cases, all pods without a DataClass label of `Low`, `Medium`, or `High` are assigned a DataClass label of `Invalid` by a Kyverno policy. The NSX firewall can then easily find those pods and drop all network traffic from or to them.
+In NSX clusters (Emerald), every pod must have a DataClass label. This ensures proper enforcement of guardrail rules by NSX, such as preventing connections between DataClass `Low` and `High`. To avoid unexpected issues, a Kyverno policy assigns a DataClass label of `Invalid` to any pod lacking a `Low`, `Medium`, or `High` label. This makes the NSX firewall easily identify and block all network traffic to or from these labeled pods.
 
 ---
 ---
