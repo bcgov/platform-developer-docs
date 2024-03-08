@@ -147,4 +147,4 @@ Exposes Ports:  8080/tcp
 
 ## Usage notifications
 
-The platform will now be sending a weekly email to teams that are using too much space on the registry. See the [Image Registry Size warnings](/pruning/#image-registry-size-warnings) section of the Pruning page for more info.
+The platform sends out a weekly email to teams utilizing an too much space on the shared image registry. See the [Image Registry Size warnings](/pruning/#image-registry-size-warnings) section of the Pruning page for more info.
