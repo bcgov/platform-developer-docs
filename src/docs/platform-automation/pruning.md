@@ -19,7 +19,7 @@ sort_order: 4
 ---
 
 # Pruning
-Last updated: **March 6, 2024**
+Last updated: **March 8, 2024**
 
 There are a few CronJobs set up on the OpenShift clusters to help prune old objects and keep the cluster clean. This page discusses each of the different object types and how and when they are pruned.
 
@@ -61,15 +61,15 @@ As new images are built and pushed to tags, the older copies of that tag are ret
 A few settings are passed to the pruner job:
 
 * All revisions created in the last 48h are kept
-* All revisions in use by a running pod, or in a deployment are kept. See [the docs](https://docs.openshift.com/container-platform/4.13/applications/pruning-objects.html#pruning-images-conditions_pruning-objects) for a full list
+* All revisions in use by a running pod, or in a deployment are kept. See [official OpenShift documentation on image prune conditions](https://docs.openshift.com/container-platform/4.13/applications/pruning-objects.html#pruning-images-conditions_pruning-objects) for a full list
 * Only the most recent revision is kept
 * All other revisions are pruned
 
 ### Image Registry Size warnings
 
-The platform will now be sending a weekly email to teams that are using too much space on the registry. The image registry is a shared service and overuse of it can lead to other teams being unable to push their builds, or to the platform team having to buy more storage space.
+The platform sends out a weekly email to teams utilizing an too much space on the shared image registry. This registry is a shared service, and if it's overused, it can result in other teams being unable to push their builds. Alternatively, it may need the platform team to purchase additional storage space.
 
-The emails will list all the image streams, their tags, and revisions. It will show the size used by each of these ensuring to not double-count layers that are reused. This should help provide info on where to focus efforts to reduce image registry usage.
+The emails include a list of all image streams along with their tags and revisions. The provided information will indicate the size used by each, ensuring that reused layers are not double-counted. This aims to guide teams on where to concentrate their efforts in reducing image registry usage.
 
 You can delete a whole image stream with `oc delete imagestream <is_name>` or just a tag with `oc tag -d <imagestream>:<tag>` . See [Managing Image Streams](https://docs.openshift.com/container-platform/4.13/openshift_images/image-streams-manage.html#images-imagestream-remove-tag_image-streams-managing) for more.
 
