@@ -32,7 +32,7 @@ There are a few CronJobs set up on the OpenShift clusters to help prune old obje
 
 ## DeploymentConfigs
 
-When a `DeploymentConfig` rolls out a new version, it creates a new `ReplicationController`. After some time, the number of these can pile up. So older ones are pruned daily.
+When a `DeploymentConfig` rolls out a new version, it creates a new `ReplicationController`. Over time, the accumulation of these objects can happen. Therefore, older ones are routinely removed on a daily basis through pruning as well.
 
 A few settings are passed to the pruner job:
 
@@ -43,7 +43,7 @@ A few settings are passed to the pruner job:
 
 ## Builds
 
-When a `BuildConfig` runs a build a new `Build` object is created along with the pods that the build runs in. After some time, the number of these can pile up. So older ones are pruned daily.
+When a `BuildConfig` runs a build a new `Build` object is created along with the pods that the build runs in. Over time, the accumulation of these objects can happen. Therefore, older ones are routinely removed on a daily basis through pruning as well.
 
 A few settings are passed to the pruner job:
 
@@ -56,7 +56,7 @@ A few settings are passed to the pruner job:
 
 ### Daily Prune
 
-As new images are built and pushed to tags, the older copies of that tag are retained. Each of these is called a revision and is tracked with a `sha256`. After some time, the number of these can pile up. So older ones are pruned daily.
+As new images are built and pushed to tags, the older copies of that tag are retained. Each of these is called a revision and is tracked with a `sha256`. Over time, the accumulation of these objects can happen. Therefore, older ones are routinely removed on a daily basis through pruning as well.
 
 A few settings are passed to the pruner job:
 
@@ -87,7 +87,7 @@ As the data removed by this isn't referenced by any ImageStream or Tag it should
 
 ## Pipelines
 
-As you run Tekton Pipelines it will create `PipelineRun` and `TaskRun` objects. After some time, the number of these can pile up. So older ones are pruned daily.
+As you run Tekton Pipelines it will create `PipelineRun` and `TaskRun` objects. Over time, the accumulation of these objects can happen. Therefore, older ones are routinely removed on a daily basis through pruning as well.
 
 A few settings are passed to the pruner job:
 
