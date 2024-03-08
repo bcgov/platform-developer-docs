@@ -23,15 +23,11 @@ sort_order: 10
 Image streams provide a means of creating and updating container images in an ongoing way. As improvements are made to an image, tags can be used to assign new version numbers and keep track of changes.
 
 ## On this page
-- [Best practices for managing image streams](#best-practices-for-managing-image-streams)
-  - [On this page](#on-this-page)
-  - [Component parts](#component-parts)
-    - [Image](#image)
-    - [Tag](#tag)
-    - [Image Stream](#image-stream)
-  - [Getting info](#getting-info)
-  - [Make use of tags](#make-use-of-tags)
-  - [Smaller is better](#smaller-is-better)
+- [Component parts](#component-parts)
+- [Getting info](#getting-info)
+- [Make use of tags](#make-use-of-tags)
+- [Smaller is better](#smaller-is-better)
+- [Usage notifications](#usage-notifications)
 
 ## Component parts
 
