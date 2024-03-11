@@ -251,6 +251,12 @@ const IndexPage = ({ location }) => {
               <li>
               <Link to={"/alertmanager/"}>AlertManager</Link>
               </li>
+              <li>
+              <Link to={"/pruning/"}>Pruning</Link>
+              </li>
+              <li>
+              <Link to={"/kyverno/"}>Kyverno Cluster Policies</Link>
+              </li>
             </ul>
           </Card>
           <Card>
