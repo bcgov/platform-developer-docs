@@ -57,6 +57,8 @@ nav:
   - Platform automation: docs/platform-automation/platform-automation.md
   - Automated Scale-Down: docs/platform-automation/automated-scaling.md
   - AlertManager: docs/platform-automation/alertmanager.md
+  - Pruning: docs/platform-automation/pruning.md
+  - Kyverno cluster policies: docs/platform-automation/kyverno.md
 - Reusable code and services:
   - Project examples: docs/reusable-code-and-services/project-examples.md
   - Reusable services list: docs/reusable-code-and-services/reusable-services-list.md

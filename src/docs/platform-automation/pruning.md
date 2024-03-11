@@ -75,7 +75,7 @@ You can delete a whole image stream with `oc delete imagestream <is_name>` or ju
 
 If you have any questions please reach out on [#devops-operations](https://chat.developer.gov.bc.ca/channel/devops-operations) and someone will be happy to help you clean up your projects image streams.
 
-The [OpenShift 201 training](/training-from-the-platform-services-team/) features content related to image stream tags. View the [related lab exercise and video demonstration](https://github.com/BCDevOps/devops-platform-workshops/blob/master/openshift-201/image-management.md)
+The [OpenShift 201 training](../training-and-learning/training-from-the-platform-services-team.md) features content related to image stream tags. View the [related lab exercise and video demonstration](https://github.com/BCDevOps/devops-platform-workshops/blob/master/openshift-201/image-management.md)
 
 ### Hard Prune
 
@@ -96,6 +96,6 @@ The pruner job will keep the 5 most recent of each object type in the namespace.
 
 ## Related pages
 
-- [Best practices for managing image streams](/best-practices-for-managing-image-streams/)
+- [Best practices for managing image streams](../build-deploy-and-maintain-apps/imagestreams.md)
 - [Red Hat’s documentation on pruning](https://docs.openshift.com/container-platform/4.13/applications/pruning-objects.html)
 - [Red Hat's documentation on Pipeline pruning](https://docs.openshift.com/pipelines/1.14/install_config/customizing-configurations-in-the-tektonconfig-cr.html#default-pruner-configuration_customizing-configurations-in-the-tektonconfig-cr)
