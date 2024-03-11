@@ -147,12 +147,4 @@ Exposes Ports:  8080/tcp
 
 ## Usage notifications
 
-The platform will now be sending a weekly email to teams that are using too much space on the registry. The image registry is a shared service and overuse of it can lead to other teams being unable to push their builds, or to the platform team having to buy more storage space.
-
-The emails will list all the image streams, their tags, and revisions. It will show the size used by each of these ensuring to not double-count layers that are reused. This should help provide info on where to focus efforts to reduce image registry usage.
-
-You can delete a whole image stream with `oc delete imagestream <is_name>` or just a tag with `oc tag -d <imagestream>:<tag>` . See [Managing Image Streams](https://docs.openshift.com/container-platform/4.8/openshift_images/image-streams-manage.html#images-imagestream-remove-tag_image-streams-managing) for more.
-
-If you have any questions please reach out on [#devops-operations](https://chat.developer.gov.bc.ca/channel/devops-operations) and someone will be happy to help you clean up your projects image streams.
-
-The [OpenShift 201 training](../training-and-learning/training-from-the-platform-services-team.md) features content related to image stream tags. There is a related lab exercise and video demonstration [here](https://github.com/BCDevOps/devops-platform-workshops/blob/master/openshift-201/image-management.md)
+The platform sends out a weekly email to teams utilizing an too much space on the shared image registry. See the [Image Registry Size warnings](/pruning/#image-registry-size-warnings) section of the Pruning page for more info.

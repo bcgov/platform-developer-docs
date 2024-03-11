@@ -26,3 +26,5 @@ We use some automation on the platform to help manage resource usage, alert abou
 
 - [Automated Scale-Down](../platform-automation/automated-scaling.md) covers a tool that scales down deployments that have not been updated in a year, or are in a crashloop state
 - [AlertManager](../platform-automation/alertmanager.md) covers some basic monitoring and alerting config added to every namespace
+- [Pruning](/pruning/) provides info on the automatic object pruning that takes place in OpenShift clusters
+- [Kyverno Cluster Policies](/kyverno/) describes policies that enforce some rules on some objects
