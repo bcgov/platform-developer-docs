@@ -83,6 +83,8 @@ Dive deeper
 * [Platform automation](docs/platform-automation/platform-automation.md)
 * [Automated Scale-Down](docs/platform-automation/automated-scaling.md)
 * [AlertManager](docs/platform-automation/alertmanager.md)
+* [Pruning](docs/platform-automation/pruning.md)
+* [Kyverno Cluster Policies](docs/platform-automation/kyverno.md)
 
 ### Reusable code and services
 
