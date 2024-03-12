@@ -1,0 +1,13 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: "platform-developer-docs"
+  title: "Private cloud development guide"
+  description: "Learn how to build, deploy, maintain, and retire applications on OpenShift and explore additional technical guidelines for a deeper understanding"
+  annotations:
+    github.com/project-slug: bcgov/platform-developer-docs
+    backstage.io/techdocs-ref: dir:./src
+spec:
+  type: documentation
+  lifecycle: production
+  owner: "citz"

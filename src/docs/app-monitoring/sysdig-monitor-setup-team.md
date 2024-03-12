@@ -25,7 +25,7 @@ Last updated: **January 2, 2024**
 
 Effective monitoring and alerting are crucial components of maintaining a robust and reliable system. Monitoring allows your team to proactively identify potential issues before they impact your application, enabling timely responses and minimizing downtime. The platform services team strongly recommends that all teams implement the dashboards presented here as a minimum standard for ensuring the health and performance of their applications.
 
-The Sysdig Teams Operator runs in the cluster and enables a team to create and manage access to a dedicated Sysdig Team account for BC Gov Private Cloud PaaS users. The team is scoped to the OpenShift namespaces that belong to the team. Sysdig also provides a default dashboard to identify system [resources, limits, and actual usage](/openshift-project-resource-quotas/).
+The Sysdig Teams Operator runs in the cluster and enables a team to create and manage access to a dedicated Sysdig Team account for BC Gov Private Cloud PaaS users. The team is scoped to the OpenShift namespaces that belong to the team. Sysdig also provides a default dashboard to identify system [resources, limits, and actual usage](../automation-and-resiliency/openshift-project-resource-quotas.md).
 
 For more information on Sysdig Monitor, see [Monitoring with Sysdig](https://digital.gov.bc.ca/cloud/services/private/products-tools/sysdig/)
 
@@ -70,23 +70,22 @@ Add a description for the sysdig team.
 **Team Users:**
 A list of users to be added to this team.
 
-  - `User Name` - Sysdig identifies users by **the email address**, so make sure everyone on your team logs in to Sysdig and obtains the correct email from their [Sysdig User Profile](https://app.sysdigcloud.com/#/settings/user).
+- `User Name` - Sysdig identifies users by **the email address**, so make sure everyone on your team logs in to Sysdig and obtains the correct email from their [Sysdig User Profile](https://app.sysdigcloud.com/#/settings/user).
 
-  - `User Role` - These are the available roles to assign to different team members:
+- `User Role` - These are the available roles to assign to different team members:
 
-    - `ROLE_TEAM_EDIT (Advanced User)`: Read and write access to the components of the application available to the team. Can create, edit and delete dashboards, alerts or other content. Recommended for administrators and team members that need to create and manage dashboards.
-
-    - `ROLE_TEAM_STANDARD (Standard User)`: Same as Advanced User but without access to the **Explore** page. Recommended for developers that need to refer to dashboards for resource tuning and service monitoring.
-
-    - `ROLE_TEAM_READ (View-only User)`: This role has read-only access to the environment in the team scope. Recommended for project owners and team members from the business area.
+  * `ROLE_TEAM_EDIT (Advanced User)`: Read and write access to the components of the application available to the team. Can create, edit and delete dashboards, alerts or other content. Recommended for administrators and team members that need to create and manage dashboards.
+  * `ROLE_TEAM_STANDARD (Standard User)`: Same as Advanced User but without access to the **Explore** page. Recommended for developers that need to refer to dashboards for resource tuning and service monitoring.
+  * `ROLE_TEAM_READ (View-only User)`: This role has read-only access to the environment in the team scope. Recommended for project owners and team members from the business area.
 
 
 ### Part 2 - Create the sysdig-team custom resource
 
-> **Note:**
-> - Only apply role updates to the custom resource from `tools` namespace. Do not use the Sysdig Monitor UI to modify team access, because the operator reconciliation will overwrite any UI changes to team roles and settings.
-> - If your project set is on Gold and GoldDR clusters, only create the `sysdig-team` custom resource in the Gold cluster. The Sysdig operator can create the dashboards for your applications across both clusters.
-> - It's important to keep a single and unique `sysdig-team` custom resource per project set because you don't want to have duplicated teams on Sysdig. Please make sure to remove `sysdig-team` custom resource from dev, test and prod namespaces if they are created accidentally.
+**Note:**
+
+ - Only apply role updates to the custom resource from `tools` namespace. Do not use the Sysdig Monitor UI to modify team access, because the operator reconciliation will overwrite any UI changes to team roles and settings.
+- If your project set is on Gold and GoldDR clusters, only create the `sysdig-team` custom resource in the Gold cluster. The Sysdig operator can create the dashboards for your applications across both clusters.
+- It's important to keep a single and unique `sysdig-team` custom resource per project set because you don't want to have duplicated teams on Sysdig. Please make sure to remove `sysdig-team` custom resource from dev, test and prod namespaces if they are created accidentally.
 
 So now you have the `sysdig-team` manifest file ready, use `oc apply` and let the operator create the team on Sysdig.
 
@@ -146,6 +145,7 @@ The custom resource kind is SysdigTeam, but when using the oc command, you need 
 If both of these show, the `sysdig-team` custom resource is processed successfully. You can go back to Sysdig to see the new team scope and default dashboards.
 
 To access them: 
+
 - Log in to Sysdig like how you did just now.
 
 - Navigate to the bottom left hand of the page to switch your team, which should be named as **[PROJECT_SET_LICENSE_PLATE]-team**.
@@ -160,7 +160,7 @@ To access them:
 
 - If you don't see the Sysdig team created, double check that:
 
-  -`sysdig-team` custom resource is created in `tools` namespace
+  - `sysdig-team` custom resource is created in `tools` namespace
   - There are no duplicated `sysdig-team` custom resources in dev/test/prod namespaces. Please run `oc -n <NAMESPACE> delete sysdig-team <SYSDIG-TEAM-NAME>` to delete the extra custom resource.
   - Your Sysdig account profile matches the email address that you have provided in the `sysdig-team` custom resource. If there is a mismatch, reapply the custom resource.
 
@@ -173,12 +173,12 @@ To access them:
 ## Related pages
 
 - [BCDevOps Sysdig Monitor Service](https://app.sysdigcloud.com/api/oauth/openid/bcdevops)
-- [Set up advanced functions in Sysdig Monitor](/sysdig-monitor-set-up-advanced-functions/)
-- [Create alert channels in Sysdig Monitor](/sysdig-monitor-create-alert-channels/)
+- [Set up advanced functions in Sysdig Monitor](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
+- [Create alert channels in Sysdig Monitor](../app-monitoring/sysdig-monitor-create-alert-channels.md)
 - [Sysdig Monitor](https://sysdig.com/products/monitor/)
-- [OpenShift project resource quotas](/openshift-project-resource-quotas/)
+- [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md)
 - [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/)
-- [Monitoring with Sysdig](%WORDPRESS_BASE_URL%/private-cloud/our-products-in-the-private-cloud-paas/monitoring-with-sysdig/)
+- [Monitoring with Sysdig](https://cloud.gov.bc.ca/private-cloud/our-products-in-the-private-cloud-paas/monitoring-with-sysdig/)
 - [Sydig User Profile](https://app.sysdigcloud.com/#/settings/user)
 - [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 - [Sysdig Monitor Dashboards](https://docs.sysdig.com/en/dashboards.html)

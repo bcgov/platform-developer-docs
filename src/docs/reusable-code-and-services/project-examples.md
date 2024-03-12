@@ -171,15 +171,18 @@ Our front-end is hosted on GitHub pages and the backend is deployed in AWS as a 
 <!-- Highlight the main technologies, frameworks, or programming languages that powered your project. -->
 
 The Pathfinder Single Sign On Services uses:
+
 - RedHat SSO, aka Keycloak, which is an open-source Identity and Access Management solution aimed at modern applications and services. It makes it easy to secure applications and services with little to no code. 
 
   This includes:
+
   - Private Cloud Openshift Platform - Gold and GoldDR clusters
   - Java (as the primary language of KeyCloak)
   - Helm for DevOps manifest management
   - Patroni Postgres Database (including backup container)
   - Python
   - GitHub registry
+  
 - Common Hosted Single Sign-on (CSS):
   - Next.js, Typescript
   - GitHub (pages, actions)
@@ -187,13 +190,16 @@ The Pathfinder Single Sign On Services uses:
   - CHES Email Service
   - deployed in Public Cloud (AWS)
   - IDIM/BCeID Web Service for authentication
+
 - Realm registry:
   - Next.js, Typescript
   - hosted on Azure Web Service
+
 - Monitoring:
   - Grafana, Loki, Promtail
   - cronjobs
   - Uptime.com and Sysdig
+
 - Alerting and communication:
   - MSTeams and RocketChat
   - Uptime.com and  OpsGenie
@@ -204,6 +210,7 @@ We strive to deliver value for our customers. We've focused the last few years o
 ### Our useful references
 
 Below are some of our main repositories:
+
 - [bcgov/sso-requests](https://github.com/bcgov/sso-requests): The request process workflow tool for the RedHat SSO Dev Exchange service (github.com) – CSS (Common Hosted Single Sign On)
 - [bcgov/sso-keycloak](https://github.com/bcgov/sso-keycloak) – RedHat SSO Keycloak
 - [bcgov/sso-realm-registry](https://github.com/bcgov/sso-realm-registry) – SSO Realm Registry
@@ -233,5 +240,5 @@ Use templates below to continue adding projects:
 -->
  
 ## Related pages 
-* [Reusable services list](/reusable-services-list/)
+* [Reusable services list](../reusable-code-and-services/reusable-services-list.md)
 

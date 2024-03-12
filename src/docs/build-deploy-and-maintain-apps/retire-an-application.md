@@ -104,12 +104,13 @@ Most likely, you've utilized some of the Platform services or BCGov common compo
 
 ### Github
 Don't overlook your application source code and relevant resources from BCGov GitHub organizations.
+
 * Edit your main GitHub README files to include a note indicating the retirement of your application service.
 * Archive all your GitHub repositories from the following GitHub Organizations:
-    * [bcgov](https://github.com/bcgov)
-    * [bcgov-c](https://github.com/bcgov-c)
-    * [enterprise GitHub](https://github.com/enterprises/bcgov-ent)
-    * [BCDevOps](https://github.com/bcdevops)
+  * [bcgov](https://github.com/bcgov)
+  * [bcgov-c](https://github.com/bcgov-c)
+  * [enterprise GitHub](https://github.com/enterprises/bcgov-ent)
+  * [BCDevOps](https://github.com/bcdevops)
 * If you have any GitHub Actions or Webhook setup, be sure to disable them. Archiving a repo does **not** stop or disable the existing GitHub Actions workflows.
 * Delete GitHub Teams if you have created any. Also request to [remove GitHub Organization access](https://github.com/BCDevOps/devops-requests) for team members that do not need access to the OpenShift platform.
 
@@ -151,14 +152,15 @@ If your organization requires that you keep data related to this application for
 
 ### Delete any objects remaining in related services
 You may have resources that are indirectly connected to your application, such as:
+
 * Rocketchat channels and integrations (webhooks)
-    * To delete an **integration** (webhook), click the Administration link that is above the left navigation bar (it looks like three vertical dots), then Workspace, then Integrations.  Select the integration and scroll to the bottom of the form.  Click the 'Delete' button.
-    * To delete a **Rocket.Chat** room or channel, as above, click the Administration link that is above the left navigation bar, then Workspace, then 'Rooms'.  Select the room.  In the right navigation, scroll to the bottom of the form and click 'Delete'.  Only a room owner can delete a room.  This operation cannot be undone.
+  * To delete an **integration** (webhook), click the Administration link that is above the left navigation bar (it looks like three vertical dots), then Workspace, then Integrations.  Select the integration and scroll to the bottom of the form.  Click the 'Delete' button.
+  * To delete a **Rocket.Chat** room or channel, as above, click the Administration link that is above the left navigation bar, then Workspace, then 'Rooms'.  Select the room.  In the right navigation, scroll to the bottom of the form and click 'Delete'.  Only a room owner can delete a room.  This operation cannot be undone.
 * Remove or update documentation in public or private-facing websites.
 * If you've requested for other BCGov resources or Common Components, please also request for resource and access remove with the corresponding teams. Some of the common ones are Single Sign-On (SSO), S3 storage, Common Hosted Email Service (CHES) or the Common Hosted Form Service (CHEFS), etc. You can find a list of them for reference from the [Saas Directory](https://digital.gov.bc.ca/cloud/services/saas/directory/).
 ---
 ---
 ## Related pages 
-- [Build an application](/build-an-application/)
-- [Deploy an application](/deploy-an-application/)
-- [Maintain an application](/maintain-an-application/)
+- [Build an application](../build-deploy-and-maintain-apps/build-an-application.md)
+- [Deploy an application](../build-deploy-and-maintain-apps/deploy-an-application.md)
+- [Maintain an application](../build-deploy-and-maintain-apps/maintain-an-application.md)

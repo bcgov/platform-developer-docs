@@ -28,7 +28,7 @@ The BC Gov Private Cloud PaaS OpenShift 101 and 201 courses include a theory 'wo
 
 If the courses fill up, email PlatformServicesTeam@gov.bc.ca - preference is given to recently onboarded teams. If you’re unable to attend a training session, we will soon be offering recordings. 
 
-[Register for an OpenShift course](%WORDPRESS_BASE_URL%/private-cloud/support-and-community/platform-training-and-resources/).
+[Register for an OpenShift course](https://cloud.gov.bc.ca/private-cloud/support-and-community/platform-training-and-resources/).
 
 You can review the materials for the OpenShift 101 and OpenShift 201 training [here.](https://github.com/BCDevOps/devops-platform-workshops/blob/master/README.md) 
 
@@ -36,7 +36,7 @@ You can review the materials for the OpenShift 101 and OpenShift 201 training [h
 
 The [how to workshops](https://github.com/bcgov/how-to-workshops) page hosts some demo projects and quick start guides that may assist you in getting stared with network policies and Crunchy DB databases.  
  
- ## Video resources
+## Video resources
 
 The videos below can also be found on this [YouTube playlist](https://www.youtube.com/playlist?list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg).
 
@@ -98,5 +98,7 @@ The videos below can also be found on this [YouTube playlist](https://www.youtub
 
 ---
 Related links:
-- [External training resources](/training-external-resources/)
+
+- [External training resources](../training-and-learning/training-external-resources.md)
+
 ---

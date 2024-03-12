@@ -42,6 +42,7 @@ In this guide, you will learn how to access Vault and deploy a working example u
 ## Access
 
 There are two types of access to manage secrets on Vault,
+
 - User Access
 - Kubernetes Service Account (KSA) Access
 
@@ -114,6 +115,7 @@ For each OpenShift Project Set ($LICENSE_PLATE-dev/test/prod/tools - eg: abc123-
 #### Verify your Vault resources
 
 Once authenticated to Vault you will see three secret engines:
+
 - `$LICENSE_PLATE-prod`
 - `$LICENSE_PLATE-nonprod`
 - `cubbyhole`
@@ -197,6 +199,7 @@ $LICENSE_PLATE-prod                     #secret engine
 #### Sample deployment using the Kubernetes Service Account
 
 When you look at the [vault-demo-app](https://github.com/bcgov/platform-services-vault-demo-app) you'll see there's already a deployment template to assist. The three important parts of this vault demo are:
+
 - part 1 - `annotations`
 - part 2 - `serviceaccount`
 - part 3 - source secret file

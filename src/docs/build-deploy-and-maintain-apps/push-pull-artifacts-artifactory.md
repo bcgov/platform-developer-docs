@@ -45,9 +45,9 @@ That's it! The next time you restart your pod, it will pull the image through Ar
 
 This is the process you would use to pull images from a private repository in your Artifactory project. If you are trying to pull images from one of Artifactory's remote (caching) repositories, use the instructions for [Pulling container images using a cluster-wide pull secret](#pulling-container-images-using-a-cluster-wide-pull-secret) instead.
 
-Make sure you've added your Artifactory service account to your Artifactory project already. You can find instructions for this in our [Setup an Artifactory project and repository](/setup-artifactory-project-repository/) documentation.
+Make sure you've added your Artifactory service account to your Artifactory project already. You can find instructions for this in our [Setup an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md) documentation.
 
-You'll need your Artifactory service account's username and password. Instructions on how to find this information are in our [Set up an Artifactory service account](/setup-artifactory-service-account/) documentation.
+You'll need your Artifactory service account's username and password. Instructions on how to find this information are in our [Set up an Artifactory service account](../build-deploy-and-maintain-apps/setup-artifactory-service-account.md) documentation.
 
 ### Test your account and pull locally
 
@@ -70,7 +70,7 @@ To pull from Artifactory in OpenShift, you need the following:
 2. A reference to that pull secret in your build/deployment configuration.
 3. A reference to the Artifactory URL wherever you reference your image.
 
-Archeobot (the operator that runs the management of `ArtifactoryServiceAccount` and `ArtifactoryProject` objects in OpenShift) automatically creates a pull secret for you in whatever namespace contains the relevant `ArtifactoryServiceAccount` object. Simply find the name of this pull secret (you'll find instructions in our [Set up an Artifactory service account](/setup-artifactory-service-account/) documentation) if you only need to use this pull secret in the same namespace. 
+Archeobot (the operator that runs the management of `ArtifactoryServiceAccount` and `ArtifactoryProject` objects in OpenShift) automatically creates a pull secret for you in whatever namespace contains the relevant `ArtifactoryServiceAccount` object. Simply find the name of this pull secret (you'll find instructions in our [Set up an Artifactory service account](../build-deploy-and-maintain-apps/setup-artifactory-service-account.md) documentation) if you only need to use this pull secret in the same namespace. 
 
 If you need to re-create that pull secret in a different namespace, you can either copy-paste the yaml from the existing secret, or you can create a new one like this:
 
@@ -200,8 +200,9 @@ If your team uses a specific package type not shown here, consider creating a pu
 
 ## Related pages
 
-* [Set up an Artifactory service account](/setup-artifactory-service-account/)
-* [Set up an Artifactory project and repository](/setup-artifactory-project-repository/)
+
+* [Set up an Artifactory service account](../build-deploy-and-maintain-apps/setup-artifactory-service-account.md)
+* [Set up an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md)
 * [NPM repository](https://registry.npmjs.org)
 * [repo-mountie assemble file](https://github.com/bcgov/repomountie/blob/master/.s2i/bin/assemble)
 

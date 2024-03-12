@@ -51,4 +51,4 @@ So, what does this mean for your software architecture?
 
 ## High availability database options
 
-For information on open-source and free options for highly-available database software, check out our [Open-Source Database Technologies](/opensource-database-technologies/) documentation.
+For information on open-source and free options for highly-available database software, check out our [Open-Source Database Technologies](../database-and-api-management/opensource-database-technologies.md) documentation.

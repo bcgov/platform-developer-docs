@@ -21,7 +21,7 @@ sort_order: 3
 # Create monitoring dashboards in Sysdig Monitor
 Last updated: **January 2, 2024**
 
-After you  [create a sysdig-team](/sysdig-monitor-setup-team) and set up a dedicated space in Sysdig to monitor applications in your OpenShift Project Set, follow the steps in this guide to learn more about monitoring.
+After you  [create a sysdig-team](../app-monitoring/sysdig-monitor-setup-team.md) and set up a dedicated space in Sysdig to monitor applications in your OpenShift Project Set, follow the steps in this guide to learn more about monitoring.
 
 ## On this page
 
@@ -85,8 +85,8 @@ Once a dashboard is deleted, you can't get it back. That's why it's highly recom
 --- 
 
 ## Related pages
-- [Set up a team in Sysdig Monitor](/sysdig-monitor-setup-team/)
-- [Set up advanced functions in Sysdig Monitor](/sysdig-monitor-set-up-advanced-functions/)
+- [Set up a team in Sysdig Monitor](../app-monitoring/sysdig-monitor-setup-team.md)
+- [Set up advanced functions in Sysdig Monitor](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
 - [Sysdig Monitor](https://docs.sysdig.com/en/sysdig-monitor.html)
 - [Sysdig Monitor Dashboards](https://docs.sysdig.com/en/dashboards.html)
 - [The four Golden Signals of Monitoring](https://sysdig.com/blog/golden-signals-kubernetes)

@@ -33,7 +33,7 @@ It's crucial to regularly monitor resource dashboards to comprehend your applica
 
 ## Prepare request for quota increase
 
-To effectively utilize Resource Monitoring Dashboards, ensure that you have your Sysdig team set up and are familiar with creating and using template dashboards. If you're not already familiar with these concepts, please refer to the [Sysdig documentation on creating monitoring dashboards](/sysdig-monitor-create-monitoring-dashboards/).
+To effectively utilize Resource Monitoring Dashboards, ensure that you have your Sysdig team set up and are familiar with creating and using template dashboards. If you're not already familiar with these concepts, please refer to the [Sysdig documentation on creating monitoring dashboards](../app-monitoring/sysdig-monitor-create-monitoring-dashboards.md).
 
 Additionally, familiarize yourself with our quota approval process before proceeding. You can find details on the [quota approval process here](https://hackmd.io/@jleach/BylJfafRs#Quota-Approval-Process).
 

@@ -39,6 +39,7 @@ Any product teams working in the Silver or Gold clusters on the BC Gov Private C
 ## Automation technologies
 
 Currently, the following technologies are available to product teams:
+
 - [ArgoCD](https://github.com/BCDevOps/openshift-wiki/blob/b1a4e6db91932fd3f29705a5c8ee44983abf8763/docs/ArgoCD/argocd_info.md)
 - [GitHub Actions](https://github.com/bcgov/security-pipeline-templates/tree/main/.github/workflows)
 - [OpenShift Pipelines (Tekton)](https://github.com/bcgov/security-pipeline-templates/tree/main/tekton)
@@ -67,10 +68,11 @@ If you want to contribute to a pipeline template, you can fork a repository and 
 
 ## Related training content
 
-The [OpenShift 201 training](/training-from-the-platform-services-team/) features content related to using pipelines. There is a related lab exercise and video demonstration [here](https://github.com/BCDevOps/devops-platform-workshops/blob/master/openshift-201/pipelines.md)
+The [OpenShift 201 training](../training-and-learning/training-from-the-platform-services-team.md) features content related to using pipelines. There is a related lab exercise and video demonstration [here](https://github.com/BCDevOps/devops-platform-workshops/blob/master/openshift-201/pipelines.md)
 
 ---
 Related links:
+
 * [Security Pipeline Templates](https://github.com/bcgov/security-pipeline-templates)
 * [ArgoCD](https://github.com/BCDevOps/openshift-wiki/blob/b1a4e6db91932fd3f29705a5c8ee44983abf8763/docs/ArgoCD/argocd_info.md)
 * [GitHub Actions](https://github.com/bcgov/security-pipeline-templates/tree/main/.github/workflows)

@@ -45,7 +45,7 @@ There is no cost associated with using Artifactory.
 
 Remote repositories serve as caches/proxies for all major public artifact repositories/registries and several private repositories/registries where B.C. government owns licensed access. These repositories cache artifacts that are pulled through them, reducing build time and network traffic. The Platform Team encourages any team on the OpenShift platform to make use of these remote repositories for pulling artifacts from public registries such as DockerHub, NPM and PyPi. Artifactory also provides easy access to RedHat's private image registries.
 
-Access to remote (caching) repositories is available by default to anyone in the Silver, Gold or Emerald clusters. You can learn more about how to make use of these remote repositories in our [Pull artifacts from Artifactory](/push-pull-artifacts-artifactory/) documentation.
+Access to remote (caching) repositories is available by default to anyone in the Silver, Gold or Emerald clusters. You can learn more about how to make use of these remote repositories in our [Pull artifacts from Artifactory](../build-deploy-and-maintain-apps/push-pull-artifacts-artifactory.md) documentation.
 
 ### Which remote registries are available through Artifactory?
 
@@ -59,7 +59,7 @@ If there's a particular public repository you'd like to be cached through Artifa
 
 Artifactory Projects are spaces of quota-limited storage where teams have full control. This lets teams create their own private repositories in Artifactory where they can push and pull their own artifacts of any type. It also allows teams to control access to these repositories, similar to the way teams control access to their own OpenShift namespaces.
 
-Once your team has an Artifactory Project, you can create your own local repositories as you require. For more information, see [Setup an Artifactory project and repository](/setup-artifactory-project-repository/).
+Once your team has an Artifactory Project, you can create your own local repositories as you require. For more information, see [Setup an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md).
 
 ## Xray artifact scanning
 
@@ -94,13 +94,14 @@ Other operations require turning Artifactory to read-only mode. In read-only mod
 ---
 ## Related pages
 
+
 * [JFROG documentation](https://www.jfrog.com/confluence/site/documentation)
 * [Privacy Impact Assessment (PIA)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/privacy/privacy-impact-assessments)
 * [Security Threat Risk Assessment (STRA)](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/security-threat-and-risk-assessment)
 * [#devops-artifactory](https://chat.developer.gov.bc.ca/channel/devops-artifactory)
 * [#devops-sos](https://chat.developer.gov.bc.ca/channel/devops-sos)
 * [#devops-alerts](https://chat.developer.gov.bc.ca/channel/devops-alerts)
-* [Setup an Artifactory service account](/setup-artifactory-service-account/)
-* [Setup an Artifactory project and repository](/setup-artifactory-project-repository/)
+* [Setup an Artifactory service account](../build-deploy-and-maintain-apps/setup-artifactory-service-account.md)
+* [Setup an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md)
 
 ---

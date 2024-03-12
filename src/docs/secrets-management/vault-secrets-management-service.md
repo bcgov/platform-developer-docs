@@ -66,7 +66,7 @@ You don’t need to request access to Vault. If you have a project set, you have
 
 Service Accounts take the form of `licensePlate-vault`
 
-Here is the [step-by-step guide on integrating Vault](/vault-getting-started-guide/) into your application on OpenShift.
+Here is the [step-by-step guide on integrating Vault](../secrets-management/vault-getting-started-guide.md) into your application on OpenShift.
 
 ## Availability
 
@@ -122,6 +122,7 @@ An STRA for Vault has been completed by the Platform Services team.
 
 ---
 Related links:
-- [Vault getting started guide](/vault-getting-started-guide/)
-- [Security best practices for apps](/security-best-practices-for-apps/)
+
+- [Vault getting started guide](../secrets-management/vault-getting-started-guide.md)
+- [Security best practices for apps](../security-and-privacy-compliance/security-best-practices-for-apps.md)
 ---

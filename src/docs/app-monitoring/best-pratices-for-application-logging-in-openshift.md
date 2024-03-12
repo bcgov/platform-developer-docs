@@ -50,7 +50,7 @@ Pods might restart to relocate from one node to another, causing logs to vanish 
 
 Kibana serves as a centralized tool that gathers log messages, known as "console logs," from the standard output and standard error streams of your application. It covers all pods running on the OpenShift platform, preserving these logs for approximately 14 days. While the retention period may vary slightly, any adjustment will not exceed 24 hours.
 
-Should your team require log storage beyond the 14-day window, it's your responsibility to implement a solution. The Platform Team recommends leveraging the [OCIO Object Storage service](/platform-storage) for efficient log storage. For additional details, refer to the next section on logs and long-term log retention.
+Should your team require log storage beyond the 14-day window, it's your responsibility to implement a solution. The Platform Team recommends leveraging the [OCIO Object Storage service](../platform-architecture-reference/platform-storage.md) for efficient log storage. For additional details, refer to the next section on logs and long-term log retention.
 
 ### Accessing Kibana with OpenShift credentials
 To access Kibana, use your OpenShift credentials. If you can view a pod's console logs in the OpenShift web console, you can seamlessly access the same pod's logs in Kibana. A minimal setup in Kibana is required for log viewing and querying, especially if you're new to Kibana.

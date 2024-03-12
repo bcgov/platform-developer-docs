@@ -24,10 +24,11 @@ Last updated: **January 30, 2024**
 Artifactory access is controlled through Artifactory service accounts. Service accounts are meant to be shared by teams and used by automation tools like pipelines.
 
 When referring to service accounts, keep in mind the following differences:
+
 * `ArtifactoryServiceAccount` refers to an OpenShift object with type `ArtifactoryServiceAccount`. This is a custom resource that the Platform Services team created in OpenShift.
 * Artifactory "service account" refers to the actual account that exists inside the Artifactory software, which you can then use to interact with Artifactory's features. While closely related to each other, they're not the same.
 
-An Artifactory service account is not required to make use of the remote (caching) Docker repositories or the Platform Team's images in `bcgov-docker-local`. There are cluster-wide pull secrets that allow you to make use of these Docker repos without any additional effort. You can learn how to do this in our [Pull artifacts from Artifactory](/push-pull-artifacts-artifactory/) documentation. A separate Artifactory service account is only required for pulling Docker images from private repositories, or artifacts other than Docker images. 
+An Artifactory service account is not required to make use of the remote (caching) Docker repositories or the Platform Team's images in `bcgov-docker-local`. There are cluster-wide pull secrets that allow you to make use of these Docker repos without any additional effort. You can learn how to do this in our [Pull artifacts from Artifactory](../build-deploy-and-maintain-apps/push-pull-artifacts-artifactory.md) documentation. A separate Artifactory service account is only required for pulling Docker images from private repositories, or artifacts other than Docker images. 
 
 
 ## On this page
@@ -46,7 +47,9 @@ If your project is established in the Gold clusters, you will need to create you
 
 Run the following command to create a new service account:
 
-`oc process -f https://raw.githubusercontent.com/bcgov/platform-services-archeobot/master/archeobot/config/samples/tmpl-artifactoryserviceaccount.yaml -p NAME="[ASAname]" -p DESCRIPTOR="[Description of Service Account]" | oc create -f -`
+```bash
+oc process -f https://raw.githubusercontent.com/bcgov/platform-services-archeobot/master/archeobot/config/samples/tmpl-artifactoryserviceaccount.yaml -p NAME="[ASAname]" -p DESCRIPTOR="[Description of Service Account]" | oc create -f -
+```
 
 The `ASAname` refers to the name of the ArtifactoryServiceAccount object, not the actual account. The Platform Team recommends choosing a name that reflects how you plan to use the account. For instance, if you're creating an account specifically for your Tekton pipeline, a suitable name could be `tekton` for the Artifactory Service Account object. This results in a secret named `artifacts-tekton-[random]` and an account named `jenkins-[namespace]-[random]`. There's no need to worry about name collisions with other teams; your account name incorporates your namespace plate (the six alphanumeric characters preceding `-tools`, `-dev`, `-test`, or `-prod` in the namespace name). Even if another team named their ArtifactoryServiceAccount `jenkins`, they have a distinct name.
 
@@ -80,13 +83,14 @@ If you have unintentionally deleted the secret for your Artifactory service acco
 
 If you delete the default service account this way, a new one will automatically be created for you. Otherwise, you're free to create a new service account using the steps outlined in [Create a service account](#create-a-service-account). This will create for you a new service account with new secrets that you can use.
 
-Keep in mind that this is a _new_ account, and that you will need to re-add this account to your Artifactory Project(s), if necessary. Instructions for this can be found in our [Setup an Artifactory project and repository](/setup-artifactory-project-repository/) documentation.
+Keep in mind that this is a _new_ account, and that you will need to re-add this account to your Artifactory Project(s), if necessary. Instructions for this can be found in our [Setup an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md) documentation.
 
 ---
 ## Related pages
+
 * [Archeobot](https://github.com/bcgov/platform-services-archeobot)
 * [Artifactory](https://artifacts.developer.gov.bc.ca)
 * [Just Ask! tool](https://just-ask.developer.gov.bc.ca/)
-* [Setup an Artifactory project and repository](/setup-artifactory-project-repository/)
+* [Setup an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md)
 
 

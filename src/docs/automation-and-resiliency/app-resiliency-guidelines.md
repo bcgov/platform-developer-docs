@@ -106,7 +106,7 @@ Ensure that your pods are not in a `CrashLoopBackOff` state for too long. If the
 
 You may note that this document is pretty vague about the "hows" of these principles. This is because it can vary from application to application, and technology stack to technology stack. The design needs for a highly available chat application are very different from those of a highly available static website.
 
-If you're looking for some general guidance on what high availability options exist in OpenShift, attend our [OpenShift training](/training-from-the-platform-services-team/). This course covers a number of options, including how to deploy a basic application with high availability.
+If you're looking for some general guidance on what high availability options exist in OpenShift, attend our [OpenShift training](../training-and-learning/training-from-the-platform-services-team.md). This course covers a number of options, including how to deploy a basic application with high availability.
 
 This is where the community comes in. If you have a highly available application, please feel free to fork this document and add links to examples from your application (along with information about your stack and any explanations you feel might be necessary). The more you reach out to help your fellow developers, the stronger a community we will be.
 
@@ -153,12 +153,13 @@ The following are some fantastic examples of applications that operate on the pl
 
 ---
 Related links:
+
 * [12 Factor App](https://12factor.net/)
 * [OpenShift: Compute Resources](https://docs.openshift.com/container-platform/3.11/dev_guide/compute_resources.html#dev-compute-resources)
 * [Horizontal Pod Autoscaler](https://docs.openshift.com/container-platform/3.11/dev_guide/pod_autoscaling.html)
 * [Quality of Service](https://docs.openshift.com/container-platform/3.11/dev_guide/compute_resources.html#quality-of-service-tiers)
 * [Pod Terminations](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-termination)
-* [Training from the Platform Services team](/training-from-the-platform-services-team/)
+* [Training from the Platform Services team](../training-and-learning/training-from-the-platform-services-team.md)
 * [PodDisruptionBudgets](https://kubernetes.io/docs/tasks/run-application/configure-pdb/)
 * [Tools: BCDevOps Backup Container](https://github.com/BCDevOps/backup-container)
 * [Tools: Patroni](https://github.com/BCDevOps/platform-services/tree/master/apps/pgsql/patroni)

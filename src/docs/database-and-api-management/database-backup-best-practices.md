@@ -36,11 +36,12 @@ Once you've set up your recovery plan, you can apply it using one of the many [a
 
 Before we dig into the details of how to create and implement your data recovery plan, we should discuss a few terms and basics.
 
-For a quick introduction to databases in general, check out our [Open-Source Database Technologies](/opensource-database-technologies/) document. This is a great spot to get a more detailed introduction to some database-specific terminology.
+For a quick introduction to databases in general, check out our [Open-Source Database Technologies](../database-and-api-management/opensource-database-technologies.md) document. This is a great spot to get a more detailed introduction to some database-specific terminology.
 
 ### Database dumps
 
 Every major DBMS (database management software) comes with a **backup utility tool**. You can find the documentation for the most common DBMSes on the OpenShift Platform below:
+
 * Postgres: [pg_dump](https://www.postgresql.org/docs/current/app-pgdump.html)
 * MongoDB: [mongodump](https://www.mongodb.com/docs/database-tools/mongodump/)
 * MySQL: [mysqldump](https://dev.mysql.com/doc/refman/8.0/en/mysqldump.html)
@@ -83,7 +84,7 @@ It might seem like a good idea to just skip delta backups entirely, and to run o
 
 [ ] **Where will the backups be stored?**
 
-Most teams on the OpenShift platform choose between two common defaults: an `nfs-file-backup` PVC (persistent volume claim), or an S3 bucket. You can find out more in [our Platform Storage documentation](/platform-storage/).
+Most teams on the OpenShift platform choose between two common defaults: an `nfs-file-backup` PVC (persistent volume claim), or an S3 bucket. You can find out more in [our Platform Storage documentation](../platform-architecture-reference/platform-storage.md).
 
 You should always store backup files in multiple physical locations. If some major catastrophe were to impact the physical space that houses the OpenShift cluster (like a fire or flood), you will still be able to recover your data because you have made sure to store copies of your backups in another location.
 
@@ -102,6 +103,7 @@ In order to provision an S3 bucket for your team, you should contact your minist
 [ ] **How many backup files will you keep?**
 
 Most teams retain their backup files based on a schedule. Let's consider a team running database backups once per day. They might use a schedule that looks like this:
+
 - Daily Backups: 6
 - Weekly Backups: 4
 - Monthly Backups: 3
@@ -115,6 +117,7 @@ If your team runs backups more often than once per day, you can add another appr
 [ ] **How will your team be notified of backup problems?**
 
 Backup problems can appear in two different ways:
+
 1. The backup process can fail. The backup utility will produce an error and usually doesn't produce a dump file.
 2. The backup utility thinks it has successfully produced a dump file, but the file is corrupted or incomplete. This will not produce an error until you attempt to recover your database from this dump file.
 
@@ -131,6 +134,7 @@ This second part of your data recovery plan should answer the following question
 In the previous section, you decided how to store your dump files. You should also plan for how you will access them if you need to recover your database.
 
 If you have decided to use an `nfs-file-backup` PVC, you should consider what your recovery process would look like if:
+
 * the PVC remains intact in your namespace.
 * the PVC needs to be recovered from the external backup. Remember that this means you will need to contact the storage administrators for their help in recovering your dump files. You should find out now what that process looks like and how to contact them.
 
@@ -139,12 +143,14 @@ If you have decided to use an S3 bucket, your recovery process should include a 
 [ ] **What does the recovery process look like?**
 
 Most teams plan to set up a new database and then recover their dump files into that database. This process is identical to how you would test your dump files after running a backup. It's easy, well-tested, and reliable. If you choose to use this method, you should consider that:
+
 * your application will need to point to the service for this new database
 * your pipeline or other deployment automation may view this new database as a different object from the old database
 
 If your team wants to use point-in-time recovery, the process may look very different from recovering into a new database. The specific details will vary depending on the DBMS. You should investigate the documentation for your DBMS.
 
 Your team should outline the full recovery process with special focus on those steps that are not included in the dump file tests. You will probably need to have multiple different recovery processes to account for the different types of database failure. You should consider what your recovery process will look like if:
+
 * the database is still present and functioning, but has suffered data corruption
 * the database has completely failed and needs to be reinitiated
 * a larger failure requires that you recover into an empty namespace
@@ -155,9 +161,10 @@ Your team should schedule regular tests for each of the recovery procedures you 
 
 The best way to ensure the integrity of your data is to prevent problems from occurring in the first place. Monitoring your database status can help you to prevent issues that might otherwise require database recovery.
 
-Most teams use [Sysdig](/sysdig-monitor-onboarding/) for monitoring many parts of their applications, including their databases. Full documentation on monitoring is out of the scope of this particular document, but you'll be able to find more on that in our Sysdig documentation!
+Most teams use [Sysdig](../app-monitoring/sysdig-monitor-onboarding.md) for monitoring many parts of their applications, including their databases. Full documentation on monitoring is out of the scope of this particular document, but you'll be able to find more on that in our Sysdig documentation!
 
 When setting up monitoring for your database, you should pay special attention to:
+
 * remaining storage space
 * load on the primary database instance
 * error messages appearing the logs
@@ -165,6 +172,7 @@ When setting up monitoring for your database, you should pay special attention t
 Your team should set up thresholds that trigger Sysdig to notify you. When setting up these thresholds, remember that you're trying to learn about potential problems before they become problems. Make sure you leave enough room between your threshold and point of failure so that your team has time to learn about the problem and act on it before failure occurs.
 
 Keep in mind:
+
 * many DBMS will prevent your database from starting if the storage is too full. This is to prevent data corruption. You should set your threshold well below this point for your DBMS. For Patroni, this is 90%, so we recommend a threshold of 80 or below.
 * if you are close to the maximum quota for your namespace, you may not be able to increase your storage space or CPU/memory to prevent failure while you investigate the root cause. Set your thresholds accordingly.
 
@@ -185,6 +193,7 @@ The backup container is already built to help you answer most of the questions i
 You should take a look at the [documentation for the backup container](https://github.com/BCDevOps/backup-container) to find out more about how it works and how to use it.
 
 The recovery plan questions at a glance:
+
 * **What data do you want to back up?** Everything.
 * **How often you want to back up your data?** Configurable, but daily by default.
 * **Where will the backups be stored?** An `nfs-file-backup` PVC. If you wish to use S3, you can add your own small automation step to send the dump file to your bucket.
@@ -203,6 +212,7 @@ You can read more in the official [documentation on CrunchyDB backup and restore
 The backup features of the CrunchyDB operator are powerful, but they still require that you set up a lot of your own automation. You'll be able to find some help on the #crunchydb channel on RocketChat. You can also take a look at the [backup-container](https://github.com/BCDevOps/backup-container). It contains scripts for automating the exact kinds of tasks you'll need to automate here, and can be used as a template.
 
 The recovery plan questions at a glance:
+
 * **What data do you want to back up?** Everything.
 * **How often you want to back up your data?** Configurable. You will need to use the scheduler to create your own schedule for both backups and recovery tests.
 * **Where will the backups be stored?** Using the `local` option allows you to use the `nfs-file-backup` but requires that you set up the PVC on your own. Using the `s3` option is an easy way to automatically send your dump file to an S3 bucket.

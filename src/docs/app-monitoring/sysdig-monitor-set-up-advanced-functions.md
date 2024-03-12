@@ -56,14 +56,17 @@ PromQL can be used in Alerts as well. The following example shows an alert for t
 Sysdig has a lightweight Prometheus server (Promscrape) that can [import your application metrics endpoint into Sysdig metrics](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations/working-with-integrations/custom-integrations/collect-prometheus-metrics/migrating-from-promscrape-v1-to-v2/#migrating-from-promscrape-v1-to-v2).
 
 To enable Promscrape to find your application metrics, do the following:
+
 1. Make sure the application metrics endpoint is returning Prometheus metrics. To test this, you can expose the service and curl on the URL.
 1. Add the following annotations to the application pods:
+
   ```yaml
   prometheus.io/scrape: true
   prometheus.io/port: <metrics_port>
   prometheus.io/path: <metrics_path>
   # the path is usually at /metrics
   ```
+
   Don't add the annotations to the pods directly. This should be part of the infrastructure code and added in the templates. For example, if the application is using an OpenShift deployment, the annotation should be added at `deployment.spec.template.metadata.annotations`.
 
 3. Once the annotation is in place, Sysdig can scrape them. On the **Sysdig Explore** tab, look for the sysdig metrics there (Sysdig does relabeling of the metrics, so they will appear as native sysdig metrics now instead of coming from promQL Query)
@@ -73,8 +76,9 @@ To enable Promscrape to find your application metrics, do the following:
 ---
 
 ## Related pages
-- [Set up a team in Sysdig Monitor](/sysdig-monitor-setup-team/)
-- [Create alert channels in Sysdig Monitor](/sysdig-monitor-create-alert-channels/)
+
+- [Set up a team in Sysdig Monitor](../app-monitoring/sysdig-monitor-setup-team.md)
+- [Create alert channels in Sysdig Monitor](../app-monitoring/sysdig-monitor-create-alert-channels.md)
 - [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 - [Migrate Using Default Configuration](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations/working-with-integrations/custom-integrations/collect-prometheus-metrics/migrating-from-promscrape-v1-to-v2/#migrate-using-default-configuration)
 - [Sysdig Monitor](https://docs.sysdig.com/en/sysdig-monitor.html)

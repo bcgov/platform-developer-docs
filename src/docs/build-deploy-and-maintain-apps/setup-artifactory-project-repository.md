@@ -106,7 +106,7 @@ On the left side of the screen, the menu is divided into two sections: one with 
 
 Project privileges are specifically synchronized from Gold to Gold DR and not vice versa. Any alterations to user privileges in your Artifactory Project within Gold DR will be undone once access to Artifactory Gold is reinstated. The use of Artifactory's DR instance is infrequent and temporary, so it's advisable to wait until Artifactory returns to the Gold instance before proceeding with this task. Your patience is appreciated.
 
-After obtaining your project, ensure that you include your Artifactory service account in the project. Having an Artifactory service account is essential for efficiently pushing and pulling artifacts to and from your private repositories. If you haven't set up an Artifactory service account yet, refer to the [Setup an Artifactory service account](/setup-artifactory-service-account/) documentation.
+After obtaining your project, ensure that you include your Artifactory service account in the project. Having an Artifactory service account is essential for efficiently pushing and pulling artifacts to and from your private repositories. If you haven't set up an Artifactory service account yet, refer to the [Setup an Artifactory service account](../build-deploy-and-maintain-apps/setup-artifactory-service-account.md) documentation.
 
 To add a new user or service account: 
 
@@ -116,7 +116,7 @@ To add a new user or service account:
 
 3. Head to the **Users** tab and initiate a search for the username
     - When adding a real person, search for either their GitHub username or government email address. If neither is found, it's likely because they haven't logged into the Artifactory Web Console before. They must do so at least once before being added to your project
-    - For a service account, searching for the OpenShift namespace name (the 6-character code preceding `-dev`, `-test`, `-prod`, or `-tools`) is likely the easiest way to identify the correct service account If none is found, ensure a service account exists in the searched namespace. Refer to our [Artifactory service account](/setup-artifactory-service-account/) documentation for further guidance
+    - For a service account, searching for the OpenShift namespace name (the 6-character code preceding `-dev`, `-test`, `-prod`, or `-tools`) is likely the easiest way to identify the correct service account If none is found, ensure a service account exists in the searched namespace. Refer to our [Artifactory service account](../build-deploy-and-maintain-apps/setup-artifactory-service-account.md) documentation for further guidance
 
 4. Pick the user(s) you want to include, then choose the desired role from the dropdown below:
    - **Contributor**: Limited access, suitable for users needing only view access
@@ -154,9 +154,10 @@ This creates a local repository in your Artifactory Project. Within the next 10 
 ---
 
 ## Related pages
+
 * [Archeobot](https://github.com/bcgov/platform-services-archeobot)
 * [Artifactory](https://artifacts.developer.gov.bc.ca)
 * [Just Ask! tool](https://just-ask.developer.gov.bc.ca/)
-* [Setup an Artifactory service account](/setup-artifactory-service-account/)
+* [Setup an Artifactory service account](../build-deploy-and-maintain-apps/setup-artifactory-service-account.md)
 
 

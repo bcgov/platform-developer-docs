@@ -28,7 +28,7 @@ There are three different resource types on the platform:
 Before asking for more quota for your project set, check if the application is fully using the resources and confirm that the usage is expected. Use the following information to help determine the level of resource the application needs:
 
 - [Resource management guidelines](https://github.com/BCDevOps/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
-- [Application resource tuning](/application-resource-tuning/)
+- [Application resource tuning](../automation-and-resiliency/application-resource-tuning.md)
 
 ## On this page
 * **[Request a quota increase for an OpenShift project set](#request-a-quota-increase-for-an-openshift-project-set)**
@@ -41,9 +41,9 @@ Before asking for more quota for your project set, check if the application is f
 
 Utilize Sysdig to monitor your application, accessing dashboards that display memory, CPU, and storage usage. 
 
-Before requesting a quota increase, it's crucial to monitor and collect metrics illustrating your application's resource utilization. If you haven't already, check out the comprehensive guide on onboarding to application monitoring with Sysdig. Visit [Onboarding to application monitoring with Sysdig](/sysdig-monitor-onboarding/) for a step-by-step instructions for onboarding onto Sysdig and utilizing default dashboards to gain insights into your application's performance. For The documentation has all you need to onboard onto Sysdig and use the default dashboards.
+Before requesting a quota increase, it's crucial to monitor and collect metrics illustrating your application's resource utilization. If you haven't already, check out the comprehensive guide on onboarding to application monitoring with Sysdig. Visit [Onboarding to application monitoring with Sysdig](../app-monitoring/sysdig-monitor-onboarding.md) for a step-by-step instructions for onboarding onto Sysdig and utilizing default dashboards to gain insights into your application's performance. For The documentation has all you need to onboard onto Sysdig and use the default dashboards.
 
-If you have successfully onboarded to Sysdig, we provide a dedicated document outlining the specific metrics and evidence needed when applying for additional resources. This document serves as a guide to assist you in compiling the necessary data effectively. Make sure to gather comprehensive information on resource consumption, covering CPU and memory usage, along with any other relevant metrics specific to your application. For more details on the required metrics and evidence, check the [resource monitoring dashboards](/resource-monitoring-dashboards/) guide page.
+If you have successfully onboarded to Sysdig, we provide a dedicated document outlining the specific metrics and evidence needed when applying for additional resources. This document serves as a guide to assist you in compiling the necessary data effectively. Make sure to gather comprehensive information on resource consumption, covering CPU and memory usage, along with any other relevant metrics specific to your application. For more details on the required metrics and evidence, check the [resource monitoring dashboards](../app-monitoring/resource-monitoring-dashboards.md) guide page.
 
  If you have any issues onboarding to Sysdig, contact the Platform Services team on the applicable [Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig).
 
@@ -52,16 +52,17 @@ Before you request a quota increase, make sure that your project is using its re
 
 If you determine that your application needs a quota increase, you can have a product owner or technical lead on your project make the request on the **Project Edit** page on the [Platform Product Registry](https://registry.developer.gov.bc.ca/). The Platform Services team must approve the request before it's processed.
 
-If you need more resources for CPU, RAM or storage in any of the four namespaces (`dev`, `test`, `tool` or `prod`), you must submit a standard quota increase request through the Platform Product Registry. For more information on quotas, see [OpenShift project resource quotas](/openshift-project-resource-quotas/).
+If you need more resources for CPU, RAM or storage in any of the four namespaces (`dev`, `test`, `tool` or `prod`), you must submit a standard quota increase request through the Platform Product Registry. For more information on quotas, see [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md).
 
 ## Collect application metrics
 
 The Platform Services team needs to know if your application is using the current quotas efficiently. If you're running out of quota, the team wants to review resource-consumption statistics. If you're preparing for an application load increase, the team wants to know the expected increase and how much growth room you still have.
 
 Follow this process:
+
 1. Document what you've attempted to reduce current resource consumption and outline the use cases for the quota increase
 2. Present the resource monitors within your namespace to the Platform Services team. They are interested in understanding the level of resource consumption in your application and how efficiently it utilizes resources
-3. Sysdig offers a pre-built dashboard template designed to visualize and analyze metrics in your OpenShift project. To simplify the process of requesting a quota increase, consider utilizing the Sysdig dashboard template. Instructions can be found in [here](/sysdig-monitor-create-monitoring-dashboards/)
+3. Sysdig offers a pre-built dashboard template designed to visualize and analyze metrics in your OpenShift project. To simplify the process of requesting a quota increase, consider utilizing the Sysdig dashboard template. Instructions can be found in [here](../app-monitoring/sysdig-monitor-create-monitoring-dashboards.md)
 
    You should collect data for at least a week or however long it takes to see a pattern. Consider each component in the namespace, whether it's a part of the application or DevOps tools.
 
@@ -96,12 +97,13 @@ Once the quota increase request is approved, the specified namespaces are upgrad
 
 ---
 ## Related pages
+
 * [Resource Management Guidelines](https://github.com/BCDevOps/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
 * [Application Resource Tuning](https://github.com/BCDevOps/developer-experience/blob/master/docs/resource-tuning-recommendations.md)
-* [Get Started with Sysdig Monitoring](/sysdig-monitor-onboarding/)
+* [Get Started with Sysdig Monitoring](../app-monitoring/sysdig-monitor-onboarding.md)
 * [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 * [Platform Product Registry](https://registry.developer.gov.bc.ca/)
-* [OpenShift project resource quotas](/openshift-project-resource-quotas/)
+* [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md)
 * [S3 Object Storage Service](https://github.com/BCDevOps/OpenShift4-Migration/issues/59)
 
 

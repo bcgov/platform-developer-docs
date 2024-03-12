@@ -25,11 +25,11 @@ Monitor your Kubernetes hosts with [Sysdig Monitor](https://sysdig.com/products/
 
 ## Follow this onboarding guide
 
-1. [Set up a team in Sysdig Monitor](/sysdig-monitor-setup-team/)
-2. [Create monitoring dashboards in Sysdig Monitor](/sysdig-monitor-create-monitoring-dashboards/)
-3. [Create alerts and notifications in Sysdig Monitor](/sysdig-monitor-create-alert-channels/)
-4. [Set up advanced metrics in Sysdig Monitor](/sysdig-monitor-set-up-advanced-functions/)
-5. [Resource monitoring dashboards](/resource-monitoring-dashboards/)
+1. [Set up a team in Sysdig Monitor](../app-monitoring/sysdig-monitor-setup-team.md)
+2. [Create monitoring dashboards in Sysdig Monitor](../app-monitoring/sysdig-monitor-create-monitoring-dashboards.md)
+3. [Create alerts and notifications in Sysdig Monitor](../app-monitoring/sysdig-monitor-create-alert-channels.md)
+4. [Set up advanced metrics in Sysdig Monitor](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
+5. [Resource monitoring dashboards](../app-monitoring/resource-monitoring-dashboards.md)
 
 If you have any questions about Sysdig or application monitoring, please contact the Platform Services team on the [#devops-sysdig ](https://chat.developer.gov.bc.ca/channel/devops-sysdig) channel in Rocket.Chat.
 
@@ -39,7 +39,7 @@ If you have any questions about Sysdig or application monitoring, please contact
 ## Related pages
 - [BCDevOps Sysdig Monitor Service](https://app.sysdigcloud.com/api/oauth/openid/bcdevops)
 - [Sysdig Monitor](https://sysdig.com/products/monitor/)
-- [OpenShift project resource quotas](/openshift-project-resource-quotas/)
+- [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md)
 - [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/)
 - [Monitoring with Sysdig](https://digital.gov.bc.ca/cloud/services/private/products-tools/sysdig/)
 - [Sydig User Profile](https://app.sysdigcloud.com/#/settings/user)

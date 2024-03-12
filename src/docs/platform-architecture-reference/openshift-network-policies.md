@@ -38,6 +38,7 @@ Without a network policy in place, all pods in a namespace are accessible from o
 Network Policies allow you to specify how a pod is allowed to communicate with various network entities.
 
 Entities that a Pod can communicate with are identified through a combination of these 3 identifiers:
+
 * Other pods that are allowed (exception: a pod cannot block access to itself)
 * Namespaces that are allowed
 * IP blocks (exception: traffic to and from the node where a Pod is running is always allowed, regardless of the IP address of the Pod or the node)
@@ -110,13 +111,10 @@ spec:
 What this above NetwokPolicy example does....:
 
 1. isolates "role=db" pods in the "default" namespace for both ingress and egress traffic (if they weren't already isolated)
-
 2. **Ingress rules** allows connections to all pods in the "default" namespace with the label "role=db" on TCP port 6379 from:
-
-- any pod in the "default" namespace with the label "role=frontend"
-- any pod in a namespace with the label "project=myproject"
-- IP addresses in the ranges 172.17.0.0–172.17.0.255 and 172.17.2.0–172.17.255.255 (ie, all of 172.17.0.0/16 except 172.17.1.0/24)
-
+  - any pod in the "default" namespace with the label "role=frontend"
+  - any pod in a namespace with the label "project=myproject"
+  - IP addresses in the ranges 172.17.0.0–172.17.0.255 and 172.17.2.0–172.17.255.255 (ie, all of 172.17.0.0/16 except 172.17.1.0/24)
 3. **Egress rules** allows connections from any pod in the "default" namespace with the label "role=db" to CIDR 10.0.0.0/24 on TCP port 5978
 
 **NOTES:**

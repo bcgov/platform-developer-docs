@@ -48,15 +48,15 @@ The tool monitors the `lastUpdateTime` in the `Progressing` section of the `stat
 
 You can verify the timestamp on your deployment in the YAML under `status`. It's essential to note that the tool specifically checks the `Processing` type condition. Other conditions, such as `Available`, don't indicate updates in the pods but merely track the last time pods were restarted.
 
- ```yaml
-   conditions:
+```yaml
+conditions:
   - lastTransitionTime: "2021-11-25T17:04:01Z"
     lastUpdateTime: "2021-11-25T17:04:11Z"
     message: replication controller "backup-postgresql-1" successfully rolled out
     reason: NewReplicationControllerAvailable
     status: "True"
     type: Progressing
-  ```
+```
 
 ## Deployments, deploymentconfigs and statefulsets that are crashing constantly
 
@@ -72,7 +72,7 @@ Before you scale your pods back up, make sure to fix the underlying issues that 
 
 If your application hasn't been updated in over a year, your technical team should create a new image. This ensures that your application can benefit from any security patches released in the past year. It's highly probable that your image has critical security vulnerabilities if it hasn't been updated for more than a year.
 
- Maintaining your application is part of the [Memorandum of Understanding](https://digital.gov.bc.ca/cloud/services/private/onboard/#memorandum) that teams working on the platform agree to. More detailed docs on [maintaining an image](https://docs.developer.gov.bc.ca/maintain-an-application/#maintain-images) are also available.
+ Maintaining your application is part of the [Memorandum of Understanding](https://digital.gov.bc.ca/cloud/services/private/onboard/#memorandum) that teams working on the platform agree to. More detailed docs on [maintaining an image](../build-deploy-and-maintain-apps/maintain-an-application.md#maintain-images) are also available.
 
 Once you have fixed these issues, you can follow the instructions in [RedHat’s documentation on editing deployments](https://docs.openshift.com/container-platform/4.12/applications/deployments/deployment-strategies.html#odc-editing-deployments_rolling-strategy) to scale your applications back up again.
 
@@ -95,5 +95,5 @@ Be aware that if you scale your deployment back up without addressing the underl
 
 - [RedHat’s documentation on editing deployments](https://docs.openshift.com/container-platform/4.12/applications/deployments/deployment-strategies.html#odc-editing-deployments_rolling-strategy)
 - [Memorandum of Understanding](https://digital.gov.bc.ca/cloud/services/private/onboard/#memorandum)
-- [Maintaining an image](/maintain-an-application/#maintain-images)
+- [Maintaining an image](../build-deploy-and-maintain-apps/maintain-an-application.md#maintain-images)
 

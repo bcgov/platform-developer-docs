@@ -37,7 +37,7 @@ If you want to grant a new user access to OpenShift they must have the following
 - A GitHub account (ideally with a complete profile)
 - Two-factor authentication enabled on their GitHub account
 
-Additionally, the namespace where you are adding the new user must have already have been provisioned through [the new project provisioning process](/provision-new-openshift-project/) and must have one or more administrative users.
+Additionally, the namespace where you are adding the new user must have already have been provisioned through [the new project provisioning process](../openshift-projects-and-access/provision-new-openshift-project.md) and must have one or more administrative users.
 
 ## Add users
 
@@ -84,8 +84,9 @@ Follow these best practices when you grant namespace access to a user:
 
 ---
 Related links:
-* [BC Government organizations in GitHub](/bc-government-organizations-in-github/)
-* [Provision a new project set](/provision-new-openshift-project/)
+
+* [BC Government organizations in GitHub](../../bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/)
+* [Provision a new project set](../openshift-projects-and-access/provision-new-openshift-project.md)
 * [Using Just Ask! to gain access into the BCGov or BCDevops GitHub Organizations](https://www.youtube.com/watch?v=IvdPyx2-qm0)
 * [Add someone to the BC Government GitHub Org](https://just-ask.developer.gov.bc.ca/)
 * [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.9/authentication/using-rbac.html)

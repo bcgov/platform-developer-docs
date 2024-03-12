@@ -29,6 +29,7 @@ We use several different storage technologies in OpenShift. Currently, we have t
 * **S3 Object Storage**: Object-based storage that is available via a web-based API instead of through a mounted directory. A common implementation of this is the Amazon S3 API. This allows remote access storage over the internet that does not require directly attaching to a running system.
 
 ## On this page
+
 - [Storage services](#storage-services)
 - [Tools](#tools)
 - [Storage details](#storage-details)
@@ -39,7 +40,7 @@ We have access to the following storage services for the OpenShift platform.
 
 ### OpenShift Persistent Volumes (NetApp)
 
-All NetApp storage classes support resizing (bigger only). You can start with a small volume and edit your Persistent Volume Claim (PVC) to have a larger `.spec.resources.requests.storage` later if you need more. You may need to restart the pods attached to let the resize trigger on re-mount. **Note: the storage increase is capped by the storage quota assigned to the namespace. For the current resource quota sizes, see [OpenShift project resource quotas](/openshift-project-resource-quotas/).
+All NetApp storage classes support resizing (bigger only). You can start with a small volume and edit your Persistent Volume Claim (PVC) to have a larger `.spec.resources.requests.storage` later if you need more. You may need to restart the pods attached to let the resize trigger on re-mount. **Note: the storage increase is capped by the storage quota assigned to the namespace. For the current resource quota sizes, see [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md).
 
 * **NetApp File**: `netapp-file-standard` is the default storage class for the platform and the type of storage you get if you don't specify a specific `storageClass`.
 
@@ -130,7 +131,8 @@ The speed of each storage solution depends on your workload. ElasticSearch speci
 
 ---
 Related links:
-* [OpenShift project resource quotas](/openshift-project-resource-quotas/)
+
+* [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md)
 * [Backup Container](https://github.com/BCDevOps/backup-container)
 * [Red Hat documentation](https://access.redhat.com/documentation/en-us/red_hat_openshift_container_storage/4.7/html/deploying_and_managing_openshift_container_storage_using_red_hat_openstack_platform/volume-snapshots_osp)
 * [BCDevOps/Backup-Container](https://github.com/bcdevops/backup-container)

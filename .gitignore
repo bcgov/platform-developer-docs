@@ -1,11 +1,2 @@
-*.DS_Store
-node_modules
-
-# Gatsby files
-.cache
-.env.development
-.env.production
-public
-
-# Jest coverage directory
-coverage
+patcher.py
+site
