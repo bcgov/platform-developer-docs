@@ -16,7 +16,6 @@ author: Jonathan Bond
 content_owner: Cailey Jones
 
 sort_order: 9
-sort_order: 9
 ---
 
 # Set up an Artifactory project and repository
