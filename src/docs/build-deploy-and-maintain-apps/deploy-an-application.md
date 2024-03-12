@@ -83,7 +83,7 @@ Ensure that you have access to the registry where your image resides. If you enc
 
 Every application has unique requirements for deployment. These may include environment variables, application secrets, configuration data, and database connectivity, among others. Review all these required parameters and ensure they works fine before deployment. 
 
-**Remember** that sensitive data like API keys or credentials should be stored in [vault](../security-and-privacy-compliance/vault-getting-started-guide.md) in OpenShift.
+**Remember** that sensitive data like API keys or credentials should be stored in [vault](../secrets-management/vault-getting-started-guide.md) in OpenShift.
 
 ### 3. Ensuring the Availability of Necessary Resources in OpenShift
 
@@ -143,7 +143,7 @@ Choose the strategy that best meets your application's needs and expectations, c
 
 ### 3. Setting up environment variables for the application
 
-Environment variables can be defined in the `env` field of the Pod specification and can reference secrets, ConfigMaps, or just be plain text. For sensitive information, it is best to use Vault services. OpenShift can integrate with Vault to inject secrets directly into pods at runtime. This provides an extra layer of security for sensitive data. Find more information on [using Vault](../security-and-privacy-compliance/vault-secrets-management-service.md).
+Environment variables can be defined in the `env` field of the Pod specification and can reference secrets, ConfigMaps, or just be plain text. For sensitive information, it is best to use Vault services. OpenShift can integrate with Vault to inject secrets directly into pods at runtime. This provides an extra layer of security for sensitive data. Find more information on [using Vault](../secrets-management/vault-secrets-management-service.md).
 
 ---
 

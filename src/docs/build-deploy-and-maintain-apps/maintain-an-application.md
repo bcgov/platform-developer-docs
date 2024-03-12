@@ -436,7 +436,7 @@ Vault employs on-disk encryption. This means that even if a malicious actor mana
 
 This provides a higher level of security compared to OpenShift secrets, which are **only encoded, not encrypted**, on disk. Additionally, secrets are encrypted during transit between Vault and your pods as they are being loaded.
 
-To learn of the other advantages of Vault and to get started with it, see [Vault secrets management](../security-and-privacy-compliance/vault-secrets-management-service.md)
+To learn of the other advantages of Vault and to get started with it, see [Vault secrets management](../secrets-management/vault-secrets-management-service.md)
 
 ---
 ## Effective communication in application maintenance
@@ -502,7 +502,7 @@ It is also important to keep the Platform Services [Product Registry](https://re
 - [Backup-container on GitHub](https://github.com/bcgov/backup-container)
 - [Restoring Backup Volumes on OpenShift](../automation-and-resiliency/netapp-backup-restore.md)
 - [Grant user access in OpenShift](../openshift-projects-and-access/grant-user-access-openshift.md)
-- [Vault secrets management](../security-and-privacy-compliance/vault-secrets-management-service.md)
+- [Vault secrets management](../secrets-management/vault-secrets-management-service.md)
 - [Kibana training application logging](https://github.com/bcgov/devops-platform-workshops/blob/master/openshift-201/logging.md)
 - [Check application health after outage](../app-monitoring/check-application-health-after-outage.md)
 - [Building secure and reliable systems e-book](https://sre.google/books/building-secure-reliable-systems/)
