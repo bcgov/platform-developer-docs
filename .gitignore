@@ -1,19 +1,2 @@
-*.DS_Store
-node_modules
-
-# Gatsby files
-.cache
-.env.development
-.env.production
-public
-
-# Jest coverage directory
-coverage
-
-# mkdocs output directory
+patcher.py
 site
-
-.vscode
-.pytest_cache
-.venv
-__pycache__
