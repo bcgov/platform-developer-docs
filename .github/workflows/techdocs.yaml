@@ -9,17 +9,14 @@ on:
       - "mkdocs.yml"
       - "catalog-info.yaml"
       - "src/index.md"
-  workflow_dispatch:
-    inputs:
-      deploy_location:
-        description: "Deploy to"
-        required: true
-        default: dev
-        type: choice
-        options:
-          - dev
-          - prod
-
+  pull_request:
+    branches: [main]
+    paths:
+      - "src/docs/**"
+      - "src/images/**"
+      - "mkdocs.yml"
+      - "catalog-info.yaml"
+      - "src/index.md"
 jobs:
   techdocs_build_job:
     runs-on: ubuntu-latest
@@ -33,7 +30,7 @@ jobs:
         id: build_and_publish
         with:
           publish: "true"
-          production: ${{ github.event_name == 'workflow_dispatch' && inputs.deploy_location == 'prod' }}
+          production: ${{ github.ref == 'refs/heads/main' && 'true' || 'false' }} 
           bucket_name: ${{ secrets.TECHDOCS_S3_BUCKET_NAME }}
           s3_access_key_id: ${{ secrets.TECHDOCS_AWS_ACCESS_KEY_ID }}
           s3_secret_access_key: ${{ secrets.TECHDOCS_AWS_SECRET_ACCESS_KEY }}
