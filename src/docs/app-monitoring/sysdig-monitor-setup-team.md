@@ -56,18 +56,38 @@ The OpenShift Operator runs in the background and creates a Sysdig team RBAC and
 
 ### Part 1 - Compose the sysdig-team object manifest
 
-Below is a sample of the `sysdig-team` custom resource manifest.  We also provide a [custom resource manifest template file](./sysdig-team-sample.yaml) you can use. 
+The platform services team provides a custom resource manifest template yaml file you can use. 
+
+```
+apiVersion: ops.gov.bc.ca/v1alpha1
+kind: SysdigTeam
+metadata:
+  name: <PROJECT_SET_LICENSE_PLATE>-sysdigteam
+  namespace: <PROJECT_SET_LICENSE_PLATE>-tools
+spec:
+  team:
+    description: The Sysdig Team for the OpenShift Project Set <PROJECT_SET_NAME>
+    users:
+    - name: <sysdig_email_for_admin>
+      role: ROLE_TEAM_EDIT
+    - name: <sysdig_email_for_developer>
+      role: ROLE_TEAM_STANDARD
+    - name: <sysdig_email_for_po>
+      role: ROLE_TEAM_READ
+```
+
+Below is a sample of the `sysdig-team` custom resource manifest in use.
 
 ![Sample sysdig-team Custom Resource](../../images/sysdig-team-manifest-sample.png)
 
 
-**Name and Namespace:**
+**Name and Namespace (1):**
 The `sysdig-team` custom resource should be created in your OpenShift project set `tools` namespace. Name it using the license plate number for your project set to make sure it's unique.
 
-**Team Description:**
+**Team Description (2):**
 Add a description for the sysdig team.
 
-**Team Users:**
+**Team Users (3):**
 A list of users to be added to this team.
 
 - `User Name` - Sysdig identifies users by **the email address**, so make sure everyone on your team logs in to Sysdig and obtains the correct email from their [Sysdig User Profile](https://app.sysdigcloud.com/#/settings/user).
