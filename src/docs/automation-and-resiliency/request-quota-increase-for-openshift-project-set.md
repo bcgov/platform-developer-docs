@@ -158,35 +158,68 @@ Once the quota increase request is approved, the specified namespaces are upgrad
 
 ### Examples of answers 
 
-#### Tell us more about the current and desired states of the relevant Openshift objects
 
-- My database backup PVC is currently 10Gi, and already uses 8Gi. This 8Gi includes 3 full backups (one per week) and up to 6 incremental backups (1 for each day since the last full backup). I would like to retain 4 full backups per week plus 1 per month going back 6 months. This means the PVC would need to be able to hold 9 full backups, plus up to 6 incremental backups. I estimate this will require around 20Gi, so I need at least 12Gi more backup storage quota. I'm requesting 15Gi more, just in case the backups change in size a little bit over time.
-
-- My Patroni pods currently use 250m CPU request, 1 CPU limit, 256Mi memory request and 1Gi memory limit for each pod. I would estimate that each Crunchy pod should be given around the same resources, so I'll need enough extra quota to allow for three more pods of approximately this resource allocation to start up.
-
-- My frontend app pods use 250m CPU limit each. Currently, the HPA can spin up 6 of these before I hit the CPU limit quota for my namespace. I don't know how many pods the HPA would attempt to spin up if given more quota, so I'm not sure how much CPU limit I should expect to use. For now, I am requesting a single step increase in my CPU quota, and will revisit if I continue to encounter this problem.
+Note that these examples focus primarily on specific pods or deployments. Chances are, when you are requesting a quota increase, it's in support of a specific deployment or set of deployments. These should be the focus of your request explanations - we don't want you to waste precious time and effort outlining the resource allocations for every single pod in your namespace! Just give us the information that's relevant to the request!
  
-Note that these explanations focus only on the relevant pods and resources. The first request is only for storage space, so only storage space is discussed, and it focuses primarily on the backup PVC because that's the PVC that is hitting the limit. The second request only discusses the database pods, despite the fact that there are presumably application pods present in the namespace, because the database pods are the most relevant to the reasons for the quota request.
+If you're unsure, err on the side of include more information rather than less!
+
+#### Example 1: More space for database backups
+
+> **Why do you need a quota increase?**
+> I need more storage space because my database backup PVC is filling up.
+> 
+> **Outline the current and desired states of the relevant OpenShift objects.**
+> My database backup PVC is currently 10Gi, and already uses 8Gi. This 8Gi includes 3 full backups (one per week) and up to 6 incremental backups (1 for each day since the last full backup). I would like to retain 4 full backups per week plus 1 per month going back 6 months. This means the PVC would need to be able to hold 9 full backups, plus up to 6 incremental backups. I estimate this will require around 20Gi, so I need at least 12Gi more backup storage quota. I'm requesting 15Gi more, just in case the backups change in size a little bit over time.
+> 
+> **What steps have you taken to fit your application into your current quota?**
+> My database backup process already tars and zips the backup files to make the most efficient possible use of the space available. My application is required to retain 6 months of backups, so the total number of backups stored can't be reduced.
+
+This quota request is likely to be approved and probably won't require many (or any) follow-up questions from the Platform Team. This requester did a great job providing all relevant information and outlining exactly why the storage is required. Storage quota is simpler than CPU or memory quota, so it's easier to provide all the necessary information right away.
+
+#### Example 2: Increasing from 2 to 3 replicas per deployment
+
+> **Why do you need a quota increase?**
+> My deployments are all only 2 pods each and I would like to bump them up to the recommended 3, but I hit the CPU limit quota when I try to do that.
+> 
+> **Outline the current and desired states of the relevant OpenShift objects.**
+> I have 4 deployments that each run 2 pods. They are all deployed from vendor-provided helm charts and use the default resource allocations included in the charts. I would like to increase the number of replicas in each deployment to 3, but my namespace doesn't have enough quota to do so. 
+> 
+> **What steps have you taken to fit your application into your current quota?**
+> I am currently using the vendor-recommended resource allocations, so I don't want to reduce the allocations and would prefer to increase the namespace quota.
+
+This request is likely to require a little more engagement from the Platform Team and isn't likely to be approved right away. While we understand the desire to stick to vendor-suggested resource allocation, we have found that the overwhelming majority of vendor defaults are much larger than they need to be. Providing plenty of information on your application's resource _usage_ (not allocation) will help to justify using the vendor-suggested defaults, if your team is confident that they are necessary.
+
+#### Example 3: Temporary quota for a migration between Patroni and CrunchyDB
+
+> **Why do you need a quota increase?**
+> I am trying to switch from Patroni to Crunchy and migration would be much easier if I could run both simultaneously. My current quota is fine for just one database cluster, but I require more quota temporarily so I can run two during the migration process.
+> 
+> **Outline the current and desired states of the relevant OpenShift objects.**
+> My Patroni pods currently use 250m CPU request, 1 CPU limit, 256Mi memory request and 1Gi memory limit for each pod. I would estimate that each Crunchy pod should be given around the same resources, so I'll need enough extra quota to allow for three more pods of approximately this resource allocation to start up.
+> 
+> **What steps have you taken to fit your application into your current quota?**
+> My Patroni pods are sometimes a bit unstable, so I don't want to reduce the resource allocation in case that increases the instability even more.
+
+This request is likely to require a little more engagement from the Platform Team and isn't likely to be approved right away. Patroni stability issues aren't always caused by resource limitations, especially not when the Patroni pods are provided with fairly generous resource allocations like this.
+
+If you can provide any further information on how reduced resource allocation impacts the stability of your Patroni instance, and if you can provide information on the resource usage of your Patroni pods, that will help the Platform Team understand why you believe your Patroni's stability issues are linked to resource allocation, and will make it much more likely that we'll be able to approve this request (or help you find the other cause of these stability issues) much more quickly.
+
+#### Example 4: HPA can't scale up enough pods
+
+> **Why do you need a quota increase?**
+> When my prod app is under high load, the HPA tries to start more pods than the quota allows, and then it gets stuck trying to spin up a pod that isn't allowed to start because the namespace has used up all of its quota.
+> 
+> **Outline the current and desired states of the relevant OpenShift objects.**
+> My frontend app pods use 250m CPU limit each. Currently, the HPA can spin up 6 of these before I hit the CPU limit quota for my namespace. I don't know how many pods the HPA would attempt to spin up if given more quota, so I'm not sure how much CPU limit I should expect to use. For now, I am requesting a single step increase in my CPU quota, and will revisit if I continue to encounter this problem.
+>  
+> **What steps have you taken to fit your application into your current quota?**
+> I tried running my frontend app pods with 150m CPU limit instead, but that caused problems with the application during high load, because the existing pods weren't able to handle load spikes temporarily while the HPA was spinning up new pods. I don't want to try to reclaim CPU limit from my database pods because they're only running at 100m CPU limit, and it's not best practice to run a database pod with very low limits.
+
+This request is likely to be approved after only a few follow-up questions from the Platform Team. Even though this request doesn't include a clear picture of the desired state of the namespace's resource usage, the requester has clearly outlined why they don't have that information, and has taken the reasonable step of requesting only a single-step increase, with plans to increase more only if there's evidence that they will need it. 
+
+If this request is accompanied with some statistics on the resource usage of the front-end pods, confirming the explanation about the load problems that occur if the pods are run with a lower CPU limit, then this may be a rare example of a CPU request that could be approved without any further questions from the Platform Team at all!
  
-If you're unsure, include everything that you suspect might be relevant. It's better to include too much information than too little!
- 
-#### Why do you need a quota increase?
-
-- I need more storage space because my database backup PVC is filling up.
-
-- My deployments are all only 2 pods each and I would like to bump them up to the recommended 3, but I hit the CPU limit quota when I try to do that.
-
-- I am trying to switch from Patroni to Crunchy and migration would be much easier if I could run both simultaneously. My current quota is fine for just one database cluster, but I require more quota temporarily so I can run two during the migration process.
-
-- When my prod app is under high load, the HPA tries to start more pods than the quota allows, and then it gets stuck trying to spin up a pod that isn't allowed to start because the namespace has used up all of its quota.
-
-#### What steps have you taken to try to fit your application into your current quota?
-
-- My database backup process already tars and zips the backup files to make the most efficient possible use of the space available. My application is required to retain 6 months of backups, so the total number of backups stored can't be reduced.
-
-- My Patroni pods are sometimes a bit unstable, so I don't want to reduce the resource allocation in case that increases the instability even more.
-
-- I tried running my frontend app pods with 150m CPU limit instead, but that caused problems with the application during high load, because the existing pods weren't able to handle load spikes temporarily while the HPA was spinning up new pods. I don't want to try to reclaim CPU limit from my database pods because they're only running at 100m CPU limit, and it's not best practice to run a database pod with very low limits.
+- 
 
 ### Examples of requests 
 
