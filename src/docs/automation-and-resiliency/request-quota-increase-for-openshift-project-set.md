@@ -18,7 +18,7 @@ content_owner: Cailey Jones
 sort_order: 5
 ---
 # Request a quota increase for an OpenShift project set
-Last updated: **March 21, 2024**
+Last updated: **March 26, 2024**
 
 This guide shows you how to request more resources for your OpenShift project set on the [Platform Product Registry](https://registry.developer.gov.bc.ca/).
 
@@ -41,6 +41,9 @@ Use the following information to help determine the level of resource the applic
 
 2. **Familiarize yourself with Sysdig (optional):** Setting up Sysdig can provide comprehensive insights into your project's performance and resource utilization. However, it is not mandatory for requesting a quota increase and you can use a different system to provide the information the Platform Services Team requires to process your request increase.  If you are using it we provide more information in the section 
 
+3. **Get in touch with the Platform Services Team**
+This process suggests good communication from your team and the Platform Services Team particularly if you have questions prior your quota increase request, please reach out to them at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca) and enter  subject: Quota request with your inquiry.
+
 ## Steps to request quota increase
 
 ### Step 1: Access the Platform Product Registry 
@@ -49,7 +52,7 @@ Go to the [Platform Product Registry](https://registry.developer.gov.bc.ca/). Th
 ### Step 2: Identify page and potential changes for each section
 The product page has different sections: 
 
-1. **Product description:** Includes fields like product name, descriptio, ministry and hosting tier. 
+1. **Product description:** Includes fields like product name, description, ministry and hosting tier. 
 
 2. **Team contacts:** Product Owner and Technical Lead(s). The contacts need to have an IDIR, if you need to change them, editing the email field will autopopulate their new information.
 
@@ -91,7 +94,21 @@ Use the following guidelines, depending on the resource type:
 
 Be ready to respond to the following **3** questions: 
 
-#### 1. Can you tell us more about the current and desired states of the relevant Openshift objects?
+#### 1. Why do you need to increase your quota? 
+
+This should be just 1 or 2 sentences that clearly outlines exactly what you're trying to accomplish that requires more quota:
+
+* **Proposed increase:** Clearly outline the additional resources you require, along with supporting rationale. Explain how much more quota you need and why.  Include the following:
+
+  - Expected quota increase amount with a detailed allocation plan
+
+* **Justification for increase:** Clearly state the reasons for requesting a quota increase, such as anticipated growth, bursty workload patterns, or specific project requirements.
+
+* **Impact Assessment:** Assess the impact of the increased quota on your project's performance, scalability, and budget.
+
+If you need help answering this question [check these examples](#examples-of-answers).
+
+#### 2. Can you tell us more about the current and desired states of the relevant Openshift objects?
 
 Please provide information about how much resources the important pods are using right now.  If you can, also let us know how their resource usage will change if we increase the quota. You don't need to give us details about every single pod or deployment in your namespace. Just focus on the ones that matter for why you're asking for this increase.
 
@@ -106,31 +123,17 @@ Regardless of the tool you use, you should collect data for at least a week or h
 
 If you need help answering this question [check these examples](#examples-of-answers).
 
-#### 2. Why do you need to increase your quota? 
-
-This should be just 1 or 2 sentences that clearly outlines exactly what you're trying to accomplish that requires more quota:
-
-* **Proposed increase:** Clearly outline the additional resources you require, along with supporting rationale. Explain how much more quota you need and why.  Include the following:
-
-  - Expected quota increase amount with a detailed allocation plan
-
-* **Justification for increase:** Clearly state the reasons for requesting a quota increase, such as anticipated growth, bursty workload patterns, or specific project requirements.
-
-* **Impact Assessment:** Assess the impact of the increased quota on your project's performance, scalability, and budget.
-
-If you need help answering this question [check these examples](#examples-of-answers).
-
 #### 3. What steps have you taken to try to fit your application into your current quota?
 
-Think about if there's anything you can do to use your current quota more efficiently. Can you decrease the resources assigned to your existing pods to free up more quota? 
+* Think about if there's anything you can do to use your current quota more efficiently. Can you decrease the resources assigned to your existing pods to free up more quota? 
 
-Write down what you've already done to lower current resource usage and explain why you need the quota increase. Be honest - if you've tried everything and still need more quota, that's okay. Sometimes, there's nothing you can reasonably do to make your existing quota work. If you can, explain why you think you shouldn't change anything.
+* Write down what you've already done to lower current resource usage and explain why you need the quota increase. Be honest - if you've tried everything and still need more quota, that's okay. Sometimes, there's nothing you can reasonably do to make your existing quota work. If you can, explain why you think you shouldn't change anything
 
 This part might include references to pods or objects you haven't mentioned before. Even if you're asking for more quota to run more frontend application pods, you might find that your database pods are using up more resources than they need. Explain why you can't reduce the resource allocation of these other pods, or try doing that before asking for more quota.
 
 For more information on quotas, see [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md).
 
-Before we move forward with your quota change request, expect to discuss with the Platform Team ways to optimize your application within your current quota. We usually don't approve quota requests without trying to make the existing quota work first. The more details you provide in your initial request, the shorter this conversation is likely to be!
+* Before we move forward with your quota change request, expect to discuss with the Platform Team ways to optimize your application within your current quota. We usually don't approve quota requests without trying to make the existing quota work first. The more details you provide in your initial request, the shorter this conversation is likely to be!
 
 If you need help answering this question [check these examples](#examples-of-answers).
 
@@ -148,20 +151,14 @@ The last step is to email the request to the Platform Services team at [Platform
 
 * Attach screenshot of Sysdig dashboard (if available)
 * Attach additional images or files that supplement the already submitted information in the previous step
-* Book a meeting with the Platform Services team
-
-If you need to store a large amount of unstructured data, consider using the [S3 Object Storage Service](https://github.com/BCDevOps/OpenShift4-Migration/issues/59) provided by Enterprise Hosting.
-
-Once the quota increase request is approved, the specified namespaces are upgraded to the next quota size.
+* If you have further questions, it is also recommended to book a meeting with the Platform Services Team
 
 ## Essential resources to improve your quota increase request 
 
-### Examples of answers 
+### Examples of requests
+These examples mainly concentrate on particular pods or deployments. When you're asking for a quota increase, it's typically to support a specific deployment or group of deployments. Focus your request explanations on these - there's no need to spend time outlining the resource allocations for every single pod in your namespace, just provide the information that's relevant to the request.
 
-
-Note that these examples focus primarily on specific pods or deployments. Chances are, when you are requesting a quota increase, it's in support of a specific deployment or set of deployments. These should be the focus of your request explanations - we don't want you to waste precious time and effort outlining the resource allocations for every single pod in your namespace! Just give us the information that's relevant to the request!
- 
-If you're unsure, err on the side of include more information rather than less!
+If you're unsure, it's better to include more information than less!
 
 #### Example 1: More space for database backups
 
@@ -174,7 +171,7 @@ If you're unsure, err on the side of include more information rather than less!
 > **What steps have you taken to fit your application into your current quota?**
 > My database backup process already tars and zips the backup files to make the most efficient possible use of the space available. My application is required to retain 6 months of backups, so the total number of backups stored can't be reduced.
 
-This quota request is likely to be approved and probably won't require many (or any) follow-up questions from the Platform Team. This requester did a great job providing all relevant information and outlining exactly why the storage is required. Storage quota is simpler than CPU or memory quota, so it's easier to provide all the necessary information right away.
+This quota request is likely to get approved without many (or any) follow-up questions from the Platform Services Team. The requester did a great job giving all the necessary information and explaining why the storage is needed. Storage quota requests are simpler than CPU or memory quota requests, so it's easier to provide all the needed information upfront.
 
 #### Example 2: Increasing from 2 to 3 replicas per deployment
 
@@ -187,7 +184,10 @@ This quota request is likely to be approved and probably won't require many (or 
 > **What steps have you taken to fit your application into your current quota?**
 > I am currently using the vendor-recommended resource allocations, so I don't want to reduce the allocations and would prefer to increase the namespace quota.
 
-This request is likely to require a little more engagement from the Platform Team and isn't likely to be approved right away. While we understand the desire to stick to vendor-suggested resource allocation, we have found that the overwhelming majority of vendor defaults are much larger than they need to be. Providing plenty of information on your application's resource _usage_ (not allocation) will help to justify using the vendor-suggested defaults, if your team is confident that they are necessary.
+
+This request might need more involvement from the Platform Services Team and probably won't be approved immediately. While we understand the importance of following vendor-recommended resource allocation, we've noticed that most vendor defaults are much larger than necessary. 
+
+Providing detailed information about your application's actual resource usage (not just allocation) will help justify using the vendor-recommended defaults, if your team believes they're necessary.
 
 #### Example 3: Temporary quota for a migration between Patroni and CrunchyDB
 
@@ -200,9 +200,11 @@ This request is likely to require a little more engagement from the Platform Tea
 > **What steps have you taken to fit your application into your current quota?**
 > My Patroni pods are sometimes a bit unstable, so I don't want to reduce the resource allocation in case that increases the instability even more.
 
-This request is likely to require a little more engagement from the Platform Team and isn't likely to be approved right away. Patroni stability issues aren't always caused by resource limitations, especially not when the Patroni pods are provided with fairly generous resource allocations like this.
+This request might need more input from the Platform Services Team and might not be approved right away. Patroni stability problems aren't always caused by not having enough resources, especially when Patroni pods already have quite a bit of resources allocated to them.
 
-If you can provide any further information on how reduced resource allocation impacts the stability of your Patroni instance, and if you can provide information on the resource usage of your Patroni pods, that will help the Platform Team understand why you believe your Patroni's stability issues are linked to resource allocation, and will make it much more likely that we'll be able to approve this request (or help you find the other cause of these stability issues) much more quickly.
+If you can share more details about how reducing resource allocation affects the stability of your Patroni instance, and if you can provide information about the resource usage of your Patroni pods, it will help the Platform Services Team understand why you think your Patroni's stability issues are related to resource allocation. 
+
+This will increase the chances of us approving your request quickly (or helping you find the actual cause of these stability issues).
 
 #### Example 4: HPA can't scale up enough pods
 
@@ -215,22 +217,10 @@ If you can provide any further information on how reduced resource allocation im
 > **What steps have you taken to fit your application into your current quota?**
 > I tried running my frontend app pods with 150m CPU limit instead, but that caused problems with the application during high load, because the existing pods weren't able to handle load spikes temporarily while the HPA was spinning up new pods. I don't want to try to reclaim CPU limit from my database pods because they're only running at 100m CPU limit, and it's not best practice to run a database pod with very low limits.
 
-This request is likely to be approved after only a few follow-up questions from the Platform Team. Even though this request doesn't include a clear picture of the desired state of the namespace's resource usage, the requester has clearly outlined why they don't have that information, and has taken the reasonable step of requesting only a single-step increase, with plans to increase more only if there's evidence that they will need it. 
+This request is likely to get approved with just a few follow-up questions from the Platform Services Team. Even though it doesn't provide a clear picture of how the namespace's resource usage should look in the future, the requester has explained why they lack that information. They've also made a reasonable request for a single-step increase, planning to request more only if there's evidence they need it.
 
-If this request is accompanied with some statistics on the resource usage of the front-end pods, confirming the explanation about the load problems that occur if the pods are run with a lower CPU limit, then this may be a rare example of a CPU request that could be approved without any further questions from the Platform Team at all!
+If the request includes statistics on the resource usage of the front-end pods, confirming the explanation about the load problems caused by running the pods with a lower CPU limit, this might be one of those rare CPU requests that could be approved without any further questions from the Platform Services Team!
  
-- 
-
-### Examples of requests 
-
-**Approved user case examples**
-
-<!-- Develop subject more  -->
-
-**Declined user case examples**
-
-<!-- Develop subject more  
-- Healthchecks failing -->
 
 ### Setting up resource monitoring with Sysdig Monitor
 
@@ -246,6 +236,10 @@ For more details on the required metrics and evidence, check the [resource monit
 
  If you have any issues onboarding to Sysdig, contact the Platform Services team on the applicable [Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 
+ If you need to store a large amount of unstructured data, consider using the [S3 Object Storage Service](https://github.com/BCDevOps/OpenShift4-Migration/issues/59) provided by Enterprise Hosting.
+
+Once the quota increase request is approved, the specified namespaces are upgraded to the next quota size.
+
 ---
 ## Related pages
 
@@ -256,13 +250,3 @@ For more details on the required metrics and evidence, check the [resource monit
 * [Platform Product Registry](https://registry.developer.gov.bc.ca/)
 * [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md)
 * [S3 Object Storage Service](https://github.com/BCDevOps/OpenShift4-Migration/issues/59)
-
-
-
-
- <!-- 
-Oh, I also meant to mention that the 1st and 3rd examples for the last question are likely to get approved pretty quickly because they pretty thoroughly outlined all the necessary information and clearly explain exactly why the quota increase is the most reasonable solution. The second one would probably result in a lot more discussion with the Platform team, because it's not clear at all that the "instability" of the Patroni cluster has anything to do with the resource allocation of the pods. Maybe it does, but maybe it's completely unrelated and you could easy cut all of the allocation in half. Heck, maybe reducing the allocation would help increase stability. We'd probably do some initial troubleshooting of the Patroni cluster with the team before approving the request.
-
-I wanted to give an example of a request that isn't bad, per se, but isn't likely to get approved right away.
-
-I want teams to understand that, even if you follow this process, you shouldn't just expect to have your request approved immediately. Heck, even for the really good ones, we're still probably going to ask a few questions. If there's a significant amount of missing info (like there is with the Patroni one), they should expect more than just a few questions.-->
