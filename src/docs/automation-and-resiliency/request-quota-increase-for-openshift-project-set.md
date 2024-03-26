@@ -142,7 +142,7 @@ The Platform Services team needs to know if your application is using the curren
 
 * A pop-up will appear to allow space to include all the information you have collected and gathered, this place only allows for text information if you need to submit photos or files please do so in the next step as it is necessary and part of the request process
 
-### Step 6: Email the Platform Services team and book a meeting with them
+### Step 6: Email the Platform Services team
 
 The last step is to email the request to the Platform Services team at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca) and include the following information: 
 
