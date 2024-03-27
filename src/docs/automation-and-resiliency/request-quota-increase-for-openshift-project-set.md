@@ -47,7 +47,7 @@ This process suggests good communication from your team and the Platform Service
 ## Steps to request quota increase
 
 ### Step 1: Access the Platform Product Registry 
-Go to the [Platform Product Registry](https://registry.developer.gov.bc.ca/). Through dashboard of the product you wish to increase the quota. 
+Access the [Platform Product Registry](https://registry.developer.gov.bc.ca/) and use the dashboard of your chosen product to adjust the quota.
 
 ### Step 2: Identify page and potential changes for each section
 The product page has different sections: 
