@@ -39,7 +39,7 @@ Use the following information to help determine the level of resource the applic
 - [Resource management guidelines](https://github.com/BCDevOps/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
 - [Application resource tuning](../automation-and-resiliency/application-resource-tuning.md)
 
-2. **Familiarize yourself with Sysdig (optional):** Setting up Sysdig can provide comprehensive insights into your project's performance and resource utilization. However, it is not mandatory for requesting a quota increase and you can use a different system to provide the information the Platform Services Team requires to process your request increase.  If you are using it we provide more information in the section 
+2. **Familiarize yourself with Sysdig (optional):** Setting up Sysdig can provide comprehensive insights into your project's performance and resource utilization. However, it is not mandatory for requesting a quota increase and you can use a different system to provide the information the Platform Services Team requires to process your request increase.  If you are using it we provide more information in the section: [Setting up resource monitoring with Sysdig Monitor](#setting-up-resource-monitoring-with-sysdig-monitor)
 
 3. **Get in touch with the Platform Services Team**
 This process suggests good communication from your team and the Platform Services Team particularly if you have questions prior your quota increase request, please reach out to them at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca) and enter  subject: Quota request with your inquiry.
