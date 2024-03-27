@@ -115,9 +115,9 @@ Please provide information about how much resources the important pods are using
  **Collect your application metrics:** Compare the current resource utilization and compare it with the quota. Specify your project's current resource quotas and usage.
 
   - Current quota in the project set
-  - Total CPU, memory or storage currently used and any other resources relevant to your application's requirements.
-- Present the resource monitors within your namespace in order to understand  the level of resource consumption in your application and how efficiently it utilizes resources
-- Sysdig offers a pre-built dashboard template designed to visualize and analyze metrics in your OpenShift project. To simplify the process of requesting a quota increase, consider utilizing the Sysdig dashboard template. Instructions can be found in [here](../app-monitoring/sysdig-monitor-create-monitoring-dashboards.md)
+  - Total CPU, memory or storage currently used and any other resources relevant to your application's requirements
+  - Present the resource monitors within your namespace in order to understand  the level of resource consumption in your application and how efficiently it utilizes resources
+  - Sysdig offers a pre-built dashboard template designed to visualize and analyze metrics in your OpenShift project. To simplify the process of requesting a quota increase, consider utilizing the Sysdig dashboard template. Instructions can be found in [here](../app-monitoring/sysdig-monitor-create-monitoring-dashboards.md)
 
 Regardless of the tool you use, you should collect data for at least a week or however long it takes to see a pattern. Consider each component in the namespace, whether it's a part of the application or DevOps tools.
 
