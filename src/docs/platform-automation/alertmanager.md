@@ -19,7 +19,7 @@ sort_order: 3
 ---
 
 # AlertManager
-Last updated: **February 28, 2024**
+Last updated: **March 21, 2024**
 
 We've enhanced OpenShift clusters with basic monitoring and alerting features to keep product teams informed about their applications' health. These features send alerts to the contacts specified in the [Product Registry](https://registry.developer.gov.bc.ca/), notifying them of any common issues their apps might face.
 
@@ -92,7 +92,7 @@ Feel free to make new `PrometheusRule` objects. They'll be sent to the existing 
 
 **Silver and Emerald cluster timeline**
 
-- Implementation is planned for early 2024, and will be announced in the [devops-alerts rocketchat channel](https://chat.developer.gov.bc.ca/channel/devops-alerts).
+- Beginning March 20, 2024 these alerts are sent out to Product Owners and Technical Leads.
 
 ---
 ---

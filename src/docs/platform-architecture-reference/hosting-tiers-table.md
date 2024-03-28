@@ -19,7 +19,7 @@ sort_order: 6
 ---
 
 # Hosting tiers table
-Last updated: **February 29, 2024**
+Last updated: **March 21, 2024**
 
 This section presents a concise summary table highlighting key distinctions among OCP editions. These differentiators encompass target uptime (availability), maximum data sensitivity, integrated high availability (HA), disaster recovery (DR) options, release plan details, supported operators, scalability limits, and interoperability with other hosting services.  
 
@@ -51,7 +51,7 @@ The aim is to provide a clear and easily understandable overview of each OCP edi
 | Gold hosting tier | Details |
 |-----------------------------------------------|-------------------------------------------------|
 | **OpenShift Cluster Name** | Gold and GoldDR |
-| **Target up time (availability)** | Platform availability for the Gold hosting tier is 99.95%, specifically for applications with [multi-node deployments](#single-and-multi-node-application-deployments) that have a geographic failover to the Gold DR cluster in the Calgary data centre, minimizing disruption. <br><br>Without DR, Gold maintains the same availability as Silver |
+| **Target up time (availability)** | Platform availability for the Gold hosting tier is 99.95%, specifically for applications with [multi-node deployments](#single-and-multi-node-application-deployments) that have a geographic failover to the Gold DR cluster in the Calgary data centre, minimizing disruption. <br><br>**Without DR, Gold maintains the same availability as Silver** |
 | [**Maximum data sensitivity**](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification) | - Protected B: Stored at rest (in a database or file storage)<br> - Protected C: Processing only (must be stored elsewhere) |
 | **Integrated HA, DR options**| - TransportServerClaims to connect between Gold and Gold DR<br> -Global Load Balancing between clusters for Active/Passive DR|
 | **OpenShift upgrade plan** | Aim for N minus 1 tracking Red Hat point releases for OpenShift|
@@ -77,7 +77,7 @@ The aim is to provide a clear and easily understandable overview of each OCP edi
 
 A **single-node** means that the whole application runs on just one part of the OpenShift cluster. In this setup, everything, like the application pieces, services, and containers, is set up and handled on a single machine, whether it's a real computer or a virtual one.
 
- In a**multi-node** application deployment, the application isn't limited to just one part of the OpenShift cluster. Instead, it's spread across multiple nodes. This setup improves scalability, fault tolerance, and performance because the application's workload is distributed and managed on several nodes within the cluster.
+ In a **multi-node** application deployment, the application isn't limited to just one part of the OpenShift cluster. Instead, it's spread across multiple nodes. This setup improves scalability, fault tolerance, and performance because the application's workload is distributed and managed on several nodes within the cluster.
 
 ## Related pages
 
