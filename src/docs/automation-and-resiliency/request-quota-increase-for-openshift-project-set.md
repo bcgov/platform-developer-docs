@@ -158,7 +158,7 @@ The last step is to email the request to the Platform Services team at [Platform
 ### Examples of requests
 These examples mainly concentrate on particular pods or deployments. When you're asking for a quota increase, it's typically to support a specific deployment or group of deployments. Focus your request explanations on these - there's no need to spend time outlining the resource allocations for every single pod in your namespace, just provide the information that's relevant to the request.
 
-If you're unsure, it's better to include more information than less!
+If you're unsure, it's better to include more information than less, the Platform Services Team is here to help!
 
 #### Example 1: More space for database backups
 
