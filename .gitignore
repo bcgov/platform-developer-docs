@@ -2,3 +2,4 @@ patcher.py
 site
 src/docs/.DS_Store
 .DS_Store
+test_patcher.py
