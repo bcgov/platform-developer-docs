@@ -45,7 +45,7 @@ Use the following information to help determine the level of resource the applic
 This process suggests good communication from your team and the Platform Services Team particularly if you have questions prior your quota increase request, please reach out to them at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca) and enter  subject: Quota request with your inquiry.
 
 ## Steps to request quota increase
-
+As part of our ongoing efforts to optimize resource allocation across our OpenShift environments, we request teams seeking a quota increase to provide detailed justifications. This structured approach ensures that all requests are evaluated fairly and resources are used efficiently.
 ### Step 1: Access the Platform Product Registry 
 Access the [Platform Product Registry](https://registry.developer.gov.bc.ca/) and use the dashboard of your chosen product to adjust the quota.
 
