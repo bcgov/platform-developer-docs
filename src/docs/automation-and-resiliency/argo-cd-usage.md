@@ -68,10 +68,12 @@ A self-serve system is in place for the setup of Argo CD for your project set. T
   - Use the inline comments to populate this file
 - Ensure that all users in the 'projectMembers' group have a Keycloak ID in the realm used by Argo CD. They can do this by attempting to access the Argo CD UI for the given cluster:
   - Silver
-    - https://argocd-shared.apps.silver.devops.gov.bc.ca
+    - https://gitops-shared.apps.silver.devops.gov.bc.ca
   - Gold & Gold DR
-    - https://argocd-shared.apps.gold.devops.gov.bc.ca
-    - https://argocd-shared.apps.golddr.devops.gov.bc.ca
+    - https://gitops-shared.apps.gold.devops.gov.bc.ca
+    - https://gitops-shared.apps.golddr.devops.gov.bc.ca
+  - Emerald
+    - https://gitops-shared.apps.emerald.devops.gov.bc.ca
 - Create the GitOpsTeam CustomResource in your **tools** namespace
   - `oc -n myproject-tools create -f gitopsteam.yaml`
 
@@ -267,6 +269,13 @@ If the sync has succeeded, but still shows as "progressing", or if there is an i
 
 Once you are satisfied with the setup, feel free to enable automatic synchronization.
 
+### "Apps in Any Namespace"
+It is now possible to create your ArgoCD Applications from a manifest in your OpenShift namespace in addition to using the UI.  This helps to eliminate a conspicuously manual step from your GitOps setup and allows you to use ArgoCD to manage your ArgoCD Applications!
+
+With this feature, you can create an Application in any of your project's namespaces, meaning any of your dev, test, prod, or tools namespaces.  For details on how to create your Application manifest, see the [ArgoCD documentation for Applications](https://argo-cd.readthedocs.io/en/stable/operator-manual/declarative-setup/#applications)
+
+Once you have the manifest verified, it may be added to your GitOps repo and managed along with the rest of your resources.
+
 ## Configure your project
 
 It should be noted that there are some constraints placed on Projects and Applications in this shared Argo CD instance.
@@ -302,6 +311,6 @@ https://github.com/BCDevOps/openshift-wiki/blob/master/docs/ArgoCD/gitopsteam_te
 
 ## Related links
 
-- Current Argo CD version, as of July 2022: v2.2.10: [https://argo-cd.readthedocs.io/en/release-2.2/](https://argo-cd.readthedocs.io/en/release-2.2/)
+- Current Argo CD version, as of April 2024: v2.10: [https://github.com/argoproj/argo-cd/releases/tag/v2.10.0](https://github.com/argoproj/argo-cd/releases/tag/v2.10.0)
 - Kustomize: [https://kustomize.io/](https://kustomize.io)
 - Helm: [https://helm.sh/](https://helm.sh/)
