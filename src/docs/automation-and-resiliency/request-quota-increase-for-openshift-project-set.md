@@ -34,8 +34,9 @@ Before initiating the request, make sure you have completed the following steps:
 
 1. **Evaluate resource usage:** Analyze your project's resource consumption to determine if a quota increase is necessary. Utilize tools like the OpenShift Dashboard or the command-line interface (CLI) for resource monitoring. Use the following information to help determine the level of resource the application needs:
 
-    *  [Resource management guidelines](https://github.com/BCDevOps/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
-    * [Application resource tuning](../automation-and-resiliency/application-resource-tuning.md)
+  *  [Resource management guidelines](https://github.com/BCDevOps/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
+
+  * [Application resource tuning](../automation-and-resiliency/application-resource-tuning.md)
 
 2. **Familiarize yourself with Sysdig (optional):** Setting up Sysdig can provide comprehensive insights into your project's performance and resource utilization. However, it is not mandatory for requesting a quota increase and you can use a different system to provide the information the Platform Services Team requires to process your request increase.  If you are using it we provide more information in the section: [Setting up resource monitoring with Sysdig Monitor](#setting-up-resource-monitoring-with-sysdig-monitor)
 
@@ -55,11 +56,12 @@ The product page has different sections:
 2. **Team contacts:** Product Owner and Technical Lead(s). The contacts need to have an IDIR, if you need to change them, editing the email field will autopopulate their new information.
 
 3. **Quotas:**   If you need more resources for CPU, RAM or storage in any of the four namespaces, this is the place to make changes to them. This is also the section where we will be focusing on this guide.
- * Production `prod`
- * Test `test`
- * Tools `tools`
- * Development `dev`
- 
+
+  * Production `prod`
+  * Test `test`
+  * Tools `tools`
+  * Development `dev`
+
 4. **Common components** This is an optional field where you can choose different components through a list of them.
 
 ### Step 3: Prepare the request 
