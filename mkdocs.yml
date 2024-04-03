@@ -1,5 +1,7 @@
 site_name: BC Government Private Cloud Technical Documentation
 docs_dir: src
+repo_url: https://github.com/bcgov/platform-developer-docs
+edit_uri: edit/main/src/
 nav:
 - App monitoring:
   - Onboarding to application monitoring with Sysdig: docs/app-monitoring/sysdig-monitor-onboarding.md
