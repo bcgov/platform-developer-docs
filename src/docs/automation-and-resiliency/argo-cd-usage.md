@@ -64,7 +64,7 @@ A self-serve system is in place for the setup of Argo CD for your project set. T
 
 - Prepare a `GitOpsTeam` CustomResource
   - Note that GitHub IDs are CASE SENSITIVE...
-  - Use the template: https://github.com/platform-developer-docs/src/files/argocd/gitopsteam_template.yaml
+  - Use <a href="../../files/argocd/gitopsteam_template.yaml" target="_blank">the template</a>
   - Use the inline comments to populate this file
 - Ensure that all users in the 'projectMembers' group have a Keycloak ID in the realm used by Argo CD. They can do this by attempting to access the Argo CD UI for the given cluster:
   - Silver
@@ -139,7 +139,7 @@ If your application is already set up for Kustomize, then you just need to move 
 
 If moving an existing application to Kustomize and Argo CD for the first time, some effort will have to be made to generate the manifest files. The live manifests can be fetched from OpenShift using the command line. Certain fields will have to be removed, however, as OpenShift adds a number of fields for internal resource management. A shell script has been prepared to help with the manifest creation.
 
-[https://github.com/platform-developer-docs/src/files/argocd/get_ns_resources.sh](https://github.com/platform-developer-docs/src/files/argocd/get_ns_resources.sh)
+<a href="../../files/argocd/get_ns_resources.sh" target="_blank">get_ns_resources.sh</a>
 
 Once the manifest files have been generated, the repo structure is prepared. Within the manifest repo, in the top-level directory for the given application, create the following directories:
 
@@ -306,8 +306,7 @@ Access to the Git repository includes five sets of permissions.
 
 Access to the Argo CD UI includes two sets of permissions: read/write and read-only
 
-See the GitOpsTeam template for more details:
-https://github.com/platform-developer-docs/src/files/argocd/gitopsteam_template.yaml
+See the <a href="../../files/argocd/gitopsteam_template.yaml" target="_blank">GitOpsTeam template</a> for more details.
 
 ## Related links
 
