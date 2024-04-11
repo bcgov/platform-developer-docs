@@ -76,7 +76,7 @@ Based on these principles, we can establish some SLAs for the Registry:
 * Updates to product requests should be processed within an hour.
 
 ## Service Level Objective (SLO) 
-The meaning of an SLO is a service level objective: it's a specified target value or a range of values for a service level that gets measured through an SLI. Google offers a [valuable workbook](https://sre.google/workbook/implementing-slos/#:~:text=For%20example%2C%20if%20you%20have,50%25%20of%20the%20error%20budget.) written by Steven Thurgood, David Ferguson with Alex Hidalgo and Betsy Beyer to assist you in implementing SLOs. Towards the end of this document, we will also delve into calculating the Error Budget in more detail.
+SLO is a specified target value or a range of values for a service level that gets measured through an SLI. Google offers a [valuable workbook](https://sre.google/workbook/implementing-slos/#:~:text=For%20example%2C%20if%20you%20have,50%25%20of%20the%20error%20budget.) written by Steven Thurgood, David Ferguson with Alex Hidalgo and Betsy Beyer to assist you in implementing SLOs. Towards the end of this document, we will also delve into calculating the Error Budget in more detail.
 
 Determining what you want to assure your customers is all about deciding how dependable you want your service to be based on your customers' expectations. For instance, if your SLA specifies that customers should receive a response to their requests within 300 milliseconds, your SLO might set a goal for response times to be within 200 milliseconds. Choosing the right SLO can be a challenge.
 
