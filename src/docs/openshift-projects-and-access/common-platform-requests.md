@@ -53,7 +53,7 @@ Follow the steps involved to [request a quota increase for an OpenShift project 
 
 Remove a team member’s access to OpenShift or a B.C. Government GitHub repository.
 
-[Submit a request to remove GitHub or OpenShift membership.](https://github.com/BCDevOps/devops-requests/issues/new?assignees=caggles%2C+ShellyXueHan%2C+mitovskaol%2C+patricksimonian&labels=github-membership%2Copenshift-access&template=github_user_access_request.md&title=)
+[Request to remove OpenShift Access and or BCGOV GitHub Organization Membership](https://github.com/BCDevOps/devops-requests/issues/new/choose)
 
 
 
