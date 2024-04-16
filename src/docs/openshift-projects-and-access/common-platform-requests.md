@@ -31,7 +31,7 @@ The Platform Services team removes bcgov-c organization access for users that ha
 
 ## Request a new private repository in the bcgov-c GitHub organization
 
-Only the Platform Services team can create new private repositories in the bcgov-c GitHub organization.
+Requests to create new private repositories in the bcgov-c github organization must be approved by the Platform Services Team.
 
 [Submit a request to create a private repository.](https://github.com/login?return_to=https%3A%2F%2Fgithub.com%2FBCDevOps%2Fdevops-requests%2Fissues%2Fnew%3Fassignees%3Dcaggles%252C%2BShellyXueHan%252C%2Bmitovskaol%252C%2Bpatricksimonian%26labels%3Dgithub-repo%252C%2Bpending%26template%3Dgithub_repo_request.md%26title%3D)
 
