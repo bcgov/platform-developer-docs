@@ -47,6 +47,7 @@ nav:
   - Grant user access in OpenShift: docs/openshift-projects-and-access/grant-user-access-openshift.md
   - Log in to OpenShift Web Console: docs/openshift-projects-and-access/login-to-openshift.md
   - Install the oc command line tool: docs/openshift-projects-and-access/install-the-oc-command-line-tool.md
+  - Common platform requests: docs/openshift-projects-and-access/common-platform-requests.md 
 - Platform architecture reference:
   - Platform storage: docs/platform-architecture-reference/platform-storage.md
   - Platform Architecture Diagram: docs/platform-architecture-reference/platform-architecture-diagram.md
