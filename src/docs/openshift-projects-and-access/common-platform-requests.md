@@ -25,7 +25,7 @@ If you’re an administrator for your private repositories, you can add users to
 
 There’s a fee for each user that has access to a private repository in the bcgov-c organization, only grant access to users that need it. The fee for all users is currently covered by the OCIO.
 
-There are a limited number of spots available in the bcgov-c organization. If there are no spots remaining, you’ll receive an error message when you try to add a new user. If this occurs, send a request to [PlatformServicesTeam@gov.bc.ca](mailto:platformservicesteam@gov.bc.ca) for an additional spot to the Platform Services Team. Once we confirm your request has been completed, you can add the new user to your repository.
+There are a limited number of spots available in the bcgov-c organization. If there are no spots remaining, you’ll receive an error message when you try to add a new user. If this occurs, send a request to [developer.experience@gov.bc.ca](mailto:developer.experience@gov.bc.ca) for an additional spot to the Developer Experience Team. Once they confirm your request has been completed, you can add the new user to your repository.
 
 The Developer Experience team removes bcgov-c organization access for users that have not been active for 6 months. Once access has been removed, users must be re-invited to the organization and re-added to a repository to gain access.
 
