@@ -27,7 +27,7 @@ There’s a fee for each user that has access to a private repository in the bcg
 
 There are a limited number of spots available in the bcgov-c organization. If there are no spots remaining, you’ll receive an error message when you try to add a new user. If this occurs, send a request to [PlatformServicesTeam@gov.bc.ca](mailto:platformservicesteam@gov.bc.ca) for an additional spot to the Platform Services Team. Once we confirm your request has been completed, you can add the new user to your repository.
 
-The Platform Services team removes bcgov-c organization access for users that have not been active for 6 months. Once access has been removed, users must be re-invited to the organization and re-added to a repository to gain access.
+The Developer Experience team removes bcgov-c organization access for users that have not been active for 6 months. Once access has been removed, users must be re-invited to the organization and re-added to a repository to gain access.
 
 ## Request a new private repository in the bcgov-c GitHub organization
 
