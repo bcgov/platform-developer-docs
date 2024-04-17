@@ -31,7 +31,7 @@ The Developer Experience team removes bcgov-c organization access for users that
 
 ## Request a new private repository in the bcgov-c GitHub organization
 
-Requests to create new private repositories in the bcgov-c github organization must be approved by the Platform Services Team.
+Requests to create new private repositories in the bcgov-c github organization must be approved by the Developer Experience Team.
 
 [Request for private BCGOV GitHub Repository](https://github.com/BCDevOps/devops-requests/issues/new/choose)
 
