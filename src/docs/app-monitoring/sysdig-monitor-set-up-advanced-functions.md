@@ -19,7 +19,7 @@ sort_order: 5
 ---
 
 # Set up advanced metrics in Sysdig Monitor
-Last updated: **January 2, 2024**
+Last updated: **April 17, 2024**
 
 This page is a comprehensive guide to setting up advanced metrics in Sysdig Monitor. It covers the creation of PromQL metrics, using PromQL in alerts, and employing Service Discovery to import application metrics endpoints into Sysdig. The guide includes practical examples and step-by-step instructions, serving as a valuable resource for users looking to enhance their monitoring capabilities with Sysdig.
 
@@ -58,7 +58,8 @@ Sysdig has a lightweight Prometheus server (Promscrape) that can [import your ap
 To enable Promscrape to find your application metrics, do the following:
 
 1. Make sure the application metrics endpoint is returning Prometheus metrics. To test this, you can expose the service and curl on the URL.
-1. Add the following annotations to the application pods:
+
+2. Add the following annotations to the application pods:
 
   ```yaml
   prometheus.io/scrape: true
@@ -68,7 +69,7 @@ To enable Promscrape to find your application metrics, do the following:
   ```
 
   Don't add the annotations to the pods directly. This should be part of the infrastructure code and added in the templates. For example, if the application is using an OpenShift deployment, the annotation should be added at `deployment.spec.template.metadata.annotations`.
-
+  
 3. Once the annotation is in place, Sysdig can scrape them. On the **Sysdig Explore** tab, look for the sysdig metrics there (Sysdig does relabeling of the metrics, so they will appear as native sysdig metrics now instead of coming from promQL Query)
 
 

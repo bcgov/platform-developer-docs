@@ -19,7 +19,7 @@ sort_order: 6
 ---
 
 # Hosting tiers table
-Last updated: **March 21, 2024**
+Last updated: **April 17, 2024**
 
 This section presents a concise summary table highlighting key distinctions among OCP editions. These differentiators encompass target uptime (availability), maximum data sensitivity, integrated high availability (HA), disaster recovery (DR) options, release plan details, supported operators, scalability limits, and interoperability with other hosting services.  
 
