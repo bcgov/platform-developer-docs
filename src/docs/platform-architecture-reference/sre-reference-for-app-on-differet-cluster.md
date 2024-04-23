@@ -27,7 +27,7 @@ Vault and Artifactory are crucial components hosted on the Gold cluster, used fo
 - **Node configuration**: Single-node vs. multi-node configurations impact the SLA due to differences in failover capabilities
 - **Dependencies**: External dependencies like Vault and Artifactory influence application reliability and need to be considered in SLA calculations
 
-### Factor than need to be considered in your SLA
+### Factors that need to be considered in your SLA
 To calculate the SLA for your application:
 1. Start with the base SLA of your chosen cluster
 2. Adjust based on the redundancy of your deployment (single-node vs. multi-node)
