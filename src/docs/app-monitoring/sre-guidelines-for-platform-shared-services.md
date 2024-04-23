@@ -103,7 +103,7 @@ The Platform Services Registry has the following monitoring standards built base
 - **Reason**: Users rely on the system to seamlessly provision products. A high success rate ensures the reliability of the registry's provisioning functionality
 
 
-<!-- Read more about SLI monitoring setup and available tools  -->
+Read more about [SLI monitoring setup and available tools]((../app-monitoring/guidelines-for-sli-and-monitoring.md)
 
 ## Service Level Agreement (SLA)
 
