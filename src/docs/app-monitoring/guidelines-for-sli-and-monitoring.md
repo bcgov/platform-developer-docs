@@ -23,7 +23,7 @@ Last updated: **April 17, 2024**
 ## SLI (Service Level Indicator)
 **Definition**: SLIs are specific, measurable metrics that reflect the performance of a service. Common examples include request latency, availability, error rate, and system throughput. The purpose of SLIs provide the quantitative data needed to evaluate the performance of a service.
 
-**Performance Monitoring Tools:**  You can use tools like Prometheus, Grafana, or New Relic to continuously watch and display system performance metrics, including response times
+**Performance Monitoring Tools:**  You can use tools like Prometheus, Grafana to continuously watch and display system performance metrics, including response times
 
 **Logging**:Make sure that the Application system records the time it takes for each data retrieval request. Periodically analyze these logs or use log aggregation tools like the ELK Stack (Kibana, Logstash, etc.) to gain insights
 
