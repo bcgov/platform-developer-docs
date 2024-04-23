@@ -14,7 +14,7 @@ nav:
   - User Defined Monitoring in OpenShift: docs/app-monitoring/user-defined-monitoring.md
   - Best practices for application logging in OpenShift: docs/app-monitoring/best-practices-for-application-logging-in-openshift.md
   - SRE guidelines for platform shared services: docs/app-monitoring/sre-guidelines-for-platform-shared-services.md
-  - Guidelines for SLI and monitoring: docs/guidelines-for-sli-and-monitoring.md
+  - Guidelines for SLI and monitoring: docs/app-monitoring/guidelines-for-sli-and-monitoring.md
 - Automation and resiliency:
   - CI/CD pipeline templates for Private Cloud teams: docs/automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md
   - Application resiliency guidelines: docs/automation-and-resiliency/app-resiliency-guidelines.md
