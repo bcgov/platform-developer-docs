@@ -73,7 +73,7 @@ This structured approach to SLA measurement benefits both service providers and 
 
 ## Service Level Indicators (SLIs)
 
-SLIs are specific, measurable metrics that reflect the performance of a service. Common examples include request latency, availability, error rate, and system throughput. Purpose of SLI is tha its  provide the quantitative data needed to evaluate the performance of a service.SLI golden signals consist of request latency, availability, error rate, and system throughput. These metrics establish the criteria for determining the system's "health." It's essential to grasp the connection and difference between SLIs, SLOs, and SLAs.
+SLIs are specific, measurable metrics that reflect the performance of a service. Common examples include request latency, availability, error rate, and system throughput. Purpose of SLI is that it provides the quantitative data needed to evaluate the performance of a service. `SLI golden signals` consist of request latency, availability, error rate, and system throughput. These metrics establish the criteria for determining the system's "health." It's essential to grasp the connection and difference between SLIs, SLOs, and SLAs.
 
 There are multiple ways to measure an SLI, and each method has its own strengths and limitations. These methods are often called SLI Implementations. 
 
