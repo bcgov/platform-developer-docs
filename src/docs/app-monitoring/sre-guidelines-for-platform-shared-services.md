@@ -28,16 +28,17 @@ In this document, we'll explore the fundamental concept behind SRE and show you 
 ## On this page
 
 - [SRE guidelines for platform shared services](#sre-guidelines-for-platform-shared-services)
-- [B.C. Platform Services Product Registry](#bc-platform-services-product-registry)
-- [Setting up SRE](#setting-up-sre)
-- [Importance of defining a period for SRE measurement](#importance-of-defining-a-period-for-sre-measurement)
-- [Service Level Indicators (SLIs)](#service-level-indicators-slis)
-- [Service Level Agreement (SLA)](#service-level-agreement-sla)
-- [Service Level Objective (SLO)](#service-level-objective-slo)
-- [Connections and differences](#connections-and-differences)
-- [How to calculate error budget](#how-to-calculate-error-budget)
-- [Conclusion](#conclusion)
-- [Related pages](#related-pages)
+  - [On this page](#on-this-page)
+  - [B.C. Platform Services Product Registry](#bc-platform-services-product-registry)
+  - [Setting up SRE](#setting-up-sre)
+  - [Importance of defining a period for SRE measurement](#importance-of-defining-a-period-for-sre-measurement)
+  - [Service Level Indicators (SLIs)](#service-level-indicators-slis)
+  - [Service Level Agreement (SLA)](#service-level-agreement-sla)
+  - [Service Level Objective (SLO)](#service-level-objective-slo)
+  - [Connections and differences](#connections-and-differences)
+  - [How to calculate Error Budget](#how-to-calculate-error-budget)
+  - [Conclusion](#conclusion)
+  - [Related pages](#related-pages)
 
 ---
 
@@ -150,11 +151,16 @@ The Platform Product Registry typically "backs up" most of its crucial data in G
 **Why is this important?**
 Choosing the right RPO is vital for business continuity planning. Here's why:
 
--  **With a 30-minute RPO**: In case of data loss, the team can recover data up to the moment of the last backup, which is a maximum of 30 minutes before the incident
+-  **With a defined RPO**: In case the data is lost, you can restore the data up to the moment defined by the most recent backup taken before the incident.
 
 -  **Without a defined RPO (or with infrequent backups)**: Without a clear RPO or with backups done infrequently, there's a substantial risk of losing a significant amount of data. This loss could lead to severe consequences for the business, ranging from financial setbacks to damage to its reputation.
 
-Having a backup created every 30 minutes corresponds to an RPO of 30 minutes. This is a good fit for systems where a maximum of 30 minutes of data loss can be tolerated in the event of a disaster. The decision about the appropriate RPO (and, by extension, backup frequency) should be grounded in business requirements and the potential consequences of data loss.
+**How to define a RPO:**
+- Prioritize data: The most important thing before anything else is to prioritize the data because some sorts of data are more critical for your daily running. Financial transactions, customer records, and real-time data would always require stricter RPOs at all times.
+- Acceptable data loss window: Define the maximum window time within which if data is lost beyond it, it will not affect your business. This could be minutes for the most critical data or hours for lesser critical data.
+- Set the RPO target: Define the acceptable time window for data loss based on your priorities. This is going to be your RPO target.
+
+
 
 ## How to calculate Error Budget
 **Calculate the Error Budget:**
@@ -186,10 +192,8 @@ In this document, we've covered several essential aspects of Site Reliability En
 **Moving forward**:
 1. **Explore the Tools**: If you haven't already, get hands-on experience with the tools we discussed. This will give you a better understanding of how they fit into the bigger picture
 
-2. **Share Feedback**: If you try something out and it works (or doesn't),  share your experience on Rocketchat. We can work together to figure it out. The more we exchange knowledge, the better we become.
+2. **Share Feedback**: If you try something out and it works (or doesn't),  share your experience on Rocketchat[ #sre-discussion](https://chat.developer.gov.bc.ca/channel/sre-discussion). We can work together to figure it out. The more we exchange knowledge, the better we become.
 3. **Stay Informed**: SRE is a rapidly evolving field. Keep an eye out for updates, new tools, and innovative techniques
-
-3. **Collaborate**: Do you have questions or find yourself stuck? Reach out for assistance. Often, two minds are better than one.
 
 ---
 ---
