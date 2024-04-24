@@ -59,7 +59,7 @@ To set up Argo CD for your project, a self-serve system is available. Follow the
 
 1. Prepare a 'GitOpsTeam' CustomResource:
   * Remember that GitHub IDs are **case sensitive**
-  * Utilize the provided template: [GitOpsTeam template](/src/files/argocd/gitopsteam_template.yaml)
+  * Utilize the provided template: [GitOpsTeam template](../src/files/argocd/gitopsteam_template.yaml)
   * Populate the file using the inline comments
   
 2.  Ensure that all users in the 'projectMembers' group have a Keycloak ID in the realm used by Argo CD. They can do this by attempting to access the Argo CD UI for the given cluster:
@@ -321,7 +321,7 @@ Access to the Git repository includes five sets of permissions.
 
 Access to the Argo CD UI includes two sets of permissions: read/write and read-only
 
-See the [GitOpsTeam template](/src/files/argocd/gitopsteam_template.yaml) for more details. 
+See the [GitOpsTeam template](../src/files/argocd/gitopsteam_template.yaml) for more details. 
 
 ## Related pages
 
