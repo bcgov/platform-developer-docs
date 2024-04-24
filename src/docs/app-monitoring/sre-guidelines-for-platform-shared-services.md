@@ -28,6 +28,16 @@ In this document, we'll explore the fundamental concept behind SRE and show you 
 ## On this page
 
 - [SRE guidelines for platform shared services](#sre-guidelines-for-platform-shared-services)
+- [B.C. Platform Services Product Registry](#bc-platform-services-product-registry)
+- [Setting up SRE](#setting-up-sre)
+- [Importance of defining a period for SRE measurement](#importance-of-defining-a-period-for-sre-measurement)
+- [Service Level Indicators (SLIs)](#service-level-indicators-slis)
+- [Service Level Agreement (SLA)](#service-level-agreement-sla)
+- [Service Level Objective (SLO)](#service-level-objective-slo)
+- [Connections and differences](#connections-and-differences)
+- [How to calculate error budget](#how-to-calculate-error-budget)
+- [Conclusion](#conclusion)
+- [Related pages](#related-pages)
   - [On this page](#on-this-page)
   - [B.C. Platform Services Product Registry](#bc-platform-services-product-registry)
   - [Setting up SRE](#setting-up-sre)
