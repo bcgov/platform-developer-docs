@@ -203,7 +203,7 @@ In this document, we've covered several essential aspects of Site Reliability En
 1. **Explore the Tools**: If you haven't already, get hands-on experience with the tools we discussed. This will give you a better understanding of how they fit into the bigger picture
 
 2. **Share Feedback**: If you try something out and it works (or doesn't),  share your experience on Rocketchat[ #sre-discussion](https://chat.developer.gov.bc.ca/channel/sre-discussion). We can work together to figure it out. The more we exchange knowledge, the better we become.
-3. **Stay Informed**: SRE is a rapidly evolving field. Keep an eye out for updates, new tools, and innovative techniques
+3. **Stay informed**: SRE is a rapidly evolving field. Keep an eye out for updates, new tools, and innovative techniques
 
 ---
 ---
