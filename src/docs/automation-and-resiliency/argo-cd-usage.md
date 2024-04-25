@@ -59,7 +59,7 @@ To set up Argo CD for your project, a self-serve system is available. Follow the
 
 1. Prepare a 'GitOpsTeam' CustomResource:
   * Remember that GitHub IDs are **case sensitive**
-  * Utilize the provided template: [GitOpsTeam template](../src/files/argocd/gitopsteam_template.yaml)
+  * Utilize the provided template: [GitOpsTeam template](../../files/argocd/gitopsteam_template.yaml){:download="gitopsteam_template.yaml"}
   * Populate the file using the inline comments
   
 2.  Ensure that all users in the 'projectMembers' group have a Keycloak ID in the realm used by Argo CD. They can do this by attempting to access the Argo CD UI for the given cluster:
@@ -135,7 +135,7 @@ If your application is already set up for Kustomize, then you just need to move 
 
 If moving an existing application to Kustomize and Argo CD for the first time, some effort will have to be made to generate the manifest files. The live manifests can be fetched from OpenShift using the command line. Certain fields will have to be removed, however, as OpenShift adds a number of fields for internal resource management. 
 
-A [shell script](/src/files/argocd/get_ns_resources.sh) has been prepared to help with the manifest creation.
+A [shell script](../../files/argocd/get_ns_resources.sh){:download="get_ns_resources.sh"} has been prepared to help with the manifest creation.
 
 Once the manifest files have been generated, the repo structure is prepared. Within the manifest repo, in the top-level directory for the given application, create the following directories:
 
@@ -321,7 +321,7 @@ Access to the Git repository includes five sets of permissions.
 
 Access to the Argo CD UI includes two sets of permissions: read/write and read-only
 
-See the [GitOpsTeam template](../src/files/argocd/gitopsteam_template.yaml) for more details. 
+See the [GitOpsTeam template](../../files/argocd/gitopsteam_template.yaml){:download="gitopsteam_template.yaml"} for more details. 
 
 ## Related pages
 
