@@ -19,7 +19,7 @@ sort_order: 2
 ---
 
 # SRE guidelines for platform shared services
-Last updated: **April 17, 2024**
+Last updated: **April 25, 2024**
 
 Site Reliability Engineering or commonly known as SRE, plays a crucial role in ensuring an application operates smoothly by quickly restoring the system to its normal state. We can use software to precisely assess the health of an application or system is and fix any problems before they impact partners or collaborators. 
 
@@ -37,18 +37,6 @@ In this document, we'll explore the fundamental concept behind SRE and show you 
 - [Connections and differences](#connections-and-differences)
 - [How to calculate error budget](#how-to-calculate-error-budget)
 - [Conclusion](#conclusion)
-- [Related pages](#related-pages)
-  - [On this page](#on-this-page)
-  - [B.C. Platform Services Product Registry](#bc-platform-services-product-registry)
-  - [Setting up SRE](#setting-up-sre)
-  - [Importance of defining a period for SRE measurement](#importance-of-defining-a-period-for-sre-measurement)
-  - [Service Level Indicators (SLIs)](#service-level-indicators-slis)
-  - [Service Level Agreement (SLA)](#service-level-agreement-sla)
-  - [Service Level Objective (SLO)](#service-level-objective-slo)
-  - [Connections and differences](#connections-and-differences)
-  - [How to calculate Error Budget](#how-to-calculate-error-budget)
-  - [Conclusion](#conclusion)
-  - [Related pages](#related-pages)
 
 ---
 
@@ -63,6 +51,8 @@ The registry is an application that allows teams to request namespaces in OpenSh
 The technology stack for the registry includes a React front-end, a Node.js backend, a MongoDB database, and an automation tool named "Provisioner."
 <br>
 <br>
+
+
 ![Registry Flow Chart](../../images/registry-app-structure.png) 
 
 ## Setting up SRE
