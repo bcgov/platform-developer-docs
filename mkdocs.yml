@@ -12,7 +12,9 @@ nav:
   - Resource monitoring dashboards: docs/app-monitoring/resource-monitoring-dashboards.md
   - Check application health after an outage: docs/app-monitoring/check-application-health-after-outage.md
   - User Defined Monitoring in OpenShift: docs/app-monitoring/user-defined-monitoring.md
-  - Best practices for application logging in OpenShift: docs/app-monitoring/best-pratices-for-application-logging-in-openshift.md
+  - Best practices for application logging in OpenShift: docs/app-monitoring/best-practices-for-application-logging-in-openshift.md
+  - SRE guidelines for platform shared services: docs/app-monitoring/sre-guidelines-for-platform-shared-services.md
+  - Guidelines for SLI and monitoring: docs/app-monitoring/guidelines-for-sli-and-monitoring.md
 - Automation and resiliency:
   - CI/CD pipeline templates for Private Cloud teams: docs/automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md
   - Application resiliency guidelines: docs/automation-and-resiliency/app-resiliency-guidelines.md
@@ -55,7 +57,6 @@ nav:
   - Platform network topology: docs/platform-architecture-reference/platform-network-topology.md
   - Set up TCP connectivity on the Private Cloud OpenShift Platform: docs/platform-architecture-reference/set-up-tcp-connectivity-on-private-cloud-openshift-platform.md
   - Hosting tiers table: docs/platform-architecture-reference/hosting-tiers-table.md
-  - Platform automation: docs/platform-architecture-reference/platform-automation.md
 - Platform automation:
   - Platform automation: docs/platform-automation/platform-automation.md
   - Automated Scale-Down: docs/platform-automation/automated-scaling.md
