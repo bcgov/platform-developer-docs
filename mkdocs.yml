@@ -71,7 +71,6 @@ nav:
   - B.C. Government OpenShift DevOps security compliance: docs/security-and-privacy-compliance/platform-security-compliance.md
   - B.C. government OpenShift platform security tools: docs/security-and-privacy-compliance/platform-security-tools.md
   - Security best practices for apps: docs/security-and-privacy-compliance/security-best-practices-for-apps.md
-  - Payment card processing for OpenShift applications: docs/security-and-privacy-compliance/payment-card-processing.md
 - Secrets management:
   - Vault getting started guide: docs/secrets-management/vault-getting-started-guide.md
   - Vault secrets management: docs/secrets-management/vault-secrets-management-service.md
