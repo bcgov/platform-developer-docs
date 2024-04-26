@@ -18,7 +18,7 @@ content_owner: Nick Corcoran
 sort_order: 5
 ---
 # Payment card processing for OpenShift applications
-Last updated: **February 20, 2024**
+Last updated: **April 26, 2024**
 
 For the safety of financial transactions, the Payment Card Industry Data Security Standard (PCI-DSS) exists to govern the collection and transaction of financial records. Hosting applications collecting payment within the DevOps Platform may place the entire environment within PCI-DSS scope and governance.  The DevOps Platform was never intended to be PCI-DSS compliant.  
 
