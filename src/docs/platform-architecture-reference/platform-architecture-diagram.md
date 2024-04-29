@@ -24,19 +24,8 @@ Last updated: **August 22, 2023**
 
 The platform architecture diagram provides a clear visual representation of the layout within the datacenter. It showcases the locations of different clusters and outlines the diverse range of services and features that each cluster offers.  
 
-To view the diagram you will need to follow the directions below as it is content protected by IDIR login. The diagram serves as a valuable tool for understanding how the datacenter's resources are organized and how various services are distributed across the infrastructure:
+[View the diagram](https://digital.gov.bc.ca/cloud/services/private/internal-resources/) (protected by IDIR login). The diagram serves as a valuable tool for understanding how the datacenter's resources are organized and how various services are distributed across the infrastructure:
 
-1. Head on over to the [Private cloud](https://digital.gov.bc.ca/cloud/private/) main page
-
-2. Find the section: **Internal resources**. Please note that this section is password-restricted for private cloud resources (IDIR protected)
-
-3. Click on the button  **Login with Keycloak** 
-
-4. Log in with IDIR
-
-5. Find the section: **Platform architecture diagram**
-
----
 ---
 
 ## Related pages 
