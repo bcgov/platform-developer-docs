@@ -3,3 +3,5 @@ site
 src/docs/.DS_Store
 .DS_Store
 test_patcher.py
+*.log
+tmp/.htmltest/refcache.json

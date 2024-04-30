@@ -25,7 +25,7 @@ Last updated: **April 17, 2024**
 
 **Performance Monitoring Tools:**  You can use tools like Prometheus, Grafana to continuously watch and display system performance metrics, including response times
 
-**Logging**:Make sure that the Application system records the time it takes for each data retrieval request. Periodically analyze these logs or use log aggregation tools like the ELK Stack (Kibana, Logstash, etc.) to gain insights
+**Logging**: Make sure that the Application system records the time it takes for each data retrieval request. Periodically analyze these logs or use log aggregation tools like the ELK Stack (Kibana, Logstash, etc.) to gain insights
 
 **Threshold Alerts**: Create alerts to inform system administrators or engineers when response times exceed the defined threshold
 
@@ -106,7 +106,7 @@ We can then establish an alert system based on our SLI and SLO. Typically, the `
 
 For instance, if our goal is to ensure that our response time remains under 3 seconds as our SLO upper limit, we will set our `sysdig_connection_net_request_time` SLO for any request taking longer than 5 seconds to be serviced. This will trigger a notification, prompting us to take action, such as increasing resources or refining algorithms.
 
-Here's an example query for network Latency(Note that be able to use this query, you have to let your application export metrics by using custom metrics, read more [here](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md) ):
+Here's an example query for network Latency(Note that be able to use this query, you have to let your application export metrics by [using custom metrics](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md):
 ```
 sum(rate(http_request_duration_seconds_bucket{le="0.3"}[5m])) by (kube_pod_name)
 /
