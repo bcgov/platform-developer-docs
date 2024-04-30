@@ -57,6 +57,7 @@ nav:
   - Platform network topology: docs/platform-architecture-reference/platform-network-topology.md
   - Set up TCP connectivity on the Private Cloud OpenShift Platform: docs/platform-architecture-reference/set-up-tcp-connectivity-on-private-cloud-openshift-platform.md
   - Hosting tiers table: docs/platform-architecture-reference/hosting-tiers-table.md
+  - SRE reference for application deployment across different clusters: docs/platform-architecture-reference/sre-reference-for-app-on-different-cluster.md
 - Platform automation:
   - Platform automation: docs/platform-automation/platform-automation.md
   - Automated Scale-Down: docs/platform-automation/automated-scaling.md

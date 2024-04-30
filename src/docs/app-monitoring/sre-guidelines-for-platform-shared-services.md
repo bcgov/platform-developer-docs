@@ -19,7 +19,7 @@ sort_order: 2
 ---
 
 # SRE guidelines for platform shared services
-Last updated: **April 25, 2024**
+Last updated: **April 30, 2024**
 
 Site Reliability Engineering or commonly known as SRE, plays a crucial role in ensuring an application operates smoothly by quickly restoring the system to its normal state. We can use software to precisely assess the health of an application or system is and fix any problems before they impact partners or collaborators. 
 
@@ -184,22 +184,22 @@ Allowed downtime = 5% of 43,800 = 2,190 minutes per month
 
 This structured approach ensures you have a clear understanding of how much downtime is permissible within your established time frame, allowing for effective monitoring and management of service reliability. 
 
-For more infomation, it is highly recommended to read this [documentation](https://www.atlassian.com/incident-management/kpis/error-budget) about error budget and incident management from Atlassian.
+For more information, it is highly recommended to read this [documentation](https://www.atlassian.com/incident-management/kpis/error-budget) about error budget and incident management from Atlassian.
 
 ## Conclusion
 In this document, we've covered several essential aspects of Site Reliability Engineering (SRE). From delving into monitoring in detail to implementing tools like Uptime.com. our focus is on ensuring the continuous and smooth operation of our systems.
 
-**Moving forward**:
+Moving forward:
+
 1. **Explore the Tools**: If you haven't already, get hands-on experience with the tools we discussed. This will give you a better understanding of how they fit into the bigger picture
 
-2. **Share feedback**: If you try something out and it works (or doesn't),  share your experience on Rocketchat[ #sre-discussion](https://chat.developer.gov.bc.ca/channel/sre-discussion). We can work together to figure it out. The more we exchange knowledge, the better we become.
+2. **Share feedback**: If you try something out and it works (or doesn't),  share your experience on Rocket.Chat[ #sre-discussion](https://chat.developer.gov.bc.ca/channel/sre-discussion). We can work together to figure it out. The more we exchange knowledge, the better we become.
+
 3. **Stay informed**: SRE is a rapidly evolving field. Keep an eye out for updates, new tools, and innovative techniques
 
----
----
 
 ## Related pages
 
-- [Monitoring and Alerting](../maintain-an-application/#monitoring-and-alerting)
-- [Set up advanced metrics in Sysdig Monitor](/sysdig-monitor-set-up-advanced-functions/)
-- [Sysdig - Use Service Discovery to import application metrics endpoints](sysdig-monitor-set-up-advanced-functions/#use-service-discovery-to-import-application-metrics-endpoints)
+- [Monitoring and alerting](../build-deploy-and-maintain-apps/maintain-an-application.md#monitoring-and-alerting)
+- [Set up advanced metrics in Sysdig Monitor](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
+- [Sysdig - Use Service Discovery to import application metrics endpoints](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md#use-service-discovery-to-import-application-metrics-endpoints)

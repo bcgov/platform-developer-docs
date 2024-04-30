@@ -1,7 +1,7 @@
 # SRE reference for application deployment across different clusters
-Last updated: **April 17, 2024**
+Last updated: **April 30, 2024**
 
-This document guides application teams deploying applications across different hosting clusters managed by our platform. Each cluster has unique characteristics and Service Level Agreements or SLAs, which should be understood and considered when planning deployment and setting reliability targets
+This document guides application teams deploying applications across different hosting clusters managed by our platform. Each cluster has unique characteristics and Service Level Agreements or SLAs, which should be understood and considered when planning deployment and setting reliability targets.
 
 ## Clusters overview
 - **Silver Cluster**: Designed for cost-efficiency and suitable for less critical applications
@@ -12,7 +12,9 @@ This document guides application teams deploying applications across different h
 For detailed SLA expectations per cluster, please refer to the official [Hosting tiers SLA documentation](https://digital.gov.bc.ca/cloud/services/private/products-tools/hosting-tiers/).
 
 ## Impact of Vault and Artifactory on application availability
-Vault and Artifactory are crucial components hosted on the Gold cluster, used for secret management and as a image repository manager, respectively. The availability and performance of these services can directly impact the applications depending on them. However, it's important to note:
+Vault and Artifactory are crucial components hosted on the Gold cluster, used for secret management and as a image repository manager, respectively. The availability and performance of these services can directly impact the applications depending on them. 
+
+However, it's important to note:
 
 - **SLA for Vault and Artifactory**: Detailed SLA information for these services can be found here:
   - [Vault SLA Details](https://digital.gov.bc.ca/cloud/services/private/products-tools/vault/)
@@ -62,12 +64,12 @@ Target Uptime_Main_App = 0.995 * 0.999 * 0.98 = 0.974 (or 97.4% uptime)
 
 This model assigns weights to each dependency based on its criticality, which is particularly useful for applications where some dependencies are more critical than others.
 
-Steps
+Steps:
 1. Assign a weight to each dependency according to its importance.
 2. Multiply each dependency's uptime by its weight.
 3. Sum the weighted uptimes.
 
-Example
+Example:
 - **Main Application**: High availability required (e.g., hosted on the Gold cluster with DR)
 - **Dependency 1 (Vault)**: 99.9% uptime (Critical, weight = 0.8)
 - **Dependency 2 (Artifactory)**: Also 99.9% uptime (Medium criticality, weight = 0.5)
@@ -100,7 +102,7 @@ Develop SLOs that reflect your application's operational goals within the contex
 
 - **Collaborators engagement**: Keep collaborators and partners informed about SLA status and any potential impacts from planned or unplanned changes
 
-You can read more about how to setup SRE on an application [Here](../app-monitoring/sre-guidelines-for-platform-shared-services.md). We use [Registry](https://registry.developer.gov.bc.ca/) as an example for this process.
+You can read more about [how to setup SRE on an application](../app-monitoring/sre-guidelines-for-platform-shared-services.md). We used the [Platform Product Registry](https://registry.developer.gov.bc.ca/) as an example for this process.
 
 ## Conclusion
 Understanding the distinct characteristics and SLA implications of each cluster, as well as the dependencies on services like Vault and Artifactory, is crucial for meeting the operational requirements and reliability expectations of your applications. By following this guide, application teams can make informed decisions that align with their performance and reliability goals.
