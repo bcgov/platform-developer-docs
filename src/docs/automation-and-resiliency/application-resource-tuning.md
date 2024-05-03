@@ -177,7 +177,7 @@ The reason that Jenkins is often deployed with such high CPU and memory requests
 
 A test was performed to collect the startup time of Jenkins under various resource configurations. Each test was performed three times and the startup time was averaged out across each iteration. The name of each test is in the format of `[cpu_requests_in_millicores]-[cpu_limits_in_millicores]-[memory_requests_in_mb]`.
 
-![Jenkins performance test results](/src/images/jenkins-performance-test-results.png)
+![Jenkins performance test results](../../images/jenkins-performance-test-results.png)
 
 
 | Test Name                  | Average Startup Time (s) |   
@@ -210,7 +210,7 @@ The observations from the testing can be summarized as follows:
 
 Consider monitoring the upper and lower bounds of CPU and memory usage of Jenkins instances over time. When idle, it has been observed that Jenkins uses under `5m` of CPU and about `650Mi` of memory. As per the **General Guidelines** above, "set requests to the _minimum_ of what your application needs." It is ideal to reserve resources conservatively (especially for workloads that are often idle), and leverage resource limits to burst when active.
 
-![Jenkins CPU usage](/src/images/jenkins-cpu-usage.png)
+![Jenkins CPU usage](../../images/jenkins-cpu-usage.png)
 
 Also, consider other workloads you may need to run in the tools namespace when accounting for requests/limits allocation to be within the allotted maximums.
 
@@ -244,7 +244,9 @@ You can identify current resource quota consumption and properly size resource r
 
 From the OpenShift web console, in the **Administrator** perspective, proceed to **Administration** \> **ResourceQuotas** and select the appropriate `ResourceQuota` (i.e., `compute-long-running-quota`). Here is an example:
 
-![Ttools example compute long running quota dashboard](/src/images/tools-example-compute-long-running-quota.png)
+![Ttools example compute long running quota dashboard](../../images/tools-example-compute-long-running-quota.png)
+
+
 
 **Viewing quota usage (CLI)**
 
