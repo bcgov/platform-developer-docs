@@ -36,7 +36,7 @@ The aim is to provide a clear and easily understandable overview of each OCP edi
 | Silver hosting tier | Details |
 |-----------------------------------------------|-------------------------------------------------|
 | **OpenShift Cluster Name** | Silver |
-| **Target up time (availability)** | Platform availability for the Silver hosting tier is 90% for [single-node](#single-and-multi-node-application-deployments) and 99.5% in a rolling 30-day window for [multi-node deployments](#single-and-multi-node-application-deployments) |
+| **Target up time (availability)** | Platform availability for the Silver hosting tier is 90% for [single-node](#single-and-multi-node-application-deployments) and 99.5% in a rolling 30-day window for [multi-node deployments](#single-and-multi-node-application-deployments), with no total outage exceeding 4 hours per 30 continuous days.This includes downtime due to scheduled maintenance but excludes disruptions due to data centre operations. |
 | [**Maximum data sensitivity**](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification) | - Protected B: Stored at rest (in a database or file storage)<br> - Protected C: Processing only (must be stored elsewhere) |
 | **Integrated HA, DR options**| TransportServerClaims|
 | **OpenShift upgrade plan** | Aim for N minus 1 tracking Red Hat point releases for OpenShift|                  
@@ -52,7 +52,7 @@ The aim is to provide a clear and easily understandable overview of each OCP edi
 |-----------------------------------------------|-------------------------------------------------|
 | **OpenShift Cluster Name** | Gold and GoldDR |
 | **Target up time (availability)** | Platform availability for the Gold hosting tier is 99.95% in a rolling 30-day window, specifically for applications with [multi-node deployments](#single-and-multi-node-application-deployments) that have a geographic failover to the Gold DR cluster in the Calgary data centre, minimizing disruption. <br><br>**Without DR, Gold maintains the same availability as Silver** |
-| [**Maximum data sensitivity**](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification) | - Protected B: Stored at rest (in a database or file storage)<br> - Protected C: Processing only (must be stored elsewhere) |
+| [**Maximum data sensitivity**](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification), with no total outage exceeding 22 minutes per 30 continuous days. This includes downtime due to scheduled maintenance but excludes disruptions due to data centre operations.  | - Protected B: Stored at rest (in a database or file storage)<br> - Protected C: Processing only (must be stored elsewhere) |
 | **Integrated HA, DR options**| - TransportServerClaims to connect between Gold and Gold DR<br> -Global Load Balancing between clusters for Active/Passive DR|
 | **OpenShift upgrade plan** | Aim for N minus 1 tracking Red Hat point releases for OpenShift|
 | **Supported operators**| - Horizontal Pod Autoscaler<br> - Vertical Pod Autoscaler<br> - Custom Metrics Autoscaler<br> - Pipelines: Tekton<br> - CrunchyDB<br> - ArgoCD<br> - Kyverno <br>- License required Red Hat integration<br> - Enterprise DB <br> - JBoss EAP |
@@ -65,7 +65,7 @@ The aim is to provide a clear and easily understandable overview of each OCP edi
 | Emerald hosting tier | Details |
 |-----------------------------------------------|-------------------------------------------------|
 | **OpenShift Cluster Name** | Emerald |
-| **Target up time (availability)** | Platform availability for the Emerald hosting tier is 90% for [single-node](#single-and-multi-node-application-deployments) application deployments and 99.5% in a rolling 30-day window for [multi-node deployments](#single-and-multi-node-application-deployments) |
+| **Target up time (availability)** | Platform availability for the Emerald hosting tier is 90% for [single-node](#single-and-multi-node-application-deployments) application deployments and 99.5% in a rolling 30-day window for [multi-node deployments](#single-and-multi-node-application-deployments), with no total outage exceeding 4 hours per 30 continuous days. This includes downtime due to scheduled maintenance but excludes disruptions due to data centre operations. |
 | [**Maximum data sensitivity**](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification) | Protected C - Storage and/or processing |
 | **Integrated HA, DR options**| None|
 | **OpenShift upgrade plan** | - Extended Update Support (EUS) <br> - Only upgrades to even numbered releases of OpenShift|
