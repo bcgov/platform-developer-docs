@@ -81,6 +81,7 @@ nav:
   - External training resources: docs/training-and-learning/training-external-resources.md
 plugins:
 - techdocs-core
+- git-revision-date-localized 
 markdown_extensions:
 - md_in_html
 - pymdownx.highlight:
