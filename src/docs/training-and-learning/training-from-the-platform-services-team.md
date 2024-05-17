@@ -35,6 +35,8 @@ You can review the materials for the OpenShift 101 and OpenShift 201 training [h
 ## How-to-workshops
 
 The [how to workshops](https://github.com/bcgov/how-to-workshops) page hosts some demo projects and quick start guides that may assist you in getting stared with network policies and Crunchy DB databases.  
+
+Sysdig Training information can be found [here](../app-monitoring/sysdig-training.md). 
  
 ## Video resources
 
