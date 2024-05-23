@@ -20,9 +20,10 @@ sort_order: 1
 
 # Vault getting started guide
 
-The Platform Services team has deployed Hashicorp's Vault application with disaster recovery in our Gold service clusters (Gold Kamloops and Gold Calgary), the service is available to all BC Government development teams on **all clusters** (silver, gold/golddr, emerald). 
+The Platform Services team has deployed Hashicorp's Vault application with disaster recovery in our Gold service clusters (Gold Kamloops and Gold Calgary), the service is available to all BC Government development teams on **all clusters** (silver, gold/golddr, emerald).
 
 The Vault service is available at [https://vault.developer.gov.bc.ca/](https://vault.developer.gov.bc.ca/).
+Lab clusters, such as CLAB, use a separate Vault service available at [https://vault.developer.gov.bc.ca/](https://vault-lab.developer.gov.bc.ca/).
 
 In this guide, you will learn how to access Vault and deploy a working example using sample secrets from your Vault Mount Points. Mount Points can be thought of as "MiniVaults" or related to paths within a Linux filesystem that can be locked down and secured.
 
