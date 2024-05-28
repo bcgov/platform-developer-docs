@@ -18,7 +18,7 @@ content_owner: Shelly Han
 sort_order: 12
 ---
 
-# Sysdig Training 
+# Sysdig training 
 
 Last updated: **May 9, 2024**
 
@@ -30,17 +30,19 @@ Follow the steps listed [here](../app-monitoring/sysdig-monitor-setup-team/#sign
 
 ## Access the training
 
-Once you've signed in, hover over your username in the bottom-right corner of the web interface. Select the 'Self-paced training' menu option. 
+1. Once you've signed in, hover over your username in the bottom-right corner of the web interface. Select the 'Self-paced training' menu option
 
 ![Self-Paced Training](../../images/sysdig-training.png)
 
-From here, select the 'Monitor Hands-On Labs' training, and register. You can then complete this interactive training when you're ready. Please make sure to set aside some time for completing the labs, as any progress you make will be lost if you're inactive for too long or when you log out. 
+2. From 'Self-paced Training'  select the 'Monitor Hands-On Labs' training, and register. You can then complete this interactive training when you're ready
+
+3. **Important**: Make sure to set aside time for completing the labs, any progress you make will be lost if you're inactive for too long or when you log out
 
 ![Monitor Hands-On Lab](../../images/sysdig-labs.png)
 
 ## Discuss the training
 
-Please join the rocketchat channel [#sysdig-training](https://chat.developer.gov.bc.ca/channel/sysdig-training) when you start these labs, and share any questions there. 
+Please join the Rocket.Chat channel [#sysdig-training](https://chat.developer.gov.bc.ca/channel/sysdig-training) when you start these labs, and share any questions there. 
 
 ---
 
