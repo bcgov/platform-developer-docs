@@ -9,6 +9,7 @@ nav:
   - Create monitoring dashboards in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-create-monitoring-dashboards.md
   - Create alerts and notifications in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-create-alert-channels.md
   - Set up advanced metrics in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-set-up-advanced-functions.md
+  - Sysdig training: docs/app-monitoring/sysdig-training.md 
   - Resource monitoring dashboards: docs/app-monitoring/resource-monitoring-dashboards.md
   - Check application health after an outage: docs/app-monitoring/check-application-health-after-outage.md
   - User Defined Monitoring in OpenShift: docs/app-monitoring/user-defined-monitoring.md

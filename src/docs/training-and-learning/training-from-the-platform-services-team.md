@@ -24,17 +24,19 @@ Learning how to build in OpenShift can be hard. We’ve put together a number of
 
 ## OpenShift 101 and 201
 
-The BC Gov Private Cloud PaaS OpenShift 101 and 201 courses include a theory 'workshop' component, and a practical series of 'lab exercises'. OpenShift 101 is recomended for all new teams joining the platform. OpenShift 201 is a more advanced course for platform users who want to advance their skills in OpenShift.
+The BC Gov Private Cloud PaaS OpenShift 101 and 201 courses include a theory 'workshop' component, and a practical series of 'lab exercises'. OpenShift 101 is recommended for all new teams joining the platform. OpenShift 201 is a more advanced course for platform users who want to advance their skills in OpenShift.
 
 If the courses fill up, email PlatformServicesTeam@gov.bc.ca - preference is given to recently onboarded teams. If you’re unable to attend a training session, we will soon be offering recordings. 
 
 [Register for an OpenShift course](https://cloud.gov.bc.ca/private-cloud/support-and-community/platform-training-and-resources/).
 
-You can review the materials for the OpenShift 101 and OpenShift 201 training [here.](https://github.com/BCDevOps/devops-platform-workshops/blob/master/README.md) 
+You can review the materials for the [OpenShift 101 and OpenShift 201 training](https://github.com/BCDevOps/devops-platform-workshops/blob/master/README.md) 
 
 ## How-to-workshops
 
 The [how to workshops](https://github.com/bcgov/how-to-workshops) page hosts some demo projects and quick start guides that may assist you in getting stared with network policies and Crunchy DB databases.  
+
+Learn more about [Sysdig training information](../app-monitoring/sysdig-training.md). 
  
 ## Video resources
 
