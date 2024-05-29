@@ -73,6 +73,24 @@ An e-commerce platform experienced performance degradation during peak times. By
 - **Sysdig Monitoring Guide**: S[ysdig Guidelines for SLI and Monitoring](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/docs/app-monitoring/guidelines-for-sli-and-monitoring/)
 - **Utilization Dashboard**: Review resource usage through the "Resources Quota Approve Dashboard" on Sysdig before submitting quota increase requests.
 
+## Identifying and Managing Resource Slack
+
+### Why Managing Slack is Important
+When resources are requested but not utilized, known as "slack," they are unavailable to other teams or projects that could use them effectively. This can limit new teams from onboarding onto the platform or force the organization to unnecessarily invest in additional hardware. Managing slack ensures that resources are allocated efficiently and cost-effectively, supporting overall operational effectiveness.
+
+### How to Spot Waste (Slack)
+1. Access the OpenShift Web Console and navigate to your dev, test, or prod namespace.
+2. Click on the CPU utilization graph to view details.
+3. Expand the view to cover the last two weeks (2w) and focus on the gap between the blue line (requested CPU) and the yellow line (actual usage).
+4. A significant gap indicates under-utilization of resources, commonly referred to as slack.
+
+### Best Practices for CPU and Memory Allocation
+- **Align CPU Requests with Usage:** Ensure the `request.cpu` does not exceed 1.6 times the actual usage, and use `limit.cpu` to accommodate occasional spikes.
+- **Focus on CPU Limits for Performance:** Only the `limit.cpu` setting impacts performance directly. Over-allocating `request.cpu` will not necessarily resolve performance issues.
+- **Environment-Specific Provisioning:** Adjust resource allocations based on the specific requirements of dev, test, and prod environments.
+- **Put Unused Environments to Sleep:** Deactivate environments that are no longer in use to conserve resources.
+- **Differentiate Between Request and Limit Values:** Keep `limit.cpu` higher than `request.cpu` to manage unexpected spikes and performance issues.
+
 ## Recommended CPU Utilization Rates
 - **Optimal Utilization:** Aim for 60-80% utilization. Below 60% may indicate over-provisioning, and above 80% could risk performance issues.
 
