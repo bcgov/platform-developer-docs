@@ -23,7 +23,7 @@ The resources below are from sources outside of the B.C. government. They provid
 
 ## Websites:
 
-[Sysdig Monitor Training](../app-monitoring/sysdig-training-team.md)
+[Sysdig Monitor Training](../app-monitoring/sysdig-training.md)
 
 [What is RedHat OpenShift?](https://cloud.redhat.com/learn/what-is-openshift) - by RedHat
 
