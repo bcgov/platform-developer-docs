@@ -58,6 +58,8 @@ Dive deeper
 * [Resource monitoring dashboards](docs/app-monitoring/resource-monitoring-dashboards.md)
 * [Best practices for application logging in OpenShift](docs/app-monitoring/best-pratices-for-application-logging-in-openshift.md)
 * [Check application health after an outage](docs/app-monitoring/check-application-health-after-outage.md)
+* [Managing resource quotas in Kubernetes: A complete guide](docs/app-monitoring/managing-resource-quotas-in-kubernetes.md)
+* [Sysdig training](docs/app-monitoring/sysdig-training.md)
 
 ### Automation and resiliency
 
