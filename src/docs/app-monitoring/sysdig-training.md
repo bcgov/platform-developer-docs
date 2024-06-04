@@ -26,7 +26,7 @@ This page describes how to access training provided by Sysdig to set up monitori
 
 ## Sign in to Sysdig Monitor
 
-Follow the steps listed [here](../app-monitoring/sysdig-monitor-setup-team/#sign-in-to-sysdig) to sign in to Sysdig Monitor. 
+Follow the steps listed [here](../sysdig-monitor-setup-team/#sign-in-to-sysdig) to sign in to Sysdig Monitor. 
 
 ## Access the training
 
