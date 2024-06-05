@@ -44,6 +44,10 @@ Follow the steps listed [here](../sysdig-monitor-setup-team/#sign-in-to-sysdig) 
 
 Please join the Rocket.Chat channel [#sysdig-training](https://chat.developer.gov.bc.ca/channel/sysdig-training) when you start these labs, and share any questions there. 
 
+## Custom Training
+
+To request custom training for your team, please contact [Dustin Krysak](https://chat.developer.gov.bc.ca/direct/KDMJax3AGk8CYr5oGKkNg6QbQud5CfXmsR) via rocketchat. 
+
 ---
 
 ## Related pages
