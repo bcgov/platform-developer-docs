@@ -26,7 +26,7 @@ You have to log in with IDIR into the OpenShift console before you can associate
 
 When you log in to the Silver cluster OpenShift console, you have the option of using GitHub or your Azure AD IDIR.
 
-![Image of authorization options](https://user-images.githubusercontent.com/53879638/146621070-6d473a3d-289c-400e-86a7-947732441fac.png)
+![Image of authorization options](../../images/OCP4%20cluster%20authentication%20login%20page%20showing%20github%20and%20azure%20ad%20idir%20as%20options.png)
 
 ## Information for developers
 GitHub accounts are still the default authentication mechanism for our developers.
@@ -46,9 +46,9 @@ We don't intend to leverage SSO integration for IDIR onto GitHub at this time. Y
 If you have any questions or concerns about this change, post your question in [#devops-security channel](https://chat.developer.gov.bc.ca/channel/devops-security) in Rocket.Chat.
 
 ---
-Related links:
+Related pages
 
 * [Platform Product Registry](https://registry.developer.gov.bc.ca/)
 * [#devops-security channel](https://chat.developer.gov.bc.ca/channel/devops-security)
 
----
+
