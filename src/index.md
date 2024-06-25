@@ -82,6 +82,7 @@ demos of their application.
 * [AlertManager](docs/platform-automation/alertmanager.md)
 * [Pruning](docs/platform-automation/pruning.md)
 * [Kyverno Cluster Policies](docs/platform-automation/kyverno.md)
+* [Defunct PIDs](docs/platform-automation/defunct-pids.md)
 
 ### Reusable code and services
 
