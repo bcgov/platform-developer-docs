@@ -66,7 +66,7 @@ nav:
   - AlertManager: docs/platform-automation/alertmanager.md
   - Pruning: docs/platform-automation/pruning.md
   - Kyverno cluster policies: docs/platform-automation/kyverno.md
-  - Defunct PIDs: docs/platform-automation/defunct-pids.md
+  - Defunct Process IDs (PIDs): docs/platform-automation/defunct-pids.md
 - Reusable code and services:
   - Project examples: docs/reusable-code-and-services/project-examples.md
   - Reusable services list: docs/reusable-code-and-services/reusable-services-list.md

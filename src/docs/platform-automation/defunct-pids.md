@@ -1,5 +1,5 @@
 ---
-title: Defunct PIDs
+title: Defunct Process IDs (PIDs)
 
 slug: defunct-pids
 
@@ -18,31 +18,30 @@ content_owner: Olena Mitovska
 sort_order: 5
 ---
 
-# Defunct PIDs
-Last updated: **June 24, 2024**
+# Defunct Process IDs (PIDs) 
 
-There is a cron job to find pods with excess defunct processes and email the Product Owner and Tech Lead on file for the namespace. Too many of these process can have a negative impact on OpenShift node stability.
+A cron job finds pods with too many defunct processes, it emails the Product Owner and Tech Lead for the namespace. Too many defunct processes can harm the OpenShift node stability.
 
-## Quick Fix
+## Quick solution
 
-The quick fix is to just delete the pod. That will cause all the extra processes to exit and restart the pod in a clean state. The pod will likely build up excess defunct processes again in the future, but this can be a quick fix to stop the alert emails until you have time to more fully address the issue.
+The quick solution is to delete the pod. This makes all extra processes exit and restarts the pod in a clean state. The pod may build up defunct processes again, but this stops the alert emails temporarily until you can fully address the issue.
 
-## Proper fix
+## Proper solution
 
-Traditionally in containers, the mantra is "one container, one process" but in recent times, containers will often have several processes running in them. They may also include readyness and liveness checks that use exec.
+Traditionally, containers follow the "one container, one process" mantra. Recently, containers often run several processes, including readiness and liveness checks using exec.
 
-The first process to start in a container is treated as PID 1 and all other processes are treated as children of that process. If that process is not expecting to be parent to other processes, then when those child processes exit in unexpected ways they may become zombie or defunct and need to be cleaned up.
+The first process in a container is PID 1, and all others are its children. If PID 1 doesn't expect to parent other processes when those child processes exit in unexpected ways, they can become zombie or defunct, needing cleanup.
 
-The proper fix is to ensure that the `ENTRYPOINT` of your container is a process that can handle the cleanup of zombie child processes, often called an init program. Some examples include [Tini](https://github.com/krallin/tini), [dumb-init](https://github.com/Yelp/dumb-init), and [s6-overlay](https://github.com/just-containers/s6-overlay). Having one of these init processes as your PID 1 that then runs your main container process will ensure that any unhandled defunct PIDs are cleaned up instead of hanging around causing issues for the nodes kernel.
+The proper solution is to set your container's `ENTRYPOINT` to a process that handles zombie child processes cleanup, called an init program. Examples include [Tini](https://github.com/krallin/tini), [dumb-init](https://github.com/Yelp/dumb-init), and [s6-overlay](https://github.com/just-containers/s6-overlay). Using one of these init processes as PID 1 ensures that unhandled defunct PIDs are cleaned up, preventing issues for the node's kernel.
 
-Sometimes minor changes to the probes can also be done to prevent them from creating zombies as well.
+Sometimes, minor changes to the probes can prevent them from creating zombie processes.
 
 ---
 ---
 
-## Additional Reading
+## Additional resources
 
-- [Container Init Process](https://devopsdirective.com/posts/2023/06/container-init-process/)
+- [Container Init process](https://devopsdirective.com/posts/2023/06/container-init-process/)
 - [bitnami/mongodb fix PR](https://github.com/bitnami/charts/pull/23390/files)
 - [bitnami/redis-cluster fix PR](https://github.com/bitnami/charts/pull/5335/files)
-- [Kubernetes Feature Request to add init process to all containers](https://github.com/kubernetes/kubernetes/issues/84210)
+- [Kubernetes feature request to add init process to all containers](https://github.com/kubernetes/kubernetes/issues/84210)
