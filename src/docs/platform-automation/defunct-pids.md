@@ -20,7 +20,9 @@ sort_order: 5
 
 # Defunct Process IDs (PIDs) 
 
-A cron job finds pods with too many defunct processes, it emails the Product Owner and Tech Lead for the namespace. Too many defunct processes can harm the OpenShift node stability.
+A defunct process is one that has exited, but its parent process has not read its exit status allowing it to be removed from the process table in the kernel. Too many defunct processes can harm the OpenShift node stability.
+
+A cron job finds pods with too many defunct processes, it emails the Product Owner and Tech Lead for the namespace.
 
 ## Quick solution
 
