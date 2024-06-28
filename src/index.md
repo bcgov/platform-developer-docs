@@ -1,8 +1,6 @@
-Welcome to the Private Cloud as a Service Platform Technical Documentation
-==========================================================================
+# Welcome to the Private Cloud as a Service Platform Technical Documentation
 
-Get started
------------
+## Get started
 
 Start here for the first steps on working in our OpenShift environment.
 
@@ -12,8 +10,7 @@ Start here for the first steps on working in our OpenShift environment.
 * [Request a quota increase for an OpenShift project set](docs/automation-and-resiliency/request-quota-increase-for-openshift-project-set.md)
 * [Common platform requests](docs/openshift-projects-and-access/common-platform-requests.md)
 
-Build, deploy and maintain apps
--------------------------------
+## Build, deploy and maintain apps
 
 Best practices on the platform.
 
@@ -22,8 +19,7 @@ Best practices on the platform.
 * [Maintain an application](docs/build-deploy-and-maintain-apps/maintain-an-application.md)
 * [Retire an application](docs/build-deploy-and-maintain-apps/retire-an-application.md)
 
-Training and learning
----------------------
+## Training and learning
 
 ### Free OpenShift training
 
@@ -46,8 +42,7 @@ demos of their application.
 
 [Learn how to register for this and other events](https://digital.gov.bc.ca/cloud/services/private/team/#stay).
 
-Dive deeper
------------
+## Dive deeper
 
 ### App monitoring
 
@@ -66,12 +61,10 @@ Dive deeper
 * [App resiliency guidelines](docs/automation-and-resiliency/app-resiliency-guidelines.md)
 * [CI/CD pipeline automation](docs/automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md)
 
-
 ### Database and API management
 
 * [Open source database technologies](docs/database-and-api-management/opensource-database-technologies.md)
 * [High availability database clusters](docs/database-and-api-management/high-availability-database-clusters.md)
-
 
 ### Platform architecture reference
 
@@ -89,13 +82,13 @@ Dive deeper
 * [AlertManager](docs/platform-automation/alertmanager.md)
 * [Pruning](docs/platform-automation/pruning.md)
 * [Kyverno Cluster Policies](docs/platform-automation/kyverno.md)
+* [Defunct PIDs](docs/platform-automation/defunct-pids.md)
 
 ### Reusable code and services
 
 * [Pathfinder SSO Keycloak](docs/reusable-code-and-services/reusable-services-list.md#pathfinder-single-sign-on-keycloak)
 * [Reusable services list](docs/reusable-code-and-services/reusable-services-list.md)
 * [Project examples](docs/reusable-code-and-services/project-examples.md)
-
 
 ### Secrets management
 
@@ -116,9 +109,7 @@ Dive deeper
 * [Common platform requests in the BC Gov Private Cloud PaaS](https://digital.gov.bc.ca/cloud/services/private/support/#common)
 * [Start working in BCGov GitHub organization](../bc-developer-guide/use-github-in-bcgov/start-working-in-bcgov-github-organization/)
 
-
-Get support on the platform
----------------------------
+## Get support on the platform
 
 ### Report a platform incident
 
