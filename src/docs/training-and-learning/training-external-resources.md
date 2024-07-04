@@ -41,6 +41,8 @@ The resources below are from sources outside of the B.C. government. They provid
 
 [The Twelve-Factor App](https://12factor.net/) - by Heroku (Adam Wiggins)
 
+[Microsoft Enterprise Skills Initiative](https://esi.microsoft.com/) - by Microsoft. Free for B.C. government employees through the contract between The Province and Microsoft. Useful for training and certification exams. The exam has a 50% off discount. The Microsoft Azure Fundamentals course contains some broad cloud fundamentals that apply to OpenShift and other cloud technologies. 
+
 ## E-books: 
 [Deploying to OpenShift](https://cloud.redhat.com/hubfs/pdfs/Deploying_to_OpenShift.pdf) Red Hat / O'Reilly Publishing
 
