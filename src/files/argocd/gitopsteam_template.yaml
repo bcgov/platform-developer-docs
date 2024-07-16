@@ -12,11 +12,10 @@ spec:
   # to join.
   #
   # Note:
-  #   GitHub IDs are case sensitive
   #   Do not append "@github" to GitHub IDs in the gitOpsMembers section
   #   This section is for GitHub repo access, so only GitHub IDs, no IDIRs
-  #   You may use GitHub teams in this section
-  # -----------------------------------------------------------------------
+  #   For GitHub teams, use the appropriate "Teams" lists (e.g., adminTeams)
+  # ------------------------------------------------------------------------
   gitOpsMembers:
 
     # Full admin access to the repo, including repo deletion, adding of users
@@ -25,22 +24,28 @@ spec:
     # repository.
     admins:
       - myCaseSensitiveGitHubID
+    adminTeams:
+      - ourGitHubTeam
 
     # Recommended for contributors who actively push to your project.
     writers:
       - dev1-githubid
+    writerTeams:
 
     # Recommended for project managers who need to manage the repository without
     # access to sensitive or destructive actions.
     maintainers:
+    maintainerTeams:
 
     # Recommended for non-code contributors who want to view or discuss your
     # project.
     readers:
+    readerTeams:
 
     # Recommended for contributors who need to manage issues and pull requests
     # without write access.
     triage:
+    triageTeams:
 
   # projectMembers defines access to the Argo CD UI and is based on Keycloak
   #   groups

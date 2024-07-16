@@ -19,7 +19,7 @@ sort_order: 6
 ---
 
 # Argo CD usage
-Last updated: **April 3, 2024**
+Last updated: **July 15, 2024**
 
 Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes (the foundation of OpenShift). It is efficient, well supported, and well documented.
 
@@ -61,6 +61,7 @@ To set up Argo CD for your project, a self-serve system is available. Follow the
   * Remember that GitHub IDs are **case sensitive**
   * Utilize the provided template: [GitOpsTeam template](../../files/argocd/gitopsteam_template.yaml){:download="gitopsteam_template.yaml"}
   * Populate the file using the inline comments
+  * If you would like to add GitHub **teams** to the gitops repo access list, note that they go in a separate "Teams" list.  For example, admin users go into the `admins` list while admin teams go into the `adminTeams` list. 
   
 2.  Ensure that all users in the 'projectMembers' group have a Keycloak ID in the realm used by Argo CD. They can do this by attempting to access the Argo CD UI for the given cluster:
 
@@ -75,7 +76,7 @@ To set up Argo CD for your project, a self-serve system is available. Follow the
 After creation of the GitOpsTeam resource, an OpenShift operator will:
 
 4. Create a "gitops" repo for your project
- * This is the repository that Argo CD will read for your application manifests
+  * This is the repository that Argo CD will read for your application manifests
  
     **Note:** This repo is in the `bcgov-c` GitHub Organization, which has a limited number of seats and requires that users reply to an invitation from GitHub to join the organization. Please limit access to this repo to just those team members that require access for manual updates. Most updates will be made by your **pipeline**
 
@@ -84,9 +85,9 @@ After creation of the GitOpsTeam resource, an OpenShift operator will:
 5. Create Keycloak groups used for controlling access to your Project in the ArgoCD UI
 6.  Create the Argo CD Project
 
-### Set access for the GitHub repo
+### Set access for the GitHub repo (optional)
 
-After creating your GitHub repo, you'll need to grant your pipeline permission to read from and write to it. This involves generating an SSH key pair and adding it as a Deploy Key in the repo.
+If you have a pipeline that will require write access to your gitops repo, you can do this by generating an SSH key pair and adding it as a Deploy Key in the repo.
 
 Follow these steps to create an SSH key. You can do this on a Linux or Mac system. Choose a clear name for the key.
 
@@ -325,7 +326,7 @@ See the [GitOpsTeam template](../../files/argocd/gitopsteam_template.yaml){:down
 
 ## Related pages
 
-* [Current Argo CD version, as of April 2024: v2.10:](https://github.com/argoproj/argo-cd/releases/tag/v2.10.0)
-*  [Kustomize.io](https://kustomize.io)
+* [Current Argo CD version, as of July 2024: v2.11](https://github.com/argoproj/argo-cd/tree/v2.11.3)
+* [Kustomize.io](https://kustomize.io)
 * [Helm](https://helm.sh/)
 
