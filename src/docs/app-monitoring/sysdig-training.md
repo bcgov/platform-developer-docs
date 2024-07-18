@@ -22,7 +22,7 @@ sort_order: 12
 
 Last updated: **July 16, 2024**
 
-**Note: There are currently some problems with this training that the Sysdig team is working on, updates will be posted when availabile.**
+**Note: There are currently some problems with this training that the Sysdig team is working on, updates will be posted when available.**
 
 This page describes how to access training provided by Sysdig to set up monitoring and alerts.  
 
