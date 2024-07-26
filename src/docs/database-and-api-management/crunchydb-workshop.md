@@ -18,7 +18,7 @@ content_owner: Cailey Jones
 sort_order: 5
 ---
 
-# CrunchyDB workshop 
+# How to use a Postgres database on OpenShift with CrunchyDB
 
 @Cailey please write an introduction to this workshop: 
 
