@@ -46,6 +46,12 @@ Although experience with helm is not required to follow the instructions outline
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/795WJ6tIBGg?si=DSiArN_xu_wkxrSK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+[Crunchy-Postgres GitHub repo](https://github.com/bcgov/crunchy-postgres)
+
+*Commands used in the video* (for easy copy-paste):
+`helm upgrade --install hippo-tools ./charts/tools` to install the tools chart
+`helm upgrade --install hippo-ha ./charts/crunchy-postgres` to install the PostgresCluster object
+
 ### Part 3: Backups (8:54 min)
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/8PY6DD7QbNQ?si=k5YqqctyU4tM-KcA" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
