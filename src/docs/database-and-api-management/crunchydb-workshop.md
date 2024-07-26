@@ -60,3 +60,18 @@ Although experience with helm is not required to follow the instructions outline
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qRD9tLL4iew?si=K-zRdpi79d-0QZPV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+*Commands used in the video* (for easy copy-paste):
+`psql` to connect to the Postgres database running on the PostgresCluster's primary pod
+`SELECT * FROM users;` to select the dummy data inserted into the database
+`helm list` to view all helm charts installed in a namespace
+`helm uninstall hippo-ha` to uninstall the PostgresCluster helm chart
+`helm upgrade --install hippo-ha ./charts/crunchy-postgres` to re-install the PostgresCluster helm chart
+
+If you would like to insert the dummy data used in the video into your own test database, use these commands:
+
+To create a table called "users":
+```CREATE TABLE users (
+ id serial PRIMARY KEY,
+ name text NOT NULL,
+ created_on timestamptz
+);
