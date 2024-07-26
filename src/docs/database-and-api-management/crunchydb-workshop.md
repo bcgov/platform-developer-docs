@@ -1,5 +1,5 @@
 ---
-title: CrunchyDB workshop
+title: Workshop - How to use a Postgres database on OpenShift with CrunchyDB
 
 slug: crunchydb-workshop
 
