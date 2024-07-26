@@ -5,7 +5,7 @@ slug: crunchydb-workshop
 
 description: Workshop online for setting up a highly-available Postgres database on the OpenShift platform using the Postgres Operator by CrunchyDB.
 
-keywords: database, data, OpenShift, high-availability, backup, recovery, crunchy 
+keywords: database, data, OpenShift, high-availability, backup, recovery, crunchy, crunchydb, postgres, postgresql
 
 page_purpose: Helping teams learn the user of CrunchyDB for the platform and their applications 
 
