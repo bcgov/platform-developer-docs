@@ -20,11 +20,7 @@ sort_order: 5
 
 # How to use a Postgres database on OpenShift with CrunchyDB
 
-@Cailey please write an introduction to this workshop: 
-
-Who is it for? - Audience 
-What is it for? - Purpose 
-Why is it important to know ? 
+The following video workshop is intended for technical users who need to install and maintain a relational database on BCGov's OpenShift platform. The videos will walk you through the process of installing a Postgres database in your namespace using the CrunchyDB Operator, and through a few important maintenance tasks such as backing up and restoring your data. 
 
 ## Workshop videos
 
