@@ -26,7 +26,17 @@ The following video workshop is intended for technical users who need to install
 
 These are a series of 4 videos that introduces CrunchyDB, how to install it, create backups and action recovery. 
 
-@Cailey could you mention the reference on this page and why it is important to review it?  [Using Postgres on OpenShift with Patroni and CrunchyDB](../database-and-api-management/postgres-how-to.md#crunchydb-architecture) and do the same on the other page to cross-reference this new one.
+
+### Part 0: Prerequisites
+
+This workshop is about the "how" of installing and maintaining a database on OpenShift. The videos will walk you through the specific technical steps involved in the various operational tasks involved in running a database. You should understand *why* each of these tasks is important in general database management, as well as why each task is relevant to the needs of your application. This information is out-of-scope for these practical videos. These "why" questions are the focus of our [Using Postgres on OpenShift with Patroni and CrunchyDB](../database-and-api-management/postgres-how-to.md#crunchydb-architecture) documentation. Please read this document before you begin!
+
+The workshops require the following software to be installed on your machine:
+- OpenShift CLI
+- Git CLI (or some other method for cloning a GitHub repository)
+- [Helm](https://helm.sh/docs/intro/install/)
+
+Although experience with helm is not required to follow the instructions outlined in the video, you might find it useful to read [Helm's introductory documentation](https://helm.sh/docs/intro/using_helm/) so you can better understand some of the installation steps.
 
 ### Part 1: Introduction (6:37 min) 
 
