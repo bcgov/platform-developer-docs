@@ -1,5 +1,5 @@
 ---
-title: Workshop - How to use a Postgres database on OpenShift with CrunchyDB
+title: Workshop - Learn to use Postgres on OpenShift with CrunchyDB
 
 slug: crunchydb-workshop
 
@@ -18,25 +18,26 @@ content_owner: Cailey Jones
 sort_order: 5
 ---
 
-# How to use a Postgres database on OpenShift with CrunchyDB
+# Workshop: Learn to use Postgres on OpenShift with CrunchyDB
+This video workshop is for technical users who need install and maintain a relational database on BCGov's OpenShift platform. The videos guide you through installing a Postgres database in your namespace using the CrunchyDB Operator. They also cover important maintenance tasks such as backing up and restoring your data
 
-The following video workshop is intended for technical users who need to install and maintain a relational database on BCGov's OpenShift platform. The videos will walk you through the process of installing a Postgres database in your namespace using the CrunchyDB Operator, and through a few important maintenance tasks such as backing up and restoring your data. 
+---
 
 ## Workshop videos
-
-These are a series of 4 videos that introduces CrunchyDB, how to install it, create backups and action recovery. 
-
+This series of 4 videos introduces CrunchyDB. It shows how to install it, create backups, and action recovery
 
 ### Part 0: Prerequisites
+This workshop covers the 'how' of installing and maintaining a database on OpenShift. The videos guide you through the technical steps for various database tasks.
 
-This workshop is about the "how" of installing and maintaining a database on OpenShift. The videos will walk you through the specific technical steps involved in the various operational tasks involved in running a database. You should understand *why* each of these tasks is important in general database management, as well as why each task is relevant to the needs of your application. This information is out-of-scope for these practical videos. These "why" questions are the focus of our [Using Postgres on OpenShift with Patroni and CrunchyDB](../database-and-api-management/postgres-how-to.md#crunchydb-architecture) documentation. Please read this document before you begin!
+Understanding why each task is important for general database management and your application is out-of-scope for these videos. For those details, read our [Using Postgres on OpenShift with Patroni and CrunchyDB](../database-and-api-management/postgres-how-to.md#crunchydb-architecture) documentation. Please read this document before you begin!
 
-The workshops require the following software to be installed on your machine:
-- OpenShift CLI
-- Git CLI (or some other method for cloning a GitHub repository)
-- [Helm](https://helm.sh/docs/intro/install/)
+The workshop requires the following software installed on your machine:
+* [OpenShift CLI](../openshift-projects-and-access/install-the-oc-command-line-tool.md)
+* Git CLI or some other method for cloning a GitHub repository
+* [Helm](https://helm.sh/docs/intro/install/)
 
-Although experience with helm is not required to follow the instructions outlined in the video, you might find it useful to read [Helm's introductory documentation](https://helm.sh/docs/intro/using_helm/) so you can better understand some of the installation steps.
+Experience with Helm is not required to follow the video instructions. However, you may find it useful to read [Helm's introductory documentation](https://helm.sh/docs/intro/using_helm/) for better understanding of some of the installation steps. 
+
 
 ### Part 1: Introduction (6:37 min) 
 
@@ -46,11 +47,11 @@ Although experience with helm is not required to follow the instructions outline
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/795WJ6tIBGg?si=DSiArN_xu_wkxrSK" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-[Crunchy-Postgres GitHub repo](https://github.com/bcgov/crunchy-postgres)
+* Access the [Crunchy-Postgres GitHub repo](https://github.com/bcgov/crunchy-postgres)
 
-*Commands used in the video* (for easy copy-paste):
-`helm upgrade --install hippo-tools ./charts/tools` to install the tools chart
-`helm upgrade --install hippo-ha ./charts/crunchy-postgres` to install the PostgresCluster object
+**Commands used in the video** (for easy copy-paste):
+* `helm upgrade --install hippo-tools ./charts/tools` to install the tools chart
+* `helm upgrade --install hippo-ha ./charts/crunchy-postgres` to install the PostgresCluster object
 
 ### Part 3: Backups (8:54 min)
 
@@ -60,18 +61,26 @@ Although experience with helm is not required to follow the instructions outline
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/qRD9tLL4iew?si=K-zRdpi79d-0QZPV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
-*Commands used in the video* (for easy copy-paste):
-`psql` to connect to the Postgres database running on the PostgresCluster's primary pod
-`SELECT * FROM users;` to select the dummy data inserted into the database
-`helm list` to view all helm charts installed in a namespace
-`helm uninstall hippo-ha` to uninstall the PostgresCluster helm chart
-`helm upgrade --install hippo-ha ./charts/crunchy-postgres` to re-install the PostgresCluster helm chart
+**Commands used in the video** (for easy copy-paste):
+* `psql` to connect to the Postgres database running on the PostgresCluster's primary pod
+* `SELECT * FROM users;` to select the dummy data inserted into the database
+* `helm list` to view all helm charts installed in a namespace
+* `helm uninstall hippo-ha` to uninstall the PostgresCluster helm chart
+* `helm upgrade --install hippo-ha ./charts/crunchy-postgres` to re-install the PostgresCluster helm chart
 
 If you would like to insert the dummy data used in the video into your own test database, use these commands:
 
 To create a table called "users":
+
 ```CREATE TABLE users (
  id serial PRIMARY KEY,
  name text NOT NULL,
  created_on timestamptz
 );
+```
+This SQL command defines a table with columns for user ID, name, and the creation timestamp.
+
+---
+## Related pages
+
+* [Using Postgres on OpenShift with Patroni and CrunchyDB](docs/database-and-api-management/postgres-how-to.md) 
