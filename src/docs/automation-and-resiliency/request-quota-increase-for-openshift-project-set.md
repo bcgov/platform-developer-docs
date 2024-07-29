@@ -45,6 +45,9 @@ This process suggests good communication from your team and the Platform Service
 
 ## Steps to request quota increase
 As part of our ongoing efforts to optimize resource allocation across our OpenShift environments, we request teams seeking a quota increase to provide detailed justifications. This structured approach ensures that all requests are evaluated fairly and resources are used efficiently.
+
+It is important to note that any requests for **quota decreases** are automatically approved. 
+
 ### Step 1: Access the Platform Product Registry 
 Access the [Platform Product Registry](https://registry.developer.gov.bc.ca/) and use the dashboard of your chosen product to adjust the quota.
 
@@ -53,7 +56,9 @@ The product page has different sections:
 
 1. **Product description:** Includes fields like product name, description, ministry and hosting tier. 
 
-2. **Team contacts:** Product Owner and Technical Lead(s). The contacts need to have an IDIR, if you need to change them, editing the email field will autopopulate their new information.
+2. **Team contacts:** Product Owner and Technical Lead(s). The contacts need to have an IDIR, if you need to change them, editing the email field will autopopulate their new information. 
+
+There is an optional field to add an after-hours support contact. This field is for Business Mission Critical Applications only. Enter the phone number of the team member to contact if an issue arises outside business hours.
 
 3. **Quotas:**   If you need more resources for CPU, RAM or storage in any of the four namespaces, this is the place to make changes to them. This is also the section where we will be focusing on this guide.
 
@@ -138,7 +143,7 @@ The Platform Services team needs to know if your application is using the curren
 
 * Once all the information has been compiled from [**Step 4**](#step-4-gather-information-for-your-request) click on the `Submit edit request` button
 
-* A pop-up will appear to allow space to include all the information you have collected and gathered, this place only allows for text information if you need to submit photos or files please do so in the next step as it is necessary and part of the request process
+* A pop-up will appear to allow space to include all the information you have collected and gathered, this place only allows for text information
 
 ### Step 6: Email the Platform Services team
 
