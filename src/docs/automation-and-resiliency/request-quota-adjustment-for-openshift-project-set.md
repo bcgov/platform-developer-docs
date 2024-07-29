@@ -1,5 +1,5 @@
 ---
-title: Request a quota increase for an OpenShift project set
+title: Request a quota adjustment for an OpenShift project set
 
 slug: request-quota-increase-for-openshift-project-set
 
@@ -17,14 +17,14 @@ content_owner: Cailey Jones
 
 sort_order: 5
 ---
-# Request a quota increase for an OpenShift project set
+# Request a quota adjustment for an OpenShift project set
 Last updated: **March 26, 2024**
 
 This guide shows you how to request more resources for your OpenShift project set on the [Platform Product Registry](https://registry.developer.gov.bc.ca/).
 
 ## On this page
 * **[Prerequisites](#prerequisites)**
-* **[Steps to request quota increase](#steps-to-request-quota-increase)**
+* **[Steps to request quota adjustment](#steps-to-request-quota-adjustment)**
 * **[Essential resources to improve your quota increase request](#essential-resources-to-improve-your-quota-increase-request)**
 * **[Related pages](#related-pages)**
 
@@ -43,7 +43,7 @@ Before initiating the request, make sure you have completed the following steps:
 3. **Get in touch with the Platform Services Team**
 This process suggests good communication from your team and the Platform Services Team particularly if you have questions prior your quota increase request, please reach out to them at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca) and enter  subject: Quota request with your inquiry.
 
-## Steps to request quota increase
+## Steps to request quota adjustment
 As part of our ongoing efforts to optimize resource allocation across our OpenShift environments, we request teams seeking a quota increase to provide detailed justifications. This structured approach ensures that all requests are evaluated fairly and resources are used efficiently.
 
 It is important to note that any requests for **quota decreases** are automatically approved. 
