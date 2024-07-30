@@ -58,7 +58,6 @@ Here's why this approach is beneficial:
 To set up Argo CD for your project, a self-serve system is available. Follow these instructions to begin. If your project requires a ministry-wide grouping of projects within Argo CD, please contact  [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca).
 
 1. Prepare a 'GitOpsTeam' CustomResource:
-  * Remember that GitHub IDs are **case sensitive**
   * Utilize the provided template: [GitOpsTeam template](../../files/argocd/gitopsteam_template.yaml){:download="gitopsteam_template.yaml"}
   * Populate the file using the inline comments
   * If you would like to add GitHub **teams** to the gitops repo access list, note that they go in a separate "Teams" list.  For example, admin users go into the `admins` list while admin teams go into the `adminTeams` list. 
