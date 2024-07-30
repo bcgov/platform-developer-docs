@@ -18,7 +18,6 @@ content_owner: Cailey Jones
 sort_order: 5
 ---
 # Request a quota adjustment for an OpenShift project set
-Last updated: **March 26, 2024**
 
 This guide shows you how to request more resources for your OpenShift project set on the [Platform Product Registry](https://registry.developer.gov.bc.ca/).
 
