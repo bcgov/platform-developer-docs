@@ -142,15 +142,18 @@ The Platform Services team needs to know if your application is using the curren
 
 * Once all the information has been compiled from [**Step 4**](#step-4-gather-information-for-your-request) click on the `Submit edit request` button
 
-* A pop-up will appear to allow space to include all the information you have collected and gathered, this place only allows for text information
+* A pop-up will appear to allow space to include all the information you have collected and gathered. This place only allows for text information
 
-### Step 6: Email the Platform Services team
+### Step 6: Wait for an email from the Platform Services team
 
-The last step is to email the request to the Platform Services team at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca) and include the following information: 
+For the last step, you'll receive an email from the Platform Services team providing you with approval or requesting further information from your quota increase request (remember that quota decreases are automatically approved). 
 
-* Attach screenshot of Sysdig dashboard (if available)
-* Attach additional images or files that supplement the already submitted information in the previous step
-* If you have further questions, it is also recommended to book a meeting with the Platform Services Team
+If the Platform Services Team requires more information, they'll likely ask for: 
+
+* A screenshot of Sysdig dashboard (if available)
+* Additional images or files that supplement the already submitted information in the previous step
+
+Know that if the team does not receive a response from you within 2 weeks, the request will be rejected and a new request will need to be submitted. 
 
 ## Essential resources to improve your quota increase request 
 
