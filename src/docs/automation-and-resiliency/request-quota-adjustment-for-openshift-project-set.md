@@ -152,7 +152,7 @@ If the Platform Services Team requires more information, they'll likely ask for:
 
 * A screenshot of Sysdig dashboard (if available)
 * Additional images or files that supplement the already submitted information in the previous step
-
+* More context about your plan and what your team's objectives are by obtaining the extra quota 
 Know that if the team does not receive a response from you within 2 weeks, the request will be rejected and a new request will need to be submitted. 
 
 ## Essential resources to improve your quota increase request 
