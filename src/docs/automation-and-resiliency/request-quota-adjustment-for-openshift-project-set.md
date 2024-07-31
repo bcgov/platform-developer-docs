@@ -228,6 +228,8 @@ If the request includes statistics on the resource usage of the front-end pods, 
 
 As explained in the [steps](#steps-to-request-quota-increase) to request a quota increase, it's crucial to monitor and collect metrics illustrating your application's resource utilization. Much of the information needed to justify a quota increase can be found in the OpenShift web console, but requires navigating through many different pages to collect a full view of the resource usage of your entire namespace. Sysdig makes the collection of this information much easier, for both the purposes of requesting a quota increase and for day-to-day namespace maintenance and monitoring.
 
+Additionally there is also a template called: **Resources Quota Approve Dashboard** that exists in your Sysdig dashboard list. 
+
 If you haven't already, check out the comprehensive guide on onboarding to application monitoring with Sysdig. Visit [Onboarding to application monitoring with Sysdig](../app-monitoring/sysdig-monitor-onboarding.md) for a step-by-step instructions for onboarding onto Sysdig and utilizing default dashboards to gain insights into your application's performance. For The documentation has all you need to onboard onto Sysdig and use the default dashboards.
 
 If you have successfully onboarded to Sysdig, we provide a dedicated document outlining the specific metrics and evidence needed when applying for additional resources. This document serves as a guide to assist you in compiling the necessary data effectively. Make sure to gather comprehensive information on resource consumption, covering CPU and memory usage, along with any other relevant metrics specific to your application. 
