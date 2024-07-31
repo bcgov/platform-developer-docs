@@ -7,7 +7,7 @@ Start here for the first steps on working in our OpenShift environment.
 * [Provision a new project in OpenShift](docs/openshift-projects-and-access/provision-new-openshift-project.md)
 * [User access in OpenShift](docs/openshift-projects-and-access/grant-user-access-openshift.md)
 * [Project resource quotas](docs/automation-and-resiliency/openshift-project-resource-quotas.md)
-* [Request a quota adjustment for an OpenShift project set](docs/automation-and-resiliency/request-quota-adjustment-for-openshift-project-set.md)
+* [Request a quota increase for an OpenShift project set](docs/automation-and-resiliency/request-quota-increase-for-openshift-project-set.md)
 * [Common platform requests](docs/openshift-projects-and-access/common-platform-requests.md)
 
 ## Build, deploy and maintain apps
