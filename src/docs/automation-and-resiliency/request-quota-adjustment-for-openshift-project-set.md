@@ -1,5 +1,5 @@
 ---
-title: Request a quota increase for an OpenShift project set
+title: Request a quota adjustment for an OpenShift project set
 
 slug: request-quota-increase-for-openshift-project-set
 
@@ -17,14 +17,13 @@ content_owner: Cailey Jones
 
 sort_order: 5
 ---
-# Request a quota increase for an OpenShift project set
-Last updated: **March 26, 2024**
+# Request a quota adjustment for an OpenShift project set
 
 This guide shows you how to request more resources for your OpenShift project set on the [Platform Product Registry](https://registry.developer.gov.bc.ca/).
 
 ## On this page
 * **[Prerequisites](#prerequisites)**
-* **[Steps to request quota increase](#steps-to-request-quota-increase)**
+* **[Steps to request quota adjustment](#steps-to-request-quota-adjustment)**
 * **[Essential resources to improve your quota increase request](#essential-resources-to-improve-your-quota-increase-request)**
 * **[Related pages](#related-pages)**
 
@@ -43,8 +42,11 @@ Before initiating the request, make sure you have completed the following steps:
 3. **Get in touch with the Platform Services Team**
 This process suggests good communication from your team and the Platform Services Team particularly if you have questions prior your quota increase request, please reach out to them at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca) and enter  subject: Quota request with your inquiry.
 
-## Steps to request quota increase
+## Steps to request quota adjustment
 As part of our ongoing efforts to optimize resource allocation across our OpenShift environments, we request teams seeking a quota increase to provide detailed justifications. This structured approach ensures that all requests are evaluated fairly and resources are used efficiently.
+
+It is important to note that any requests for **quota decreases** are automatically approved. 
+
 ### Step 1: Access the Platform Product Registry 
 Access the [Platform Product Registry](https://registry.developer.gov.bc.ca/) and use the dashboard of your chosen product to adjust the quota.
 
@@ -53,7 +55,9 @@ The product page has different sections:
 
 1. **Product description:** Includes fields like product name, description, ministry and hosting tier. 
 
-2. **Team contacts:** Product Owner and Technical Lead(s). The contacts need to have an IDIR, if you need to change them, editing the email field will autopopulate their new information.
+2. **Team contacts:** Product Owner and Technical Lead(s). The contacts need to have an IDIR, if you need to change them, editing the email field will autopopulate their new information. 
+
+There is an optional field to add an after-hours support contact. This field is for Business Mission Critical Applications only. Enter the phone number of the team member to contact if an issue arises outside business hours.
 
 3. **Quotas:**   If you need more resources for CPU, RAM or storage in any of the four namespaces, this is the place to make changes to them. This is also the section where we will be focusing on this guide.
 
@@ -116,7 +120,7 @@ Please provide information about how much resources the important pods are using
   * Present the resource monitors within your namespace in order to understand  the level of resource consumption in your application and how efficiently it utilizes resources
   * Sysdig offers a pre-built dashboard template designed to visualize and analyze metrics in your OpenShift project. To simplify the process of requesting a quota increase, consider utilizing the Sysdig dashboard template. Instructions can be found in [here](../app-monitoring/sysdig-monitor-create-monitoring-dashboards.md)
 
-Regardless of the tool you use, you should collect data for at least a week or however long it takes to see a pattern. Consider each component in the namespace, whether it's a part of the application or DevOps tools.
+Metrics recorded in OpenShift and Sysdig are stored over time so you can review a history of your application resource useage. Be sure to consider this usage over time, especially if you expect the load on your application to change day-to-day, week-to-week or season-to-season. Consider each component in the namespace, whether it's a part of the application or DevOps tools.
 
 If you need help answering this question [check these examples](#examples-of-answers).
 
@@ -138,15 +142,18 @@ The Platform Services team needs to know if your application is using the curren
 
 * Once all the information has been compiled from [**Step 4**](#step-4-gather-information-for-your-request) click on the `Submit edit request` button
 
-* A pop-up will appear to allow space to include all the information you have collected and gathered, this place only allows for text information if you need to submit photos or files please do so in the next step as it is necessary and part of the request process
+* A pop-up will appear to allow space to include all the information you have collected and gathered. This place only allows for text information
 
-### Step 6: Email the Platform Services team
+### Step 6: Wait for an email from the Platform Services team
 
-The last step is to email the request to the Platform Services team at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca) and include the following information: 
+For the last step, you'll receive an email from the Platform Services team providing you with approval or requesting further information from your quota increase request (remember that quota decreases are automatically approved). 
 
-* Attach screenshot of Sysdig dashboard (if available)
-* Attach additional images or files that supplement the already submitted information in the previous step
-* If you have further questions, it is also recommended to book a meeting with the Platform Services Team
+If the Platform Services Team requires more information, they'll likely ask for: 
+
+* A screenshot of Sysdig dashboard (if available)
+* Additional images or files that supplement the already submitted information in the previous step
+* More context about your plan and what your team's objectives are by obtaining the extra quota 
+Know that if the team does not receive a response from you within 2 weeks, the request will be rejected and a new request will need to be submitted. 
 
 ## Essential resources to improve your quota increase request 
 
@@ -219,9 +226,9 @@ If the request includes statistics on the resource usage of the front-end pods, 
 
 ### Setting up resource monitoring with Sysdig Monitor
 
-Utilize Sysdig to monitor your application, accessing dashboards that display memory, CPU, and storage usage. 
+As explained in the [steps](#steps-to-request-quota-increase) to request a quota increase, it's crucial to monitor and collect metrics illustrating your application's resource utilization. Much of the information needed to justify a quota increase can be found in the OpenShift web console, but requires navigating through many different pages to collect a full view of the resource usage of your entire namespace. Sysdig makes the collection of this information much easier, for both the purposes of requesting a quota increase and for day-to-day namespace maintenance and monitoring.
 
-As explained in the [steps](#steps-to-request-quota-increase) to request a quota increase, it's crucial to monitor and collect metrics illustrating your application's resource utilization. 
+Additionally there is also a template called: **Resources Quota Approve Dashboard** that exists in your Sysdig dashboard list. 
 
 If you haven't already, check out the comprehensive guide on onboarding to application monitoring with Sysdig. Visit [Onboarding to application monitoring with Sysdig](../app-monitoring/sysdig-monitor-onboarding.md) for a step-by-step instructions for onboarding onto Sysdig and utilizing default dashboards to gain insights into your application's performance. For The documentation has all you need to onboard onto Sysdig and use the default dashboards.
 
@@ -231,7 +238,7 @@ For more details on the required metrics and evidence, check the [resource monit
 
  If you have any issues onboarding to Sysdig, contact the Platform Services team on the applicable [Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 
- If you need to store a large amount of unstructured data, consider using the [S3 Object Storage Service](https://github.com/BCDevOps/OpenShift4-Migration/issues/59) provided by Enterprise Hosting.
+ If you need to store a large amount of unstructured data, consider using the [S3 Object Storage Service](https://github.com/BCDevOps/OpenShift4-Migration/issues/59) provided by Enterprise Hosting. This service is provided by the OCIO and is not hosted on OpenShift, so data stored in an S3 bucket will not count towards the storage quota in your namespace.
 
 Once the quota increase request is approved, the specified namespaces are upgraded to the next quota size.
 
