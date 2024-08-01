@@ -65,6 +65,9 @@ demos of their application.
 
 * [Open source database technologies](docs/database-and-api-management/opensource-database-technologies.md)
 * [High availability database clusters](docs/database-and-api-management/high-availability-database-clusters.md)
+* [Database backup best practices](docs/database-and-api-management/database-backup-best-practices.md)
+* [Using Postgres on OpenShift with Patroni and CrunchyDB](docs/database-and-api-management/postgres-how-to.md)
+* [Tutorial: Learn to use Postgres on OpenShift with CrunchyDB](docs/database-and-api-management/crunchydb-tutorial.md)
 
 ### Platform architecture reference
 
