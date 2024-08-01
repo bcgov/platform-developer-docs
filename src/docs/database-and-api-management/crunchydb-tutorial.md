@@ -1,11 +1,11 @@
 ---
-title: Workshop - Learn to use Postgres on OpenShift with CrunchyDB
+title: Tutorial - Learn to use Postgres on OpenShift with CrunchyDB
 
-slug: crunchydb-workshop
+slug: crunchydb-tutorial
 
-description: Workshop online for setting up a highly-available Postgres database on the OpenShift platform using the Postgres Operator by CrunchyDB.
+description: Tutorial online for setting up a highly-available Postgres database on the OpenShift platform using the Postgres Operator by CrunchyDB.
 
-keywords: database, data, OpenShift, high-availability, backup, recovery, crunchy, crunchydb, postgres, postgresql
+keywords: database, data, OpenShift, high-availability, backup, recovery, crunchy, crunchydb, postgres, postgresql, tutorial
 
 page_purpose: Helping teams learn the user of CrunchyDB for the platform and their applications 
 
@@ -18,23 +18,23 @@ content_owner: Cailey Jones
 sort_order: 5
 ---
 
-# Workshop: Learn to use Postgres on OpenShift with CrunchyDB
+# Tutorial: Learn to use Postgres on OpenShift with CrunchyDB
 
-This video workshop is for technical users who need install and maintain a relational database on BCGov's OpenShift platform. The videos guide you through installing a Postgres database in your namespace using the CrunchyDB Operator. They also cover important maintenance tasks such as backing up and restoring your data
+This video tutorial is for technical users who need install and maintain a relational database on BCGov's OpenShift platform. The videos guide you through installing a Postgres database in your namespace using the CrunchyDB Operator. They also cover important maintenance tasks such as backing up and restoring your data
 
 ---
 
-## Workshop videos
+## Tutorial videos
 
 This series of 4 videos introduces CrunchyDB. It shows how to install it, create backups, and action recovery
 
 ### Part 0: Prerequisites
 
-This workshop covers the 'how' of installing and maintaining a database on OpenShift. The videos guide you through the technical steps for various database tasks.
+This tutorial covers the 'how' of installing and maintaining a database on OpenShift. The videos guide you through the technical steps for various database tasks.
 
 Understanding why each task is important for general database management and your application is out-of-scope for these videos. For those details, read our [Using Postgres on OpenShift with Patroni and CrunchyDB](../database-and-api-management/postgres-how-to.md#crunchydb-architecture) documentation. Please read this document before you begin!
 
-The workshop requires the following software installed on your machine:
+The tutorial requires the following software installed on your machine:
 
 - [OpenShift CLI](../openshift-projects-and-access/install-the-oc-command-line-tool.md)
 - Git CLI or some other method for cloning a GitHub repository
