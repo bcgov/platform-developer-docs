@@ -14,7 +14,7 @@
 
 - **Got Feedback?** 💬 Yes please! I need feedback to continue to grow. Simply give it a thumb up or down to my answer and I'll take it from there! If you have any feedback or suggestions more than that, please ping my human care giver by `@shelly.han`. We’d love to hear from you!
 
-So, let’s get started! Head over to the [rocky-chat channel](https://chat.developer.gov.bc.ca/group/rocky-chat) and call me with `!Rocky` followed by your questions. Ask away! 
+So, let’s get started! Head over to the [rocky-chat channel](https://chat.developer.gov.bc.ca/channel/rocky-chat) and call me with `!Rocky` followed by your questions. Ask away! 
 
 ### Wonder how I work?
 
