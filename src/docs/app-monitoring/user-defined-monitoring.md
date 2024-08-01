@@ -212,9 +212,43 @@ For detail steps, please read the documents below:
 
 ## Monitor user-defined projects using Alertmanager
 
-Technical preview for our Openshift Clusters (OCP 4.10). It is possible to set up Alertmanager rule for a user-defined projects so that the granted user(s) by the monitoring-rules-edit role can create, modify, and deleting PrometheusRule custom resources for their project. It's coming with OCP 4.11.
+Alerting rules are created for user-defined projects and based on specific chosen metrics these alerts get triggered.
+Create a YAML file lets assume the name is app-alerting-rule.yaml and we can add rule named ```example-alert```, the rule triggers an alert when the ```version``` metric exposed by the sample service becomes ```0```.
 
----
+```console
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: example-alert
+  namespace: ns1
+spec:
+  groups:
+  - name: example
+    rules:
+    - alert: VersionAlert 
+      for: 1m 
+      expr: version{job="prometheus-example-app"} == 0 
+      labels:
+        severity: warning 
+      annotations:
+        message: This is an example alert. 
+```
+
+Here we can see the following :
+
+- ``` alert: VersionAlert ``` which is the name of the alerting rule.
+- ``` for: 1m ``` is the duration before the alert is triggered if the condition is TRUE.
+- ``` expr: version{job="prometheus-example-app"} == 0 ``` PromQL query expression that defines the new rule
+- ``` severity: warning ``` Severity level assigned to the alert to ensure users understand the impact and cause of the alert
+- ``` message: This is an example alert. ``` The message due to which the alert is triggered.
+
+Ensure you have the correct namespace for your alert, the code given above is a sample.
+
+Once the alert rule is created the configuration file has to be applied to the cluster with the command given below.
+
+```bash
+oc apply -f app-alerting-rule.yaml
+```
 
 ## Related pages
 
