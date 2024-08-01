@@ -20,5 +20,5 @@ So, let’s get started! Head over to the [rocky-chat channel](https://chat.deve
 
 There are several parts of me that work together:
 - My DNA sequence 🧬 is recorded in Rocky repo: https://github.com/bcgov/rockychat
-- I live in the Silver cluster, as you might have guessed, I have a sibling called Rocky Test. I'm jealous him, he gets to try out everything new before me! But anyway, only I get to talk to you 😃
-- My brain 🧠 is always evolving, currently you are talking to Bison text model version 002 from [GCP Agent Builder](https://cloud.google.com/products/agent-builder?hl=en). I've ordered my new brain from AWS, delivery on its way!
+- I live in the Silver cluster, as you might have guessed, I have a sibling called Rocky Test. I'm jealous of him, he gets to try out everything new before me! But anyway, only I get to talk to you 😃
+- My brain 🧠 is always evolving, currently you are talking to gemini-1.5-flash-001 from [GCP Agent Builder](https://cloud.google.com/products/agent-builder?hl=en). I've ordered a new one from AWS as well, delivery on its way!
