@@ -143,7 +143,7 @@ You might notice that they have some information on a metrics dashboard that's a
 
 This is a lot, and represents a different approach to managing your OpenShift objects compared to what you might be used to. To make things easier, one of our fantastic community teams has put together a [helm chart for CrunchyDB](https://github.com/bcgov/crunchy-postgres), complete with some recommended defaults to get started. Note that these default settings are for a very small, very low load instance - the defaults exist in many cases to show you what options are available for you to change. Definitely be prepared to increase some of the default values once you've played around with it a bit! 
 
-For practical guidance, watch the [Tutorial: Learn to Use Postgres on OpenShift with CrunchyDB](../database-and-api-management/crunchydb-tutorial.md) video series. This tutorial covers the essential steps to install and use Postgres with CrunchyDB on OpenShift.
+For practical guidance, watch the [Self-guided lab: Learn to Use Postgres on OpenShift with CrunchyDB](../database-and-api-management/crunchydb-self-guided-lab.md) video series. This self-guided lab covers the essential steps to install and use Postgres with CrunchyDB on OpenShift.
 
 ## Primaries, Elections and Syncing
 

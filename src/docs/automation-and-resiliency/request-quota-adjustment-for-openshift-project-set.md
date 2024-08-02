@@ -132,7 +132,7 @@ If you need help answering this question [check these examples](#examples-of-ans
 
   This part might include references to pods or objects you haven't mentioned before. Even if you're asking for more quota to run more frontend application pods, you might find that your database pods are using up more resources than they need. Explain why you can't reduce the resource allocation of these other pods, or try doing that before asking for more quota. For more information on quotas, see [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md).
 
-* Before we move forward with your quota change request, expect to discuss with the Platform Team ways to optimize your application within your current quota. We usually don't approve quota requests without trying to make the existing quota work first. The more details you provide in your initial request, the shorter this conversation is likely to be!
+* Before we move forward with your quota change request, expect to discuss with the Platform Services team ways to optimize your application within your current quota. We usually don't approve quota requests without trying to make the existing quota work first. The more details you provide in your initial request, the shorter this conversation is likely to be!
 
   If you need help answering this question [check these examples](#examples-of-answers).
 
@@ -148,19 +148,20 @@ The Platform Services team needs to know if your application is using the curren
 
 For the last step, you'll receive an email from the Platform Services team providing you with approval or requesting further information from your quota increase request (remember that quota decreases are automatically approved). 
 
-If the Platform Services Team requires more information, they'll likely ask for: 
+If the Platform Services team requires more information, they'll likely ask for: 
 
 * A screenshot of Sysdig dashboard (if available)
 * Additional images or files that supplement the already submitted information in the previous step
-* More context about your plan and what your team's objectives are by obtaining the extra quota 
-Know that if the team does not receive a response from you within 2 weeks, the request will be rejected and a new request will need to be submitted. 
+* More context about your plan and what your team's objectives are by obtaining the extra quota
+
+If the Platform Services team doesn't  hear back from you within 2 weeks, we'll need to close your request, and you'll need to submit a new one.
 
 ## Essential resources to improve your quota increase request 
 
 ### Examples of requests
 These examples mainly concentrate on particular pods or deployments. When you're asking for a quota increase, it's typically to support a specific deployment or group of deployments. Focus your request explanations on these - there's no need to spend time outlining the resource allocations for every single pod in your namespace, just provide the information that's relevant to the request.
 
-If you're unsure, it's better to include more information than less, the Platform Services Team is here to help!
+If you're unsure, it's better to include more information than less, the Platform Services team is here to help!
 
 #### Example 1: More space for database backups
 
@@ -224,21 +225,19 @@ This request is likely to get approved with just a few follow-up questions from 
 If the request includes statistics on the resource usage of the front-end pods, confirming the explanation about the load problems caused by running the pods with a lower CPU limit, this might be one of those rare CPU requests that could be approved without any further questions from the Platform Services Team!
  
 
-### Setting up resource monitoring with Sysdig Monitor
+### Setting up resource monitoring with Sysdig Monitor - why it's important to consider it
 
-As explained in the [steps](#steps-to-request-quota-increase) to request a quota increase, it's crucial to monitor and collect metrics illustrating your application's resource utilization. Much of the information needed to justify a quota increase can be found in the OpenShift web console, but requires navigating through many different pages to collect a full view of the resource usage of your entire namespace. Sysdig makes the collection of this information much easier, for both the purposes of requesting a quota increase and for day-to-day namespace maintenance and monitoring.
-
-Additionally there is also a template called: **Resources Quota Approve Dashboard** that exists in your Sysdig dashboard list. 
+As explained in the [steps](#steps-to-request-quota-increase) to request a quota increase adjustment, it's crucial to monitor and collect metrics illustrating your application's resource utilization. Much of the information needed to justify a quota increase can be found in the OpenShift web console, but requires navigating through many different pages to collect a full view of the resource usage of your entire namespace. Sysdig makes the collection of this information much easier, for both the purposes of requesting a quota increase and for day-to-day namespace maintenance and monitoring. Additionally there is also a template called: **Resources Quota Approve Dashboard** that exists in your Sysdig dashboard list. 
 
 If you haven't already, check out the comprehensive guide on onboarding to application monitoring with Sysdig. Visit [Onboarding to application monitoring with Sysdig](../app-monitoring/sysdig-monitor-onboarding.md) for a step-by-step instructions for onboarding onto Sysdig and utilizing default dashboards to gain insights into your application's performance. For The documentation has all you need to onboard onto Sysdig and use the default dashboards.
 
 If you have successfully onboarded to Sysdig, we provide a dedicated document outlining the specific metrics and evidence needed when applying for additional resources. This document serves as a guide to assist you in compiling the necessary data effectively. Make sure to gather comprehensive information on resource consumption, covering CPU and memory usage, along with any other relevant metrics specific to your application. 
 
-For more details on the required metrics and evidence, check the [resource monitoring dashboards](../app-monitoring/resource-monitoring-dashboards.md) guide page.
+* For more details on the required metrics and evidence, check the [resource monitoring dashboards](../app-monitoring/resource-monitoring-dashboards.md) guide page
 
- If you have any issues onboarding to Sysdig, contact the Platform Services team on the applicable [Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
+* If you have any issues onboarding to Sysdig, contact the Platform Services team on the applicable [Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 
- If you need to store a large amount of unstructured data, consider using the [S3 Object Storage Service](https://github.com/BCDevOps/OpenShift4-Migration/issues/59) provided by Enterprise Hosting. This service is provided by the OCIO and is not hosted on OpenShift, so data stored in an S3 bucket will not count towards the storage quota in your namespace.
+* If you need to store a large amount of unstructured data, consider using the [S3 Object Storage Service](https://github.com/BCDevOps/OpenShift4-Migration/issues/59) provided by Enterprise Hosting. This service is provided by the OCIO and is not hosted on OpenShift, so data stored in an S3 bucket will not count towards the storage quota in your namespace.
 
 Once the quota increase request is approved, the specified namespaces are upgraded to the next quota size.
 
