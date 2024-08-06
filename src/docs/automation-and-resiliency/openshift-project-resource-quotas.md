@@ -27,7 +27,7 @@ New project sets provisioned in **all clusters** of the BC Gov Private Cloud Paa
 
 **Note**: The Platform Services team may approach your team to discuss a downgrade in your quota if they find your application isn't using all of the resources within the current quota.
 
-If the default allocations aren't sufficient for your application, [you can ask for a quota increase](../automation-and-resiliency/request-quota-increase-for-openshift-project-set.md). You'll need a Sysdig dashboard that shows that your application needs more of a specific resource type (CPU, RAM or storage) in a specific namespace. Provide this proof to the Platform Services team before they can approve a quota increase that you submit in the [Platform Product Registry](https://registry.developer.gov.bc.ca/login).
+If the default allocations aren't sufficient for your application, [you can ask for a quota increase](../automation-and-resiliency/request-quota-adjustment-for-openshift-project-set/). You'll need a Sysdig dashboard that shows that your application needs more of a specific resource type (CPU, RAM or storage) in a specific namespace. Provide this proof to the Platform Services team before they can approve a quota increase that you submit in the [Platform Product Registry](https://registry.developer.gov.bc.ca/login).
 
 ## On this page
 - [CPU quotas](#cpu-quotas)
