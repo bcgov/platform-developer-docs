@@ -215,7 +215,7 @@ For detail steps, please read the documents below:
 Alerting rules are created for user-defined projects and based on specific chosen metrics these alerts get triggered.
 Create a YAML file lets assume the name is app-alerting-rule.yaml and we can add rule named ```example-alert```, the rule triggers an alert when the ```version``` metric exposed by the sample service becomes ```0```.
 
-```console
+```yaml
 apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
 metadata:
