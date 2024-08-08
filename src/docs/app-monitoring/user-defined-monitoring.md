@@ -220,7 +220,7 @@ apiVersion: monitoring.coreos.com/v1
 kind: PrometheusRule
 metadata:
   name: example-alert
-  namespace: ns1
+  namespace: license-dev
 spec:
   groups:
   - name: example
