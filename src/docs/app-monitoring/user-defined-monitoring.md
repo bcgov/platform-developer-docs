@@ -151,49 +151,6 @@ Learn more about the querying basics on [Prometheus documentation](https://prome
 
 **Data is currently stored for 15 days.**
 
-## Sysdig Monitor
-
-You can now let Sysdig agent collecting your custom metrics and show them in the Sysdig console. Add `prometheus.io/scrape=true` annotation set in your pod. The Sysdig agent will scrape your application pod and send its `/metrics` to the Sysdig console.
-
-```yaml
-apiVersion: v1
-kind: Pod
-metadata:
-  annotations:
-    prometheus.io/scrape: "true"
-  labels:
-    app: myapp
-  name: myapp
-  namespace: myapp-namespace
-<...>
-```
-
-Metrics can be checked from your pod also
-
-```console
-$ oc rsh myapp
-(app-root) sh-4.4$ curl http://localhost:8000/metrics
-# HELP python_gc_objects_collected_total Objects collected during gc
-# TYPE python_gc_objects_collected_total counter
-python_gc_objects_collected_total{generation="0"} 66.0
-<...>
-response_size_bytes{metric="REQUEST_SIZE",url="https://nginx-openshift-bcgov-nagios.apps.clab.devops.gov.bc.ca/test.txt"} 270.0
-response_size_bytes{metric="SIZE_DOWNLOAD_T",url="https://nginx-openshift-bcgov-nagios.apps.clab.devops.gov.bc.ca/test.txt"} 5.24288e+06
-# HELP response_count_total Response by code
-# TYPE response_count_total counter
-response_count_total{code="200",url="http://nginx-openshift-bcgov-nagios.apps.klab.devops.gov.bc.ca/"} 192.0
-response_count_total{code="200",url="http://nginx-openshift-bcgov-nagios.apps.clab.devops.gov.bc.ca/"} 192.0
-response_count_total{code="200",url="https://nginx-openshift-bcgov-nagios.apps.klab.devops.gov.bc.ca/"} 192.0
-response_count_total{code="200",url="https://nginx-openshift-bcgov-nagios.apps.clab.devops.gov.bc.ca/"} 192.0
-response_count_total{code="200",url="https://status.developer.gov.bc.ca/"} 192.0
-response_count_total{code="200",url="http://nginx-openshift-bcgov-nagios.apps.klab.devops.gov.bc.ca/test.txt"} 192.0
-<...>
-```
-
-And same metrics can be seen in the Sysdig monitor web-console.
-
-![user defined monitoring2](../../images/user-defined-monitoring2.png)
-
 ## Monitor user-defined projects using Alertmanager
 
 Alerting rules are created for user-defined namespace and based on specific chosen metrics these alerts get triggered.You can create alerts based on the metrics you created above, or on the existing cluster metrics like pod memory usage.
@@ -237,6 +194,50 @@ oc apply -f app-alerting-rule.yaml
 
 `AlertmanagerConfig` is part of the Prometheus Operator, which is a Kubernetes operator that helps manage Prometheus instances and configurations in a Kubernetes environment. By using AlertmanagerConfig, you can keep your alerting rules and configurations within Kubernetes resources, making it easier to manage and version control them alongside your application code and infrastructure. For more information please refer to this [link](https://console.apps.clab.devops.gov.bc.ca/k8s/ns/be1c6b-dev/monitoring.coreos.com~v1alpha1~AlertmanagerConfig/platform-services-controlled-alert-routing/yaml)
 
+
+## Sysdig Monitor
+
+You can now let Sysdig agent collecting your custom metrics and show them in the Sysdig console. Add `prometheus.io/scrape=true` annotation set in your pod. The Sysdig agent will scrape your application pod and send its `/metrics` to the Sysdig console.
+
+```yaml
+apiVersion: v1
+kind: Pod
+metadata:
+  annotations:
+    prometheus.io/scrape: "true"
+  labels:
+    app: myapp
+  name: myapp
+  namespace: myapp-namespace
+<...>
+```
+
+Metrics can be checked from your pod also
+
+```console
+$ oc rsh myapp
+(app-root) sh-4.4$ curl http://localhost:8000/metrics
+# HELP python_gc_objects_collected_total Objects collected during gc
+# TYPE python_gc_objects_collected_total counter
+python_gc_objects_collected_total{generation="0"} 66.0
+<...>
+response_size_bytes{metric="REQUEST_SIZE",url="https://nginx-openshift-bcgov-nagios.apps.clab.devops.gov.bc.ca/test.txt"} 270.0
+response_size_bytes{metric="SIZE_DOWNLOAD_T",url="https://nginx-openshift-bcgov-nagios.apps.clab.devops.gov.bc.ca/test.txt"} 5.24288e+06
+# HELP response_count_total Response by code
+# TYPE response_count_total counter
+response_count_total{code="200",url="http://nginx-openshift-bcgov-nagios.apps.klab.devops.gov.bc.ca/"} 192.0
+response_count_total{code="200",url="http://nginx-openshift-bcgov-nagios.apps.clab.devops.gov.bc.ca/"} 192.0
+response_count_total{code="200",url="https://nginx-openshift-bcgov-nagios.apps.klab.devops.gov.bc.ca/"} 192.0
+response_count_total{code="200",url="https://nginx-openshift-bcgov-nagios.apps.clab.devops.gov.bc.ca/"} 192.0
+response_count_total{code="200",url="https://status.developer.gov.bc.ca/"} 192.0
+response_count_total{code="200",url="http://nginx-openshift-bcgov-nagios.apps.klab.devops.gov.bc.ca/test.txt"} 192.0
+<...>
+```
+
+And same metrics can be seen in the Sysdig monitor web-console.
+
+![user defined monitoring2](../../images/user-defined-monitoring2.png)
+
 ## Sysdig Monitor Alert
 
 To set up Sysdig alert using your custom metrics, you'll need to create a dashboard with the metrics, and then you can setup an alert like below;
@@ -258,6 +259,6 @@ For detail steps, please read the documents below:
 - [Sysdig - Use Service Discovery to import application metrics endpoints](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md#use-service-discovery-to-import-application-metrics-endpoints)
 - [Sysdig - Checking sysdig teams and dashboards](../app-monitoring/sysdig-monitor-setup-team.md#review-your-monitoring-dashboards)
 - [Sysdig - Creating sysdig alert](../app-monitoring/sysdig-monitor-create-alert-channels.md#creating-an-alert)
-- [OCP - Granting users permission to monitor user-defined projects](https://docs.openshift.com/container-platform/4.10/monitoring/enabling-monitoring-for-user-defined-projects.html#granting-users-permission-to-monitor-user-defined-projects_enabling-monitoring-for-user-defined-projects)
-- [OCP - Enabling monitoring for user-defined projects](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.10/html/monitoring/enabling-monitoring-for-user-defined-projects)
-- [OCP - Enabling alert routing for user-defined projects](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.10/html/monitoring/enabling-alert-routing-for-user-defined-projects)
+- [OCP - Granting users permission to monitor user-defined projects](https://docs.openshift.com/container-platform/4.14/observability/monitoring/enabling-monitoring-for-user-defined-projects.html)
+- [OCP - Enabling monitoring for user-defined projects](https://docs.openshift.com/container-platform/4.14/observability/monitoring/managing-alerts.html#creating-alerting-rules-for-user-defined-projects_managing-alerts)
+- [OCP - Enabling alert routing for user-defined projects](https://docs.openshift.com/container-platform/4.14/observability/monitoring/managing-alerts.html#creating-alert-routing-for-user-defined-projects_managing-alerts)
