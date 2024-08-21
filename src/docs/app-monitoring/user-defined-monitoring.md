@@ -22,7 +22,7 @@ sort_order: 8
 # Set up a User Defined Monitoring in OpenShift
 Last updated: **January 5, 2023**
 
-Use Prometheus client libraries to push your app's metrics to Prometheus. 
+Use Prometheus client libraries to push your app's metrics to Prometheus.
 
 ## On this page
 
@@ -96,7 +96,6 @@ The essential difference between summaries and histograms is that summaries calc
 
 [More on Prometheus histogram and summaries](
 https://prometheus.io/docs/practices/histograms/).
-
 
 ## Expose the metrics from your app
 
@@ -252,7 +251,6 @@ For detail steps, please read the documents below:
 
 - [Checking sysdig teams and dashboards](../app-monitoring/sysdig-monitor-setup-team.md#review-your-monitoring-dashboards)
 - [Creating sysdig alert](../app-monitoring/sysdig-monitor-create-alert-channels.md#creating-an-alert)
-
 
 ## Related pages
 
