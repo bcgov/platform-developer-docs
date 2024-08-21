@@ -153,7 +153,7 @@ Learn more about the querying basics on [Prometheus documentation](https://prome
 
 ## Monitor user-defined projects using Alertmanager
 
-Alerting rules are created for user-defined namespace and based on specific chosen metrics these alerts get triggered.You can create alerts based on the metrics you created above, or on the existing cluster metrics like pod memory usage.
+Alerting rules are created for user-defined namespace and based on specific chosen metrics these alerts get triggered. You can create alerts based on the metrics you created above, or on the existing cluster metrics like pod memory usage.
 
 Create a YAML file lets assume the name is app-alerting-rule.yaml and we can add rule named `example-alert`, the rule triggers an alert when the `version` metric exposed by the sample service becomes `0`.
 
@@ -192,8 +192,7 @@ Once the alert rule is created the configuration file has to be applied to the c
 oc apply -f app-alerting-rule.yaml
 ```
 
-`AlertmanagerConfig` is part of the Prometheus Operator, which is a Kubernetes operator that helps manage Prometheus instances and configurations in a Kubernetes environment. By using AlertmanagerConfig, you can keep your alerting rules and configurations within Kubernetes resources, making it easier to manage and version control them alongside your application code and infrastructure. For more information please refer to this [link](https://console.apps.clab.devops.gov.bc.ca/k8s/ns/be1c6b-dev/monitoring.coreos.com~v1alpha1~AlertmanagerConfig/platform-services-controlled-alert-routing/yaml)
-
+`AlertmanagerConfig` is part of the Prometheus Operator, which is a Kubernetes operator that helps manage Prometheus instances and configurations in a Kubernetes environment. By using AlertmanagerConfig, you can keep your alerting rules and configurations within Kubernetes resources, making it easier to manage and version control them alongside your application code and infrastructure. For more information please refer to this [link](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/docs/platform-automation/alertmanager/)
 
 ## Sysdig Monitor
 
