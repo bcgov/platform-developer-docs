@@ -195,25 +195,11 @@ And same metrics can be seen in the Sysdig monitor web-console.
 
 ![user defined monitoring2](../../images/user-defined-monitoring2.png)
 
-## Sysdig Monitor Alert
-
-To set up Sysdig alert using your custom metrics, you'll need to create a dashboard with the metrics, and then you can setup an alert like below;
-
-![user defined monitoring3](../../images/user-defined-monitoring3.png)
-
-Sysdig alert example;
-
-![user defined monitoring4](../../images/user-defined-monitoring4.png)
-
-For detail steps, please read the documents below:
-
-- [Checking sysdig teams and dashboards](../app-monitoring/sysdig-monitor-setup-team.md#review-your-monitoring-dashboards)
-- [Creating sysdig alert](../app-monitoring/sysdig-monitor-create-alert-channels.md#creating-an-alert)
-
 ## Monitor user-defined projects using Alertmanager
 
-Alerting rules are created for user-defined projects and based on specific chosen metrics these alerts get triggered.
-Create a YAML file lets assume the name is app-alerting-rule.yaml and we can add rule named ```example-alert```, the rule triggers an alert when the ```version``` metric exposed by the sample service becomes ```0```.
+Alerting rules are created for user-defined namespace and based on specific chosen metrics these alerts get triggered.You can create alerts based on the metrics you created above, or on the existing cluster metrics like pod memory usage.
+
+Create a YAML file lets assume the name is app-alerting-rule.yaml and we can add rule named `example-alert`, the rule triggers an alert when the `version` metric exposed by the sample service becomes `0`.
 
 ```yaml
 apiVersion: monitoring.coreos.com/v1
@@ -239,7 +225,7 @@ Here we can see the following :
 - ``` alert: VersionAlert ``` which is the name of the alerting rule.
 - ``` for: 1m ``` is the duration before the alert is triggered if the condition is TRUE.
 - ``` expr: version{job="prometheus-example-app"} == 0 ``` PromQL query expression that defines the new rule
-- ``` severity: warning ``` Severity level assigned to the alert to ensure users understand the impact and cause of the alert
+- ``` severity: warning ``` Severity level assigned to the alert to ensure users understand the impact and cause of the alert and it also lets us know who will get sent the alert and any other custom labels you like can also be included in the alert email.
 - ``` message: This is an example alert. ``` The message due to which the alert is triggered.
 
 Ensure you have the correct namespace for your alert, the code given above is a sample.
@@ -249,6 +235,24 @@ Once the alert rule is created the configuration file has to be applied to the c
 ```bash
 oc apply -f app-alerting-rule.yaml
 ```
+
+`AlertmanagerConfig` is part of the Prometheus Operator, which is a Kubernetes operator that helps manage Prometheus instances and configurations in a Kubernetes environment. By using AlertmanagerConfig, you can keep your alerting rules and configurations within Kubernetes resources, making it easier to manage and version control them alongside your application code and infrastructure. For more information please refer to this [link](https://console.apps.clab.devops.gov.bc.ca/k8s/ns/be1c6b-dev/monitoring.coreos.com~v1alpha1~AlertmanagerConfig/platform-services-controlled-alert-routing/yaml)
+
+## Sysdig Monitor Alert
+
+To set up Sysdig alert using your custom metrics, you'll need to create a dashboard with the metrics, and then you can setup an alert like below;
+
+![user defined monitoring3](../../images/user-defined-monitoring3.png)
+
+Sysdig alert example;
+
+![user defined monitoring4](../../images/user-defined-monitoring4.png)
+
+For detail steps, please read the documents below:
+
+- [Checking sysdig teams and dashboards](../app-monitoring/sysdig-monitor-setup-team.md#review-your-monitoring-dashboards)
+- [Creating sysdig alert](../app-monitoring/sysdig-monitor-create-alert-channels.md#creating-an-alert)
+
 
 ## Related pages
 
