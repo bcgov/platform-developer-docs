@@ -69,14 +69,7 @@ Having a **1.5:1 ratio** of CPU request:CPU utilization is an amazing goal for t
 
 **Deploying pods without specifying a limit or a request** 
 
-If you deploy pods without setting limits or requests, they will be deployed with the following defaults:
-
-* CPU request: 100m
-* CPU limit: 250m
-* Memory request: 256Mi
-* Memory limit: 1Gi
-
-This is **not** the same as specifying a resource request or limit of 0\.
+If you deploy pods without setting limits or requests, they will be deployed using the `LimitRange` value, which you can find out via `oc get LimitRange default-limits -o yaml`. The `LimitRange` specifies the default value for CPU and memory resoruce config for containers. This is **not** the same as specifying a resource request or limit of 0.
 
 **Setting the request and limits to 0**  
 If you set requests and limits to 0, pods will run under the [BestEffort QoS class](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/), using whatever spare capacity is available on the node.
@@ -87,10 +80,7 @@ If you set requests and limits to 0, pods will run under the [BestEffort QoS cla
 If you only specify a limit value, but not a request value, your pods will be deployed with a request that is identical to the limit.
 
 **Specifying a request value only**   
-If you only specify a request value, pods will be deployed with the configured request, and will have the default limit applied of:
-
-* CPU limit: 250m
-* Memory limit: 1Gi
+If you only specify a request value, pods will be deployed with the configured request, and will have the default limit applied based on the `LimitRange`,
 
 **Creating a deployment with a request that is higher than the default limit**  
 If you create a deployment with a request value that is higher than the default limits above, you will be required to define a limit.
