@@ -20,7 +20,7 @@ sort_order: 8
 
 
 # Set up a User Defined Monitoring in OpenShift
-Last updated: **January 5, 2023**
+Last updated: **August 27, 2024**
 
 Use Prometheus client libraries to push your app's metrics to Prometheus.
 
@@ -153,9 +153,9 @@ Learn more about the querying basics on [Prometheus documentation](https://prome
 
 ## Monitor user-defined projects using Alertmanager
 
-Alerting rules are created for user-defined namespace and based on specific chosen metrics these alerts get triggered. You can create alerts based on the metrics you created above, or on the existing cluster metrics like pod memory usage.
+Create alerting rules for a user-defined namespace based on chosen metrics. These alerts trigger when conditions are met. You can base alerts on your metrics or existing cluster metrics like pod memory usage.
 
-Create a YAML file lets assume the name is app-alerting-rule.yaml and we can add rule named `example-alert`, the rule triggers an alert when the `version` metric exposed by the sample service becomes `0`.
+Create a YAML file named app-alerting-rule.yaml. Add a rule called `example-alert` that triggers when the `version` metric from the sample service becomes `0`.
 
 ```yaml
 apiVersion: monitoring.coreos.com/v1
@@ -176,27 +176,27 @@ spec:
         message: This is an example alert. 
 ```
 
-Here we can see the following :
+Here's what each part of the alerting rule means:
 
-- ``` alert: VersionAlert ``` which is the name of the alerting rule.
+- ``` alert: VersionAlert ``` is the name of the alerting rule
 - ``` for: 1m ``` is the duration before the alert is triggered if the condition is TRUE.
 - ``` expr: version{job="prometheus-example-app"} == 0 ``` PromQL query expression that defines the new rule
 - ``` severity: warning ``` Severity level assigned to the alert to ensure users understand the impact and cause of the alert and it also lets us know who will get sent the alert and any other custom labels you like can also be included in the alert email.
-- ``` message: This is an example alert. ``` The message due to which the alert is triggered.
+- ``` message: This is an example alert. ``` is the message that will be sent when the alert is triggered
 
-Ensure you have the correct namespace for your alert, the code given above is a sample.
+Make sure your alert uses the correct namespace; the code provided is just an example.
 
-Once the alert rule is created the configuration file has to be applied to the cluster with the command given below.
+Once you've created the alert rule, apply the configuration file to the cluster using the following command:
 
 ```bash
 oc apply -f app-alerting-rule.yaml
 ```
 
-`AlertmanagerConfig` is part of the Prometheus Operator, which is a Kubernetes operator that helps manage Prometheus instances and configurations in a Kubernetes environment. By using AlertmanagerConfig, you can keep your alerting rules and configurations within Kubernetes resources, making it easier to manage and version control them alongside your application code and infrastructure. For more information please refer to this [link](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/docs/platform-automation/alertmanager/)
+`AlertmanagerConfig` is part of the Prometheus Operator, which helps manage Prometheus instances and configurations in Kubernetes. Using AlertmanagerConfig ,allows you to manage and version control your alerting rules and configurations within Kubernetes resources, keeping them aligned with your application code and infrastructure. More information about [Alertmanager](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/docs/platform-automation/alertmanager/)
 
 ## Sysdig Monitor
 
-You can now let Sysdig agent collecting your custom metrics and show them in the Sysdig console. Add `prometheus.io/scrape=true` annotation set in your pod. The Sysdig agent will scrape your application pod and send its `/metrics` to the Sysdig console.
+You can now have the Sysdig agent collect your custom metrics and display them in the Sysdig console. Add the `prometheus.io/scrape=true` annotation to your pod. The Sysdig agent will then scrape your application pod and send its `/metrics` to the Sysdig console.
 
 ```yaml
 apiVersion: v1
