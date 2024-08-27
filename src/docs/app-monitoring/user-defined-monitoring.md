@@ -179,9 +179,9 @@ spec:
 Here's what each part of the alerting rule means:
 
 - ``` alert: VersionAlert ``` is the name of the alerting rule
-- ``` for: 1m ``` is the duration before the alert is triggered if the condition is TRUE.
+- ``` for: 1m ``` specifies the duration before the alert is triggered if the condition remains **true**
 - ``` expr: version{job="prometheus-example-app"} == 0 ``` PromQL query expression that defines the new rule
-- ``` severity: warning ``` Severity level assigned to the alert to ensure users understand the impact and cause of the alert and it also lets us know who will get sent the alert and any other custom labels you like can also be included in the alert email.
+- ``` severity: warning ``` sets the alert's severity level, helping users understand the impact and who will receive the alert. You can also add custom labels to the alert email
 - ``` message: This is an example alert. ``` is the message that will be sent when the alert is triggered
 
 Make sure your alert uses the correct namespace; the code provided is just an example.
