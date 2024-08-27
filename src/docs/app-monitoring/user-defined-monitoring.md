@@ -20,9 +20,9 @@ sort_order: 8
 
 
 # Set up a User Defined Monitoring in OpenShift
-Last updated: **January 5, 2023**
+Last updated: **August 27, 2024**
 
-Use Prometheus client libraries to push your app's metrics to Prometheus. 
+Use Prometheus client libraries to push your app's metrics to Prometheus.
 
 ## On this page
 
@@ -97,7 +97,6 @@ The essential difference between summaries and histograms is that summaries calc
 [More on Prometheus histogram and summaries](
 https://prometheus.io/docs/practices/histograms/).
 
-
 ## Expose the metrics from your app
 
 Now that your app is generating a metrics endpoint, expose it with a Service.​ The key part is making sure the ports match up with what your library is using.
@@ -152,9 +151,52 @@ Learn more about the querying basics on [Prometheus documentation](https://prome
 
 **Data is currently stored for 15 days.**
 
+## Monitor user-defined projects using Alertmanager
+
+Create alerting rules for a user-defined namespace based on chosen metrics. These alerts trigger when conditions are met. You can base alerts on your metrics or existing cluster metrics like pod memory usage.
+
+Create a YAML file named app-alerting-rule.yaml. Add a rule called `example-alert` that triggers when the `version` metric from the sample service becomes `0`.
+
+```yaml
+apiVersion: monitoring.coreos.com/v1
+kind: PrometheusRule
+metadata:
+  name: example-alert
+  namespace: license-dev
+spec:
+  groups:
+  - name: example
+    rules:
+    - alert: VersionAlert 
+      for: 1m 
+      expr: version{job="prometheus-example-app"} == 0 
+      labels:
+        severity: warning 
+      annotations:
+        message: This is an example alert. 
+```
+
+Here's what each part of the alerting rule means:
+
+- ``` alert: VersionAlert ``` is the name of the alerting rule
+- ``` for: 1m ``` specifies the duration before the alert is triggered if the condition remains **true**
+- ``` expr: version{job="prometheus-example-app"} == 0 ``` PromQL query expression that defines the new rule
+- ``` severity: warning ``` sets the alert's severity level, helping users understand the impact and who will receive the alert. You can also add custom labels to the alert email
+- ``` message: This is an example alert. ``` is the message that will be sent when the alert is triggered
+
+Make sure your alert uses the correct namespace; the code provided is just an example.
+
+Once you've created the alert rule, apply the configuration file to the cluster using the following command:
+
+```bash
+oc apply -f app-alerting-rule.yaml
+```
+
+`AlertmanagerConfig` is part of the Prometheus Operator, which helps manage Prometheus instances and configurations in Kubernetes. Using AlertmanagerConfig ,allows you to manage and version control your alerting rules and configurations within Kubernetes resources, keeping them aligned with your application code and infrastructure. More information about [Alertmanager](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/docs/platform-automation/alertmanager/)
+
 ## Sysdig Monitor
 
-You can now let Sysdig agent collecting your custom metrics and show them in the Sysdig console. Add `prometheus.io/scrape=true` annotation set in your pod. The Sysdig agent will scrape your application pod and send its `/metrics` to the Sysdig console.
+You can now have the Sysdig agent collect your custom metrics and display them in the Sysdig console. Add the `prometheus.io/scrape=true` annotation to your pod. The Sysdig agent will then scrape your application pod and send its `/metrics` to the Sysdig console.
 
 ```yaml
 apiVersion: v1
@@ -210,10 +252,6 @@ For detail steps, please read the documents below:
 - [Checking sysdig teams and dashboards](../app-monitoring/sysdig-monitor-setup-team.md#review-your-monitoring-dashboards)
 - [Creating sysdig alert](../app-monitoring/sysdig-monitor-create-alert-channels.md#creating-an-alert)
 
-## Monitor user-defined projects using Alertmanager
-
-Technical preview for our Openshift Clusters (OCP 4.10). It is possible to set up Alertmanager rule for a user-defined projects so that the granted user(s) by the monitoring-rules-edit role can create, modify, and deleting PrometheusRule custom resources for their project. It's coming with OCP 4.11.
-
 ---
 
 ## Related pages
@@ -222,6 +260,6 @@ Technical preview for our Openshift Clusters (OCP 4.10). It is possible to set u
 - [Sysdig - Use Service Discovery to import application metrics endpoints](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md#use-service-discovery-to-import-application-metrics-endpoints)
 - [Sysdig - Checking sysdig teams and dashboards](../app-monitoring/sysdig-monitor-setup-team.md#review-your-monitoring-dashboards)
 - [Sysdig - Creating sysdig alert](../app-monitoring/sysdig-monitor-create-alert-channels.md#creating-an-alert)
-- [OCP - Granting users permission to monitor user-defined projects](https://docs.openshift.com/container-platform/4.10/monitoring/enabling-monitoring-for-user-defined-projects.html#granting-users-permission-to-monitor-user-defined-projects_enabling-monitoring-for-user-defined-projects)
-- [OCP - Enabling monitoring for user-defined projects](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.10/html/monitoring/enabling-monitoring-for-user-defined-projects)
-- [OCP - Enabling alert routing for user-defined projects](https://access.redhat.com/documentation/en-us/openshift_container_platform/4.10/html/monitoring/enabling-alert-routing-for-user-defined-projects)
+- [OCP - Granting users permission to monitor user-defined projects](https://docs.openshift.com/container-platform/4.14/observability/monitoring/enabling-monitoring-for-user-defined-projects.html)
+- [OCP - Enabling monitoring for user-defined projects](https://docs.openshift.com/container-platform/4.14/observability/monitoring/managing-alerts.html#creating-alerting-rules-for-user-defined-projects_managing-alerts)
+- [OCP - Enabling alert routing for user-defined projects](https://docs.openshift.com/container-platform/4.14/observability/monitoring/managing-alerts.html#creating-alert-routing-for-user-defined-projects_managing-alerts)
