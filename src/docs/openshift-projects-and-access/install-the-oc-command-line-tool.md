@@ -28,6 +28,7 @@ Users can interact with OpenShift via the `oc` command line tool. This can be in
 ## On this page
 * [**Install oc on a mac**](#install-oc-on-a-mac) 
 * [**Install oc on windows**](#install-oc-on-windows)
+* [**Logging in to the CLI using a web browser**](#logging-in-to-the-cli-using-a-web-browser)
 * [**Use the web terminal**](#use-the-web-terminal)
 * [**Related pages**](#related-pages)
 
@@ -121,6 +122,19 @@ If successful, you should see an indication of which cluster you've logged in to
 
 ### Update oc
 To ensure compatibility as features change, please update your `oc` command line tool regularly. You can use `brew upgrade openshift-cli` to achieve this if you installed `oc` using [homebrew](https://brew.sh/) as described above. 
+
+## Logging in to the CLI using a web browser
+With OCP 4.14, a new oc command-line interface (CLI) flag, `--web` is now available for the oc login command. With this enhancement, you can log in by using a web browser, so that you do not need to insert your access token into the command line.
+
+
+For example, to login to Silver cluster, instead of providing a token, use the web option:
+`oc login --server=https://api.silver.devops.gov.bc.ca:6443 --web`
+
+You'll be redirected to the default browser and complete the login process from there. Once logged in, you'll the message "access token received successfully; please return to your terminal".
+
+
+Pro tip: you can setup alias to fully remove the need of copy-pasting the login command from the browser, this would be pretty helpful especially if you are working on multiple clusters.
+
 
 ## Use the web terminal
 
