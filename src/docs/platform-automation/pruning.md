@@ -35,6 +35,7 @@ There are a few CronJobs set up on the OpenShift clusters to help prune old obje
 When a `Deployment` rolls out a new version, it creates a new `ReplicaSet`. Over time, these ReplicaSets can accumulate as each new deployment creates a new one. OpenShift automatically manages the history of ReplicaSets by retaining a configurable number of old ReplicaSets and scaling them down to 0 replicas. By default, older ReplicaSets are not removed but are instead kept in a scaled-down state. However, you can configure a retention policy to limit the number of old ReplicaSets retained, or manually prune them if needed.
 
 A few settings are passed to the pruner job:
+<!-- Steven please update this part: -->
 
 * Per `DeploymentConfig` object, keep the last 2 `ReplicationControllers` that have a status of `Complete` and replica count of zero.
 * Per `DeploymentConfig` object, keep the last 1 `ReplicationControllers` that have a status of `Failed` and replica count of zero.
