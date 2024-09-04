@@ -27,8 +27,8 @@ To tackle this, we've created automated tools to keep an eye on apps on the plat
 
 Our tools specifically check for:
 
-- `Deployments` relying on images that haven't been updated in more than a year
-- Constantly crashing `Deployments` and `statefulsets`
+- `Deployments` and `deploymentconfigs` relying on images that haven't been updated in more than a year
+- Constantly crashing `Deployments`, `deploymentconfigs`, and `statefulsets`
 
 Emails are sent to the Product Owner and Technical Leads registered for the Product in the [Product Registry](https://registry.developer.gov.bc.ca/). To modify the recipients of the emails, please update the contact information in the Registry.
 
