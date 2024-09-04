@@ -27,24 +27,24 @@ To tackle this, we've created automated tools to keep an eye on apps on the plat
 
 Our tools specifically check for:
 
-- `Deployments` and `deploymentconfigs` relying on images that haven't been updated in more than a year
-- Constantly crashing `Deployments`, `deploymentconfigs`, and `statefulsets`
+- `Deployments` relying on images that haven't been updated in more than a year
+- Constantly crashing `Deployments` and `statefulsets`
 
 Emails are sent to the Product Owner and Technical Leads registered for the Product in the [Product Registry](https://registry.developer.gov.bc.ca/). To modify the recipients of the emails, please update the contact information in the Registry.
 
 
 ## On this page
-* **[Deployments and deploymentconfigs that have not changed in a year](#deployments-and-deploymentconfigs-that-have-not-changed-in-a-year)**
-* **[Deployments, deploymentconfigs and statefulsets that are crashing constantly](#deployments-deploymentconfigs-and-statefulsets-that-are-crashing-constantly)**
+* **[Deployments that have not changed in a year](#deployments-that-have-not-changed-in-a-year)**
+* **[Deployments and statefulsets that are crashing constantly](#deployments-and-statefulsets-that-are-crashing-constantly)**
 * **[Responding when deployments are scaled down by these tools](#responding-when-deployments-are-scaled-down-by-these-tools)**
 * **[Timeline](#timeline)**
 * **[Related pages](#related-pages)**
 
 ---
 
-## Deployments and deploymentconfigs that have not changed in a year
+## Deployments that have not changed in a year
 
-The tool monitors the `lastUpdateTime` in the `Progressing` section of the `status` field in Deployment or DeploymentConfig. If this timestamp is nearing one year but hasn't crossed that threshold, it triggers a warning email. For deployments handled by ArgoCD, an email prompts action since ArgoCD might scale it back up after the tool has scaled it down. For deployments not managed by ArgoCD and with a timestamp exceeding one year, the tool scales down the replicas to zero and sends an email notification.
+The tool monitors the `lastUpdateTime` in the `Progressing` section of the `status` field in Deployment. If this timestamp is nearing one year but hasn't crossed that threshold, it triggers a warning email. For deployments handled by ArgoCD, an email prompts action since ArgoCD might scale it back up after the tool has scaled it down. For deployments not managed by ArgoCD and with a timestamp exceeding one year, the tool scales down the replicas to zero and sends an email notification.
 
 You can verify the timestamp on your deployment in the YAML under `status`. It's essential to note that the tool specifically checks the `Processing` type condition. Other conditions, such as `Available`, don't indicate updates in the pods but merely track the last time pods were restarted.
 
@@ -58,9 +58,9 @@ conditions:
     type: Progressing
 ```
 
-## Deployments, deploymentconfigs and statefulsets that are crashing constantly
+## Deployments and statefulsets that are crashing constantly
 
-The tool reviews the restart count of pods and initiates a response if a pod has exceeded 100 restarts. It identifies the controlling object, whether it's a Deployment, DeploymentConfig, or StatefulSet. If the object is managed by ArgoCD, a warning email is generated, urging necessary action since ArgoCD might scale it back up after the tool has scaled it down. 
+The tool reviews the restart count of pods and initiates a response if a pod has exceeded 100 restarts. It identifies the controlling object, whether it's a Deployment or StatefulSet. If the object is managed by ArgoCD, a warning email is generated, urging necessary action since ArgoCD might scale it back up after the tool has scaled it down. 
 
 In cases where the object is not managed by ArgoCD and the restart count surpasses 100, the tool scales down the replicas to zero and sends an email notification.
 
