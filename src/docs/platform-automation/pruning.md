@@ -5,7 +5,7 @@ slug: pruning
 
 description: Describes the automatic object pruning that takes place in OpenShift clusters.
 
-keywords: automation, prune, builds, imagestreams
+keywords: automation, prune, builds, deploymentconfig, imagestreams
 
 page_purpose: Describes the automatic object pruning that takes place in OpenShift clusters.
 
