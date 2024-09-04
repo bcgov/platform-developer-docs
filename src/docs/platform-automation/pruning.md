@@ -35,6 +35,7 @@ There are a few CronJobs set up on the OpenShift clusters to help prune old obje
 When a `DeploymentConfig` rolls out a new version, it creates a new `ReplicationController`. Over time, the accumulation of these objects can happen. Therefore, older ones are routinely removed on a daily basis through pruning as well.
 
 A few settings are passed to the pruner job:
+
 * Per `DeploymentConfig` object, keep the last 2 `ReplicationControllers` that have a status of `Complete` and replica count of zero.
 * Per `DeploymentConfig` object, keep the last 1 `ReplicationControllers` that have a status of `Failed` and replica count of zero.
 * Per `DeploymentConfig` object, keep any `ReplicationControllers` that is younger than 48 hours.
