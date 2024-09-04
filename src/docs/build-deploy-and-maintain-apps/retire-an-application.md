@@ -124,7 +124,7 @@ When ready, delete all PVCs in all namespaces of the project, including the 'too
 ### Delete pods
 Similar to storage, pods must be removed by the user before the automated deletion process can continue.  This ensures that the application is intentionally decommissioned by the product owner and that no parts of the application are overlooked or unprepared for removal.
 
-* Scale down any Deployments, DeploymentConfigs, or StatefulSets.
+* Scale down any workloads such as  Deployments and StatefulSets.
 
 * Delete all pods in all of the project's namespaces, including the 'tools' namespace.
 
