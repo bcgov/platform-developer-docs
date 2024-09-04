@@ -125,6 +125,7 @@ Deployment in OpenShift are a recipe for deploying your application. They consis
 - **Pod Template:** This defines the desired state of the pods being deployed, including the base image, ports to expose, and environment variables
 - **Replicas:** The number of instances of your application that should be maintained
 - **Selectors:** Labels that identify the pods managed by the deployment configuration
+- **Triggers:** Events that will cause a new deployment. `BuildConfig` supports image triggers and configuration change triggers. Additionally, Deployments and StatefulSets can also use [image triggers](https://docs.openshift.com/container-platform/4.12/openshift_images/triggering-updates-on-imagestream-changes.html) which initiate updates when an image stream tag that the triggering resource points to is updated.
 
 Understanding these components is essential for correctly configuring your application's deployment. To read more about other configuration options, use `oc explain` command or this [kubernetes official documentation](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/).
 
