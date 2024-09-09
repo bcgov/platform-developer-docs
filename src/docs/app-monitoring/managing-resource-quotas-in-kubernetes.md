@@ -75,7 +75,7 @@ An e-commerce platform faced performance issues during peak hours. They analyzed
 ### Monitoring resource utilization
 
 - **Sysdig monitoring guide**: [Sysdig guidelines for SLI and monitoring](../app-monitoring/guidelines-for-sli-and-monitoring.md)
-- **Utilization dashboard**: Review resource usage through the "Resources Quota Approve Dashboard" on Sysdig before submitting quota increase requests
+- **Utilization dashboard**: Review resource usage through the ** "Template - Resources Quota Approve Dashboard"** on Sysdig before submitting quota increase requests
 
 ## Identifying and managing resource slack
 
