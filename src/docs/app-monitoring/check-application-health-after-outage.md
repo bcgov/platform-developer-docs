@@ -115,7 +115,7 @@ assignees: caggles, ShellyXueHan
 ---
 ## Deployments
 - [ ] Rocketchat pods (minimum 3) are up and communicating with the database.
-- [ ] Jenkins pods have been restarted.
+- [ ] Pipeline pods have been restarted.
 - [ ] BCBot has been restarted.
 ## Stateful Sets
 - [ ] MongoDB pods are up, running, communicating with each other and with the application.

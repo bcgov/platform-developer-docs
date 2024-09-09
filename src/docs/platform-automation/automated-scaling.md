@@ -96,4 +96,3 @@ Be aware that if you scale your deployment back up without addressing the underl
 - [RedHat’s documentation on editing deployments](https://docs.openshift.com/container-platform/4.12/applications/deployments/deployment-strategies.html#odc-editing-deployments_rolling-strategy)
 - [Memorandum of Understanding](https://digital.gov.bc.ca/cloud/services/private/onboard/#memorandum)
 - [Maintaining an image](../build-deploy-and-maintain-apps/maintain-an-application.md#maintain-images)
-
