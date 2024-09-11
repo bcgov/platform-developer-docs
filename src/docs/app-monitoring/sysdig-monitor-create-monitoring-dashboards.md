@@ -26,12 +26,13 @@ After you  [create a sysdig-team](../app-monitoring/sysdig-monitor-setup-team.md
 ## On this page
 
 - [Create monitoring dashboards in Sysdig Monitor](#create-monitoring-dashboards-in-sysdig-monitor)
-- [Sysdig built-in monitoring dashboard templates](#sysdig-built-in-monitoring-dashboard-templates)
-- [Create custom dashboard from templates](#create-custom-dashboard-from-templates)
-- [Sysdig Advisor Namespace overview](#sysdig-advisor-namespace-overview)
-- [Accessing Sysdig Advisor Namespace overview](#accessing-sysdig-advisor-namespace-overview)
-- [Recoverability of monitoring dashboards](#recoverability-of-monitoring-dashboards)
-- [Related pages](#related-pages)
+  - [On this page](#on-this-page)
+  - [Sysdig built-in monitoring dashboard templates](#sysdig-built-in-monitoring-dashboard-templates)
+  - [Create custom dashboard from templates](#create-custom-dashboard-from-templates)
+  - [Sysdig Advisor Namespace overview](#sysdig-advisor-namespace-overview)
+  - [Accessing Sysdig Advisor Namespace overview](#accessing-sysdig-advisor-namespace-overview)
+  - [Recoverability of monitoring dashboards](#recoverability-of-monitoring-dashboards)
+  - [Related pages](#related-pages)
 
 ## Sysdig built-in monitoring dashboard templates
 
@@ -42,6 +43,7 @@ Building a dashboard from scratch can be tough, so we suggest starting with some
 Here are some common ones to start with:
 
 - `Pod Rightsizing & Workload Capacity Optimization` and `Template - Resource Allocation Dashboard`: Optimize your infrastructure by ensuring pods are sized correctly. Identify opportunities to free up resources by adjusting memory and/or CPU requests. This dashboard is especially useful if you're reaching resource quota limits in a namespace.
+- `Template - Resources Quota Approve Dashboard`: Shows your CPU, memory, and storage utilization. This dashboard is the good evidence when your team need to request for more resources quota on Registry app.
 - `Pod/Workload Status & Performance`: Monitor the status, health, resource usage, and performance of applications (workloads or pods). Ideal for service monitoring using Golden Signals. Read more about Four Golden Signal Monitoring concept [here](https://sysdig.com/blog/golden-signals-kubernetes/)
 - `Application specific dashboards`: Access them in the Application section of the templates. Useful for obtaining metrics tailored to your tech stack.
 
