@@ -194,6 +194,59 @@ oc apply -f app-alerting-rule.yaml
 
 `AlertmanagerConfig` is part of the Prometheus Operator, which helps manage Prometheus instances and configurations in Kubernetes. Using AlertmanagerConfig ,allows you to manage and version control your alerting rules and configurations within Kubernetes resources, keeping them aligned with your application code and infrastructure. More information about [Alertmanager](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/docs/platform-automation/alertmanager/)
 
+Please have this network policy added to ensure that proper metrics are scraped
+
+```yaml
+- apiVersion: v1
+    kind: Service
+    metadata:
+      labels: 
+        app: prometheus-metrics
+      name: prometheus-metrics-app-service
+      namespace: be1c6b-test
+    spec:
+      selector:
+        app: prometheus-metrics-app
+      ports:
+        - name: metrics
+          protocol: TCP
+          port: 8000
+          targetPort: 8000
+
+  - apiVersion: monitoring.coreos.com/v1
+    kind: ServiceMonitor
+    metadata:
+      labels:
+        app: prometheus-metrics-app
+      name: prometheus-metrics-app
+      namespace: be1c6b-test
+    spec:
+      endpoints:
+        - interval: 30s
+          port: metrics
+          scheme: http
+      selector:
+        matchLabels:
+          app: prometheus-metrics
+
+  - apiVersion: networking.k8s.io/v1
+    kind: NetworkPolicy
+    metadata:
+      name: allow-from-openshift-monitoring
+      namespace: be1c6b-test
+    spec:
+      ingress:
+      - from:
+        - namespaceSelector:
+            matchLabels: 
+              kubernetes.io/metadata.name: openshift-user-workload-monitoring
+      podSelector: {}
+      policyTypes:
+      - Ingress
+```
+
+Here we can see that label under `service` should match with the `ServiceMonitor` under selector and matchLabels.
+
 ## Sysdig Monitor
 
 You can now have the Sysdig agent collect your custom metrics and display them in the Sysdig console. Add the `prometheus.io/scrape=true` annotation to your pod. The Sysdig agent will then scrape your application pod and send its `/metrics` to the Sysdig console.
