@@ -133,7 +133,7 @@ At its core, the CrunchyDB architecture is similar to that of Patroni. It uses m
   - this object governs everything, not just the database pods themselves. That includes all Services, ServiceAccounts, PodDisruptionBudgets, Secrets and PersistentVolumeClaims
 2. Instead of having 1 StatefulSet with 3 pods, your cluster is made up of 3 StatefulSets with 1 pod each. This allows the CrunchyDB Operator to take more direct control over how pods are updated and restarted when a pod fails or an image is updated. This permits less disruptive image changes and more responsive actions in the event that a pod is killed. 
   - As with standalone Patroni, syncing between pods is still governed by a quorum among the instances of Patroni running in your cluster.
-3. Pods run multiple containers - between 3 and 5, depending on your configuration. The is one main container that runs Postgres and Patroni, with sidecar containers that run networking, archiving, and backups.
+3. Pods run multiple containers - between 3 and 5, depending on your configuration. There is one main container that runs Postgres and Patroni, with sidecar containers that run networking, archiving, and backups.
 4. The PostgresCluster object can also include configuration for backup management via `pgbackrest` and connection pooling with `pgbouncer`.
   - The `backup` stanza of the PostgresCluster object includes all configuration for your backups, including your backup schedule and configuration of which backups you wish to retain and for how long. For more information on the different options, checkout [Crunchy's Backup Documentation](https://access.crunchydata.com/documentation/postgres-operator/latest/tutorials/backups-disaster-recovery).
 
