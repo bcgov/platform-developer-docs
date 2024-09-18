@@ -197,51 +197,19 @@ oc apply -f app-alerting-rule.yaml
 Please have this network policy added to ensure that proper metrics are scraped
 
 ```yaml
-- apiVersion: v1
-    kind: Service
-    metadata:
-      labels: 
-        app: prometheus-metrics
-      name: prometheus-metrics-app-service
-      namespace: be1c6b-test
-    spec:
-      selector:
-        app: prometheus-metrics-app
-      ports:
-        - name: metrics
-          protocol: TCP
-          port: 8000
-          targetPort: 8000
-
-  - apiVersion: monitoring.coreos.com/v1
-    kind: ServiceMonitor
-    metadata:
-      labels:
-        app: prometheus-metrics-app
-      name: prometheus-metrics-app
-      namespace: be1c6b-test
-    spec:
-      endpoints:
-        - interval: 30s
-          port: metrics
-          scheme: http
-      selector:
-        matchLabels:
-          app: prometheus-metrics
-
-  - apiVersion: networking.k8s.io/v1
-    kind: NetworkPolicy
-    metadata:
-      name: allow-from-openshift-monitoring
-      namespace: be1c6b-test
-    spec:
-      ingress:
+  apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    name: allow-from-openshift-monitoring
+    namespace: be1c6b-test
+  spec:
+    ingress:
       - from:
-        - namespaceSelector:
-            matchLabels: 
-              kubernetes.io/metadata.name: openshift-user-workload-monitoring
-      podSelector: {}
-      policyTypes:
+          - namespaceSelector:
+              matchLabels:
+                kubernetes.io/metadata.name: openshift-user-workload-monitoring
+    podSelector: {}
+    policyTypes:
       - Ingress
 ```
 
