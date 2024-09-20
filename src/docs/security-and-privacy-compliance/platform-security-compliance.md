@@ -233,9 +233,9 @@ GitHub is the primary git repository for platform application code.  There are s
 
 Here is a summary of the GitHub organizations we own and their purposes:
 
-* bcgov - main developer git repository for platform application code and/or public sharing
-* bcgov-c - main private git repository used for cluster configuration management and non-public projects.
-* bcdevops - alternate git repository for platform application code.  Membership required for access to OpenShift.
+* bcgov - main developer git repository for platform application code and/or public sharing. If you wish to login to OpenShift via github, membership of the bcgov github org is required, along with linking to an IDIR account
+* bcgov-c - main private git repository used for cluster configuration management and non-public projects
+* bcdevops - alternate git repository for platform application code
 * bcgov-platform-services - git repository for platform services team
 
 These resources are available:

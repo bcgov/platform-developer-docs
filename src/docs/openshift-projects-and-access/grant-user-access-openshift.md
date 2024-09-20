@@ -64,7 +64,7 @@ To get a list of the users who have access to a namespace, and in what role, a p
 ```
 oc get rolebindings
 ```
-For more information on adding users, you can watch [Using Just Ask! to gain access into the BCGov or BCDevops GitHub Organizations](https://www.youtube.com/watch?v=IvdPyx2-qm0) or use [the Just Ask! tool](https://just-ask.developer.gov.bc.ca/).
+For more information on adding users, you can watch [Using Just Ask! to gain access into the BCGov GitHub Organization](https://www.youtube.com/watch?v=IvdPyx2-qm0) or use [the Just Ask! tool](https://just-ask.developer.gov.bc.ca/).
 
 ## Request platform access
 
