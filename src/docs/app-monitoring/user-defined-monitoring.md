@@ -201,7 +201,7 @@ Please have this network policy added to ensure that proper metrics are scraped
   kind: NetworkPolicy
   metadata:
     name: allow-from-openshift-monitoring
-    namespace: be1c6b-test
+    namespace: license-dev
   spec:
     ingress:
       - from:
@@ -212,8 +212,6 @@ Please have this network policy added to ensure that proper metrics are scraped
     policyTypes:
       - Ingress
 ```
-
-Here we can see that label under `service` should match with the `ServiceMonitor` under selector and matchLabels.
 
 ## Sysdig Monitor
 
