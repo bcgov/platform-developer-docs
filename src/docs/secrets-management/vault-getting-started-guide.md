@@ -23,7 +23,7 @@ sort_order: 1
 The Platform Services team has deployed Hashicorp's Vault application with disaster recovery in our Gold service clusters (Gold Kamloops and Gold Calgary), the service is available to all B.C. government development teams on **all clusters** including: Silver, Gold/Golddr and Emerald.
 
 The Vault service is available at [https://vault.developer.gov.bc.ca/](https://vault.developer.gov.bc.ca/).
-If you are running a test project in the lab clusters, such as KLAB, use a separate Vault service available at [https://vault-lab.developer.gov.bc.ca/](https://vault-lab.developer.gov.bc.ca/). Please note that the lab Vault instance is meant to be used for testing purposes by the Platform Services team, there could be frequent changes and outages with the service!
+If you are running a test project in the lab clusters, such as KLAB, use a separate Vault service available at [https://vault-lab.developer.gov.bc.ca/](https://vault-lab.developer.gov.bc.ca/).  The lab Vault instance is meant to be used for testing purposes by the Platform Services team, there could be frequent changes and outages with the service!
 
 In this guide, you will learn how to access Vault and deploy a working example using sample secrets from your Vault Mount Points. Mount Points can be thought of as "MiniVaults" or related to paths within a Linux filesystem that can be locked down and secured.
 
