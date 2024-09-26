@@ -20,7 +20,7 @@ sort_order: 1
 
 # Vault getting started guide
 
-The Platform Services team has deployed Hashicorp's Vault application with disaster recovery in our Gold service clusters (Gold Kamloops and Gold Calgary), the service is available to all BC Government development teams on **all clusters** (silver, gold/golddr, emerald).
+The Platform Services team has deployed Hashicorp's Vault application with disaster recovery in our Gold service clusters (Gold Kamloops and Gold Calgary), the service is available to all B.C. government development teams on **all clusters** including: Silver, Gold/Golddr and Emerald.
 
 The Vault service is available at [https://vault.developer.gov.bc.ca/](https://vault.developer.gov.bc.ca/).
 If you are running a test project in the lab clusters, such as KLAB, use a separate Vault service available at [https://vault-lab.developer.gov.bc.ca/](https://vault-lab.developer.gov.bc.ca/). Please note that the lab Vault instance is meant to be used for testing purposes by the Platform Services team, there could be frequent changes and outages with the service!
