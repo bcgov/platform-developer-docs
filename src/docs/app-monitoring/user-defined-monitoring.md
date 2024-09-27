@@ -194,6 +194,25 @@ oc apply -f app-alerting-rule.yaml
 
 `AlertmanagerConfig` is part of the Prometheus Operator, which helps manage Prometheus instances and configurations in Kubernetes. Using AlertmanagerConfig ,allows you to manage and version control your alerting rules and configurations within Kubernetes resources, keeping them aligned with your application code and infrastructure. More information about [Alertmanager](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/docs/platform-automation/alertmanager/)
 
+Please have this network policy added to ensure that proper metrics are scraped
+
+```yaml
+  apiVersion: networking.k8s.io/v1
+  kind: NetworkPolicy
+  metadata:
+    name: allow-from-openshift-monitoring
+    namespace: license-dev
+  spec:
+    ingress:
+      - from:
+          - namespaceSelector:
+              matchLabels:
+                kubernetes.io/metadata.name: openshift-user-workload-monitoring
+    podSelector: {}
+    policyTypes:
+      - Ingress
+```
+
 ## Sysdig Monitor
 
 You can now have the Sysdig agent collect your custom metrics and display them in the Sysdig console. Add the `prometheus.io/scrape=true` annotation to your pod. The Sysdig agent will then scrape your application pod and send its `/metrics` to the Sysdig console.
