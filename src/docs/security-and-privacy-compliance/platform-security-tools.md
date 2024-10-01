@@ -26,7 +26,7 @@ Here you will find details on security tooling used by platform administrators a
 * [**Container image scanning (ACS, Xray)**](#container-image-scanning-acs-xray)
 * [**Container runtime security**](#container-runtime-security)
 * [**Secrets management**](#secrets-management)
-* [**Logging and monitoring (EKS, Kibana, Graphana, Sysdig Monitor, SIEM, Uptime, Status)**](#logging-and-monitoring-eks-kibana-graphana-sysdig-monitor-siem-uptime-status)
+* [**Logging and monitoring (Loki, Sysdig Monitor, SIEM, Uptime, Status)**](#logging-and-monitoring-loki-sysdig-monitor-siem-uptime-status)
 * [**Related pages**](#other-important-considerations)
 
 <!-- ### End of "On this page" --> 
@@ -107,7 +107,7 @@ Vault is the preferred secrets management tool to use on OpenShift.
 
 Integrated as the GitOps Operator within OpenShift, Argo CD empowers a GitOps capability to synchronize a Git repository with OpenShift configurations, whether they pertain to the platform or specific applications. 
 
-## Logging and monitoring (ElasticSearch, Kibana, Graphana, Sysdig Monitor, SIEM, Uptime, Status)
+## Logging and monitoring (Loki, Sysdig Monitor, SIEM, Uptime, Status)
 
 The Platform Services team offers a range of tools designed to ensure the expected behavior of our platform and applications. These tools not only help in monitoring normal operations but also enable thorough investigations into any anomalies that may arise.
 
@@ -116,11 +116,9 @@ The Platform Services team offers a range of tools designed to ensure the expect
 Within the OpenShift interface, project teams can view logs associated with a given pod through the Logs tab.  
 ![OpenShift Pod details screen Logs tab example](../../images/openshift-pod-details-logs-tab-example.jpg)
 
-**Kibana:**
+**Loki:**
 
 This tool provides a more wholistic view of logs for an application or at the platform level, as well as providing visualization and alerting capability.
-
-* [More on Kibana](https://kibana-openshift-logging.apps.silver.devops.gov.bc.ca/)
 
 **Sysdig Monitor:**
 

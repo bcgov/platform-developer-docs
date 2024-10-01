@@ -207,9 +207,9 @@ OpenShift provides robust monitoring capabilities to ensure your application is 
 
 - **Monitoring Dashboard**: Sysdig allows you to set up a monitoring dashboard for your application. Check out this [video tutorial](https://www.youtube.com/watch?v=K4rkSCSq3C4&list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg) on how to set up your Sysdig monitoring dashboard
 
-### 2. Configuring Application Logs with Kibana
+### 2. Configuring Application Logs with Loki
 
-Logs are critical for debugging and understanding the behaviour of your application. OpenShift integrates with Kibana for log aggregation. This allows you to collect, index, and visualize logs in a centralized location. For a detailed guide on [how to configure and use Kibana](https://stackoverflow.developer.gov.bc.ca/questions/906).
+Logs are critical for debugging and understanding the behaviour of your application. OpenShift integrates with Loki for log aggregation. This allows you to collect, index, and visualize logs in a centralized location. For a detailed guide on [how to configure and use Loki](TBD).
 
 ---
 

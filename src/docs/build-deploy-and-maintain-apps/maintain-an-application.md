@@ -374,7 +374,7 @@ By setting up comprehensive monitoring and alert systems for your application, y
 
 1. Refer to [this guide](../app-monitoring/check-application-health-after-outage.md) to identify the cause of the outage,  whether it's a platform-wide problem or specific to your application.  This guide will also provide guidance on initiating the troubleshooting process for your application's issues. Moreover, consider creating a checklist for your application. This checklist should outline the essential items to review in order to confirm that everything is functioning properly following an outage.
 
-2. Utilize application logs as a valuable resource for troubleshooting. OpenShift is seamlessly integrated with Kibana, which facilitates log aggregation. Through this integration, you can gather, categorize, and visualize container logs in a centralized hub. For comprehensive training on application logging with Kibana refer to the [provided training materials](https://github.com/bcgov/devops-platform-workshops/blob/master/openshift-201/logging.md)
+2. Utilize application logs as a valuable resource for troubleshooting. OpenShift is seamlessly integrated with Loki, which facilitates log aggregation. Through this integration, you can gather, categorize, and visualize container logs in a centralized hub. For comprehensive training on application logging with Loki refer to the [provided training materials](https://github.com/bcgov/devops-platform-workshops/blob/master/openshift-201/logging.md)
 
 3. It's essential for your team to have a strong understanding of your application and its relevant components.  This knowledge base is crucial for effective troubleshooting and minimizing the impact of any downtime
 
@@ -503,7 +503,7 @@ It is also important to keep the Platform Services [Product Registry](https://re
 - [Restoring Backup Volumes on OpenShift](../automation-and-resiliency/netapp-backup-restore.md)
 - [Grant user access in OpenShift](../openshift-projects-and-access/grant-user-access-openshift.md)
 - [Vault secrets management](../secrets-management/vault-secrets-management-service.md)
-- [Kibana training application logging](https://github.com/bcgov/devops-platform-workshops/blob/master/openshift-201/logging.md)
+- [Loki training application logging](https://github.com/bcgov/devops-platform-workshops/blob/master/openshift-201/logging.md)
 - [Check application health after outage](../app-monitoring/check-application-health-after-outage.md)
 - [Building secure and reliable systems e-book](https://sre.google/books/building-secure-reliable-systems/)
 - [Deploying to OpenShift e-book](https://cloud.redhat.com/hubfs/pdfs/Deploying_to_OpenShift.pdf)
