@@ -2,7 +2,7 @@
 
 ## Get started
 
-Start here for the first steps on working in our OpenShift environment.
+Start here for the first steps on working in our OpenShift environment:
 
 * [Provision a new project in OpenShift](docs/openshift-projects-and-access/provision-new-openshift-project.md)
 * [User access in OpenShift](docs/openshift-projects-and-access/grant-user-access-openshift.md)
@@ -12,7 +12,7 @@ Start here for the first steps on working in our OpenShift environment.
 
 ## Build, deploy and maintain apps
 
-Best practices on the platform.
+Best practices on the platform:
 
 * [Build an application](docs/build-deploy-and-maintain-apps/build-an-application.md)
 * [Deploy an application](docs/build-deploy-and-maintain-apps/deploy-an-application.md)
@@ -23,8 +23,7 @@ Best practices on the platform.
 
 ### Free OpenShift training
 
-Read
-about [the free training](https://cloud.gov.bc.ca/private-cloud/support-and-community/platform-training-and-resources/)
+Read about [the free training](https://digital.gov.bc.ca/cloud/services/private/support/#platform-training)
 that is offered on the Platform and get access to other learning resources.
 
 ### Rocket.Chat
