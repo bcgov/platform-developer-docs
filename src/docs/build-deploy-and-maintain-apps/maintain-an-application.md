@@ -269,7 +269,7 @@ Events:                   <none>
 
 During cluster maintenance, nodes may need to be drained, requiring the termination of running pods on those nodes. If a PDB prevents a node from draining, it can delay maintenance activities and impact the overall stability of the cluster.
 
-In this situation, the Platform Services Team will reach out to you (the Product Owner and Technical Leads) for attention. You are expected to respond within ***one business day***. If no response is received after one business day, the platform will proceed with manually deleting the pod(s) to allow the node to drain and complete maintenance.
+In this situation, the Platform Operations Team will reach out to you (the Product Owner and Technical Leads) for attention. You are expected to respond within ***one hour***. If no response is received after one hour, the Platform Operations Team will proceed with manually deleting the pod(s) to allow the node to drain and complete maintenance.
 
 Please note that this action may lead to temporary disruption of your services if the deleted pod(s) fail to restart. To avoid issues like this, here are some recommendations:
 - Review your PDBs: Ensure that your PDBs are appropriately configured to handle scheduled maintenance events. For example, the PDB should allow at least one pod to be gone from the workload, where Min available = workload replicas - 1.
