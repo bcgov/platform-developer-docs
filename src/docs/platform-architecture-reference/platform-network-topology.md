@@ -21,7 +21,7 @@ sort_order: 4
 # Platform Network Topology
 Last updated: **August 23, 2023**
 
-Navigate to the platform network topology section for a detailed review of the network structure. The section breaks down the fundamental structure of our platform in Silver, Gold and Gold DR within the 4th version of the Open Compute Project  (OCP 4). Follow the steps below to access the information:
+Navigate to the platform network topology section for a detailed review of the network structure. The section breaks down the fundamental structure of Silver, Gold, Gold DR and Emerald Openshift Platforms. Follow the steps below to access the information:
 
 1. Head on over to the [Private cloud](https://digital.gov.bc.ca/cloud/private/) main page
 
