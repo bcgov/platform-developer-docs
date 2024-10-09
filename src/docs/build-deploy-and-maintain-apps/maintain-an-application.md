@@ -235,7 +235,7 @@ A minimal PDB contains:
 * A selector that designates the pods requiring protection
 * The specification of the minimum count of pods that must remain available 
 
-For instance, let's consider a scenario where we have a StatefulSet named "sample-app." This StatefulSet is configured to have a minimum of three pods. In situations like these, a requirement might arise to guarantee that only one pod becomes inaccessible at any given moment. This condition is particularly relevant for setups like a Mongo replica set, where the availability of over half of the members must be maintained at any given time.
+For instance, let's consider a scenario where we have a StatefulSet named "sample-app". This StatefulSet is configured to have a minimum of three pods. In situations like these, a requirement might arise to guarantee that only one pod becomes inaccessible at any given moment. This condition is particularly relevant for setups like a Mongo replica set, where the availability of over half of the members must be maintained at any given time.
 
 ```
 spec:
@@ -264,6 +264,18 @@ Status:
     Total:                3
 Events:                   <none>
 ```
+
+**Impact During Cluster Maintenance**
+
+During cluster maintenance, nodes may need to be drained, requiring the termination of running pods on those nodes. If a PDB prevents a node from draining, it can delay maintenance activities and impact the overall stability of the cluster.
+
+In this situation, the Platform Operations Team will reach out to you (the Product Owner and Technical Leads) for attention. You are expected to respond within ***one hour***. If no response is received after one hour, the Platform Operations Team will proceed with manually deleting the pod(s) to allow the node to drain and complete maintenance.
+
+Please note that this action may lead to temporary disruption of your services if the deleted pod(s) fail to restart. To avoid issues like this, here are some recommendations:
+- Review your PDBs: Ensure that your PDBs are appropriately configured to handle scheduled maintenance events. For example, the PDB should allow at least one pod to be gone from the workload, where Min available = workload replicas - 1.
+- Implement Chaos Engineering: Setup a periodic job to test your application resilience by randomly deleting a running pod, then check if the workload gets impacted and the deleted pod can restart without issue.
+- Prepare for maintenance: Be available during the maintenance window, and ensure your contact information is up to date on [Product Registry](https://registry.developer.gov.bc.ca/).
+
 
 ### Databases
 Setting up databases in OpenShift requires careful consideration. They need to be configured for high availability and replication. 
