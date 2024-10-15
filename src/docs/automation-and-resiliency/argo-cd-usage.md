@@ -254,7 +254,7 @@ In the Argo CD UI, click the applications link at the top of the left-side navig
 
 * Sync Policy and Sync Options: Can be left alone until you know what you need
 
-* Source repository URL: Use the SSH style URL for your manifest repo, such as `git@github.com:bcgov-c/tenant-gitops-abc123.git`
+* Source repository URL: Use an HTTPS URL for your manifest repo, such as `https://github.com/bcgov-c/tenant-gitops-abc123.git`
 
 * Source revision: Leave this as "HEAD" if you are using the master branch, otherwise enter the branch name. You can also set the dropdown to TAG and enter a tag name
 
