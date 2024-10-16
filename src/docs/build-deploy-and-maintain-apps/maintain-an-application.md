@@ -274,7 +274,7 @@ In this situation, the Platform Operations Team will reach out to you (the Produ
 Please note that this action may lead to temporary disruption of your services if the deleted pod(s) fail to restart. To avoid issues like this, here are some recommendations:
 * Review your PDBs: Ensure that your PDBs are appropriately configured to handle scheduled maintenance events. For example, the PDB should allow at least one pod to be gone from the workload, where Min available = workload replicas - 1.
 * Implement Chaos Engineering: Setup a periodic job to test your application resilience by randomly deleting a running pod, then check if the workload gets impacted and the deleted pod can restart without issue.
-* Prepare for maintenance: Be available during the maintenance window, and ensure your contact information is up to date on [Product Registry](https://registry.developer.gov.bc.ca/).
+* Prepare for maintenance: Be available during the maintenance window, and ensure your contact information is up to date on [Platform Product Registry](https://registry.developer.gov.bc.ca/).
 
 Please review the [MoU](https://digital.gov.bc.ca/cloud/services/private/onboard/#memorandum) for more details about product team responsibilities and the [shared responsibilities model matrix](https://intranet.gov.bc.ca/assets/download/C54717CC13BF42CE8FEAB7C2AD0299C7) (IDIR protected).
 
