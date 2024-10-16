@@ -276,7 +276,7 @@ Please note that this action may lead to temporary disruption of your services i
 * Implement Chaos Engineering: Setup a periodic job to test your application resilience by randomly deleting a running pod, then check if the workload gets impacted and the deleted pod can restart without issue.
 * Prepare for maintenance: Be available during the maintenance window, and ensure your contact information is up to date on [Product Registry](https://registry.developer.gov.bc.ca/).
 
-Please review the [MoU](https://digital.gov.bc.ca/cloud/services/private/onboard/#memorandum) for more details about product team responsibilities.
+Please review the [MoU](https://digital.gov.bc.ca/cloud/services/private/onboard/#memorandum) for more details about product team responsibilities and the [shared responsibilities model matrix](https://intranet.gov.bc.ca/assets/download/C54717CC13BF42CE8FEAB7C2AD0299C7) (IDIR protected).
 
 
 ### Databases
