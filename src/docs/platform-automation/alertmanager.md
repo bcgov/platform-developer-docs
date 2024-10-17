@@ -38,6 +38,10 @@ Alert emails come from `CLUSTER AlertManager <PlatformServicesTeam@gov.bc.ca>` w
 
 Technical Leads for the Product receive all alerts. Additionally, critical level alerts in the `-prod` namespace are forwarded to the Product Owner.
 
+The subject of the emails will contain the namespace name, which you can use for filtering your emails. ie: `Action Required: be1c6b-prod has critical alerts firing`
+
+The body of the email will also contain the display name of the Product as it is listed in the Registry/
+
 ## Frequency
 
 Alerts are triggered only if the condition persists for 1 hour, minimizing unnecessary alerts during ongoing changes.
