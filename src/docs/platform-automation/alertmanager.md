@@ -30,6 +30,7 @@ We've enhanced OpenShift clusters with basic monitoring and alerting features to
 - [Frequency](#frequency)
 - [Alerts](#alerts)
 - [View in web console](#view-in-web-console)
+- [Silencing Alerts](#silencing-alerts)
 - [Objects](#objects)
 - [Related pages](#related-pages)
 
@@ -94,6 +95,24 @@ For non-Prod environments, alert emails are only sent during business hours. Mon
 ## View in web console
 
 In the **Developer** perspective, select **Observe** -> **<project_name>** -> **Alerts**. In this perspective, alerts, silences, and alerting rules are all managed from the **Alerts** page. The results shown in the **Alerts** page are specific to the selected project.
+
+## Silencing Alerts
+
+From the **Alerts** page, you can also disable notifications for a specific alert for a period of time. For quick silences, toggle the Notification button and select a time from the dropdown.
+
+For longer silences, click on the specific firing alert.
+
+![silence01](../../images/alertmanager-silence-01.png)
+
+From the Alert page, select **Silence alert** from the top-right.
+
+![silence02](../../images/alertmanager-silence-02.png)
+
+On the **Silence** page, you can select a time, or specify a custom one. You can even pick a date far in the future if you don't want to know about this specific alert at all.
+
+![silence03](../../images/alertmanager-silence-03.png)
+
+You can then customize which alert labels are matched. This can let you create a silence that covers a group of alerts.
 
 ## Objects
 
