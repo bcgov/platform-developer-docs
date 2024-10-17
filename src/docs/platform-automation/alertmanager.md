@@ -40,9 +40,25 @@ Technical Leads for the Product receive all alerts. Additionally, critical level
 
 ## Frequency
 
-Unresolved Critical level alerts are re-sent every 48 hours. Similarly, warning and info level alerts are re-sent every 5 days if they remain unresolved.
-
 Alerts are triggered only if the condition persists for 1 hour, minimizing unnecessary alerts during ongoing changes.
+
+Unresolved alerts are re-sent to the contacts. The frequency is based on the severity and environment.
+
+Critical alerts:
+
+- Tools are resent every 48 hours
+- Dev are resent every 24 hours
+- Test are resent every 12 hours
+- Prod are resent every 1 hour
+
+Warning and Info alerts:
+
+- Tools are resent every 5 days
+- Dev are resent every 4 days
+- Test are resent every 2 days
+- Prod are resent every 1 day
+
+For non-Prod environments, alert emails are only sent during business hours. Monday to Friday 16:00 UTC to 00:00 UTC (8am-4pm PST / 9am-5pm PDT).
 
 ## Alerts
 
