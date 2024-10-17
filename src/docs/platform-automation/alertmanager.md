@@ -72,6 +72,7 @@ For non-Prod environments, alert emails are only sent during business hours. Mon
 | KubePodNotReady | Critical | Pod is not passing its Readyness probe |
 | KubeDeploymentReplicasMismatch | Warning | Deployment has the wrong number of replicas |
 | KubeDeploymentGenerationMismatch | Warning | Indicates that the Deployment has failed but has not been rolled back |
+| KubeDeploymentRolloutStuck | Warning | Deployment update has not been rolled out |
 | KubeStatefulSetReplicasMismatch | Warning | StatefulSet has the wrong number of replicas |
 | KubeStatefulSetGenerationMismatch | Warning | Indicates that the StatefulSet has failed but has not been rolled back |
 | KubeStatefulSetUpdateNotRolledOut | Warning | StatefulSet update has not been rolled out |
@@ -81,9 +82,6 @@ For non-Prod environments, alert emails are only sent during business hours. Mon
 | KubeHpaReplicasMismatch | Warning | HPA does not matched the desired number of replicas, often a quota issue |
 | KubeHpaMaxedOut | Warning | HPA is running at max replicas |
 | KubePodNotScheduled | Critical | Pod cannot be scheduled to a node |
-| KubeQuotaAlmostFull | Info | Quota is 90% used |
-| KubeQuotaFullyUsed | Info | Quota is 100% used |
-| KubeQuotaExceeded | Warning | Quota is over 100% used |
 | KubePersistentVolumeUnbound | Warning | PVC is not bound to a PV |
 | KubePersistentVolumeFillingUp | Warning | PVC is 97% full |
 | KubePersistentVolumeFillingUp | Warning | PVC is predicted to be full in 4 days |
