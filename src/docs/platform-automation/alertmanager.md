@@ -17,20 +17,21 @@ content_owner: Olena Mitovska
 
 sort_order: 3
 ---
-
+<!-- omit in toc -->
 # AlertManager
 Last updated: **March 21, 2024**
 
 We've enhanced OpenShift clusters with basic monitoring and alerting features to keep product teams informed about their applications' health. These features send alerts to the contacts specified in the [Product Registry](https://registry.developer.gov.bc.ca/), notifying them of any common issues their apps might face.
 
+<!-- omit in toc -->
 ## On this page
-* **[Alert contacts](#alert-contacts)**
-* **[Frequency](#frequency)**
-* **[Alerts](#alerts)**
-* **[View in web console](#view-in-web-console)**
-* **[Objects](#objects)**
-* **[Timeline](#timeline)**
-* **[Related pages](#related-pages)**
+
+- [Alert contacts](#alert-contacts)
+- [Frequency](#frequency)
+- [Alerts](#alerts)
+- [View in web console](#view-in-web-console)
+- [Objects](#objects)
+- [Related pages](#related-pages)
 
 ## Alert contacts
 
@@ -108,5 +109,3 @@ Feel free to make new `PrometheusRule` objects. They'll be sent to the existing 
 ## Related pages
 
 - [RedHat’s documentation on managing alerts](https://docs.openshift.com/container-platform/4.13/monitoring/managing-alerts.html)
-
-
