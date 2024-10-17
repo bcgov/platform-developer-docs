@@ -82,17 +82,7 @@ The `platform-services-controlled-alert-routing` configuration in the `AlertMana
 
 The `PrometheusRule` object named `platform-services-controlled-alert-rules` outlines the alert rules and their conditions. It's important to note that modifications to this are not allowed.
 
-Feel free to make new `PrometheusRule` objects. They'll be sent to the existing contacts already in place. 
-
-## Timeline
-
-**Gold and Gold DR cluster timeline**
-
-- Beginning August 28, 2023 these alerts are sent out to Product Owners and Technical Leads.
-
-**Silver and Emerald cluster timeline**
-
-- Beginning March 20, 2024 these alerts are sent out to Product Owners and Technical Leads.
+Feel free to make new `PrometheusRule` objects. They'll be sent to the existing contacts already in place.
 
 ---
 ---
