@@ -34,7 +34,7 @@ Existing bcgov organization members can invite other users to the organization. 
 
 If you want to grant a new user access to OpenShift they must have the following:
 
-- A GitHub account (ideally with a complete profile)
+- A GitHub account (ideally with a complete profile) or an IDIR-linked email address
 - Two-factor authentication enabled on their GitHub account
 
 Additionally, the namespace where you are adding the new user must have already have been provisioned through [the new project provisioning process](../openshift-projects-and-access/provision-new-openshift-project.md) and must have one or more administrative users.
