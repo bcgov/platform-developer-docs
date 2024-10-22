@@ -254,7 +254,7 @@ spec:
       - monday:friday
 ```
 
-If you want to use an email receiver, keep it the same an only update the `name` and `to` fields, as well as the `Product Name Here` in the `html`. The rest ensures that the email is sent correctly and with nice formatting.
+If you want to use an email receiver, keep it the same and only update the `name` and `to` fields, as well as the `Product Name Here` in the `html`. The rest ensures that the email is sent correctly and with nice formatting.
 
 You can add multiple email receivers, or other options like PagerDuty or a webhook to RocketChat.
 
