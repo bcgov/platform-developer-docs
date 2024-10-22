@@ -17,27 +17,27 @@ content_owner: Steven Barre
 
 sort_order: 8
 ---
-
-
+<!-- omit in toc -->
 # Set up a User Defined Monitoring in OpenShift
-Last updated: **August 27, 2024**
+Last updated: **Oct 29, 2024**
 
 Use Prometheus client libraries to push your app's metrics to Prometheus.
 
+<!-- omit in toc -->
 ## On this page
 
-- **[Instrument your application with custom metrics](#instrument-your-application-with-custom-metrics)**
-- **[Metric Types](#metric-types)**
+- [Instrument your application with custom metrics](#instrument-your-application-with-custom-metrics)
+- [Metric Types](#metric-types)
   - [Counter](#counter)
   - [Gauge](#gauge)
-  - [Histogram and Summaries](#histogram-and-summaries)
-- **[Expose the metrics from your app](#expose-the-metrics-from-your-app)**
-- **[Create a ServiceMonitor](#create-a-servicemonitor)**
-- **[Querying Prometheus](#querying-prometheus)**
-- **[Sysdig Monitor](#sysdig-monitor)**
-- **[Sysdig Monitor Alert](#sysdig-monitor-alert)**
-- **[Monitor user-defined projects using Alertmanager](#monitor-user-defined-projects-using-alertmanager)**
-- **[Related pages](#related-pages)**
+  - [Histogram and summaries](#histogram-and-summaries)
+- [Expose the metrics from your app](#expose-the-metrics-from-your-app)
+- [Create a ServiceMonitor](#create-a-servicemonitor)
+- [Querying Prometheus](#querying-prometheus)
+- [Monitor user-defined projects using Alertmanager](#monitor-user-defined-projects-using-alertmanager)
+- [Sysdig Monitor](#sysdig-monitor)
+- [Sysdig Monitor Alert](#sysdig-monitor-alert)
+- [Related pages](#related-pages)
 
 ## Instrument your application with custom metrics
 

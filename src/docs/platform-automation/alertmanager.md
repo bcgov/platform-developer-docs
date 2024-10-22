@@ -19,7 +19,7 @@ sort_order: 3
 ---
 <!-- omit in toc -->
 # AlertManager
-Last updated: **March 21, 2024**
+Last updated: **Oct 29, 2024**
 
 We've enhanced OpenShift clusters with basic monitoring and alerting features to keep product teams informed about their applications' health. These features send alerts to the contacts specified in the [Product Registry](https://registry.developer.gov.bc.ca/), notifying them of any common issues their apps might face.
 
@@ -42,7 +42,7 @@ Technical Leads for the Product receive all alerts. Additionally, critical level
 
 The subject of the emails will contain the namespace name, which you can use for filtering your emails. ie: `Action Required: be1c6b-prod has critical alerts firing`
 
-The body of the email will also contain the display name of the Product as it is listed in the Registry/
+The body of the email will also contain the display name of the Product as it is listed in the Registry.
 
 ## Frequency
 
@@ -127,4 +127,5 @@ Feel free to make new `PrometheusRule` objects. They'll be sent to the existing 
 
 ## Related pages
 
-- [RedHat’s documentation on managing alerts](https://docs.openshift.com/container-platform/4.13/monitoring/managing-alerts.html)
+- [User Defined Monitoring in OpenShift](../app-monitoring/user-defined-monitoring.md)
+- [RedHat’s documentation on managing alerts](https://docs.openshift.com/container-platform/4.14/monitoring/managing-alerts.html)
