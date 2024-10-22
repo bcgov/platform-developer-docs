@@ -34,7 +34,8 @@ Use Prometheus client libraries to push your app's metrics to Prometheus.
 - [Expose the metrics from your app](#expose-the-metrics-from-your-app)
 - [Create a ServiceMonitor](#create-a-servicemonitor)
 - [Querying Prometheus](#querying-prometheus)
-- [Monitor user-defined projects using Alertmanager](#monitor-user-defined-projects-using-alertmanager)
+- [Create custom alert rules](#create-custom-alert-rules)
+- [Control alert receivers](#control-alert-receivers)
 - [Sysdig Monitor](#sysdig-monitor)
 - [Sysdig Monitor Alert](#sysdig-monitor-alert)
 - [Related pages](#related-pages)
@@ -151,11 +152,11 @@ Learn more about the querying basics on [Prometheus documentation](https://prome
 
 **Data is currently stored for 15 days.**
 
-## Monitor user-defined projects using Alertmanager
+## Create custom alert rules
 
 Create alerting rules for a user-defined namespace based on chosen metrics. These alerts trigger when conditions are met. You can base alerts on your metrics or existing cluster metrics like pod memory usage.
 
-Create a YAML file named app-alerting-rule.yaml. Add a rule called `example-alert` that triggers when the `version` metric from the sample service becomes `0`.
+Add a rule called `example-alert` that triggers when the `version` metric from the sample service becomes `0`.
 
 ```yaml
 apiVersion: monitoring.coreos.com/v1
@@ -186,14 +187,6 @@ Here's what each part of the alerting rule means:
 
 Make sure your alert uses the correct namespace; the code provided is just an example.
 
-Once you've created the alert rule, apply the configuration file to the cluster using the following command:
-
-```bash
-oc apply -f app-alerting-rule.yaml
-```
-
-`AlertmanagerConfig` is part of the Prometheus Operator, which helps manage Prometheus instances and configurations in Kubernetes. Using AlertmanagerConfig ,allows you to manage and version control your alerting rules and configurations within Kubernetes resources, keeping them aligned with your application code and infrastructure. More information about [Alertmanager](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/docs/platform-automation/alertmanager/)
-
 Please have this network policy added to ensure that proper metrics are scraped
 
 ```yaml
@@ -212,6 +205,62 @@ Please have this network policy added to ensure that proper metrics are scraped
     policyTypes:
       - Ingress
 ```
+
+## Control alert receivers
+
+There is a default `AlertManagerConfig` object called `platform-services-controlled-alert-routing` in each namespace that is not editable that sets out some default alerting rules. It ensures that the Products Tech Leads and Product Owner get the base level alerts.
+
+You can add an additional `AlertManagerConfig` to add more email contacts, or set up another notification channel like RocketChat.
+
+```yaml
+apiVersion: monitoring.coreos.com/v1beta1
+kind: AlertmanagerConfig
+metadata:
+  name: test-amc
+  namespace: license-dev
+spec:
+  receivers:
+  - emailConfigs:
+    - from: Cluster AlertManager <PlatformServicesTeam@gov.bc.ca>
+      headers:
+      - key: Subject
+        value: '{{ template "email_subject" . }}'
+      html: '{{ define "display_name" }}Product Name Here{{ end }}{{ template "email_html" . }}'
+      sendResolved: true
+      smarthost: apps.smtp.gov.bc.ca:25
+      tlsConfig:
+        ca: {}
+        cert: {}
+        insecureSkipVerify: true
+      to: someone@example.com
+    name: CustomContacts
+  route:
+    activeTimeIntervals:
+    - business-hours
+    groupBy:
+    - severity
+    - namespace
+    groupInterval: 5m
+    groupWait: 30s
+    receiver: CustomContacts
+    repeatInterval: 1h
+  timeIntervals:
+  - name: business-hours
+    timeIntervals:
+    - times: # Times are in UTC; 08-16 PST / 09-17 PDT
+      - startTime: "16:00"
+        endTime: "23:59"
+      weekdays:
+      - monday:friday
+```
+
+If you want to use an email receiver, keep it the same an only update the `name` and `to` fields, as well as the `Product Name Here` in the `html`. The rest ensures that the email is sent correctly and with nice formatting.
+
+You can add multiple email receivers, or other options like PagerDuty or a webhook to RocketChat.
+
+The `route` can be set to group alerts, but include at least `namespace` and `severity` to ensure the email template works correctly. You can also create sub-routes with different receivers or repeat intervals and match on a subset of alerts.
+
+You can read more in the [Alertmanager docs](https://prometheus.io/docs/alerting/latest/configuration/) on how to configure receivers and routes.
 
 ## Sysdig Monitor
 
@@ -275,10 +324,11 @@ For detail steps, please read the documents below:
 
 ## Related pages
 
+- [Cluster defaults for Alertmanager](../platform-automation/alertmanager/)
+- [Alertmanager - configuration](https://prometheus.io/docs/alerting/latest/configuration/)
+- [OCP - Creating alerting rules](https://docs.openshift.com/container-platform/4.14/observability/monitoring/managing-alerts.html#creating-alerting-rules-for-user-defined-projects_managing-alerts)
+- [OCP - Creating alert routing](https://docs.openshift.com/container-platform/4.14/observability/monitoring/managing-alerts.html#creating-alert-routing-for-user-defined-projects_managing-alerts)
 - [Sysdig - Automatically scraping any Kubernetes pods](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations/working-with-integrations/custom-integrations/collect-prometheus-metrics/#agent-compatibility)
 - [Sysdig - Use Service Discovery to import application metrics endpoints](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md#use-service-discovery-to-import-application-metrics-endpoints)
 - [Sysdig - Checking sysdig teams and dashboards](../app-monitoring/sysdig-monitor-setup-team.md#review-your-monitoring-dashboards)
 - [Sysdig - Creating sysdig alert](../app-monitoring/sysdig-monitor-create-alert-channels.md#creating-an-alert)
-- [OCP - Granting users permission to monitor user-defined projects](https://docs.openshift.com/container-platform/4.14/observability/monitoring/enabling-monitoring-for-user-defined-projects.html)
-- [OCP - Enabling monitoring for user-defined projects](https://docs.openshift.com/container-platform/4.14/observability/monitoring/managing-alerts.html#creating-alerting-rules-for-user-defined-projects_managing-alerts)
-- [OCP - Enabling alert routing for user-defined projects](https://docs.openshift.com/container-platform/4.14/observability/monitoring/managing-alerts.html#creating-alert-routing-for-user-defined-projects_managing-alerts)
