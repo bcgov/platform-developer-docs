@@ -149,6 +149,13 @@ The following are some fantastic examples of applications that operate on the pl
 * Three replica Deployment
 * a chain-build gastby (react app) that builds nodejs into a caddy server
 
+**[Modern Engagement Tool](https://github.com/bcgov/met-public)**
+
+* This tool includes widgets for managing public engagement during the environmental assessment process
+* A highly available Patroni deployment
+* Features horizontal pod autoscaling 
+* A well documented github repository with great examples of application infrastructure-as-code
+
 **Note:** If your team has a resilient design of any kind - even if you haven't perfected it - please fork this document and add your repository as an example. Nobody is perfect, and in-progress examples are a great help for teams trying to learn where to start.
 
 ---
