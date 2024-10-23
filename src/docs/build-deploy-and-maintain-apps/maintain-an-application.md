@@ -243,6 +243,7 @@ spec:
   selector:
     matchLabels:
       app: sample-app
+  unhealthyPodEvictionPolicy: AlwaysAllow
 ```
 This assumes that pods in the Deployment or StatefulSet have a label `app` with a value of `sample-app`.
 
