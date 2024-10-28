@@ -2,7 +2,7 @@
 
 Applications in Argo CD may be configured to send a notification to a RocketChat channel or to an email address when a synchronization process fails.
 
-See the [official documentation](https://argocd-notifications.readthedocs.io/en/stable/) for full details.
+See the [official documentation](https://argo-cd.readthedocs.io/en/stable/operator-manual/notifications/) for full details.
 
 ## Subscribe an application to a notification type
 **RocketChat**
