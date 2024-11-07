@@ -19,7 +19,7 @@ Last updated: **November 7, 2024**
 
 Discover the most commonly searched-for tasks, with links to additional instructions.
 
-## Grant access to an existing private repository in the bcgov-c or bcgov Github organization
+## Grant access to an existing repository in the bcgov-c or bcgov Github organization
 
 The users you want to add need to be members of the GitHub organization your repository belongs to. Users can join the bcgov and bcgov-c GitHub organizations by [following these instructions](/docs/default/component/bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/#single-sign-on).
 
