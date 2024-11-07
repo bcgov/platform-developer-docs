@@ -15,19 +15,16 @@ sort_order: 5
 ---
 
 # Common platform requests 
-Last updated: **April 15, 2024**
+Last updated: **November 7, 2024**
 
 Discover the most commonly searched-for tasks, with links to additional instructions.
 
-## Grant access to an existing private repository in the bcgov-c Github organization
+## Grant access to an existing private repository in the bcgov-c or bcgov Github organization
 
-If you’re an administrator for your private repositories, you can add users to your repositories by [managing user access on GitHub](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/managing-an-individuals-access-to-an-organization-repository).
+The users you want to add need to be members of the GitHub organization your repository belongs to. Users can join the bcgov and bcgov-c GitHub organizations by [following these instructions](/docs/default/component/bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/#single-sign-on).
 
-There’s a fee for each user that has access to a private repository in the bcgov-c organization, only grant access to users that need it. The fee for all users is currently covered by the OCIO.
+The repository administrator can then add them by [managing user access on GitHub](https://docs.github.com/en/organizations/managing-user-access-to-your-organizations-repositories/managing-repository-roles/managing-an-individuals-access-to-an-organization-repository).
 
-There are a limited number of spots available in the bcgov-c organization. If there are no spots remaining, you’ll receive an error message when you try to add a new user. If this occurs, send a request to [developer.experience@gov.bc.ca](mailto:developer.experience@gov.bc.ca) for an additional spot to the Developer Experience Team. Once they confirm your request has been completed, you can add the new user to your repository.
-
-The Developer Experience team removes bcgov-c organization access for users that have not been active for 6 months. Once access has been removed, users must be re-invited to the organization and re-added to a repository to gain access.
 
 ## Request a new private repository in the bcgov-c GitHub organization
 
