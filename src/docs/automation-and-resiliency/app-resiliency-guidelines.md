@@ -146,7 +146,7 @@ The following are some fantastic examples of applications that operate on the pl
 
 **[DevHub](https://github.com/bcgov/devhub-app-web)** - Developer Experience team
 
-* Three replica Deployment
+* Three replica deployment
 * a chain-build gastby (react app) that builds nodejs into a caddy server
 
 **[Modern Engagement Tool](https://github.com/bcgov/met-public)**
