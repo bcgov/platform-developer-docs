@@ -43,7 +43,7 @@ NAME           STATUS   VOLUME                                     CAPACITY   AC
 backup-test    Bound    pvc-02e9d855-cd63-480d-a1d7-9b638b04f6ff   20Gi       RWX            netapp-file-backup     3d19h
 ```
 
-Save the volume name (in this example, that's `pvc-02e9d855-cd63-480d-a1d7-9b638b04f6ff`) for later in case you delete your persistent volume claim (PVC). The Platform Services team is now also running a daily cron to make a list of all backup PVCs and their matching volume ID. We can look up the ID if you need.
+Save the volume name (in this example, that's `pvc-02e9d855-cd63-480d-a1d7-9b638b04f6ff`) for later in case you delete your persistent volume claim (PVC). The Platform Services team is now also running a daily cron to make a list of all backup PVCs and their matching volume ID. We can look up the ID if you need. You're still encouraged to save your own copy of the volume name in addition to the Platform Team's backup, for both extra safety and to help ensure a speedy recovery.
 
 ## Restoring your Volume
 
