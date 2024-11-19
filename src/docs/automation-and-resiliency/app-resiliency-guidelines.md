@@ -156,7 +156,7 @@ The following are some fantastic examples of applications that operate on the pl
 * Features horizontal pod autoscaling 
 * A well documented github repository with great examples of application infrastructure-as-code
 
-**Note:** If your team has a resilient design of any kind - even if you haven't perfected it - please fork this document and add your repository as an example. Nobody is perfect, and in-progress examples are a great help for teams trying to learn where to start.
+**Note:**If your team has a resilient design, even if it's not perfect, fork this document and add your repository as an example. In-progress examples are valuable for teams learning how to get started.
 
 ---
 Related links:
