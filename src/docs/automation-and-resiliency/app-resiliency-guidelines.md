@@ -146,10 +146,17 @@ The following are some fantastic examples of applications that operate on the pl
 
 **[DevHub](https://github.com/bcgov/devhub-app-web)** - Developer Experience team
 
-* Three replica Deployment
+* Three replica deployment
 * a chain-build gastby (react app) that builds nodejs into a caddy server
 
-**Note:** If your team has a resilient design of any kind - even if you haven't perfected it - please fork this document and add your repository as an example. Nobody is perfect, and in-progress examples are a great help for teams trying to learn where to start.
+**[Modern Engagement Tool](https://github.com/bcgov/met-public)**
+
+* This tool includes widgets for managing public engagement during the environmental assessment process
+* A highly available Patroni deployment
+* Features horizontal pod autoscaling 
+* A well documented github repository with great examples of application infrastructure-as-code
+
+**Note:**If your team has a resilient design, even if it's not perfect, fork this document and add your repository as an example. In-progress examples are valuable for teams learning how to get started.
 
 ---
 Related links:
