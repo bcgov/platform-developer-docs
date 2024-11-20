@@ -22,6 +22,7 @@ sort_order: 7
 ## Using `netapp-file-backup` persistent volumes
 
 The storage class `netapp-file-backup` is backed up with the standard [OCIO Backup](https://ssbc-client.gov.bc.ca/services/AppHosting/base.htm#databackup) infrastructure:
+
 - full backups are performed monthly
 - incremental backups are performed daily
 - backups are retained for 90 days.
@@ -42,13 +43,13 @@ NAME           STATUS   VOLUME                                     CAPACITY   AC
 backup-test    Bound    pvc-02e9d855-cd63-480d-a1d7-9b638b04f6ff   20Gi       RWX            netapp-file-backup     3d19h
 ```
 
-Save the volume name (in this example, that's `pvc-02e9d855-cd63-480d-a1d7-9b638b04f6ff`) for later in case you delete your persistent volume claim (PVC). **Make sure you get and save the volume name now. Once you're in a situation where you need the name, you won't be able to get it**.
+Save the volume name (in this example, that's `pvc-02e9d855-cd63-480d-a1d7-9b638b04f6ff`) for later in case you delete your persistent volume claim (PVC). The Platform Services team is now also running a daily cron to make a list of all backup PVCs and their matching volume ID. We can look up the ID if you need. You're still encouraged to save your own copy of the volume name in addition to the Platform Team's backup, for both extra safety and to help ensure a speedy recovery.
 
 ## Restoring your Volume
 
 If you need to restore your PV, you will need an existing `nfs-file-backup` PV on the same cluster to use as a destination for the restored data. If you don't have one already, create a new one. If you have an existing PV that you want to use as your destination, you should consider creating a special folder to use as the destination for your restored data - that way, you don't risk overwriting anything by accident.
 
-Then, submit a [request](https://github.com/BCDevOps/devops-requests/issues/new/choose) for a restore. Provide the name of the PV you need restored, the OpenShift cluster on which it was running, the date you need restored from, and the name of the destination PV. If you want to request the recovery of only a particular folder, include the name of the folder you want recovered. If you want the Backup team to restore your data to a particular folder on the destination PV,  provide the name of the folder (which you must already have created).
+Then, submit a [request](https://github.com/BCDevOps/devops-requests/issues/new/choose) for a restore. Provide the name of the PV you need restored, the OpenShift cluster on which it was running, the date you need restored from, and the name of the destination PV. If you want to request the recovery of only a particular folder, include the name of the folder you want recovered. If you want the Backup team to restore your data to a particular folder on the destination PV, provide the name of the folder (which you must already have created).
 
 Note that recovery isn't limited to recreating a whole deleted volume. For example, if a necessary file was deleted off of your PV yesterday, you can request that the file be restored using the same process; you would just specify the source and destination PV as being the same. Make sure that you specify the folder and file of both the source and destination carefully, to avoid accidentally 'recovering' (and overwriting) the wrong data.
 
