@@ -98,7 +98,7 @@ The following services were designed with the associated [IMIT standards](https:
 |                                          | [6.10 Cryptographic Standard](https://www2.gov.bc.ca/assets/download/A834831A594245CD81D9BF99DDF39FCD) |
 | Asset Management (Artifactory, Registry)        | [6.23 Asset Management Security Standard](https://www2.gov.bc.ca/assets/download/F9BA3AFD52B34727BA261F052ADEAA0B) |
 | Networking (SDN, KNPs)                   | 6.13 Network Security Zone Standard - available by request to CITZAS@gov.bc.ca |
-| Logging/Monitoring (Kibana, SIEM)        | [6.27 Operations Security Standard](https://www2.gov.bc.ca/assets/download/0F4DF4FAC5214C6387B6B51DD538FF6E) |
+| Logging/Monitoring (Loki, SIEM)        | [6.27 Operations Security Standard](https://www2.gov.bc.ca/assets/download/0F4DF4FAC5214C6387B6B51DD538FF6E) |
 | App Security (SAST,DAST,SCA)             | [6.14 Application & Web Development & Deployment Standard](https://www2.gov.bc.ca/assets/download/29237A3033824CCBAC0465939BFB2CEF) |
 |                                          | [6.34 Vulnerability Management Scanning Standrard](https://www2.gov.bc.ca/assets/download/3DFC2361BC334BFDBDF907B6B16C5358) |
 
