@@ -50,7 +50,7 @@ demos of their application.
 * [Create alerts and notifications in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-create-alert-channels.md)
 * [Set up advanced metrics in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
 * [Resource monitoring dashboards](docs/app-monitoring/resource-monitoring-dashboards.md)
-* [Best practices for application logging in OpenShift](docs/app-monitoring/best-pratices-for-application-logging-in-openshift.md)
+* [Best practices for application logging in OpenShift](docs/app-monitoring/best-practices-for-application-logging-in-openshift.md)
 * [Check application health after an outage](docs/app-monitoring/check-application-health-after-outage.md)
 * [Managing resource quotas in Kubernetes: A complete guide](docs/app-monitoring/managing-resource-quotas-in-kubernetes.md)
 * [Sysdig training](docs/app-monitoring/sysdig-training.md)
