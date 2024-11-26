@@ -21,6 +21,7 @@ sort_order: 4
 Last updated: **January 11, 2024**
 
 New project sets provisioned in **all clusters** of the BC Gov Private Cloud PaaS have the following default resource quotas that include a certain amount of CPU, RAM and storage:
+
 - **CPU**: 0.5 cores as requested, 1.5 cores as the limit
 - **RAM**: 2 GB as requested, 4 GB as the limit
 - **Storage**: 60 PVC count , 1 GB overall storage with 521 MB for backup storage and five snapshots
