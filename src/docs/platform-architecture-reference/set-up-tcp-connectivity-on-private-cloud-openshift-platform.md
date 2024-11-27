@@ -33,10 +33,11 @@ Product teams may enable direct non-HTTPS TCP access to services within their na
 This feature is available in the production clusters Silver and Gold/GoldDR.
 
 The project must meet the following requirements:
-- Project set in either the Silver cluster or Gold/GoldDR clusters
-- Initial application installation, including services
-- Administrative access to the namespaces
-- `oc` command line tool
+
+* Project set in either the Silver cluster or Gold/GoldDR clusters
+* Initial application installation, including services
+* Administrative access to the namespaces
+* `oc` command line tool
 
 Please, keep in mind that this functions similarly to a Route, meaning you cannot manage the IPs allowed to connect with a Network Policy. The service will be available to all SPAN-BC users within the datacenter. It won't be accessible from the public internet, but it will be accessible within the datacenter. Make sure to secure the service appropriately based on its sensitivity, either by using a strong username/password authentication or a mutual TLS configuration.
 
@@ -137,7 +138,7 @@ The Gold and GoldDR clusters are designed to be used in tandem. Production appli
 Use the Porter Operator to enable direct TCP access from Gold to GoldDR and vice versa. For example, this may be used for database replication.
 
 ### Confirm Service information
-A `TransportServerClaim` is associated with a Service. Make sure that the Service exists and is associated with a functioning application so you can verify the functionality of the connection after it's created. For example, to create a connection between databases in each cluster, the databases should already be running and reachable by their Service.
+A `TransportServerClaim` is associated with a Service/port combination. Make sure that the Service exists and is associated with a functioning application so you can verify the functionality of the connection after it's created. For example, to create a connection between databases in each cluster, the databases should already be running and reachable by their Service in each cluster.
 
 Use the following command:
 ```
@@ -233,6 +234,38 @@ Confirm connectivity from any pod in either cluster. Replace `65555` with the po
 0
 ```
 Any return code other than `0` indicates a problem.  If that's the case, inquire about the firewall and go to [Troubleshooting](#troubleshooting).
+
+### Optional port override
+By default, in Gold and GoldDR the operator creates a new Service to be used for the connection to the other cluster and it uses randomly selected ports.  This would be the Service with a name like `your-target-service-golddr`.  If you would like the "local" port of the new cross-connect Service to be the same as the target Service of your TransportServerClaim, then you may add a `.spec.overrideServicePort` parameter to your TSC with a value of `true`.  For example:
+```
+spec:
+  monitor:
+    interval: 10
+    timeout: 10
+    type: tcp
+  overrideServicePort: true
+  service: test-app
+  servicePort: 8080
+```
+In this way, you will be able to connect with the new cross-connect Service using the same port used to connect to the local service.
+
+For example, given a target Service that uses port 8080, the default Service created by the operator, such as `your-target-service-golddr`, would have the local and target ports as the same:
+```
+spec:
+  ports:
+    - port: 53292
+      protocol: TCP
+      targetPort: 53292
+```
+Setting `overrideServicePort: true` would cause the `your-target-service-golddr` Service to be configured as:
+```
+spec:
+  ports:
+    - port: 8080
+      protocol: TCP
+      targetPort: 53292
+```
+**Note**: If this parameter is added to an existing TransportServerClaim, the cross-connect Service will be updated for `.spec.ports[0].port`.
 
 ## Troubleshooting
 Resolve issues by trying the following:
