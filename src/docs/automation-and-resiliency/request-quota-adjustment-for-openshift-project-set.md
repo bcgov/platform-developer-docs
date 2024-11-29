@@ -216,10 +216,19 @@ This will increase the chances of us approving your request quickly (or helping 
 > When my prod app is under high load, the HPA tries to start more pods than the quota allows, and then it gets stuck trying to spin up a pod that isn't allowed to start because the namespace has used up all of its quota.
 > 
 > **Outline the current and desired states of the relevant OpenShift objects.**
-> My frontend app pods use 100m CPU request each. Currently, the HPA can spin up 6 of these before I hit the CPU request quota for my namespace. I don't know how many pods the HPA would attempt to spin up if given more quota, so I'm not sure how much CPU request I should expect to use. For now, I am requesting a single step increase in my CPU quota, and will revisit if I continue to encounter this problem.
+> My frontend app pods use 100m CPU request each. Currently, the HPA can spin up 6 of these before I hit the CPU request quota for my namespace. I don't know how many pods the HPA would attempt to spin up if given more quota, so I'm not sure how much CPU request I should expect to use. For now, I am requesting a single core increase in my CPU quota, and will revisit if I continue to encounter this problem.
 >  
 > **What steps have you taken to fit your application into your current quota?**
 > I tried running my frontend app pods with 80m CPU request instead, but that caused problems with the application during high load, because the existing pods weren't able to handle load spikes temporarily while the HPA was spinning up new pods. I don't want to try to reclaim CPU request from my database pods because they're only running at 100m CPU request, and it's not best practice to run a database pod with very low requests.
+>
+> **how the auto approve will happen?**
+> 1. If your request for more CPU and Memory meets all of the following requirements, it will be automatically approved:
+> * Your namespace’s current usage exceeds 85% of its total limit.
+> * Your namespace’s resource utilization rate is at least 35%.
+> * The requested adjustment either meets the minimum values of 1 core for CPU and 2GB for memory, or increases the quota by no more than 50%.
+> 2. If your request for more Storage meets all of the following requirements, it will be automatically approved:
+> * Your namespace’s current usage exceeds 80% of its PVC limit.
+> * The requested adjustment either meets the minimum values of 32GB, or increases the quota by no more than 50%.
 
 This request is likely to get approved with just a few follow-up questions from the Platform Services Team. Even though it doesn't provide a clear picture of how the namespace's resource usage should look in the future, the requester has explained why they lack that information. They've also made a reasonable request for a single-step increase, planning to request more only if there's evidence they need it.
 
