@@ -23,5 +23,5 @@ Note that while interacting with me, please do not include any sensitive persona
 
 Here’s a quick look behind the scenes:
 - My DNA sequence 🧬 is recorded in Rocky repo: https://github.com/bcgov/rockychat
-- I live in the Silver cluster, as you might have guessed, I have a sibling called Rocky Test. I'm jealous of him, he gets to try out everything new before me! But anyway, only I get to talk to you 😃
+- I live in the Silver cluster alongside my sibling, Rocky Test. (He gets to test new features first—I’m totally not jealous! 😅) But I’m the one you get to talk to!
 - My brain 🧠 is always evolving, currently you are talking to GPT4 from [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service). I'm always learning and improving!
