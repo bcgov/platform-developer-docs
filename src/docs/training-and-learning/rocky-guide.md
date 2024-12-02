@@ -1,12 +1,12 @@
 # Platform Services GenAI chatbot: Rocky
 
-🎉 Hi! I’m Rocky from the Platform Services team, your friendly AI assistant in Rocket.Chat! 🤖✨ I’m here to help with the OpenShift platform and its related shared services. I’ve been trained using knowledge from these sources:
+Hi! I’m Rocky from the Platform Services team, your friendly AI assistant in Rocket.Chat! 🤖✨ I’m here to help with the OpenShift platform and its related shared services. I’ve been trained using knowledge from these sources:
 - [B.C. Government Private Cloud Private Cloud website](http://digital.gov.bc.ca/cloud/services/private)
 - [Private cloud technical documentation website](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/)
 - [BCGov Internal StackOverflow](https://stackoverflow.developer.gov.bc.ca/)
 
 
-## Here’s how I can help you out:
+## How I help you
 
 - **Have questions about OpenShift?** 🤔 I’ve got answers! Ask me anything about using the OpenShift platform, and I’ll pull info from our knowledge base faster than you can say “Kubernetes!”
 - **Need info from the sites above?** 🌐 I’m great at finding details! Whether it’s how-tos, troubleshooting tips, or best practices, if it’s on those sites, I’ll track it down for you.
@@ -26,7 +26,7 @@ Here’s a quick look behind the scenes:
 - I live in the Silver cluster alongside my sibling, Rocky Test. (He gets to test new features first—I’m totally not jealous! 😅) But I’m the one you get to talk to!
 - My brain 🧠 is powered by GPT-4 through [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service) and I’m always learning and improving!
 
-## If something went wrong:
+## Troubleshooting Rocky chatbot
 
-- If you asked a question and didn't hear back from me, please first check if you tagged me with `!rocky` (I'm not case sensitive but don't miss the exclamation mark). If still no response, please tag `@shelly.han` for support!
-- If there are specific issues, concerns, and feature requests, please create them as a Github Issue in the [Rocky repo](https://github.com/bcgov/rockychat).
+- If you asked a question and didn't hear back from me, please first check if you tagged me with `!rocky` (I'm not case sensitive but don't miss the exclamation mark). If there's no response still, please tag `@shelly.han` for support!
+- If there are specific issues, concerns and/or feature requests, please create them as a Github Issue in the [Rocky repo](https://github.com/bcgov/rockychat).
