@@ -17,7 +17,7 @@
 
 Let’s get started! Head over to the [rocky-chat channel](https://chat.developer.gov.bc.ca/channel/rocky-chat) and call me with `!rocky`, followed by your questions. Ask away!
 
-Note that while interacting with me, please do not include any sensitive personal information in your conversation. This would include any reference to religious beliefs, government service history, sexuality and gender details, health info, private ID numbers, etc.
+**Important**: Please don’t include sensitive personal information when chatting with me. This includes details about religious beliefs, government service history, sexuality, gender, health, private ID numbers, or similar data.
 
 ### Wonder how I work?
 
