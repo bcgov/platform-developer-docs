@@ -19,7 +19,7 @@ Let’s get started! Head over to the [rocky-chat channel](https://chat.develope
 
 **Important**: Please don’t include sensitive personal information when chatting with me. This includes details about religious beliefs, government service history, sexuality, gender, health, private ID numbers, or similar data.
 
-### Wonder how I work?
+### Curious about how I work?
 
 Here’s a quick look behind the scenes:
 - My DNA 🧬 is stored in the [Rocky repo](https://github.com/bcgov/rockychat)
