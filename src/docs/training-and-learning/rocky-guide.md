@@ -1,6 +1,6 @@
 # Platform Services GenAI Chatbot - Rocky
 
-🎉 Hey there! I’m Rocky from the Platform Services Team, your friendly AI assistant in RocketChat! 🤖✨ I focus on the OpenShift platform and the shared services related to it. I've been equipped with all the knowledge from the following sources:
+🎉 Hi! I’m Rocky from the Platform Services team, your friendly AI assistant in Rocket.Chat! 🤖✨ I’m here to help with the OpenShift platform and its related shared services. I’ve been trained using knowledge from these sources:
 - [BC Government Private Cloud Private Cloud website](http://digital.gov.bc.ca/cloud/services/private)
 - [Technical Documentation website](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/)
 - [BCGov Internal StackOverflow](https://stackoverflow.developer.gov.bc.ca/)
