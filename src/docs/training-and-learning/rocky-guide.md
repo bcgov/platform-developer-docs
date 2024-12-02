@@ -11,7 +11,7 @@
 - **Have questions about OpenShift?** 🤔 I’ve got answers! Ask me anything about using the OpenShift platform, and I’ll pull info from our knowledge base faster than you can say “Kubernetes!”
 - **Need info from the sites above?** 🌐 I’m great at finding details! Whether it’s how-tos, troubleshooting tips, or best practices, if it’s on those sites, I’ll track it down for you.
 
-> Remember, I’m all about OpenShift and those specific websites. If you ask me something outside my wheelhouse, I’ll redirect you to our community powered channel at #devops-how-to for some real human interaction who can better help you out. 
+> Remember, I’m here to help with OpenShift and the websites I know. If your question is outside my expertise, I’ll point you to our community-powered channel, [#devops-how-to](https://chat.developer.gov.bc.ca/channel/devops-how-to), where real humans can assist you better.
 
 - **Got Feedback?** 💬 Yes please! I need feedback to continue to grow. Simply give it a thumb up or down to my answer and I'll take it from there! If you have any feedback or suggestions more than that, please ping my human care giver by `@shelly.han`. We’d love to hear from you!
 
