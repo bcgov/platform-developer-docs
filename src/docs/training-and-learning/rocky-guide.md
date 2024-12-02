@@ -13,7 +13,7 @@
 
 > Remember, I’m here to help with OpenShift and the websites I know. If your question is outside my expertise, I’ll point you to our community-powered channel, [#devops-how-to](https://chat.developer.gov.bc.ca/channel/devops-how-to), where real humans can assist you better.
 
-- **Got Feedback?** 💬 Yes please! I need feedback to continue to grow. Simply give it a thumb up or down to my answer and I'll take it from there! If you have any feedback or suggestions more than that, please ping my human care giver by `@shelly.han`. We’d love to hear from you!
+- **Got feedback?** 💬 I’d love it! Your feedback helps me improve. Give my answer a thumbs up or down, and I’ll take it from there. If you have more detailed feedback or suggestions, please ping my human caregiver at `@shelly.han`. We’re eager to hear from you! 
 
 So, let’s get started! Head over to the [rocky-chat channel](https://chat.developer.gov.bc.ca/channel/rocky-chat) and call me with `!rocky`, followed by your questions. Ask away!
 
