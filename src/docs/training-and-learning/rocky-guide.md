@@ -15,7 +15,7 @@
 
 - **Got feedback?** 💬 I’d love it! Your feedback helps me improve. Give my answer a thumbs up or down, and I’ll take it from there. If you have more detailed feedback or suggestions, please ping my human caregiver at `@shelly.han`. We’re eager to hear from you! 
 
-So, let’s get started! Head over to the [rocky-chat channel](https://chat.developer.gov.bc.ca/channel/rocky-chat) and call me with `!rocky`, followed by your questions. Ask away!
+Let’s get started! Head over to the [rocky-chat channel](https://chat.developer.gov.bc.ca/channel/rocky-chat) and call me with `!rocky`, followed by your questions. Ask away!
 
 Note that while interacting with me, please do not include any sensitive personal information in your conversation. This would include any reference to religious beliefs, government service history, sexuality and gender details, health info, private ID numbers, etc.
 
