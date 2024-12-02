@@ -6,7 +6,7 @@
 - [BCGov Internal StackOverflow](https://stackoverflow.developer.gov.bc.ca/)
 
 
-### Here’s how I can help you out:
+## Here’s how I can help you out:
 
 - **Have questions about OpenShift?** 🤔 I’ve got answers! Ask me anything about using the OpenShift platform, and I’ll pull info from our knowledge base faster than you can say “Kubernetes!”
 - **Need info from the sites above?** 🌐 I’m great at finding details! Whether it’s how-tos, troubleshooting tips, or best practices, if it’s on those sites, I’ll track it down for you.
@@ -19,9 +19,14 @@ Let’s get started! Head over to the [rocky-chat channel](https://chat.develope
 
 **Important**: Please don’t include sensitive personal information when chatting with me. This includes details about religious beliefs, government service history, sexuality, gender, health, private ID numbers, or similar data.
 
-### Curious about how I work?
+## Curious about how I work?
 
 Here’s a quick look behind the scenes:
 - My DNA 🧬 is stored in the [Rocky repo](https://github.com/bcgov/rockychat)
 - I live in the Silver cluster alongside my sibling, Rocky Test. (He gets to test new features first—I’m totally not jealous! 😅) But I’m the one you get to talk to!
 - My brain 🧠 is powered by GPT-4 through [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service) and I’m always learning and improving!
+
+## If something went wrong:
+
+- If you asked a question and didn't hear back from me, please first check if you tagged me with `!rocky` (I'm not case sensitive but don't miss the exclamation mark). If still no response, please tag `@shelly.han` for support!
+- If there are specific issues, concerns, and feature requests, please create them as a Github Issue in the [Rocky repo](https://github.com/bcgov/rockychat).
