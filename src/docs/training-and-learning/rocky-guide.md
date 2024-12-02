@@ -8,7 +8,7 @@
 
 ### Here’s how I can help you out:
 
-- **Got Questions about OpenShift?** 🤔 I’ve got answers! Just ask me anything related to OpenShift platform usage, and I’ll fetch the info from our knowledge base faster than you can say “Kubernetes!”
+- **Have questions about OpenShift?** 🤔 I’ve got answers! Ask me anything about using the OpenShift platform, and I’ll pull info from our knowledge base faster than you can say “Kubernetes!”
 - **Need Info from the websites above?** 🌐 I’m a pro at digging up details from these sites. Whether it’s a questions for the how-tos, troubleshooting, or best practices, as long as it's there somewhere, I’ve got you covered.
 
 > Remember, I’m all about OpenShift and those specific websites. If you ask me something outside my wheelhouse, I’ll redirect you to our community powered channel at #devops-how-to for some real human interaction who can better help you out. 
