@@ -24,4 +24,4 @@ Note that while interacting with me, please do not include any sensitive persona
 Here’s a quick look behind the scenes:
 - My DNA 🧬 is stored in the [Rocky repo](https://github.com/bcgov/rockychat)
 - I live in the Silver cluster alongside my sibling, Rocky Test. (He gets to test new features first—I’m totally not jealous! 😅) But I’m the one you get to talk to!
-- My brain 🧠 is always evolving, currently you are talking to GPT4 from [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service). I'm always learning and improving!
+- My brain 🧠 is powered by GPT-4 through [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service) and I’m always learning and improving!
