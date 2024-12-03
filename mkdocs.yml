@@ -83,6 +83,7 @@ nav:
 - Training and learning:
   - Training from the Platform Services Team: docs/training-and-learning/training-from-the-platform-services-team.md
   - External training resources: docs/training-and-learning/training-external-resources.md
+  - Platform Services GenAI chatbot Rocky: docs/training-and-learning/rocky-guide.md
 plugins:
 - techdocs-core
 - git-revision-date-localized 
