@@ -1,6 +1,7 @@
 # Platform Services GenAI chatbot: Rocky
 
 Hi! I’m Rocky from the Platform Services team, your friendly AI assistant in Rocket.Chat! 🤖✨ I’m here to help with the OpenShift platform and its related shared services. I’ve been trained using knowledge from these sources:
+
 - [Private cloud website](http://digital.gov.bc.ca/cloud/services/private)
 - [Private cloud technical documentation website](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/)
 - [BCGov Internal StackOverflow](https://stackoverflow.developer.gov.bc.ca/)
@@ -22,6 +23,7 @@ Let’s get started! Head over to the [rocky-chat channel](https://chat.develope
 ## Curious about how I work?
 
 Here’s a quick look behind the scenes:
+
 - My DNA 🧬 is stored in the [Rocky repo](https://github.com/bcgov/rockychat)
 - I live in the Silver cluster alongside my sibling, Rocky Test. (He gets to test new features first—I’m totally not jealous! 😅) But I’m the one you get to talk to!
 - My brain 🧠 is powered by GPT-4 through [Azure OpenAI](https://azure.microsoft.com/en-us/products/ai-services/openai-service) and I’m always learning and improving!
