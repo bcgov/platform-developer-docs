@@ -79,9 +79,9 @@ In the **quotas** section of the page adjust your new quota request for each of 
   
   Use the following example:
 
-  | Component name | Description (Optional) | # of Replicas (and range if using auto scaler) | Resource Requested | Resource Limit | Average Consumption | Spikes |
-  |----------------|------------------------|------------------------------------------------|--------------------|----------------|---------------------|--------|
-  | Rocket.Chat app | platform chat app | 3 (HPA min 3 max 5) | 1 core CPU | 1.5 cores CPU | 1 core | 1.4 cores |
+  | Component name | Description (Optional) | # of Replicas (and range if using auto scaler) | Resource Requested | Average Consumption | Spikes |
+  |----------------|------------------------|------------------------------------------------|--------------------| ---------------------|--------|
+  | Rocket.Chat app | platform chat app | 3 (HPA min 3 max 5) | 1 core CPU | 1.5 cores CPU | 1.4 cores |
 
   **Storage quota increase**
 
@@ -180,7 +180,7 @@ This quota request is likely to get approved without many (or any) follow-up que
 #### Example 2: Increasing from 2 to 3 replicas per deployment
 
 > **Why do you need a quota increase?**
-> My deployments are all only 2 pods each and I would like to bump them up to the recommended 3, but I hit the CPU limit quota when I try to do that.
+> My deployments are all only 2 pods each and I would like to bump them up to the recommended 3, but I hit the CPU request quota when I try to do that.
 > 
 > **Outline the current and desired states of the relevant OpenShift objects.**
 > I have 4 deployments that each run 2 pods. They are all deployed from vendor-provided helm charts and use the default resource allocations included in the charts. I would like to increase the number of replicas in each deployment to 3, but my namespace doesn't have enough quota to do so. 
@@ -199,7 +199,7 @@ Providing detailed information about your application's actual resource usage (n
 > I am trying to switch from Patroni to Crunchy and migration would be much easier if I could run both simultaneously. My current quota is fine for just one database cluster, but I require more quota temporarily so I can run two during the migration process.
 > 
 > **Outline the current and desired states of the relevant OpenShift objects.**
-> My Patroni pods currently use 250m CPU request, 1 CPU limit, 256Mi memory request and 1Gi memory limit for each pod. I would estimate that each Crunchy pod should be given around the same resources, so I'll need enough extra quota to allow for three more pods of approximately this resource allocation to start up.
+> My Patroni pods currently use 250m CPU request and 256Mi memory request for each pod. I would estimate that each Crunchy pod should be given around the same resources, so I'll need enough extra quota to allow for three more pods of approximately this resource allocation to start up.
 > 
 > **What steps have you taken to fit your application into your current quota?**
 > My Patroni pods are sometimes a bit unstable, so I don't want to reduce the resource allocation in case that increases the instability even more.
@@ -216,14 +216,23 @@ This will increase the chances of us approving your request quickly (or helping 
 > When my prod app is under high load, the HPA tries to start more pods than the quota allows, and then it gets stuck trying to spin up a pod that isn't allowed to start because the namespace has used up all of its quota.
 > 
 > **Outline the current and desired states of the relevant OpenShift objects.**
-> My frontend app pods use 250m CPU limit each. Currently, the HPA can spin up 6 of these before I hit the CPU limit quota for my namespace. I don't know how many pods the HPA would attempt to spin up if given more quota, so I'm not sure how much CPU limit I should expect to use. For now, I am requesting a single step increase in my CPU quota, and will revisit if I continue to encounter this problem.
+> My frontend app pods use 100m CPU request each. Currently, the HPA can spin up 6 of these before I hit the CPU request quota for my namespace. I don't know how many pods the HPA would attempt to spin up if given more quota, so I'm not sure how much CPU request I should expect to use. For now, I am requesting a single core increase in my CPU quota, and will revisit if I continue to encounter this problem.
 >  
 > **What steps have you taken to fit your application into your current quota?**
-> I tried running my frontend app pods with 150m CPU limit instead, but that caused problems with the application during high load, because the existing pods weren't able to handle load spikes temporarily while the HPA was spinning up new pods. I don't want to try to reclaim CPU limit from my database pods because they're only running at 100m CPU limit, and it's not best practice to run a database pod with very low limits.
+> I tried running my frontend app pods with 80m CPU request instead, but that caused problems with the application during high load, because the existing pods weren't able to handle load spikes temporarily while the HPA was spinning up new pods. I don't want to try to reclaim CPU request from my database pods because they're only running at 100m CPU request, and it's not best practice to run a database pod with very low requests.
+>
+> **how the auto approve will happen?**
+> 1. If your request for more CPU and Memory meets all of the following requirements, it will be automatically approved:
+> * Your namespace’s current usage exceeds 85% of its total limit.
+> * Your namespace’s resource utilization rate is at least 35%.
+> * The requested adjustment either meets the minimum values of 1 core for CPU and 2GB for memory, or increases the quota by no more than 50%.
+> 2. If your request for more Storage meets all of the following requirements, it will be automatically approved:
+> * Your namespace’s current usage exceeds 80% of its PVC limit.
+> * The requested adjustment either meets the minimum values of 32GB, or increases the quota by no more than 50%.
 
 This request is likely to get approved with just a few follow-up questions from the Platform Services Team. Even though it doesn't provide a clear picture of how the namespace's resource usage should look in the future, the requester has explained why they lack that information. They've also made a reasonable request for a single-step increase, planning to request more only if there's evidence they need it.
 
-If the request includes statistics on the resource usage of the front-end pods, confirming the explanation about the load problems caused by running the pods with a lower CPU limit, this might be one of those rare CPU requests that could be approved without any further questions from the Platform Services Team!
+If the request includes statistics on the resource usage of the front-end pods, confirming the explanation about the load problems caused by running the pods with a lower CPU request, this might be one of those rare CPU requests that could be approved without any further questions from the Platform Services Team!
  
 
 ### Setting up resource monitoring with Sysdig Monitor - why it's important to consider it
