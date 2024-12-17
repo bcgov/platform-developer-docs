@@ -115,7 +115,6 @@ Many of the platform tools have **completed** security assessments.  These inclu
 * Sysdig Monitor
 * Just Ask!
 * Certbot
-* Mautic
 * Rocket.Chat
 * Vault
 * OCP Application Resource Tuning Advisor
