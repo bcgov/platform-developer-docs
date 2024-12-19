@@ -167,7 +167,7 @@ In OpenShift, a `Route` is a way to expose a service at a specific host name, li
 
 ### 3. Configuring SSL/TLS Certificates
 
-Security is a critical part of any application deployment. With OpenShift, you can secure your routes with SSL/TLS certificates. For obtaining and managing free SSL/TLS certificates, Certbot is available. It automates the tasks related to obtaining and renewing certificates and configuring web servers to use them. Learn how to use it by checking out [this BCDevOps GitHub](https://github.com/BCDevOps/certbot) guide to Certbot.
+Security is a critical part of any application deployment. With OpenShift, you can secure your routes with SSL/TLS certificates. For obtaining and managing free SSL/TLS certificates, Certbot is available. It automates the tasks related to obtaining and renewing certificates and configuring web servers to use them. Learn how to use it by checking out [this bcgov GitHub](https://github.com/bcgov/certbot) guide to Certbot.
 
 ---
 
@@ -253,7 +253,7 @@ OpenShift seamlessly integrates with Tekton, empowering you to create robust CI/
 
 To efficiently manage deployments across clusters, OpenShift provides ArgoCD as an operator. It follows the practice of using Git as a 'source of truth' for declarative infrastructure and applications. ArgoCD follows the best practice of using Git as the "source of truth" for declarative infrastructure and applications.
 
-Explore more about [ArgoCD](https://github.com/BCDevOps/openshift-wiki/blob/b1a4e6db91932fd3f29705a5c8ee44983abf8763/docs/ArgoCD/argocd_info.md)  along with [CI/CD pipeline templates](../automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md).
+Explore more about [ArgoCD](https://github.com/bcgov/openshift-wiki/blob/b1a4e6db91932fd3f29705a5c8ee44983abf8763/docs/ArgoCD/argocd_info.md)  along with [CI/CD pipeline templates](../automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md).
 
 ### 2. Version Management in CD
 

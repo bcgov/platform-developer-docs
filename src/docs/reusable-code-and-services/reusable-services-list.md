@@ -169,10 +169,10 @@ To install the service on OpenShift, refer to [this guide](https://github.com/bc
 
 ## Fathom
 
-Fathom analytics provide simple website statistics without tracking or storing personal data. [fathom-openshift](https://github.com/BCDevOps/fathom-openshift) is a set of OpenShift configurations to set up an instance of the Fathom web analytics server.
+Fathom analytics provide simple website statistics without tracking or storing personal data. [fathom-openshift](https://github.com/bcgov/fathom-openshift) is a set of OpenShift configurations to set up an instance of the Fathom web analytics server.
 
 ### How-to
-Refer to the [Fathom repository](https://github.com/BCDevOps/fathom-openshift) to get started. If you require more comprehensive analytics, a Google Analytics alternative, where data ownership and privacy compliance are still a concern check out [Matomo Openshift](https://github.com/BCDevOps/matomo-openshift).
+Refer to the [Fathom repository](https://github.com/bcgov/fathom-openshift) to get started. If you require more comprehensive analytics, a Google Analytics alternative, where data ownership and privacy compliance are still a concern check out [Matomo Openshift](https://github.com/bcgov/matomo-openshift).
 
 ## go-crond
 go-crond is a cron daemon crafted in Go, designed specifically for Docker images.
@@ -193,7 +193,7 @@ Refer to the [go-crond repository](https://github.com/webdevops/go-crond) to get
 Matomo is a full web analytics server. It's a choice to consider instead of Google Analytics if you're worried about owning your data and meeting privacy rules.
 
 ### How-to
-[Matomo OpenShift](https://github.com/BCDevOps/matomo-openshift) provides a set of OpenShift configurations to set up an instance of the Matomo web analytics server. You can also find out more about [Matomo](https://matomo.org/).
+[Matomo OpenShift](https://github.com/bcgov/matomo-openshift) provides a set of OpenShift configurations to set up an instance of the Matomo web analytics server. You can also find out more about [Matomo](https://matomo.org/).
 
 ## OWASP ZAP security vulnerability scanning
 The OWASP Zed Attack Proxy (ZAP) automatically finds security vulnerabilities in web applications.
@@ -208,7 +208,7 @@ The OWASP Zed Attack Proxy (ZAP) automatically finds security vulnerabilities in
 - AJAX Spidering
 
 ### How-to
-The public docker registry version of OWASP's Zed Attack Proxy (ZAP) is not compatible with OpenShift without using privileged containers. Use [this Docker image](https://github.com/BCDevOps/owasp-zap-openshift) resolves that issue. You can also check out ZAP scanning integration with pipeline from the [pipeline-template repo](https://github.com/bcgov/pipeline-templates).
+The public docker registry version of OWASP's Zed Attack Proxy (ZAP) is not compatible with OpenShift without using privileged containers. Use [this Docker image](https://github.com/bcgov/owasp-zap-openshift) resolves that issue. You can also check out ZAP scanning integration with pipeline from the [pipeline-template repo](https://github.com/bcgov/pipeline-templates).
 
 ## Pathfinder Single Sign-On Keycloak
 The Pathfinder Single Sign-On (SSO) team provides the Common Hosted Single Sign-On (CSS) App. This is a self-service app that allows you to integrate with B.C. government approved login services (identity providers). The Pathfinder SSO service is built on the foundations of Keycloak/Redhat SSO.
@@ -250,10 +250,10 @@ SonarCloud (in addition to SonarQube advantages):
 - Is free for Open Source projects (that's us!)
 
 ### How-to
-Refer to the [SonarQube repository](https://github.com/BCDevOps/sonarqube) to get started. The repo container instruction on how to install your own instance of SonarQube in OpenShift. If you are looking for SonarCloud, [here](https://github.com/BCDevOps/sonarqube#sonarcloud) are more details. To get started, you will need to submit a request for SonarCloud integration from [DevOps Requests](https://github.com/BCDevOps/devops-requests).
+Refer to the [SonarQube repository](https://github.com/bcgov/sonarqube) to get started. The repo container instruction on how to install your own instance of SonarQube in OpenShift. If you are looking for SonarCloud, [here](https://github.com/bcgov/sonarqube#sonarcloud) are more details. To get started, you will need to submit a request for SonarCloud integration from [DevOps Requests](https://github.com/bcgov/devops-requests).
 
 ## WeasyPrint HTML to PDF/PNG Microservice
-The [docker-weasyprint](https://github.com/BCDevOps/docker-weasyprint) project bundles WeasyPrint into a simple, OpenShift-compatible, HTML to PDF/PNG microservice with a simple REST interface. [WeasyPrint](https://weasyprint.org/) is a open source solution that helps web developers to create PDF documents.
+The [docker-weasyprint](https://github.com/bcgov/docker-weasyprint) project bundles WeasyPrint into a simple, OpenShift-compatible, HTML to PDF/PNG microservice with a simple REST interface. [WeasyPrint](https://weasyprint.org/) is a open source solution that helps web developers to create PDF documents.
 
 ### Features
 
@@ -261,7 +261,7 @@ The [docker-weasyprint](https://github.com/BCDevOps/docker-weasyprint) project b
 - Support for layout techniques like Flexbox and Grid, and handling of fonts, typography, MathML, and SVG
 
 ### How-to
-Refer to the [docker-weasyprint repository](https://github.com/BCDevOps/docker-weasyprint) to get started.
+Refer to the [docker-weasyprint repository](https://github.com/bcgov/docker-weasyprint) to get started.
 
 ---
 

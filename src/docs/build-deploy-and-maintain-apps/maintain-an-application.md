@@ -349,7 +349,7 @@ If you need to run a load test against your application, first check with the Pl
 [Prepare to load test an application on OpenShift](../automation-and-resiliency/prepare-to-load-test-application-on-openshift.md)
 
 ### CI/CD Pipeline
-Users of the platform have CI/CD pipelines using [Tekton](../build-deploy-and-maintain-apps/deploy-an-application.md#continuous-deployment-and-maintenance) (OpenShift Pipelines), [GitHub Actions](https://docs.github.com/en/actions), and [ArgoCD](https://github.com/BCDevOps/openshift-wiki/tree/master/docs/ArgoCD).
+Users of the platform have CI/CD pipelines using [Tekton](../build-deploy-and-maintain-apps/deploy-an-application.md#continuous-deployment-and-maintenance) (OpenShift Pipelines), [GitHub Actions](https://docs.github.com/en/actions), and [ArgoCD](https://github.com/bcgov/openshift-wiki/tree/master/docs/ArgoCD).
 
 Review your pipelines from time to time.
 

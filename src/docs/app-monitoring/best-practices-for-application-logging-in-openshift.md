@@ -55,7 +55,7 @@ Should your team require log storage beyond the 14-day window, it's your respons
 ### Accessing Kibana with OpenShift credentials
 To access Kibana, use your OpenShift credentials. If you can view a pod's console logs in the OpenShift web console, you can seamlessly access the same pod's logs in Kibana. A minimal setup in Kibana is required for log viewing and querying, especially if you're new to Kibana.
 
-For detailed instructions on this setup process, refer to our OCP101 lab section [covering logging and visualizations](https://github.com/BCDevOps/devops-platform-workshops/blob/master/101-lab/content/12_logging_and_visualizations.md). This will guide you through the necessary steps to make the most of Kibana's features.
+For detailed instructions on this setup process, refer to our OCP101 lab section [covering logging and visualizations](https://github.com/bcgov/devops-platform-workshops/blob/master/101-lab/content/12_logging_and_visualizations.md). This will guide you through the necessary steps to make the most of Kibana's features.
 
 ### Querying logs effectively on Kibana
 
@@ -88,7 +88,7 @@ If you're maintaining log files, establish proper permissions to restrict access
 
 ---
 ## Related pages
-* [Logging and visualizations - OpenShift 101 ](https://github.com/BCDevOps/devops-platform-workshops/blob/master/101-lab/content/12_logging_and_visualizations.md)
+* [Logging and visualizations - OpenShift 101 ](https://github.com/bcgov/devops-platform-workshops/blob/master/101-lab/content/12_logging_and_visualizations.md)
 * [Template to deploy your own EFK stack](https://github.com/bcgov/elmsd-nodejs/tree/main/packages/openshift/templates/efk-stack)
 * [Heroku Dev Center - Writing best practices for application logs](https://devcenter.heroku.com/articles/writing-best-practices-for-application-logs)
 * [NewRelic - logging best practices](https://newrelic.com/blog/best-practices/best-log-management-practices)

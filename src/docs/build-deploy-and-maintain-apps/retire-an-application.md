@@ -109,10 +109,8 @@ Don't overlook your application source code and relevant resources from BCGov Gi
 * Archive all your GitHub repositories from the following GitHub Organizations:
   * [bcgov](https://github.com/bcgov)
   * [bcgov-c](https://github.com/bcgov-c)
-  * [enterprise GitHub](https://github.com/enterprises/bcgov-ent)
-  * [BCDevOps](https://github.com/bcdevops)
 * If you have any GitHub Actions or Webhook setup, be sure to disable them. Archiving a repo does **not** stop or disable the existing GitHub Actions workflows.
-* Delete GitHub Teams if you have created any. Also request to [remove GitHub Organization access](https://github.com/BCDevOps/devops-requests) for team members that do not need access to the OpenShift platform.
+* Delete GitHub Teams if you have created any. Also request to [remove GitHub Organization access](https://github.com/bcgov/devops-requests) for team members that do not need access to the OpenShift platform.
 
 ### Delete persistent volumes
 To protect users against accidental data deletion, PersistentVolumes must be removed by the user before the final automated deletion process. In each of the project's namespaces, check for the presence of any PVCs. Assess the data in the storage and ensure it's properly backed up if needed. You may need to check with colleagues to confirm that the data can be safely removed.
