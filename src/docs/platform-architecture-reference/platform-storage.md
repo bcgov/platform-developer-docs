@@ -44,7 +44,7 @@ All NetApp storage classes support resizing (bigger only). You can start with a 
 
 * **NetApp File**: `netapp-file-standard` is the default storage class for the platform and the type of storage you get if you don't specify a specific `storageClass`.
 
-  `netapp-file-backup` is the same as `netapp-file-standard` but the contents are backed up daily by the OCIO backup infrastructure. For more information, see [Backup Container](https://github.com/BCDevOps/backup-container).
+  `netapp-file-backup` is the same as `netapp-file-standard` but the contents are backed up daily by the OCIO backup infrastructure. For more information, see [Backup Container](https://github.com/bcgov/backup-container).
 
 * **NetApp Block**: `netapp-block-standard` is the current block `storageClass` target and the `storageClass` you should use for your block storage needs.
 
@@ -76,9 +76,9 @@ There is also a microservice available called [Common Object Management Service 
 
 You can use tools to manage your persistent storage beyond the features built into OpenShift.
 
-* **Database backups**: We have a community project to help teams implement regular backups of their databases hosted within the platform. The repository is called [backup-container](https://github.com/bcdevops/backup-container)
+* **Database backups**: We have a community project to help teams implement regular backups of their databases hosted within the platform. The repository is called [backup-container](https://github.com/bcgov/backup-container)
 
-* **Migrating storage**: Another community supported repository is available to help with migrating data from one PVC to another (moving from one storageClass to another, moving to a larger PVC, etc). The repository is called [StorageMigration](https://github.com/BCDevOps/StorageMigration)
+* **Migrating storage**: Another community supported repository is available to help with migrating data from one PVC to another (moving from one storageClass to another, moving to a larger PVC, etc). The repository is called [StorageMigration](https://github.com/bcgov/StorageMigration)
 
 ## Storage details
 
@@ -133,10 +133,10 @@ The speed of each storage solution depends on your workload. ElasticSearch speci
 Related links:
 
 * [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md)
-* [Backup Container](https://github.com/BCDevOps/backup-container)
+* [Backup Container](https://github.com/bcgov/backup-container)
 * [Red Hat documentation](https://access.redhat.com/documentation/en-us/red_hat_openshift_container_storage/4.7/html/deploying_and_managing_openshift_container_storage_using_red_hat_openstack_platform/volume-snapshots_osp)
-* [BCDevOps/Backup-Container](https://github.com/bcdevops/backup-container)
-* [BCDevOps/StorageMigration](https://github.com/BCDevOps/StorageMigration)
+* [bcgov/Backup-Container](https://github.com/bcgov/backup-container)
+* [bcgov/StorageMigration](https://github.com/bcgov/StorageMigration)
 * [Platform Product Registry](https://registry.developer.gov.bc.ca/)
 * [Common Object Management Service (COMS)](https://digital.gov.bc.ca/bcgov-common-components/common-object-management-service/)
 ---
