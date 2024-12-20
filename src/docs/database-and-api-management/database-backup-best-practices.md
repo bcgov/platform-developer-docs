@@ -110,7 +110,7 @@ Most teams retain their backup files based on a schedule. Let's consider a team 
 
 This means that they are keeping every one of their nightly backups for the past week. These daily backups are probably delta backups. They also retain one complete backup from each week for the past four weeks, and one complete backup from each month for the last three months. 
 
-The schedule above is very similar to the default schedule found in the shared [backup-container](https://github.com/bcgov/backup-container). This (or something very similar) would be a very appropriate default for any team unsure of how many backups to keep.
+The schedule above is very similar to the default schedule found in the shared [backup-container](https://github.com/BCDevOps/backup-container). This (or something very similar) would be a very appropriate default for any team unsure of how many backups to keep.
 
 If your team runs backups more often than once per day, you can add another appropriate line to your schedule and detail how many you plan to retain. Just remember that you must keep **every** delta backup you've taken since the last complete backup. If your team runs multiple backups per day, it would be a good idea to run one complete backup every day or every other day.
 
@@ -184,13 +184,13 @@ Good news! Since this is a common need, there are many tools available that you 
 
 ### BCGov Backup Container
 
-The [backup-container](https://github.com/bcgov/backup-container) is a community-supported tool build by and for developers working on the BCGov's OpenShift platform. It's our default recommendation for any database that isn't being controlled by an operator. If you're using Patroni or MongoDB, this is the solution for you.
+The [backup-container](https://github.com/BCDevOps/backup-container) is a community-supported tool build by and for developers working on the BCGov's OpenShift platform. It's our default recommendation for any database that isn't being controlled by an operator. If you're using Patroni or MongoDB, this is the solution for you.
 
 The backup-container provides automation for both backing up and recovering your database. It automatically recovers the dump file in to an empty database and runs some simple tests against it to ensure that the dump file is useable. 
 
 The backup container is already built to help you answer most of the questions in your backup and recovery plan. It contains default values that are appropriate for the majority of applications on the OpenShift platform. It's a great place to start if you're unsure of how to implement things like the number of backup files to keep.
 
-You should take a look at the [documentation for the backup container](https://github.com/bcgov/backup-container) to find out more about how it works and how to use it.
+You should take a look at the [documentation for the backup container](https://github.com/BCDevOps/backup-container) to find out more about how it works and how to use it.
 
 The recovery plan questions at a glance:
 
@@ -209,7 +209,7 @@ The CrunchyDB operator allows teams to set up a Postgres database quickly and ea
 
 You can read more in the official [documentation on CrunchyDB backup and restore functions](https://access.crunchydata.com/documentation/postgres-operator/4.1.2/overview/backup-restore-overview/). You'll also want to check out the [documentation on the PGO Scheduler](https://access.crunchydata.com/documentation/postgres-operator/4.1.2/overview/scheduler-overview/). The scheduler is used to automate the backup and restoration processes.
 
-The backup features of the CrunchyDB operator are powerful, but they still require that you set up a lot of your own automation. You'll be able to find some help on the #crunchydb channel on RocketChat. You can also take a look at the [backup-container](https://github.com/bcgov/backup-container). It contains scripts for automating the exact kinds of tasks you'll need to automate here, and can be used as a template.
+The backup features of the CrunchyDB operator are powerful, but they still require that you set up a lot of your own automation. You'll be able to find some help on the #crunchydb channel on RocketChat. You can also take a look at the [backup-container](https://github.com/BCDevOps/backup-container). It contains scripts for automating the exact kinds of tasks you'll need to automate here, and can be used as a template.
 
 The recovery plan questions at a glance:
 

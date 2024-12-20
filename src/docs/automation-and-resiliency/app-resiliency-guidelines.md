@@ -116,7 +116,7 @@ It's also very important to remember that in the B.C. government, we are part of
 
 The Developer Exchange community is full of great developers seeking ways to help the rest of the community. Here are some examples of tools that you can use to help build a more resilient application:
 
-**[bcgov/backup-container](https://github.com/bcgov/backup-container)**
+**[BCDevOps/backup-container](https://github.com/BCDevOps/backup-container)**
 
 * Features a separate container that can spin up on a schedule in your namespace, which connects to your database to perform a backup and/or to perform a test recovery of the most recent backup
 * Currently works for both Postgres and MongoDB
@@ -168,7 +168,7 @@ Related links:
 * [Pod Terminations](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-termination)
 * [Training from the Platform Services team](../training-and-learning/training-from-the-platform-services-team.md)
 * [PodDisruptionBudgets](https://kubernetes.io/docs/tasks/run-application/configure-pdb/)
-* [Tools: bcgov Backup Container](https://github.com/bcgov/backup-container)
+* [Tools: bcgov Backup Container](https://github.com/BCDevOps/backup-container)
 * [Tools: Patroni](https://github.com/bcgov/platform-services/tree/master/apps/pgsql/patroni)
 * [Example: Rocketchat](https://github.com/bcgov/platform-services/tree/master/apps/rocketchat) - Platform Team
 * [Example: Keycloak](https://github.com/bcgov/ocp-sso) - Platform Team
