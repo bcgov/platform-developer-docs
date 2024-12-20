@@ -299,7 +299,7 @@ Once you have your network policy in place you'll need to set up some more pods 
 
 If you would like a more in-depth testing of pod-to-pod or ingress/egress communications, please see the OCP 201 training materials:
 
-- https://github.com/BCDevOps/devops-platform-workshops/blob/master/openshift-201/network-policy.md
+- https://github.com/bcgov/devops-platform-workshops/blob/master/openshift-201/network-policy.md
 
 ## Related links
 

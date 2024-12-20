@@ -121,7 +121,7 @@ The Developer Exchange community is full of great developers seeking ways to hel
 * Features a separate container that can spin up on a schedule in your namespace, which connects to your database to perform a backup and/or to perform a test recovery of the most recent backup
 * Currently works for both Postgres and MongoDB
 
-**[BCDevOps/Platform-Services/Patroni](https://github.com/BCDevOps/platform-services/tree/master/apps/pgsql/patroni)**
+**[bcgov/Platform-Services/Patroni](https://github.com/bcgov/platform-services/tree/master/apps/pgsql/patroni)**
 
 * An open-source option for creating a highly available Postgres cluster
 
@@ -132,7 +132,7 @@ The following are some fantastic examples of applications that operate on the pl
 
 **Note:** While these examples all include resilient design, they're not going to be perfect for everyone. Use them as starting points for your own decisions about the best architecture for your application, not as rules for how you are "supposed" to do things. If you have an idea for how any of these projects might improve, offer your ideas to the application's team (and maybe even a helping hand).
 
-**[Rocket.Chat](https://github.com/BCDevOps/platform-services/tree/master/apps/rocketchat)** - Platform Services team
+**[Rocket.Chat](https://github.com/bcgov/platform-services/tree/master/apps/rocketchat)** - Platform Services team
 
 * A highly available implementation of Rocket.Chat with an autoscaler that can change the total number of pods from a minimum of three to a maximum of five, based on CPU usage
 * A highly available implementation of a MongoDB stateful set
@@ -168,9 +168,9 @@ Related links:
 * [Pod Terminations](https://kubernetes.io/docs/concepts/workloads/pods/pod-lifecycle/#pod-termination)
 * [Training from the Platform Services team](../training-and-learning/training-from-the-platform-services-team.md)
 * [PodDisruptionBudgets](https://kubernetes.io/docs/tasks/run-application/configure-pdb/)
-* [Tools: BCDevOps Backup Container](https://github.com/BCDevOps/backup-container)
-* [Tools: Patroni](https://github.com/BCDevOps/platform-services/tree/master/apps/pgsql/patroni)
-* [Example: Rocketchat](https://github.com/BCDevOps/platform-services/tree/master/apps/rocketchat) - Platform Team
+* [Tools: bcgov Backup Container](https://github.com/BCDevOps/backup-container)
+* [Tools: Patroni](https://github.com/bcgov/platform-services/tree/master/apps/pgsql/patroni)
+* [Example: Rocketchat](https://github.com/bcgov/platform-services/tree/master/apps/rocketchat) - Platform Team
 * [Example: Keycloak](https://github.com/bcgov/ocp-sso) - Platform Team
 * [Example: Devhub](https://github.com/bcgov/devhub-app-web) - Developer Experience
 ---

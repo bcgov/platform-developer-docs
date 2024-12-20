@@ -33,7 +33,7 @@ Before initiating the request, make sure you have completed the following steps:
 
 1. **Evaluate resource usage:** Analyze your project's resource consumption to determine if a quota increase is necessary. Utilize tools like the OpenShift Dashboard or the command-line interface (CLI) for resource monitoring. Use the following information to help determine the level of resource the application needs:
 
-  *  [Resource management guidelines](https://github.com/BCDevOps/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
+  *  [Resource management guidelines](https://github.com/bcgov/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
 
   * [Application resource tuning](../automation-and-resiliency/application-resource-tuning.md)
 
@@ -247,21 +247,21 @@ If you have successfully onboarded to Sysdig, we provide a dedicated document ou
 
 * If you have any issues onboarding to Sysdig, contact the Platform Services team on the applicable [Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 
-* If you need to store a large amount of unstructured data, consider using the [S3 Object Storage Service](https://github.com/BCDevOps/OpenShift4-Migration/issues/59) provided by Enterprise Hosting. This service is provided by the OCIO and is not hosted on OpenShift, so data stored in an S3 bucket will not count towards the storage quota in your namespace.
+* If you need to store a large amount of unstructured data, consider using the [S3 Object Storage Service](https://github.com/bcgov/OpenShift4-Migration/issues/59) provided by Enterprise Hosting. This service is provided by the OCIO and is not hosted on OpenShift, so data stored in an S3 bucket will not count towards the storage quota in your namespace.
 
 Once the quota increase request is approved, the specified namespaces are upgraded to the next quota size.
 
 ---
 ## Related pages
 
-* [Resource Management Guidelines](https://github.com/BCDevOps/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
-* [Application Resource Tuning](https://github.com/BCDevOps/developer-experience/blob/master/docs/resource-tuning-recommendations.md)
+* [Resource Management Guidelines](https://github.com/bcgov/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
+* [Application Resource Tuning](https://github.com/bcgov/developer-experience/blob/master/docs/resource-tuning-recommendations.md)
 * [Get Started with Sysdig Monitoring](../app-monitoring/sysdig-monitor-onboarding.md)
 * [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 * [Platform Product Registry](https://registry.developer.gov.bc.ca/)
 * [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md)
-* [S3 Object Storage Service](https://github.com/BCDevOps/OpenShift4-Migration/issues/59)
+* [S3 Object Storage Service](https://github.com/bcgov/OpenShift4-Migration/issues/59)
 * [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 * [Platform Product Registry](https://registry.developer.gov.bc.ca/)
 * [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md)
-* [S3 Object Storage Service](https://github.com/BCDevOps/OpenShift4-Migration/issues/59)
+* [S3 Object Storage Service](https://github.com/bcgov/OpenShift4-Migration/issues/59)

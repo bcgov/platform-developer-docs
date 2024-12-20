@@ -88,7 +88,7 @@ Related links:
 
 * [BC Government organizations in GitHub](../../bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/)
 * [Provision a new project set](../openshift-projects-and-access/provision-new-openshift-project.md)
-* [Using Just Ask! to gain access into the BCGov or BCDevops GitHub Organizations](https://www.youtube.com/watch?v=IvdPyx2-qm0)
+* [Using Just Ask! to gain access into the BCGov GitHub Organization](https://www.youtube.com/watch?v=IvdPyx2-qm0)
 * [Add someone to the BC Government GitHub Org](https://just-ask.developer.gov.bc.ca/)
 * [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.9/authentication/using-rbac.html)
 

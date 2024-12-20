@@ -175,7 +175,7 @@ OpenShift uses a wildcard certificate for the majority of cluster communications
 By default, the wildcard will be used to protect project workloads.  The Platform Services team worked through the wildcard issuance requirements for use on the OpenShift clusters.  Obtaining a dedicated TLS cert is currently a manual process.  Find out more about the details on [these processes](https://ssbc-client.gov.bc.ca/services/SSLCert/documents.htm). 
 
 **Pre-requisites:**
-Generate a **.csr** for [each site](https://github.com/BCDevOps/openshift-wiki/blob/master/docs/SSLCerts/GenerateCertificateSigningRequest.md)
+Generate a **.csr** for [each site](https://github.com/bcgov/openshift-wiki/blob/master/docs/SSLCerts/GenerateCertificateSigningRequest.md)
 
 **Ordering process:**
 
@@ -233,10 +233,8 @@ GitHub is the primary git repository for platform application code.  There are s
 
 Here is a summary of the GitHub organizations we own and their purposes:
 
-* bcgov - main developer git repository for platform application code and/or public sharing. If you wish to login to OpenShift via github, membership of the bcgov github org is required, along with linking to an IDIR account
-* bcgov-c - main private git repository used for cluster configuration management and non-public projects
-* bcdevops - alternate git repository for platform application code
-* bcgov-platform-services - git repository for platform services team
+* bcgov - main developer GitHub org for platform application code and/or public sharing. If you wish to login to OpenShift via github, membership of the bcgov github org is required, along with linking to an IDIR account
+* bcgov-c - main private GitHub org used for cluster configuration management and non-public projects
 
 These resources are available:
 
@@ -275,7 +273,7 @@ For all other matters concerning security on the OpenShift Container Platform, p
 
 * [OpenShift 101 training](https://digital.gov.bc.ca/cloud/services/private/support/openshift-101/)
 * [OpenShift 201 training](https://digital.gov.bc.ca/cloud/services/private/support/openshift-201/)
-* [DevOps platform workshops](https://github.com/bcdevops/devops-platform-workshops)
+* [DevOps platform workshops](https://github.com/bcgov/devops-platform-workshops)
 * [Security best practices for apps](../security-and-privacy-compliance/security-best-practices-for-apps.md)
 * [OpenShift platform security tools](../security-and-privacy-compliance/platform-security-tools.md)
 

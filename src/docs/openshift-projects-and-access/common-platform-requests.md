@@ -30,7 +30,7 @@ The repository administrator can then add them by [managing user access on GitHu
 
 Requests to create new private repositories in the bcgov-c github organization must be approved by the Developer Experience Team.
 
-[Request for private BCGOV GitHub Repository](https://github.com/BCDevOps/devops-requests/issues/new/choose)
+[Request for private BCGOV GitHub Repository](https://github.com/bcgov/devops-requests/issues/new/choose)
 
 ## Request Keycloak Single-Sign-On (SSO) integration with your application
 
@@ -50,7 +50,7 @@ Follow the steps involved to [request a quota increase for an OpenShift project 
 
 Remove a team member’s access to OpenShift or a B.C. Government GitHub repository.
 
-[Request to remove OpenShift Access and or BCGOV GitHub Organization Membership](https://github.com/BCDevOps/devops-requests/issues/new/choose)
+[Request to remove OpenShift Access and or BCGOV GitHub Organization Membership](https://github.com/bcgov/devops-requests/issues/new/choose)
 
 
 
