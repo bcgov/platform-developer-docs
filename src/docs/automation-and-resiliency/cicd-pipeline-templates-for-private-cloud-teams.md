@@ -40,7 +40,7 @@ Any product teams working in the Silver or Gold clusters on the BC Gov Private C
 
 Currently, the following technologies are available to product teams:
 
-- [ArgoCD](https://github.com/bcgov/openshift-wiki/blob/b1a4e6db91932fd3f29705a5c8ee44983abf8763/docs/ArgoCD/argocd_info.md)
+- [ArgoCD](../automation-and-resiliency/argo-cd-usage.md)
 - [GitHub Actions](https://github.com/bcgov/security-pipeline-templates/tree/main/.github/workflows)
 - [OpenShift Pipelines (Tekton)](https://github.com/bcgov/security-pipeline-templates/tree/main/tekton)
 
@@ -74,7 +74,7 @@ The [OpenShift 201 training](../training-and-learning/training-from-the-platform
 Related links:
 
 * [Security Pipeline Templates](https://github.com/bcgov/security-pipeline-templates)
-* [ArgoCD](https://github.com/bcgov/openshift-wiki/blob/b1a4e6db91932fd3f29705a5c8ee44983abf8763/docs/ArgoCD/argocd_info.md)
+* [ArgoCD](../automation-and-resiliency/argo-cd-usage.md)
 * [GitHub Actions](https://github.com/bcgov/security-pipeline-templates/tree/main/.github/workflows)
 * [OpenShift Pipelines (Tekton)](https://github.com/bcgov/security-pipeline-templates/tree/main/tekton)
 * [pipeline-templates](https://github.com/bcgov/pipeline-templates)
