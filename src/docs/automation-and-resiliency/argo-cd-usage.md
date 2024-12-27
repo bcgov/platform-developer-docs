@@ -325,7 +325,7 @@ See the [GitOpsTeam template](../../files/argocd/gitopsteam_template.yaml){:down
 
 ## Related pages
 
-* [Current Argo CD version, as of July 2024: v2.11](https://github.com/argoproj/argo-cd/tree/v2.11.3)
+* [Current Argo CD version, as of December 2024: v2.12](https://github.com/argoproj/argo-cd/tree/v2.12.6)
 * [Kustomize.io](https://kustomize.io)
 * [Helm](https://helm.sh/)
 
