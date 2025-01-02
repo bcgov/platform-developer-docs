@@ -450,7 +450,7 @@ Before scheduled changes to the platform and shared services occur, the Platform
 
 Moreover, it's advisable for all team members to remain engaged with the community through the following channels:
 
-- Subscribe to [Platform Services Newsletters](https://subscribe.developer.gov.bc.ca/) so that you will receive email notifications for upcoming changes, as well as [the Platform Community MeetUp Event](https://digital.gov.bc.ca/cloud/services/private/team/#stay) every 3 weeks for platform updates and technical demos.
+- Subscribe to [Platform Services Newsletters](https://digital.gov.bc.ca/cloud/services/private/internal-resources/subscribe/) so that you will receive email notifications for upcoming changes, as well as [the Platform Community MeetUp Event](https://digital.gov.bc.ca/cloud/services/private/team/#stay) every 3 weeks for platform updates and technical demos.
 
 - Monitor [Rocket.Chat #devops-alerts channel](https://chat.developer.gov.bc.ca/channel/devops-alerts) for service alerts and status updates. Rocket.Chat serves as the main communication method for teams on the platform to get help, share knowledge and information, and build up the community. 
 
