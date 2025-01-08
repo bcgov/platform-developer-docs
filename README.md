@@ -1,5 +1,7 @@
 # platform-developer-docs
 
+blat
+
 [![Lifecycle:Stable](https://img.shields.io/badge/Lifecycle-Stable-97ca00)](https://github.com/bcgov/repomountie/blob/master/doc/lifecycle-badges.md)
 [![Package Status](https://github.com/bcgov/platform-developer-docs/actions/workflows/techdocs.yaml/badge.svg)](https://github.com/bcgov/platform-developer-docs/actions/workflows/techdocs.yaml)
 
