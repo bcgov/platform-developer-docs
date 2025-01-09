@@ -39,18 +39,20 @@ The product team running the test **must** have a team member with administrator
 
 ## Get your test approved
 You need to do the following before you can perform your load test:
+
 1. Create a load test plan
-1. Schedule the load test
+2. Schedule the load test
 
 ### Create a load test plan
 Before you perform your load test, create a load test plan. The load test plan outlines:
-- The duration of the test and the weekday you want to run the test
-- The application namespaces you plan on targeting (for example, production only or both test and production)
-- The ramp up time and speed
-- What constitutes a success or failure of the test (for example, response time under two seconds at all times, less than 10% errors in the response,  or more)
-- The origin of generated traffic (for example, outside of the B.C. government network or internally)
-- Whether application relies on anything off cluster (for example, a backend database in ZoneB or an external API that is called out to)
-- Include any other relevant information you feel the Platform Services team should have
+
+* The duration of the test and the weekday you want to run the test
+* The application namespaces you plan on targeting (for example, production only or both test and production)
+* The ramp up time and speed
+* What constitutes a success or failure of the test (for example, response time under two seconds at all times, less than 10% errors in the response,  or more)
+* The origin of generated traffic (for example, outside of the B.C. government network or internally)
+* Whether application relies on anything off cluster (for example, a backend database in ZoneB or an external API that is called out to)
+* Include any other relevant information you feel the Platform Services team should have
 
 Submitting a comprehensive test plan that includes this information as part of your request to run a load test increases your chance that your request is approved quickly.
 
