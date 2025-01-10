@@ -26,14 +26,11 @@ Follow these guidelines to load test ministry applications hosted in the Silver 
 As OpenShift is a shared platform, the Platform Services team wants to make sure you're successful when you load test your application. You have to meet all the following requirements:
 
 1. The test must take place after 5:30 pm on a weekday
-1. The maximum number of **concurrent sessions** during load testing must be restricted to 40,000
-1. There must be a Platform Operations team member present during the test
+2. The maximum number of **concurrent sessions** during load testing must be restricted to 50,000
 
-The first two requirements help make sure that the test doesn't create any negative impacts on the operation of other applications running in the cluster. Following these requirements helps avoid unexpected outcomes.
+The requirements help make sure that the test doesn't create any negative impacts on the operation of other applications running in the cluster. Following these requirements helps avoid unexpected outcomes.
 
-**Note**: The Silver cluster of the OpenShift 4 platform includes six router nodes which together can handle 60,000 concurrent active connections. Browsers and other clients usually hold a connection open for some time and make multiple requests in the same connection or use a long running connection for things like websockets. To keep the cluster stable and healthy, only two-thirds of the overall routing capacity can be targeted by the application load test.
-
-Having a Platform Operations team member present benefits your team and the platform. The Platform Services team wants keep an eye on the platform during the test so they can react in case the test causes a negative impact on the operation of the OpenShift cluster, platform services or other applications hosted in that cluster.
+**Note**: The Silver cluster of the OpenShift 4 platform includes three router nodes which together can handle 50,000 concurrent active connections. Browsers and other clients usually hold a connection open for some time and make multiple requests in the same connection or use a long running connection for things like websockets. To keep the cluster stable and healthy, only two-thirds of the overall routing capacity can be targeted by the application load test.
 
 The product team running the test **must** have a team member with administrator access to the project namespaces available during the test.
 
