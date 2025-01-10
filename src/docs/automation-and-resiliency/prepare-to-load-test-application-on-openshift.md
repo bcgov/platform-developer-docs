@@ -19,6 +19,7 @@ sort_order: 7
 ---
 
 # Prepare to load test an application on OpenShift
+
 Follow these guidelines to load test ministry applications hosted in the Silver and Gold cluster of the OpenShift 4 platform.
 
 ## Load testing requirements
@@ -35,13 +36,17 @@ The requirements help make sure that the test doesn't create any negative impact
 The product team running the test **must** have a team member with administrator access to the project namespaces available during the test.
 
 ## Get your test approved
+
 You need to do the following before you can perform your load test:
 
 1. Create a load test plan
 2. Schedule the load test
 
 ### Create a load test plan
-Before you perform your load test, create a load test plan. The load test plan outlines:
+
+Before you perform your load test, create a load test plan. Submitting a comprehensive test plan that includes this information as part of your request to run a load test increases your chance that your request is approved quickly.
+
+The load test plan outlines:
 
 * The duration of the test and the weekday you want to run the test
 * The application namespaces you plan on targeting (for example, production only or both test and production)
@@ -51,7 +56,6 @@ Before you perform your load test, create a load test plan. The load test plan o
 * Whether application relies on anything off cluster (for example, a backend database in ZoneB or an external API that is called out to)
 * Include any other relevant information you feel the Platform Services team should have
 
-Submitting a comprehensive test plan that includes this information as part of your request to run a load test increases your chance that your request is approved quickly.
 
 ### Schedule the load test
 The Platform Services team reviews your test to ensure it meets the requirements and also confirms that no other product team has a load test scheduled at the same time.
