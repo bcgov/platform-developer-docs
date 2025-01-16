@@ -33,6 +33,8 @@ Users can interact with OpenShift via the `oc` command line tool. This can be in
 * [**Related pages**](#related-pages)
 
 <!-- ### End of On this page -->
+!!! note
+    There are different ways to install the oc command line tool. Look into the section "On this page" to your right to view instructions to navigate the options for each operating system. 
 
 ## Install oc on a mac
 
