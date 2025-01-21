@@ -79,7 +79,7 @@ To ensure compatibility as features change, please update your `oc` command line
 
 ### Install wsl 
 
-In the [OpenShift 101 training](../training-and-learning/training-from-the-platform-services-team.md), we suggest that new users install Windows Subsystem for Linux (WSL) first, and then install `oc` within `WSL` using [homebrew](https://brew.sh/). This is to maintain direct compatibility between the commands used across operating systems.  For an alternative direct installation go to [RedHat instructions - Installing OpenShift CLI](https://docs.openshift.com/container-platform/4.16/cli_reference/openshift_cli/getting-started-cli.html#installing-openshift-cli)
+In the [OpenShift 101 training](../training-and-learning/training-from-the-platform-services-team.md), we suggest that new users install Windows Subsystem for Linux (WSL) first, and then install `oc` within `WSL` using [homebrew](https://brew.sh/). This is to maintain direct compatibility between the commands used across operating systems.  For an alternative direct installation go to [RedHat instructions - Installing OpenShift CLI](https://docs.openshift.com/container-platform/4.16/cli_reference/openshift_cli/getting-started-cli.html#installing-openshift-cli).
 
 1. Open PowerShell or Windows Command Prompt in administrator mode by right-clicking and selecting "Run as administrator"
 
