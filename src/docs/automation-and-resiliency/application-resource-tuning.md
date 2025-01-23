@@ -27,13 +27,13 @@ As touched upon in the [resiliency guidelines](../automation-and-resiliency/app-
 * Resource availability for other tenant applications
 
 While [resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md) are quite generous, these quotas must be seen as a tool to allow tenants enough resources to temporarily burst usage for experimentation, rather than an upper limit of consistent use. The platform is not sized to support every tenant fully utilizing their _resource quota_.
-
+#
 **Resource requests**  
 Resource requests are guaranteed and reserved for the pod. **Pod scheduling decisions are made based on the request** to ensure that a node has enough capacity available to meet the requested value. Inefficient use of requests lead to having to buy more licenses and hardware for the platform.
-
+#
 **Resource limits**  
 Resource limits set an upper limit of what a pod can burst to if the resources are available on the node.
-
+#
 ## Setting requests and limits
 
 ❗ **If you set a resource limit, you should also set a resource request.** Otherwise the request will match the limit. 
@@ -66,7 +66,7 @@ Having a **1.5:1 ratio** of CPU request:CPU utilization is an amazing goal for t
 
 
 ## Resources
-
+#
 **Deploying pods without specifying a limit or a request** 
 
 If you deploy pods without setting limits or requests, they will be deployed using the `LimitRange` value, which you can find out via `oc get LimitRange default-limits -o yaml`. The `LimitRange` specifies the default value for CPU and memory resoruce config for containers. This is **not** the same as specifying a resource request or limit of 0.
@@ -125,7 +125,7 @@ Requests
 
 **Note:**  unless you're running a scientific application or you know it's multithreaded you should not be giving an app any more than 1-core._
 
-
+#
 ## Jenkins resource configuration recommendations
 
 Tuning the resources of Jenkins deployments can have a large effect on the available resources of the platform. As of writing, Jenkins accounts for the largest user of CPU requests and limits on the platform. Recent analysis has indicated:
@@ -203,7 +203,7 @@ Consider monitoring the upper and lower bounds of CPU and memory usage of Jenkin
 ![Jenkins CPU usage](../../images/jenkins-cpu-usage.png)
 
 Also, consider other workloads you may need to run in the tools namespace when accounting for requests/limits allocation to be within the allotted maximums.
-
+#
 ## Tools namespaces resource quota recommendations
 
 Every product in a cluster is provided a license plate and a namespace for each environment (dev, test, prod). These products also have a **tools** namespace defined as `<license>-tools`, where tooling such as Jenkins are deployed.

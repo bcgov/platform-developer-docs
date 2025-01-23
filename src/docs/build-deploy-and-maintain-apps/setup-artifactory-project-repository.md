@@ -22,7 +22,7 @@ sort_order: 9
 Last updated: **January , 2024**
 
 To push artifacts to Artifactory, you'll need a private repository which is provided through Artifactory Projects. Artifactory Projects are designated areas with quota-based storage that teams can independently manage. Within an Artifactory Project, teams have the flexibility to establish their private repositories—any type and quantity that aligns with their requirements, as long as the storage space falls within the allocated quota.
-
+#
 If your team needs additional quota, you can submit a request. However, it's important to emphasize that teams are encouraged to stay within the default quota whenever possible. Therefore, make sure to regularly clean up old artifacts and tags.
 
 ## On this page

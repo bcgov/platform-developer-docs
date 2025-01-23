@@ -21,7 +21,7 @@ sort_order: 6
 # Managing resource quotas in Kubernetes: A complete guide 
 
 Managing resources effectively in Kubernetes is essential for optimizing application performance and operational efficiency. This is especially important in multi-tenant environments where resources are shared. This guide explains the key concepts of CPU and memory management, highlights the importance of resource quotas, requests, and limits, and offers practical strategies for using resources efficiently.
-
+#
 ## Understanding CPU requests and limits
 
 ### Definitions
