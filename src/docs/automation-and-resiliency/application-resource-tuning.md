@@ -26,25 +26,25 @@ As touched upon in the [resiliency guidelines](../automation-and-resiliency/app-
 * Resource availability for your own applications
 * Resource availability for other tenant applications
 
-While [resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md) are quite generous, these quotas must be seen as a tool to allow tenants enough resources to temporarily burst usage for experimentation, rather than an upper limit of consistent use. The platform is not sized to support every tenant fully utilizing their _resource quota_.
-#
 **Resource requests**  
 Resource requests are guaranteed and reserved for the pod. **Pod scheduling decisions are made based on the request** to ensure that a node has enough capacity available to meet the requested value. Inefficient use of requests lead to having to buy more licenses and hardware for the platform.
-#
+
 **Resource limits**  
-Resource limits set an upper limit of what a pod can burst to if the resources are available on the node.
-#
+Resource limits set an upper limit of what a pod can burst to if the resources are available on the node. For perfomance reasons, CPU limits should not be set, but memory limits can be. 
+
 ## Setting requests and limits
 
-❗ **If you set a resource limit, you should also set a resource request.** Otherwise the request will match the limit. 
+Request CPU – should be set, ideal to set to the minimum resource level required to run your container
+Limit CPU - doesn’t need to be set, best not to set for performance reasons
+Request Memory – should be set, ideal to set to the minimum resource level required to run your container
+Limit Memory – doesn’t need to set, still a good idea to set
 
-For example, a deployment with **no** defined CPU request and a defined CPU limit of 1 core will result in **a pod with a request of 1 CPU and a limit of 1 CPU**.
+You should define your own resource values for your containers based on their usage. If you don't set these, default values for `request.cpu` and `request.memory` will be set which are usually too high and therefore inefficient. 
 
 **General guidelines**  
-☑ Set requests and limits.  
+☑ Set cpu and memory requests and set memory limits. Do not set cpu limits. 
 ☑ Set requests to the _minimum_ of what your application needs.  
-☑ Set limits to a reasonable burstable number of what a single pod should support.  
-☑ Use horizontal pod autoscalers where possible, rather than large CPU and memory limits.
+☑ Use horizontal pod autoscalers where possible
 
 **Being a good resource citizen**
 
@@ -60,13 +60,8 @@ Having a **2:1 ratio** of CPU request:CPU utilization is a great next step for t
 
 Having a **1.5:1 ratio** of CPU request:CPU utilization is an amazing goal for teams who have already started tuning their applications and are looking to make the best possible use of the platform's capabilities. Using a 1.5:1 ratio makes you an **amazing community member**.
 
-## CPU and Memory Utilization
-
-[Watch a four-minute video](https://youtu.be/rkxVZgn9icU) that includes an example of resource tuning for a sample OpenShift application.
-
-
 ## Resources
-#
+
 **Deploying pods without specifying a limit or a request** 
 
 If you deploy pods without setting limits or requests, they will be deployed using the `LimitRange` value, which you can find out via `oc get LimitRange default-limits -o yaml`. The `LimitRange` specifies the default value for CPU and memory resoruce config for containers. This is **not** the same as specifying a resource request or limit of 0.
@@ -78,12 +73,6 @@ If you set requests and limits to 0, pods will run under the [BestEffort QoS cla
 
 **Specifying a limit value only**  
 If you only specify a limit value, but not a request value, your pods will be deployed with a request that is identical to the limit.
-
-**Specifying a request value only**   
-If you only specify a request value, pods will be deployed with the configured request, and will have the default limit applied based on the `LimitRange`,
-
-**Creating a deployment with a request that is higher than the default limit**  
-If you create a deployment with a request value that is higher than the default limits above, you will be required to define a limit.
 
 **Checking CPU consumption of running pods in a namespace"** 
 
@@ -113,8 +102,6 @@ The vertical pod autoscaling tool can be used to calculate resource recommendati
 ```bash
 oc get quota compute-long-running-quota -o=custom-columns=Requests:.status.used."requests\.cpu"
 ```
-
-
 Below is an example output of the above command, the `m` at the end again means millicores, so dividing the number by 1000 tells us the current project per this example has a total allotted CPU requests value of 14.5 CPU cores.
 
 ```console
@@ -122,10 +109,8 @@ oc get quota compute-long-running-quota -o=custom-columns=Requests:.status.used.
 Requests
 14500m
 ```
-
 **Note:**  unless you're running a scientific application or you know it's multithreaded you should not be giving an app any more than 1-core._
 
-#
 ## Jenkins resource configuration recommendations
 
 Tuning the resources of Jenkins deployments can have a large effect on the available resources of the platform. As of writing, Jenkins accounts for the largest user of CPU requests and limits on the platform. Recent analysis has indicated:
@@ -139,7 +124,7 @@ Tuning the resources of Jenkins deployments can have a large effect on the avail
 Based on the performance testing details below, the following recommendations are suggested for Jenkins deployments:
 
 * CPU request: 100m
-* CPU limit: 1000m (May vary depending on usage)
+* CPU limit: do not set
 * Memory request: 512M
 * Memory limit: 1-2GB (May vary depending on usage)
 
@@ -152,49 +137,13 @@ spec:
       cpu: "100m"
       memory: "512Mi"
     limits:
-      cpu: "1"
       memory: "1Gi"
 ```
 The following command can also be used to update a Jenkins DeploymentConfig:
 
 ```bash
-oc patch dc/jenkins -p '{"spec": {"template": {"spec": {"containers":[{"name":"jenkins", "resources":{"requests": {"cpu":"100m", "memory":"512Mi"}, "limits": {"cpu":"1", "memory":"1Gi"}}}]}}}}'
+oc patch dc/jenkins -p '{"spec": {"template": {"spec": {"containers":[{"name":"jenkins", "resources":{"requests": {"cpu":"100m", "memory":"512Mi"}, "limits": {"memory":"1Gi"}}}]}}}}'
 ```
-
-**Performance testing details**
-
-The reason that Jenkins is often deployed with such high CPU and memory requests was related to previous scheduler issues that have since been fixed on the platform. As a result, the templates **and existing Jenkins deployments** should be tuned to reduce the CPU requests.
-
-A test was performed to collect the startup time of Jenkins under various resource configurations. Each test was performed three times and the startup time was averaged out across each iteration. The name of each test is in the format of `[cpu_requests_in_millicores]-[cpu_limits_in_millicores]-[memory_requests_in_mb]`.
-
-![Jenkins performance test results](../../images/jenkins-performance-test-results.png)
-
-
-| Test Name                  | Average Startup Time (s) |   
-|----------------------------|--------------------------|
-| 100m-req-500m-limit-128m   | 295                      | 
-| 100m-req-500m-limit-512m   | 248                      |   
-| 100m-req-500m-limit-128m   | 368                      |  
-| 100m-req-1000m-limit-128m  | 163                      |   
-| 100m-req-500m-limit-512m   | 185                      |  
-| 100m-req-1000m-limit-512m  | 77                       |   
-| 100m-req-2000m-limit-512m  | 80                       |   
-| 500m-req-1000m-limit-128m  | 137                      |   
-| 500m-req-1000m-limit-512m  | 91                       | 
-| 1000m-req-2000m-limit-128m | 131                      |
-| 1000m-req-2000m-limit-512m | 73                       |   
-
-The observations from the testing can be summarized as follows:
-
-* CPU limit has the largest effect on startup performance
-* CPU request has little effect on startup performance
-* The gain from a CPU limit of 500m to 1000m is major
-* The gain from a CPU limit of 1000m to 2000m is minor
-* One ideal configuration looks like this:
-  * CPU request: 100m
-  * CPU limit: 1000m+
-  * Memory request: 512M
-  * Memory limit: 1-2GB (May vary depending on usage)
 
 ## Advanced Jenkins resource tuning
 
@@ -203,7 +152,7 @@ Consider monitoring the upper and lower bounds of CPU and memory usage of Jenkin
 ![Jenkins CPU usage](../../images/jenkins-cpu-usage.png)
 
 Also, consider other workloads you may need to run in the tools namespace when accounting for requests/limits allocation to be within the allotted maximums.
-#
+
 ## Tools namespaces resource quota recommendations
 
 Every product in a cluster is provided a license plate and a namespace for each environment (dev, test, prod). These products also have a **tools** namespace defined as `<license>-tools`, where tooling such as Jenkins are deployed.
@@ -212,17 +161,13 @@ As of writing, there is a discrepancy between compute resources (especially CPU)
 
 On average, Jenkins instances in tools namespaces across the cluster are requesting much more resources than they are utilizing. These overcommitted Jenkins instances are one of the largest contributors to this over-allocation problem.
 
-In short, the recommendation is to lower compute resource requests and leverage resource limits in a burstable fashion.
+In short, the recommendation is to lower cpu resource requests and avoid setting cpu resource limits. 
 
 This section identifies the problem and mitigation recommendation of resource over-allocation in tools namespaces.
 
-## Decoupling tools namespaces quotas and limit ranges
-
-It is recommended to decouple the quotas and limits sizing of the tools namespace from the other environment namespaces (dev, test, prod), to separately adjust the quotas and limits of the tools namespaces.
-
 ## OpenShift template considerations for reduced quota
 
-When deploying a workload such as Jenkins from the OpenShift catalog, you may not be prompted to configure all of the CPU and memory requests and limits. In the case of Jenkins, you may only define the memory limit (defaults to 1Gi) which will set the memory requests to the same value.
+When deploying a workload such as Jenkins from the OpenShift catalog, you may not be prompted to configure all of the CPU and memory requests and limits. In the case of Jenkins, the wizard will allow you to proceed while only defining the memory limit (defaults to 1Gi) which will set the memory requests to the same value.
 
 To accommodate a reduced project quota, the `oc patch` command (depicted above) should be used with more appropriate CPU and memory requests and quotas for all workloads in the tools project. Otherwise, these workloads may not become schedulable if their combined total requests/limits exceed the maximums defined by project quotas.
 
@@ -234,9 +179,7 @@ You can identify current resource quota consumption and properly size resource r
 
 From the OpenShift web console, in the **Administrator** perspective, proceed to **Administration** \> **ResourceQuotas** and select the appropriate `ResourceQuota` (i.e., `compute-long-running-quota`). Here is an example:
 
-![Ttools example compute long running quota dashboard](../../images/tools-example-compute-long-running-quota.png)
-
-
+![Tools example compute long running quota dashboard](../../images/tools-example-compute-long-running-quota.png)
 
 **Viewing quota usage (CLI)**
 
