@@ -21,7 +21,7 @@ sort_order: 4
 Last updated: **January 11, 2024**
 
 New project sets provisioned in **all clusters** of the BC Gov Private Cloud PaaS have the following default resource quotas that include a certain amount of CPU, RAM and storage:
-<!--  Need clarification on the defaults here, is this still accurate? -->
+
 - **CPU**: 0.5 cores of CPU request 
 - **RAM**: 2 GB of memory request
 - **Storage**: 60 PVC count , 1 GB overall storage with 521 MB for backup storage and five snapshots
@@ -38,14 +38,21 @@ If the default allocations aren't sufficient for your application, [you can ask 
 
 ## CPU request quotas
 
-CPU request quotas can be set to the desired level via the [Platform Product Registry](https://registry.developer.gov.bc.ca/login).  All CPU requests quotas are shown in cores (not millicores) and represent the total **maximum** for the combined CPU request **all pods in a namespace**.
+CPU request quotas can be set to the desired level via the [Platform Product Registry](https://registry.developer.gov.bc.ca/login).  All CPU requests quotas are shown in cores (not millicores) and represent the total **maximum** for the combined CPU request **all long-running pods in a namespace**. These quotas are managed by the object `compute-long-running-quota`
 
 ## Memory quotas
 
-Memory request qutoas can be set to the desired level via the [Platform Product Registry](https://registry.developer.gov.bc.ca/login). All memory requests and limits are shown in GiB and represent the total **maximum** for the combined RAM request or RAM limit values for **all pods in the namespace**.
+Memory request qutoas can be set to the desired level via the [Platform Product Registry](https://registry.developer.gov.bc.ca/login). All memory requests and limits are shown in GiB and represent the total **maximum** for the combined RAM request or RAM limit values for **all long-running pods in the namespace**. These quotas are managed by the object `compute-long-running-quota`. 
 
 ## Storage quotas
 Storage quotas can be set to the desired level via the [Platform Product Registry](https://registry.developer.gov.bc.ca/login). All storage sizes are in GiB and represent the **maximum** for the combined storage for **all PVCs within the namespace**. All storage quotas allow for up to 60 persistent volume claims (PVCs).
+
+## Short-running pods
+Pods which are run once off as 'jobs, builds or deployers' have a seperate resource quota which called `compute-time-bound-quota`. 
+
+## Best effort pods
+Pods that have their requests and limits both set to 0 run only when resources are available. These too have a seperate quota called `compute-best-effort-quota`. This configuration should only be used for pods performing tasks which are not time sensitive. 
+
 
 ---
 ---
