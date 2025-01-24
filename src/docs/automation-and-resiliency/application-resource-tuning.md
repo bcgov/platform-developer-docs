@@ -215,9 +215,7 @@ Consideration must be made to determine if several workloads across the cluster 
 
 **Node CPU saturation**
 
-Very low CPU requests (i.e., `5m`) may be assigned to workloads such as Jenkins that have minuscule CPU usage when idle, and rely on CPU limits to burst during pipeline runs. A potential risk with this configuration is if the node a workload is scheduled on is being heavily utilized. The workload will not be able to burst much higher than the given CPU requests, potentially causing a significant slowdown.
-
-However, this will not cause pod evictions. CPU throttling (extensively below CPU limits) can be mitigated, ensuring nodes across the cluster are evenly balanced and not over-utilized.
+Very low CPU requests (i.e., `5m`) may be assigned to workloads such as Jenkins that have minuscule CPU usage when idle, and if properly configured by setting no CPU limits, will be able to burst to use available resources on the node during pipeline runs. 
 
 **Node memory saturation**
 
