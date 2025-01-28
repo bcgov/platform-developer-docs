@@ -113,6 +113,8 @@ Requests
 
 ## Jenkins resource configuration recommendations
 
+The platform team recommends migrating away from Jenkins to a more modern CI/CD pipeline tool such as OpenShift Pipelines, ArgoCD and/or GitHub Actions. However, we recognize that a migration represents a significant amount of work and isn't always a realistic immediate solution to the resourcing problems posed by a Jenkins installation. The following section contains recommendations for Jenkins configurations that can be used to help ease resourcing issues while your team plans their migration to another CI/CD tool.
+
 Tuning the resources of Jenkins deployments can have a large effect on the available resources of the platform. As of writing, Jenkins accounts for the largest user of CPU requests and limits on the platform. Recent analysis has indicated:
 
 * **15-25% of CPU requests** on the platform are related to Jenkins
