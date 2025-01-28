@@ -165,7 +165,7 @@ As of writing, there is a discrepancy between compute resources (especially CPU)
 
 On average, Jenkins instances in tools namespaces across the cluster are requesting much more resources than they are utilizing. These overcommitted Jenkins instances are one of the largest contributors to this over-allocation problem.
 
-In short, the recommendation is to lower cpu resource requests and avoid setting cpu resource limits. 
+In short, the recommendation is to lower CPU resource requests and avoid setting cpu resource limits. 
 
 This section identifies the problem and mitigation recommendation of resource over-allocation in tools namespaces.
 
