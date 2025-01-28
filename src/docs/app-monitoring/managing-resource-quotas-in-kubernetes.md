@@ -140,7 +140,7 @@ avg(container_cpu_cfs_throttled_periods_total / container_cpu_cfs_periods_total 
 
 To manage CPU throttling effectively, it is essential to adjust both the application and Kubernetes settings:
 
-* **Remove CPU limits**: If you've previously set up `limit.cpu` for you containers, it is best to remove this for performance reasons. 
+* **Remove CPU limits**: If you previously set `limit.cpu` for your containers, remove it to improve performance.
 * **Optimize application performance:** Improve the application code or configuration to reduce CPU demand. For multi-threaded applications, this might involve tuning thread pool settings or optimizing resource-intensive processes
 * **Horizontal scaling:** Consider scaling out (adding more pods) rather than scaling up (adding more resources to a single pod) to distribute the load more effectively. (Not suitable for High Availability  databases)
 
