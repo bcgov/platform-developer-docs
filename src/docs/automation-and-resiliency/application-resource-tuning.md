@@ -39,7 +39,7 @@ Limit CPU - doesn’t need to be set, best not to set for performance reasons
 Request Memory – should be set, ideal to set to the minimum resource level required to run your container
 Limit Memory – doesn’t need to set, still a good idea to set
 
-You should define your own resource values for your containers based on their usage. If you don't set these, default values for `request.cpu` and `request.memory` will be set which are usually too high and therefore inefficient. 
+Define resource values for your containers based on their usage. If you don't, the system sets default `request.cpu` and `request.memory` values, which are often too high and inefficient.
 
 **General guidelines**  
 ☑ Set CPU and memory requests and set memory limits. Do not set CPU limits. 
