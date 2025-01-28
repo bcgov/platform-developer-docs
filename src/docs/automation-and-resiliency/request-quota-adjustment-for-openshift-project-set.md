@@ -221,7 +221,7 @@ This will increase the chances of us approving your request quickly (or helping 
 > **What steps have you taken to fit your application into your current quota?**
 > I tried running my frontend app pods with 80m CPU request instead, but that caused problems with the application during high load, because the existing pods weren't able to handle load spikes temporarily while the HPA was spinning up new pods. I don't want to try to reclaim CPU request from my database pods because they're only running at 100m CPU request, and it's not best practice to run a database pod with very low requests.
 >
-> **When will automatic approval occur?**
+> **When will automatic approval happen?**
 > 1. If your request for more CPU and Memory meets all of the following requirements, it will be automatically approved:
 > * For memory quota adjustments, if your namespace’s current usage exceeds 85% of its total memory limit.
 > * Your namespace’s resource utilization rate is at least 35%.
