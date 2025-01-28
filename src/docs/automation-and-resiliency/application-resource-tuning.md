@@ -42,7 +42,7 @@ Limit Memory – doesn’t need to set, still a good idea to set
 You should define your own resource values for your containers based on their usage. If you don't set these, default values for `request.cpu` and `request.memory` will be set which are usually too high and therefore inefficient. 
 
 **General guidelines**  
-☑ Set cpu and memory requests and set memory limits. Do not set cpu limits. 
+☑ Set CPU and memory requests and set memory limits. Do not set CPU limits. 
 ☑ Set requests to the _minimum_ of what your application needs.  
 ☑ Use horizontal pod autoscalers where possible
 
