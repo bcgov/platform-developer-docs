@@ -69,7 +69,7 @@ The total sum of resources `requests.cpu` and `requests.memory` for containers i
 ### Case studies
 
 **Scenario: Resolving CPU over-provisioning**
-A SaaS company noticed they weren't fully utilizing their allocated resources. They set up monitoring tools to study usage patterns and adjusted their ResourceQuota accordingly. This move significantly cut costs without affecting performance. In the BCGov context, resource quotas are adjusted via the [Product Registry](https://registry.developer.gov.bc.ca/) and then automatically applied to OpenShift. 
+A SaaS company noticed they weren't fully utilizing their allocated resources. They set up monitoring tools to study usage patterns and adjusted their ResourceQuota accordingly. This move significantly cut costs without affecting performance. In the BCGov context, resource quotas are adjusted via the [Platform Product Registry](https://registry.developer.gov.bc.ca/) and then automatically applied to OpenShift. 
 
 **Scenario: Managing high demand applications**
 An e-commerce platform faced performance issues during peak hours. They analyzed CPU and memory requests and limits, optimizing their deployment strategy as a result. This led to better response times and increased customer satisfaction.
