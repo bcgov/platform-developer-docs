@@ -30,7 +30,7 @@ As touched upon in the [resiliency guidelines](../automation-and-resiliency/app-
 Resource requests are guaranteed and reserved for the pod. **Pod scheduling decisions are made based on the request** to ensure that a node has enough capacity available to meet the requested value. Inefficient use of requests lead to having to buy more licenses and hardware for the platform.
 
 **Resource limits**  
-Resource limits set an upper limit of what a pod can burst to if the resources are available on the node. For perfomance reasons, CPU limits should not be set, but memory limits can be. 
+Resource limits define the maximum resources a pod can use if they are available on the node. To maintain performance, avoid setting CPU limits, but you can set memory limits.
 
 ## Setting requests and limits
 
