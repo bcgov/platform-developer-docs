@@ -27,18 +27,20 @@ Managing resources effectively in Kubernetes is essential for optimizing applica
 ### Definitions
 
 - **CPU requests:** The guaranteed amount of CPU for a container in Kubernetes. It helps the scheduler place pods on nodes that have enough available CPU
+
 - **CPU limits:** The maximum amount of CPU a container can use. If the container exceeds this limit, it is throttled by OpenShift and cannot exceed its allocated share of CPU. CPU limits are no longer required on BC Gov's OpenShift platform. It is best to avoid setting CPU limits or remove existing CPU limits. Avoiding CPU limits can offer improved performance in some situations. 
 
 ### Practical example
 
 Let's consider two containers:
-- Container **A** requests 0.5 CPU and has a limit of 1 CPU
-- Container **B** requests 1 CPU and has a limit of 2 CPUs
+
+* Container **A** requests 0.5 CPU and has a limit of 1 CPU
+* Container **B** requests 1 CPU and has a limit of 2 CPUs
 
 When both containers run on a node with 2 CPUs, Kubernetes ensures:
 
-- Container **A** gets at least 0.5 CPU but can use up to 1 CPU when more CPU time is available
-- Container **B** is guaranteed 1 CPU and can use up to 2 CPUs
+* Container **A** gets at least 0.5 CPU but can use up to 1 CPU when more CPU time is available
+* Container **B** is guaranteed 1 CPU and can use up to 2 CPUs
 
 This setup stops Container **A** from running out of resources because of  Container **B**, keeping resource usage in balance.
 
