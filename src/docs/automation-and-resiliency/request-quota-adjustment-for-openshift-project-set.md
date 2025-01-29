@@ -33,7 +33,7 @@ Before initiating the request, make sure you have completed the following steps:
 
 1. **Evaluate resource usage:** Analyze your project's resource consumption to determine if a quota increase is necessary. Utilize tools like the OpenShift Dashboard or the command-line interface (CLI) for resource monitoring. Use the following information to help determine the level of resource the application needs:
 
-  *  [Resource management guidelines](https://github.com/bcgov/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
+  * [Resource management guidelines](https://github.com/bcgov/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
 
   * [Application resource tuning](../automation-and-resiliency/application-resource-tuning.md)
 
@@ -221,9 +221,9 @@ This will increase the chances of us approving your request quickly (or helping 
 > **What steps have you taken to fit your application into your current quota?**
 > I tried running my frontend app pods with 80m CPU request instead, but that caused problems with the application during high load, because the existing pods weren't able to handle load spikes temporarily while the HPA was spinning up new pods. I don't want to try to reclaim CPU request from my database pods because they're only running at 100m CPU request, and it's not best practice to run a database pod with very low requests.
 >
-> **how the auto approve will happen?**
+> **When will automatic approval happen?**
 > 1. If your request for more CPU and Memory meets all of the following requirements, it will be automatically approved:
-> * Your namespace’s current usage exceeds 85% of its total limit.
+> * For memory quota adjustments, if your namespace’s current usage exceeds 85% of its total memory limit.
 > * Your namespace’s resource utilization rate is at least 35%.
 > * The requested adjustment either meets the minimum values of 1 core for CPU and 2GB for memory, or increases the quota by no more than 50%.
 > 2. If your request for more Storage meets all of the following requirements, it will be automatically approved:
