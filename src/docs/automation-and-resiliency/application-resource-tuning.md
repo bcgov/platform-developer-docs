@@ -19,7 +19,7 @@ sort_order: 2
 ---
 
 # Application resource tuning
-Last updated: **May 3, 2024**
+Last updated: **January 29, 2025**
 
 As touched upon in the [resiliency guidelines](../automation-and-resiliency/app-resiliency-guidelines.md), deploying applications with appropriate [CPU and memory requests and limits](https://docs.openshift.com/container-platform/3.11/admin_guide/overcommit.html#requests-and-limits) is critical to ensure:
 
@@ -27,23 +27,28 @@ As touched upon in the [resiliency guidelines](../automation-and-resiliency/app-
 * Resource availability for other tenant applications
 
 **Resource requests**  
-Resource requests are guaranteed and reserved for the pod. **Pod scheduling decisions are made based on the request** to ensure that a node has enough capacity available to meet the requested value. Inefficient use of requests lead to having to buy more licenses and hardware for the platform.
+Resource requests are guaranteed and reserved for the pod. 
+
+**Pod scheduling decisions are made based on the request**
+To ensure that a node has enough capacity available to meet the requested value. Inefficient use of requests lead to having to buy more licenses and hardware for the platform.
 
 **Resource limits**  
 Resource limits define the maximum resources a pod can use if they are available on the node. To maintain performance, avoid setting CPU limits, but you can set memory limits.
 
 ## Setting requests and limits
 
-Request CPU – should be set, ideal to set to the minimum resource level required to run your container
-Limit CPU - doesn’t need to be set, best not to set for performance reasons
-Request Memory – should be set, ideal to set to the minimum resource level required to run your container
-Limit Memory – doesn’t need to set, still a good idea to set
+* Request CPU – should be set, ideal to set to the minimum resource level required to run your container
+* Limit CPU - doesn’t need to be set, best not to set for performance reasons
+* Request Memory – should be set, ideal to set to the minimum resource level required to run your container
+* Limit Memory – doesn’t need to set, still a good idea to set
 
 Define resource values for your containers based on their usage. If you don't, the system sets default `request.cpu` and `request.memory` values, which are often too high and inefficient.
 
 **General guidelines**  
-☑ Set CPU and memory requests and set memory limits. Do not set CPU limits. 
-☑ Set requests to the _minimum_ of what your application needs.  
+☑ Set CPU and memory requests and set memory limits. Do not set CPU limits
+
+☑ Set requests to the _minimum_ of what your application needs
+
 ☑ Use horizontal pod autoscalers where possible
 
 **Being a good resource citizen**
@@ -64,7 +69,9 @@ Having a **1.5:1 ratio** of CPU request:CPU utilization is an amazing goal for t
 
 **Deploying pods without specifying a limit or a request** 
 
-If you deploy pods without setting limits or requests, they will be deployed using the `LimitRange` value, which you can find out via `oc get LimitRange default-limits -o yaml`. The `LimitRange` specifies the default value for CPU and memory resoruce config for containers. This is **not** the same as specifying a resource request or limit of 0.
+If you deploy pods without setting limits or requests, they will be deployed using the `LimitRange` value, which you can find out via `oc get LimitRange default-limits -o yaml`. 
+
+The `LimitRange` specifies the default value for CPU and memory resoruce config for containers. This is **not** the same as specifying a resource request or limit of 0.
 
 **Setting the request and limits to 0**  
 If you set requests and limits to 0, pods will run under the [BestEffort QoS class](https://kubernetes.io/docs/tasks/configure-pod-container/quality-service-pod/), using whatever spare capacity is available on the node.
@@ -74,7 +81,7 @@ If you set requests and limits to 0, pods will run under the [BestEffort QoS cla
 **Specifying a limit value only**  
 If you only specify a limit value, but not a request value, your pods will be deployed with a request that is identical to the limit.
 
-**Checking CPU consumption of running pods in a namespace"** 
+**Checking CPU consumption of running pods in a namespace** 
 
 There is a way that requires you to make use of the `oc` client versus using the web console. Additional math will be required past this point as there is no way of automating this in a cross-platform fashion using just `oc`.
 
@@ -91,13 +98,16 @@ NAME CPU(cores) MEMORY(bytes)
 <redacted> 2  26Mi
 ```
 
-For the above, the column of numbers involving `CPU(cores)` is what you want to add up. the `m` suffix stands for millicores, so for the above, add up the numbers and divide by 1000 to get the actual consumption of CPU cores by the pods in the current project. If the CPU usage has no `m` suffix, then that is just measured in cores, and not millicores. For the above example, the total would then be 2 + (3+3+3+9+4)/1000 = 2.022 CPU cores of actual CPU consumption.
+For the above, the column of numbers involving `CPU(cores)` is what you want to add up. the `m` suffix stands for millicores, so for the above, add up the numbers and divide by 1000 to get the actual consumption of CPU cores by the pods in the current project. If the CPU usage has no `m` suffix, then that is just measured in cores, and not millicores. 
 
-**Note:**  unless you're running a scientific application or you know it's multithreaded you should not be giving an app any more than 1-core.
+For the same example,  the total would then be 2 + (3+3+3+9+4)/1000 = 2.022 CPU cores of actual CPU consumption.
+
+**Note:**  Unless you're running a scientific application or you know it's multithreaded you should not be giving an app any more than 1-core.
 
 The vertical pod autoscaling tool can be used to calculate resource recommendations based on the real time resources used by your pods. [This video demonstration](https://youtu.be/nZMtJRQR3jY) shows how it can be done.
 
-**Get current request values with oc command**  To get the current value of CPU requests allowed for the project currently logged into with `oc` The following one-liner will display the current value of CPU requests as currently allotted for the current project.
+**Get current request values with oc command**  
+To get the current value of CPU requests allowed for the project currently logged into with `oc` The following one-liner will display the current value of CPU requests as currently allotted for the current project.
 
 ```bash
 oc get quota compute-long-running-quota -o=custom-columns=Requests:.status.used."requests\.cpu"
@@ -109,14 +119,11 @@ oc get quota compute-long-running-quota -o=custom-columns=Requests:.status.used.
 Requests
 14500m
 ```
-**Note:**  unless you're running a scientific application or you know it's multithreaded you should not be giving an app any more than 1-core._
+**Note:**  Unless you're running a scientific application or you know it's multithreaded you should not be giving an app any more than 1-core.
 
 ## Jenkins resource configuration recommendations
 
 The platform team recommends migrating away from Jenkins to a more modern CI/CD pipeline tool such as OpenShift Pipelines, ArgoCD and/or GitHub Actions. However, we recognize that a migration represents a significant amount of work and isn't always a realistic immediate solution to the resourcing problems posed by a Jenkins installation. The following section contains recommendations for Jenkins configurations that can be used to help ease resourcing issues while your team plans their migration to another CI/CD tool.
-
-The platform team recommends migrating away from Jenkins to a more modern CI/CD pipeline tool such as OpenShift Pipelines, ArgoCD and/or GitHub Actions. However, we recognize that a migration represents a significant amount of work and isn't always a realistic immediate solution to the resourcing problems posed by a Jenkins installation. The following section contains recommendations for Jenkins configurations that can be used to help ease resourcing issues while your team plans their migration to another CI/CD tool.
-
 
 Tuning the resources of Jenkins deployments can have a large effect on the available resources of the platform. As of writing, Jenkins accounts for the largest user of CPU requests and limits on the platform. Recent analysis has indicated:
 
@@ -182,7 +189,9 @@ You can identify current resource quota consumption and properly size resource r
 
 **Viewing quota usage (GUI)**
 
-From the OpenShift web console, in the **Administrator** perspective, proceed to **Administration** \> **ResourceQuotas** and select the appropriate `ResourceQuota` (i.e., `compute-long-running-quota`). Here is an example:
+From the OpenShift web console, in the **Administrator** perspective, proceed to **Administration** \> **ResourceQuotas** and select the appropriate `ResourceQuota` (i.e., `compute-long-running-quota`). 
+
+Here is an example:
 
 ![Tools example compute long running quota dashboard](../../images/tools-example-compute-long-running-quota.png)
 
@@ -230,7 +239,9 @@ Because memory is incompressible, memory requests and limits should be a little 
 
 ## Related training content
 
-The [OpenShift 101 and 201 training](../training-and-learning/training-from-the-platform-services-team.md) covers some of the principles of resource tuning. There is a related [OpenShift 201 resource management lab exercise and video demonstration](https://github.com/bcgov/devops-platform-workshops/blob/master/openshift-201/resource-mgmt.md).
+The [OpenShift 101 and 201 training](../training-and-learning/training-from-the-platform-services-team.md) covers some of the principles of resource tuning. 
+
+There is a related [OpenShift 201 resource management lab exercise and video demonstration](https://github.com/bcgov/devops-platform-workshops/blob/master/openshift-201/resource-mgmt.md).
 
 ---
 ## Related pages

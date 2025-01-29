@@ -223,10 +223,15 @@ This will increase the chances of us approving your request quickly (or helping 
 >
 > **When will automatic approval happen?**
 > 1. If your request for more CPU and Memory meets all of the following requirements, it will be automatically approved:
-> * For memory quota adjustments, if your namespace’s current usage exceeds 85% of its total memory limit.
-> * Your namespace’s resource utilization rate is at least 35%.
-> * The requested adjustment either meets the minimum values of 1 core for CPU and 2GB for memory, or increases the quota by no more than 50%.
+
+> * For memory quota adjustments, if your namespace’s current usage exceeds 85% of its total memory limit
+
+> * Your namespace’s resource utilization rate is at least 35%
+> * The requested adjustment either meets the minimum values 
+of 1 core for CPU and 2GB for memory, or increases the quota by no more than 50%.
+
 > 2. If your request for more Storage meets all of the following requirements, it will be automatically approved:
+
 > * Your namespace’s current usage exceeds 80% of its PVC limit.
 > * The requested adjustment either meets the minimum values of 32GB, or increases the quota by no more than 50%.
 
