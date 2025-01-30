@@ -22,14 +22,14 @@ sort_order: 1
 
 
 # Build an application 
-Last updated: **October 17, 2023**
+Last updated: **January 30, 2025**
 
 This document outlines the best practices for building applications on OpenShift.  It presents a step-by-step guide that will assist you in creating efficient applications. Overall, this page will provide a comprehensive resource to equip your team with the knowledge, resources  and techniques required to successfully develop applications on the OpenShift Platform.
 
 
 ## On this page
 * [**Requirements to build your application**](#requirements-to-build-your-application)
-* [**Design and develop your application**](#design-and-develop-your-application)
+* [**Design and development considerations**](#design-and-development-considerations)
 * [**Introduction to CI/CD Pipeline**](#introduction-to-cicd-pipeline)
 * [**Data storage**](#data-storage)
 * [**Best practices for creating your image**](#best-practices-for-creating-your-image)
@@ -56,41 +56,34 @@ Here are ten common practices for building applications in a cloud native way th
 
 8. **Knowledge is power**: Pick modern cloud native tech stacks with community momentum, leverage the established tech community for suggestions and [reusable components](../reusable-code-and-services/reusable-services-list.md).  Also documenting knowledge base related to the application and keeping it up to date
 
-9. **Follow B.C. Government standards**: Building an application requires a design system, you can find more information about it [here](../design-system/about-the-design-system.md). Keeping with good coding practices such as consistent readable code and comments, unit testing, standard linting format, peer review process with repo branch protection among [Security best practices](../security-and-privacy-compliance/security-best-practices-for-apps.md) is vital
+9. **Follow B.C. government standards**: Follow [privacy and compliance guidelines](../security-and-privacy-compliance/privacy-compliance-and-guidance.md), understand the [security controls](../security-and-privacy-compliance/platform-security-compliance.md) in place for OpenShift that actively protects applications and data. Stay up to date with [security best practices](../security-and-privacy-compliance/security-best-practices-for-apps.md) 
 
 10. **Make use of good software development methodology**: For example, Agile and Scrum practice in combination with an effective development approach such as [Behaviour-Driven Development (BDD)](https://openpracticelibrary.com/practice/behavior-driven-development/) and [Test-Driven Development (TDD)](https://openpracticelibrary.com/practice/test-driven-development/)
 
 ---
-## Design and develop your application
-
-![Container with a checklist and security icons to describe the two points below when developing applications ](../../images/container-checklist-security.png)
-
+## Design and development considerations 
 When developing your application it is very important to have a team that is **conscious about the differences** when developing an application compared to traditional legacy applications.
 
-* Developing applications in OpenShift requires a different mindset as it leverages containerization concepts, understand how to define container images, and consider microservices architecture approach for building modular and scalable applications
+* Developing applications in OpenShift requires a different mindset as it leverages containerization concepts, understand how to define container images and consider microservices architecture approach for building modular and scalable applications
 
-* When it comes to deploying your applications on OpenShift, they typically follow a review process before being made accessible. This  ensures the app meets certain standards, security requirements and of course follows  best practices.  Understand this process and factor it into your deployment timeline and expectations  
-<br>
+* Deploying your applications on OpenShift follow a review process before being made accessible. This  ensures the app meets certain standards, security requirements and of course follows  best practices.  Understand this process and factor it into your deployment timeline and expectations  
 
-![Application maintenance considerations shows an individual sitting by their desk thinking of them](../../images/app-maintenance-graphic.png)
-**Don't assume** that OpenShift will take care of all aspects of app maintenance and stability: 
+* **Don't assume** that OpenShift will take care of all aspects of app maintenance and stability: 
 
-* While OpenShift provides a robust platform for deploying and managing applications, it's essential to remember that app maintenance and stability are still your responsibility as a development team. OpenShift handles the underlying infrastructure and orchestration, but you need to ensure your application code, dependencies, and configurations are properly maintained and updated to ensure stability and security
+    * While OpenShift provides a robust platform for deploying and managing applications, it's essential to remember that app maintenance and stability are still your responsibility as a development team. OpenShift handles the underlying infrastructure and orchestration, but you need to ensure your application code, dependencies, and configurations are properly maintained and updated to ensure stability and security
 
-* When designing your application architecture on OpenShift, consider how different components and services connect with each other. For example, keep in mind that pods, which are the smallest unit of deployment, don't restart in a specific order if they go down. Plan your application's resilience and communication patterns accordingly, considering concepts like readiness and liveness probes to handle pod failures gracefully
-<br>
+* Consider how different components and services connect with each other when designing your application architecture on OpenShift. For example, keep in mind that pods, the smallest unit of deployment, don't restart in a specific order if they go down
 
-![Cloud with a key and below an individual to demonstrate Single Sign On](../../images/sso-graphic.png)
-Think whether **Single Sign-On (SSO) is necessary** for your app and what it would look like if implemented:
+* Plan your application's resilience and communication patterns accordingly, considering concepts like readiness and liveness probes to handle pod failures gracefully
 
-* Single Sign-On is a mechanism that allows users to authenticate once and access multiple applications seamlessly. Consider whether your application would benefit from SSO, especially if you have multiple applications within your OpenShift environment
+* Think whether **Single Sign-On (SSO) is necessary** for your app and what it would look like if implemented:
+
+    * Single Sign-On is a mechanism that allows users to authenticate once and access multiple applications seamlessly. Consider whether your application would benefit from SSO, especially if you have multiple applications within your OpenShift environment
 <br> 
 
-![Team of developers exploring different components and external tools making sure they are compatible with a container environment](../../images/common-components-external-tools.png)
+* **Explore the common components** available and decide if you want to integrate any of them into your app:
 
-**Explore the common components** available and decide if you want to integrate any of them into your app:
-
-* OpenShift provides several common components, such as databases, message queues, and caching systems, that can be integrated into your application architecture. Evaluate these components based on your app's requirements and decide if incorporating them will enhance functionality, performance, or security. Consider how these components fit into your overall design and plan for their deployment and configuration
+    * OpenShift provides several common components, such as databases, message queues, and caching systems, that can be integrated into your application architecture. Evaluate these components based on your app's requirements and decide if incorporating them will enhance functionality, performance, or security. Consider how these components fit into your overall design and plan for their deployment and configuration
 
 If you plan to use **external tools or frameworks** like WordPress, be mindful of their resource usage and compatibility with a container environment:
 
@@ -102,11 +95,11 @@ High availability ensures that your application remains accessible even during f
 By considering these points during the design and development phase, you can optimize your application for the OpenShift environment and ensure its stability, security, and scalability.
 
 ---
-## Introduction to  CI/CD Pipeline
+## Start setting up an automated CI/CD Pipeline
 
 Before building and deploying your application, it's highly recommended to set up an automated [CI](https://openpracticelibrary.com/practice/continuous-integration/)/[CD](https://openpracticelibrary.com/practice/continuous-deployment/) pipeline as the foundation of building, testing and deploying application components on the OpenShift platform. It helps to establish good development practices, reduces the risk of errors, and streamlines the entire software development lifecycle. It fosters a culture of continuous improvement, collaboration, and reliable software delivery.
 
-As you develop your application for deployment to the B.C. Gov Private Cloud PaaS OpenShift platform, you should create a pipeline that automatically builds and tests your code so that your software delivery is efficient and secure. Use our pipeline templates to help you get started.
+Develop your application for deployment by creating a pipeline that automatically builds and tests your code in order for your software delivery to be efficient and secure. Use our pipeline templates to help you get started.
 
 There are many different CI/CD pipeline solutions, your team should pick a tech stack that is cloud native and works well with your team's setup. If you are not sure what to choose or how to start, take a look at our recommended [cloud native CI/CD pipeline solutions](../automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md).
 
