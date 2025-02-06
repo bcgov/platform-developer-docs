@@ -38,6 +38,7 @@ It is available to any team on the B.C. government's OpenShift platform and can 
 * [Migration and setup](#migration-and-setup)
 * [Create applications in Argo CD](#create-applications-in-argo-cd)
 * [Configure your project](#configure-your-project)
+* [Optional GitHub Webhook](#optional-github-webhook)
 * [Related pages](#related-pages)
 
 ## Why Argo CD is good for you
@@ -323,9 +324,27 @@ Access to the Argo CD UI includes two sets of permissions: read/write and read-o
 
 See the [GitOpsTeam template](../../files/argocd/gitopsteam_template.yaml){:download="gitopsteam_template.yaml"} for more details. 
 
+## Optional GitHub Webhook
+Argo CD polls each Git repository every three minutes to see if there have been any changes.  In a big cluster like Silver, there are many applications and it could take a little longer for Argo CD to fetch and apply changes.  If you would like to have your apps get updated right away after a change has been made in your GitHub repo, you can add a webhook.  Upon receiving the webhook from your repo, Argo CD will refresh any applications that have that repo as a source.  That is, just your apps will get refreshed at that moment; other apps will get refreshed at the usual polling interval.
+
+To add a webhook in your GitHub repo, log in to GitHub, go to your repo, then click Settings --> Webhooks --> Add webhook
+
+Enter the following information:
+
+* Payload URL: `https://gitops-shared.apps.CLUSTERNAME.devops.gov.bc.ca/api/webhook`
+* Content type: application/json
+* Secret: (This is just to prevent abuse of the API endpoint by outside parties.  You can find the secret in the description of the Rocketchat channel "#devops-argocd".)
+* SSL verification: keep the default "Enable SSL verification"
+* Which events would you like to trigger this webhook?: This is up to you to determine the conditions under which the webhook is triggered.
+* Active: keep this box checked in order to enable the webhook
+
+Click "Add webhook"
+
+After saving the webhook, a repo action of the type that you specified should trigger a call to Argo CD's webhook API, causing your apps to refresh.
+
 ## Related pages
 
-* [Current Argo CD version, as of December 2024: v2.12](https://github.com/argoproj/argo-cd/tree/v2.12.6)
+* [Current Argo CD version, as of February 2025: v2.13](https://github.com/argoproj/argo-cd/tree/v2.13.1)
 * [Kustomize.io](https://kustomize.io)
 * [Helm](https://helm.sh/)
 
