@@ -331,7 +331,7 @@ To add a webhook in your GitHub repo, log in to GitHub, go to your repo, then cl
 
 Enter the following information:
 
-* Payload URL: https://gitops-shared.apps.CLUSTERNAME.devops.gov.bc.ca/api/webhook
+* Payload URL: `https://gitops-shared.apps.CLUSTERNAME.devops.gov.bc.ca/api/webhook`
 * Content type: application/json
 * Secret: (This is just to prevent abuse of the API endpoint by outside parties.  You can find the secret in the description of the Rocketchat channel "#devops-argocd".)
 * SSL verification: keep the default "Enable SSL verification"
