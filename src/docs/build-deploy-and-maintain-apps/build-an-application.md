@@ -105,9 +105,9 @@ Most applications need some data to persist across different sessions or connect
 
 ### Database storage and software
 
-* Run databases within your OpenShift namespace using `netapp-block-standard` persistent volumes 
-
 * Always use [persistent volumes](../platform-architecture-reference/platform-storage.md) for database storage to ensure data durability and availability 
+
+* Run databases within your OpenShift namespace using `netapp-block-standard` persistent volumes 
 
 * Ensure databases meet [high-availability standards](../database-and-api-management/high-availability-database-clusters.md)
 
