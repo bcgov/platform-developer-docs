@@ -47,7 +47,7 @@ Here are ten common practices for building applications in a cloud native way th
 
 3. **Understand containerization**: Learn how to deploy and manage containers using technologies such as Docker or Podman
 
-4. **Learn Kubernetes fundamentals**: OpenShift is built on Kubernetes, so basic knowledge is essential
+4. **Define application requirements**: Clearly define its requirements, including dependencies, external services and resource needs for scalability and high availability
 
 5. **Use the command-line interface (CLI)**: OpenShift provides CLI tool (oc) to interact with the platform. Learn how to [how to install it](../openshift-projects-and-access/install-the-oc-command-line-tool.md)
 
