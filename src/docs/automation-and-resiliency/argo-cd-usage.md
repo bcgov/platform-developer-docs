@@ -327,6 +327,8 @@ See the [GitOpsTeam template](../../files/argocd/gitopsteam_template.yaml){:down
 ## Optional GitHub Webhook
 Argo CD polls each Git repository every three minutes to see if there have been any changes.  In a big cluster like Silver, there are many applications and it could take a little longer for Argo CD to fetch and apply changes.  If you would like to have your apps get updated right away after a change has been made in your GitHub repo, you can add a webhook.  Upon receiving the webhook from your repo, Argo CD will refresh any applications that have that repo as a source.  That is, just your apps will get refreshed at that moment; other apps will get refreshed at the usual polling interval.
 
+**Note**: This is not available for the Emerald cluster, because the API there is not reachable from GitHub.
+
 To add a webhook in your GitHub repo, log in to GitHub, go to your repo, then click Settings --> Webhooks --> Add webhook
 
 Enter the following information:
