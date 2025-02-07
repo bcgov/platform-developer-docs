@@ -111,7 +111,7 @@ Most applications need some data to persist across different sessions or connect
 
 * Ensure databases meet [high-availability standards](../database-and-api-management/high-availability-database-clusters.md)
 
-* Understand what makes a database work in OpenShift, your next step is to choose the [right database software](../database-and-api-management/opensource-database-technologies.md) for your application
+* Choose the [right database software](../database-and-api-management/opensource-database-technologies.md) based on the needs of your application
 
 * Plan for backups and recovery follow the [Database Backup Best Practices](../database-and-api-management/database-backup-best-practices.md) documentation as it will provide a good starting point for creating a backup and recovery plan
 
