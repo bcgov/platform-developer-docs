@@ -99,7 +99,7 @@ Most applications need some data to persist across different sessions or connect
 
 * Use `netapp-file-standard` persistent volumes for small storage. You can find out more about persistent volume claims in our [Platform Storage](../platform-architecture-reference/platform-storage.md) documentation
 
-* Choose OCIO Object Storage for large-scale file storage (more than 100Gi) or user-uploaded files
+* Choose OCIO Object Storage for large-scale file storage (more than 100Gi) or user-uploaded files. You can find out more about provisioning an object storage bucket from your ministry DevOps specialist, or from the [#object-storage](https://chat.developer.gov.bc.ca/channel/object-storage)  channel on RocketChat. 
 
 * Avoid storing files in a database (also known as "blobs"), as it degrades performance. Instead, store your files according to the recommendations in the previous two points, and then reference file locations in a database table. This approach allows you to leverage the powerful querying capabilities of a database without burdening the database storage with unsuitable data.
 
