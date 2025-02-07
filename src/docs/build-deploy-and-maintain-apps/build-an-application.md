@@ -101,7 +101,7 @@ Most applications need some data to persist across different sessions or connect
 
 * Choose OCIO Object Storage for large-scale file storage (more than 100Gi) or user-uploaded files
 
-* Avoid storing files in a database, as it degrades performance. Instead, use object storage and reference file locations in a database table. You can find out more about provisioning an object storage bucket from your ministry DevOps specialist, or from the [#object-storage](https://chat.developer.gov.bc.ca/channel/object-storage)  channel on RocketChat. This approach allows you to leverage the powerful querying capabilities of a database without burdening the database storage with unsuitable data.
+* Avoid storing files in a database (also known as "blobs"), as it degrades performance. Instead, store your files according to the recommendations in the previous two points, and then reference file locations in a database table. This approach allows you to leverage the powerful querying capabilities of a database without burdening the database storage with unsuitable data.
 
 ### Database storage and software
 
