@@ -113,7 +113,7 @@ Most applications need some data to persist across different sessions or connect
 
 * Choose the [right database software](../database-and-api-management/opensource-database-technologies.md) based on the needs of your application
 
-* Plan for backups and recovery follow the [Database Backup Best Practices](../database-and-api-management/database-backup-best-practices.md) documentation as it will provide a good starting point for creating a backup and recovery plan
+* Plan your database backups and recovery by following the [Database Backup Best Practices](../database-and-api-management/database-backup-best-practices.md) documentation
 
 ## Best practices for creating your image
 
