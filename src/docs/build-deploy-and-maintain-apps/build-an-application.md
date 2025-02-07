@@ -45,7 +45,7 @@ Here are ten common practices for building applications in a cloud native way th
 
 2. **Define application requirements**: Clearly define its requirements, including dependencies, external services and resource needs for scalability and high availability
 
-3. **Understand containerization**: Learn how Docker and containers impact deployment and management
+3. **Understand containerization**: Learn how to deploy and manage containers using technologies such as Docker or Podman
 
 4. **Learn Kubernetes fundamentals**: OpenShift is built on Kubernetes, so basic knowledge is essential
 
