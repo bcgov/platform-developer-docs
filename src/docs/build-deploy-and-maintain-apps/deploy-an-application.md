@@ -62,13 +62,22 @@ Before deployment, ensure that:
 
 - The application builds successfully
 - The container image is stored in a registry
-- You have the correct access credentials for the registry. If you encounter any issues, review the build logs to diagnose the problem, make sure that the credential you have for image registry is correct or make sure the service account `image-puller` has enough access
+- You have the correct access credentials for the registry. (e.g. verifying the `image-puller` role in OpenShift)
 
-OpenShift supports images from:
+OpenShift supports images from various sources:
 
-- **Artifactory** - For managing dependencies centrally. More on [image and artifact management with Artifactory](../build-deploy-and-maintain-apps/image-artifact-management-with-artifactory.md)
-- **OpenShift image streams** - Tracks image versions within OpenShift
+- **OpenShift Image Streams** – Tracks image versions within OpenShift, making updates easier via triggers. But image is not shareable bewteen different cluster  
+- **Artifactory** – Centralizes artifact and dependency management (including container images). While OpenShift offers image streams natively, organizations often use Artifactory for:
+  - A single, standardized repository of *all* application artifacts (beyond just containers)  
+  - Additional scanning, caching, or proxying capabilities provided by an external repository  
+  - Image is sharable bewteen different cluster
+  - More info on [image and artifact management with Artifactory](../build-deploy-and-maintain-apps/image-artifact-management-with-artifactory.md)
 - **External registries** - [Docker Hub](http://docker.io/), [Quay.io](https://quay.io/) or RedHat image repository
+  
+
+- **Artifactory** - For managing dependencies centrally.
+- **OpenShift image streams** - Tracks image versions within OpenShift
+
 
 ### 2. Review application requirements
 
@@ -126,8 +135,7 @@ A deployment in OpenShift consists of:
 - **Pod Template** - Defines container specification (desired state of the pods being deployed), base image, ports and environment variables
 - **Replicas** - Number of instances that should be maintained
 - **Selectors** - Labels that identify the pods managed by the deployment configuration
-- **Triggers** - Image triggers update deployments when a new version is available. `BuildConfig` supports image triggers and configuration change triggers. Additionally, Deployments and StatefulSets can also use [image triggers](https://docs.openshift.com/container-platform/4.12/openshift_images/triggering-updates-on-imagestream-changes.html) which initiate updates when an image stream tag that the triggering resource points to is updated.
-
+- **Triggers** - Image triggers update deployments when a new version is available. 
 Understanding these components is essential for correctly configuring your application's deployment. To read more about other configuration options, use `oc explain` command or this [kubernetes official documentation](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/).
 
 ### 2. Choose a deployment strategy
@@ -137,7 +145,7 @@ OpenShift natively supports two deployment strategies:
 - **Rolling Deployment** Updates the application gradually while keeping it available. Useful when you need zero-downtime deployments
 - **Recreate Deployment** Replaces the entire application at once.Suitable when your application can tolerate downtime
 
-More complex strategies need to be set up explicitly:
+Teams may also implement:
 
 - **Blue-Green Deployment** Swaps old and new applications in one operation, minimizing downtime. Requires double the resources
 - **Canary Deployment** Deploys the new version to a small subset of users before rolling it out to everyone
@@ -152,15 +160,17 @@ Environment variables can be defined in the `env` field of the Pod specification
 
 ## Configure networking and routes
 
-### 1. NetworkPolicies
+**Why is networking part of a deployment guide?**  
+Even though networking can be handled separately, configuring how your application is exposed (or restricted) is core to rolling out a functional service. Without it, your newly deployed app may not be accessible to the intended audience.
+### 1. Network Policies
 
-Network policies (NetworkPolicies) are Kubernetes resources that control the traffic between pods and networks. They use labels to select pods and define rules which specify what traffic is allowed. The aim is to provide a secure network for your applications running on OpenShift.
+Network policies control traffic flow at the pod level. They define the allowed inbound and outbound traffic, enhancing security. Learn more in the [network policies guide](../platform-architecture-reference/openshift-network-policies.md).
 
 Applying a specific network policy to a deployment is a best practice to enhance security. For a detailed guide, learn more about the [network policies](../platform-architecture-reference/openshift-network-policies.md) guide.
 
 ### 2. Exposing services using routes
 
-In OpenShift, a `Route` allows external access to an OpenShift service by mapping it to a publicly accessible hostname, such as `app.example.com`. If you do not specify a hostname, OpenShift will automatically assign one based on a default pattern, typically including the service name and namespace name. Ensure that the DNS entry for the hostname points to the OpenShift Router’s service IP to enable external access. Useful links:
+In OpenShift, a `Route` provides external access to an internal service. You can specify a custom hostname or use an automatically generated one. Ensure the DNS entry points to the OpenShift Router service. Useful links:
 
 1. Red Hat's [route official documentation](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html)
 2. [How do I get a custom vanity URL for my application in Openshift?](https://stackoverflow.developer.gov.bc.ca/questions/172/176#176)
@@ -168,8 +178,7 @@ In OpenShift, a `Route` allows external access to an OpenShift service by mappin
 
 ### 3. Configuring SSL/TLS Certificates
 
-Security is a critical part of any application deployment. OpenShift allows securing routes with SSL/TLS certificates. For obtaining and managing free SSL/TLS certificates, Certbot is available. It automates certificate issuance and renewal. Learn how to use it with [this bcgov GitHub](https://github.com/bcgov/certbot) guide to Certbot.
-
+Security is a critical part of any application deployment. In OpenShift, you can secure routes with SSL/TLS certificates. To obtain a certificate from the OCIO Identity Management Services’ Entrust Certificate Services, you must first generate a Certificate Signing Request (CSR) and submit it through My Services. Once issued, you can install the certificate on your application route to enable secure communication.
 ---
 
 ## Test the deployment
@@ -244,9 +253,9 @@ Infrastructure as Code (IaC) ensures consistent and reliable updates. Always upd
 
 Automating deployment with a **CI/CD pipeline** enhances efficiency by streamlining application updates, bug patches reducing errors.
 
-OpenShift integrates with **Tekton**, empowering you to create robust CI/CD systems. With Tekton, pipeline workflows can be defined in YAML format, introducing the concept of "pipeline as code." This makes pipelines reusable, version-controlled, and easily manageable. Tekton's predefined pipeline configurations are available in the [Tekton pipeline templates](https://github.com/bcgov/pipeline-templates).
+- **Tekton** – OpenShift integrates with **Tekton**, empowering you to create robust CI/CD systems. With Tekton, pipeline workflows can be defined in YAML format, introducing the concept of "pipeline as code." This makes pipelines reusable, version-controlled, and easily manageable. Tekton's predefined pipeline configurations are available in the [Tekton pipeline templates](https://github.com/bcgov/pipeline-templates).
 
-For multi-cluster management, OpenShift provides ArgoCD, which uses Git as the "source of truth" for declarative infrastructure and application configurations. Learn more about [ArgoCD](https://github.com/bcgov/openshift-wiki/blob/b1a4e6db91932fd3f29705a5c8ee44983abf8763/docs/ArgoCD/argocd_info.md)  along with [CI/CD pipeline templates](../automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md).
+- **ArgoCD** - For multi-cluster management, OpenShift provides ArgoCD, which uses Git as the "source of truth" for declarative infrastructure and application configurations. Learn more about [ArgoCD](https://github.com/bcgov/openshift-wiki/blob/b1a4e6db91932fd3f29705a5c8ee44983abf8763/docs/ArgoCD/argocd_info.md)  along with [CI/CD pipeline templates](../automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md).
 
 ### 2. Version management in Continuos Deployment (CD)
 
