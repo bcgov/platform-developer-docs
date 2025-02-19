@@ -19,126 +19,131 @@ content_owner: Olena Mitvoska
 
 sort_order: 2
 ---
-# Deploy an Application 
-Last updated: **October 17, 2023**
 
-Welcome to the OpenShift Application Deployment site! This page is dedicated to providing you with comprehensive insights and best practices on effectively deploying your team's application in the OpenShift platform. 
+# Deploy an application
 
-We assume you already know the best practices mentioned in [Build your application](../build-deploy-and-maintain-apps/build-an-application.md) if not, make sure to check it out before continuing with this part of the guide. 
+Last updated: **February 19, 2025**
 
-We will cover deployment strategies, configuring resources, scaling options and important assets. 
+Welcome to the OpenShift Application Deployment site! This guide provides comprehensive insights and best practices for deploying applications on the OpenShift platform. Before proceeding, ensure you are familiar with the best practices outlined in [Build your application](../build-deploy-and-maintain-apps/build-an-application.md). If not, review them first to streamline your deployment process.
+
+We will cover deployment strategies, resource configuration, scaling options and essential deployment assets to help you optimize and manage your application effectively.
+
+RedHat's OpenShift simplifies the deployment, management and scaling of containerized applications. Key features include:
+
+- **Self-Service application stacks** - Predefined stacks to accelerate development
+- **SCM integration** - Seamless integration with SCM tools like Git for direct deployment
+- **Automated builds** - Supports various build strategies with automatic updates
+- **Deployment strategies and automated rollbacks** - Rolling updates and rollback options for zero downtime
+- **Service discovery and load balancing**  - Automatic service discovery and efficient load balancing of traffic
+- **Integrated developer tools** - Built-in CLI and web console for simplified workflows
+- **Centralized monitoring and logging** - Uses Prometheus for metrics and built-in logging tools
 
 ## On this page
-* [**Introduction to OpenShift deployment  and its features**](#introduction-to-openshift-deployment-and-its-features)
-* [**Introduction to application deployment with OpenShift**](#introduction-to-application-deployment-with-openshift)
-* [**Preparing for deployment**](#preparing-for-deployment)
-* [**Deploying the application**](#deploying-the-application)
-* [**Configuring deployment**](#configuring-deployment)
-* [**Configuring networking and routes**](#configuring-networking-and-routes)
-* [**Testing the deployment**](#testing-the-deployment)
-* [**Monitoring and Logging**](#monitoring-and-logging)
-* [**Scaling and managing the application**](#scaling-and-managing-the-application)
-* [**Continuous deployment and maintenance**](#continuous-deployment-and-maintenance)
-* [**Handling Data Storage in OpenShift**](#handling-data-storage-in-openshift)
-* [**Securing the deployed application**](#securing-the-deployed-application)
-* [**Conclusion**](#conclusion)
-* [**Related pages**](#related-pages)
+
+- [**Prepare for deployment**](#prepare-for-deployment)
+- [**Deployment**](#deployment)
+- [**Manage deployment configuration**](#managing-deployment-configuration)
+- [**Configure networking and routes**](#configure-networking-and-routes)
+- [**Test the deployment**](#test-the-deployment)
+- [**Monitoring and logging**](#monitoring-and-logging)
+- [**Scale and manage the application**](#scale-and-manage-the-application)
+- [**Continuous deployment and maintenance**](#continuous-deployment-and-maintenance)
+- [**Handle data storage in OpenShift**](#handle-data-storage-in-openshift)
+- [**Secure the deployed application**](#secure-the-deployed-application)
+- [**Conclusion**](#conclusion)
+- [**Related pages**](#related-pages)
 <!-- ### End of "On this page" -->
----
 
-## Introduction to OpenShift deployment and its features
+## Prepare for deployment
 
-In the landscape of container orchestration platforms, Red Hat's OpenShift is an industry front-runner, offering comprehensive solutions to deploy, manage, and scale containerized applications with unique advantages:
+### 1. Verify application build and image availability
 
-- **Self-Service Application Stacks:** Instant access to a variety of application stacks to accelerate development
-- **SCM Integration:** Seamless integration with SCM tools like Git for direct deployment from repositories
-- **Build Automation:** Supports various build strategies and automatic application updates upon source code changes
-- **Deployment Strategies:** Multiple deployment strategies for zero downtime releases
-- **Service Discovery & Load Balancing:** Automatic service discovery and efficient load balancing of traffic
-- **Automated Rollbacks:** Simplified rollback to previous application versions
-- **Integrated Developer Tools:** In-built developer tools for a complete developer experience
-- **Integrated Metrics and Logging:** Utilizes Prometheus metrics and centralized log management for insights and monitoring
+Before deployment, ensure that:
 
----
+- The application builds successfully
+- The container image is stored in a registry
+- You have the correct access credentials for the registry. (e.g. verifying the `image-puller` role in OpenShift)
 
-## Introduction to application deployment with OpenShift
+OpenShift supports images from various sources, including:
 
-Deploying applications in OpenShift involves orchestrating application images within Pods, providing network connectivity via Services, and exposing them to users through Routes, appropriate network policy. 
+- **OpenShift Image Streams** - Tracks image versions within OpenShift, enabling automated updates via triggers. However, images managed this way are not shareable between different clusters  
+- **Artifactory** - A centralized repository for managing application artifacts, including container images. While OpenShift natively supports image streams, organizations often use Artifactory for:
+  - A single, standardized repository for **all** application artifacts (not just containers)  
+  - Additional scanning, caching, or proxying capabilities provided by an external repository  
+  - Sharing images across multiple clusters
+  - Find more details on [image and artifact management with Artifactory](../build-deploy-and-maintain-apps/image-artifact-management-with-artifactory.md)
+- **External registries** - Supports sources such as [Docker Hub](http://docker.io/), [Quay.io](https://quay.io/) or RedHat image repository
 
-This process works hand-in-hand with the build process, detailed in our [build an application](../build-deploy-and-maintain-apps/build-an-application.md) documentation . Following sections will dive deeper into each deployment stage.
+### 2. Review application requirements
 
----
+Every application has specific deployment needs, such as:
 
-## Preparing for Deployment
+- **Environment variables and secrets** - Store sensitive data like API keys or credentials in [vault](../secrets-management/vault-getting-started-guide.md)
+- **Configuration settings** - Ensure correct application settings before deployment
+- **Database connectivity** - Validate database access and credentials
 
-### 1. Verifying the successful build of the application and access to Image Registry
+### 3. Ensure adequate resources
 
-Before deploying your application on OpenShift, it's crucial to verify a successful build of your application. A successful build will push the application's image to an image registry. 
-
-OpenShift can pull images from various sources, including [Artifactory](../build-deploy-and-maintain-apps/image-artifact-management-with-artifactory.md), [Docker.io](http://docker.io/) (Docker Hub), [Quay.io](http://quay.io/), OpenShift's integrated registry, and the RedHat image repository. 
-
-Ensure that you have access to the registry where your image resides. If you encounter any issues, review the build logs to diagnose the problem, make sure that the credential you have for image registry is correct or make sure the service account `image-puller` has enough access.
-
-### 2. Reviewing the Application's Requirements for Deployment
-
-Every application has unique requirements for deployment. These may include environment variables, application secrets, configuration data, and database connectivity, among others. Review all these required parameters and ensure they works fine before deployment. 
-
-**Remember** that sensitive data like API keys or credentials should be stored in [vault](../secrets-management/vault-getting-started-guide.md) in OpenShift.
-
-### 3. Ensuring the Availability of Necessary Resources in OpenShift
-
-OpenShift allows you to fine-tune resources like CPU, memory, and storage for your application's pods. Before deploying, ensure that the necessary resources are available in OpenShift. Your application should have enough resources to perform efficiently but not too much, which can be wasteful. 
-
-For guidance on resource tuning, refer to this [documentation](../automation-and-resiliency/application-resource-tuning.md). You can also watch this [video](https://www.youtube.com/watch?v=rkxVZgn9icU&t=14s) for more explanation. Understanding and adjusting these resources according to your application's needs is a critical aspect of deployment preparation.
+Allocate sufficient CPU, memory and storage based on expected workload. OpenShift allows resource tuning for optimal performance. For guidance, refer to [resource tuning](../automation-and-resiliency/application-resource-tuning.md) guide and this YouTube video about [CPU and memory utilization](https://www.youtube.com/watch?v=rkxVZgn9icU&t=14s).
 
 ---
 
-## Deploying the application
+## Deployment
 
-### 1. Creating a deployment using OpenShift CLI or Web Console
+### 1. Choose a deployment method
 
-To deploy an application, you can use the OpenShift CLI (`oc new-app`) or the web console. Both offer the same capabilities and your choice will be dependent on personal preference. More information can be found in the [official OpenShift documentation](https://docs.openshift.com/container-platform/4.13/applications/creating_applications/creating-applications-using-cli.html).
+You can deploy using:
 
-### 2. Configuring resource limits and scaling options
+- OpenShift CLI (`oc new-app`) - More on [how to install the oc command line](../openshift-projects-and-access/install-the-oc-command-line-tool.md)
+- [Web console](../openshift-projects-and-access/login-to-openshift.md)
 
-Resource limits and scaling options are an important part of managing application performance and availability. 
+Both offer the same capabilities and your choice will be dependent on personal preference. More information can be found in the [official OpenShift documentation](https://docs.openshift.com/container-platform/4.13/applications/creating_applications/creating-applications-using-cli.html).
 
-OpenShift allows you to set resource limits (CPU and memory) for each Container in your deployments, which can prevent a Pod from using more resources than necessary. 
+### 2. Configure resource limits and scaling
 
-Scaling options allow your application to adapt to different load levels by adjusting the number of running Pods.  The best practice is to provide the suitable resources to your application is to monitoring its normal and peak performance, and decide resources quota and number of replicas dependently. 
+To optimize performance and availability:
 
-This is covered in detail in the [official OpenShift documentation](https://docs.openshift.com/container-platform/latest/nodes/clusters/nodes-cluster-resource-configure.html).
+- Set resource limits (CPU and memory) for each container in your deployments to prevent overuse
+- Enable auto-scaling to adjust pod replicas based on traffic
 
-### 3. Get the manifest file from live instance to store as infrastructure as code
+Best practice: Monitor performance under normal and peak loads, then set decide appropriate quotas  resources and number of replicas dependently. This is covered in detail in the [official OpenShift documentation](https://docs.openshift.com/container-platform/latest/nodes/clusters/nodes-cluster-resource-configure.html).
 
-Infrastructure as Code (IaC) is a best practice for managing and provisioning technology stacks through machine-readable definition files, rather than physical hardware configuration. You can extract the configuration of a live object in OpenShift as a YAML or JSON manifest file and store it in your version control system, for example Git. This practice makes it easy to track changes, replicate configurations, and recover from mishaps. 
+### 3. Configure networking and routes
+
+To expose the application externally:
+
+- Define services to route internal traffic
+- Create routes to make the application publicly accessible. If external access is not needed, skip route configuration
+- Export the manifest file from a live instance (`oc get deployment -o yaml`) to store it as Infrastructure as Code (IaC) section
+
+Infrastructure as Code (IaC) is a best practice for managing and provisioning technology stacks through machine-readable definition files, rather than physical hardware configuration. You can extract the configuration of a live object in OpenShift as a YAML or JSON manifest file and store it in your version control system, for example Git. This practice makes it easy to track changes, replicate configurations, and recover from mishaps.
 
 ---
 
-## Configuring deployment
+## Managing deployment configuration
 
-### 1. Understanding deployment and their components
+### 1. Understand deployment components
 
-Deployment in OpenShift are a recipe for deploying your application. They consist of the following are considered as most important field:
+A deployment in OpenShift consists of:
 
-- **Strategy:** Defines the strategy used for updating the Deployment. The default strategy is RollingUpdate, where new pods are gradually rolled out while old pods are terminated. Recreate is the other option, where it deletes all old Pods before creating new ones
-- **Pod Template:** This defines the desired state of the pods being deployed, including the base image, ports to expose, and environment variables
-- **Replicas:** The number of instances of your application that should be maintained
-- **Selectors:** Labels that identify the pods managed by the deployment configuration
-- **Triggers:** Events that will cause a new deployment. `BuildConfig` supports image triggers and configuration change triggers. Additionally, Deployments and StatefulSets can also use [image triggers](https://docs.openshift.com/container-platform/4.12/openshift_images/triggering-updates-on-imagestream-changes.html) which initiate updates when an image stream tag that the triggering resource points to is updated.
-
+- **Strategy** - Defines the strategy used for updating the Deployment. The default strategy is RollingUpdate, where new pods are gradually rolled out while old pods are terminated. Recreate is the other option, where it deletes all old Pods before creating new ones
+- **Pod Template** - Defines container specification (desired state of the pods being deployed), base image, ports and environment variables
+- **Replicas** - Number of instances that should be maintained
+- **Selectors** - Labels that identify the pods managed by the deployment configuration
+- **Triggers** - Image triggers update deployments when a new version is available
 Understanding these components is essential for correctly configuring your application's deployment. To read more about other configuration options, use `oc explain` command or this [kubernetes official documentation](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/).
 
-### 2. Defining deployment strategies
+### 2. Choose a deployment strategy
 
 OpenShift natively supports two deployment strategies:
 
-- **Rolling Deployment:** Updates the application gradually while keeping it available. Useful when you need zero-downtime deployments
-- **Recreate Deployment:** Replaces the entire application at once.Suitable when your application can tolerate downtime
+- **Rolling Deployment** Updates the application gradually while keeping it available. Useful when you need zero-downtime deployments
+- **Recreate Deployment** Replaces the entire application at once.Suitable when your application can tolerate downtime
 
-More complex strategies need to be set up explicitly:
-- **Blue-Green Deployment:** Swaps old and new applications in one operation, minimizing downtime. Requires double the resources
-- **Canary Deployment:** Deploys the new version to a small subset of users before rolling it out to everyone
+Teams may also implement:
+
+- **Blue-Green Deployment** Swaps old and new applications in one operation, minimizing downtime. Requires double the resources
+- **Canary Deployment** Deploys the new version to a small subset of users before rolling it out to everyone
 
 Choose the strategy that best meets your application's needs and expectations, considering factors like downtime tolerance, resource availability, and testing needs.
 
@@ -148,199 +153,189 @@ Environment variables can be defined in the `env` field of the Pod specification
 
 ---
 
-## Configuring networking and routes
+## Configure networking and routes
 
-### 1. NetworkPolicies
+### Networking in a deployment guide
 
-Network policies (NetworkPolicies) are Kubernetes resources that control the traffic between pods and networks. They use labels to select pods and define rules which specify what traffic is allowed. The aim is to provide a secure network for your applications running on OpenShift. 
+Although networking can be managed separately, setting up how your application is accessed (or restricted) is essential for functional deployment. Without proper configuration, your deployed app may not be accessible to the intended users.
 
-To give a deployment a very specific network policy is always the best practice to keep your application safe. For a detailed guide, read the [network policies](../platform-architecture-reference/openshift-network-policies.md) documentation.
+### 1. Network Policies
+
+Network policies control traffic flow at the pod level defining which inbound and outbound connections are allowed. This enhances security and ensures controlled communication. 
+
+Applying a specific network policy to a deployment is a best practice for to enhance security. For a detailed guide, learn more about the [network policies](../platform-architecture-reference/openshift-network-policies.md) guide.
 
 ### 2. Exposing services using routes
 
-In OpenShift, a `Route` is a way to expose a service at a specific host name, like www.google.ca. If you do not specify a hostname, OpenShift will automatically assign one based on a default pattern, typically including the service name and namespace name. The DNS resolver for the host name must point to the router's service IP address. Useful links:
+In OpenShift, a `Route` provides external access to an internal service. You can specify a custom hostname or use an automatically generated one. Ensure the DNS entry points to the OpenShift Router service. Useful links:
 
 1. Red Hat's [route official documentation](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html)
 2. [How do I get a custom vanity URL for my application in Openshift?](https://stackoverflow.developer.gov.bc.ca/questions/172/176#176)
 3. [Openshift Service and Route](https://www.densify.com/openshift-tutorial/openshift-route/)
 
-
 ### 3. Configuring SSL/TLS Certificates
 
-Security is a critical part of any application deployment. With OpenShift, you can secure your routes with SSL/TLS certificates. For obtaining and managing free SSL/TLS certificates, Certbot is available. It automates the tasks related to obtaining and renewing certificates and configuring web servers to use them. Learn how to use it by checking out [this bcgov GitHub](https://github.com/bcgov/certbot) guide to Certbot.
+Security is a critical part of any application deployment. In OpenShift, you can secure routes with SSL/TLS certificates. To obtain a certificate from the OCIO Identity Management Services - Entrust Certificate Services, you must first generate a Certificate Signing Request (CSR) and submit it through My Services. Once issued, you can install the certificate on your application route to enable secure communication.
 
 ---
 
-## Testing the deployment
+## Test the deployment
 
-### 1. Verifying the application's functionality post-deployment
+### 1. Verify the application's functionality post-deployment
 
-After deploying your application, it's critical to ensure that it's working as expected. You should test all the features of your application in a controlled environment. 
+After deploying your application, verifying its functionality is crucial to prevent issues in production. Test all features in a controlled environment, paying special attention to changes made during deployment.
 
-Pay special attention to any changes made during this deployment to ensure they have been applied successfully.
+### 2. Perform smoke tests or automated tests
 
-### 2. Performing Smoke Tests or Automated Tests
+Smoke testing verifies the most important functionalities of a system to ensure it works as expected. Automated tests are scripts that run to validate system behavior. Both help catch major issues early in the deployment process.
 
-Smoke testing involves executing a subset of test cases that cover the most important functionality of a system, to ascertain if crucial features of the system are working as expected. 
+One available automation tool is n8n, an open-source workflow automation tool. Detailed instructions on leveraging this tool are available in this [GitHub repository](https://github.com/bcgov/put/blob/main/docs/Introduction.md).
 
-On the other hand, automated tests are scripts that run automatically to verify the behavior of the system. Both are key to catching any major issues early in the deployment process. This can be done manually, or you can use tools to automate these tests. 
+### 3. Test disaster recovery
 
-One of the tools that is available is called n8n, we have a repo that has well-documented instruction of how to leveraging this tool [here](https://github.com/bcgov/put/blob/main/docs/Introduction.md).
+Disaster recovery testing ensures your application can handle system failures and recover quickly. This includes testing backup and restore functionality and high availability setups.
 
-### 3. Disaster Recovery Testing
+Maintaining deployment configurations as Infrastructure as Code (IaC) helps ensure consistency and simplifies disaster recovery.
 
-Disaster recovery testing is crucial for ensuring your application can handle system failures and recover quickly. This includes testing the backup and restore functionality and the high availability setup of your application. 
-
-The goal is to minimize downtime and data loss in case of a disaster. Having your deployment configuration as Infrastructure as Code (IaC) would be really helpful for this task.
-
-Read here for more [disaster recover plan](https://github.com/bcgov/platform-developer-docs/blob/main/src/docs/automation-and-resiliency/namespace-recovery-and-responsibilities.md).
+Read more about [disaster recover plan](https://github.com/bcgov/platform-developer-docs/blob/main/src/docs/automation-and-resiliency/namespace-recovery-and-responsibilities.md).
 
 ---
 
-## Monitoring and Logging
+## Monitoring and logging
 
-### 1. Setting up application monitoring and health checks
+### 1. Set up application monitoring and health checks
 
-OpenShift provides robust monitoring capabilities to ensure your application is running as expected. You can utilize services like [Sysdig](../app-monitoring/sysdig-monitor-onboarding.md) for monitoring the health and performance of your application, and [Uptime.com](https://uptime.com/) for availability monitoring.
+OpenShift provides robust monitoring capabilities to ensure your application is running as expected. Services like [Sysdig](../app-monitoring/sysdig-monitor-onboarding.md) help monitor health and performance, while [Uptime.com](https://uptime.com/) tracks availability.
 
-- **Alerts**: Proactive alerting is crucial for maintaining system reliability. Alerts notify you of potential issues before they become critical problems. Sysdig provides features to create alerts based on certain conditions. Learn more about [setting up alert channels in Sysdig](../app-monitoring/sysdig-monitor-create-alert-channels.md)
+- **Alerts** -  Proactively notify teams about potential system failures or performance issues. Sysdig enables creating alerts based on specific conditions. Learn more about [setting up alert channels in Sysdig](../app-monitoring/sysdig-monitor-create-alert-channels.md)
 
-- **Monitoring Dashboard**: Sysdig allows you to set up a monitoring dashboard for your application. Check out this [video tutorial](https://www.youtube.com/watch?v=K4rkSCSq3C4&list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg) on how to set up your Sysdig monitoring dashboard
+- **Monitoring dashboard** - Sysdig allows setting up monitoring dashboards for applications. Watch this [video tutorial](https://www.youtube.com/watch?v=K4rkSCSq3C4&list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg) on configuring a Sysdig monitoring dashboard
 
-### 2. Configuring Application Logs with Kibana
+### 2. Configure application logs with Kibana
 
-Logs are critical for debugging and understanding the behaviour of your application. OpenShift integrates with Kibana for log aggregation. This allows you to collect, index, and visualize logs in a centralized location. For a detailed guide on [how to configure and use Kibana](https://stackoverflow.developer.gov.bc.ca/questions/906).
+Logs are essential for debugging and understanding application behaviour. OpenShift integrates with Kibana for centralized log aggregation. Learn more about [configuring Kibana](https://stackoverflow.developer.gov.bc.ca/questions/906).
 
 ---
 
-## Scaling and managing the application
+## Scale and manage the application
 
-### 1. Scaling the application horizontally and vertically
+### 1. Scale the application horizontally and vertically
 
-Scaling is a crucial part of managing your application in OpenShift. There are two ways to scale your application:
+Scaling ensures applications meet demand efficiently. There are two primary scaling methods:
 
-- **Horizontal Scaling**: This involves adding or removing instances of your application to match demand. It is generally used when you expect your application to serve an increasing number of requests and need more instances to handle the load. This is beneficial for applications designed with a stateless architecture.
+- **Horizontal Scaling** - Increases or decreases the number of application instances based on demand. This method is beneficial for stateless applications that need to handle fluctuating traffic
 
-- **Vertical Scaling**: This involves increasing or decreasing resources like CPU and memory available to your application's instances. It is used when your application needs more computational power or memory to handle tasks. This is particularly beneficial for data-intensive applications, such as databases or applications running complex computations.
+- **Vertical Scaling** - Adjusts resources (CPU and memory) allocated to an application instance. This is useful for data-intensive applications running complex computations
 
-Choosing the appropriate scaling method depends on your application's architecture and the nature of the workloads it handles.
-
-Effective resource management ensures your application has the resources it needs without wasting any. This involves setting appropriate resource limits and requests, and adjusting these as necessary based on monitoring and performance testing.
+Choosing the appropriate scaling method depends on your application's architecture and workloads characteristics. Effective resource management, including setting appropriate resource limits and requests (based on monitoring and testing), ensures optimal performance without waste.
 
 ### 2. Auto-scaling and Pod Disruption Budgets (PDB)
 
-OpenShift supports auto-scaling of applications, which allows the number of running instances to automatically adjust based on resource utilization or other metrics. This uses the Horizontal Pod Autoscaler (HPA) feature to automatically scale the number of pods based on CPU usage or other selected metric. It's important however to allow at least one pod in a group to be disrupted to allow for platform patching.
+OpenShift supports **auto-scaling** using the Horizontal Pod Autoscaler (HPA), which adjusts the number of running pods based on resource utilization metrics such as CPU usage. To ensure platform maintenance, allow at least one pod in a group to be disrupted.
 
-In addition, OpenShift also supports Pod Disruption Budgets (PDB), a feature that limits the number of pods of an application that are down simultaneously from voluntary disruptions. This ensures that a certain number or percentage of pods will remain running, making your application more resilient to disruptions. 
+Additionally, **Pod Disruption Budgets (PDB)** help maintain application availability by defining the minimum number of pods that must remain operational during voluntary disruptions, ensuring resilience.
 
-### 3. Rollback
+### 3. Rollback deployments
 
-In case of a problematic deployment or other issues, you may need to rollback your application to a previous version. OpenShift provides features to rollback deployments to a previous state quickly.
+In the event of deployment issues, OpenShift allows to rollback your application to a previous version. This feature minimizes downtime and mitigates risks associated with failed updates.
 
-### 4. Updating the Application
+### 4. Update the application
 
-When you need to update your application's code or configuration, Infrastructure as Code (IoC) can help ensure your changes are applied consistently and reliably across your environments. Always update your changes in the manifest code repository. This not only helps in tracking your application's update history but also serves as a basis for continuous delivery pipelines. Applying changes via IoC promotes consistency and reduces the likelihood of manual errors during the update process.
+Infrastructure as Code (IaC) ensures consistent and reliable updates. Always update your application configuration in the manifest code repository to track changes and support continuous deployment pipelines. Using IaC reduces the likelihood of manual errors and promotes deployment consistency.
 
 ---
 
 ## Continuous deployment and maintenance
 
-### 1. Integrating the Deployment Process into a CI/CD Pipeline
+### 1. Integrate deployment into a CI/CD Pipeline
 
-By integrating your deployment process into a Continuous Integration/Continuous Deployment (CI/CD) pipeline streamlines your application updates, bug patches, and overall maintenance. This automated process ensures that every code change is automatically built, tested, and deployed, reducing manual errors and enhancing productivity. 
+Automating deployment with a **CI/CD pipeline** enhances efficiency by streamlining application updates, bug patches reducing errors.
 
-OpenShift seamlessly integrates with Tekton, empowering you to create robust CI/CD systems. With Tekton, pipeline workflows can be defined in YAML format, introducing the concept of "pipeline as code." This makes pipelines reusable, version-controlled, and easily manageable. Take advantage of Tekton's predefined pipeline configurations available in the [Tekton pipeline templates](https://github.com/bcgov/pipeline-templates). 
+- **Tekton** - OpenShift integrates with **Tekton**, empowering you to create robust CI/CD systems. With Tekton, pipeline workflows can be defined in YAML format, introducing the concept of "pipeline as code." This makes pipelines reusable, version-controlled, and easily manageable. Tekton's predefined pipeline configurations are available in the [Tekton pipeline templates](https://github.com/bcgov/pipeline-templates)
 
-To efficiently manage deployments across clusters, OpenShift provides ArgoCD as an operator. It follows the practice of using Git as a 'source of truth' for declarative infrastructure and applications. ArgoCD follows the best practice of using Git as the "source of truth" for declarative infrastructure and applications.
+- **ArgoCD** - For multi-cluster management, OpenShift provides ArgoCD, which uses Git as the "source of truth" for declarative infrastructure and application configurations. Learn more about [ArgoCD](https://github.com/bcgov/openshift-wiki/blob/b1a4e6db91932fd3f29705a5c8ee44983abf8763/docs/ArgoCD/argocd_info.md)  along with [CI/CD pipeline templates](../automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md)
 
-Explore more about [ArgoCD](https://github.com/bcgov/openshift-wiki/blob/b1a4e6db91932fd3f29705a5c8ee44983abf8763/docs/ArgoCD/argocd_info.md)  along with [CI/CD pipeline templates](../automation-and-resiliency/cicd-pipeline-templates-for-private-cloud-teams.md).
+### 2. Version management in Continuos Deployment (CD)
 
-### 2. Version Management in CD
+Version control plays a crucial role in tracking changes, maintaining contributor history and ensuring reliable deployment records.
 
-Maintaining applications within a CD context heavily relies on version control, ensuring comprehensive tracking of changes, contributors, and timelines.
+OpenShift seamlessly integrates with Git for source code versioning and leverages **image tags** to manage container image versions, including semantic versioning efficiently. The integration supports automated workflows and rollback capabilities, reducing deployment risks.
 
-OpenShift seamlessly integrates with popular version control systems, such as Git, enabling effective version tracking and triggering deployments upon codebase updates. Additionally, OpenShift leverages image tags to monitor different versions of container images.
+To maintain consistency and avoid potential conflicts, adhere to best practices for **image stream** and **tag management** in OpenShift. Proper versioning ensures reproducibility and stability across environments. It's crucial to exercise caution when managing mutable tags, refer to  [best practices for managing image streams](../build-deploy-and-maintain-apps/imagestreams.md) for detailed guidance on optimizing your image management strategy.
 
-Image tags offer a flexible reference to images that can be modified over time, facilitating efficient implementation of versioning strategies, including semantic versioning.
+### 3. Backup and restoration (CD context)
 
-Nevertheless, it is crucial to exercise caution when managing mutable tags. For detailed insights into best practices for image stream and tag management in OpenShift, please refer to the documentation on [best practices for managing image streams](../build-deploy-and-maintain-apps/imagestreams.md).
-
-### 3. Backup and Restoration in a CD Context
-
-Regularly [backing up your application data](../automation-and-resiliency/namespace-recovery-and-responsibilities.md) is crucial for safeguarding against potential risks. In a CD context, you can automate and integrate backup processes into your deployment pipeline, ensuring that backups stay up to date with any changes made. 
+Regularly [backing up your application data](../automation-and-resiliency/namespace-recovery-and-responsibilities.md) is crucial for safeguarding against potential risks. In a CD context, you can automate and integrate backup processes into your deployment pipeline, ensuring that backups stay up to date with any changes made.
 
 These backups serve as reliable resources for effective restoration in the event of data loss or a disaster. OpenShift offers diverse strategies for backup and restoration to cater to your specific requirements.
 
 ---
 
-## Handling Data Storage in OpenShift
+## Handle data storage in OpenShift
 
-### 1. Understanding Persistent Storage
+### 1. Understand persistent storage
 
-In OpenShift, applications operate within ephemeral containers that do not retain file state upon restart. However, if your applications require data or state persistence across sessions or instances, OpenShift offers a valuable feature known as Persistent Storage. This feature enables you to allocate a dedicated portion of the storage infrastructure to your application, ensuring data durability.
+OpenShift’s **persistent storage** enables data persistence beyond container restarts. This ensures application state and data integrity across deployments. The feature enables you to allocate a dedicated portion of the storage infrastructure to your application, ensuring data durability. Detailed information is available in the [OpenShift Persistent Storage](https://docs.openshift.com/container-platform/4.12/storage/understanding-persistent-storage.html) guide.
 
-For a deep dive into persistent storage, we recommend referring to the OpenShift [Persistent Storage documentation](https://docs.openshift.com/container-platform/4.12/storage/understanding-persistent-storage.html) which provides in-dept insights and guidance. 
+### 2. Configure Persistent Volume Claims (PVCs)
 
-### 2. Configuring Persistent Volume Claims (PVCs)
+**Persistent Volume Claims (PVCs)** allow applications to request storage with specified size and access requirements. Using PVCs ensure data persistence across different deployments or instances of your application. PVCs serve as a reliable mechanism for maintaining data continuity and integrity in OpenShift. For guidance, refer to the [platform storage documentation](../platform-architecture-reference/platform-storage.md).
 
-Persistent Volume Claims (PVCs) empower users to request storage with specific size and access mode requirements. By utilizing PVCs within your applications, you can ensure data persistence across different deployments or instances of your application. PVCs serve as a reliable mechanism for maintaining data continuity and integrity in OpenShift.
+### 3. Backup and restore data
 
-A comprehensive guide on how to use PVCs in your deployments can be found on the [platform storage documentation](../platform-architecture-reference/platform-storage.md).
-
-### 3. Backing Up and Restoring Data
-
-Data loss is a critical issue that needs attention in any environment, including OpenShift. To address this concern, the B.C. government has developed the  `backup-container` application specifically for backing up and restoring data within OpenShift.   It's designed to provide a consistent way to back up the state of applications running in OpenShift. 
-
-You can learn more about this from the [backup-container GitHub page](https://github.com/bcgov/backup-container-compliance-enforcement). Also refer to the disaster recovery documentation [Persistent volumes section](../automation-and-resiliency/namespace-recovery-and-responsibilities.md#persistent-volumes) that we mentioned eariler. 
+To safeguard data, leverage OpenShift's `backup-container` specifically for backing up and restoring data. It's designed to provide a consistent way to back up the state of applications running in OpenShift.  Learn more details in depth with the [backup-container GitHub page](https://github.com/bcgov/backup-container-compliance-enforcement). Also refer to the disaster recovery in the [persistent volumes section](../automation-and-resiliency/namespace-recovery-and-responsibilities.md#persistent-volumes).
 
 ---
-## Securing the deployed application
 
-### 1. Implementing Security Measures for the Application
+## Secure the deployed application
 
+### 1. Implement security measures
 
-Ensuring security is a paramount concern throughout every stage of application deployment. It involves implementing principles like least privilege, safeguarding sensitive data, and consistently scanning for vulnerabilities in code and container images. [Advanced Cluster Security (ACS)](https://acs.developer.gov.bc.ca/) is a valuable tool that offers comprehensive functionalities for image scanning, vulnerability management, and compliance checks. 
+Security best practices include enforcing **least privilege access**, protecting sensitive data and scanning for vulnerabilities in code and container images. Use [Advanced Cluster Security (ACS)](https://acs.developer.gov.bc.ca/) for image scanning, vulnerability management and compliance checks.
 
-By leveraging ACS, you can enhance your security measures and effectively mitigate potential risks in your OpenShift environment.
+Leveraging **ACS**, can enhance security measures and effectively mitigate potential risks in your OpenShift environment.
 
-### 2. Configuring Access Controls and Permissions
+### 2. Configure access controls and permissions
 
-Effective access management is a crucial aspect of securing your application, and OpenShift offers robust access control capabilities to address this need. With OpenShift, you can manage permissions at the project level, granting you the ability to control access to specific resources within your environment. 
+OpenShift’s role-based access control (RBAC) allows to manage permissions at the project level, granting you the ability to control access to specific resources within your environment. Manage access using the OpenShift Access Control Guide or leverage the [Platform Services Product Registry](https://registry.developer.gov.bc.ca/)) for self-service project access management.
 
-This granular control empowers you to define and regulate who has access to what, enhancing the overall security of your application deployment in OpenShift. 
+The granular control empowers you to define and regulate who has access to what, enhancing the overall security of your application deployment in OpenShift. For more guidance, please read this [OpenShift Access Control Guide](../openshift-projects-and-access/grant-user-access-openshift.md).
 
-For more guidance, please read this [OpenShift Access Control Guide](../openshift-projects-and-access/grant-user-access-openshift.md).
+### 3. Appropriate role, Service Account (SA) and role binding
 
-The Registry app is a valuable self-service tool that provides a UI for managing project access within our OpenShift Clusters. This app need IDIR authentification and can be access through [here](https://registry.developer.gov.bc.ca/).
+To enhance security, grant minimum required permissions for CI/CD and automated tasks. OpenShift’s security model includes:
 
-### 3. Appropriate Role, Service Account (SA), and Role Binding 
+- **Roles**: Define a specific set of permissions
 
-When it comes to CI/CD or other automated tasks, it is considered a best practice to grant the minimum required permissions. OpenShift facilitates this by employing a combination of roles, service accounts, and role bindings. Roles establish a specific set of permissions, service accounts serve as identities for processes running within Pods, and role bindings link roles to users, creating a comprehensive permission structure. 
+- **Service Accounts (SA)**: Serve as identifies for processes running with Pods (separate from the user responsible for managing or creating the Pod). Service Account tokens further enhance security by enabling non-human operators like applications or CI/CD pipelines to authenticate against the API without using user credentials. These tokens do not expire, unlike tokens issued to human users, simplifying the authentication process
 
-Service Accounts play a crucial role in security by allowing you to control permissions for processes running inside a Pod, separate from the user responsible for managing or creating the Pod. Service Account tokens further enhance security by enabling non-human operators like applications or CI/CD pipelines to authenticate against the API without using user credentials. These tokens do not expire, unlike tokens issued to human users, simplifying the authentication process. 
+- **Role bindings**: Link roles to users
 
- For more information, refer to the OpenShift [RBAC documentation](https://docs.openshift.com/container-platform/4.12/authentication/using-rbac.html).
+For more information, refer to the OpenShift [RBAC documentation](https://docs.openshift.com/container-platform/4.12/authentication/using-rbac.html).
 
- ---
+---
 
 ## Conclusion
 
-### A recap of the Key Points Discussed
+### Key takeaways
 
-Throughout this guide, we have provided you with best practices for deploying applications in OpenShift, a robust and flexible platform. Our coverage included a comprehensive understanding of OpenShift deployments, pre-deployment preparations, application configuration and deployment, networking and routes setup, deployment testing, monitoring and logging, application scaling and management, as well as the implementation and maintenance of continuous deployment.
+This guide covered essential best practices for deploying and managing applications in OpenShift, including:
 
-We explored the essential aspects of data storage management in OpenShift and emphasized the significance of securing your deployed applications. Each of these steps plays a pivotal role in achieving efficient deployment and operation within the OpenShift environment.
+- Application pre-deployment preparation, configuration and deployment
+- Networking and route setup
+- Scaling, monitoring, and logging
+- Continuous deployment and version management
+- Data storage and backup strategies
+- Security and access management
 
-It's important to note that this guide only provides an introduction to the vast range of capabilities OpenShift has to offer. As OpenShift continues to evolve,  new features will be introduced, expanding the possibilities even further. The more you engage with OpenShift, the more confident and innovative you'll become in deploying and managing your applications. 
-
-We highly encourage you to dive deeper, experiment with new concepts, and continuously explore the vast capabilities of OpenShift. To expand your knowledge and stay updated with the latest best practices and features, we recommend regularly referring to the official OpenShift and the B.C. government developer [documentation](https://developer.gov.bc.ca/), as it is a great resource to expand your knowledge and stay up-to-date with the latest best practices and features.
+As OpenShift evolves, new features and best practices will emerge. We encourage continuous learning and experimentation. For the latest updates, refer to the official OpenShift documentation and  the [B.C. government developer](https://developer.gov.bc.ca/) website.
 
 Happy deploying!
 
 ---
----
 
 ## Related pages
+
 - [Build an application](../build-deploy-and-maintain-apps/build-an-application.md)
 - [Maintain an application](../build-deploy-and-maintain-apps/maintain-an-application.md)
 - [Retire an application](../build-deploy-and-maintain-apps/retire-an-application.md)
