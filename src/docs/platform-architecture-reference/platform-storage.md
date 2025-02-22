@@ -109,7 +109,7 @@ As this is a shared platform with automatic provisioning enabled for your needs,
 
 The minimum size is 20Mi. If it's any smaller, provisioning fails. You don't need to request a full 1Gi if you don't need it.
 
-The maximum size is 512Gi, matching the maximum storage quota in the registry. If it's any bigger, provisioning fails. Larger custom quotas won't get around this currently as we've set this limit to make sure NetApp can remain properly balanced.
+The maximum size is 512Gi, matching the maximum storage quota in the registry.
 
 ### Performance
 
