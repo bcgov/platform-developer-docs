@@ -41,7 +41,7 @@ This document outlines the best practices for building applications on OpenShift
 ## Requirements to build your application 
 Here are ten common practices for building applications in a cloud native way that we strongly suggest your team follow before building an application on OpenShift:
 
-1. **Learn OpenShift basics**: Understand OpenShift's core concepts including projects, pods, services, routes and deployments. Sign up for the [OpenShift training](https://digital.gov.bc.ca/cloud/services/private/support/#platform)
+1. **Learn OpenShift basics**: Understand OpenShift's core concepts including projects, pods, services, routes and deployments. Sign up for the [OpenShift training](https://digital.gov.bc.ca/delivery/cloud/private/support/#platform)
 
 2. **Learn Kubernetes fundamentals**: OpenShift is built on Kubernetes, so basic knowledge is essential. Get comfortable using the [Kubernetes documentation](https://kubernetes.io/docs/home/).
 
@@ -117,7 +117,7 @@ Most applications need some data to persist across different sessions or connect
 
 ## Best practices for creating your image
 
-Once your application code is ready, you'll need to build an image in order to deploy it to a pod on the OpenShift cluster. [OpenShift 101](https://digital.gov.bc.ca/cloud/services/private/support/openshift-101/) training provides a step-by-step walkthrough to build an image. If you haven't taken it already, please do so! 
+Once your application code is ready, you'll need to build an image in order to deploy it to a pod on the OpenShift cluster. [OpenShift 101](https://digital.gov.bc.ca/delivery/cloud/private/support/openshift-101/) training provides a step-by-step walkthrough to build an image. If you haven't taken it already, please do so! 
 This section will primarily  focus  on best practices for building your image - 'what you should do' rather than 'how to do it'. 
 
 ### Using prebuilt images

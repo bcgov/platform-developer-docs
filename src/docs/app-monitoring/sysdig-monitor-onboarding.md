@@ -41,7 +41,7 @@ If you have any questions about Sysdig or application monitoring, please contact
 - [Sysdig Monitor](https://sysdig.com/products/monitor/)
 - [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md)
 - [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/)
-- [Monitoring with Sysdig](https://digital.gov.bc.ca/cloud/services/private/products-tools/sysdig/)
+- [Monitoring with Sysdig](https://digital.gov.bc.ca/delivery/cloud/private/products-tools/sysdig/)
 - [Sydig User Profile](https://app.sysdigcloud.com/#/settings/user)
 - [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 - [Sysdig Monitor](https://docs.sysdig.com/en/sysdig-monitor.html)
