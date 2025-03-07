@@ -9,7 +9,7 @@ This document guides application teams deploying applications across different h
 - **Emerald Cluster**: Tailored for applications requiring enhanced security features, specifically for Protect C project applications
 
 ## SLA expectations per cluster
-For detailed SLA expectations per cluster, please refer to the official [Hosting tiers SLA documentation](https://digital.gov.bc.ca/cloud/services/private/products-tools/hosting-tiers/).
+For detailed SLA expectations per cluster, please refer to the official [Hosting tiers SLA documentation](https://digital.gov.bc.ca/delivery/cloud/private/products-tools/hosting-tiers/).
 
 ## Impact of Vault and Artifactory on application availability
 Vault and Artifactory are crucial components hosted on the Gold cluster, used for secret management and as a image repository manager, respectively. The availability and performance of these services can directly impact the applications depending on them. 
@@ -17,8 +17,8 @@ Vault and Artifactory are crucial components hosted on the Gold cluster, used fo
 However, it's important to note:
 
 - **SLA for Vault and Artifactory**: Detailed SLA information for these services can be found here:
-  - [Vault SLA Details](https://digital.gov.bc.ca/cloud/services/private/products-tools/vault/)
-  - [Artifactory SLA Details](https://digital.gov.bc.ca/cloud/services/private/products-tools/artifactory/)
+  - [Vault SLA Details](https://digital.gov.bc.ca/delivery/cloud/private/products-tools/vault/)
+  - [Artifactory SLA Details](https://digital.gov.bc.ca/delivery/cloud/private/products-tools/artifactory/)
 - **Potential impact on availability**: While Vault and Artifactory have robust failover mechanisms, their SLAs are not always align with the Gold cluster's 99.95% availability. This discrepancy can be attributed to maintenance requirements, service-specific risks, and other operational nuances
 - **Mitigating downtime impact**: Applications hosted in the Gold cluster benefit from robust failover configurations that support high availability, even during temporary outages of Vault or Artifactory. By implementing strategic deployment practices—such as caching secrets, pre-pulling images and failover strategy, teams can minimize dependency on real-time access to these services, ensuring that applications remain operational throughout any service disruptions.
 

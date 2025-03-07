@@ -2,7 +2,7 @@
 
 Hi! I’m Rocky from the Platform Services team, your friendly AI assistant in Rocket.Chat! 🤖✨ I’m here to help with the OpenShift platform and its related shared services. I’ve been trained using knowledge from these sources:
 
-- [Private cloud website](http://digital.gov.bc.ca/cloud/services/private)
+- [Private cloud website](http://digital.gov.bc.ca/delivery/cloud/private)
 - [Private cloud technical documentation website](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/)
 - [BCGov Internal StackOverflow](https://stackoverflow.developer.gov.bc.ca/)
 

@@ -27,7 +27,7 @@ Effective monitoring and alerting are crucial components of maintaining a robust
 
 The Sysdig Teams Operator runs in the cluster and enables a team to create and manage access to a dedicated Sysdig Team account for BC Gov Private Cloud PaaS users. The team is scoped to the OpenShift namespaces that belong to the team. Sysdig also provides a default dashboard to identify system [resources, limits, and actual usage](../automation-and-resiliency/openshift-project-resource-quotas.md).
 
-For more information on Sysdig Monitor, see [Monitoring with Sysdig](https://digital.gov.bc.ca/cloud/services/private/products-tools/sysdig/)
+For more information on Sysdig Monitor, see [Monitoring with Sysdig](https://digital.gov.bc.ca/delivery/cloud/private/products-tools/sysdig/)
 
 ## On this page
 - [Sign in to Sysdig](#sign-in-to-sysdig)
