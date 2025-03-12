@@ -72,7 +72,7 @@ Developer access can be granted by request and these must include the following:
 For further information:
 
 * [Access ACS](https://acs.developer.gov.bc.ca)
-* Learn about our platform's [cluster security](https://digital.gov.bc.ca/delivery/cloud/private/products-tools/cluster-security/)
+* Learn about our platform's [cluster security](https://digital.gov.bc.ca/technology/cloud/private/products-tools/cluster-security/)
 * Learn about [advanced cluster security kubernetes](https://www.redhat.com/en/technologies/cloud-computing/openshift/advanced-cluster-security-kubernetes)
 * Sign up for an [ACS workshop with RedHat](https://redhat-scholars.github.io/acs-workshop/acs-workshop/index.html)
 
@@ -99,7 +99,7 @@ The 'secrets' store is exclusively intended for configurations, utilizing base64
 **Vault:**
 Vault is the preferred secrets management tool to use on OpenShift.
 
-* Find out more about the [benefits of using Vault](https://digital.gov.bc.ca/delivery/cloud/private/products-tools/vault/)
+* Find out more about the [benefits of using Vault](https://digital.gov.bc.ca/technology/cloud/private/products-tools/vault/)
 * [Vault secrets management service](../secrets-management/vault-secrets-management-service.md)
 * [Vault getting started guide](../secrets-management/vault-getting-started-guide.md)
 
@@ -126,7 +126,7 @@ This tool provides a more wholistic view of logs for an application or at the pl
 
 This tool allows our platform admins and platform teams to build monitoring dashboards.
 
-- Find out more about [Sysdig Monitor](https://digital.gov.bc.ca/delivery/cloud/private/products-tools/sysdig/)
+- Find out more about [Sysdig Monitor](https://digital.gov.bc.ca/technology/cloud/private/products-tools/sysdig/)
 - [Onboarding to application monitoring with Sysdig](../app-monitoring/sysdig-monitor-onboarding.md)
 - [Login to Sysdig](https://app.sysdigcloud.com/#/login)
 
@@ -153,8 +153,8 @@ For all other matters concerning security on the OpenShift Container Platform, p
 ---
 ## Related pages
 
-* [OpenShift 101 training](https://digital.gov.bc.ca/delivery/cloud/private/support/openshift-101/)
-* [OpenShift 201 training](https://digital.gov.bc.ca/delivery/cloud/private/support/openshift-201/)
+* [OpenShift 101 training](https://digital.gov.bc.ca/technology/cloud/private/support/openshift-101/)
+* [OpenShift 201 training](https://digital.gov.bc.ca/technology/cloud/private/support/openshift-201/)
 * [DevOps platform workshops](https://github.com/bcgov/devops-platform-workshops)
 * [Security best practices for apps](../security-and-privacy-compliance/security-best-practices-for-apps.md)
 

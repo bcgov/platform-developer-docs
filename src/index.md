@@ -23,7 +23,7 @@ Best practices on the platform:
 
 ### Free OpenShift training
 
-Read about [the free training](https://digital.gov.bc.ca/delivery/cloud/private/support/#platform-training)
+Read about [the free training](https://digital.gov.bc.ca/technology/cloud/private/support/#platform-training)
 that is offered on the Platform and get access to other learning resources.
 
 ### Rocket.Chat
@@ -45,7 +45,7 @@ Rocky, the newest member of the Platform Services team is a GenAI chatbot design
 Every 3 weeks, we host a platform community MeetUp where product teams from across the B.C. government give technical
 demos of their application.
 
-[Learn how to register for this and other events](https://digital.gov.bc.ca/delivery/cloud/private/team/#stay).
+[Learn how to register for this and other events](https://digital.gov.bc.ca/technology/cloud/private/team/#stay).
 
 ## Dive deeper
 
@@ -114,7 +114,7 @@ demos of their application.
 ### Use GitHub in BC Gov
 
 * [BC Government organizations in GitHub](../bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/)
-* [Common platform requests in the BC Gov Private Cloud PaaS](https://digital.gov.bc.ca/delivery/cloud/private/support/#common)
+* [Common platform requests in the BC Gov Private Cloud PaaS](https://digital.gov.bc.ca/technology/cloud/private/support/#common)
 * [Start working in BCGov GitHub organization](../bc-developer-guide/use-github-in-bcgov/start-working-in-bcgov-github-organization/)
 
 ## Get support on the platform
@@ -122,14 +122,14 @@ demos of their application.
 ### Report a platform incident
 
 If you think an incident has occurred with our services, you can report it
-by [following these steps](https://digital.gov.bc.ca/delivery/cloud/private/support/#report).
+by [following these steps](https://digital.gov.bc.ca/technology/cloud/private/support/#report).
 
 ### Get help or support
 
 We follow a community-based support model. You can use our self-serve resources or ask for help from the platform
-community. [Learn how to get help on the Platform](https://digital.gov.bc.ca/delivery/cloud/private/support/).
+community. [Learn how to get help on the Platform](https://digital.gov.bc.ca/technology/cloud/private/support/).
 
 ### DevOps requests
 
 Not sure where to go to get things done on the platform? We've outlined common platform tasks and links to additional
-instructions. [Learn how to get help with some of the most commonly searched-for tasks](https://digital.gov.bc.ca/delivery/cloud/private/support/#common).
+instructions. [Learn how to get help with some of the most commonly searched-for tasks](https://digital.gov.bc.ca/technology/cloud/private/support/#common).

@@ -46,7 +46,7 @@ Through this document you'll find some details on our OpenShift service, complet
 ## OpenShift platform services
 The OpenShift platform security actively protects your applications and data, keeping them safe from unauthorized access and potential threats. OpenShift consistently updates and patches to address vulnerabilities, ensuring a robust defense against evolving security risks. 
 
-If you'd like to find more details about its capabilities, check the our useful [guide for the private cloud hosting 101](https://digital.gov.bc.ca/delivery/cloud/private/intro/).
+If you'd like to find more details about its capabilities, check the our useful [guide for the private cloud hosting 101](https://digital.gov.bc.ca/technology/cloud/private/intro/).
 
 We offer three tiers of service: 
 
@@ -58,7 +58,7 @@ We offer three tiers of service:
 
 While the Platform Services Team manages infrastructure, OpenShift Container Platform and the Platform critical services as part of the Private Cloud PaaS, the Product Team bears the responsibility for the functionality and operations of their application(s) hosted on the Platform.  
 
-Take note of the [**Shared Responsibility Model**](https://digital.gov.bc.ca/delivery/cloud/private/onboard/) breakdown within the Memorandum of Understanding (MoU).  
+Take note of the [**Shared Responsibility Model**](https://digital.gov.bc.ca/technology/cloud/private/onboard/) breakdown within the Memorandum of Understanding (MoU).  
 
 You can also find specific details on OpenShift's security controls under [Red Hat's OpenShift security guide](https://www.redhat.com/rhdc/managed-files/cl-openshift-security-guide-ebook-us287757-202103.pdf) which  are also highlighted as part of the OpenShift STRA.
 
@@ -138,7 +138,7 @@ Here, we maintain a listing of all products with deployments on each OpenShift c
 
 ![Platform Product Registry example view](../../images/platform-product-registry-example-view.jpg)
 
-Find out more about the benefits and its use in our [Platform Product Registry information page](https://digital.gov.bc.ca/delivery/cloud/private/products-tools/registry/)
+Find out more about the benefits and its use in our [Platform Product Registry information page](https://digital.gov.bc.ca/technology/cloud/private/products-tools/registry/)
 
 ## Access management
 Our OpenShift access is managed through the OpenShift SSO Service, currently using KeyCloak.
@@ -155,9 +155,9 @@ Government users and contractors may login to OpenShift clusters with a GitHub o
 
 Cluster roles are managed either in private GitHub repositories in the [bcgov-c org](https://github.com/bcgov) or through direct role bindings within a namespace.
 
-Read about the [Platform services roles and responsibilities](https://digital.gov.bc.ca/delivery/cloud/private/onboard/)
+Read about the [Platform services roles and responsibilities](https://digital.gov.bc.ca/technology/cloud/private/onboard/)
 
-The Platform Services team maintains an Access Control Policy for all platform tools and they can be found in the [internal resources section](https://digital.gov.bc.ca/delivery/cloud/private/internal-resources/). To access it select Login with Keycloak.
+The Platform Services team maintains an Access Control Policy for all platform tools and they can be found in the [internal resources section](https://digital.gov.bc.ca/technology/cloud/private/internal-resources/). To access it select Login with Keycloak.
 
 ### Kubernetes Network Policies (KNPs)
 
@@ -259,7 +259,7 @@ Some teams have decided to host PCI-scoped applications on-prem (non-OpenShift) 
 
 **Training and support**
 
-The platform services team provides [training to onboarding teams](https://digital.gov.bc.ca/delivery/cloud/private/support/#platform), as well as [support](https://digital.gov.bc.ca/delivery/cloud/private/support/#how) for issues experienced.  Ministry staff that work with devops teams are also encouraged to attend training.
+The platform services team provides [training to onboarding teams](https://digital.gov.bc.ca/technology/cloud/private/support/#platform), as well as [support](https://digital.gov.bc.ca/technology/cloud/private/support/#how) for issues experienced.  Ministry staff that work with devops teams are also encouraged to attend training.
 
 **Contact**
 
@@ -270,8 +270,8 @@ For all other matters concerning security on the OpenShift Container Platform, p
 
 ## Related pages
 
-* [OpenShift 101 training](https://digital.gov.bc.ca/delivery/cloud/private/support/openshift-101/)
-* [OpenShift 201 training](https://digital.gov.bc.ca/delivery/cloud/private/support/openshift-201/)
+* [OpenShift 101 training](https://digital.gov.bc.ca/technology/cloud/private/support/openshift-101/)
+* [OpenShift 201 training](https://digital.gov.bc.ca/technology/cloud/private/support/openshift-201/)
 * [DevOps platform workshops](https://github.com/bcgov/devops-platform-workshops)
 * [Security best practices for apps](../security-and-privacy-compliance/security-best-practices-for-apps.md)
 * [OpenShift platform security tools](../security-and-privacy-compliance/platform-security-tools.md)

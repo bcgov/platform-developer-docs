@@ -68,4 +68,4 @@ In NSX clusters (Emerald), every pod must have a DataClass label. This ensures p
 
 - [Kyverno Policy documentation](https://kyverno.io/docs/kyverno-policies/)
 - [Red Hat’s documentation on CronJob Timezones](https://docs.openshift.com/container-platform/4.13/nodes/jobs/nodes-nodes-jobs.html#nodes-nodes-jobs-creating-cron_nodes-nodes-jobs)
-- [Emerald documentation](https://digital.gov.bc.ca/delivery/cloud/private/internal-resources/emerald/)
+- [Emerald documentation](https://digital.gov.bc.ca/technology/cloud/private/internal-resources/emerald/)
