@@ -454,7 +454,7 @@ Moreover, it's advisable for all team members to remain engaged with the communi
 
 - Monitor [Rocket.Chat #devops-alerts channel](https://chat.developer.gov.bc.ca/channel/devops-alerts) for service alerts and status updates. Rocket.Chat serves as the main communication method for teams on the platform to get help, share knowledge and information, and build up the community. 
 
-- Take a look at [common platform requests](https://digital.gov.bc.ca/technology/cloud/private/support/#common) . This section can be helpful to your team to discover the most commonly searched-for tasks, with links to additional instructions.
+- Take a look at the [various support options](https://digital.gov.bc.ca/technology/cloud/private/support/#how) available in the Private cloud, helpful to determine troubleshooting channels for application or platform issues
 
 ---
 ## Managing impacts of personnel changes
