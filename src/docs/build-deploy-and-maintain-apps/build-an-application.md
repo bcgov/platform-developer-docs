@@ -41,7 +41,7 @@ This document outlines the best practices for building applications on OpenShift
 ## Requirements to build your application 
 Here are ten common practices for building applications in a cloud native way that we strongly suggest your team follow before building an application on OpenShift:
 
-1. **Learn OpenShift basics**: Understand OpenShift's core concepts including projects, pods, services, routes and deployments. Sign up for the [OpenShift training](https://digital.gov.bc.ca/technology/cloud/private/support/#platform)
+1. **Learn OpenShift basics**: Understand OpenShift's core concepts including projects, pods, services, routes and deployments. Sign up for the [OpenShift training](https://digital.gov.bc.ca/technology/cloud/private/support/#platform-training)
 
 2. **Learn Kubernetes fundamentals**: OpenShift is built on Kubernetes, so basic knowledge is essential. Get comfortable using the [Kubernetes documentation](https://kubernetes.io/docs/home/).
 
