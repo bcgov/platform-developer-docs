@@ -53,7 +53,7 @@ For a connection from a source pod to a destination pod to be allowed, both the 
 By using network policies declarative YAML this code becomes part of your application, ensuring the consistency of “single source of truth” from your codebase.
 
 From OpenShift version 4.10, CLAB, KLAB, SILVER, GOLD, GOLD-DR clusters are now supporting **limited Egress**(see below notes) network policies.
-KLAB2 and Emerald clusters use a different SDN technology (VMWare NSX-T) which also DOES support (and requires) Egress Network Policies. Details on NSX Networking can be found in the [IDIR protected content area of the Private Cloud website - Guide for Emerald teams](https://digital.gov.bc.ca/delivery/cloud/private/internal-resources/emerald/).
+KLAB2 and Emerald clusters use a different SDN technology (VMWare NSX-T) which also DOES support (and requires) Egress Network Policies. Details on NSX Networking can be found in the [IDIR protected content area of the Private Cloud website - Guide for Emerald teams](https://digital.gov.bc.ca/technology/cloud/private/internal-resources/emerald/).
 
 ## NetworkPolicy structure
 

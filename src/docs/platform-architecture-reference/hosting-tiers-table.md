@@ -81,4 +81,4 @@ A **single-node** means that the whole application runs on just one part of the 
 
 ## Related pages
 
-- [Hosting tiers - explained](https://digital.gov.bc.ca/delivery/cloud/private/products-tools/hosting-tiers/) 
+- [Hosting tiers - explained](https://digital.gov.bc.ca/technology/cloud/private/products-tools/hosting-tiers/) 

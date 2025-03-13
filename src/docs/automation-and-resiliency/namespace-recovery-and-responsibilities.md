@@ -20,7 +20,7 @@ sort_order: 8
 
 # Product team recovery best practices and responsibilities
 
-If you haven't done so already,  take a look at our [Memorandum of understanding (MoU)](https://digital.gov.bc.ca/delivery/cloud/private/onboard/#memorandum). This document covers the more technical side of *how* to follow through on the responsibilities outlined in that document.
+If you haven't done so already,  take a look at our [Memorandum of understanding (MoU)](https://digital.gov.bc.ca/technology/cloud/private/onboard/#memorandum). This document covers the more technical side of *how* to follow through on the responsibilities outlined in that document.
 
 You can additionally review the [Responsibility Assignment Table (RACI)](https://digital.gov.bc.ca/wp-content/uploads/RACI-Shared-responsibilities-model-for-the-Private-cloud-OpenShift-platform.pdf). This will provide you with deeper detail, a view of roles and shared responsibilities between your team and the Private cloud team. This table provides a clear breakdown of these shared responsibilities for the Private cloud OpenShift platform, outlining key tasks, decision-making authority, and support functions.
 
