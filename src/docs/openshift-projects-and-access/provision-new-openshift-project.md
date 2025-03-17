@@ -31,6 +31,6 @@ Each new request must be reviewed and approved, including requests for additiona
 Related links:
 
 - [Platform Product Registry](https://registry.developer.gov.bc.ca/)
-- [OnBoarding Guide for BC Gov DevOps Platform](https://docs.google.com/presentation/d/1UcT0b2YTPki_o0et9ZCLKv8vF19eYakJQitU85TAeD4/edit?usp=sharing)
+- [OnBoarding Guide for BC Gov DevOps Platform](https://digital.gov.bc.ca/technology/cloud/private/onboard/)
 
 ---
