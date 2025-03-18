@@ -19,7 +19,7 @@ sort_order: 6
 ---
 
 # Argo CD usage
-Last updated: **July 15, 2024**
+Last updated: **March 18, 2025**
 
 Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes (the foundation of OpenShift). It is efficient, well supported, and well documented.
 
@@ -39,6 +39,7 @@ It is available to any team on the B.C. government's OpenShift platform and can 
 * [Create applications in Argo CD](#create-applications-in-argo-cd)
 * [Configure your project](#configure-your-project)
 * [Optional GitHub Webhook](#optional-github-webhook)
+* [Nonprod access](#nonprod-access)
 * [Related pages](#related-pages)
 
 ## Why Argo CD is good for you
@@ -343,6 +344,15 @@ Enter the following information:
 Click "Add webhook"
 
 After saving the webhook, a repo action of the type that you specified should trigger a call to Argo CD's webhook API, causing your apps to refresh.
+
+## Nonprod access
+A second ArgoCD project is created for non-prod access.  It is configured with access to the dev, test, and tools namespaces, but not prod.
+
+If you have users that should have access to ArgoCD, but that should not be able to deploy to your prod environment, add them to the `nonprod` list in the GitOpsTeam's `projectMembers` section.  If you would like them to be able to view the prod ArgoCD apps, then also add them to the `readers` list under `projectMembers`.
+
+'maintainers' and 'readers' will be able to see apps in both the default and nonprod projects.
+
+Note that although the nonprod project has permission to deploy to the `tools` namespace, it cannot overwrite a GitOpsTeam or GitOpsAlliance resource there.
 
 ## Related pages
 

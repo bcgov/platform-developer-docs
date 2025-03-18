@@ -61,7 +61,12 @@ spec:
     # Project Maintainers have full access to the Argo CD Project, including the
     # ability create, edit, and delete Applications within the Project
     maintainers:
-      - myGitHubID@github
+      - seniorDevID@github
+
+    nonprod:
+      - contractor1@github
+      - juniorDevID@github
 
     # Project Readers have read-only access to the Project in the Argo CD UI
     readers:
+
