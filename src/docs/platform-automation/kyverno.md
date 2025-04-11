@@ -32,7 +32,7 @@ Platform Services makes use of [Kyverno](https://kyverno.io/) ClusterPolicies to
 
 CronJobs that are set to run too often put a large burden on the Kubernetes API, storage service and the platform in general. To address this, there are two Kyverno policies to prevent the creation of the following type of CronJobs:
 - CronJobs that are scheduled to run more often than every 5 minutes
-- CronJobs with a PVC (PersistentVolumeClaim) mounted, while scheduled to run more often than every XXX minutes
+- CronJobs with a PVC (PersistentVolumeClaim) mounted, while scheduled to run more often than every hour
 
 If you try to create a CronJob like this you will get an error:
 
