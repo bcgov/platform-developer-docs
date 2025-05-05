@@ -57,7 +57,7 @@ Please note, `oc version` may also return an error `'error: You must be logged i
 
 ### Test oc login
 
-1. In order to login with the `oc` command line tool, first login to the [OpenShift Web Console](https://console.apps.silver.devops.gov.bc.ca/). For instructions, see the [Login to OpenShift Web Console](../openshift-projects-and-access/login-to-openshift.md) page 
+1. In order to login with the `oc` command line tool, first login to the [OpenShift Web Console](https://console.apps.silver.devops.gov.bc.ca/). IDIR is the preferred login method. For instructions, see the [Login to OpenShift Web Console](../openshift-projects-and-access/login-to-openshift.md) page 
 
 2. Click on your name at the top-right corner of the screen, and choose: Copy login command
 
@@ -107,7 +107,7 @@ Please note, `oc version` may also return an error `'error: You must be logged i
 
 ### Test oc login
 
-1. In order to login with the `oc` command line tool, first login to the [OpenShift Web Console](https://console.apps.silver.devops.gov.bc.ca/). For instructions, see the [Login to OpenShift Web Console](../openshift-projects-and-access/login-to-openshift.md) page 
+1. In order to login with the `oc` command line tool, first login to the [OpenShift Web Console](https://console.apps.silver.devops.gov.bc.ca/). IDIR is the preferred login method. For instructions, see the [Login to OpenShift Web Console](../openshift-projects-and-access/login-to-openshift.md) page 
 
 2. Click on your name at the top-right corner of the screen, and choose: Copy login command
 
@@ -125,13 +125,13 @@ If successful, you should see an indication of which cluster you've logged in to
 To ensure compatibility as features change, please update your `oc` command line tool regularly. You can use `brew upgrade openshift-cli` to achieve this if you installed `oc` using [homebrew](https://brew.sh/) as described above. 
 
 ## Logging in to the CLI using a web browser
-With OCP 4.14, a new oc command-line interface (CLI) flag, `--web` is now available for the oc login command. With this enhancement, you can log in by using a web browser, so that you do not need to insert your access token into the command line.
+Since OCP 4.14, a new oc command-line interface (CLI) flag, `--web` is now available for the oc login command. With this enhancement, you can log in by using a web browser, so that you do not need to insert your access token into the command line.
 
 
 For example, to login to Silver cluster, instead of providing a token, use the web option:
 `oc login --server=https://api.silver.devops.gov.bc.ca:6443 --web`
 
-You'll be redirected to the default browser and complete the login process from there. Once logged in, you'll the message "access token received successfully; please return to your terminal".
+You'll be redirected to the default browser and complete the login process from there. IDIR is the preferred login method.. Once logged in, you'll the message "access token received successfully; please return to your terminal".
 
 
 Pro tip: you can setup alias to fully remove the need of copy-pasting the login command from the browser, this would be pretty helpful especially if you are working on multiple clusters.
