@@ -47,7 +47,7 @@ There are two types of access to manage secrets on Vault,
 - User Access
 - Kubernetes Service Account (KSA) Access
 
-User Access gives authorized users the ability to create and write secrets, while KSA Access only provides read access, which is used for application pods to full secret values from Vault.
+User Access gives authorized users the ability to create and write secrets, while KSA Access only provides read access, which is used for application pods to pull secret values from Vault.
 
 ### User access for managing Vault secret resources
 
