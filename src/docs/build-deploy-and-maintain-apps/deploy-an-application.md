@@ -133,6 +133,28 @@ A deployment in OpenShift consists of:
 
 Understanding these components is essential for correctly configuring your application's deployment. To read more about other configuration options, use `oc explain` command or this [kubernetes official documentation](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/).
 
+Note that there is no **Triggers** spec in deployments, but OpenShift supports adding a trigger annotation to objects instead:
+
+```
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: my-app
+  annotations:
+    image.openshift.io/triggers: |-
+      [
+        {
+          "from": {
+            "kind": "ImageStreamTag",
+            "name": "my-image:latest",
+            "namespace": "license-tools"
+          },
+          "fieldPath": "spec.template.spec.containers[0].image"
+        }
+      ]
+...
+```
+
 ### 2. Choose a deployment strategy
 
 OpenShift natively supports two deployment strategies:
