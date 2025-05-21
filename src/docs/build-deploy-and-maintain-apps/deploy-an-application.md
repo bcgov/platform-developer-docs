@@ -133,7 +133,7 @@ A deployment in OpenShift consists of:
 
 Understanding these components is essential for correctly configuring your application's deployment. To read more about other configuration options, use `oc explain` command or this [kubernetes official documentation](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/).
 
-Note that there is no **Triggers** spec in deployments, but OpenShift supports adding a trigger annotation to objects instead:
+Deployments don’t have a **triggers** section in their `spec`, but OpenShift lets you add a trigger annotation to objects instead:
 
 ```
 apiVersion: apps/v1
