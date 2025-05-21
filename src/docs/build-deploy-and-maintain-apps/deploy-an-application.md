@@ -66,7 +66,7 @@ Before deployment, ensure that:
 
 OpenShift supports images from various sources, including:
 
-- **OpenShift Image Streams** - Tracks image versions within OpenShift, enabling automated updates via triggers. However, images managed this way are not shareable between different clusters  
+- **OpenShift Image Streams** - Tracks image versions within OpenShift. However, images managed this way are not shareable between different clusters  
 - **Artifactory** - A centralized repository for managing application artifacts, including container images. While OpenShift natively supports image streams, organizations often use Artifactory for:
   - A single, standardized repository for **all** application artifacts (not just containers)  
   - Additional scanning, caching, or proxying capabilities provided by an external repository  
@@ -130,7 +130,7 @@ A deployment in OpenShift consists of:
 - **Pod Template** - Defines container specification (desired state of the pods being deployed), base image, ports and environment variables
 - **Replicas** - Number of instances that should be maintained
 - **Selectors** - Labels that identify the pods managed by the deployment configuration
-- **Triggers** - Image triggers update deployments when a new version is available
+
 Understanding these components is essential for correctly configuring your application's deployment. To read more about other configuration options, use `oc explain` command or this [kubernetes official documentation](https://kubernetes.io/docs/concepts/workloads/controllers/deployment/).
 
 ### 2. Choose a deployment strategy
