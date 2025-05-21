@@ -35,6 +35,7 @@ Non-secrets may be stored in Vault if desired.
 - [What does it cost?](#what-does-it-cost)
 - [Support roles, processes, communications (platform operations)](#support-roles-processes-communications-platform-operations)
 - [Service delivery](#service-delivery)
+- [Alternatives](#alternatives)
 
 ## Features and functions
 
@@ -114,11 +115,14 @@ Any changes to the Vault Secrets Management tool will be communicated via [#devo
 Vault Secrets Management improvements include system upgrades, feature integration and issue fixing. The Vault Operations team conduct these operations at scheduled times, with advance notice in the #devops-vault Rocket.Chat channel. If disruption or downtime is expected during service improvement, the team will provide details to help teams prepare and to verify their applications.
 
 ### Service level
-To be determined.
+Enterprise
 
 ### Security reviews
 
 A STRA for Vault has been completed by the Platform Services team.
+
+## Alternatives
+If you would prefer to use a different secrets management system, you may use the External Secrets Operator to link your OpenShift namespace to an external service, such as AWS Secrets Manager or Azure Key Vault.  See the [External Secrets Operator documentation](external-secrets.md) for more information.
 
 ---
 Related links:

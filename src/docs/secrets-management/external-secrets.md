@@ -1,3 +1,23 @@
+---
+title: External secrets
+
+slug: external-secrets-operator
+
+description: The External Secrets Operator can link your OpenShift namespace with an external secrets management service.
+
+keywords: 
+
+page_purpose: Describes the purpose and use of the External Secrets Operator
+
+audience: developer, technical lead
+
+author: Ian Watts
+
+content_owner: Ian Watts
+
+sort_order: 3
+---
+
 # External Secrets
 
 The **External Secrets Operator** is a Kubernetes operator that integrates external secret management systems, such as [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault/) and [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html).  The operator reads information from external APIs and automatically injects the values into a Kubernetes Secret.
@@ -24,14 +44,9 @@ Documentation for each supported service can be found in the [provider list](htt
 If you are using Azure Key Vault, refer to [Example SecretStore - Azure Key Vault](example_secretstore_azure_key_vault.md).
 
 ## Create an ExternalSecret
-An ExternalSecret contains references to the SecretStore that defines the external service as well as the individual secrets in that external service.
+An ExternalSecret contains a reference to the SecretStore that defines the external service, as well as the individual secrets to replicate from that external service.
 
-There is a one to one relationship between ExternalSecrets and OpenShift Secrets.  Any secrets (key/value pairs or other kind of secret) that are defined in the ExternalSecret are created within the stated OpenShift Secret.
-
-The main configuration elements of an ExternalSecret are:
-* `.spec.secretStoreRef.name` - the name of the SecretStore to use
-* `.spec.target.name` - the name of the OpenShift Secret to create
-* `.spec.data[].remoteRef` - the names of the keys in both the external secret and OpenShift Secret
+There is a one-to-one relationship between ExternalSecrets and OpenShift Secrets.  Any secrets (key/value pairs or other kind of secret) that are defined in the ExternalSecret are created within the stated OpenShift Secret.
 
 Here is an example:
 ```
@@ -41,38 +56,28 @@ metadata:
   name: my-app-1
   namespace: abc123-dev
 spec:
-  refreshInterval: 1h
   secretStoreRef:
     kind: SecretStore
+    # The name of your SecretStore
     name: azure-key-vault
   target:
-    creationPolicy: Owner
-    deletionPolicy: Retain
+    # The name of the Secret in OpenShift.
+    # It will be created if it does not already exist.
     name: my-app-1
   data:
     - remoteRef:
-        conversionStrategy: Default
-        decodingStrategy: None
+        # The name of the key in the external secrets system
         key: dev-db-user
-        metadataPolicy: None
+      # The name of the key in the OpenShift secret
       secretKey: db-user
     - remoteRef:
-        conversionStrategy: Default
-        decodingStrategy: None
         key: dev-db-pass
-        metadataPolicy: None
       secretKey: db-pass
 ```
 
-In this example, we have:
-* .spec.secretStoreRef.name = azure-key-vault; this is the name of the SecretStore
-* .spec.target.name = my-app-1; this is the name of the OpenShift Secret to create
-* .spec.data[].remoteRef.key = dev-db-pass; this is the name of the key in the external secret
-* .spec.data[].secretKey = db-pass; this is the name of the key for the key/value pair in the OpenShift Secret
-
 For more information when creating an ExternalSecret, use the `oc` CLI, such as:
 ```
-oc explain externalsecret.spec.data
+oc explain externalsecret.spec
 ```
 
 ```

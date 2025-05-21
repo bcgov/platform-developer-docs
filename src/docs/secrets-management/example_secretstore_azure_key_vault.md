@@ -1,14 +1,14 @@
 # Example SecretStore - Azure Key Vault
 
 ## Summary
-In order to use Azure Key Vault with the External Secrets Operator, a Service Principal must be created with the necessary permissions.  A Secret is then created in the namespaces where SecretStore and ExternalSecret resources will be created.
+In order to use Azure Key Vault with the [External Secrets Operator](external-secrets.md), a Service Principal must be created with the necessary permissions.  Credentials for the Service Principal are set in a Secret in the namespaces where SecretStore and ExternalSecret resources will be created.
 
 ## Requirements
 * Access to your Azure Key Vault
 * Access to your OpenShift namespaces
 * If using the Azure CLI, podman or docker is recommended
 
-An Azure service principal can be created using the CLI or by logging in to the Azure Portal.  This document describes the CLI process.  To use the portal to create the service principal, see [Register a Microsoft Entra app and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal).
+An Azure service principal can be created using the CLI or by logging in to the Azure Portal.  This document describes the CLI process.  To use the Azure portal to create the service principal, see [Register a Microsoft Entra app and create a service principal](https://learn.microsoft.com/en-us/entra/identity-platform/howto-create-service-principal-portal).
 
 ## Official Documentation
 https://external-secrets.io/latest/provider/azure-key-vault/
@@ -38,9 +38,9 @@ Make a note of the subscription ID in the output of the login command.
 
 ## Create the Service Principal
 You will need:
-* the subscription ID of your Azure account
-* the name of your key vault
-* the resource group of your key vault
+* The subscription ID of your Azure account
+* The name of your key vault
+* The resource group of your key vault
 
 In the Azure CLI container, set environment variables, entering the appropriate values: 
 ```
@@ -55,25 +55,16 @@ Run the command to create the service principal:
 az ad sp create-for-rbac --name "${SP_NAME}" --role "Key Vault Secrets User" --scopes /subscriptions/${SUBSCRIPTION_ID}/resourceGroups/${RESOURCE_GROUP}/providers/Microsoft.KeyVault/vaults/${KEY_VAULT_NAME} --sdk-auth
 ```
 
-Save a copy of the output from this command - you'll need `clientId`, `clientSecret`, and `tenantId`.
+Save a copy of the output from this command - you'll need `clientId`, `clientSecret`, and `tenantId`.  Set the client credentials as environment variables if you'd like to copy the command below to create the Secret.
+```
+export CLIENT_ID=clientId_from_output
+export CLIENT_SECRET=clientSecret_from_output
+```
 
 ## Create the OpenShift Secret
-Create a Secret in your OpenShift namespace.  You can use the UI, if you like, or create a YAML manifest and apply it.
+Create a Secret in your OpenShift namespace.  You can use the UI, if you like, or use the following commands.
 ```
-kind: Secret
-apiVersion: v1
-metadata:
-  name: azure-key-vault-creds
-data:
-  clientId: MY_CLIENT_ID
-  clientSecret: MY_CLIENT_SECRET
-  tenantId: MY_TENANT_ID
-type: Opaque
-```
-
-Apply the manifest:
-```
-oc apply -f secret.azure-key-vault-creds.yaml
+oc create secret generic azure-key-vault-creds --from-literal=clientId=${CLIENT_ID} --from-literal=clientSecret=${CLIENT_SECRET}
 ```
 
 ## Assign Permissions to Service Principal
@@ -104,7 +95,7 @@ apiVersion: external-secrets.io/v1beta1
 kind: SecretStore
 metadata:
   name: azure-key-vault
-  namespace: e95e89-dev
+  namespace: abc123-dev
 spec:
   provider:
     azurekv:
@@ -119,6 +110,17 @@ spec:
           key: clientSecret
 ```
 
-Now you're ready to [create an ExternalSecret](external-secrets.md#create-an-externalsecret).
+Check the status of the new SecretStore.  It should show as ready.
+```
+status:
+  capabilities: ReadWrite
+  conditions:
+    - lastTransitionTime: "2025-05-21T17:43:07Z"
+      message: store validated
+      reason: Valid
+      status: "True"
+      type: Ready
+```
 
+Now you're ready to [create an ExternalSecret](external-secrets.md#create-an-externalsecret).
 
