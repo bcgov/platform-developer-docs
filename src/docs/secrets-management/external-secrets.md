@@ -32,6 +32,8 @@ ESO is available in each cluster. It's **self-serve**, so you can:
 
 For more details, visit the [official External Secrets Operator documentation](https://external-secrets.io/latest/).
 
+Note that OpenShift Secrets are now encrypted on disk, which resolves what was previously a security concern.
+
 ## How External Secrets Operator works
 
 To connect to an external secrets management system, you create two resources:
