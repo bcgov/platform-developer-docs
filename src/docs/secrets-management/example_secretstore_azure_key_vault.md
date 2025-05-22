@@ -22,7 +22,7 @@ You can create the Service Principal using either the Azure CLI or the Azure Por
 
 We recommend running the Azure CLI in a Docker or Podman container. Installing the CLI directly on your machine requires many dependencies, which might conflict with other tools or take up unnecessary space if you only need it for this task.
 
-Make sure you have a running Docker ir Podman environment before starting.
+Make sure you have a running Docker or Podman environment before starting.
 
 Start the container:
 
@@ -74,14 +74,14 @@ export CLIENT_SECRET=clientSecret_from_output
 
 ## Create the OpenShift Secret
 
-First, create a Secret in your OpenShift namespace to store your Azure Service Principal credentials.  You can use the UI, if you like, or use the following commands:
+First, create a Secret in your OpenShift namespace to store your Azure Service Principal credentials.  You can use the UI if you like, or use the following command:
 ```
 oc create secret generic azure-key-vault-creds --from-literal=clientId=${CLIENT_ID} --from-literal=clientSecret=${CLIENT_SECRET}
 ```
 
 ## Assign permissions to the Service Principal
 
-Use the Azure CLI, get a list of Service Principals:
+Using the Azure CLI, get a list of Service Principals:
 
 ```
 az ad sp list --show-mine
@@ -124,7 +124,7 @@ spec:
           key: clientSecret
 ```
 
-After creating the YAML manifest, check the status of the new SecretStore.  It should show as ready.
+After applying the YAML manifest, check the status of the new SecretStore.  It should show as ready.
 ```
 status:
   capabilities: ReadWrite

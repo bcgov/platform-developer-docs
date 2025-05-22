@@ -24,7 +24,7 @@ The **External Secrets Operator (ESO)** is a Kubernetes operator that connects t
 
 ESO's main purpose to keep your Kubernetes Secrets in sync with external APIs. It uses custom resources `ExternalSecret` and `SecretStore` to provide a user-friendly abstraction for the external API that stores and manages the lifecycle of the secrets for you.
 
-You install ESO in each cluster. It's **self-serve**, so you can:
+ESO is available in each cluster. It's **self-serve**, so you can:
 
 * Choose from many different secret management services
 * Use the same service across your hybrid cloud environment
