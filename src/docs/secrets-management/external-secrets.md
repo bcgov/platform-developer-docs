@@ -20,33 +20,38 @@ sort_order: 3
 
 # External Secrets
 
-The **External Secrets Operator** is a Kubernetes operator that integrates external secret management systems, such as [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault/) and [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html).  The operator reads information from external APIs and automatically injects the values into a Kubernetes Secret.
+The **External Secrets Operator (ESO)** is a Kubernetes operator that connects to external secret management systems like [Azure Key Vault](https://azure.microsoft.com/en-us/products/key-vault/) and [AWS Secrets Manager](https://docs.aws.amazon.com/secretsmanager/latest/userguide/intro.html).  The operator reads information from external APIs (systems) and automatically adds them to Kubernetes as Secrets.
 
-The goal of External Secrets Operator is to synchronize secrets from external APIs into Kubernetes. ESO uses custom resources `ExternalSecret` and `SecretStore` to provide a user-friendly abstraction for the external API that stores and manages the lifecycle of the secrets for you.
+ESO's main purpose to keep your Kubernetes Secrets in sync with external APIs. It uses custom resources `ExternalSecret` and `SecretStore` to provide a user-friendly abstraction for the external API that stores and manages the lifecycle of the secrets for you.
 
-The operator is installed in each cluster and provides **self-serve functionality**.  The External Secrets Operator:
-* gives you the flexibility to use any of dozens of secrets management services
-* allows you to use a single secrets management service for your hybrid cloud environment
-* adds redundancy to your secrets management system
+You install ESO in each cluster. It's **self-serve**, so you can:
 
-Refer to the [official External Secrets Operator documentation](https://external-secrets.io/latest/) for more information.
+* Choose from many different secret management services
+* Use the same service across your hybrid cloud environment
+* Add redundancy to your secrets management set up
+
+For more details, visit the [official External Secrets Operator documentation](https://external-secrets.io/latest/).
 
 ## How External Secrets Operator works
-Secrets integration works by creating a `SecretStore`, which configures the connection and credentials for your external secrets management system, and `ExternalSecrets`, which define exactly which secrets and keys to replicate to OpenShift.
 
-Create the SecretStore and ExternalSecrets in each namespace where you want to replicate secrets.
+To connect to an external secrets management system, you create two resources:
+
+* A `SecretStore`, which sets up the connection and credentials
+* One or more `ExternalSecrets`, which define the specific secrets and keys to copy into OpenShift
+
+Create both resources  in each namespace where you want to replicate secrets.
 
 ## Create a SecretStore
-The SecretStore custom resource contains the address and credentials of the secrets management service.  The exact way it is configured depends on the service.
+The `SecretStore`  resource stores the address and credentials for your secrets management service.  The setup depends on which service you're using.
 
-Documentation for each supported service can be found in the [provider list](https://external-secrets.io/latest/provider/aws-secrets-manager/).  Please use that documentation to set up your SecretStore; the process will vary from service to service.
+Check the [provider list](https://external-secrets.io/latest/provider/aws-secrets-manager/) for setup instructions specific to your service.
 
-If you are using Azure Key Vault, refer to [Example SecretStore - Azure Key Vault](example_secretstore_azure_key_vault.md).
+If you are using Azure Key Vault, see the [Example SecretStore - Azure Key Vault](example_secretstore_azure_key_vault.md).
 
 ## Create an ExternalSecret
-An ExternalSecret contains a reference to the SecretStore that defines the external service, as well as the individual secrets to replicate from that external service.
+An `ExternalSecret` connects to a `SecretStore` and lists the specific secrets you want to copy from the external service. Each `ExternalSecret` creates one OpenShift secret. 
 
-There is a one-to-one relationship between ExternalSecrets and OpenShift Secrets.  Any secrets (key/value pairs or other kind of secret) that are defined in the ExternalSecret are created within the stated OpenShift Secret.
+The key-value pairs or other secret data you define in the `ExternalSecret`  are automatically added to the OpenShift secret.
 
 Here is an example:
 ```
