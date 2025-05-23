@@ -35,6 +35,7 @@ Non-secrets may be stored in Vault if desired.
 - [What does it cost?](#what-does-it-cost)
 - [Support roles, processes, communications (platform operations)](#support-roles-processes-communications-platform-operations)
 - [Service delivery](#service-delivery)
+- [Alternatives](#alternatives)
 
 ## Features and functions
 
@@ -78,7 +79,7 @@ The best source of help is the vibrant community of product teams using Vault fo
 
 You can find this highly talented and knowledgeable group in the [#devops-vault channel on Rocket.Chat](https://chat.developer.gov.bc.ca/channel/devops-vault).
 
-For help beyond this contact one of the Vault administrators via the [#devops-sos channel on Rocket.Chat](https://chat.developer.gov.bc.ca/channel/devops-sos).
+For help beyond this contact one of the Vault administrators via the [#devops-operations channel on Rocket.Chat](https://chat.developer.gov.bc.ca/channel/devops-operations).
 
 ## What does it cost?
 
@@ -92,7 +93,7 @@ Vault interfaces with Kubernetes services to provide authentication via service 
 
 Rocket.Chat is the primary mode of communication. Specifically, the [#devops-vault](https://chat.developer.gov.bc.ca/channel/devops-vault) channel should be used to engage the community for best practices, configuration and troubleshooting questions.
 
-For cluster wide service notifications that may impact Vault monitor, use the [#devops-alerts channels in Rocket.Chat.](https://chat.developer.gov.bc.ca/channel/devops-alerts)
+For cluster wide service notifications that may impact Vault monitor, use the [#devops-alerts channel in Rocket.Chat.](https://chat.developer.gov.bc.ca/channel/devops-alerts)
 
 For teams without Rocket.Chat access or to escalate a question or concern, contact us by email at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca). 
 
@@ -107,18 +108,21 @@ As part of project onboarding, Kubernetes service accounts are generated for you
 Product teams can choose to use Vault or ETCD backed Kubernetes Secrets, but it is recommended that Vault be used for secrets.
 
 ### Change management
-Any changes to the Vault Secrets Management tool will be communicated via #devops-vault and #internal-devops-vault Rocket.Chat channels. For major service update, the Vault Operations team will reach out to product owners for notice.
+Any changes to the Vault Secrets Management tool will be communicated via [#devops-vault](https://chat.developer.gov.bc.ca/channel/devops-vault) and [#devops-alerts](https://chat.developer.gov.bc.ca/channel/devops-alerts) Rocket.Chat channels. For major service updates, the Vault Operations team will reach out to product owners for notice.
 
 ### Service improvements
 
-Vault Secrets Management improvements including system upgrades, feature integration and issue fixing. The Vault Operations team will be conducting the operation on a scheduled time, with advanced notice in the #devops-vault Rocket.Chat channel. If disruption or downtime is expected during service improvement, the team will discuss on maintenance time in the channel to minimize effects.
+Vault Secrets Management improvements include system upgrades, feature integration and issue fixing. The Vault Operations team conduct these operations at scheduled times, with advance notice in the #devops-vault Rocket.Chat channel. If disruption or downtime is expected during service improvement, the team will provide details to help teams prepare and to verify their applications.
 
 ### Service level
-To be determined.
+Enterprise
 
 ### Security reviews
 
-An STRA for Vault has been completed by the Platform Services team.
+A STRA for Vault has been completed by the Platform Services team.
+
+## Alternatives
+If you would prefer to use a different secrets management system, you may use the External Secrets Operator to link your OpenShift namespace to an external service, such as AWS Secrets Manager or Azure Key Vault.  See the [External Secrets Operator documentation](external-secrets.md) for more information.
 
 ---
 Related links:

@@ -102,6 +102,7 @@ demos of their application.
 
 * [Vault getting started guide](docs/secrets-management/vault-getting-started-guide.md)
 * [Vault secrets management](docs/secrets-management/vault-secrets-management-service.md)
+* [External secrets](docs/secrets-management/external-secrets.md)
 
 ### Security and privacy compliance
 
