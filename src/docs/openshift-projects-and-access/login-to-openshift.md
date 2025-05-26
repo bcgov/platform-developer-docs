@@ -24,7 +24,7 @@ Teams can log in to OpenShift with either IDIR or GitHub ID. IDIR is the preferr
 
 When you log in to the Silver cluster OpenShift console, you have the option of using GitHub or your Azure AD IDIR. Github login requires membership of the `bcgov` or `bcgov-c` organisations and [linking to an IDIR account](https://developer.gov.bc.ca/docs/default/component/bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/#organizations-in-github). 
 
-You have to log in with IDIR into the OpenShift console before you can associate any role bindings with the IDIR account.
+You have to log in with IDIR into the OpenShift console once before you can associate any role bindings with the IDIR account.
 
 ![Image of authorization options](../../images/OCP4%20cluster%20authentication%20login%20page%20showing%20github%20and%20azure%20ad%20idir%20as%20options.png)
 
