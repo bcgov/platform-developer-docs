@@ -70,13 +70,14 @@ Save a copy of the output from this command - you'll need `clientId`, `clientSec
 ```
 export CLIENT_ID=clientId_from_output
 export CLIENT_SECRET=clientSecret_from_output
+export TENANT_ID=tenantId_from_output
 ```
 
 ## Create the OpenShift Secret
 
 First, create a Secret in your OpenShift namespace to store your Azure Service Principal credentials.  You can use the UI if you like, or use the following command:
 ```
-oc create secret generic azure-key-vault-creds --from-literal=clientId=${CLIENT_ID} --from-literal=clientSecret=${CLIENT_SECRET}
+oc create secret generic azure-key-vault-creds --from-literal=clientId=${CLIENT_ID} --from-literal=clientSecret=${CLIENT_SECRET} --from-literal=tenantId=${TENANT_ID}
 ```
 
 ## Assign permissions to the Service Principal
@@ -103,7 +104,7 @@ az keyvault set-policy --name ${KEY_VAULT_NAME} --object-id ${OBJECT_ID} --secre
 ```
 
 ## Create a SecretStore
-Next, create a YAML manifest for the `SecretStore`.  Be sure to enter the correct values for the `tenantId` and the name of the Secret that you created above.
+Next, create a YAML manifest for the `SecretStore`.  Be sure to enter the correct value for the name of the Secret that you created above.
 ```
 apiVersion: external-secrets.io/v1beta1
 kind: SecretStore
@@ -113,7 +114,6 @@ metadata:
 spec:
   provider:
     azurekv:
-      tenantId: "MY_TENANT_ID"
       vaultUrl: https://my-key-vault-name.vault.azure.net/
       authSecretRef:
         clientId:
@@ -122,6 +122,9 @@ spec:
         clientSecret:
           name: azure-key-vault-creds
           key: clientSecret
+        tenantId:
+          name: azure-key-vault-creds
+          key: tenantId
 ```
 
 After applying the YAML manifest, check the status of the new SecretStore.  It should show as ready.
