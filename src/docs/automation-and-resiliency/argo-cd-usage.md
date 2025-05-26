@@ -125,31 +125,38 @@ This document focuses on Helm and Kustomize.
 
 #### Helm
 
-If you're using [Helm](https://argo-cd.readthedocs.io/en/stable/user-guide/helm/), you may use your own package or a repository in the Docker Helm OCI repository.
+If you're using [Helm](https://argo-cd.readthedocs.io/en/stable/user-guide/helm/), you may use your own package or a chart repository in the Docker Helm OCI repository.
 
 Start by creating a top-level directory dedicated to your application.
 
 If using your own Helm package, place all of the Helm files within this directory, including your values file(s). When setting up the application in the Argo CD UI, you have the option to set a specific values file to use.  For example, you may have a values file for each environment (dev, test, prod).
 
-If using a package in the Docker Helm OCI repository (registry-1.docker.io), you will have to use the `docker-helm-oci-remote` caching repository in Artifactory, because your ArgoCD project only allows source repository URLs that match either your gitops repository or the Artifactory caching repository.  To use Artifactory for this, create a Chart.yaml file in your application's directory in your gitops repository, setting the desired Helm package as a dependency.  Here's an example that uses the bitnami redis-cluster package:
+If using a package in the Docker Helm OCI repository (registry-1.docker.io), you will have to use the `docker-helm-oci-remote` caching repository in Artifactory, because your ArgoCD project only allows source repository URLs that match either your gitops repository or the Artifactory caching repository.  To use Artifactory for this, create an ArgoCD App using the following guidelines:
 
-```
-apiVersion: v2
-name: redis-cluster
-type: application
-version: "11.5.2"
-appVersion: "7.4.2"
-dependencies:
-  - name: redis-cluster
-    version: "11.5.2"
-    repository: "oci://artifacts.developer.gov.bc.ca/docker-helm-oci-remote/bitnamicharts"
-```
+* Source repository URL: `artifacts.developer.gov.bc.ca/docker-helm-oci-remote`
+* Source repository type: `HELM`
+* Chart name: Enter as group/project, such as `bitnamicharts/mariadb`
+* Chart version: In the field adjacent to the chart name, enter the version number, such as `20.2.0`
+* Helm settings: Select a Values file or enter individual values
 
-To apply local customizations, copy the values.yaml file from the original repository into this same directory, make your modifications, and select that file in the values file list in the ArgoCD configuration.
-
+To create an ArgoCD App using a manifest, use the following example as a guide.
 ```
-Chart.yaml
-values.yaml
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mariadb
+spec:
+  destination:
+    namespace: abc123-dev
+    server: https://kubernetes.default.svc
+  project: abc123
+  source:
+    chart: bitnamicharts/mariadb
+    helm:
+      valueFiles:
+        - charts/common/values.yaml
+    repoURL: artifacts.developer.gov.bc.ca/docker-helm-oci-remote
+    targetRevision: 20.2.0
 ```
 
 #### Kustomize
