@@ -137,26 +137,31 @@ If using a package in the Docker Helm OCI repository (registry-1.docker.io), you
 * Source repository type: `HELM`
 * Chart name: Enter as group/project, such as `bitnamicharts/mariadb`
 * Chart version: In the field adjacent to the chart name, enter the version number, such as `20.2.0`
-* Helm settings: Select a Values file or enter individual values
+* Helm settings: Select a standard values file or enter individual values. To use your own values file, see the example below of a multi-source application.
 
-To create an ArgoCD App using a manifest, use the following example as a guide.
+To use a values file from your own GitOps repo, you will have to create the ArgoCD App using a manifest, because the UI does not currently support that.  In this example, the second source creates a reference used in the first source for the values file.
 ```
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: mariadb
+  name: mariadb-helm
+  namespace: abc123-dev
 spec:
   destination:
     namespace: abc123-dev
     server: https://kubernetes.default.svc
   project: abc123
-  source:
-    chart: bitnamicharts/mariadb
-    helm:
-      valueFiles:
-        - charts/common/values.yaml
-    repoURL: artifacts.developer.gov.bc.ca/docker-helm-oci-remote
-    targetRevision: 20.2.0
+  sources:
+    - chart: bitnamicharts/mariadb
+      helm:
+        releaseName: mariadb
+        valueFiles:
+          - $values/mariadb/values-dev.yaml
+      repoURL: artifacts.developer.gov.bc.ca/docker-helm-oci-remote
+      targetRevision: 20.2.0
+    - ref: values
+      repoURL: https://github.com/bcgov-c/tenant-gitops-abc123.git
+      targetRevision: main
 ```
 
 #### Kustomize
