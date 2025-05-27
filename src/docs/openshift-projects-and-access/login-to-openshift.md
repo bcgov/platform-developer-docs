@@ -30,7 +30,7 @@ You have to log in with IDIR into the OpenShift console once before you can asso
 
 ## Information for developers
 
-We have updated the [Platform Product Registry](https://registry.developer.gov.bc.ca/) to use IDIR user accounts and B.C. government email identifiers for product owners and technical leads to ensure that namespace administrative-level controls are tied to an account that we have more control over. Make sure all contractors listed as technical leads for projects on the platform have active IDIR accounts.
+The [Platform Product Registry](https://registry.developer.gov.bc.ca/) now uses IDIR user accounts and B.C. government email identifiers for product owners and technical leads. This ensures that namespace administrative-level controls are linked to accounts we can manage. Make sure all contractors listed as technical leads for projects on the platform have active IDIR accounts.
 
 Some teams may choose to have all team members migrated to IDIR account use for OpenShift platform access. This isn't required.
 
