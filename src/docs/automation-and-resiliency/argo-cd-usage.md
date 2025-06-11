@@ -308,11 +308,12 @@ If you get an error message when trying to create the application, read the erro
 ### Synchronize the application
 
 Once the application is created successfully and automatic synchronization is not yet enabled:
-  * Click on the application from the application list page.
+
+* Click on the application from the application list page.
   * Argo CD will have scanned the manifest repository files already, indicating 'out of sync'.
-  * To start synchronization:
-    * Click the 'Sync' button, followed by 'Synchronize'.
-    * The duration depends on the number of resources defined for the application.
+* To start synchronization:
+  * Click the 'Sync' button, followed by 'Synchronize'.
+  * The duration depends on the number of resources defined for the application.
 * If synchronization fails:
   * Click on the 'failed' message to review explanations.
   * Potential issues may stem from manifest files or repository configuration.
