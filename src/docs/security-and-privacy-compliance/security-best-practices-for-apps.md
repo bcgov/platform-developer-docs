@@ -31,7 +31,7 @@ When you work in open environments like GitHub, follow security and privacy requ
 
 ## Open development basics
 
-There is an ongoing [debate](http://www.dwheeler.com/secure-programs/Secure-Programs-HOWTO/open-source-security.html) in the security community about the use and development of operation support system (OSS) applications and the implications of exposing the code publicly or keeping it private. 
+There is an ongoing [debate](http://www.dwheeler.com/secure-programs/Secure-Programs-HOWTO/open-source-security.html) in the security community about the use and development of open-source applications and the implications of exposing the code publicly or keeping it private. 
 
 The debate showcases that neither approach is inherently more secure. The key factor is whether developers build security into the code. Open development can encourage better practices by exposing code to public review, which motivates developers to follow security best practices from the beginning.
 
