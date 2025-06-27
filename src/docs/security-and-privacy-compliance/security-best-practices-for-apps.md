@@ -102,47 +102,55 @@ Start by understanding what the assessment involves and how critical your system
 
 Know what assets you have, where they are, and whether your data is properly classified and inventoried.
 
-*  Do you maintain an up-to-date inventory of:
+Does your team:
+
+*  Maintain an up-to-date inventory of:
   * Hosts, platform, and/or system stack?
   * Critical software components and their versions?
   * Software licenses?
-* Is there a process to keep the inventory up to date?
-* Have you [classified your data](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification)?
+* Have a process to keep the inventory up to date?
+* Have [classified data](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification)?
 
 ### System design
 
 Make sure your system architecture is clearly documented and reflects current data flows and connections.
 
-* Do you maintain a Data Flow Diagram (or equivalent) that shows:
+Does your team:
+
+* Maintain a Data Flow Diagram (or equivalent) that shows:
   * All components—servers, services, APIs, end-users and admin, etc.?
   * All communications between them including protocols, ports and direction?
-* Is the design current and updated regularly?
+* Keep the design current and updated regularly?
 
 ### System implementation
 
 Check that your system's technical setup supports security best practices and follows the intended design.
 
-* Do firewall rules support and match the system design?
-* Do network security policies, for example: KNPs limit communications between components?
+Does your team:
+
+* Have firewall rules support and match the system design?
+* Create network security policies, for example: KNPs limit communications between components?
   * Encrypt all communications between components, for example: Between app server component and database component
-* Are all exposures necessary  for example: No unused services running?
-* Have you run a port scan for example: Nmap to confirm?
-* Does your TLS set up earn a Grade A from [SSL Labs](https://www.ssllabs.com/ssltest/)?
+* Have all exposures necessary for example: No unused services running?
+* Run a port scan for example: Nmap to confirm?
+* Have TLS set up earn a Grade A from [SSL Labs](https://www.ssllabs.com/ssltest/)?
   * Use Entrust certificates in Prod environments
-* Consider encrypting database elements that contain [Protected B/C data](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification)
+* Encrypt database elements that contain [Protected B/C data](https://www2.gov.bc.ca/gov/content/governments/services-for-government/information-management-technology/information-security/information-security-classification)
 
 ### Access management
 
 Control who can access your system, what they can do, and how credentials are managed and protected.
 
-* Do you integrate with IDIR/BCeID for application access or have documented exemption?
+Does your team:
+
+* Integrate with IDIR/BCeID for application access or have documented exemption?
   * Follow OAuth2 best practices
-* Have you removed all default user accounts?
-* Do you document how to grant or revoke access for clients, ministry staff, developers and administrators?
-* Do you centralize access control for example:Active Directory or KeyCloak?
-* Do you document all system accounts and their purpose?
-* Do system accounts have only the permissions they need?
-* Are system passwords and keys protected?
+* Remove all default user accounts?
+* Document how to grant or revoke access for clients, ministry staff, developers and administrators?
+* Centralize access control for example:Active Directory or KeyCloak?
+* Document all system accounts and their purpose?
+* Verify that system accounts have only the permissions they need?
+* Verify that system passwords and keys protected?
   * Do not store secrets in GitHub repos or OpenShift environment variables
   * Use Vault
 
@@ -150,25 +158,32 @@ Control who can access your system, what they can do, and how credentials are ma
 
 Use tools and testing to detect, respond to, and prevent known security risks in your system and code.
 
-* Do you subscribe to alerts for vulnerability notifications in critical software components?
+Does your team:
+
+* Subscribe to alerts for vulnerability notifications in critical software components?
   * Use tools like Dependabot alerts (SCA)
-* Do you run these types of tests for each build:
+* Run these types of tests for each build:
   * Static code analysis for example SonarQube or SonarCloud?
   * Dynamic app testing for example OWASP ZAP?
-  * Container vulnerability analysis scans (CVA) for example  ACS/Artifactory Xray
-  * User testing with invalid inputs for example: fuzzing
+  * Container vulnerability analysis scans (CVA) for example  ACS/Artifactory Xray?
+  * User testing with invalid inputs for example: fuzzing?
   * APIs validation to prevent and protect data leaks?
-* Consider using Interactive Application Security Testing (IAST)
+* Consider using Interactive Application Security Testing (IAST)?
 
 ### Change management
 
 Ensure all changes—especially those affecting security—are planned, reviewed, and clearly communicated.
 
-* Do you prioritize critical security patches?
-* Do you schedule and test changes?
-* Do you communicate outages and changes:
+Does your team:
+
+* Prioritize critical security patches?
+* Schedule and test changes?
+* Communicate outages and changes:
   * From service providers for example: hosting?
   * To stakeholders?
+
+Very important to consider:
+
 * Do not allow local authentication in production environments
 * Do not use production data in non-production environments for testing
 
@@ -176,15 +191,17 @@ Ensure all changes—especially those affecting security—are planned, reviewed
 
 Monitor system activity with secure, detailed logs, and set up alerts to detect suspicious behavior or issues.
 
-* Do logs capture the  appropriate level of detail for each of these event categories:
+Does your team:
+
+* Logs capture the appropriate level of detail for each of these event categories:
   * Web Access?
   * Error?
   * System?
   * Administrator access?
-* Do you store logs outside of the system?
-* Do you keep security logs for at least 13 months?
-* Are logs protected from tampering or deletion?
-* Do you have alerts that notify the system admins/owners of:
+* Store logs outside of the system?
+* Keep security logs for at least 13 months?
+* Protect logs from tampering or deletion?
+* Have alerts that notify the system admins/owners of:
   * System outages?
   * Performance degradation?
   * Unauthorized access attempts or misuse for example: brute-force attempts?
@@ -193,15 +210,19 @@ Monitor system activity with secure, detailed logs, and set up alerts to detect 
 
 Protect your data by maintaining secure backups, testing recovery procedures, and planning for disruptions.
 
-* Do you backup critical data?
-* Do you regularly test your ability to restore backups?
-* Do you encrypt data at-rest for example: Encrypted disks?
-* For business continuity:
-  * Have you defined your Recovery Time Objectives for example: Maximum downtime
-  * Do you have a communications plan for outages?
-  * Do you maintain an up-to-date contact list of key staff and backups?
-  * Are operating manuals and documentation clear enough for others to follow?
-  * Have you tested your recovery plans?
+Does your team:
+
+* Backup critical data?
+* Regularly test their ability to restore backups?
+* Encrypt data at-rest for example: Encrypted disks?
+
+For business continuity, consider your team to:
+
+  * Define the Recovery Time Objectives for example: Maximum downtime
+  * Have a communications plan for outages
+  * Maintain an up-to-date contact list of key staff and backups
+  * Operate manuals and documentation clear enough for others to follow
+  * Test your recovery plans
  
 
 ## Related pages
