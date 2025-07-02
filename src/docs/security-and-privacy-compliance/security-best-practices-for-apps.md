@@ -193,7 +193,7 @@ Monitor system activity with secure, detailed logs, and set up alerts to detect 
 
 Does your team:
 
-* Logs capture the appropriate level of detail for each of these event categories:
+* Retain logs that capture the appropriate level of detail for each of these event categories:
   * Web Access?
   * Error?
   * System?
