@@ -20,7 +20,7 @@ sort_order: 4
 
 # Security best practices for apps
 
-When you work in open environments like GitHub, follow security and privacy requirements closely. The Office of the Chief Information Officer (OCIO) provides IM/IT Standards you must follow. Any content you manage on GitHub must meet the OCIO’s criteria for "Public" classification under the Information Security Classification Framework.
+When working in open environments like GitHub, you must meet all security and privacy requirements. The Office of the Chief Information Officer (OCIO) sets IM/IT Standards you are required to follow. Ensure any content you manage on GitHub meets the OCIO’s criteria for “Public” classification under the Information Security Classification Framework. 
 
 ## On this page
 
@@ -218,11 +218,11 @@ Does your team:
 
 For business continuity, consider your team to:
 
-  * Define the Recovery Time Objectives for example: Maximum downtime
-  * Have a communications plan for outages
-  * Maintain an up-to-date contact list of key staff and backups
-  * Operate manuals and documentation clear enough for others to follow
-  * Test your recovery plans
+* Define the Recovery Time Objectives for example: Maximum downtime
+* Have a communications plan for outages
+* Maintain an up-to-date contact list of key staff and backups
+* Operate manuals and documentation clear enough for others to follow
+* Test your recovery plans
  
 
 ## Related pages
