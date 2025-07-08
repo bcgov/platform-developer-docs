@@ -88,7 +88,7 @@ plugins:
 - git-revision-date-localized 
 - redirects:
     redirect_maps:
-      'docs/security-and-privacy-compliance/privacy-compliance-and-guidance.md': '../../bc-developer-guide/security/security-and-privacy-compliance-and-guidance/'
+      'docs/security-and-privacy-compliance/privacy-compliance-and-guidance.md': 'https://dev.developer.gov.bc.ca/docs/default/component/bc-developer-guide/security/security-and-privacy-compliance-and-guidance/'
 markdown_extensions:
 - md_in_html
 - pymdownx.highlight:
