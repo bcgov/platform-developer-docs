@@ -71,7 +71,7 @@ nav:
 - Reusable code and services:
   - Project examples: docs/reusable-code-and-services/project-examples.md
   - Reusable services list: docs/reusable-code-and-services/reusable-services-list.md
-- Security and privacy compliance:
+- Security tools and compliance:
   - B.C. Government OpenShift DevOps security compliance: docs/security-and-privacy-compliance/platform-security-compliance.md
   - B.C. government OpenShift platform security tools: docs/security-and-privacy-compliance/platform-security-tools.md
   - Payment card processing for OpenShift applications: docs/security-and-privacy-compliance/payment-card-processing.md
