@@ -89,7 +89,7 @@ plugins:
 - redirects:
     redirect_maps:
       'docs/security-and-privacy-compliance/privacy-compliance-and-guidance.md': 'https://developer.gov.bc.ca/docs/default/component/bc-developer-guide/security/security-and-privacy-compliance-and-guidance/'
-      'docs/security-and-privacy-compliance/security-best-practices-for-apps.md': 'https://dev.developer.gov.bc.ca/docs/default/component/bc-developer-guide/security/best-practices-for-apps/'
+      'docs/security-and-privacy-compliance/security-best-practices-for-apps.md': 'https://developer.gov.bc.ca/docs/default/component/bc-developer-guide/security/best-practices-for-apps/'
 markdown_extensions:
 - md_in_html
 - pymdownx.highlight:
