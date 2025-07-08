@@ -104,12 +104,10 @@ demos of their application.
 * [Vault secrets management](docs/secrets-management/vault-secrets-management-service.md)
 * [External secrets](docs/secrets-management/external-secrets.md)
 
-### Security and privacy compliance
+### Security tools and compliance
 
-* [Privacy compliance and guidance](docs/security-and-privacy-compliance/privacy-compliance-and-guidance.md)
 * [B.C. Government OpenShift DevOps security compliance](docs/security-and-privacy-compliance/platform-security-compliance.md)
 * [B.C. government OpenShift platform security tools](docs/security-and-privacy-compliance/platform-security-tools.md)
-* [Security best practices for apps](docs/security-and-privacy-compliance/security-best-practices-for-apps.md)
 * [Payment card processing for OpenShift applications](docs/security-and-privacy-compliance/payment-card-processing.md)
 
 ### Use GitHub in BC Gov
