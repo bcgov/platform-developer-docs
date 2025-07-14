@@ -2,7 +2,7 @@
 
 ## Get started
 
-Start here for the first steps on working in our OpenShift environment.
+Start here for the first steps on working in our OpenShift environment:
 
 * [Provision a new project in OpenShift](docs/openshift-projects-and-access/provision-new-openshift-project.md)
 * [User access in OpenShift](docs/openshift-projects-and-access/grant-user-access-openshift.md)
@@ -12,7 +12,7 @@ Start here for the first steps on working in our OpenShift environment.
 
 ## Build, deploy and maintain apps
 
-Best practices on the platform.
+Best practices on the platform:
 
 * [Build an application](docs/build-deploy-and-maintain-apps/build-an-application.md)
 * [Deploy an application](docs/build-deploy-and-maintain-apps/deploy-an-application.md)
@@ -23,8 +23,7 @@ Best practices on the platform.
 
 ### Free OpenShift training
 
-Read
-about [the free training](https://cloud.gov.bc.ca/private-cloud/support-and-community/platform-training-and-resources/)
+Read about [the free training](https://digital.gov.bc.ca/technology/cloud/private/support/#platform-training)
 that is offered on the Platform and get access to other learning resources.
 
 ### Rocket.Chat
@@ -35,12 +34,18 @@ about [how to stay connected in Rocket.Chat](../bc-developer-guide/rocketchat/st
 
 [Log in to Rocket.Chat](https://chat.developer.gov.bc.ca).
 
+### Platform Services GenAI chatbot: Rocky
+
+Rocky, the newest member of the Platform Services team is a GenAI chatbot designed to assist with the OpenShift platform and its related shared services. Rocky has been trained on resources from the Private cloud technical documentation, the Private cloud website, and BCGov Internal StackOverflow.  
+
+[Learn how to use Rocky](docs/training-and-learning/rocky-guide.md).
+
 ### Platform community MeetUps
 
 Every 3 weeks, we host a platform community MeetUp where product teams from across the B.C. government give technical
 demos of their application.
 
-[Learn how to register for this and other events](https://digital.gov.bc.ca/cloud/services/private/team/#stay).
+[Learn how to register for this and other events](https://digital.gov.bc.ca/technology/cloud/private/team/#stay).
 
 ## Dive deeper
 
@@ -51,7 +56,7 @@ demos of their application.
 * [Create alerts and notifications in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-create-alert-channels.md)
 * [Set up advanced metrics in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
 * [Resource monitoring dashboards](docs/app-monitoring/resource-monitoring-dashboards.md)
-* [Best practices for application logging in OpenShift](docs/app-monitoring/best-pratices-for-application-logging-in-openshift.md)
+* [Best practices for application logging in OpenShift](docs/app-monitoring/best-practices-for-application-logging-in-openshift.md)
 * [Check application health after an outage](docs/app-monitoring/check-application-health-after-outage.md)
 * [Managing resource quotas in Kubernetes: A complete guide](docs/app-monitoring/managing-resource-quotas-in-kubernetes.md)
 * [Sysdig training](docs/app-monitoring/sysdig-training.md)
@@ -97,19 +102,18 @@ demos of their application.
 
 * [Vault getting started guide](docs/secrets-management/vault-getting-started-guide.md)
 * [Vault secrets management](docs/secrets-management/vault-secrets-management-service.md)
+* [External secrets](docs/secrets-management/external-secrets.md)
 
-### Security and privacy compliance
+### Security tools and compliance
 
-* [Privacy compliance and guidance](docs/security-and-privacy-compliance/privacy-compliance-and-guidance.md)
 * [B.C. Government OpenShift DevOps security compliance](docs/security-and-privacy-compliance/platform-security-compliance.md)
 * [B.C. government OpenShift platform security tools](docs/security-and-privacy-compliance/platform-security-tools.md)
-* [Security best practices for apps](docs/security-and-privacy-compliance/security-best-practices-for-apps.md)
 * [Payment card processing for OpenShift applications](docs/security-and-privacy-compliance/payment-card-processing.md)
 
 ### Use GitHub in BC Gov
 
 * [BC Government organizations in GitHub](../bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/)
-* [Common platform requests in the BC Gov Private Cloud PaaS](https://digital.gov.bc.ca/cloud/services/private/support/#common)
+* [Common platform requests in the BC Gov Private Cloud PaaS](https://digital.gov.bc.ca/technology/cloud/private/support/#common)
 * [Start working in BCGov GitHub organization](../bc-developer-guide/use-github-in-bcgov/start-working-in-bcgov-github-organization/)
 
 ## Get support on the platform
@@ -117,14 +121,14 @@ demos of their application.
 ### Report a platform incident
 
 If you think an incident has occurred with our services, you can report it
-by [following these steps](https://digital.gov.bc.ca/cloud/services/private/support/#report).
+by [following these steps](https://digital.gov.bc.ca/technology/cloud/private/support/#report).
 
 ### Get help or support
 
 We follow a community-based support model. You can use our self-serve resources or ask for help from the platform
-community. [Learn how to get help on the Platform](https://digital.gov.bc.ca/cloud/services/private/support/).
+community. [Learn how to get help on the Platform](https://digital.gov.bc.ca/technology/cloud/private/support/).
 
 ### DevOps requests
 
 Not sure where to go to get things done on the platform? We've outlined common platform tasks and links to additional
-instructions. [Learn how to get help with some of the most commonly searched-for tasks](https://digital.gov.bc.ca/cloud/services/private/support/#common).
+instructions. [Learn how to get help with some of the most commonly searched-for tasks](https://digital.gov.bc.ca/technology/cloud/private/support/#common).

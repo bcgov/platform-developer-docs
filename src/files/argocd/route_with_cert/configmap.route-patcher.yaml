@@ -1,0 +1,63 @@
+---
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: route-patcher
+  annotations:
+    argocd.argoproj.io/sync-wave: "2"
+data:
+  route-patcher.sh: |
+    #! /bin/bash
+
+    export ROUTENAME=test-app
+
+    if ! which oc &> /dev/null; then
+      echo "openshift oc client missing...exiting"
+      exit
+    fi
+
+    if [[ "$TLS_CERT" == "" ]]; then
+      echo "TLS_CERT is not set: quitting"
+      exit
+    fi
+
+    if [[ "$TLS_KEY" == "" ]]; then
+      echo "TLS_KEY is not set: quitting"
+      exit
+    fi
+
+    # Make a copy of the Route manifest
+    echo "Copying existing Route manifest"
+    oc get route $ROUTENAME -o json > /tmp/route.json
+
+    # Prepare the cert values
+    echo "$TLS_CERT" | tr '\n' ':' | sed 's/:/\\n/g' > /tmp/tls.cert
+    echo "$TLS_KEY"  | tr '\n' ':' | sed 's/:/\\n/g' > /tmp/tls.key
+    CERT_ONE_LINER=`cat /tmp/tls.cert`
+    KEY_ONE_LINER=`cat /tmp/tls.key`
+
+    # Patch the route
+    echo "Patching the Route"
+    oc patch route $ROUTENAME -p "{\"spec\":{\"tls\":{\"certificate\":\"$CERT_ONE_LINER\",\"key\":\"$KEY_ONE_LINER\"}}}"
+
+    # Check its status and revert if the change was not accepted
+    sleep 2
+    echo "Checking Route status"
+    STATUS=`oc get route $ROUTENAME -o json | jq -r '.status.ingress[].conditions[] | select (.type == "Admitted") .status'`
+    if [ "$STATUS" == "True" ]; then
+      echo "Done"
+    else
+      echo "ERROR: Route not successfully patched, will try to revert..."
+      jq '.spec.tls.certificate' /tmp/route.json | sed 's/"//g' > /tmp/route.cert
+      jq '.spec.tls.key' /tmp/route.json | sed 's/"//g' > /tmp/route.key
+      CERT_ONE_LINER=`cat /tmp/route.cert`
+      KEY_ONE_LINER=`cat /tmp/route.key`
+      sleep 2
+      oc patch route $ROUTENAME -p "{\"spec\":{\"tls\":{\"certificate\":\"$CERT_ONE_LINER\",\"key\":\"$KEY_ONE_LINER\"}}}"
+      if [ "$?" == "0" ]; then
+        echo "Reverted, done"
+      else
+        echo "ERROR: Unable to revert Route!"
+      fi
+    fi
+

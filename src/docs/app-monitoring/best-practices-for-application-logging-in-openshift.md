@@ -58,6 +58,8 @@ Should your team require log storage beyond the 14-day window, it's your respons
 
 Loki is built into the OpenShift web console. You can access it under the side bar section Observe and then selecting Logs.
 
+For detailed instructions on this setup process, refer to our OCP101 lab section [covering logging and visualizations](https://github.com/bcgov/devops-platform-workshops/blob/master/101-lab/content/12_logging_and_visualizations.md). This will guide you through the necessary steps to make the most of Kibana's features.
+
 ### Querying logs effectively on Loki
 
 Loki empowers you to perform targeted log queries across various fields such as log message, time, and container name. This flexibility extends to querying logs across multiple containers and pods, simplifying the search for specific messages within a deployment or stateful set.
@@ -91,8 +93,7 @@ If you're maintaining log files, establish proper permissions to restrict access
 ---
 
 ## Related pages
-
-* [Logging and visualizations - OpenShift 101](https://github.com/BCDevOps/devops-platform-workshops/blob/master/101-lab/content/12_logging_and_visualizations.md)
+* [Logging and visualizations - OpenShift 101](https://github.com/bcgov/devops-platform-workshops/blob/master/101-lab/content/12_logging_and_visualizations.md)
 * [Template to deploy your own EFK stack](https://github.com/bcgov/elmsd-nodejs/tree/main/packages/openshift/templates/efk-stack)
 * [Heroku Dev Center - Writing best practices for application logs](https://devcenter.heroku.com/articles/writing-best-practices-for-application-logs)
 * [NewRelic - logging best practices](https://newrelic.com/blog/best-practices/best-log-management-practices)

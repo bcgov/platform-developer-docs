@@ -76,9 +76,9 @@ There is also a microservice available called [Common Object Management Service 
 
 You can use tools to manage your persistent storage beyond the features built into OpenShift.
 
-* **Database backups**: We have a community project to help teams implement regular backups of their databases hosted within the platform. The repository is called [backup-container](https://github.com/bcdevops/backup-container)
+* **Database backups**: We have a community project to help teams implement regular backups of their databases hosted within the platform. The repository is called [backup-container](https://github.com/BCDevOps/backup-container)
 
-* **Migrating storage**: Another community supported repository is available to help with migrating data from one PVC to another (moving from one storageClass to another, moving to a larger PVC, etc). The repository is called [StorageMigration](https://github.com/BCDevOps/StorageMigration)
+* **Migrating storage**: Another community supported repository is available to help with migrating data from one PVC to another (moving from one storageClass to another, moving to a larger PVC, etc). The repository is called [StorageMigration](https://github.com/bcgov/StorageMigration)
 
 ## Storage details
 
@@ -109,7 +109,7 @@ As this is a shared platform with automatic provisioning enabled for your needs,
 
 The minimum size is 20Mi. If it's any smaller, provisioning fails. You don't need to request a full 1Gi if you don't need it.
 
-The maximum size is 256Gi. If it's any bigger, provisioning fails. Larger custom quotas won't get around this currently as we've set this limit to make sure NetApp can remain properly balanced.
+The maximum size is 512Gi, matching the maximum storage quota in the registry.
 
 ### Performance
 
@@ -135,8 +135,8 @@ Related links:
 * [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md)
 * [Backup Container](https://github.com/BCDevOps/backup-container)
 * [Red Hat documentation](https://access.redhat.com/documentation/en-us/red_hat_openshift_container_storage/4.7/html/deploying_and_managing_openshift_container_storage_using_red_hat_openstack_platform/volume-snapshots_osp)
-* [BCDevOps/Backup-Container](https://github.com/bcdevops/backup-container)
-* [BCDevOps/StorageMigration](https://github.com/BCDevOps/StorageMigration)
+* [BCDevOps/Backup-Container](https://github.com/BCDevOps/backup-container)
+* [bcgov/StorageMigration](https://github.com/bcgov/StorageMigration)
 * [Platform Product Registry](https://registry.developer.gov.bc.ca/)
 * [Common Object Management Service (COMS)](https://digital.gov.bc.ca/bcgov-common-components/common-object-management-service/)
 ---

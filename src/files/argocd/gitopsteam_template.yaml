@@ -58,10 +58,19 @@ spec:
   # ------------------------------------------------------------------------
   projectMembers:
 
-    # Project Maintainers have full access to the Argo CD Project, including the
-    # ability create, edit, and delete Applications within the Project
+    # Project Maintainers have full access to the prod and nonprod ArgoCD
+    # projects.
     maintainers:
-      - myGitHubID@github
+      - seniorDev@gov.bc.ca
+
+    # Nonprod users have full access to the nonprod ArgoCD project, which can
+    # deploy to the dev, test, and tools namespaces.  They cannot overwrite a
+    # GitOpsTeam or GitOpsAlliance resource.
+    nonprod:
+      - otherDev@gov.bc.ca
+      - contractor1@github
 
     # Project Readers have read-only access to the Project in the Argo CD UI
     readers:
+      - projectManager@gov.bc.ca
+

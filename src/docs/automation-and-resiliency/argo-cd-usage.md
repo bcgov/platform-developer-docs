@@ -19,7 +19,7 @@ sort_order: 6
 ---
 
 # Argo CD usage
-Last updated: **July 15, 2024**
+Last updated: **May 9, 2025**
 
 Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes (the foundation of OpenShift). It is efficient, well supported, and well documented.
 
@@ -38,6 +38,8 @@ It is available to any team on the B.C. government's OpenShift platform and can 
 * [Migration and setup](#migration-and-setup)
 * [Create applications in Argo CD](#create-applications-in-argo-cd)
 * [Configure your project](#configure-your-project)
+* [Optional GitHub Webhook](#optional-github-webhook)
+* [Nonprod access](#nonprod-access)
 * [Related pages](#related-pages)
 
 ## Why Argo CD is good for you
@@ -55,12 +57,12 @@ Here's why this approach is beneficial:
 
 ## Enable Argo CD for your project set
 
-To set up Argo CD for your project, a self-serve system is available. Follow these instructions to begin. If your project requires a ministry-wide grouping of projects within Argo CD, please contact  [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca).
+To set up Argo CD for your project, a self-serve system is available. Follow these instructions to begin. If your project requires a ministry-wide grouping of projects within Argo CD, please email the Platform Services team at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca).
 
 1. Prepare a 'GitOpsTeam' CustomResource:
   * Utilize the provided template: [GitOpsTeam template](../../files/argocd/gitopsteam_template.yaml){:download="gitopsteam_template.yaml"}
-  * Populate the file using the inline comments
-  * If you would like to add GitHub **teams** to the gitops repo access list, note that they go in a separate "Teams" list.  For example, admin users go into the `admins` list while admin teams go into the `adminTeams` list. 
+  * Populate the file, using the inline comments as a guide
+  * If you would like to add GitHub **teams** to the gitops repository access list (`gitOpsMembers`), note that they go in a separate "Teams" list.  For example, admin users go into the `admins` list while admin teams go into the `adminTeams` list. 
   
 2.  Ensure that all users in the 'projectMembers' group have a Keycloak ID in the realm used by Argo CD. They can do this by attempting to access the Argo CD UI for the given cluster:
 
@@ -74,17 +76,17 @@ To set up Argo CD for your project, a self-serve system is available. Follow the
 
 After creation of the GitOpsTeam resource, an OpenShift operator will:
 
-4. Create a "gitops" repo for your project
+4. Create a "gitops" repository for your project
   * This is the repository that Argo CD will read for your application manifests
  
-    **Note:** This repo is in the `bcgov-c` GitHub Organization, which has a limited number of seats and requires that users reply to an invitation from GitHub to join the organization. Please limit access to this repo to just those team members that require access for manual updates. Most updates will be made by your **pipeline**
+    **Note:** This repository is in the `bcgov-c` GitHub Organization, which has a limited number of seats and requires that users reply to an invitation from GitHub to join the organization. Please limit access to this repository to just those team members that require access for manual updates. Most updates will be made by your **pipeline**.
 
-  * Your gitops repo will be called `bcgov-c/tenant-gitops-licenseplate`
+  * Your gitops repository will be called `bcgov-c/tenant-gitops-licenseplate`
 
 5. Create Keycloak groups used for controlling access to your Project in the ArgoCD UI
-6.  Create the Argo CD Project
+6. Create the Argo CD Project
 
-### Set access for the GitHub repo (optional)
+### Set access for the GitHub repository (optional)
 
 If you have a pipeline that will require write access to your gitops repo, you can do this by generating an SSH key pair and adding it as a Deploy Key in the repo.
 
@@ -123,9 +125,44 @@ This document focuses on Helm and Kustomize.
 
 #### Helm
 
-If you're using [Helm](https://argo-cd.readthedocs.io/en/release-2.0/user-guide/helm/), you likely already have a collection of files ready, which can be smoothly migrated to the manifest repository. 
+If you're using [Helm](https://argo-cd.readthedocs.io/en/stable/user-guide/helm/), you may use your own package or a chart repository in the Docker Helm OCI repository.
 
-Start by creating a top-level directory dedicated to your application. Place all Helm files within this directory. Additionally, place your values files in the same directory, naming them according to their respective environments. When setting up the application in the Argo CD UI, you'll need to specify the path to the values file.
+Start by creating a top-level directory dedicated to your application.
+
+If using your own Helm package, place all of the Helm files within this directory, including your values file(s). When setting up the application in the Argo CD UI, you have the option to set a specific values file to use.  For example, you may have a values file for each environment (dev, test, prod).
+
+If using a package in the Docker Helm OCI repository (registry-1.docker.io), you will have to use the `docker-helm-oci-remote` caching repository in Artifactory, because your ArgoCD project only allows source repository URLs that match either your gitops repository or the Artifactory caching repository.  To use Artifactory for this, create an ArgoCD App using the following guidelines:
+
+* Source repository URL: `artifacts.developer.gov.bc.ca/docker-helm-oci-remote`
+* Source repository type: `HELM`
+* Chart name: Enter as group/project, such as `bitnamicharts/mariadb`
+* Chart version: In the field adjacent to the chart name, enter the version number, such as `20.2.0`
+* Helm settings: Select a standard values file or enter individual values. To use your own values file, see the example below of a multi-source application.
+
+To use a values file from your own GitOps repo, you will have to create the ArgoCD App using a manifest, because the UI does not currently support that.  In this example, the second source creates a reference used in the first source for the values file.
+```
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mariadb-helm
+  namespace: abc123-dev
+spec:
+  destination:
+    namespace: abc123-dev
+    server: https://kubernetes.default.svc
+  project: abc123
+  sources:
+    - chart: bitnamicharts/mariadb
+      helm:
+        releaseName: mariadb
+        valueFiles:
+          - $values/mariadb/values-dev.yaml
+      repoURL: artifacts.developer.gov.bc.ca/docker-helm-oci-remote
+      targetRevision: 20.2.0
+    - ref: values
+      repoURL: https://github.com/bcgov-c/tenant-gitops-abc123.git
+      targetRevision: main
+```
 
 #### Kustomize
 
@@ -137,7 +174,7 @@ If moving an existing application to Kustomize and Argo CD for the first time, s
 
 A [shell script](../../files/argocd/get_ns_resources.sh){:download="get_ns_resources.sh"} has been prepared to help with the manifest creation.
 
-Once the manifest files have been generated, the repo structure is prepared. Within the manifest repo, in the top-level directory for the given application, create the following directories:
+Once the manifest files have been generated, the repository structure is prepared. Within the manifest repo, in the top-level directory for the given application, create the following directories:
 
 - base
 - overlays
@@ -238,7 +275,7 @@ metadata:
 
 ## Create applications in Argo CD
 
-Once the manifest repo has a deploy key configured and the manifests themselves have been added, you are almost ready to add the application in Argo CD. 
+Once the manifest repository has a deploy key configured and the manifests themselves have been added, you are almost ready to add the application in Argo CD. 
 
 **Before you do** make sure that the target namespace can tolerate a disruption. 
 
@@ -254,7 +291,7 @@ In the Argo CD UI, click the applications link at the top of the left-side navig
 
 * Sync Policy and Sync Options: Can be left alone until you know what you need
 
-* Source repository URL: Use the SSH style URL for your manifest repo, such as `git@github.com:bcgov-c/tenant-gitops-abc123.git`
+* Source repository URL: Use an HTTPS URL for your manifest repo, such as `https://github.com/bcgov-c/tenant-gitops-abc123.git`
 
 * Source revision: Leave this as "HEAD" if you are using the master branch, otherwise enter the branch name. You can also set the dropdown to TAG and enter a tag name
 
@@ -271,11 +308,12 @@ If you get an error message when trying to create the application, read the erro
 ### Synchronize the application
 
 Once the application is created successfully and automatic synchronization is not yet enabled:
-  * Click on the application from the application list page.
+
+* Click on the application from the application list page.
   * Argo CD will have scanned the manifest repository files already, indicating 'out of sync'.
-  * To start synchronization:
-    * Click the 'Sync' button, followed by 'Synchronize'.
-    * The duration depends on the number of resources defined for the application.
+* To start synchronization:
+  * Click the 'Sync' button, followed by 'Synchronize'.
+  * The duration depends on the number of resources defined for the application.
 * If synchronization fails:
   * Click on the 'failed' message to review explanations.
   * Potential issues may stem from manifest files or repository configuration.
@@ -297,7 +335,7 @@ Please note that there are certain constraints applied to projects and applicati
 
 **Source Repository**
 
-This is the repository that can be used as the source repo for an application and is limited to the new GitHub repo (tenant-gitops-licenseplate) that was created for you. You can use only this repo as the source for applications for this project. This limitation exists partly to prevent applications from being created from third-party sources that may not be safe, and partly to simplify automation associated with this service.
+This is the repository that can be used as the source repository for an application and is limited to the new GitHub repository (tenant-gitops-licenseplate) that was created for you. You can use only this repository as the source for applications for this project. This limitation exists partly to prevent applications from being created from third-party sources that may not be safe, and partly to simplify automation associated with this service.
 
 **Destination**
 
@@ -323,9 +361,38 @@ Access to the Argo CD UI includes two sets of permissions: read/write and read-o
 
 See the [GitOpsTeam template](../../files/argocd/gitopsteam_template.yaml){:download="gitopsteam_template.yaml"} for more details. 
 
+## Optional GitHub Webhook
+Argo CD polls each Git repository every three minutes to see if there have been any changes.  In a big cluster like Silver, there are many applications and it could take a little longer for Argo CD to fetch and apply changes.  If you would like to have your apps get updated right away after a change has been made in your GitHub repo, you can add a webhook.  Upon receiving the webhook from your repo, Argo CD will refresh any applications that have that repository as a source.  That is, just your apps will get refreshed at that moment; other apps will get refreshed at the usual polling interval.
+
+**Note**: This is not available for the Emerald cluster, because the API there is not reachable from GitHub.
+
+To add a webhook in your GitHub repo, log in to GitHub, go to your repo, then click Settings --> Webhooks --> Add webhook
+
+Enter the following information:
+
+* Payload URL: `https://gitops-shared.apps.CLUSTERNAME.devops.gov.bc.ca/api/webhook`
+* Content type: application/json
+* Secret: (This is just to prevent abuse of the API endpoint by outside parties.  You can find the secret in the description of the Rocketchat channel "#devops-argocd".)
+* SSL verification: keep the default "Enable SSL verification"
+* Which events would you like to trigger this webhook?: This is up to you to determine the conditions under which the webhook is triggered.
+* Active: keep this box checked in order to enable the webhook
+
+Click "Add webhook"
+
+After saving the webhook, a repository action of the type that you specified should trigger a call to Argo CD's webhook API, causing your apps to refresh.
+
+## Nonprod access
+A second ArgoCD project is created for non-prod access.  It is configured with access to the dev, test, and tools namespaces, but not prod.
+
+If you have users that should have access to ArgoCD, but that should not be able to deploy to your prod environment, add them to the `nonprod` list in the GitOpsTeam's `projectMembers` section.  If you would like them to be able to view the prod ArgoCD apps, then also add them to the `readers` list under `projectMembers`.
+
+'maintainers' and 'readers' will be able to see apps in both the default and nonprod projects.
+
+Note that although the nonprod project has permission to deploy to the `tools` namespace, it cannot overwrite a GitOpsTeam or GitOpsAlliance resource there.
+
 ## Related pages
 
-* [Current Argo CD version, as of July 2024: v2.11](https://github.com/argoproj/argo-cd/tree/v2.11.3)
+* [Current Argo CD version, as of February 2025: v2.13](https://github.com/argoproj/argo-cd/tree/v2.13.1)
 * [Kustomize.io](https://kustomize.io)
 * [Helm](https://helm.sh/)
 

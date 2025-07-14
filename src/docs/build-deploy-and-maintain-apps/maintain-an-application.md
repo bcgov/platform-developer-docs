@@ -243,6 +243,7 @@ spec:
   selector:
     matchLabels:
       app: sample-app
+  unhealthyPodEvictionPolicy: AlwaysAllow     
 ```
 This assumes that pods in the Deployment or StatefulSet have a label `app` with a value of `sample-app`.
 
@@ -348,7 +349,7 @@ If you need to run a load test against your application, first check with the Pl
 [Prepare to load test an application on OpenShift](../automation-and-resiliency/prepare-to-load-test-application-on-openshift.md)
 
 ### CI/CD Pipeline
-Users of the platform have CI/CD pipelines using [Tekton](../build-deploy-and-maintain-apps/deploy-an-application.md#continuous-deployment-and-maintenance) (OpenShift Pipelines), [GitHub Actions](https://docs.github.com/en/actions), and [ArgoCD](https://github.com/BCDevOps/openshift-wiki/tree/master/docs/ArgoCD).
+Users of the platform have CI/CD pipelines using [Tekton](../build-deploy-and-maintain-apps/deploy-an-application.md#continuous-deployment-and-maintenance) (OpenShift Pipelines), [GitHub Actions](https://docs.github.com/en/actions), and [ArgoCD](https://github.com/bcgov/openshift-wiki/tree/master/docs/ArgoCD).
 
 Review your pipelines from time to time.
 
@@ -449,11 +450,11 @@ Before scheduled changes to the platform and shared services occur, the Platform
 
 Moreover, it's advisable for all team members to remain engaged with the community through the following channels:
 
-- Subscribe to [Platform Services Newsletters](https://subscribe.developer.gov.bc.ca/) so that you will receive email notifications for upcoming changes, as well as [the Platform Community MeetUp Event](https://digital.gov.bc.ca/cloud/services/private/team/#stay) every 3 weeks for platform updates and technical demos.
+- Subscribe to [Platform Services Newsletters](https://digital.gov.bc.ca/technology/cloud/private/internal-resources/subscribe/) so that you will receive email notifications for upcoming changes, as well as [the Platform Community MeetUp Event](https://digital.gov.bc.ca/technology/cloud/private/team/#stay) every 3 weeks for platform updates and technical demos.
 
 - Monitor [Rocket.Chat #devops-alerts channel](https://chat.developer.gov.bc.ca/channel/devops-alerts) for service alerts and status updates. Rocket.Chat serves as the main communication method for teams on the platform to get help, share knowledge and information, and build up the community. 
 
-- Take a look at [common platform requests](https://digital.gov.bc.ca/cloud/services/private/support/#common) . This section can be helpful to your team to discover the most commonly searched-for tasks, with links to additional instructions.
+- Take a look at the [various support options](https://digital.gov.bc.ca/technology/cloud/private/support/#how) available in the Private cloud, helpful to determine troubleshooting channels for application or platform issues
 
 ---
 ## Managing impacts of personnel changes
@@ -467,9 +468,9 @@ The changes and the resulting loss of expertise have a significant impact on the
 
 When a new member joins your team, they should go through a similar onboarding process as any other person joining the OpenShift platform. Along with getting familiar with the specific application(s) supported by their new team, they should also:
 
-* Attend [OpenShift 101](https://digital.gov.bc.ca/cloud/services/private/support/openshift-101/) and [OpenShift 201](https://digital.gov.bc.ca/cloud/services/private/support/openshift-201/) training
-* Go through the [onboarding process](https://digital.gov.bc.ca/cloud/services/private/onboard/) which can be done with your team's Product owner or by scheduling a meeting with a member of the Platform team. 
-* Join the community on [Rocket.Chat](../../bc-developer-guide/rocketchat/steps-to-join-rocketchat/), [Stack Overflow](https://digital.gov.bc.ca/cloud/services/private/support/#community) and our [Platform Community Meetups](https://digital.gov.bc.ca/cloud/services/private/team/#stay)
+* Attend [OpenShift 101](https://digital.gov.bc.ca/technology/cloud/private/support/openshift-101/) and [OpenShift 201](https://digital.gov.bc.ca/technology/cloud/private/support/openshift-201/) training
+* Go through the [onboarding process](https://digital.gov.bc.ca/technology/cloud/private/onboard/) which can be done with your team's Product owner or by scheduling a meeting with a member of the Platform team. 
+* Join the community on [Rocket.Chat](../../bc-developer-guide/rocketchat/steps-to-join-rocketchat/), [Stack Overflow](https://digital.gov.bc.ca/technology/cloud/private/support/#community) and our [Platform Community Meetups](https://digital.gov.bc.ca/technology/cloud/private/team/#stay)
 * [Obtain access](https://digital.gov.bc.ca/cloud/private/support/) to all relevant namespaces, repositories and other services. Please go to the section: Report and incident > Common platform requests section.  Remember to also update the [Platform Product Registry](https://registry.developer.gov.bc.ca/), if needed. 
 
 ### Managing team member departures 

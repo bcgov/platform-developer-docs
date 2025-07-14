@@ -71,21 +71,25 @@ nav:
 - Reusable code and services:
   - Project examples: docs/reusable-code-and-services/project-examples.md
   - Reusable services list: docs/reusable-code-and-services/reusable-services-list.md
-- Security and privacy compliance:
-  - Privacy compliance and guidance: docs/security-and-privacy-compliance/privacy-compliance-and-guidance.md
+- Security tools and compliance:
   - B.C. Government OpenShift DevOps security compliance: docs/security-and-privacy-compliance/platform-security-compliance.md
   - B.C. government OpenShift platform security tools: docs/security-and-privacy-compliance/platform-security-tools.md
-  - Security best practices for apps: docs/security-and-privacy-compliance/security-best-practices-for-apps.md
   - Payment card processing for OpenShift applications: docs/security-and-privacy-compliance/payment-card-processing.md
 - Secrets management:
   - Vault getting started guide: docs/secrets-management/vault-getting-started-guide.md
   - Vault secrets management: docs/secrets-management/vault-secrets-management-service.md
+  - External secrets: docs/secrets-management/external-secrets.md
 - Training and learning:
   - Training from the Platform Services Team: docs/training-and-learning/training-from-the-platform-services-team.md
   - External training resources: docs/training-and-learning/training-external-resources.md
+  - Platform Services GenAI chatbot Rocky: docs/training-and-learning/rocky-guide.md
 plugins:
 - techdocs-core
 - git-revision-date-localized 
+- redirects:
+    redirect_maps:
+      'docs/security-and-privacy-compliance/privacy-compliance-and-guidance.md': 'https://developer.gov.bc.ca/docs/default/component/bc-developer-guide/security/security-and-privacy-compliance-and-guidance/'
+      'docs/security-and-privacy-compliance/security-best-practices-for-apps.md': 'https://developer.gov.bc.ca/docs/default/component/bc-developer-guide/security/best-practices-for-apps/'
 markdown_extensions:
 - md_in_html
 - pymdownx.highlight:

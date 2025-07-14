@@ -9,6 +9,7 @@ on:
       - "mkdocs.yml"
       - "catalog-info.yaml"
       - "src/index.md"
+      - "src/files/argocd/**"
   pull_request:
     branches: [main]
     paths:

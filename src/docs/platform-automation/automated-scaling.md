@@ -72,7 +72,7 @@ Before you scale your pods back up, make sure to fix the underlying issues that 
 
 If your application hasn't been updated in over a year, your technical team should create a new image. This ensures that your application can benefit from any security patches released in the past year. It's highly probable that your image has critical security vulnerabilities if it hasn't been updated for more than a year.
 
- Maintaining your application is part of the [Memorandum of Understanding](https://digital.gov.bc.ca/cloud/services/private/onboard/#memorandum) that teams working on the platform agree to. More detailed docs on [maintaining an image](../build-deploy-and-maintain-apps/maintain-an-application.md#maintain-images) are also available.
+ Maintaining your application is part of the [Memorandum of Understanding](https://digital.gov.bc.ca/technology/cloud/private/onboard/#memorandum) that teams working on the platform agree to. More detailed docs on [maintaining an image](../build-deploy-and-maintain-apps/maintain-an-application.md#maintain-images) are also available.
 
 Once you have fixed these issues, you can follow the instructions in [RedHat’s documentation on editing deployments](https://docs.openshift.com/container-platform/4.12/applications/deployments/deployment-strategies.html#odc-editing-deployments_rolling-strategy) to scale your applications back up again.
 
@@ -94,5 +94,5 @@ Be aware that if you scale your deployment back up without addressing the underl
 ## Related pages
 
 - [RedHat’s documentation on editing deployments](https://docs.openshift.com/container-platform/4.12/applications/deployments/deployment-strategies.html#odc-editing-deployments_rolling-strategy)
-- [Memorandum of Understanding](https://digital.gov.bc.ca/cloud/services/private/onboard/#memorandum)
+- [Memorandum of Understanding](https://digital.gov.bc.ca/technology/cloud/private/onboard/#memorandum)
 - [Maintaining an image](../build-deploy-and-maintain-apps/maintain-an-application.md#maintain-images)

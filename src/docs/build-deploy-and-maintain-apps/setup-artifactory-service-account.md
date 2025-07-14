@@ -41,9 +41,9 @@ An Artifactory service account is not required to make use of the remote (cachin
 
 ## Create a service account
 
-If you have a project established in either the Silver or Emerald clusters, an Artifactory service account is already available. An `ArtifactoryServiceAccount` object is generated in the corresponding `tools` namespace, and the Artifactory Operator handles its configuration. A default `ArtifactoryServiceAccount` object is automatically created during namespace provisioning, identified by the name `default`. You are also free to create additional Artifactory service accounts if needed.
+You are able to create your Artifactory Service Account in any namespace, so feel free to organize them into namespaces in whatever way best suits your team's needs. The Platform Team recommends using the `-tools` namespace as a default option. 
 
-If your project is established in the Gold clusters, you will need to create your own Artifactory service account as no default one is provided. This is because you are responsible for managing the synchronization of any necessary secrets between the Gold and Gold DR clusters. Archeobot, the operator overseeing the creation and maintenance of `ArtifactoryServiceAccount` objects, operates solely in Gold and not in Gold DR. You must initiate the creation of the `ArtifactoryServiceAccount` object in the Gold cluster, and Archeobot will generate the associated objects (such as your pull secrets) in your Gold namespace. The responsibility lies with your team to synchronize these secrets with Gold DR.
+ If you are working in the Gold and Gold-DR clusters, please note that Archeobot, the operator overseeing the creation and maintenance of `ArtifactoryServiceAccount` objects, operates solely in Gold and not in Gold DR. You must initiate the creation of the `ArtifactoryServiceAccount` object in the Gold cluster, and Archeobot will generate the associated objects (such as your pull secrets) in your Gold namespace. The responsibility lies with your team to synchronize these secrets with Gold DR.
 
 Run the following command to create a new service account:
 

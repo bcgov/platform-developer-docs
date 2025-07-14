@@ -20,10 +20,10 @@ sort_order: 1
 
 # Vault getting started guide
 
-The Platform Services team has deployed Hashicorp's Vault application with disaster recovery in our Gold service clusters (Gold Kamloops and Gold Calgary), the service is available to all B.C. government development teams on **all clusters** including: Silver, Gold/Golddr and Emerald.
+The Platform Services team has deployed Hashicorp's Vault application with disaster recovery in our Gold service clusters (Gold Kamloops and Gold Calgary). The service is available to all B.C. government development teams on **all clusters** including: Silver, Gold/GoldDR and Emerald.
 
 The Vault service is available at [https://vault.developer.gov.bc.ca/](https://vault.developer.gov.bc.ca/).
-If you are running a test project in the lab clusters, such as KLAB, use a separate Vault service available at [https://vault-lab.developer.gov.bc.ca/](https://vault-lab.developer.gov.bc.ca/).  The lab Vault instance is meant to be used for testing purposes by the Platform Services team, there could be frequent changes and outages with the service!
+If you are running a test project in the lab clusters, such as KLAB, use the lab instance of Vault at [https://vault-lab.developer.gov.bc.ca/](https://vault-lab.developer.gov.bc.ca/).
 
 In this guide, you will learn how to access Vault and deploy a working example using sample secrets from your Vault Mount Points. Mount Points can be thought of as "MiniVaults" or related to paths within a Linux filesystem that can be locked down and secured.
 
@@ -47,13 +47,13 @@ There are two types of access to manage secrets on Vault,
 - User Access
 - Kubernetes Service Account (KSA) Access
 
-User Access gives authorized users the ability to create and write secrets, while KSA Access only provides read access, which is used for application pods to full secret values from Vault.
+User Access gives authorized users the ability to create and write secrets, while KSA Access only provides read access, which is used for application pods to pull secret values from Vault.
 
 ### User access for managing Vault secret resources
 
 User Access is controlled through a combination of Red Hat Single-Sign On (KeyCloak) and automation integrated with the [Platform Services Registry](https://registry.developer.gov.bc.ca/).
 
-For each OpenShift Project Set ($LICENSE_PLATE-dev/test/prod/tools - eg: abc123-dev, abc123-test, abc123-prod, abc123-tools), up to two technical contacts would be grant access to Vault due to license limitation. These technical contacts will be given write access to the Mount Points set up by the registry.
+For each OpenShift Project Set ($LICENSE_PLATE-dev/test/prod/tools - eg: abc123-dev, abc123-test, abc123-prod, abc123-tools), just the two technical contacts are granted access, due to the user limits of the Vault license. These technical contacts are given write access to the Mount Points set up by the registry.
 
 #### Log in to Vault UI
 
@@ -235,7 +235,7 @@ spec:
         vault.hashicorp.com/agent-inject: 'true'
         vault.hashicorp.com/agent-inject-token: 'false' # set to 'true' if you are going to connect and query vault from your application
         vault.hashicorp.com/agent-pre-populate-only: 'true' # this makes sure the secret vault will only change during pod restart
-        vault.hashicorp.com/auth-path: auth/k8s-silver  # Must match cluster. Use one of: k8s-silver, k8s-gold, k8s-golddr, k8s-emerald
+        vault.hashicorp.com/auth-path: auth/k8s-silver  # Must match cluster. Use one of: auth/k8s-silver, auth/k8s-gold, auth/k8s-golddr, auth/k8s-emerald
         vault.hashicorp.com/namespace: platform-services
         vault.hashicorp.com/role: abc123-nonprod  # licenseplate-nonprod or licenseplate-prod are your options
 
@@ -288,11 +288,11 @@ vault.hashicorp.com/agent-limits-mem: '100Mi'
 
 Note the additional line under spec with `2. Service Account`. This is the service account that is needed to connect to the Vault. This account has been created already for you in OpenShift so on the surface it's straight forward.
 
-There's a issue to be aware of with using this service account (SA): your application container will also use this SA to pull images and for management. So if you are using an image from tools namespace, make sure to add an ImagePuller rolebinding to the SA. If you are using Artifactory, add the imagePullSecrets to either the SA or the deployment spec.
+There's an issue to be aware of with using this service account (SA): your application container will also use this SA to pull images and for management. So if you are using an image from your tools namespace, make sure to add an ImagePuller rolebinding to the SA. If you are using Artifactory, add the imagePullSecrets to either the SA or the deployment spec.
 
 **Part 3 - How to use secrets in application container**
 
-The Vault init container will create local files with the secret key-value pairs pulled from Vault server. They are saved at the path `/vault/secrets/<name>` where name is the secret name you specified in the annotation above. Unlike OpenShift secrets (which is not recommended as they are only encoded but not encrypted), they are not presented to app containers as environment variables directly. You will have to source the secret files first! See `3. how to use the secret` from the above example.
+The Vault init container will create local files with the secret key-value pairs pulled from Vault. They are saved at the path `/vault/secrets/<name>` where name is the secret name you specified in the annotation above. Unlike OpenShift secrets, they are not presented to app containers as environment variables directly. You will have to source the secret files first! See `3. how to use the secret` from the above example.
 
 > Note: there are different ways to use the secrets, check out [more examples here](https://www.vaultproject.io/docs/platform/k8s/injector/examples#vault-agent-injector-examples).
 
