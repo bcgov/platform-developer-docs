@@ -392,7 +392,7 @@ Note that although the nonprod project has permission to deploy to the `tools` n
 
 ## Related pages
 
-* [Current Argo CD version, as of February 2025: v2.13](https://github.com/argoproj/argo-cd/tree/v2.13.1)
+* [Current Argo CD version, as of July 2025: v2.14.7](https://github.com/argoproj/argo-cd/releases/tag/v2.14.7)
 * [Kustomize.io](https://kustomize.io)
 * [Helm](https://helm.sh/)
 
