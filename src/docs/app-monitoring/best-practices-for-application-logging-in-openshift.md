@@ -58,7 +58,7 @@ Should your team require log storage beyond the 14-day window, it's your respons
 
 Loki is built into the OpenShift web console. You can access it under the side bar section Observe and then selecting Logs.
 
-For detailed instructions on this setup process, refer to our OCP101 lab section [covering logging and visualizations](https://github.com/bcgov/devops-platform-workshops/blob/master/101-lab/content/12_logging_and_visualizations.md). This will guide you through the necessary steps to make the most of Kibana's features.
+For detailed instructions on this setup process, refer to our OCP101 lab section [covering logging and visualizations](https://github.com/bcgov/devops-platform-workshops/blob/master/101-lab/content/12_logging_and_visualizations.md). This will guide you through the necessary steps to make the most of Loki's features.
 
 ### Querying logs effectively on Loki
 
