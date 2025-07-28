@@ -19,7 +19,7 @@ sort_order: 6
 ---
 
 # Argo CD usage
-Last updated: **May 9, 2025**
+Last updated: **July 28, 2025**
 
 Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes (the foundation of OpenShift). It is efficient, well supported, and well documented.
 
@@ -39,6 +39,7 @@ It is available to any team on the B.C. government's OpenShift platform and can 
 * [Create applications in Argo CD](#create-applications-in-argo-cd)
 * [Configure your project](#configure-your-project)
 * [Optional GitHub Webhook](#optional-github-webhook)
+* [Use your own Helm chart repository in Artifactory](#use-your-own-helm-chart-repository-in-artifactory)
 * [Nonprod access](#nonprod-access)
 * [Related pages](#related-pages)
 
@@ -62,7 +63,7 @@ To set up Argo CD for your project, a self-serve system is available. Follow the
 1. Prepare a 'GitOpsTeam' CustomResource:
   * Utilize the provided template: [GitOpsTeam template](../../files/argocd/gitopsteam_template.yaml){:download="gitopsteam_template.yaml"}
   * Populate the file, using the inline comments as a guide
-  * If you would like to add GitHub **teams** to the gitops repository access list (`gitOpsMembers`), note that they go in a separate "Teams" list.  For example, admin users go into the `admins` list while admin teams go into the `adminTeams` list. 
+  * If you would like to add GitHub **teams** to the GitOps repository access list (`gitOpsMembers`), note that they go in a separate "Teams" list.  For example, admin users go into the `admins` list while admin teams go into the `adminTeams` list. 
   
 2.  Ensure that all users in the 'projectMembers' group have a Keycloak ID in the realm used by Argo CD. They can do this by attempting to access the Argo CD UI for the given cluster:
 
@@ -76,19 +77,19 @@ To set up Argo CD for your project, a self-serve system is available. Follow the
 
 After creation of the GitOpsTeam resource, an OpenShift operator will:
 
-4. Create a "gitops" repository for your project
+4. Create a GitOps repository for your project
   * This is the repository that Argo CD will read for your application manifests
  
     **Note:** This repository is in the `bcgov-c` GitHub Organization, which has a limited number of seats and requires that users reply to an invitation from GitHub to join the organization. Please limit access to this repository to just those team members that require access for manual updates. Most updates will be made by your **pipeline**.
 
-  * Your gitops repository will be called `bcgov-c/tenant-gitops-licenseplate`
+  * Your GitOps repository will be called `bcgov-c/tenant-gitops-licenseplate`
 
 5. Create Keycloak groups used for controlling access to your Project in the ArgoCD UI
 6. Create the Argo CD Project
 
 ### Set access for the GitHub repository (optional)
 
-If you have a pipeline that will require write access to your gitops repo, you can do this by generating an SSH key pair and adding it as a Deploy Key in the repo.
+If you have a pipeline that will require write access to your GitOps repo, you can do this by generating an SSH key pair and adding it as a Deploy Key in the repo.
 
 Follow these steps to create an SSH key. You can do this on a Linux or Mac system. Choose a clear name for the key.
 
@@ -125,21 +126,36 @@ This document focuses on Helm and Kustomize.
 
 #### Helm
 
-If you're using [Helm](https://argo-cd.readthedocs.io/en/stable/user-guide/helm/), you may use your own package or a chart repository in the Docker Helm OCI repository.
+If you would like to use a [Helm](https://argo-cd.readthedocs.io/en/stable/user-guide/helm/) chart, you have several options:
+* Use your own Helm chart repository in Artifactory
+* Put your Helm application in your GitOps repository
+* Use a Helm chart from the Docker Helm OCI repository
 
-Start by creating a top-level directory dedicated to your application.
+##### Use your own Helm chart repository in Artifactory
+If you don't already have an Artifactory project, see the [Artifactory setup instructions](../../build-deploy-and-maintain-apps/setup-artifactory-project-repository/).
 
-If using your own Helm package, place all of the Helm files within this directory, including your values file(s). When setting up the application in the Argo CD UI, you have the option to set a specific values file to use.  For example, you may have a values file for each environment (dev, test, prod).
+To use your own Helm repository in Artifactory and get it set up for use with ArgoCD, see the section below, [Local Helm repository in Artifactory](#local-helm-repository-in-artifactory).
 
-If using a package in the Docker Helm OCI repository (registry-1.docker.io), you will have to use the `docker-helm-oci-remote` caching repository in Artifactory, because your ArgoCD project only allows source repository URLs that match either your gitops repository or the Artifactory caching repository.  To use Artifactory for this, create an ArgoCD App using the following guidelines:
+**Important note:** ArgoCD uses a single set of credentials to connect to Artifactory for reading local Helm repositories, so although your GitOps repository is private and your other Artifactory resources are private, your Helm chart could in theory be seen or used in ArgoCD by another project in the same cluster if they knew the repo name, chart name, and version.  This applies only to a local Artifactory Helm repository that is configured for ArgoCD access.  Potential visibility is limited to only other ArgoCD users in the same cluster (e.g., Silver, Gold, Emerald).  **If you need to be sure that your Helm application is truly private, add it to your GitOps repository as a set of files instead of pushing the Helm package to Artifactory.**
 
-* Source repository URL: `artifacts.developer.gov.bc.ca/docker-helm-oci-remote`
+##### Put your Helm application in your GitOps repository
+
+Create a new top-level directory dedicated to your application.
+
+If using your own Helm application, place all of the Helm files within this directory, including your values file(s). When setting up the application in the Argo CD UI, you have the option to set a specific values file to use.  For example, you may have a values file for each environment (dev, test, prod).
+
+##### Use a chart repository in the Docker Helm OCI repository
+If using a package in the Docker Helm OCI repository (registry-1.docker.io), you will have to use the `helm-oci-virtual` caching repository in Artifactory, because your ArgoCD project only allows certain source repository URLs.
+
+Create an ArgoCD App using the following guidelines:
+
+* Source repository URL: `artifacts.developer.gov.bc.ca/docker-oci-virtual`
 * Source repository type: `HELM`
 * Chart name: Enter as group/project, such as `bitnamicharts/mariadb`
 * Chart version: In the field adjacent to the chart name, enter the version number, such as `20.2.0`
 * Helm settings: Select a standard values file or enter individual values. To use your own values file, see the example below of a multi-source application.
 
-To use a values file from your own GitOps repo, you will have to create the ArgoCD App using a manifest, because the UI does not currently support that.  In this example, the second source creates a reference used in the first source for the values file.
+To use a values file from your own GitOps repo, you will have to create the ArgoCD App using a manifest, because the UI for app creation does not currently support multiple sources (though you can edit them after creation).  In this example, the second source creates a reference used in the first source for the values file.
 ```
 apiVersion: argoproj.io/v1alpha1
 kind: Application
@@ -157,7 +173,7 @@ spec:
         releaseName: mariadb
         valueFiles:
           - $values/mariadb/values-dev.yaml
-      repoURL: artifacts.developer.gov.bc.ca/docker-helm-oci-remote
+      repoURL: artifacts.developer.gov.bc.ca/helm-oci-virtual
       targetRevision: 20.2.0
     - ref: values
       repoURL: https://github.com/bcgov-c/tenant-gitops-abc123.git
@@ -225,12 +241,12 @@ resources:
 - ../../base
 ```
 
-Patch files are included in a list under the heading patchesStrategicMerge, such as:
+Patch files are included in a list under the heading patches, such as:
 
 ```
-patchesStrategicMerge:
-- deployment.my-app1.replicas.yaml
-- route.my-app1.yaml
+patches:
+- path: deployment.my-app1.replicas.yaml
+- path: route.my-app1.yaml
 ```
 
 Images are also managed in kustomization.yaml. In an 'images' section, create an entry for each image that is likely to be updated by your pipeline. Each image listing has three parts:
@@ -247,9 +263,9 @@ apiVersion: kustomize.config.k8s.io/v1beta1
 kind: Kustomization
 resources:
 - ../../base
-patchesStrategicMerge:
-- deployment.my-app1.replicas.yaml
-- route.my-app1.yaml
+patches:
+- path: deployment.my-app1.replicas.yaml
+- path: route.my-app1.yaml
 images:
 - name: my-app1-image
   newName: image-registry.openshift-image-registry.svc:5000/mylicenseplate-tools/myapp1buildconfigname
@@ -353,7 +369,7 @@ There are a few namespace-scoped resources that you will not be able to modify. 
 
 ### Project access control
 
-Access to the gitops repository and the Argo CD UI is controlled by way of the GitOpsTeam resource in your `-tools` namespace. After editing this resource, the operator will make any updates shortly after (typically less than a minute).
+Access to the GitOps repository and the Argo CD UI is controlled by way of the GitOpsTeam resource in your `-tools` namespace. After editing this resource, the operator will make any updates shortly after (typically less than a minute).
 
 Access to the Git repository includes five sets of permissions.
 
@@ -380,6 +396,63 @@ Enter the following information:
 Click "Add webhook"
 
 After saving the webhook, a repository action of the type that you specified should trigger a call to Argo CD's webhook API, causing your apps to refresh.
+
+## Local Helm repository in Artifactory
+Enjoy the benefits of Helm  + ArgoCD for your own custom application by creating a Helm repository in Artifactory.
+
+### Requirements
+* Artifactory project admin access
+* ArgoCD project write access
+* A Helm package
+
+**Important note:** ArgoCD uses a single set of credentials to connect to Artifactory for reading local Helm repositories, so although your GitOps repository is private and your other Artifactory resources are private, your Helm chart could in theory be seen or used in ArgoCD by another project in the same cluster if they knew the repo name, chart name, and version.  This applies only to a local Artifactory Helm repository that is configured for ArgoCD access.  Potential visibility is limited to only other ArgoCD users in the same cluster (e.g., Silver, Gold, Emerald).  **If you need to be sure that your Helm application is truly private, add it to your GitOps repository as a set of files instead of pushing the Helm package to Artifactory.**  Also note that your local Helm repository in Artifactory is only visible to ArgoCD if you grant it access.
+
+### Create a local Helm OCI repository in Artifactory
+1. Log in to Artifactory: https://artifacts.developer.gov.bc.ca
+1. In the upper left of the window, if not already selected, select the project in which to create the Helm repository.
+1. At the top of the left nav, click the "gears" icon to access project settings.
+1. Click 'Repositories', then the 'Add Repositories' button, then 'Local Repository'.
+1. In the Select Package Type window, click 'Helm'.
+1. In the 'Repository Key' field, enter a brief descriptive name for the repository, such as "helm-local".
+1. In the 'Environments' dropdown, select 'HELM-LOCAL'.
+1. Click 'Create Local Repository'.
+
+### Add the ArgoCD user to your Artifactory project
+1. In the left nav, click 'User Management', then 'Members'.
+1. Click the 'Add Members' button.
+1. Click the 'Users' tab.
+1. In the 'Select Users' field, enter "argocd" to narrow down the list, then select the `argocd-helm-local` user.
+1. In the 'Assign Roles' list, select 'Viewer' and 'Helm Access'.
+1. Click 'Done'.
+
+### Add your Helm package to the new Artifactory repository
+To add your Helm package to the repository, you will need to log in with the `helm` CLI, which requires an Artifactory token.
+
+If you do not already have an Artifactory token...
+1. Log in to Artifactory
+1. Click your username in the upper right, then 'Edit Profile'
+1. In the upper left, click 'Generate an Identity Token'
+1. Enter a description, then click 'Next'
+1. Copy and save the token to a safe place - it cannot be recovered later
+
+Log in to Artifactory with the `helm` CLI:
+```
+helm registry login artifacts.developer.gov.bc.ca
+```
+* Username: Enter your Artifactory username, such as abc123@github or first.last@gov.bc.ca
+* Password: Enter your Artifactory token
+
+To push your Helm package to the repository, change into the directory where your package is and use a command like the following:
+```
+helm push <package_file> oci://artifacts.developer.gov.bc.ca/REPO_NAME
+```
+For example:
+```
+% helm push app1-0.1.0.tgz oci://artifacts.developer.gov.bc.ca/a1b2-helm-local
+Pushed: artifacts.developer.gov.bc.ca/a1b2-helm-local/app1:0.1.0
+Digest: sha256:409008c9a059d836fe7b198262a06465d0fa23918baa0a7cfc9cccdda7d19f27
+```
+
 
 ## Nonprod access
 A second ArgoCD project is created for non-prod access.  It is configured with access to the dev, test, and tools namespaces, but not prod.
