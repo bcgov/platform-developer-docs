@@ -60,14 +60,17 @@ Pods that have their requests and limits both set to 0 run only when resources a
 The default LimitRange in each namespace determines what values to apply to a container that is not configured with either a resource 'requests' value or resource 'limits' value.
 
 The `defaultRequest` settings determine the CPU and memory 'requests' values **if not already set**.
+
 * CPU: 50m
 * Memory: 256Mi
 
 The `default` setting determines the resource 'limits' value for a container's memory **if not already set**.
+
 * Equal to namespace memory requests quota or 16Gi, whichever is lower
 * A default limit is not applied for CPU
 
 The `max` setting determines the maximum value allowed for a memory resource 'limit' when that value IS configured for the container:
+
 * 16Gi for most namespaces
 * For namespaces with memory requests quotas of 32Gi or more, it will be half of the 'requests' quota.
 * A max limit is not applied for CPU
