@@ -127,6 +127,7 @@ This document focuses on Helm and Kustomize.
 #### Helm
 
 If you would like to use a [Helm](https://argo-cd.readthedocs.io/en/stable/user-guide/helm/) chart, you have several options:
+
 * Use your own Helm chart repository in Artifactory
 * Put your Helm application in your GitOps repository
 * Use a Helm chart from the Docker Helm OCI repository
@@ -136,7 +137,7 @@ If you don't already have an Artifactory project, see the [Artifactory setup ins
 
 To use your own Helm repository in Artifactory and get it set up for use with ArgoCD, see the section below, [Local Helm repository in Artifactory](#local-helm-repository-in-artifactory).
 
-**Important note:** ArgoCD uses a single set of credentials to connect to Artifactory for reading local Helm repositories, so although your GitOps repository is private and your other Artifactory resources are private, your Helm chart could in theory be seen or used in ArgoCD by another project in the same cluster if they knew the repo name, chart name, and version.  This applies only to a local Artifactory Helm repository that is configured for ArgoCD access.  Potential visibility is limited to only other ArgoCD users in the same cluster (e.g., Silver, Gold, Emerald).  **If you need to be sure that your Helm application is truly private, add it to your GitOps repository as a set of files instead of pushing the Helm package to Artifactory.**
+**Important note:** ArgoCD uses a single set of credentials to connect to Artifactory for reading local Helm repositories, so although your GitOps repository is private and your other Artifactory resources are private, your Helm chart could in theory be seen or used in ArgoCD by another project in the same cluster if they knew the repo name, chart name, and version.  This only applies to a local Artifactory Helm repository that is configured for ArgoCD access.  Potential visibility is limited to only other ArgoCD users in the same cluster (e.g., Silver, Gold, Emerald).  **If you need to be sure that your Helm application is truly private, add it to your GitOps repository as a set of files instead of pushing the Helm package to Artifactory.**
 
 ##### Put your Helm application in your GitOps repository
 
@@ -405,7 +406,7 @@ Enjoy the benefits of Helm  + ArgoCD for your own custom application by creating
 * ArgoCD project write access
 * A Helm package
 
-**Important note:** ArgoCD uses a single set of credentials to connect to Artifactory for reading local Helm repositories, so although your GitOps repository is private and your other Artifactory resources are private, your Helm chart could in theory be seen or used in ArgoCD by another project in the same cluster if they knew the repo name, chart name, and version.  This applies only to a local Artifactory Helm repository that is configured for ArgoCD access.  Potential visibility is limited to only other ArgoCD users in the same cluster (e.g., Silver, Gold, Emerald).  **If you need to be sure that your Helm application is truly private, add it to your GitOps repository as a set of files instead of pushing the Helm package to Artifactory.**  Also note that your local Helm repository in Artifactory is only visible to ArgoCD if you grant it access.
+**Important note:** ArgoCD uses a single set of credentials to connect to Artifactory for reading local Helm repositories, so although your GitOps repository is private and your other Artifactory resources are private, your Helm chart could in theory be seen or used in ArgoCD by another project in the same cluster if they knew the repo name, chart name, and version.  This only applies to a local Artifactory Helm repository that is configured for ArgoCD access.  Potential visibility is limited to only other ArgoCD users in the same cluster (e.g., Silver, Gold, Emerald).  **If you need to be sure that your Helm application is truly private, add it to your GitOps repository as a set of files instead of pushing the Helm package to Artifactory.**
 
 ### Create a local Helm OCI repository in Artifactory
 1. Log in to Artifactory: https://artifacts.developer.gov.bc.ca
@@ -429,6 +430,7 @@ Enjoy the benefits of Helm  + ArgoCD for your own custom application by creating
 To add your Helm package to the repository, you will need to log in with the `helm` CLI, which requires an Artifactory token.
 
 If you do not already have an Artifactory token...
+
 1. Log in to Artifactory
 1. Click your username in the upper right, then 'Edit Profile'
 1. In the upper left, click 'Generate an Identity Token'
@@ -439,6 +441,7 @@ Log in to Artifactory with the `helm` CLI:
 ```
 helm registry login artifacts.developer.gov.bc.ca
 ```
+
 * Username: Enter your Artifactory username, such as abc123@github or first.last@gov.bc.ca
 * Password: Enter your Artifactory token
 
