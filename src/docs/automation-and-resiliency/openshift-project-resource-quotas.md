@@ -18,7 +18,7 @@ content_owner: Luke Gonis
 sort_order: 4
 ---
 # OpenShift project resource quotas
-Last updated: **January 29, 2025**
+Last updated: **July 28, 2025**
 
 New project sets provisioned in **all clusters** of the BC Gov Private Cloud PaaS have the following default resource quotas that include a certain amount of CPU, RAM and storage:
 
@@ -34,6 +34,9 @@ If the default allocations aren't sufficient for your application, [you can ask 
 - [CPU quotas](#cpu-quotas)
 - [Memory quotas](#memory-quotas)
 - [Storage quotas](#storage-quotas)
+- [Short-running pods](#short-running-pods)
+- [Best effort pods](#best-effort-pods)
+- [LimitRange](#limitrange)
 - [Related pages](#related-pages)
 
 ## CPU request quotas
@@ -53,6 +56,39 @@ Pods which are run once off as 'jobs, builds or deployers' have a seperate resou
 ## Best effort pods
 Pods that have their requests and limits both set to 0 run only when resources are available. These too have a seperate quota called `compute-best-effort-quota`. This configuration should only be used for pods performing tasks which are not time sensitive. 
 
+## LimitRange
+The default LimitRange in each namespace determines what values to apply to a container that is not configured with either a resource 'requests' value or resource 'limits' value.
+
+The `defaultRequest` settings determine the CPU and memory 'requests' values **if not already set**.
+* CPU: 50m
+* Memory: 256Mi
+
+The `default` setting determines the resource 'limits' value for a container's memory **if not already set**.
+* Equal to namespace memory requests quota or 16Gi, whichever is lower
+* A default limit is not applied for CPU
+
+The `max` setting determines the maximum value allowed for a memory resource 'limit' when that value IS configured for the container:
+* 16Gi for most namespaces
+* For namespaces with memory requests quotas of 32Gi or more, it will be half of the 'requests' quota.
+* A max limit is not applied for CPU
+
+Here is an example of a default LimitRange for a namespace that has a memory 'requests' value of 12Gi:
+```
+kind: LimitRange
+apiVersion: v1
+metadata:
+  name: default-limits
+spec:
+  limits:
+    - type: Container
+      defaultRequest:
+        cpu: 50m
+        memory: 256Mi
+      default:
+        memory: 12Gi
+      max:
+        memory: 16Gi
+```
 
 ---
 ---
