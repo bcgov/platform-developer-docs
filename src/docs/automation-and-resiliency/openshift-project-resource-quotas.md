@@ -18,7 +18,7 @@ content_owner: Luke Gonis
 sort_order: 4
 ---
 # OpenShift project resource quotas
-Last updated: **July 28, 2025**
+
 
 New project sets provisioned in **all clusters** of the BC Gov Private Cloud PaaS have the following default resource quotas that include a certain amount of CPU, RAM and storage:
 
