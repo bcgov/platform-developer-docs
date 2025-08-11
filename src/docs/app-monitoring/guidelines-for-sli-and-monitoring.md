@@ -25,7 +25,7 @@ Last updated: **April 17, 2024**
 
 **Performance Monitoring Tools:**  You can use tools like Prometheus, Grafana to continuously watch and display system performance metrics, including response times
 
-**Logging**: Make sure that the Application system records the time it takes for each data retrieval request. Periodically analyze these logs or use log aggregation tools like the ELK Stack (Kibana, Logstash, etc.) to gain insights
+**Logging**: Make sure that the Application system records the time it takes for each data retrieval request. Periodically analyze these logs to gain insights
 
 **Threshold Alerts**: Create alerts to inform system administrators or engineers when response times exceed the defined threshold
 
