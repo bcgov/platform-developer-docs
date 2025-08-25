@@ -144,7 +144,7 @@ Find out more about the benefits and its use in our [Platform Product Registry i
 Our OpenShift access is managed through the OpenShift SSO Service, currently using KeyCloak.
 
 * More information on [SSO-Onboarding with KeyCloak - GitHub](https://github.com/bcgov/sso-keycloak/wiki/SSO-Onboarding)
-* More information on using the self-service app to integrate with B.C. government approved login services. [Request SSO Integration](https://bcgov.github.io/sso-requests)
+* More information on using the self-service app to integrate with B.C. government approved login services. [Request SSO Integration](https://sso-requests.apps.gold.devops.gov.bc.ca/)
 
 Government users and contractors may login to OpenShift clusters with a GitHub or IDIR account (depending on which cluster they choose).  Both of these options require an account with 2FA/MFA enabled.  
 
