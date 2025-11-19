@@ -36,7 +36,7 @@ about [how to stay connected in Rocket.Chat](../bc-developer-guide/rocketchat/st
 
 ### Platform Services GenAI chatbot: Rocky
 
-Rocky, the newest member of the Platform Services team is a GenAI chatbot designed to assist with the OpenShift platform and its related shared services. Rocky has been trained on resources from the Private cloud technical documentation, the Private cloud website, and BCGov Internal StackOverflow.  
+Rocky, the newest member of the Platform Services team is a GenAI chatbot designed to assist with the OpenShift platform and its related shared services. Rocky has been trained on resources from the Private cloud technical documentation, the [Private cloud website](https://digital.gov.bc.ca/technology/cloud/private/), and [GitHub Discussions](https://github.com/bcgov/bcgov-community-discussions/discussions). 
 
 [Learn how to use Rocky](docs/training-and-learning/rocky-guide.md).
 

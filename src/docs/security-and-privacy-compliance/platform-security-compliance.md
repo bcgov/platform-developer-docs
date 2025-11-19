@@ -119,7 +119,7 @@ Many of the platform tools have **completed** security assessments.  These inclu
 * Vault
 * OCP Application Resource Tuning Advisor
 * Uptime.com
-* Stack Overflow
+* GitHub Discussions
 * Platform Product Registry (v2)
 * GitHub Enterprise
 * 1Password (SoAR complete, Cloud security schedule review complete) - was previously discouraged corporately due to no background checks for staff/contractors, but this has since changed.  Further review required to support use.
