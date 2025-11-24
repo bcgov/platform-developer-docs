@@ -464,13 +464,13 @@ During the maintenance stage of an application's lifecycle, the development team
 
 The changes and the resulting loss of expertise have a significant impact on the OpenShift platform. This is because the app team is expected to keep their application up-to-date and respond promptly to changes on the platform. 
 
-### Onboarding New Team Members
+### Onboarding new team members
 
 When a new member joins your team, they should go through a similar onboarding process as any other person joining the OpenShift platform. Along with getting familiar with the specific application(s) supported by their new team, they should also:
 
 * Attend [OpenShift 101](https://digital.gov.bc.ca/technology/cloud/private/support/openshift-101/) and [OpenShift 201](https://digital.gov.bc.ca/technology/cloud/private/support/openshift-201/) training
 * Go through the [onboarding process](https://digital.gov.bc.ca/technology/cloud/private/onboard/) which can be done with your team's Product owner or by scheduling a meeting with a member of the Platform team. 
-* Join the community on [Rocket.Chat](../../bc-developer-guide/rocketchat/steps-to-join-rocketchat/), [Stack Overflow](https://digital.gov.bc.ca/technology/cloud/private/support/#community) and our [Platform Community Meetups](https://digital.gov.bc.ca/technology/cloud/private/team/#stay)
+* Join the community on [Rocket.Chat](../../bc-developer-guide/rocketchat/steps-to-join-rocketchat/), [GitHub Discussions](https://github.com/bcgov/bcgov-community-discussions/discussions) and our [Platform Community Meetups](https://digital.gov.bc.ca/technology/cloud/private/team/#stay)
 * [Obtain access](https://digital.gov.bc.ca/cloud/private/support/) to all relevant namespaces, repositories and other services. Please go to the section: Report and incident > Common platform requests section.  Remember to also update the [Platform Product Registry](https://registry.developer.gov.bc.ca/), if needed. 
 
 ### Managing team member departures 

@@ -4,7 +4,7 @@ Hi! I’m Rocky from the Platform Services team, your friendly AI assistant in R
 
 - [Private cloud website](http://digital.gov.bc.ca/technology/cloud/private)
 - [Private cloud technical documentation website](https://developer.gov.bc.ca/docs/default/component/platform-developer-docs/)
-- [BCGov Internal StackOverflow](https://stackoverflow.developer.gov.bc.ca/)
+- [GitHub Discussions](https://github.com/bcgov/bcgov-community-discussions/discussions)
 
 
 ## How Rocky can help you

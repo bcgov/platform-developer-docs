@@ -192,7 +192,7 @@ Applying a specific network policy to a deployment is a best practice for to enh
 In OpenShift, a `Route` provides external access to an internal service. You can specify a custom hostname or use an automatically generated one. Ensure the DNS entry points to the OpenShift Router service. Useful links:
 
 1. Red Hat's [route official documentation](https://docs.openshift.com/container-platform/latest/networking/routes/route-configuration.html)
-2. [How do I get a custom vanity URL for my application in Openshift?](https://stackoverflow.developer.gov.bc.ca/questions/172/176#176)
+2. [How do I get a custom vanity URL for my application in Openshift?](https://github.com/bcgov/bcgov-community-discussions/discussions/39#discussioncomment-14942268)
 3. [Openshift Service and Route](https://www.densify.com/openshift-tutorial/openshift-route/)
 
 ### 3. Configuring SSL/TLS Certificates

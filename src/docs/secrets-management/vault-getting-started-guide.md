@@ -272,7 +272,7 @@ spec:
           ...
 ```
 
-Looking for a simplified way to setup the secret environment variables? Take a look [at this example](https://stackoverflow.developer.gov.bc.ca/questions/1060/1061#1061).
+Looking for a simplified way to setup the secret environment variables? Take a look [at this example in GitHub Discussions](https://github.com/bcgov/bcgov-community-discussions/discussions/225#discussioncomment-14943169).
 
 Do you reach a resource quota limit? Configure the Vault Agent container's requests and limits in the [annotations](https://developer.hashicorp.com/vault/docs/platform/k8s/injector/annotations).
 
