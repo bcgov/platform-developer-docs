@@ -1,4 +1,5 @@
 {
+    "markdown.extension.toc.updateOnSave": false,
     "cSpell.words": [
         "alertmanager",
         "azurekv",
