@@ -152,7 +152,7 @@ Create an ArgoCD App using the following guidelines:
 
 * Source repository URL: `artifacts.developer.gov.bc.ca/docker-oci-virtual`
 * Source repository type: `HELM`
-* Chart name: Enter as group/project, such as `bitnamicharts/mariadb`
+* Chart name: Enter as group/project, such as `cloudpirates/mariadb`
 * Chart version: In the field adjacent to the chart name, enter the version number, such as `20.2.0`
 * Helm settings: Select a standard values file or enter individual values. To use your own values file, see the example below of a multi-source application.
 
@@ -169,13 +169,12 @@ spec:
     server: https://kubernetes.default.svc
   project: abc123
   sources:
-    - chart: bitnamicharts/mariadb
+    - chart: cloudpirates/mariadb
       helm:
-        releaseName: mariadb
         valueFiles:
           - $values/mariadb/values-dev.yaml
       repoURL: artifacts.developer.gov.bc.ca/helm-oci-virtual
-      targetRevision: 20.2.0
+      targetRevision: 0.13.2
     - ref: values
       repoURL: https://github.com/bcgov-c/tenant-gitops-abc123.git
       targetRevision: main
