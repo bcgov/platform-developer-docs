@@ -83,7 +83,7 @@ This feature improves how you can see what's going on in your OpenShift environm
 
 Every dashboard is linked to a user account on Sysdig for ownership. If the user or team is deleted, either from the Sysdig console or the sysdig-team custom resource, all related dashboards will be deleted too.
 
-Once a dashboard is deleted, you can't get it back. That's why it's highly recommended to use the [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/) to manage your custom dashboards as code manifests. If you ever lose a dashboard, you can easily recover it from the manifest.
+Once a dashboard is deleted, you can not get it back. That's why it's highly recommended to use the [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/) to manage your custom dashboards as code manifests. If you ever lose a dashboard, you can easily recover it from the manifest.
 
 ---
 
