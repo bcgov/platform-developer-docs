@@ -17,7 +17,7 @@ What you’ll typically look at:
 - PVC utilization trends and “near-full” claims
 
 [Detailed introduction]
-https://github.com/bcgov/platform-services-sysdig/blob/main/dashboard-template/docs_for_reousrces_dashboard.md
+(https://github.com/bcgov/platform-services-sysdig/blob/main/dashboard-template/docs_for_reousrces_dashboard.md)
 
 ## Template 2: Workload Stability & Scaling (per namespace)
 
