@@ -17,7 +17,7 @@ What you’ll typically look at:
 - PVC utilization trends and “near-full” claims
 
 [Detailed introduction]
-(https://github.com/bcgov/platform-services-sysdig/blob/main/dashboard-template/docs_for_reousrces_dashboard.md)
+(https://github.com/bcgov/platform-services-sysdig/blob/main/dashboard-template/template/docs_for_resources_dashboard.md)
 
 ## Template 2: Workload stability and scaling (per namespace)
 
@@ -36,7 +36,7 @@ What you’ll typically look at:
 - Maintenance readiness (drain blockers)
 
 [Detailed introduction]
-(https://github.com/bcgov/platform-services-sysdig/blob/main/dashboard-template/docs_for_workload_stability_dashboard.md)
+(https://github.com/bcgov/platform-services-sysdig/blob/main/dashboard-template/template/docs_for_workload_stability_dashboard.md
 
 ## Apply these templates to your Sysdig team
 
