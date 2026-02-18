@@ -2,7 +2,7 @@
 
 Platform Services provides two Sysdig dashboard templates you can copy into your own Sysdig team. They are designed to help app teams (1) justify or reject quota increase requests with evidence, and (2) triage workload health/scaling issues quickly.
 
-## Template 1: Resource Utilization & Quota (CPU / Memory / Storage)
+## Template 1: Resource utilization and quota (CPU / Memory / Storage)
 
 Use this when you need to answer:
 
