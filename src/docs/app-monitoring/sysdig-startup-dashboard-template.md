@@ -36,7 +36,7 @@ What you’ll typically look at:
 - Maintenance readiness (drain blockers)
 
 [Detailed introduction]
-https://github.com/bcgov/platform-services-sysdig/blob/main/dashboard-template/docs_for_workload_stability_dashboard.md
+(https://github.com/bcgov/platform-services-sysdig/blob/main/dashboard-template/docs_for_workload_stability_dashboard.md)
 
 ## Apply these templates to your Sysdig team
 
