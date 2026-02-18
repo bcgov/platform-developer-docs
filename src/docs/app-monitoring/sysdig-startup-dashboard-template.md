@@ -19,7 +19,7 @@ What you’ll typically look at:
 [Detailed introduction]
 (https://github.com/bcgov/platform-services-sysdig/blob/main/dashboard-template/docs_for_reousrces_dashboard.md)
 
-## Template 2: Workload Stability & Scaling (per namespace)
+## Template 2: Workload stability and scaling (per namespace)
 
 Use this for quick triage and “is something wrong?” checks.
 Most panels are “bad signals”, so a flat line at 0 is usually good.
