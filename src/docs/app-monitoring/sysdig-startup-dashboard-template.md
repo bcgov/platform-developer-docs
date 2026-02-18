@@ -35,7 +35,7 @@ What you’ll typically look at:
 - Network error indicators
 - Maintenance readiness (drain blockers)
 
-Detail introduction:
+[Detailed introduction]
 https://github.com/bcgov/platform-services-sysdig/blob/main/dashboard-template/docs_for_workload_stability_dashboard.md
 
 ## Apply these templates to your Sysdig team
