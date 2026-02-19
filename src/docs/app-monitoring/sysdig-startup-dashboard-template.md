@@ -16,8 +16,7 @@ What you’ll typically look at:
 - Top containers by usage/limit ratio
 - PVC utilization trends and “near-full” claims
 
-[Detailed introduction]
-(https://github.com/bcgov/platform-services-sysdig/blob/main/dashboard-template/template/docs_for_resources_dashboard.md)
+[Detailed introduction](https://github.com/bcgov/platform-services-sysdig/blob/main/dashboard-template/template/docs_for_resources_dashboard.md)
 
 ## Template 2: Workload stability and scaling (per namespace)
 
@@ -35,10 +34,8 @@ What you’ll typically look at:
 - Network error indicators
 - Maintenance readiness (drain blockers)
 
-[Detailed introduction]
-(https://github.com/bcgov/platform-services-sysdig/blob/main/dashboard-template/template/docs_for_workload_stability_dashboard.md
+[Detailed introduction](https://github.com/bcgov/platform-services-sysdig/blob/main/dashboard-template/template/docs_for_workload_stability_dashboard.md)
 
 ## Apply these templates to your Sysdig team
 
-Follow the repo instructions to import/apply the dashboard templates to your Sysdig team:
-https://github.com/bcgov/platform-services-sysdig/blob/main/dashboard-template/README.md
+Follow the [repo instructions](https://github.com/bcgov/platform-services-sysdig/blob/main/dashboard-template/README.md) to import/apply the dashboard templates to your Sysdig team.
