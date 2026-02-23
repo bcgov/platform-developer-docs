@@ -19,9 +19,10 @@ sort_order: 3
 ---
 
 # Create monitoring dashboards in Sysdig Monitor
+
 Last updated: **January 2, 2024**
 
-After you  [create a sysdig-team](../app-monitoring/sysdig-monitor-setup-team.md) and set up a dedicated space in Sysdig to monitor applications in your OpenShift Project Set, follow the steps in this guide to learn more about monitoring.
+After you [create a sysdig-team](../app-monitoring/sysdig-monitor-setup-team.md) and set up a dedicated space in Sysdig to monitor applications in your OpenShift Project Set, follow the steps in this guide to learn more about monitoring.
 
 ## On this page
 
@@ -49,21 +50,22 @@ Here are some common ones to start with:
 
 Here's a quick [video](https://www.youtube.com/watch?v=K4rkSCSq3C4&list=PL9CV_8JBQHiorxwU-2nA8aqM4KTzdCnfg&index=24) on how this can be set up.
 
-
 ## Create custom dashboard from templates
 
 You have the flexibility to create your own dashboards based on templates, adding custom filters to monitor specific namespaces, workloads, or groups of containers and processes. Follow these steps:
 
 1. Choose the dashboard template you want to start with
-2.  click on `Copy to My Dashboard` button on the top-right corner, give it a suitable name and save.
+2. click on `Copy to My Dashboard` button on the top-right corner, give it a suitable name and save.
 3. In your customized copy, configure the dashboard filter to focus on your monitoring target. Check out the example below:
 
-    ![Filter the dashboard to monitor on API component in production namespace](../../images/sysdig-team-dashboard-filter.png)
+   ![Filter the dashboard to monitor on API component in production namespace](../../images/sysdig-team-dashboard-filter.png)
 
-If you're familiar with  [advanced PromQL queries](./sysdig-monitor-set-up-advanced-functions.md), you can integrate them into a dashboard. Simply follow these steps: 
+If you're familiar with [advanced PromQL queries](./sysdig-monitor-set-up-advanced-functions.md), you can integrate them into a dashboard. Simply follow these steps:
 
 1. Click on `Add Panel` from the top-right corner of the dashboard
-2.  Fill in the metrics query in the panel configuration
+2. Fill in the metrics query in the panel configuration
+
+Platform team also provides two dashboard templates to help you start quickly: [Platform dashboard templates (Resource Utilization & Workload Stability)](./sysdig-platform-dashboard-templates.md).
 
 ## Sysdig Advisor Namespace overview
 
@@ -73,7 +75,7 @@ Explore the Namespace Overview feature in [Sysdig Advisor](https://docs.sysdig.c
 
 In the Advisor section, locate and click on **'Namespace Overview.'** This action will direct you to a dedicated page where you can access detailed information about your namespaces:
 
-   ![Accessing Sysdig Advisor Namespace Overview](../../images/sysdig-team-advisor.png)
+![Accessing Sysdig Advisor Namespace Overview](../../images/sysdig-team-advisor.png)
 
 This feature improves how you can see what's going on in your OpenShift environment. It helps you respond quickly to any challenges related to resources. Use the information from the Namespace Overview to make smart choices about how you allocate and optimize resources.
 
@@ -81,15 +83,16 @@ This feature improves how you can see what's going on in your OpenShift environm
 
 Every dashboard is linked to a user account on Sysdig for ownership. If the user or team is deleted, either from the Sysdig console or the sysdig-team custom resource, all related dashboards will be deleted too.
 
-Once a dashboard is deleted, you can't get it back. That's why it's highly recommended to use the  [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/)  to manage your custom dashboards as code manifests. If you ever lose a dashboard, you can easily recover it from the manifest.
+Once a dashboard is deleted, you can not get it back. That's why it's highly recommended to use the [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/) to manage your custom dashboards as code manifests. If you ever lose a dashboard, you can easily recover it from the manifest.
 
 ---
---- 
+
+---
 
 ## Related pages
+
 - [Set up a team in Sysdig Monitor](../app-monitoring/sysdig-monitor-setup-team.md)
 - [Set up advanced functions in Sysdig Monitor](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
 - [Sysdig Monitor](https://docs.sysdig.com/en/sysdig-monitor.html)
 - [Sysdig Monitor Dashboards](https://docs.sysdig.com/en/dashboards.html)
 - [The four Golden Signals of Monitoring](https://sysdig.com/blog/golden-signals-kubernetes)
-
