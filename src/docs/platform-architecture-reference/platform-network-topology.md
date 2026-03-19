@@ -23,7 +23,7 @@ Last updated: **August 23, 2023**
 
 Navigate to the platform network topology section for a detailed review of the network structure. The section breaks down the fundamental structure of Silver, Gold, Gold DR and Emerald OpenShift Platforms. Follow the steps below to access the information:
 
-1. Head on over to the [Private cloud](https://digital.gov.bc.ca/cloud/private/) main page
+1. Head on over to the [Private cloud](https://digital.gov.bc.ca/technology/cloud/private/) main page
 
 2. Find the section: **Internal resources**. Please note that this section is password-restricted for private cloud resources (IDIR protected)
 
