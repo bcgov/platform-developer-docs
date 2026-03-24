@@ -50,7 +50,7 @@ You can add users in one of the following primary roles:
 To add another user with edit role to the namespace who can create and delete applications, use the ``oc adm policy`` command. You must be in the namespace when you run this command.
 
 ```
-oc adm policy add-role-to-user edit <collaborator>
+oc -n <namespace> adm policy add-role-to-user edit <collaborator>
 ```
 
 Replace ``<collaborator>`` with the name of the user as displayed by the ``oc whoami`` command when run by that user.
@@ -58,11 +58,11 @@ Replace ``<collaborator>`` with the name of the user as displayed by the ``oc wh
 To remove a user from a namespace, run:
 
 ```
-oc adm policy remove-role-from-user edit <collaborator>
+oc -n <namespace> adm policy remove-role-from-user edit <collaborator>
 ```
 To get a list of the users who have access to a namespace, and in what role, a project manager can run:
 ```
-oc get rolebindings
+oc -n <namespace> get rolebindings
 ```
 For more information on adding users, you can watch [Using Just Ask! to gain access into the BCGov GitHub Organization](https://www.youtube.com/watch?v=IvdPyx2-qm0) or use [the Just Ask! tool](https://just-ask.developer.gov.bc.ca/).
 
