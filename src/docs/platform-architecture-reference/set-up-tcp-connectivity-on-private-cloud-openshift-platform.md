@@ -347,6 +347,6 @@ Then trigger the Porter Operator to re-read and sync the changes. One way to do 
 oc patch tscs my-tscs --type=merge -p '{"spec":{"monitor":{"interval":30}}}'
 ```
 
-Verify the `TransportSever` on both Gold and DR have updated to new IPs and test them.
+Verify the `TransportServer` on both Gold and DR have updated to new IPs and test them.
 
 ---
