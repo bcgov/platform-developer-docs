@@ -31,7 +31,7 @@ Consider this page as a comprehensive guide showcasing the significance of proac
 
 ## On this page
 * [**Maintain images**](#image-maintenance) <!-- ### Cailey Section -->
-* [**Mantain reliability and resiliency**](#maintain-reliability-and-resiliency)<!-- ### Ian Section -->
+* [**Maintain reliability and resiliency**](#maintain-reliability-and-resiliency)<!-- ### Ian Section -->
 * [**Monitoring and alerting**](#monitoring-and-alerting) <!-- ### Shelly Section -->
 * [**Maintain security**](#maintain-security) <!-- ### Ian Section -->
 * [**Effective communication in application maintenance**](#effective-communication-in-application-maintenance) <!-- ### Shelly Section -->
