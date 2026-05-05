@@ -26,7 +26,7 @@ Follow these guidelines to load test ministry applications hosted in the Silver 
 
 As OpenShift is a shared platform, the Platform Services team wants to make sure you're successful when you load test your application. You have to meet all the following requirements:
 
-1. The test must take place after 5:30 pm on a weekday
+1. The test must take place after 5:30 pm on weekdays, or on weekends
 2. The maximum number of **concurrent sessions** during load testing must be restricted to 50,000
 
 The requirements help make sure that the test doesn't create any negative impacts on the operation of other applications running in the cluster. Following these requirements helps avoid unexpected outcomes.
