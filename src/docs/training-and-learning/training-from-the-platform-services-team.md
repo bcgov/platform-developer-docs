@@ -26,7 +26,7 @@ Learning how to build in OpenShift can be hard. We’ve put together a number of
 
 The BC Gov Private Cloud Platform OpenShift 101 and 201 courses include a theory 'workshop' component, and a practical series of 'lab exercises'. OpenShift 101 is recommended for anyone working with a team that uses our platform. OpenShift 201 is a more advanced course for platform users who want to advance their skills in OpenShift.
 
-In addition to live workshops, the OpenShift 101 training can now be [accessed on demand](https://github.com/bcgov/devops-platform-workshops/blob/master/README.md#openshift-101) in a self-serve format. Recordings are included in the slide deck, along with video guides for the lab exercises. A [rocketchat channel](https://chat.developer.gov.bc.ca/channel/openshift-101-selfpaced) for the people undertaking the self-paced course to ask questions.   
+In addition to live workshops, the OpenShift 101 training can now be [accessed on demand](https://github.com/bcgov/devops-platform-workshops/blob/master/README.md#openshift-101) in a self-serve format. Recordings are included in the slide deck, along with video guides for the lab exercises. A [MS Teams channel](https://teams.microsoft.com/l/channel/19%3Ac23ca1334c58477abf82a3ef3c56987c%40thread.tacv2/OpenShift-training-101-selfpaced?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc) ia available for the people undertaking the self-paced course to ask questions.   
 
 [Register for an OpenShift course](https://digital.gov.bc.ca/technology/cloud/private/support/#platform-training).
 
