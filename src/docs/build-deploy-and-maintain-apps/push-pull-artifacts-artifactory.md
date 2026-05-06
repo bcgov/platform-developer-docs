@@ -141,9 +141,15 @@ $ npm config set registry https://artifacts.developer.gov.bc.ca/artifactory/api/
 
 ```bash
 $ npm login
+Press ENTER to open in the browser...
+```
+
+*To authenticate with an Artifactory Service Account:*
+
+```bash
+$ npm login --auth-type=legacy
 Username: <username>
 Password:
-Email: <username>@<namespace>.local
 ```
 
 3. Once the authentication is complete, you can pull artifacts from this registry:
