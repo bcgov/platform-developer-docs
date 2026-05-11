@@ -256,7 +256,7 @@ spec:
 
 If you want to use an email receiver, keep it the same and only update the `name` and `to` fields, as well as the `Product Name Here` in the `html`. The rest ensures that the email is sent correctly and with nice formatting.
 
-You can add multiple email receivers, or a webhook connector to MS Teams.
+You can add an additional `AlertManagerConfig` to add more email contacts, and in future notifications channel like MS Teams may be supported.
 
 The `route` can be set to group alerts, but include at least `namespace` and `severity` to ensure the email template works correctly. You can also create sub-routes with different receivers or repeat intervals and match on a subset of alerts.
 
