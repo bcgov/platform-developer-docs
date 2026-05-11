@@ -210,7 +210,7 @@ Please have this network policy added to ensure that proper metrics are scraped
 
 There is a default `AlertManagerConfig` object called `platform-services-controlled-alert-routing` in each namespace that is not editable that sets out some default alerting rules. It ensures that the Products Tech Leads and Product Owner get the base level alerts.
 
-You can add an additional `AlertManagerConfig` to add more email contacts, or set up another notification channel like MS Teams.
+You can add an additional `AlertManagerConfig` to add more email contacts, and in future notifications channel like MS Teams may be supported.
 
 ```yaml
 apiVersion: monitoring.coreos.com/v1beta1
