@@ -65,7 +65,7 @@ sum(last_over_time(sysdig_container_cpu_cores_used{kube_cluster_name=~$Cluster,k
 
 Regarding Utilization, our goal is to maximize it as much as possible. However, achieving a consistent level of 80% or higher isn't always feasible. We'll make our best efforts to achieve this target while ensuring that the application meets other SLOs.
 
-As for handling namespace limitations, we can establish an alert system. When utilization reaches 80%, it will send a notification via MS Teams, indicating the need to allocate additional resources since it's nearing capacity. We can then either allocate more resources or implement a horizontal auto-scaling approach based on the specific circumstances.
+As for handling namespace limitations, we can establish an alert system. When utilization reaches 80%, it will send a notification indicating the need to allocate additional resources since it's nearing capacity. We can then either allocate more resources or implement a horizontal auto-scaling approach based on the specific circumstances.
 
 ```
 sum(last_over_time(sysdig_container_cpu_cores_used{kube_cluster_name=~"silver",kube_namespace_name=~"platform-registry-prod"}[10s])) / (sum(last_over_time(kube_pod_sysdig_resource_limits_cpu_cores{kube_cluster_name=~"silver",kube_namespace_name=~"platform-registry-prod"}[10s])) ) > 0.8
