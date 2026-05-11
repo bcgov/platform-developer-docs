@@ -210,7 +210,7 @@ Please have this network policy added to ensure that proper metrics are scraped
 
 There is a default `AlertManagerConfig` object called `platform-services-controlled-alert-routing` in each namespace that is not editable that sets out some default alerting rules. It ensures that the Products Tech Leads and Product Owner get the base level alerts.
 
-You can add an additional `AlertManagerConfig` to add more email contacts, or set up another notification channel like RocketChat.
+You can add an additional `AlertManagerConfig` to add more email contacts, and in future notifications channel like MS Teams may be supported.
 
 ```yaml
 apiVersion: monitoring.coreos.com/v1beta1
@@ -256,7 +256,7 @@ spec:
 
 If you want to use an email receiver, keep it the same and only update the `name` and `to` fields, as well as the `Product Name Here` in the `html`. The rest ensures that the email is sent correctly and with nice formatting.
 
-You can add multiple email receivers, or other options like PagerDuty or a webhook to RocketChat.
+You can add an additional `AlertManagerConfig` to add more email contacts, and in future notifications channel like MS Teams may be supported.
 
 The `route` can be set to group alerts, but include at least `namespace` and `severity` to ensure the email template works correctly. You can also create sub-routes with different receivers or repeat intervals and match on a subset of alerts.
 

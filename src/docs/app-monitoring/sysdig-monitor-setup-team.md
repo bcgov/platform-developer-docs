@@ -176,7 +176,7 @@ To access them:
 
 ## Troubleshooting
 
-- Error from `sysdig-team` custom resource: if you don't see `Awaiting next reconciliation` after waiting for 5 minutes, contact the Platform Services team on the [#devops-sysdig Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig). Make sure to include the OpenShift cluster and namespace information.
+- Error from `sysdig-team` custom resource: if you don't see `Awaiting next reconciliation` after waiting for 5 minutes, contact the Platform Services team in the [MS Teams OpenShift-howto-sysdig channel](https://teams.microsoft.com/l/channel/19%3A93dff023d40c4440b26cf9c0b236a93f%40thread.tacv2/OpenShift-howto-sysdig?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc). Make sure to include the OpenShift cluster and namespace information.
 
 - If you don't see the Sysdig team created, double check that:
 
@@ -184,7 +184,7 @@ To access them:
   - There are no duplicated `sysdig-team` custom resources in dev/test/prod namespaces. Please run `oc -n <NAMESPACE> delete sysdig-team <SYSDIG-TEAM-NAME>` to delete the extra custom resource.
   - Your Sysdig account profile matches the email address that you have provided in the `sysdig-team` custom resource. If there is a mismatch, reapply the custom resource.
 
-- If you don't see a default dashboard in your Sysdig team, contact the Platform Services team on the [#devops-sysdig Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig).
+- If you don't see a default dashboard in your Sysdig team, contact the Platform Services team on the [MS Teams OpenShift-howto-sysdig channel](https://teams.microsoft.com/l/channel/19%3A93dff023d40c4440b26cf9c0b236a93f%40thread.tacv2/OpenShift-howto-sysdig?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc).
 
 
 ---
@@ -200,7 +200,7 @@ To access them:
 - [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/)
 - [Monitoring with Sysdig](https://cloud.gov.bc.ca/private-cloud/our-products-in-the-private-cloud-paas/monitoring-with-sysdig/)
 - [Sydig User Profile](https://app.sysdigcloud.com/#/settings/user)
-- [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
+- [MS Teams OpenShift-howto-sysdig channel](https://teams.microsoft.com/l/channel/19%3A93dff023d40c4440b26cf9c0b236a93f%40thread.tacv2/OpenShift-howto-sysdig?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc)
 - [Sysdig Monitor Dashboards](https://docs.sysdig.com/en/dashboards.html)
 - [Sysdig Alerts](https://docs.sysdig.com/en/alerts.html)
 - [Sysdig Alerts with Kubernetes and PromQL](https://sysdig.com/blog/alerting-kubernetes/)
