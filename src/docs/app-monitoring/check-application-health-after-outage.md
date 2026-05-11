@@ -58,7 +58,7 @@ Connect to your application to see if it's up and running. If an initial check o
 
 Your pods will likely scale back up on their own. However, it's still a good idea to ensure that this has occurred as expected.
 
-- If it hasn't, this may indicate a problem with your deployment-config or with your health checks.
+- If it hasn't, this may indicate a problem with your deployment or with your health checks.
 
 - If you're having problems connecting to your application and your pods look healthy, restart them. If that works, that indicates that you may need to build a more complex and robust health check for those pods.
 
