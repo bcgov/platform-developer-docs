@@ -55,7 +55,7 @@ The [Grammar, spelling and tone](https://www2.gov.bc.ca/gov/content/governments/
 
 ## Audience and perspective
 
-The audience for the technical documentation generally has a high-level of devops knowledge and there are also other avenues for assistance (for example, Rocket.Chat).
+The audience for the technical documentation generally has a high-level of devops knowledge and there are also other avenues for assistance (for example, MS Teams channels).
 
 ### Duplicate content
 
@@ -138,7 +138,7 @@ Avoid using people's names in documentation. There are many good reasons for thi
 - They may have left the position or changed positions
 - Organizational contact methods or means may have changed
 
-You get the idea. Essentially, when you avoid using their name, it means you avoid questions and also don't have to go back and update it later. Use their position or reference more general means of contact. For example, a Rocket.Chat channel or a team email.
+You get the idea. Essentially, when you avoid using their name, it means you avoid questions and also don't have to go back and update it later. Use their position or reference more general means of contact. For example, a MS Teams channel or a team email.
 
 ## Accessibility
 

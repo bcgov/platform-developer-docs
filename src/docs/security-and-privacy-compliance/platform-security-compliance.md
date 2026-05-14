@@ -1,4 +1,4 @@
----
+Corcoran---
 title: B.C. Government OpenShift DevOps security compliance
 
 slug: devops-security-compliance
@@ -115,7 +115,7 @@ Many of the platform tools have **completed** security assessments.  These inclu
 * Sysdig Monitor
 * Just Ask!
 * Certbot
-* Rocket.Chat
+* MS Teams
 * Vault
 * OCP Application Resource Tuning Advisor
 * Uptime.com
@@ -222,7 +222,7 @@ Backups help you to recover in the event of a failure or data corruption.  As pa
 
 Planning for platform and service changes is documented on the [Platform Services ZenHub board](https://app.zenhub.com/workspaces/platform-experience-5bb7c5ab4b5806bc2beb9d15/board?repos=220104031)   
 
-Any service change will be communicated via the #devops-alerts Rocket.Chat channel.
+Any service change will be communicated via the #devops-alerts MS Teams channel.
 
 Strategic level changes are communicated to the DevOps community at regular Community Meetups, as well as to executive groups across government.
 
