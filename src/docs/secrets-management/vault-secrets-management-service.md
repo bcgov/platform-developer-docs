@@ -91,7 +91,7 @@ The team supporting this service administers the Vault application and its suppo
 
 Vault interfaces with Kubernetes services to provide authentication via service accounts.
 
-Rocket.Chat is the primary mode of communication. Specifically, the [#devops-vault](https://chat.developer.gov.bc.ca/channel/devops-vault) channel should be used to engage the community for best practices, configuration and troubleshooting questions.
+MS Teams is the primary mode of communication. Specifically, the [#devops-vault](https://chat.developer.gov.bc.ca/channel/devops-vault) channel should be used to engage the community for best practices, configuration and troubleshooting questions.
 
 For cluster wide service notifications that may impact Vault monitor, use the [#devops-alerts channel in Rocket.Chat.](https://chat.developer.gov.bc.ca/channel/devops-alerts)
 
