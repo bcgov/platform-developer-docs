@@ -26,13 +26,12 @@ Best practices on the platform:
 Read about [the free training](https://digital.gov.bc.ca/technology/cloud/private/support/#platform-training)
 that is offered on the Platform and get access to other learning resources.
 
-### Rocket.Chat
+### MS Teams
 
-Rocket.Chat will be your main communication channel for platform updates and support while you work in the BC Gov
-Private Cloud PaaS. Read
-about [how to stay connected in Rocket.Chat](../bc-developer-guide/rocketchat/steps-to-join-rocketchat/).
+MS Teams will be your main communication channel for platform updates and support while you work in the BC Gov
+Private Cloud PaaS. 
 
-[Log in to Rocket.Chat](https://chat.developer.gov.bc.ca).
+[Join the Developer Community](https://teams.microsoft.com/l/team/19%3A6bffce0ac7aa47a1ba9f6d9a7e898db9%40thread.tacv2/conversations?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc).
 
 ### Platform Services GenAI chatbot: Rocky
 
