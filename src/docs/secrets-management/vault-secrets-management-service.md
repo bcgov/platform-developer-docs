@@ -77,9 +77,9 @@ The Vault Secrets Management tool is deployed in a high-availability configurati
 
 The best source of help is the vibrant community of product teams using Vault for their projects.
 
-You can find this highly talented and knowledgeable group in the [#devops-vault channel on Rocket.Chat](https://chat.developer.gov.bc.ca/channel/devops-vault).
+You can find this highly talented and knowledgeable group in the [OpenShift-howto-vault channel on MSTeams] (https://teams.microsoft.com/l/channel/19%3A0ed86e1a6dd74b62a7d965f1a6954c56%40thread.tacv2/OpenShift-howto-vault?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc)
 
-For help beyond this contact one of the Vault administrators via the [#devops-operations channel on Rocket.Chat](https://chat.developer.gov.bc.ca/channel/devops-operations).
+For help beyond this contact one of the Vault administrators via the [OpenShift-operations channel on MSTeams](https://teams.microsoft.com/l/channel/19%3A5d490d83b64448cfa4088bd951c1d0bc%40thread.tacv2/OpenShift-operations?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc).
 
 ## What does it cost?
 
@@ -91,11 +91,11 @@ The team supporting this service administers the Vault application and its suppo
 
 Vault interfaces with Kubernetes services to provide authentication via service accounts.
 
-MS Teams is the primary mode of communication. Specifically, the [#devops-vault](https://chat.developer.gov.bc.ca/channel/devops-vault) channel should be used to engage the community for best practices, configuration and troubleshooting questions.
+MS Teams is the primary mode of communication. Specifically, the [OpenShift-howto-vault](https://teams.microsoft.com/l/channel/19%3A0ed86e1a6dd74b62a7d965f1a6954c56%40thread.tacv2/OpenShift-howto-vault?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc).This channel should be used to engage the community for best practices, configuration and troubleshooting questions.
 
-For cluster wide service notifications that may impact Vault monitor, use the [#devops-alerts channel in Rocket.Chat.](https://chat.developer.gov.bc.ca/channel/devops-alerts)
+For cluster wide service notifications that may impact Vault monitor, use the [OpenShift-alerts(https://teams.microsoft.com/l/channel/19%3A2466087e039143fbb5258ec96ad65fab%40thread.tacv2/OpenShift-alerts?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc).
 
-For teams without Rocket.Chat access or to escalate a question or concern, contact us by email at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca). 
+For teams without MSTeams access or to escalate a question or concern, contact us by email at [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca). 
 
 ## Service delivery
 
@@ -108,11 +108,11 @@ As part of project onboarding, Kubernetes service accounts are generated for you
 Product teams can choose to use Vault or ETCD backed Kubernetes Secrets, but it is recommended that Vault be used for secrets.
 
 ### Change management
-Any changes to the Vault Secrets Management tool will be communicated via [#devops-vault](https://chat.developer.gov.bc.ca/channel/devops-vault) and [#devops-alerts](https://chat.developer.gov.bc.ca/channel/devops-alerts) Rocket.Chat channels. For major service updates, the Vault Operations team will reach out to product owners for notice.
+Any changes to the Vault Secrets Management tool will be communicated via [OpenShift-howto-vault](https://teams.microsoft.com/l/channel/19%3A0ed86e1a6dd74b62a7d965f1a6954c56%40thread.tacv2/OpenShift-howto-vault?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc). For major service updates, the Vault Operations team will reach out to product owners for notice.
 
 ### Service improvements
 
-Vault Secrets Management improvements include system upgrades, feature integration and issue fixing. The Vault Operations team conduct these operations at scheduled times, with advance notice in the #devops-vault Rocket.Chat channel. If disruption or downtime is expected during service improvement, the team will provide details to help teams prepare and to verify their applications.
+Vault Secrets Management improvements include system upgrades, feature integration and issue fixing. The Vault Operations team conduct these operations at scheduled times, with advance notice in the OpenShift-howto-vault MSTeams channel. If disruption or downtime is expected during service improvement, the team will provide details to help teams prepare and to verify their applications.
 
 ### Service level
 Enterprise
