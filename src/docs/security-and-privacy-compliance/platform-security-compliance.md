@@ -220,7 +220,6 @@ Backups help you to recover in the event of a failure or data corruption.  As pa
 
 ## Change management
 
-Planning for platform and service changes is documented on the [Platform Services ZenHub board](https://app.zenhub.com/workspaces/platform-experience-5bb7c5ab4b5806bc2beb9d15/board?repos=220104031)   
 
 Any service change will be communicated via the #devops-alerts MS Teams channel.
 
