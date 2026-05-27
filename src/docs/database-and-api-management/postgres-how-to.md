@@ -24,7 +24,7 @@ sort_order: 4
 
 - Read our [High Availability Database Clusters](../database-and-api-management/high-availability-database-clusters.md) documentation. You need to know what makes a database "high availability" in an OpenShift cluster, and why that's important. 
 - Read our [Open-Source Database Technologies](../database-and-api-management/opensource-database-technologies.md) documentation to check out the alternatives to Patroni/Postgres. Make sure that Patroni is the right technology for your needs!
-- Join the [#patroni](https://chat.developer.gov.bc.ca/patroni) and [#crunchydb](https://chat.developer.gov.bc.ca/crunchydb) channels on RocketChat for a place to ask questions and find community support.
+- Join the [OpenShift-howto](https://teams.microsoft.com/l/channel/19%3Af98c0dea29eb4862823259663a2a4c95%40thread.tacv2/OpenShift-howto?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc) and [OpenShift-howto-crunchydb](https://teams.microsoft.com/l/channel/19%3Afa8530fbc1c346e1aed2e185f19b8b25%40thread.tacv2/OpenShift-howto-crunchydb?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc) channels on MS Teams for a place to ask questions and find community support.
 - Have a working knowledge of the OpenShift CLI. Check out our [OC CLI](../openshift-projects-and-access/install-the-oc-command-line-tool.md) documentation for an introduction, and sign up for OpenShift 101 to learn more.
 - Install the `helm` command line tool.
 

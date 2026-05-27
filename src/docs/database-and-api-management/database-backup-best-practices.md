@@ -98,7 +98,7 @@ Your team should already have access to the `nfs-file-backup` storage option. Al
 
 The BC Government's S3 storage service is highly available and has disaster recovery features that are managed by its administrators. If you use an S3 bucket, you do not need to worry about off-site backups or restoring from off-site backups, as all of this is done for you. In the event of a major problem with the main S3 storage site, the software will recover automatically to another site with little-to-no downtime. This means that your backups will be easily accessible to you, even in the event of a major outage. However, because the backups are not stored on-cluster, they are vulnerable to network issues. S3 storage is much cheaper than `nfs-file-backup`, but is also more complex to set up.
 
-In order to provision an S3 bucket for your team, you should contact your ministry's DevOps support team. Each ministry has its own process for provisioning access to the S3 object storage service. You can ask further questions on the #object-storage channel on RocketChat.
+In order to provision an S3 bucket for your team, you should contact your ministry's DevOps support team. Each ministry has its own process for provisioning access to the S3 object storage service. You can ask further questions on the [ObjectStorage-howto channel on MS Teams](https://teams.microsoft.com/l/channel/19%3A86f2515b43354346ac7255fcafb75766%40thread.tacv2/ObjectStorage-howto?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc).
 
 [ ] **How many backup files will you keep?**
 
@@ -123,7 +123,7 @@ Backup problems can appear in two different ways:
 
 The second problem can remain hidden until you need the dump file. By then, it's too late, and you've lost data. In order to avoid this problem, your backup automation should include a step to recover your data into a temporary database. It should also include a test to make sure the expected data is present. Since you'll want to automate your recovery process anyway (as mentioned in [Recovering your data](#recovering-your-data)), this is a good opportunity to test it!
 
-Both the backup and recovery test should send notifications to your team. The Platform Team recommends that you send notifications of both successes and failures. That way, if some failure prevents a notification from being sent, you can still tell there's a problem. Most teams set up a Rocket.Chat webhook to receive the status information of both the backup and recovery processes. Teams usually set up the webhook to post these messages to a private channel for the team.
+Both the backup and recovery test should send notifications to your team. The Platform Team recommends that you send notifications of both successes and failures. That way, if some failure prevents a notification from being sent, you can still tell there's a problem.
 
 ## Recovering your data
 
@@ -198,7 +198,7 @@ The recovery plan questions at a glance:
 * **How often you want to back up your data?** Configurable, but daily by default.
 * **Where will the backups be stored?** An `nfs-file-backup` PVC. If you wish to use S3, you can add your own small automation step to send the dump file to your bucket.
 * **How many backup files will you keep?** Configurable, but 6 daily, 4 weekly, 1 monthly by default.
-* **How will your team be notified of backup problems?** Includes built-in steps for sending status of both backup and recovery test to Rocket.Chat.
+* **How will your team be notified of backup problems?** This process is currently being updated as we migrate from Rocket.Chat to MS Teams.
 * **How will your team access your dump files?** The built-in recovery process assumes that you already have a dump file on en `nfs-file-backup` PVC. Any additional steps to get it there (either by pulling from S3 or recovering the PVC) must be performed by the team.
 * **What does the recovery process look like?** The built-in recovery process only recovers the dump file into an empty database. If you wish to use point-in-time recovery, your team will need to build appropriate automation for that. You will also need to cover any additional considerations for connecting your application to your recovered database or the recreation of other necessary objects.
 * **How will your database be monitored?** Your team will need to set up their own monitoring.
@@ -209,7 +209,7 @@ The CrunchyDB operator allows teams to set up a Postgres database quickly and ea
 
 You can read more in the official [documentation on CrunchyDB backup and restore functions](https://access.crunchydata.com/documentation/postgres-operator/4.1.2/overview/backup-restore-overview/). You'll also want to check out the [documentation on the PGO Scheduler](https://access.crunchydata.com/documentation/postgres-operator/4.1.2/overview/scheduler-overview/). The scheduler is used to automate the backup and restoration processes.
 
-The backup features of the CrunchyDB operator are powerful, but they still require that you set up a lot of your own automation. You'll be able to find some help on the #crunchydb channel on RocketChat. You can also take a look at the [backup-container](https://github.com/BCDevOps/backup-container). It contains scripts for automating the exact kinds of tasks you'll need to automate here, and can be used as a template.
+The backup features of the CrunchyDB operator are powerful, but they still require that you set up a lot of your own automation. You'll be able to find some help on the [OpenShift-howto-crunchydb channel on MS Teams](https://teams.microsoft.com/l/channel/19%3Afa8530fbc1c346e1aed2e185f19b8b25%40thread.tacv2/OpenShift-howto-crunchydb?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc). You can also take a look at the [backup-container](https://github.com/BCDevOps/backup-container). It contains scripts for automating the exact kinds of tasks you'll need to automate here, and can be used as a template.
 
 The recovery plan questions at a glance:
 
