@@ -77,7 +77,7 @@ The Vault Secrets Management tool is deployed in a high-availability configurati
 
 The best source of help is the vibrant community of product teams using Vault for their projects.
 
-You can find this highly talented and knowledgeable group in the [OpenShift-howto-vault channel on MSTeams] (https://teams.microsoft.com/l/channel/19%3A0ed86e1a6dd74b62a7d965f1a6954c56%40thread.tacv2/OpenShift-howto-vault?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc)
+You can find this highly talented and knowledgeable group in the [OpenShift-howto-vault channel on MSTeams](https://teams.microsoft.com/l/channel/19%3A0ed86e1a6dd74b62a7d965f1a6954c56%40thread.tacv2/OpenShift-howto-vault?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc)
 
 For help beyond this contact one of the Vault administrators via the [OpenShift-operations channel on MSTeams](https://teams.microsoft.com/l/channel/19%3A5d490d83b64448cfa4088bd951c1d0bc%40thread.tacv2/OpenShift-operations?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc).
 
