@@ -151,11 +151,8 @@ If your organization requires that you keep data related to this application for
 ### Delete any objects remaining in related services
 You may have resources that are indirectly connected to your application, such as:
 
-* Rocketchat channels and integrations (webhooks)
-  * To delete an **integration** (webhook), click the Administration link that is above the left navigation bar (it looks like three vertical dots), then Workspace, then Integrations.  Select the integration and scroll to the bottom of the form.  Click the 'Delete' button.
-  * To delete a **Rocket.Chat** room or channel, as above, click the Administration link that is above the left navigation bar, then Workspace, then 'Rooms'.  Select the room.  In the right navigation, scroll to the bottom of the form and click 'Delete'.  Only a room owner can delete a room.  This operation cannot be undone.
 * Remove or update documentation in public or private-facing websites.
-* If you've requested for other BCGov resources or Common Components, please also request for resource and access remove with the corresponding teams. Some of the common ones are Single Sign-On (SSO), S3 storage, Common Hosted Email Service (CHES) or the Common Hosted Form Service (CHEFS), etc. You can find a list of them for reference from the [Saas Directory](https://digital.gov.bc.ca/cloud/services/saas/directory/).
+* If you've requested for other BCGov resources or Common Components, please also request for resource and access remove with the corresponding teams. Some of the common ones are Single Sign-On (SSO), S3 storage, Common Hosted Email Service (CHES) or the Common Hosted Form Service (CHEFS), etc.
 ---
 ---
 ## Related pages 
