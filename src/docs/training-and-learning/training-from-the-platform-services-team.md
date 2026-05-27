@@ -13,7 +13,7 @@ audience: developer, technical lead, product owner
 
 author: Matt Spencer
 
-content_owner: Olena Mitovska
+content_owner: Luke Gonis
 
 sort_order: 1
 ---
