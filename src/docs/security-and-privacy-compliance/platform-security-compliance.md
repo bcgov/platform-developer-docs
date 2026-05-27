@@ -221,7 +221,7 @@ Backups help you to recover in the event of a failure or data corruption.  As pa
 ## Change management
 
 
-Any service change will be communicated via the #devops-alerts MS Teams channel.
+Any service change will be communicated via the OpenShift-alerts(https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A2466087e039143fbb5258ec96ad65fab%40thread.tacv2%2FOpenShift-alerts%3FgroupId%3Da80418da-c27b-406e-89ab-7695b61924d8%26tenantId%3D6fdb5200-3d0d-4a8a-b036-d3685e359adc&type=channel&deeplinkId=257a3fb2-2ea2-4667-882f-a60e30b99b0f&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true) MS Teams channel.
 
 Strategic level changes are communicated to the DevOps community at regular Community Meetups, as well as to executive groups across government.
 
