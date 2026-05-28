@@ -184,7 +184,7 @@ To access them:
   - There are no duplicated `sysdig-team` custom resources in dev/test/prod namespaces. Please run `oc -n <NAMESPACE> delete sysdig-team <SYSDIG-TEAM-NAME>` to delete the extra custom resource.
   - Your Sysdig account profile matches the email address that you have provided in the `sysdig-team` custom resource. If there is a mismatch, reapply the custom resource.
 
-- If you don't see a default dashboard in your Sysdig team, contact the Platform Services team on the [MS Teams OpenShift-howto-sysdig channel](https://teams.microsoft.com/l/channel/19%3A93dff023d40c4440b26cf9c0b236a93f%40thread.tacv2/OpenShift-howto-sysdig?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc).
+- If you don't see a default dashboard in your Sysdig team, you can access the [dashboard template in GitHub](https://github.com/bcgov/platform-services-sysdig/tree/main/dashboard-template) and apply it.
 
 
 ---
