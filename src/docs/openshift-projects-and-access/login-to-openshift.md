@@ -40,7 +40,7 @@ We're investigating IDIR security groups integration, but it's not in place yet.
 
 **Note**: There won't be automated migration for the namespace access role bindings created for the GitHub ID to the IDIR accounts performed by the Platform Services team. Any such migrations would have to be done by product teams themselves.
 
-If you have any questions or concerns about this change, post your question in [#devops-security channel](https://chat.developer.gov.bc.ca/channel/devops-security) in Rocket.Chat.
+If you have any questions or concerns about this change, post your question in [OpenShift-operations-security channel in MS Teams](https://teams.microsoft.com/l/channel/19%3A6616986006c24f95aec5224e335cb2b0%40thread.tacv2/OpenShift-operations-security?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc).
 
 ---
 Related pages
