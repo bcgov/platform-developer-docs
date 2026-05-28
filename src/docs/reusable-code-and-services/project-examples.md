@@ -201,8 +201,8 @@ The Pathfinder Single Sign On Services uses:
   - Uptime.com and Sysdig
 
 - Alerting and communication:
-  - MSTeams and RocketChat
-  - Uptime.com and  OpsGenie
+  - MSTeams
+  - Uptime.com and OpsGenie
 
 ### Lessons Learned: Challenges and solutions
 We strive to deliver value for our customers. We've focused the last few years on system stability and reliability. We offer business continuity aka disaster recovery for our service. Learn more about our [service levels](https://github.com/bcgov/sso-keycloak/wiki/Alerts-and-Us#service-levels).

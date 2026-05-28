@@ -40,9 +40,9 @@ Assuming your application is built in a cloud-native, highly resilient manner th
 
 If there is a platform-wide outage, check the following sources for more information:
 
-- Rocket.Chat channels `#devops-alerts`, `#devops-sos` and `#devops-operations`
+- MS Teams [Developer Community](https://teams.microsoft.com/l/team/19%3A6bffce0ac7aa47a1ba9f6d9a7e898db9%40thread.tacv2/conversations?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc) channels [OpenShift-alerts](https://teams.microsoft.com/l/channel/19%3A2466087e039143fbb5258ec96ad65fab%40thread.tacv2/OpenShift-alerts?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc) and [OpenShift-emergencyhelp](https://teams.microsoft.com/l/channel/19%3A13e667be3a6a46f8aa208c3cef190f20%40thread.tacv2/OpenShift-emergencyhelp?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc)
 
-- If you can't access Rocket.Chat, check the off-site [status page](https://status.developer.gov.bc.ca)
+- If you can't access MS Teams, check the off-site [status page](https://status.developer.gov.bc.ca)
 
 The Platform Services team keeps the community informed about the status of the outage. While the outage is in progress, there isn't much the team can do. Review the status and stay ready for the outage to end.
 
@@ -58,7 +58,7 @@ Connect to your application to see if it's up and running. If an initial check o
 
 Your pods will likely scale back up on their own. However, it's still a good idea to ensure that this has occurred as expected.
 
-- If it hasn't, this may indicate a problem with your deployment-config or with your health checks.
+- If it hasn't, this may indicate a problem with your deployment or with your health checks.
 
 - If you're having problems connecting to your application and your pods look healthy, restart them. If that works, that indicates that you may need to build a more complex and robust health check for those pods.
 
@@ -74,7 +74,7 @@ This error generally indicates that the pod is having trouble getting to the ima
 
 This is usually an indication that there is still a problem with the cluster. 
 
-* Check [Rocket.Chat](https://chat.developer.gov.bc.ca/home)
+* Check [MS Teams](https://teams.microsoft.com/l/team/19%3A6bffce0ac7aa47a1ba9f6d9a7e898db9%40thread.tacv2/conversations?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc)
 * Check the[ BCGov Platform Services status page](https://status.developer.gov.bc.ca/)  
 * Check if your image still exists and hasn't been corrupted.
 

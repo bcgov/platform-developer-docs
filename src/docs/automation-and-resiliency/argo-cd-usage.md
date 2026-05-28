@@ -388,7 +388,7 @@ Enter the following information:
 
 * Payload URL: `https://gitops-shared.apps.CLUSTERNAME.devops.gov.bc.ca/api/webhook`
 * Content type: application/json
-* Secret: (This is just to prevent abuse of the API endpoint by outside parties.  You can find the secret in the description of the Rocketchat channel "#devops-argocd".)
+* Secret: (This is just to prevent abuse of the API endpoint by outside parties.  You can find the secret in the description of the MS Teams channel [OpenShift-howto-argocd](https://teams.microsoft.com/l/channel/19%3A5d971c5af20d4c6dbab8f7213671aaaf%40thread.tacv2/OpenShift-howto-argocd?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc).)
 * SSL verification: keep the default "Enable SSL verification"
 * Which events would you like to trigger this webhook?: This is up to you to determine the conditions under which the webhook is triggered.
 * Active: keep this box checked in order to enable the webhook

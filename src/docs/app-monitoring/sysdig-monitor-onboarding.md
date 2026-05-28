@@ -31,7 +31,7 @@ Monitor your Kubernetes hosts with [Sysdig Monitor](https://sysdig.com/products/
 4. [Set up advanced metrics in Sysdig Monitor](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
 5. [Resource monitoring dashboards](../app-monitoring/resource-monitoring-dashboards.md)
 
-If you have any questions about Sysdig or application monitoring, please contact the Platform Services team on the [#devops-sysdig ](https://chat.developer.gov.bc.ca/channel/devops-sysdig) channel in Rocket.Chat.
+If you have any questions about Sysdig or application monitoring, please contact the Platform Services team in the [OpenShift-howto-sysdig](https://teams.microsoft.com/l/channel/19%3A93dff023d40c4440b26cf9c0b236a93f%40thread.tacv2/OpenShift-howto-sysdig?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc) channel in MS Teams.
 
 ---
 
@@ -43,7 +43,7 @@ If you have any questions about Sysdig or application monitoring, please contact
 - [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/)
 - [Monitoring with Sysdig](https://digital.gov.bc.ca/technology/cloud/private/products-tools/sysdig/)
 - [Sydig User Profile](https://app.sysdigcloud.com/#/settings/user)
-- [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
+- [MS Teams OpenShift-howto-sysdig channel](https://teams.microsoft.com/l/channel/19%3A93dff023d40c4440b26cf9c0b236a93f%40thread.tacv2/OpenShift-howto-sysdig?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc)
 - [Sysdig Monitor](https://docs.sysdig.com/en/sysdig-monitor.html)
 - [Sysdig Monitor Dashboards](https://docs.sysdig.com/en/dashboards.html)
 - [Sysdig Alerts](https://docs.sysdig.com/en/alerts.html)

@@ -92,7 +92,7 @@ After setting up your Artifactory project, you can perform various tasks such as
 To access the [Artifactory Web Console](https://artifacts.developer.gov.bc.ca), log in. At the top of the page, find the dropdown, likely labeled **All**. Click it and choose your new project. If you don't see your project, it could be due to:
 
 - You might not have administrator privileges in the relevant OpenShift namespace. Request one of the administrators to add you to the project.
-- If you haven't logged into Artifactory before creating the project, contact the Platform Services team for assistance. Reach out in the `#devops-artifactory` channel in Rocket.Chat.
+- If you haven't logged into Artifactory before creating the project, contact the Platform Services team for assistance. Reach out in the [OpenShift-howto-artifactory channel in MS Teams](https://teams.microsoft.com/l/channel/19%3A81e5eb5e92254e47badf383502bd3447%40thread.tacv2/OpenShift-howto-artifactory?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc).
 
 On the left side of the screen, the menu is divided into two sections: one with four small boxes and another with two gears.
 

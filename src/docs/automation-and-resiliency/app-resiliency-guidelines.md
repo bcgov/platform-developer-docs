@@ -52,7 +52,7 @@ The best way to keep on top of these issues in a proactive manner is to monitor 
 
 Many of these notification options provide your team an opportunity to act to prevent an outage before it starts. Finding out, for example, that your storage is almost full before it fills up means that your team can act to deal with the storage issue before it causes an outage or service issue. Other notifications can let you know the moment an outage starts and can provide extremely valuable information about the cause of the outage, so your team can begin troubleshooting right away without having to wait for users to inform you of the problem.
 
-Your team should also ensure you are in the [#devops-alerts channel](https://chat.developer.gov.bc.ca/channel/devops-alerts) in Rocket.Chat where notices of upcoming maintenance are posted. There are not many messages sent in this channel, so we recommend switching your Rocket.Chat notification settings for the channel to **All messages**.
+Your team should also ensure you are in the [OpenShift-alertsl](https://teams.microsoft.com/l/channel/19%3A2466087e039143fbb5258ec96ad65fab%40thread.tacv2/OpenShift-alerts?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc) in MS Teams where notices of upcoming maintenance are posted. There are not many messages sent in this channel, so we recommend switching your MS Teams notification settings for the channel to **All messages**.
 
 ## A highly available application
 
