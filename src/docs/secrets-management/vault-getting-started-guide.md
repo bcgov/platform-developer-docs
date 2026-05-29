@@ -298,7 +298,7 @@ The Vault init container will create local files with the secret key-value pairs
 
 ## Support
 
-Support is provided via the [#devops-vault](https://chat.developer.gov.bc.ca/channel/devops-vault) channel in RocketChat!
+Support is provided via the [OpenShift-howto-vault](https://teams.microsoft.com/l/channel/19%3A0ed86e1a6dd74b62a7d965f1a6954c56%40thread.tacv2/) channel in MS Teams
 
 ## References
 
