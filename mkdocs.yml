@@ -7,7 +7,6 @@ nav:
   - Onboarding to application monitoring with Sysdig: docs/app-monitoring/sysdig-monitor-onboarding.md
   - Set up a team in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-setup-team.md
   - Create monitoring dashboards in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-create-monitoring-dashboards.md
-  - Create alerts and notifications in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-create-alert-channels.md
   - Set up advanced metrics in Sysdig Monitor: docs/app-monitoring/sysdig-monitor-set-up-advanced-functions.md
   - Resource monitoring dashboards: docs/app-monitoring/resource-monitoring-dashboards.md
   - Platform dashboard templates (Sysdig): docs/app-monitoring/sysdig-startup-dashboard-template.md
