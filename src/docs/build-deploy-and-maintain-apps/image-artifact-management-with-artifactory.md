@@ -77,11 +77,11 @@ The Privacy Impact Assessment (PIA) and Security Threat Risk Assessment (STRA) f
 
 The team responsible for this service manages the Artifactory application, its associated database, and the S3 storage system housing the packages uploaded to Artifactory.
 
-Your best source for support, configuration and best practices is the developer community that uses Artifactory for their projects. Check out the [`#devops-artifactory` channel on Rocket.Chat](https://chat.developer.gov.bc.ca/channel/devops-artifactory). Service changes are also posted here.
+Your best source for support, configuration and best practices is the developer community that uses Artifactory for their projects. Check out the [OpenShift-howto-artifactory channel on MS Teams](https://teams.microsoft.com/l/channel/19%3A81e5eb5e92254e47badf383502bd3447%40thread.tacv2/OpenShift-howto-artifactory?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc). Service changes are also posted here.
 
-In case of an emergency or outage, reach out to one of the Artifactory administrators through the [`#devops-sos` channel on Rocket.Chat](https://chat.developer.gov.bc.ca/channel/devops-sos).
+In case of an emergency or outage, reach out to one of the Artifactory administrators through the [OpenShift-emergencyhelp channel on MS Teams](https://teams.microsoft.com/l/channel/19%3A2466087e039143fbb5258ec96ad65fab%40thread.tacv2/OpenShift-alerts?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc).
 
-For cluster-wide service notifications that could impact Artifactory, monitor the [`#devops-alerts` channel in Rocket.Chat](https://chat.developer.gov.bc.ca/channel/devops-alerts).
+For cluster-wide service notifications that could impact Artifactory, monitor the [OpenShift-alerts channel in MS Teams](https://teams.microsoft.com/l/channel/19%3A2466087e039143fbb5258ec96ad65fab%40thread.tacv2/OpenShift-alerts?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc).
 
 ## Service improvements and disruptions
 

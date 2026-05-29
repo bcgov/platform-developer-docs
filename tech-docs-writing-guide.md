@@ -55,7 +55,7 @@ The [Grammar, spelling and tone](https://www2.gov.bc.ca/gov/content/governments/
 
 ## Audience and perspective
 
-The audience for the technical documentation generally has a high-level of devops knowledge and there are also other avenues for assistance (for example, MS Teams channels).
+The audience for the technical documentation generally has a high-level of devops knowledge and there are also other avenues for assistance (for example, MS Teams).
 
 ### Duplicate content
 

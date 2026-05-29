@@ -250,7 +250,7 @@ If you have successfully onboarded to Sysdig, we provide a dedicated document ou
 
 * For more details on the required metrics and evidence, check the [resource monitoring dashboards](../app-monitoring/resource-monitoring-dashboards.md) guide page
 
-* If you have any issues onboarding to Sysdig, contact the Platform Services team on the applicable [Rocket.Chat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
+* If you have any issues onboarding to Sysdig, contact the Platform Services team on the applicable [MS Teams channel](https://teams.microsoft.com/l/channel/19%3A93dff023d40c4440b26cf9c0b236a93f%40thread.tacv2/OpenShift-howto-sysdig?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc)
 
 * If you need to store a large amount of unstructured data, consider using the [S3 Object Storage Service](https://github.com/bcgov/OpenShift4-Migration/issues/59) provided by Enterprise Hosting. This service is provided by the OCIO and is not hosted on OpenShift, so data stored in an S3 bucket will not count towards the storage quota in your namespace.
 
@@ -262,11 +262,10 @@ Once the quota increase request is approved, the specified namespaces are upgrad
 * [Resource Management Guidelines](https://github.com/bcgov/developer-experience/blob/master/docs/ResourceManagementGuidelines.md)
 * [Application Resource Tuning](https://github.com/bcgov/developer-experience/blob/master/docs/resource-tuning-recommendations.md)
 * [Get Started with Sysdig Monitoring](../app-monitoring/sysdig-monitor-onboarding.md)
-* [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
+* [OpenShift-howto-sysdig channel](https://teams.microsoft.com/l/channel/19%3A93dff023d40c4440b26cf9c0b236a93f%40thread.tacv2/OpenShift-howto-sysdig?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc)
 * [Platform Product Registry](https://registry.developer.gov.bc.ca/)
 * [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md)
 * [S3 Object Storage Service](https://github.com/bcgov/OpenShift4-Migration/issues/59)
-* [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
 * [Platform Product Registry](https://registry.developer.gov.bc.ca/)
 * [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md)
 * [S3 Object Storage Service](https://github.com/bcgov/OpenShift4-Migration/issues/59)

@@ -80,7 +80,7 @@ To enable Promscrape to find your application metrics, do the following:
 
 - [Set up a team in Sysdig Monitor](../app-monitoring/sysdig-monitor-setup-team.md)
 - [Create alert channels in Sysdig Monitor](../app-monitoring/sysdig-monitor-create-alert-channels.md)
-- [devops-sysdig RocketChat channel](https://chat.developer.gov.bc.ca/channel/devops-sysdig)
+- [MS Teams OpenShift-howto-sysdig channel](https://teams.microsoft.com/l/channel/19%3A93dff023d40c4440b26cf9c0b236a93f%40thread.tacv2/OpenShift-howto-sysdig?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc)
 - [Migrate Using Default Configuration](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations/working-with-integrations/custom-integrations/collect-prometheus-metrics/migrating-from-promscrape-v1-to-v2/#migrate-using-default-configuration)
 - [Sysdig Monitor](https://docs.sysdig.com/en/sysdig-monitor.html)
 - [Sysdig Monitor Dashboards](https://docs.sysdig.com/en/dashboards.html)
