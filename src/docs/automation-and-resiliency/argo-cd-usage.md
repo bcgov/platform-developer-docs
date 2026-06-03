@@ -41,6 +41,7 @@ It is available to any team on the B.C. government's OpenShift platform and can 
 * [Optional GitHub Webhook](#optional-github-webhook)
 * [Use your own Helm chart repository in Artifactory](#use-your-own-helm-chart-repository-in-artifactory)
 * [Nonprod access](#nonprod-access)
+* [ApplicationSets](#applicationsets)
 * [Related pages](#related-pages)
 
 ## Why Argo CD is good for you
@@ -464,6 +465,11 @@ If you have users that should have access to ArgoCD, but that should not be able
 'maintainers' and 'readers' will be able to see apps in both the default and nonprod projects.
 
 Note that although the nonprod project has permission to deploy to the `tools` namespace, it cannot overwrite a GitOpsTeam or GitOpsAlliance resource there.
+
+## ApplicationSets
+An ApplicationSet is an Application template that manages a group of Applications across namespaces, ensuring that they have identical configuration.  A change to the ApplicationSet will automatically result in an update of each of its Applications.
+
+If you would like to use an ApplicationSet, we suggest creating it in your tools namespace.  For more information, see the [official ApplicationSet documentation](https://argo-cd.readthedocs.io/en/stable/user-guide/application-set/).
 
 ## Related pages
 
