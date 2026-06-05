@@ -22,12 +22,11 @@ sort_order: 2
 
 Access to the OpenShift platform is self-serve and is available to IDIR users and members of the bcgov organization in GitHub. The platform provides platform and namespace-level access control. Access to the platform requires certain prerequisites and mechanisms to grant access.
 
-Existing bcgov organization members can invite other users to the organization. Every team member may not need access to OpenShift. Consider the security principle of least privilege before requesting platform access and when granting namespace-level access.
+Every team member may not need access to OpenShift. Consider the security principle of least privilege before requesting platform access and when granting namespace-level access.
 
 ## On this page
 - [Prerequisites](#prerequisites)
 - [Add users](#add-users)
-- [Request platform access](#request-platform-access)
 - [Grant namespace access](#grant-namespace-access)
 
 ## Prerequisites
@@ -64,13 +63,6 @@ To get a list of the users who have access to a namespace, and in what role, a p
 ```
 oc -n <namespace> get rolebindings
 ```
-For more information on adding users, you can watch [Using Just Ask! to gain access into the BCGov GitHub Organization](https://www.youtube.com/watch?v=IvdPyx2-qm0) or use [the Just Ask! tool](https://just-ask.developer.gov.bc.ca/).
-
-## Request platform access
-
-**Note**: This process only gives you platform access, not namespace access.
-
-The product owner or a project administrator associated with namespace provisioning makes a request through the [Just Ask! tool](https://just-ask.developer.gov.bc.ca/).
 
 ## Grant namespace access
 
@@ -88,8 +80,7 @@ Related links:
 
 * [BC Government organizations in GitHub](../../bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/)
 * [Provision a new project set](../openshift-projects-and-access/provision-new-openshift-project.md)
-* [Using Just Ask! to gain access into the BCGov GitHub Organization](https://www.youtube.com/watch?v=IvdPyx2-qm0)
-* [Add someone to the BC Government GitHub Org](https://just-ask.developer.gov.bc.ca/)
+* [Add someone to the BC Government GitHub Org](/docs/default/component/bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/#single-sign-on)
 * [Using RBAC to define and apply permissions](https://docs.openshift.com/container-platform/4.9/authentication/using-rbac.html)
 
 ---
