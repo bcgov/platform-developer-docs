@@ -1,4 +1,4 @@
-Corcoran---
+---
 title: B.C. Government OpenShift DevOps security compliance
 
 slug: devops-security-compliance
@@ -9,7 +9,7 @@ keywords: security, privacy, secrets, STRA, network policies, vault
 
 page_purpose: This page describes the various security compliance assessment and controls available on the platform
 
-audience: developer, technical lead, MISO, MPO
+audience: developer, technical lead, MISO, MPO, security, cyber, cybersecurity
 
 author: Nick Corcoran 
 
@@ -19,7 +19,7 @@ sort_order: 2
 ---
 
 # B.C. Government OpenShift DevOps security compliance
-Last updated: **February 20, 2024**
+Last updated: **June 5, 2026**
 
 Through this document you'll find some details on our OpenShift service, completed compliance activities and security controls we have in place on our OpenShift implementations.
 
@@ -128,7 +128,7 @@ If you cannot find a tool from the above list and/or require specific informatio
 
 ## Security assessment requirements for Product Teams
 
-Each product team is responsible for developing a security assessment for their service.  It is recommended that teams connect with their Ministry Information Security Officer (MISO), or ministry security team, to complete this assessment.  Some [common questions](../security-and-privacy-compliance/security-best-practices-for-apps.md) to ask them.
+Each product team is responsible for developing a security assessment for their service.  It is required that teams connect with cyber@gov.bc.ca to complete this assessment.  Some [common questions](../security-and-privacy-compliance/security-best-practices-for-apps.md) to ask them.
 
 ## Platform Product Registry
 
