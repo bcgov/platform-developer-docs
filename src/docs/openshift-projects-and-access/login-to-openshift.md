@@ -18,6 +18,7 @@ content_owner: Cailey Jones
 sort_order: 3
 ---
 
+
 # Log in to OpenShift Web Console
 
 Teams can log in to OpenShift with either IDIR or GitHub ID. IDIR is the preferred login method. Each login method is treated as a separate account on OpenShift and access must be managed independently. IDIR authentication is enabled in the Silver cluster of the OpenShift platform. You must have multi-factor authentication (MFA) enabled to log in with either GitHub or your IDIR. This access mechanism links to Azure Active Directory (AD). You get instructions on how to enable MFA for your IDIR account during onboarding.
