@@ -18,6 +18,18 @@ content_owner: Cailey Jones
 sort_order: 3
 ---
 
+# Web console login links
+
+To find the web console link for the cluster your project is on, you or a team member can log in to the Product Registry. 
+
+In the Private Cloud tab, navigate to your team's product and click on it. 
+
+![Product listing in the product registry](../../images/registry-product.png)
+
+From the product view, click the cluster name (Gold, Silver, Emerald etc.) to be redirected to the web console login page. 
+
+![Product listing in the product registry](../../images/registry-console-link.png)
+
 # Log in to OpenShift Web Console
 
 Teams can log in to OpenShift with either IDIR or GitHub ID. IDIR is the preferred login method. Each login method is treated as a separate account on OpenShift and access must be managed independently. IDIR authentication is enabled in the Silver cluster of the OpenShift platform. You must have multi-factor authentication (MFA) enabled to log in with either GitHub or your IDIR. This access mechanism links to Azure Active Directory (AD). You get instructions on how to enable MFA for your IDIR account during onboarding.
