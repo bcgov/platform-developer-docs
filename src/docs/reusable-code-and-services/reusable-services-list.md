@@ -20,7 +20,7 @@ sort_order: 1
 # Reusable services list
 Last updated: **November 28, 2023**
 
-This document covers some of the most popular reusable components designed to enhance the feature and infrastructure of your applications. You can find out more about the services and tools below, and guidance on how to integrate them into your application. This list crosses with the [BCGov Common Components](https://digital.gov.bc.ca/common-components/) as well as the [BCGov Software as a Service (SaaS) catalog](https://digital.gov.bc.ca/cloud/services/saas/), feel free to check out from all three places when looking for a component to use!
+This document covers some of the most popular reusable components designed to enhance the feature and infrastructure of your applications. You can find out more about the services and tools below, and guidance on how to integrate them into your application. This list overlaps with the [BCGov Common Components](https://digital.gov.bc.ca/common-components/).
 
 ## On this page
 * **[Backup container](#backup-container)**
@@ -268,6 +268,4 @@ Refer to the [docker-weasyprint repository](https://github.com/bcgov/docker-weas
 ## Related pages
 
 * [BCGov Common Components Website](https://digital.gov.bc.ca/common-components/)
-* [BCGov Saas Website](https://digital.gov.bc.ca/cloud/services/saas/)
-
 
