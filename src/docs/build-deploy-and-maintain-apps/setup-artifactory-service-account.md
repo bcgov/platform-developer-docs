@@ -90,7 +90,6 @@ Keep in mind that this is a _new_ account, and that you will need to re-add this
 
 * [Archeobot](https://github.com/bcgov/platform-services-archeobot)
 * [Artifactory](https://artifacts.developer.gov.bc.ca)
-* [Just Ask! tool](https://just-ask.developer.gov.bc.ca/)
 * [Setup an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md)
 
 

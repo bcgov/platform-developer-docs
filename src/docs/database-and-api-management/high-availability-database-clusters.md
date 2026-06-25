@@ -45,6 +45,7 @@ Highly-available database clusters meet both of these requirements. Each databas
 If the primary instance goes down, the secondary instances will elect a new primary right away. When another pod spins up to take the place of the original failed primary, it will join the cluster as a new secondary instance. This election process is usually fast enough to be unnoticeable.
 
 So, what does this mean for your software architecture?
+
 * Since HA clusters require 3 pods and each pod needs its own copy of the database, your storage requirements will be triple the size of your database. 
 * The primary instance will have more load than the secondary instances. Since any member of the cluster can be elected as primary, you need provide all instances with enough compute resources to act as the primary instance.
 * Your application must be able to handle connecting to a new instance at any time.

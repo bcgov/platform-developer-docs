@@ -113,7 +113,6 @@ Many of the platform tools have **completed** security assessments.  These inclu
 * KeyCloak Common Host Single Sign-on
 * Artifactory
 * Sysdig Monitor
-* Just Ask!
 * Certbot
 * MS Teams
 * Vault
