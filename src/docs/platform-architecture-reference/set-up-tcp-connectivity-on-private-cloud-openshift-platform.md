@@ -312,6 +312,40 @@ spec:
 
 **Note**: If this parameter is added to an existing TransportServerClaim, the cross-connect Service will be updated for `.spec.ports[0].port`.
 
+Setting overrideServicePort: true would cause the your-target-service-golddr Service to be configured as:
+
+## Direct TCP Access to Gold only, without GoldDR
+By default, TransportServerClaims created in Gold are used to establish a direct TCP connection between Gold and GoldDR, but users may want to configure direct access from the Internet to a Gold service, similar to what is done in Silver, either because they use only Gold and do not have matching namespaces in GoldDR or because they just need direct access to a Gold service.  This can be done by adding `mode: Standalone` to the TransportServerClaim.  For example:
+
+```
+apiVersion: porter.devops.gov.bc.ca/v1alpha1
+kind: TransportServerClaim
+metadata:
+  labels:
+    app: myapp
+  name: myapp-standalone
+spec:
+  mode: Standalone
+  monitor:
+    interval: 10
+    timeout: 11
+    type: tcp
+  service: myapp
+  servicePort: 2015
+```
+
+When created in standalone mode, the extra Services used for cross-cluster communication are not created.  You will, however, find a TransportServer in your namespace after creating the standalone TransportServerClaim.  Use the VIRTUALSERVERADDRESS and VIRTUALSERVERPORT to connect to your service:
+```
+$ oc get ts
+NAME               VIRTUALSERVERADDRESS   VIRTUALSERVERPORT   POOL    POOLPORT   IPAMLABEL   IPAMVSADDRESS   STATUS   AGE
+myapp-standalone   142.34.229.61          5242                myapp   2015                   142.34.229.61   OK       35m
+$
+$ curl http://142.34.229.61:5242
+Hello, from Gold!
+```
+
+Note that you will need a NetworkPolicy, [as described above](#create-network-policy-in-silver).
+
 ## Troubleshooting
 
 Resolve issues by trying the following:
