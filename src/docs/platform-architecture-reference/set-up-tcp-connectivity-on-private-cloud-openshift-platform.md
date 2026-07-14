@@ -312,8 +312,6 @@ spec:
 
 **Note**: If this parameter is added to an existing TransportServerClaim, the cross-connect Service will be updated for `.spec.ports[0].port`.
 
-Setting overrideServicePort: true would cause the your-target-service-golddr Service to be configured as:
-
 ## Direct TCP Access to Gold only, without GoldDR
 By default, TransportServerClaims created in Gold are used to establish a direct TCP connection between Gold and GoldDR, but users may want to configure direct access from the Internet to a Gold service, similar to what is done in Silver, either because they use only Gold and do not have matching namespaces in GoldDR or because they just need direct access to a Gold service.  This can be done by adding `mode: Standalone` to the TransportServerClaim.  For example:
 
