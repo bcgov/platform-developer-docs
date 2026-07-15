@@ -19,8 +19,6 @@ sort_order: 6
 ---
 
 # Argo CD usage
-Last updated: **July 28, 2025**
-
 Argo CD is a declarative, GitOps continuous delivery tool for Kubernetes (the foundation of OpenShift). It is efficient, well supported, and well documented.
 
 This document describes how to use Argo CD with your OpenShift project.
@@ -187,11 +185,9 @@ spec:
 
 If your application is already set up for Kustomize, then you just need to move your Kustomize files into the manifest repo.
 
-If moving an existing application to Kustomize and Argo CD for the first time, some effort will have to be made to generate the manifest files. The live manifests can be fetched from OpenShift using the command line. Certain fields will have to be removed, however, as OpenShift adds a number of fields for internal resource management. 
+If moving an existing application to Kustomize and Argo CD for the first time, some effort will have to be made to generate the manifest files.
 
-A [shell script](../../files/argocd/get_ns_resources.sh){:download="get_ns_resources.sh"} has been prepared to help with the manifest creation.
-
-Once the manifest files have been generated, the repository structure is prepared. Within the manifest repo, in the top-level directory for the given application, create the following directories:
+Once the manifest files have been created, the repository structure is prepared. Within the manifest repo, in the top-level directory for the given application, create the following directories:
 
 - base
 - overlays
@@ -473,7 +469,7 @@ If you would like to use an ApplicationSet, we suggest creating it in your tools
 
 ## Related pages
 
-* [Current Argo CD version, as of July 2025: v2.14.7](https://github.com/argoproj/argo-cd/releases/tag/v2.14.7)
+* [Argo CD](https://github.com/argoproj/argo-cd/blob/master/README.md)
 * [Kustomize.io](https://kustomize.io)
 * [Helm](https://helm.sh/)
 
