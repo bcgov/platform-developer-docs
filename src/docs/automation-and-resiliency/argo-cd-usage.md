@@ -79,7 +79,7 @@ After creation of the GitOpsTeam resource, an OpenShift operator will:
 4. Create a GitOps repository for your project
   * This is the repository that Argo CD will read for your application manifests
  
-    **Note:** This repository is in the `bcgov-c` GitHub Organization. Join the [bcgov-c](https://github.com/bcgov-c) organisation by following these [instructions](/docs/default/component/bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/#directions-to-sign-up-and-link-your-account-for-bcgov-c).
+    **Note:** This repository is in the `bcgov-c` GitHub Organization. Join the [bcgov-c](https://github.com/bcgov-c) organization by following these [instructions](/docs/default/component/bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/#directions-to-sign-up-and-link-your-account-for-bcgov-c).
 
   * Your GitOps repository will be called `bcgov-c/tenant-gitops-licenseplate`
 
