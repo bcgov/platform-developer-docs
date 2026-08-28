@@ -76,7 +76,10 @@ spec:
 ```
 
 ### Example 2 - Kustomize
-In this example, a Kustomize app uses the 'latest' tag.  Because the tag does not change, the image updater uses the SHA checksum to look for changes and will apply the checksum value as the image tag in your live deployment.
+In this example, a Kustomize app uses the 'latest' tag.  Because the tag itself does not change, the image updater identifies new images by reading the SHA checksum.  When the checksum has changed, the image updater updates the image reference in the deployment to use the checksum in addition to the tag.  This causes the deployment to recognize it as a different image and thus replace the existing pods with new ones running the new version of the image.  For example:
+```
+image: 'docker.io/nicolaka/netshoot:latest@sha256:b09d9b21381f47a79b3cbcb30da25266dc17186ea00ae65e99fdc51396f48e70'
+```
 
 Our Kustomize base deployment uses a standard image reference:
 ```
