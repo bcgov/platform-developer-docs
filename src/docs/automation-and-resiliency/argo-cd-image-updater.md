@@ -32,10 +32,10 @@ For now, because the image updater controller has not been granted write access 
 
 ## Update strategies
 Update strategies determine how Argo CD will look for new versions of an image.
-* `semver` - Use semantic versioning constraints
-* `newest-build` - Use the most recent image
-* `digest` - Use the most recent version of a given tag by using the SHA digest
-* `alphabetical` - Sort tags alphabetically and use the "highest" one
+* `semver` - (Default) Update to semantic versions
+* `newest-build` - Update to the most recently built image
+* `digest` - Use the most recent pushed version of a given tag, such as "latest"
+* `alphabetical` - Update according to lexical sort
 
 See the [Argo CD documentation](https://argocd-image-updater.readthedocs.io/en/stable/basics/update-strategies/) for more information.
 
@@ -57,7 +57,7 @@ image:
   tag: "2.10.1"
 ```
 
-The following ImageUpdater uses a 'newest-build' strategy, but also adds an 'allowTags' field to limit updates to the `2.10.x` pattern, so as new patch versions of 2.10 are released, they will be automatically applied by Argo CD, but it will not be updated to 2.11 or higher.
+The following ImageUpdater uses the **semver** update strategy.  This is the default update strategy and it will use the highest tag that matches the given pattern, in this case any semver-style tag beginning with `2.` (`2.10.2`, `2.11.4`, etc.).
 ```
 apiVersion: argocd-image-updater.argoproj.io/v1alpha1
 kind: ImageUpdater
@@ -66,13 +66,12 @@ metadata:
   namespace: NAMESPACE_NAME
 spec:
   applicationRefs:
-    - namePattern: image-updater-helm         # the name of the argocd app
+    - namePattern: image-updater-helm     # the name of the argocd app
       images:
-        - alias: caddy                        # a short alias for the image name
-          imageName: caddy                    # the full name of the image
+        - alias: caddy                    # a short alias for the image name
+          imageName: caddy:2.x            # the full name of the image
           commonUpdateSettings:
-            updateStrategy: newest-build      # Use the most recent matching build
-            allowTags: regexp:^2\.10\.[0-9]+$ # Only match tags like 2.10.x
+            updateStrategy: semver        # Use the highest matching tag: `2.x`
 ```
 
 ### Example 2 - Kustomize
@@ -90,7 +89,7 @@ spec:
         - image: 'docker.io/nicolaka/netshoot:latest'
 ```
 
-Our ImageUpdater uses the 'digest' update strategy and we add an extra block for Kustomize:
+Our ImageUpdater uses the **digest** update strategy and we add an extra block for Kustomize:
 ```
 apiVersion: argocd-image-updater.argoproj.io/v1alpha1
 kind: ImageUpdater
