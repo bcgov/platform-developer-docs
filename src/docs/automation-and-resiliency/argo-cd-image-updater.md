@@ -25,6 +25,7 @@ You probably won't have to make any changes to the application configuration unl
 
 ## Update methods
 Argo CD keeps track of image updates using one of two methods:
+
 * `argocd` - (default) Image status is written to the Argo CD application.
 * `git` - Image status is written to a new file in the app's Git repository.
 
@@ -32,6 +33,7 @@ For now, because the image updater controller has not been granted write access 
 
 ## Update strategies
 Update strategies determine how Argo CD will look for new versions of an image.
+
 * `semver` - (Default) Update to semantic versions
 * `newest-build` - Update to the most recently built image
 * `digest` - Use the most recent pushed version of a given tag, such as "latest"
