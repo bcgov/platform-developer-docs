@@ -52,7 +52,9 @@ Experience with Helm is not required to follow the video instructions. However, 
 
 - Access the [Crunchy-Postgres GitHub repo](https://github.com/bcgov/crunchy-postgres)
 
-**Commands used in the video** (for easy copy-paste):
+**Commands used in the video**:
+
+ **Note:** If you are installing Helm for the first time, it will automatically install the latest version (v4). Add `--server-side=false` to the end of the commands below to avoid a version mismatch error.
 
 - `helm upgrade --install hippo-tools ./charts/tools` to install the tools chart
 - `helm upgrade --install hippo-ha ./charts/crunchy-postgres` to install the PostgresCluster object
