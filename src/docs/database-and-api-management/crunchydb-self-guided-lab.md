@@ -56,8 +56,8 @@ Experience with Helm is not required to follow the video instructions. However, 
 
  **Note:** If you are installing Helm for the first time, it will automatically install the latest version (v4). Add `--server-side=false` to the end of the commands below to avoid a version mismatch error.
 
-`helm upgrade --install hippo-tools ./charts/tools` to install the tools chart
-`helm upgrade --install hippo-ha ./charts/crunchy-postgres` to install the PostgresCluster object
+- `helm upgrade --install hippo-tools ./charts/tools` to install the tools chart
+- `helm upgrade --install hippo-ha ./charts/crunchy-postgres` to install the PostgresCluster object
 
 ### Part 3: Backups (8:54 min)
 
