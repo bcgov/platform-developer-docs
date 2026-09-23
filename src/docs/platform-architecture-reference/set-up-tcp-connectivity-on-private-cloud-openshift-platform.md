@@ -148,7 +148,7 @@ NAME              VIRTUALSERVERADDRESS   VIRTUALSERVERPORT   POOL          POOLP
 yourservice-tsc   142.34.194.68          65555               yourservice   8000                   None            Ok       21d
 ```
 
-You may have to submit a firewall request in order to allow traffic in to the IP address and port indicated in VIRTUALSERVERADDRESS and VIRTUALSERVERPORT.
+You may have to submit a [firewall request](https://myservicecentre.gov.bc.ca/sp?id=kb_article&sys_id=03a7ca8433b243d0f566a9173e5c7b1a) in order to allow traffic in to the IP address and port indicated in VIRTUALSERVERADDRESS and VIRTUALSERVERPORT.
 
 To test connectivity from a Linux machine, use the following example and replace `65555` with the port shown in the previous command.
 
