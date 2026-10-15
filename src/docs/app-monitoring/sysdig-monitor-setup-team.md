@@ -1,13 +1,13 @@
 ---
-title: Set up a team in Sysdig Monitor
+title: Set up a team in Sysdig Access
 
 slug: sysdig-monitor-setup-team
 
-description: Describes how to set up and configure a team in Sysdig Monitor.
+description: Describes how to set up and configure a team in Sysdig Access.
 
-keywords: sysdig, sysdig monitor, sysdig team, monitoring, openshift monitoring, developer guide, team guide, team, configure
+keywords: sysdig, sysdig monitor, sysdig access, sysdig secure, sysdig team, monitoring, openshift monitoring, developer guide, team guide, team, configure
 
-page_purpose: Details the steps for setting up a team and reviewing the capabilities of Sysdig Monitor.
+page_purpose: Details the steps for setting up a team and reviewing the capabilities of Sysdig Access.
 
 audience: developer, technical lead
 
@@ -18,16 +18,16 @@ content_owner: Shelly Han
 sort_order: 2
 ---
 
-# Set up a team in Sysdig Monitor
+# Set up a team in Sysdig Access
 Last updated: **January 2, 2024**
 
-[Sysdig Monitor](https://sysdig.com/products/monitor/) provides system-level monitoring of Kubernetes hosts and the ability to create custom dashboards, alerts, and operational-level captures to diagnose application or platform-level issues.
+Sysdig Access provides users with Sysdig Monitor and Sysdig Secure. [Sysdig Monitor](https://sysdig.com/products/monitor/) provides system-level monitoring of Kubernetes hosts and the ability to create custom dashboards, alerts, and operational-level captures to diagnose application or platform-level issues. [Sysdig Secure](https://sysdig.com/platform/secure) delivers threat detection, vulnerability management, posture management, and identity & entitlement management.
 
 Effective monitoring and alerting are crucial components of maintaining a robust and reliable system. Monitoring allows your team to proactively identify potential issues before they impact your application, enabling timely responses and minimizing downtime. The platform services team strongly recommends that all teams implement the dashboards presented here as a minimum standard for ensuring the health and performance of their applications.
 
 The Sysdig Teams Operator runs in the cluster and enables a team to create and manage access to a dedicated Sysdig Team account for BC Gov Private Cloud PaaS users. The team is scoped to the OpenShift namespaces that belong to the team. Sysdig also provides a default dashboard to identify system [resources, limits, and actual usage](../automation-and-resiliency/openshift-project-resource-quotas.md).
 
-For more information on Sysdig Monitor, see [Monitoring with Sysdig](https://digital.gov.bc.ca/technology/cloud/private/products-tools/sysdig/)
+For more information on Sysdig Access, see [Monitoring with Sysdig](https://digital.gov.bc.ca/technology/cloud/private/products-tools/sysdig/)
 
 ## On this page
 - [Sign in to Sysdig](#sign-in-to-sysdig)
@@ -41,7 +41,7 @@ For more information on Sysdig Monitor, see [Monitoring with Sysdig](https://dig
 ## Sign in to Sysdig
 You and your team must sign in to Sysdig to create the user account. The B.C. government Sysdig uses OpenID Connect and requires either an IDIR account or a GitHub account.
 
-- Go to the [BCDevOps Sysdig Monitor](https://app.sysdigcloud.com/api/oauth/openid/bcdevops).
+- Go to the [BCDevOps Sysdig Acess](https://app.sysdigcloud.com/api/oauth/openid/bcdevops).
 
   - Alternatively, you can also sign in on [the Sysdig site](https://app.sysdigcloud.com). Select OpenID and type `BCDevOps` as the company.
 
@@ -103,7 +103,7 @@ A list of users to be added to this team.
 
 **Note:**
 
- - Only apply role updates to the custom resource from `tools` namespace. Do not use the Sysdig Monitor UI to modify team access, because the operator reconciliation will overwrite any UI changes to team roles and settings.
+ - Only apply role updates to the custom resource from `tools` namespace. Do not use the Sysdig Access UI to modify team access, because the operator reconciliation will overwrite any UI changes to team roles and settings.
 - If your project set is on Gold and GoldDR clusters, only create the `sysdig-team` custom resource in the Gold cluster. The Sysdig operator can create the dashboards for your applications across both clusters.
 - It's important to keep a single and unique `sysdig-team` custom resource per project set because you don't want to have duplicated teams on Sysdig. Please make sure to remove `sysdig-team` custom resource from dev, test and prod namespaces if they are created accidentally.
 
@@ -192,16 +192,19 @@ To access them:
 
 ## Related pages
 
-- [BCDevOps Sysdig Monitor Service](https://app.sysdigcloud.com/api/oauth/openid/bcdevops)
-- [Set up advanced functions in Sysdig Monitor](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
-- [Create alert channels in Sysdig Monitor](../app-monitoring/sysdig-monitor-create-alert-channels.md)
+- [BCDevOps Sysdig Access Service](https://app.sysdigcloud.com/api/oauth/openid/bcdevops)
+- [Set up advanced functions in Sysdig Access](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
+- [Create alert channels in Sysdig Access](../app-monitoring/sysdig-monitor-create-alert-channels.md) <!-- TODO: replace with new Teams alert channel doc -->
 - [Sysdig Monitor](https://sysdig.com/products/monitor/)
+- [Sysdig Secure](https://sysdig.com/platform/secure)
 - [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md)
 - [Sysdig API](https://docs.sysdig.com/en/docs/developer-tools/sysdig-rest-api-conventions/)
 - [Monitoring with Sysdig](https://cloud.gov.bc.ca/private-cloud/our-products-in-the-private-cloud-paas/monitoring-with-sysdig/)
-- [Sydig User Profile](https://app.sysdigcloud.com/#/settings/user)
+- [Sysdig User Profile](https://app.sysdigcloud.com/#/settings/user)
 - [MS Teams OpenShift-howto-sysdig channel](https://teams.microsoft.com/l/channel/19%3A93dff023d40c4440b26cf9c0b236a93f%40thread.tacv2/OpenShift-howto-sysdig?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc)
+- [Sysdig Monitor Docs](https://docs.sysdig.com/en/sysdig-monitor.html)
 - [Sysdig Monitor Dashboards](https://docs.sysdig.com/en/dashboards.html)
+- [Sysdig Secure Docs](https://docs.sysdig.com/en/docs/sysdig-secure)
 - [Sysdig Alerts](https://docs.sysdig.com/en/alerts.html)
 - [Sysdig Alerts with Kubernetes and PromQL](https://sysdig.com/blog/alerting-kubernetes/)
 - [Sysdig Teams Blog](https://sysdig.com/blog/introducing-sysdig-teams/)

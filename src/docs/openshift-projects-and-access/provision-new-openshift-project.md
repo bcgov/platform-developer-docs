@@ -7,7 +7,7 @@ description: Describes how to get a new project approved and provisioned in Open
 
 keywords: OpenShift, approvals, Platform Services
 
-page_purpose: Describes the acceptance criteria to provision a new project on the OpenShift platform and the process to get the project setup.
+page_purpose: Describes the acceptance criteria to provision a new project on the OpenShift platform and the process to get the project set up.
 
 audience: technical lead
 

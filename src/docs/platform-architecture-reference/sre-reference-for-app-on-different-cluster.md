@@ -102,7 +102,7 @@ Develop SLOs that reflect your application's operational goals within the contex
 
 - **Collaborators engagement**: Keep collaborators and partners informed about SLA status and any potential impacts from planned or unplanned changes
 
-You can read more about [how to setup SRE on an application](../app-monitoring/sre-guidelines-for-platform-shared-services.md). We used the [Platform Product Registry](https://registry.developer.gov.bc.ca/) as an example for this process.
+You can read more about [how to set up SRE on an application](../app-monitoring/sre-guidelines-for-platform-shared-services.md). We used the [Platform Product Registry](https://registry.developer.gov.bc.ca/) as an example for this process.
 
 ## Conclusion
 Understanding the distinct characteristics and SLA implications of each cluster, as well as the dependencies on services like Vault and Artifactory, is crucial for meeting the operational requirements and reliability expectations of your applications. By following this guide, application teams can make informed decisions that align with their performance and reliability goals.

@@ -98,7 +98,7 @@ Scale down all the running pods. Verify by running `oc get pods` to ensure that 
 Most likely, you've utilized some of the Platform services or BCGov common components while running the application. It's crucial to properly offboard from those services as part of the application retirement, as they could block the Product Registry when you request to remove the project set there.
 
 * If you have an [Artifactory project](https://artifacts.developer.gov.bc.ca), delete all the **repos** in Artifactory
-* If you've setup any notification alerts from Sysdig Monitoring,  delete the [Sysdig notification channels](https://app.sysdigcloud.com/#/settings/notifications) from your Sysdig team
+* If you've set up any notification alerts from Sysdig Monitoring,  delete the [Sysdig notification channels](https://app.sysdigcloud.com/#/settings/notifications) from your Sysdig team
 * If you've used [Vault](https://vault.developer.gov.bc.ca/) to store secrets, there's nothing you need to delete. However, please make sure to take a copy of the secret values that you need
 * If you have team members (other than Product Owners and Technical Leads) onboarded to [ACS](https://acs.developer.gov.bc.ca/), please email PlatformServicesTeam@gov.bc.ca to request access removal
 
@@ -109,7 +109,7 @@ Don't overlook your application source code and relevant resources from BCGov Gi
 * Archive all your GitHub repositories from the following GitHub Organizations:
   * [bcgov](https://github.com/bcgov)
   * [bcgov-c](https://github.com/bcgov-c)
-* If you have any GitHub Actions or Webhook setup, be sure to disable them. Archiving a repo does **not** stop or disable the existing GitHub Actions workflows.
+* If you have any GitHub Actions or Webhook set up, be sure to disable them. Archiving a repo does **not** stop or disable the existing GitHub Actions workflows.
 * Delete GitHub Teams if you have created any. Also request to [remove GitHub Organization access](https://github.com/bcgov/devops-requests) for team members that do not need access to the OpenShift platform.
 
 ### Delete persistent volumes

@@ -364,10 +364,10 @@ Application monitoring is a critical aspect of maintaining a healthy and efficie
 
 Once your application is running in OpenShift, you can use [Sysdig](https://digital.gov.bc.ca/cloud/private/products-tools/sysdig/) to monitor application healthiness and performance via Kubernetes metrics. Here are a list of steps to follow:
 
-1.  [Onboard to Sysdig](../app-monitoring/sysdig-monitor-onboarding.md) and setup the OpenShift project set access to monitor your applications
+1.  [Onboard to Sysdig](../app-monitoring/sysdig-monitor-onboarding.md) and set up the OpenShift project set access to monitor your applications
 2. [Create Sysdig monitoring dashboards](https://docs.sysdig.com/en/docs/sysdig-monitor/dashboards/) to gather important application metrics such as resource utilization and service Golden Signals
 3. Merely having a monitoring dashboard isn't sufficient since you won't be actively checking it throughout the day. Instead, it's advisable to establish alerts for monitoring metrics. This approach ensures that you receive notifications when potential issues arise, allowing you to address problems in their early stages.
-4. You can setup comprehensive service monitoring with [PromQL in Sysdig](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md) that includes multiple metrics and complex logics for alerting. If you'd like to expose application specific metrics, here are steps on how to create [custom/user defined monitoring](../app-monitoring/user-defined-monitoring.md)
+4. You can set up comprehensive service monitoring with [PromQL in Sysdig](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md) that includes multiple metrics and complex logics for alerting. If you'd like to expose application specific metrics, here are steps on how to create [custom/user defined monitoring](../app-monitoring/user-defined-monitoring.md)
 
 If service availability is important to you, leverage [Uptime.com](https://uptime.com/) for uptime monitoring and public service status pages. The Platform Services Team uses it to share [the status of OpenShift clusters as well as shared services](https://status.developer.gov.bc.ca/). You can check out [the SaaS service catalog](https://digital.gov.bc.ca/cloud/saas/directory/how-to/) to explore more about Uptime.com.
 
