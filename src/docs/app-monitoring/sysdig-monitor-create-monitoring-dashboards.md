@@ -1,13 +1,13 @@
 ---
-title: Create monitoring dashboards in Sysdig Monitor
+title: Create monitoring dashboards in Sysdig
 
 slug: sysdig-monitor-create-monitoring-dashboards
 
-description: Describes how to monitoring dashboards for a team scoped applications in Sysdig Monitor.
+description: Describes how to monitor dashboards for team-scoped applications with Sysdig.
 
-keywords: sysdig, monitoring, openshift monitoring, developer guide, team guide, team, configure, monitoring dashboards, dashboard templates
+keywords: sysdig, monitoring, openshift monitoring, developer guide, team guide, team, configure, monitoring dashboards, dashboard templates, Sysdig Monitor, Sysdig Secure, monitor, secure
 
-page_purpose: Details the steps for creating monitoring dashboards in Sysdig Monitor.
+page_purpose: Details the steps for creating monitoring dashboards in Sysdig.
 
 audience: developer, technical lead
 
@@ -18,15 +18,14 @@ content_owner: Shelly Han
 sort_order: 3
 ---
 
-# Create monitoring dashboards in Sysdig Monitor
-
-Last updated: **January 2, 2024**
+# Create monitoring dashboards in Sysdig
+Last updated: **October 16, 2026**
 
 After you [create a sysdig-team](../app-monitoring/sysdig-monitor-setup-team.md) and set up a dedicated space in Sysdig to monitor applications in your OpenShift Project Set, follow the steps in this guide to learn more about monitoring.
 
 ## On this page
 
-- [Create monitoring dashboards in Sysdig Monitor](#create-monitoring-dashboards-in-sysdig-monitor)
+- [Create monitoring dashboards in Sysdig](#create-monitoring-dashboards-in-sysdig)
   - [On this page](#on-this-page)
   - [Sysdig built-in monitoring dashboard templates](#sysdig-built-in-monitoring-dashboard-templates)
   - [Create custom dashboard from templates](#create-custom-dashboard-from-templates)
@@ -91,8 +90,8 @@ Once a dashboard is deleted, you can not get it back. That's why it's highly rec
 
 ## Related pages
 
-- [Set up a team in Sysdig Monitor](../app-monitoring/sysdig-monitor-setup-team.md)
-- [Set up advanced functions in Sysdig Monitor](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
-- [Sysdig Monitor](https://docs.sysdig.com/en/sysdig-monitor.html)
+- [Set up a team in Sysdig](../app-monitoring/sysdig-monitor-setup-team.md)
+- [Set up advanced functions in Sysdig](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
+- [Sysdig Monitor Docs](https://docs.sysdig.com/en/sysdig-monitor.html)
 - [Sysdig Monitor Dashboards](https://docs.sysdig.com/en/dashboards.html)
 - [The four Golden Signals of Monitoring](https://sysdig.com/blog/golden-signals-kubernetes)

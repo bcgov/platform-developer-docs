@@ -18,7 +18,7 @@ content_owner: Olena Mitovska
 sort_order: 1
 ---
 # Reusable services list
-Last updated: **November 28, 2023**
+Last updated: **October 16, 2026**
 
 This document covers some of the most popular reusable components designed to enhance the feature and infrastructure of your applications. You can find out more about the services and tools below, and guidance on how to integrate them into your application. This list overlaps with the [BCGov Common Components](https://digital.gov.bc.ca/common-components/).
 
@@ -81,13 +81,13 @@ You can get an unrestricted APIkey for use in government applications by opening
 
 ## CI/CD Pipeline templates
 
-[The Pipeline templates repository](https://github.com/bcgov/pipeline-templates) provides different options to setup your CI/CD pipeline in OpenShift. You can find pipeline samples that contain common CI/CD pipeline stages to reuse for your project.
+[The Pipeline templates repository](https://github.com/bcgov/pipeline-templates) provides different options to set up your CI/CD pipeline in OpenShift. You can find pipeline samples that contain common CI/CD pipeline stages to reuse for your project.
 
 ### Features
 CI/CD Pipeline Templates and GitHub Actions templates.
 
 - OpenShift Pipeline (aka Tekton) examples:
-  - Installation guide on how to setup pipeline on either your local workspace or from a docker container
+  - Installation guide on how to set up pipeline on either your local workspace or from a docker container
   -  React app build and deploy
   -  Using builda to build and push an image
   -  Build and deploy application via helm

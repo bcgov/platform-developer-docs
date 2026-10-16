@@ -18,7 +18,7 @@ content_owner: Cailey Jones
 sort_order: 7
 ---
 # Pull artifacts from Artifactory
-Last updated: **January 29, 2024**
+Last updated: **October 16, 2026**
 
 This page contains information on how to pull different artifact types from Artifactory.
 
@@ -45,7 +45,7 @@ That's it! The next time you restart your pod, it will pull the image through Ar
 
 This is the process you would use to pull images from a private repository in your Artifactory project. If you are trying to pull images from one of Artifactory's remote (caching) repositories, use the instructions for [Pulling container images using a cluster-wide pull secret](#pulling-container-images-using-a-cluster-wide-pull-secret) instead.
 
-Make sure you've added your Artifactory service account to your Artifactory project already. You can find instructions for this in our [Setup an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md) documentation.
+Make sure you've added your Artifactory service account to your Artifactory project already. You can find instructions for this in our [Set up an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md) documentation.
 
 You'll need your Artifactory service account's username and password. Instructions on how to find this information are in our [Set up an Artifactory service account](../build-deploy-and-maintain-apps/setup-artifactory-service-account.md) documentation.
 

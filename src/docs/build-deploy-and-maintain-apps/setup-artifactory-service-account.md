@@ -19,7 +19,7 @@ sort_order: 8
 ---
 
 # Set up an Artifactory service account
-Last updated: **January 30, 2024**
+Last updated: **October 16, 2026**
 
 Artifactory access is controlled through Artifactory service accounts. Service accounts are meant to be shared by teams and used by automation tools like pipelines.
 
@@ -83,13 +83,13 @@ If you have unintentionally deleted the secret for your Artifactory service acco
 
 If you delete the default service account this way, a new one will automatically be created for you. Otherwise, you're free to create a new service account using the steps outlined in [Create a service account](#create-a-service-account). This will create for you a new service account with new secrets that you can use.
 
-Keep in mind that this is a _new_ account, and that you will need to re-add this account to your Artifactory Project(s), if necessary. Instructions for this can be found in our [Setup an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md) documentation.
+Keep in mind that this is a _new_ account, and that you will need to re-add this account to your Artifactory Project(s), if necessary. Instructions for this can be found in our [Set up an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md) documentation.
 
 ---
 ## Related pages
 
 * [Archeobot](https://github.com/bcgov/platform-services-archeobot)
 * [Artifactory](https://artifacts.developer.gov.bc.ca)
-* [Setup an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md)
+* [Set up an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md)
 
 

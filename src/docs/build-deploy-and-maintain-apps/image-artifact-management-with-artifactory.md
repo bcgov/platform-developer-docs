@@ -19,7 +19,7 @@ sort_order: 5
 ---
 
 # Image and artifact management with Artifactory
-Last updated: **January 29, 2024**
+Last updated: **October 16, 2026**
 
 JFrog's Artifactory, a system for storing artifacts, is now accessible to B.C. government development teams constructing cloud-native applications on the OpenShift platform.
 
@@ -59,7 +59,7 @@ If there's a particular public repository you'd like to be cached through Artifa
 
 Artifactory Projects are spaces of quota-limited storage where teams have full control. This lets teams create their own private repositories in Artifactory where they can push and pull their own artifacts of any type. It also allows teams to control access to these repositories, similar to the way teams control access to their own OpenShift namespaces.
 
-Once your team has an Artifactory Project, you can create your own local repositories as you require. For more information, see [Setup an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md).
+Once your team has an Artifactory Project, you can create your own local repositories as you require. For more information, see [Set up an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md).
 
 ## Xray artifact scanning
 
@@ -101,7 +101,7 @@ Other operations require turning Artifactory to read-only mode. In read-only mod
 * [#devops-artifactory](https://chat.developer.gov.bc.ca/channel/devops-artifactory)
 * [#devops-sos](https://chat.developer.gov.bc.ca/channel/devops-sos)
 * [#devops-alerts](https://chat.developer.gov.bc.ca/channel/devops-alerts)
-* [Setup an Artifactory service account](../build-deploy-and-maintain-apps/setup-artifactory-service-account.md)
-* [Setup an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md)
+* [Set up an Artifactory service account](../build-deploy-and-maintain-apps/setup-artifactory-service-account.md)
+* [Set up an Artifactory project and repository](../build-deploy-and-maintain-apps/setup-artifactory-project-repository.md)
 
 ---

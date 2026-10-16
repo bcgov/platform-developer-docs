@@ -21,7 +21,7 @@ sort_order: 4
 ---
 
 # Install the oc command line tool
-Last updated: **Oct 5, 2023**
+Last updated: **October 16, 2026**
 
 Users can interact with OpenShift via the `oc` command line tool. This can be installed on your local machine, or accessed via the web console. It is important to keep your version of `oc` up to date to match the version of `oc` on the cluster. 
 There are different ways to install the oc command line tool and this document will include options for each operating system. 
@@ -87,7 +87,7 @@ In the [OpenShift 101 training](../training-and-learning/training-from-the-platf
 
 3. After completion of this command, you'll need to restart your computer to continue installing Ubuntu in WSL. 
 
-4. During the Ubuntu install process, you'll be prompted to setup a new username and password for the Ubuntu installation. Please make sure to remember this new username and password as you will need it later. 
+4. During the Ubuntu install process, you'll be prompted to set up a new username and password for the Ubuntu installation. Please make sure to remember this new username and password as you will need it later. 
 
 ### Install homebrew
 
@@ -134,7 +134,7 @@ For example, to login to Silver cluster, instead of providing a token, use the w
 You'll be redirected to the default browser and complete the login process from there. IDIR is the preferred login method.. Once logged in, you'll the message "access token received successfully; please return to your terminal".
 
 
-Pro tip: you can setup alias to fully remove the need of copy-pasting the login command from the browser, this would be pretty helpful especially if you are working on multiple clusters.
+Pro tip: you can set up alias to fully remove the need of copy-pasting the login command from the browser, this would be pretty helpful especially if you are working on multiple clusters.
 
 
 ## Use the web terminal

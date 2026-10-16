@@ -19,7 +19,7 @@ sort_order: 8
 ---
 <!-- omit in toc -->
 # Set up a User Defined Monitoring in OpenShift
-Last updated: **Oct 29, 2024**
+Last updated: **October 16, 2026**
 
 Use Prometheus client libraries to push your app's metrics to Prometheus.
 
@@ -37,7 +37,7 @@ Use Prometheus client libraries to push your app's metrics to Prometheus.
 - [Create custom alert rules](#create-custom-alert-rules)
 - [Control alert receivers](#control-alert-receivers)
 - [Sysdig Monitor](#sysdig-monitor)
-- [Sysdig Monitor Alert](#sysdig-monitor-alert)
+- [Sysdig Monitor Alerts](#sysdig-monitor-alerts)
 - [Related pages](#related-pages)
 
 ## Instrument your application with custom metrics
@@ -299,13 +299,13 @@ response_count_total{code="200",url="http://nginx-openshift-bcgov-nagios.apps.kl
 <...>
 ```
 
-And same metrics can be seen in the Sysdig monitor web-console.
+And same metrics can be seen in the Sysdig Monitor web-console.
 
 ![user defined monitoring2](../../images/user-defined-monitoring2.png)
 
-## Sysdig Monitor Alert
+## Sysdig Monitor Alerts
 
-To set up Sysdig alert using your custom metrics, you'll need to create a dashboard with the metrics, and then you can setup an alert like below;
+To set up Sysdig alerts using your custom metrics, you'll need to configure a dashboard with the metrics, and then you can create an alert like below;
 
 ![user defined monitoring3](../../images/user-defined-monitoring3.png)
 
@@ -315,8 +315,8 @@ Sysdig alert example;
 
 For detail steps, please read the documents below:
 
-- [Checking sysdig teams and dashboards](../app-monitoring/sysdig-monitor-setup-team.md#verify-sysdig-team-creation)
-- [Creating sysdig alert](../app-monitoring/sysdig-monitor-create-alert-channels.md#creating-an-alert)
+- [Checking Sysdig teams and dashboards](../app-monitoring/sysdig-monitor-setup-team.md#verify-sysdig-team-creation)
+- [Create Sysdig alerts in MS Teams](https://developer.gov.bc.ca/docs/default/component/bc-developer-guide/webhooks/msteams-webhooks/)
 
 ---
 
@@ -328,5 +328,6 @@ For detail steps, please read the documents below:
 - [OCP - Creating alert routing](https://docs.openshift.com/container-platform/4.14/observability/monitoring/managing-alerts.html#creating-alert-routing-for-user-defined-projects_managing-alerts)
 - [Sysdig - Automatically scraping any Kubernetes pods](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations/working-with-integrations/custom-integrations/collect-prometheus-metrics/#agent-compatibility)
 - [Sysdig - Use Service Discovery to import application metrics endpoints](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md#use-service-discovery-to-import-application-metrics-endpoints)
-- [Sysdig - Checking sysdig teams and dashboards](../app-monitoring/sysdig-monitor-setup-team.md#verify-sysdig-team-creation)
-- [Sysdig - Creating sysdig alert](../app-monitoring/sysdig-monitor-create-alert-channels.md#creating-an-alert)
+- [Sysdig - Checking Sysdig teams and dashboards](../app-monitoring/sysdig-monitor-setup-team.md#verify-sysdig-team-creation)
+- [Sysdig Alerts](https://docs.sysdig.com/en/alerts.html)
+- [Sysdig Alerts with Kubernetes and PromQL](https://sysdig.com/blog/alerting-kubernetes/)

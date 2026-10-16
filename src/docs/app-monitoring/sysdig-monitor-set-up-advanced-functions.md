@@ -1,9 +1,9 @@
 ---
-title: Set up advanced metrics in Sysdig Monitor
+title: Set up advanced metrics in Sysdig
 
 slug: sysdig-monitor-set-up-advanced-functions
 
-description: Describes how to set up and configure advanced functions for a team in Sysdig Monitor.
+description: Describes how to set up and configure advanced functions for a team in Sysdig using Sysdig Monitor.
 
 keywords: sysdig, monitoring, openshift monitoring, developer guide, team guide, team, configure, advanced functions, custom monitoring, PromQL, Service Discovery
 
@@ -18,13 +18,13 @@ content_owner: Shelly Han
 sort_order: 5
 ---
 
-# Set up advanced metrics in Sysdig Monitor
-Last updated: **April 17, 2024**
+# Set up advanced metrics in Sysdig
+Last updated: **October 16, 2026**
 
-This page is a comprehensive guide to setting up advanced metrics in Sysdig Monitor. It covers the creation of PromQL metrics, using PromQL in alerts, and employing Service Discovery to import application metrics endpoints into Sysdig. The guide includes practical examples and step-by-step instructions, serving as a valuable resource for users looking to enhance their monitoring capabilities with Sysdig.
+This page is a comprehensive guide to setting up advanced metrics in Sysdig using [Sysdig Monitor](https://sysdig.com/products/monitor/). It covers the creation of PromQL metrics, using PromQL in alerts, and employing Service Discovery to import application metrics endpoints into Sysdig. The guide includes practical examples and step-by-step instructions, serving as a valuable resource for users looking to enhance their monitoring capabilities with Sysdig.
 
 ## On this page
-- [Set up advanced metrics in Sysdig Monitor](#set-up-advanced-metrics-in-sysdig-monitor)
+- [Set up advanced metrics in Sysdig](#set-up-advanced-metrics-in-sysdig)
   - [Creating PromQL metrics](#creating-promql-metrics)
   - [Create a PromQL based alert](#create-a-promql-based-alert)
   - [Use Service Discovery to import application metrics endpoints](#use-service-discovery-to-import-application-metrics-endpoints)
@@ -78,11 +78,12 @@ To enable Promscrape to find your application metrics, do the following:
 
 ## Related pages
 
-- [Set up a team in Sysdig Monitor](../app-monitoring/sysdig-monitor-setup-team.md)
-- [Create alert channels in Sysdig Monitor](../app-monitoring/sysdig-monitor-create-alert-channels.md)
+- [BCDevOps Sysdig Service](https://app.sysdigcloud.com/api/oauth/openid/bcdevops)
+- [Set up a team in Sysdig](../app-monitoring/sysdig-monitor-setup-team.md)
+- [Create Sysdig alerts in MS Teams](https://developer.gov.bc.ca/docs/default/component/bc-developer-guide/webhooks/msteams-webhooks/)
 - [MS Teams OpenShift-howto-sysdig channel](https://teams.microsoft.com/l/channel/19%3A93dff023d40c4440b26cf9c0b236a93f%40thread.tacv2/OpenShift-howto-sysdig?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc)
 - [Migrate Using Default Configuration](https://docs.sysdig.com/en/docs/sysdig-monitor/integrations/working-with-integrations/custom-integrations/collect-prometheus-metrics/migrating-from-promscrape-v1-to-v2/#migrate-using-default-configuration)
-- [Sysdig Monitor](https://docs.sysdig.com/en/sysdig-monitor.html)
+- [Sysdig Monitor Docs](https://docs.sysdig.com/en/sysdig-monitor.html)
 - [Sysdig Monitor Dashboards](https://docs.sysdig.com/en/dashboards.html)
 - [Sysdig Alerts](https://docs.sysdig.com/en/alerts.html)
 - [Sysdig Alerts with Kubernetes and PromQL](https://sysdig.com/blog/alerting-kubernetes/)

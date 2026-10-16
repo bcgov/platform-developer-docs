@@ -18,7 +18,7 @@ content_owner: Olena Mitovska
 sort_order: 1
 ---
 # Project examples
-Last updated: **February 14, 2024**
+Last updated: **October 16, 2026**
 
 This is a dedicated space where we showcase the innovative projects crafted with OpenShift and various tools within the Platform Services ecosystem. Here, we invite you to explore the projects  and learn about the key technologies employed and the invaluable lessons learned during their development.
 
@@ -160,7 +160,7 @@ The Pathfinder SSO team uses a DevOps continuous improvement approach towards it
 
 We have three environments (dev, test, and prod) and each one has its own keycloak instance. All three keycloak instances are in environment specific namespaces in the Private Cloud hosted in Kamloops Gold Data center. 
 
-We do also have a Disaster Recovery (DR) site hosted in Calgary GoldDR Data center, which ensures service continuity in case of any disaster or calamity. We have setup a data replication process to maintain the data consistency between Keycloak instances hosted in Gold and GoldDR datacenters, which ensures no data loss for the failover to DR site, find more details about [switchover logic and the gslb](https://github.com/bcgov/sso-switchover-agent/blob/main/docs/switchover-logic-and-the-gslb.md) on how we have achieved the automation to failover to DR site in case of any disaster or calamity.
+We do also have a Disaster Recovery (DR) site hosted in Calgary GoldDR Data center, which ensures service continuity in case of any disaster or calamity. We have set up a data replication process to maintain the data consistency between Keycloak instances hosted in Gold and GoldDR datacenters, which ensures no data loss for the failover to DR site, find more details about [switchover logic and the gslb](https://github.com/bcgov/sso-switchover-agent/blob/main/docs/switchover-logic-and-the-gslb.md) on how we have achieved the automation to failover to DR site in case of any disaster or calamity.
 
 #### Common Hosted Single Sign-on (CSS)
 

@@ -19,7 +19,7 @@ sort_order: 9
 ---
 
 # Set up an Artifactory project and repository
-Last updated: **January , 2024**
+Last updated: **October 16, 2026**
 
 To push artifacts to Artifactory, you'll need a private repository which is provided through Artifactory Projects. Artifactory Projects are designated areas with quota-based storage that teams can independently manage. Within an Artifactory Project, teams have the flexibility to establish their private repositories—any type and quantity that aligns with their requirements, as long as the storage space falls within the allocated quota.
 
@@ -106,7 +106,7 @@ On the left side of the screen, the menu is divided into two sections: one with 
 
 Project privileges are specifically synchronized from Gold to Gold DR and not vice versa. Any alterations to user privileges in your Artifactory Project within Gold DR will be undone once access to Artifactory Gold is reinstated. The use of Artifactory's DR instance is infrequent and temporary, so it's advisable to wait until Artifactory returns to the Gold instance before proceeding with this task. Your patience is appreciated.
 
-After obtaining your project, ensure that you include your Artifactory service account in the project. Having an Artifactory service account is essential for efficiently pushing and pulling artifacts to and from your private repositories. If you haven't set up an Artifactory service account yet, refer to the [Setup an Artifactory service account](../build-deploy-and-maintain-apps/setup-artifactory-service-account.md) documentation.
+After obtaining your project, ensure that you include your Artifactory service account in the project. Having an Artifactory service account is essential for efficiently pushing and pulling artifacts to and from your private repositories. If you haven't set up an Artifactory service account yet, refer to the [Set up an Artifactory service account](../build-deploy-and-maintain-apps/setup-artifactory-service-account.md) documentation.
 
 To add a new user or service account: 
 
@@ -157,6 +157,6 @@ This creates a local repository in your Artifactory Project. Within the next 10 
 
 * [Archeobot](https://github.com/bcgov/platform-services-archeobot)
 * [Artifactory](https://artifacts.developer.gov.bc.ca)
-* [Setup an Artifactory service account](../build-deploy-and-maintain-apps/setup-artifactory-service-account.md)
+* [Set up an Artifactory service account](../build-deploy-and-maintain-apps/setup-artifactory-service-account.md)
 
 

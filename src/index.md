@@ -52,7 +52,7 @@ demos of their application.
 
 * [Set up a team in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-setup-team.md)
 * [Create monitoring dashboards in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-create-monitoring-dashboards.md)
-* [Create alerts and notifications in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-create-alert-channels.md)
+* [Create Sysdig alerts in MS Teams](https://developer.gov.bc.ca/docs/default/component/bc-developer-guide/webhooks/msteams-webhooks/)
 * [Set up advanced metrics in Sysdig Monitor](docs/app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
 * [Resource monitoring dashboards](docs/app-monitoring/resource-monitoring-dashboards.md)
 * [Platform dashboard templates (Sysdig)](docs/app-monitoring/sysdig-startup-dashboard-template.md)
