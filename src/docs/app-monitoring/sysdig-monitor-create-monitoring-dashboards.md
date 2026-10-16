@@ -3,7 +3,7 @@ title: Create monitoring dashboards in Sysdig
 
 slug: sysdig-monitor-create-monitoring-dashboards
 
-description: Describes how to monitor dashboards for a team scoped applications in Sysdig.
+description: Describes how to monitor dashboards for team-scoped applications with Sysdig.
 
 keywords: sysdig, monitoring, openshift monitoring, developer guide, team guide, team, configure, monitoring dashboards, dashboard templates
 
