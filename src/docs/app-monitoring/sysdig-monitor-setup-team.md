@@ -43,7 +43,7 @@ You and your team must sign in to Sysdig to create the user account. The B.C. go
 
 - Go to the [BCDevOps Sysdig Acess](https://app.sysdigcloud.com/api/oauth/openid/bcdevops).
 
-  - Alternatively, you can also sign in on [the Sysdig site](https://app.sysdigcloud.com). Select OpenID and type `BCDevOps` as the company.
+  - Alternatively, you can also sign in on [the Sysdig site](https://app.sysdigcloud.com). Select OpenID and type `BCDevOps` as the company. You must select the 'US East' region with this login method. 
 
 - Upon login, you will be presented with a default page. You may be directed to the **Catchall Team** which has access to no resources at the moment (the team resources and access will be created in later steps).
 
