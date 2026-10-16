@@ -19,7 +19,7 @@ sort_order: 8
 ---
 
 # Set up an Artifactory service account
-Last updated: **January 30, 2024**
+Last updated: **October 16, 2026**
 
 Artifactory access is controlled through Artifactory service accounts. Service accounts are meant to be shared by teams and used by automation tools like pipelines.
 

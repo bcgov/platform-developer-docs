@@ -19,16 +19,16 @@ sort_order: 1
 ---
 
 # Onboarding to application monitoring with Sysdig
-Last updated: **January 9, 2024**
+Last updated: **October 16, 2026**
 
-Monitor your Kubernetes hosts in Sysdig Access using [Sysdig Monitor](https://sysdig.com/products/monitor/). Create custom dashboards, alerts, and operational-level captures to diagnose issues at the application or platform level. This guide will walk you through using Sysdig Monitor for your new or existing applications.
+Monitor your Kubernetes hosts in Sysdig using [Sysdig Monitor](https://sysdig.com/products/monitor/). Create custom dashboards, alerts, and operational-level captures to diagnose issues at the application or platform level. This guide will walk you through using Sysdig Monitor for your new or existing applications.
 
 ## Follow this onboarding guide
 
-1. [Set up a team in Sysdig Access](../app-monitoring/sysdig-monitor-setup-team.md)
-2. [Create monitoring dashboards in Sysdig Access](../app-monitoring/sysdig-monitor-create-monitoring-dashboards.md)
+1. [Set up a team in Sysdig](../app-monitoring/sysdig-monitor-setup-team.md)
+2. [Create monitoring dashboards in Sysdig](../app-monitoring/sysdig-monitor-create-monitoring-dashboards.md)
 3. [Create Sysdig alerts and notifications in MS Teams](https://developer.gov.bc.ca/docs/default/component/bc-developer-guide/webhooks/msteams-webhooks/) <!-- TODO: replace with new Teams alert channel doc -->
-4. [Set up advanced metrics in Sysdig Access](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
+4. [Set up advanced metrics in Sysdig](../app-monitoring/sysdig-monitor-set-up-advanced-functions.md)
 5. [Resource monitoring dashboards](../app-monitoring/resource-monitoring-dashboards.md)
 
 If you have any questions about Sysdig or application monitoring, please contact the Platform Services team in the [OpenShift-howto-sysdig](https://teams.microsoft.com/l/channel/19%3A93dff023d40c4440b26cf9c0b236a93f%40thread.tacv2/OpenShift-howto-sysdig?groupId=a80418da-c27b-406e-89ab-7695b61924d8&tenantId=6fdb5200-3d0d-4a8a-b036-d3685e359adc) channel in MS Teams.
@@ -38,7 +38,7 @@ If you have any questions about Sysdig or application monitoring, please contact
 
 ## Related pages
 
-- [BCDevOps Sysdig Access Service](https://app.sysdigcloud.com/api/oauth/openid/bcdevops)
+- [BCDevOps Sysdig Service](https://app.sysdigcloud.com/api/oauth/openid/bcdevops)
 - [Sysdig Monitor](https://sysdig.com/products/monitor/)
 - [Sysdig Secure](https://sysdig.com/platform/secure)
 - [OpenShift project resource quotas](../automation-and-resiliency/openshift-project-resource-quotas.md)

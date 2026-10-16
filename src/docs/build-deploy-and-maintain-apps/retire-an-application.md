@@ -21,7 +21,7 @@ sort_order: 4
 ---
 
 # Retire an application
-Last updated: **October 24, 2023**
+Last updated: **October 16, 2026**
 
 This guide helps you retire applications on OpenShift. It gives you a step-by-step guide to help you remove, shut down, and archive different parts of your application, but also emphasizes the importance of a solid plan. A well thought-out plan ensure that all necessary steps are schedule and executed smoothly. 
 

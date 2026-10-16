@@ -21,7 +21,7 @@ sort_order: 4
 ---
 
 # Install the oc command line tool
-Last updated: **Oct 5, 2023**
+Last updated: **October 16, 2026**
 
 Users can interact with OpenShift via the `oc` command line tool. This can be installed on your local machine, or accessed via the web console. It is important to keep your version of `oc` up to date to match the version of `oc` on the cluster. 
 There are different ways to install the oc command line tool and this document will include options for each operating system. 

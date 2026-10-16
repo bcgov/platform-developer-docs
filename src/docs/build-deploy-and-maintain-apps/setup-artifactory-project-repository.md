@@ -19,7 +19,7 @@ sort_order: 9
 ---
 
 # Set up an Artifactory project and repository
-Last updated: **January , 2024**
+Last updated: **October 16, 2026**
 
 To push artifacts to Artifactory, you'll need a private repository which is provided through Artifactory Projects. Artifactory Projects are designated areas with quota-based storage that teams can independently manage. Within an Artifactory Project, teams have the flexibility to establish their private repositories—any type and quantity that aligns with their requirements, as long as the storage space falls within the allocated quota.
 

@@ -18,7 +18,7 @@ content_owner: Cailey Jones
 sort_order: 7
 ---
 # Pull artifacts from Artifactory
-Last updated: **January 29, 2024**
+Last updated: **October 16, 2026**
 
 This page contains information on how to pull different artifact types from Artifactory.
 

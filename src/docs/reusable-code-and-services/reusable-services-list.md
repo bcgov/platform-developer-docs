@@ -18,7 +18,7 @@ content_owner: Olena Mitovska
 sort_order: 1
 ---
 # Reusable services list
-Last updated: **November 28, 2023**
+Last updated: **October 16, 2026**
 
 This document covers some of the most popular reusable components designed to enhance the feature and infrastructure of your applications. You can find out more about the services and tools below, and guidance on how to integrate them into your application. This list overlaps with the [BCGov Common Components](https://digital.gov.bc.ca/common-components/).
 

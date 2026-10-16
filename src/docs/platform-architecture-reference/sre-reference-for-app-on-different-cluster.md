@@ -1,5 +1,5 @@
 # SRE reference for application deployment across different clusters
-Last updated: **April 30, 2024**
+Last updated: **October 16, 2026**
 
 This document guides application teams deploying applications across different hosting clusters managed by our platform. Each cluster has unique characteristics and Service Level Agreements or SLAs, which should be understood and considered when planning deployment and setting reliability targets.
 

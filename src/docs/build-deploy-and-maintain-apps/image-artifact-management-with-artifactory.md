@@ -19,7 +19,7 @@ sort_order: 5
 ---
 
 # Image and artifact management with Artifactory
-Last updated: **January 29, 2024**
+Last updated: **October 16, 2026**
 
 JFrog's Artifactory, a system for storing artifacts, is now accessible to B.C. government development teams constructing cloud-native applications on the OpenShift platform.
 

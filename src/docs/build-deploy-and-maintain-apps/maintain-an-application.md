@@ -21,7 +21,7 @@ sort_order: 3
 ---
 
 # Maintain an application
-Last updated: **December 4, 2023**
+Last updated: **October 16, 2026**
 
 We've covered the best practices for [building](../build-deploy-and-maintain-apps/build-an-application.md) and [deploying](../build-deploy-and-maintain-apps/deploy-an-application.md) applications. Now, let's focus on essential steps for ongoing application management in the OpenShift environment.
 

@@ -18,7 +18,7 @@ content_owner: Olena Mitovska
 sort_order: 1
 ---
 # Project examples
-Last updated: **February 14, 2024**
+Last updated: **October 16, 2026**
 
 This is a dedicated space where we showcase the innovative projects crafted with OpenShift and various tools within the Platform Services ecosystem. Here, we invite you to explore the projects  and learn about the key technologies employed and the invaluable lessons learned during their development.
 
