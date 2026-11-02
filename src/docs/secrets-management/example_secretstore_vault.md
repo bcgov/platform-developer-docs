@@ -64,15 +64,25 @@ spec:
     vault:
       auth:
         tokenSecretRef:
+
           # Name of the OpenShift Secret that holds the Vault token
+          # -------------------------------------------------------
           name: eso-vault-creds
+
           # Name of the key in that Secret
+          # ------------------------------
           key: token
-      # You need to include the Vault namespace
+
+      # You need to include the Vault namespace.
+      # This is the same for all projects.
+      # ----------------------------------------
       namespace: platform-services
-      # Set the path to be the name of one of your secrets engines, either
-      #   abc123-nonprod or abc123-prod
+
+      # Set the path to be the name of one of your secrets engines, either 
+      # prod or nonprod, e.g. LICENSEPLATE-nonprod, LICENSEPLATE-prod
+      # ------------------------------------------------------------------
       path: abc123-prod
+
       server: https://vault.developer.gov.bc.ca
       version: v2
 ```
@@ -88,19 +98,32 @@ metadata:
 spec:
   secretStoreRef:
     kind: SecretStore
+
     # Match the name here with the name of your SecretStore
+    # -----------------------------------------------------
     name: vault
+
   target:
+
     # This is the name of the OpenShift Secret to create/update
+    # ---------------------------------------------------------
     name: db-creds
+
   data:
     - remoteRef:
+
         # The name of the secret in the external secrets system
+        # -----------------------------------------------------
         key: dev-db-creds
+
         # The name of the key in that secret
+        # ----------------------------------
         property: dev-db-user
+
       # The name of the key in the OpenShift secret
+      # -------------------------------------------
       secretKey: db-user
+
     - remoteRef:
         key: dev-db-creds
         property: dev-db-pass
