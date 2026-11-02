@@ -154,6 +154,6 @@ For all other matters concerning security on the OpenShift Container Platform, p
 * [OpenShift 101 training](https://digital.gov.bc.ca/technology/cloud/private/support/openshift-101/)
 * [OpenShift 201 training](https://digital.gov.bc.ca/technology/cloud/private/support/openshift-201/)
 * [DevOps platform workshops](https://github.com/bcgov/devops-platform-workshops)
-* [Security best practices for apps](../security-and-privacy-compliance/security-best-practices-for-apps.md)
+* [Security best practices for apps](https://developer.gov.bc.ca/docs/default/component/bc-developer-guide/security/best-practices-for-apps/)
 
 
