@@ -120,7 +120,6 @@ Many of the platform tools have **completed** security assessments.  These inclu
 * Uptime.com
 * GitHub Discussions
 * Platform Product Registry (v2)
-* GitHub Enterprise
 * 1Password (SoAR complete, Cloud security schedule review complete) - was previously discouraged corporately due to no background checks for staff/contractors, but this has since changed.  Further review required to support use.
 
 If you cannot find a tool from the above list and/or require specific information please contact the [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca).
@@ -240,12 +239,6 @@ These resources are available:
 **GitHub Apps**
 
 Teams may request GitHub apps to be associated with their own or all projects in a GitHub organization.  These requests are reviewed by a the Developer Experience team for validity and scope.  These are also shared with Ministry security staff to ensure they are acceptable for connection.
-
-**GitHub Enterprise**
-
-We currently use of GitHub Enterprise.  Contact the Developer Experience team for license information.
-
-* [Province of British Columbia Enterprise’s single sign-on provider](https://github.com/enterprises/bcgov-ent/sso)
 
 ## Other important considerations 
 
