@@ -93,3 +93,11 @@ oc explain externalsecret.spec.refreshInterval
 
 or edit it in the YAML view in the OpenShift UI and click on the the 'View sidebar' link.
 
+## Special note about external secrets from the Private Cloud Vault service
+It is possible to use the External Secrets Operator with the Private Cloud's Vault service, but there are important limitations.  Because our Vault system uses OIDC...
+
+* the token must be created manually by logging in
+* the token will expire after one month
+
+If you accept these limitations and still want to configure a SecretStore and ExternalSecrets to sync your Vault secrets to OpenShift secrets, see the [Example SecretStore - Private Cloud Vault](example_secretstore_vault.md).
+
