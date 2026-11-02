@@ -120,6 +120,7 @@ Many of the platform tools have **completed** security assessments.  These inclu
 * Uptime.com
 * GitHub Discussions
 * Platform Product Registry (v2)
+* GitHub Enterprise
 * 1Password (SoAR complete, Cloud security schedule review complete) - was previously discouraged corporately due to no background checks for staff/contractors, but this has since changed.  Further review required to support use.
 
 If you cannot find a tool from the above list and/or require specific information please contact the [PlatformServicesTeam@gov.bc.ca](mailto:PlatformServicesTeam@gov.bc.ca).
