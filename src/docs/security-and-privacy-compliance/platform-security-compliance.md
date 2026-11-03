@@ -220,7 +220,7 @@ Backups help you to recover in the event of a failure or data corruption.  As pa
 ## Change management
 
 
-Any service change will be communicated via the OpenShift-alerts(https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A2466087e039143fbb5258ec96ad65fab%40thread.tacv2%2FOpenShift-alerts%3FgroupId%3Da80418da-c27b-406e-89ab-7695b61924d8%26tenantId%3D6fdb5200-3d0d-4a8a-b036-d3685e359adc&type=channel&deeplinkId=257a3fb2-2ea2-4667-882f-a60e30b99b0f&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true) MS Teams channel.
+Any service change will be communicated via the [OpenShift-alerts](https://teams.microsoft.com/dl/launcher/launcher.html?url=%2F_%23%2Fl%2Fchannel%2F19%3A2466087e039143fbb5258ec96ad65fab%40thread.tacv2%2FOpenShift-alerts%3FgroupId%3Da80418da-c27b-406e-89ab-7695b61924d8%26tenantId%3D6fdb5200-3d0d-4a8a-b036-d3685e359adc&type=channel&deeplinkId=257a3fb2-2ea2-4667-882f-a60e30b99b0f&directDl=true&msLaunch=true&enableMobilePage=true&suppressPrompt=true) MS Teams channel.
 
 Strategic level changes are communicated to the DevOps community at regular Community Meetups, as well as to executive groups across government.
 
@@ -235,17 +235,11 @@ Here is a summary of the GitHub organizations we own and their purposes:
 
 These resources are available:
 
-* [BC Government organizations in GitHub](https://mvp.developer.gov.bc.ca/docs/default/component/bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/)
+* [BC Government organizations in GitHub](../bc-developer-guide/use-github-in-bcgov/bc-government-organizations-in-github/)
 
 **GitHub Apps**
 
 Teams may request GitHub apps to be associated with their own or all projects in a GitHub organization.  These requests are reviewed by a the Developer Experience team for validity and scope.  These are also shared with Ministry security staff to ensure they are acceptable for connection.
-
-**GitHub Enterprise**
-
-We currently use of GitHub Enterprise.  Contact the Developer Experience team for license information.
-
-* [Province of British Columbia Enterprise’s single sign-on provider](https://github.com/enterprises/bcgov-ent/sso)
 
 ## Other important considerations 
 
@@ -271,6 +265,6 @@ For all other matters concerning security on the OpenShift Container Platform, p
 * [OpenShift 101 training](https://digital.gov.bc.ca/technology/cloud/private/support/openshift-101/)
 * [OpenShift 201 training](https://digital.gov.bc.ca/technology/cloud/private/support/openshift-201/)
 * [DevOps platform workshops](https://github.com/bcgov/devops-platform-workshops)
-* [Security best practices for apps](../security-and-privacy-compliance/security-best-practices-for-apps.md)
-* [OpenShift platform security tools](../security-and-privacy-compliance/platform-security-tools.md)
+* [Security best practices for apps](../bc-developer-guide/security/best-practices-for-apps/)
+* [OpenShift platform security tools](../bc-developer-guide/security/security-and-privacy-compliance-and-guidance/#security-and-privacy-tools)
 
